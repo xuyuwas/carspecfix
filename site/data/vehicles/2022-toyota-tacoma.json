@@ -1,0 +1,227 @@
+{
+  "slug": "2022-toyota-tacoma",
+  "year": 2022,
+  "make": "Toyota",
+  "model": "Tacoma",
+  "makeSlug": "toyota",
+  "modelSlug": "tacoma",
+  "powertrain": "ice",
+  "vpicConfirmed": true,
+  "manual": {
+    "sourceId": "manual-2022-toyota-tacoma",
+    "yearConfirmed": true,
+    "note": "OM04037U (MY2022 per Helm https://www.helminc.com/helm/product2.asp?Sku=OM04037U&class_2=TOY&itemtype=N). Oil p.545, tires pp.551-552 (printed = PDF page). Note Helm also lists OM04039U as 2022 Tacoma; that PDF returns 403."
+  },
+  "specs": {
+    "oilCapacity": {
+      "value": "2.7L 2TR-FE: 6.2 qt (5.9 L) with filter, 5.8 qt without; 3.5L 2GR-FKS: 5.9 qt (5.6 L) without filter; with-filter not stated",
+      "source": "manual-2022-toyota-tacoma",
+      "page": null,
+      "sourceGrade": "A",
+      "verified": false,
+      "note": null
+    },
+    "oilViscosity": {
+      "value": "SAE 0W-20 (5W-20 allowed, replace with 0W-20 at next change), ILSAC GF-6A",
+      "source": "manual-2022-toyota-tacoma",
+      "page": null,
+      "sourceGrade": "A",
+      "verified": false,
+      "note": null
+    },
+    "wiperSizes": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "no citable source yet"
+    },
+    "batteryGroup": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "no citable source yet"
+    },
+    "towingCapacity": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false
+    },
+    "tpmsReset": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": null
+    }
+  },
+  "tires": {
+    "rows": [
+      {
+        "wheel": "16",
+        "config": "Type A",
+        "tireSize": "P245/75R16 109S",
+        "frontPsi": 32,
+        "rearPsi": 32,
+        "page": "p.551",
+        "source": "manual-2022-toyota-tacoma",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "16",
+        "config": "Type B",
+        "tireSize": "265/70R16 112T",
+        "frontPsi": 30,
+        "rearPsi": 30,
+        "page": "p.551",
+        "source": "manual-2022-toyota-tacoma",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "17",
+        "config": "Type C (17-inch)",
+        "tireSize": "P265/65R17 110S",
+        "frontPsi": 29,
+        "rearPsi": 29,
+        "page": "p.552",
+        "source": "manual-2022-toyota-tacoma",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "18",
+        "config": "Type C (18-inch)",
+        "tireSize": "P265/60R18 109H",
+        "frontPsi": 29,
+        "rearPsi": 29,
+        "page": "p.552",
+        "source": "manual-2022-toyota-tacoma",
+        "sourceGrade": "A"
+      }
+    ],
+    "origin": "tire_rows.csv",
+    "note": null
+  },
+  "extraManuals": [],
+  "fuelEconomy": [
+    {
+      "feId": "44474",
+      "model": "Tacoma 2WD",
+      "option": "Auto (S6), 6 cyl, 3.5 L",
+      "engineL": 3.5,
+      "cyl": 6,
+      "trans": "Automatic (S6)",
+      "drive": "Rear-Wheel Drive",
+      "mpgCity": 19,
+      "mpgHwy": 24,
+      "mpgComb": 21,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/44474",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "44475",
+      "model": "Tacoma 2WD",
+      "option": "Auto (S6), 4 cyl, 2.7 L",
+      "engineL": 2.7,
+      "cyl": 4,
+      "trans": "Automatic (S6)",
+      "drive": "Rear-Wheel Drive",
+      "mpgCity": 20,
+      "mpgHwy": 23,
+      "mpgComb": 21,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/44475",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "44477",
+      "model": "Tacoma 4WD",
+      "option": "Auto (S6), 6 cyl, 3.5 L",
+      "engineL": 3.5,
+      "cyl": 6,
+      "trans": "Automatic (S6)",
+      "drive": "Part-time 4-Wheel Drive",
+      "mpgCity": 18,
+      "mpgHwy": 22,
+      "mpgComb": 20,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/44477",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "44480",
+      "model": "Tacoma 4WD",
+      "option": "Auto (S6), 4 cyl, 2.7 L",
+      "engineL": 2.7,
+      "cyl": 4,
+      "trans": "Automatic (S6)",
+      "drive": "Part-time 4-Wheel Drive",
+      "mpgCity": 19,
+      "mpgHwy": 22,
+      "mpgComb": 20,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/44480",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "44479",
+      "model": "Tacoma 4WD D-CAB MT TRD-ORP/PRO",
+      "option": "Man 6-spd, 6 cyl, 3.5 L",
+      "engineL": 3.5,
+      "cyl": 6,
+      "trans": "Manual 6-spd",
+      "drive": "Part-time 4-Wheel Drive",
+      "mpgCity": 17,
+      "mpgHwy": 20,
+      "mpgComb": 18,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/44479",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    }
+  ],
+  "fuelEconomyFetched": "2026-10-15",
+  "recalls": [
+    {
+      "campaign": "22V310000",
+      "component": "EQUIPMENT:OTHER:LABELS",
+      "date": "2022-05-06",
+      "summary": "Gulf States Toyota, Inc. (GST) is recalling certain 2022 4Runner, Tacoma, Highlander, and Highlander Hybrid vehicles.  The load carrying capacity modification labels may not be permanent and can fade, becoming illegible.  As such, these vehicles fail to comply with the requirements of Federal Motor ",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "22V520000",
+      "component": "CHILD SEAT:VEHICLE LATCH ANCHOR",
+      "date": "2022-07-21",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2022-2023 Tacoma vehicles.  One or more of the individual welds in the upper child seat anchors may be insufficient.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 22",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "24V152000",
+      "component": "POWER TRAIN:AXLE ASSEMBLY",
+      "date": "2024-02-27",
+      "summary": "Toyota Motor Engineering & Manufacturer (Toyota) is recalling certain 2022-2023 Tacoma vehicles.  The axle shaft sub-assembly may separate from the axle housing due to debris causing improperly secured fasteners.",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    }
+  ],
+  "recallsFetched": "2026-10-15",
+  "recallsUrl": "https://www.nhtsa.gov/recalls?nhtsaId=&make=Toyota&model=Tacoma&year=2022",
+  "related": {
+    "issues": []
+  },
+  "publishDate": "2026-10-15",
+  "dataUpdated": "2026-10-15",
+  "signOff": {
+    "by": "小数",
+    "date": "2026-10-15"
+  }
+}

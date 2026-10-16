@@ -1,0 +1,77 @@
+---
+import fA800 from '@fontsource/archivo/files/archivo-latin-800-normal.woff2?url';
+import fS400 from '@fontsource/source-sans-3/files/source-sans-3-latin-400-normal.woff2?url';
+import fS700 from '@fontsource/source-sans-3/files/source-sans-3-latin-700-normal.woff2?url';
+import { liveIssueHub as _lh } from '../lib/gate.mjs';
+const hasSym = _lh('symptom'), hasCode = _lh('code');
+import '../styles/fonts.css';
+import '../styles/tokens.css';
+import '../styles/components.css';
+import '../styles/site.css';
+import Icon from '../components/Icon.astro';
+import { SITE, PREVIEW, liveIssues } from '../lib/gate.mjs';
+interface Props { title: string; description: string; path: string; jsonld?: any[]; noindex?: boolean; crumbs?: { name: string; url?: string }[]; nav?: string; preload?: string }
+const { title, description, path, jsonld = [], noindex = false, crumbs, nav, preload } = Astro.props;
+const canonical = SITE + path;
+const graph: any[] = [...jsonld];
+if (crumbs) graph.push({ '@type': 'BreadcrumbList', itemListElement: crumbs.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, ...(c.url ? { item: SITE + c.url } : {}) })) });
+const robots = noindex || PREVIEW ? 'noindex,follow' : null;   // R-Q1 v2: no noindex anywhere except 404 / preview builds
+const liveCodes = liveIssues.filter(i => i.type === 'code').map(i => i.slug);
+---
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{title}</title><meta name="description" content={description}>
+{[fA800, fS400, fS700].map(f => <link rel="preload" href={f} as="font" type="font/woff2" crossorigin />)}
+{!/noindex/.test(robots || "") && <link rel="canonical" href={canonical}>}{robots && <meta name="robots" content={robots}>}
+<meta property="og:type" content="website"><meta property="og:title" content={title}><meta property="og:description" content={description}><meta property="og:url" content={canonical}><meta property="og:image" content={SITE + '/logo.svg'}><meta name="twitter:card" content="summary">
+<link rel="icon" href="/logo.svg" type="image/svg+xml">
+{graph.length > 0 && <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@graph': graph })} />}
+</head>
+<body>
+{PREVIEW && <div class="preview-banner">PREVIEW BUILD — includes pages that have not passed the publish gate. Not for deployment.</div>}
+<header class="hdr"><div class="container hdr__in">
+<a class="brand" href="/"><img src="/logo.svg" width="28" height="28" alt=""><span>CarSpec<b>Fix</b></span></a>
+<nav class="nav" id="main-nav" aria-label="Main">
+  <a href="/" aria-current={nav === 'specs' ? 'page' : undefined}>Specs</a>
+  {hasSym && <a href="/symptoms/" aria-current={nav === 'symptoms' ? 'page' : undefined}>Symptoms</a>}
+  {hasCode && <a href="/codes/" aria-current={nav === 'codes' ? 'page' : undefined}>Trouble codes</a>}
+  <a href="/sources/" aria-current={nav === 'sources' ? 'page' : undefined}>Data sources</a>
+</nav>
+<form class="search" role="search" data-search><Icon name="search" /><input name="q" placeholder="Trouble code, e.g. P0455" aria-label="Search a trouble code" autocomplete="off"></form>
+<div class="hdr__icons"><button class="icon-btn" type="button" aria-label="Menu" aria-controls="main-nav" aria-expanded="false" data-menu><Icon name="menu" /></button></div>
+</div></header>
+<slot />
+<footer class="ftr"><div class="container ftr__in">
+<a class="brand" href="/"><img src="/logo.svg" width="24" height="24" alt=""><span>CarSpec<b>Fix</b></span></a>
+<span>Data from owner's manuals, manufacturer service bulletins, NHTSA and fueleconomy.gov. Every figure cites its source. General information, not professional mechanical advice.</span>
+<nav><a href="/sources/">Data sources</a><a href="/about/">About</a><a href="/authors/editor/">Author</a><a href="/privacy/">Privacy</a><a href="/contact/">Contact</a></nav>
+</div></footer>
+<div class="sr-only" aria-live="polite" id="live"></div>
+<script is:inline src="/feedback.js"></script>
+<script is:inline define:vars={{ liveCodes }}>
+(function(){
+  function fallbackCopy(t){var ta=document.createElement('textarea');ta.value=t;ta.setAttribute('readonly','');ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();var ok=false;try{ok=document.execCommand('copy')}catch(e){ok=false}document.body.removeChild(ta);return ok}
+  function copyText(t){if(navigator.clipboard&&window.isSecureContext){return navigator.clipboard.writeText(t).then(function(){return true},function(){return fallbackCopy(t)})}return Promise.resolve(fallbackCopy(t))}
+  function flash(btn,ok){var l=btn.querySelector('.lbl'),live=document.getElementById('live'),msg=ok?'Copied':'Copy failed';if(l){var old=l.dataset.orig||l.textContent;l.dataset.orig=old;l.textContent=msg;btn.classList.toggle('is-err',!ok);setTimeout(function(){l.textContent=old;btn.classList.remove('is-err')},1600)}else{btn.title=msg}if(live)live.textContent=msg}
+  function track(name){/* R-A2 event analytics: tool TBD by 队长 */ if(window.CSF_TRACK)window.CSF_TRACK(name)}
+  function goCode(v){var c=(v||'').trim().toLowerCase().replace(/[^a-z0-9]/g,'');if(liveCodes.indexOf(c)>=0)location.href='/codes/'+c+'/';else alert('That code page is not published yet.')}
+  document.addEventListener('click',function(e){
+    var c=e.target.closest('[data-copy]');
+    if(c){var t=c.getAttribute('data-copy');if(!t){var scope=c.closest('[data-copy-scope],section');t=scope?scope.innerText.replace(/\s*(Copy|Print|Print page|Copied|Copy failed)\s*/g,' ').trim():document.title}copyText(t).then(function(ok){flash(c,ok);track('copy')})}
+    if(e.target.closest('[data-print]')){e.preventDefault();track('print');window.print()}
+    var m=e.target.closest('[data-menu]');if(m){var n=document.getElementById('main-nav');var o=n.classList.toggle('is-open');m.setAttribute('aria-expanded',o?'true':'false')}
+    var fb=e.target.closest('[data-feedback]');
+    if(fb){var box=fb.closest('.feedback'),v=fb.getAttribute('data-feedback');box.querySelectorAll('[data-feedback]').forEach(function(b){b.setAttribute('aria-pressed',b===fb)});box.querySelector('.feedback__more').hidden=(v!=='no');box.querySelector('.feedback__msg').textContent=v==='yes'?'Thanks, glad it helped.':'Thanks. Tell us what was missing (optional).';CSF.send({type:'feedback',page:box.dataset.page,value:v,text:''})}
+    var sd=e.target.closest('[data-feedback-send]');
+    if(sd){var bx=sd.closest('.feedback'),ta=bx.querySelector('textarea');CSF.send({type:'feedback-detail',page:bx.dataset.page,value:'no',text:ta.value.slice(0,1000)}).then(function(ok){bx.querySelector('.feedback__msg').textContent=ok?'Sent. Thank you.':'Could not send. Please try again later.';if(ok){bx.querySelector('.feedback__more').hidden=true}})}
+  });
+  document.addEventListener('submit',function(e){var f=e.target;
+    if(f.matches('[data-search],[data-code]')){e.preventDefault();goCode(f.q.value)}
+    if(f.matches('[data-goto]')){e.preventDefault();if(f.u.value)location.href=f.u.value}
+    if(f.matches('[data-report]')){e.preventDefault();CSF.send({type:'report',page:f.page.value,field:f.field.value,text:f.details.value.slice(0,2000)}).then(function(ok){f.querySelector('[role=status]').textContent=ok?'Thanks. Your report is queued for review.':'Could not send. Please try again later.';track('report');if(ok)f.reset()})}
+  });
+})();
+</script>
+</body></html>

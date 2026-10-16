@@ -1,0 +1,272 @@
+{
+  "slug": "2022-toyota-corolla",
+  "year": 2022,
+  "make": "Toyota",
+  "model": "Corolla",
+  "makeSlug": "toyota",
+  "modelSlug": "corolla",
+  "powertrain": "ice",
+  "vpicConfirmed": true,
+  "manual": {
+    "sourceId": "manual-2022-toyota-corolla",
+    "yearConfirmed": true,
+    "note": "OM02617U (Corolla sedan gas; MY2022 per Helm https://www.helminc.com/helm/product2.asp?Sku=OM02617U&class_2=TOY&itemtype=N). Oil pp.552-554, tires pp.558-560 (printed = PDF page). Hybrid OM12R27U and hatchback OM12Q05U added."
+  },
+  "specs": {
+    "oilCapacity": {
+      "value": "1.8L 2ZR-FAE: 4.4 qt (4.2 L) with filter, 4.1 qt without; 2.0L M20A-FKS: 4.9 qt (4.6 L) with filter, 4.5 qt without | HYBRID 1.8L: 4.4 qt (4.2 L) with filter, 4.1 qt without, SAE 0W-16, GF-6B [OM12R27U p.510] | HATCHBACK 2.0L: 4.9 qt (4.6 L) with filter, 4.5 qt without, SAE 0W-16 (0W-20 allowed) [OM12Q05U p.516]",
+      "source": "manual-2022-toyota-corolla",
+      "page": null,
+      "sourceGrade": "A",
+      "verified": false,
+      "note": null
+    },
+    "oilViscosity": {
+      "value": "1.8L: SAE 0W-20 (5W-20 allowed), ILSAC GF-6A; 2.0L: SAE 0W-16 (0W-20 allowed), ILSAC GF-6B",
+      "source": "manual-2022-toyota-corolla",
+      "page": null,
+      "sourceGrade": "A",
+      "verified": false,
+      "note": null
+    },
+    "wiperSizes": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "no citable source yet"
+    },
+    "batteryGroup": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "no citable source yet"
+    },
+    "towingCapacity": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false
+    },
+    "tpmsReset": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": null
+    }
+  },
+  "tires": {
+    "rows": [
+      {
+        "wheel": "15",
+        "config": "Sedan type A",
+        "tireSize": "195/65R15 91S",
+        "frontPsi": 38,
+        "rearPsi": 36,
+        "page": "p.558",
+        "source": "manual-2022-toyota-corolla",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "16",
+        "config": "Sedan type B",
+        "tireSize": "205/55R16 91H",
+        "frontPsi": 35,
+        "rearPsi": 33,
+        "page": "p.558",
+        "source": "manual-2022-toyota-corolla",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "18",
+        "config": "Sedan type C",
+        "tireSize": "225/40R18 88V",
+        "frontPsi": 33,
+        "rearPsi": 30,
+        "page": "p.559",
+        "source": "manual-2022-toyota-corolla",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "15",
+        "config": "Sedan type D (no spare)",
+        "tireSize": "195/65R15 91S",
+        "frontPsi": 38,
+        "rearPsi": 36,
+        "page": "p.559",
+        "source": "manual-2022-toyota-corolla",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "16",
+        "config": "Sedan type E (no spare)",
+        "tireSize": "205/55R16 91H",
+        "frontPsi": 35,
+        "rearPsi": 33,
+        "page": "p.559",
+        "source": "manual-2022-toyota-corolla",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "18",
+        "config": "Sedan type F",
+        "tireSize": "225/40R18 88W",
+        "frontPsi": 33,
+        "rearPsi": 30,
+        "page": "p.560",
+        "source": "manual-2022-toyota-corolla",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "15",
+        "config": "Hybrid type A",
+        "tireSize": "195/65R15 91S",
+        "frontPsi": 38,
+        "rearPsi": 36,
+        "page": "p.513",
+        "source": "doc-OM12R27U",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "15",
+        "config": "Hybrid type B (no spare)",
+        "tireSize": "195/65R15 91S",
+        "frontPsi": 38,
+        "rearPsi": 36,
+        "page": "p.514",
+        "source": "doc-OM12R27U",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "15",
+        "config": "Hatchback 15-inch tires",
+        "tireSize": "195/65R15 91S",
+        "frontPsi": 38,
+        "rearPsi": 36,
+        "page": "p.519",
+        "source": "doc-OM12Q05U",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "16",
+        "config": "Hatchback 16-inch tires",
+        "tireSize": "205/55R16 91H",
+        "frontPsi": 35,
+        "rearPsi": 33,
+        "page": "p.519",
+        "source": "doc-OM12Q05U",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "18",
+        "config": "Hatchback 18-inch tires",
+        "tireSize": "225/40R18 88V",
+        "frontPsi": 33,
+        "rearPsi": 30,
+        "page": "p.520",
+        "source": "doc-OM12Q05U",
+        "sourceGrade": "A"
+      }
+    ],
+    "origin": "tire_rows.csv",
+    "note": null
+  },
+  "extraManuals": [],
+  "fuelEconomy": [
+    {
+      "feId": "44074",
+      "model": "Corolla",
+      "option": "Auto (AV-S10), 4 cyl, 2.0 L",
+      "engineL": 2,
+      "cyl": 4,
+      "trans": "Automatic (AV-S10)",
+      "drive": "Front-Wheel Drive",
+      "mpgCity": 31,
+      "mpgHwy": 40,
+      "mpgComb": 34,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/44074",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "44070",
+      "model": "Corolla",
+      "option": "Auto (variable gear ratios), 4 cyl, 1.8 L",
+      "engineL": 1.8,
+      "cyl": 4,
+      "trans": "Automatic (variable gear ratios)",
+      "drive": "Front-Wheel Drive",
+      "mpgCity": 30,
+      "mpgHwy": 38,
+      "mpgComb": 33,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/44070",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "44077",
+      "model": "Corolla APEX",
+      "option": "Auto (AV-S10), 4 cyl, 2.0 L",
+      "engineL": 2,
+      "cyl": 4,
+      "trans": "Automatic (AV-S10)",
+      "drive": "Front-Wheel Drive",
+      "mpgCity": 31,
+      "mpgHwy": 38,
+      "mpgComb": 34,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/44077",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "44078",
+      "model": "Corolla APEX",
+      "option": "Man 6-spd, 4 cyl, 2.0 L",
+      "engineL": 2,
+      "cyl": 4,
+      "trans": "Manual 6-spd",
+      "drive": "Front-Wheel Drive",
+      "mpgCity": 28,
+      "mpgHwy": 36,
+      "mpgComb": 31,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/44078",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "44588",
+      "model": "Corolla Cross",
+      "option": "Auto (AV-S10), 4 cyl, 2.0 L",
+      "engineL": 2,
+      "cyl": 4,
+      "trans": "Automatic (AV-S10)",
+      "drive": "Front-Wheel Drive",
+      "mpgCity": 31,
+      "mpgHwy": 33,
+      "mpgComb": 32,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/44588",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    }
+  ],
+  "fuelEconomyFetched": "2026-10-15",
+  "recalls": [],
+  "recallsFetched": "2026-10-15",
+  "recallsUrl": "https://www.nhtsa.gov/recalls?nhtsaId=&make=Toyota&model=Corolla&year=2022",
+  "related": {
+    "issues": []
+  },
+  "publishDate": "2026-10-15",
+  "dataUpdated": "2026-10-15",
+  "signOff": {
+    "by": "小数",
+    "date": "2026-10-15"
+  }
+}

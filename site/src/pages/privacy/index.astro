@@ -1,0 +1,9 @@
+---
+import Page from '../../layouts/Page.astro';
+import { CONTACT_EMAIL } from '../../lib/site.mjs';
+---
+<Page title="Privacy Policy | CarSpecFix" description="How CarSpecFix handles your data: what we collect, cookies, and how to contact us." path="/privacy/" crumbs={[{ name: 'Home', url: '/' }, { name: 'Privacy', url: '/privacy/' }]} h1={`Privacy Policy`}>
+<p class="meta">Effective [PENDING-队长] launch date</p>
+<p>We do not require accounts and do not sell personal data. We use Cloudflare Web Analytics, which does not use cookies, to count visits in aggregate. Our host (Cloudflare) processes standard request logs to deliver and secure the site.</p>
+<p>If we add advertising in the future, this policy will be updated before ads appear. Questions: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.</p>
+</Page>

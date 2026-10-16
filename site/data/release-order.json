@@ -1,0 +1,38 @@
+{
+  "_comment": "Site-owned release order (relative launch days). A page is live on build RELEASE_DAY=N (default 1) if it is listed on day <= N AND is signed AND passes the gate. Signed pages not listed here stay unpublished. Hubs (make/model, /codes/, /symptoms/) are automatic. Related-issue links render only when both pages are live.",
+  "days": {
+    "1": [
+      "2020-toyota-rav4",
+      "2022-honda-civic",
+      "2024-honda-cr-v",
+      "2024-toyota-rav4",
+      "p0420",
+      "p0171",
+      "p0300",
+      "p0456",
+      "p0455"
+    ],
+    "2": [
+      "p0301",
+      "p0442",
+      "2022-toyota-camry",
+      "2024-toyota-camry",
+      "2022-toyota-corolla",
+      "2022-toyota-tacoma"
+    ],
+    "3": [
+      "2022-honda-accord"
+    ]
+  },
+  "relatedIssues": [
+    [
+      "p0300",
+      "p0301"
+    ],
+    [
+      "p0455",
+      "p0456",
+      "p0442"
+    ]
+  ]
+}

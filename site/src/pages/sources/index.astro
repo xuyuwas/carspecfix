@@ -1,0 +1,28 @@
+---
+import Page from '../../layouts/Page.astro';
+import { sources, vehicles, issues, vehicleGate, issueGate } from '../../lib/gate.mjs';
+// only sources used by currently published (gate-passing) pages
+const liveV = vehicles.filter(v => vehicleGate(v).pass), liveI = issues.filter(i => issueGate(i).pass);
+const used = new Set(liveV.flatMap(v => [...Object.values(v.specs).filter((f: any) => f?.source && f.sourceGrade === 'A' && f.value).map((f: any) => f.source), ...(v.tires?.rows || []).filter((t: any) => t.sourceGrade === 'A').map((t: any) => t.source), ...(v.recalls.length || v.recallsFetched ? ['nhtsa-recalls'] : []), ...(v.fuelEconomy.length ? ['fueleconomy'] : [])]));
+const A = Object.entries(sources).filter(([k, x]: any) => x.grade === 'A' && used.has(k)).map(([, x]) => x);
+const gov = A.filter((x: any) => x.type === 'government');
+const by = (arr: any[], key: (x: any) => string) => [...arr.reduce((m, x) => m.set(key(x), [...(m.get(key(x)) || []), x]), new Map()).entries()].sort((a, b) => a[0].localeCompare(b[0]));
+const brands = by(A.filter((x: any) => x.type !== 'government'), (x: any) => (x.name.match(/^\d{4} (\S+)/) || [])[1] || (/^GM /.test(x.name) ? 'Chevrolet' : 'Other'));
+const docsRaw = [...new Map(liveI.flatMap(i => [...(i.causes || []), ...(i.urgency || []), ...(i.definition ? [i.definition] : [])]).filter(c => c.sourceGrade === 'A' && c.url).map(c => [c.url, c])).values()];
+const docBrands = by(docsRaw, (d: any) => d.maker || 'Other');
+---
+<Page title="Data Sources & Methodology | CarSpecFix" description="Where CarSpecFix data comes from, when it was retrieved, how it is checked and how corrections are handled." path="/sources/" nav="sources" crumbs={[{ name: 'Home', url: '/' }, { name: 'Data sources', url: '/sources/' }]} h1="Data sources & methodology">
+<h2 class="section__title">How we work</h2>
+<ul><li>Only U.S.-market sources: manufacturer owner's manuals and service bulletins, NHTSA and fueleconomy.gov (U.S. EPA / DOE).</li>
+<li>Every number links to its source document and page. Values are published only from grade-A sources (manufacturer or government originals); anything else shows "Not yet verified".</li>
+<li>A person checks every page against its sources and signs it off before it goes live.</li>
+<li>Units are U.S.: quarts, psi, mpg. Recalls and fuel economy are refreshed from public APIs; retrieval dates are shown on each page.</li>
+<li>Safety-related corrections (brakes, tire pressure, oil) are switched to "Not yet verified" within 24 hours of a report, then checked within 3 business days.</li></ul>
+{gov.length > 0 && <h2 class="section__title">Government data (U.S.)</h2>}
+<ul>{gov.map((x: any) => <li><a href={x.url}>{x.name}</a> — retrieved {x.retrieved}</li>)}</ul>
+{brands.length > 0 && <h2 class="section__title">Owner's manuals &amp; spec sheets, by brand</h2>}
+{brands.map(([b, list]) => <><h3>{b}</h3><ul>{list.map((x: any) => <li><a href={x.url}>{x.name}</a> — retrieved {x.retrieved}</li>)}</ul></>)}
+{docBrands.length > 0 && <><h2 class="section__title">Service bulletins &amp; manuals used for symptoms and trouble codes</h2>
+{docBrands.map(([b, list]) => <><h3>{b}</h3><ul>{list.map((d: any) => <li><a href={d.url}>{d.document}</a>{d.fetched && ` — retrieved ${d.fetched}`}</li>)}</ul></>)}</>}
+<h2 class="section__title">Corrections log</h2><p>No corrections yet. Found a wrong value? <a href="/contact/#report-form">Report it</a>.</p>
+</Page>

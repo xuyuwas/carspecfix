@@ -1,0 +1,292 @@
+{
+  "slug": "2024-toyota-camry",
+  "year": 2024,
+  "make": "Toyota",
+  "model": "Camry",
+  "makeSlug": "toyota",
+  "modelSlug": "camry",
+  "powertrain": "ice",
+  "vpicConfirmed": true,
+  "manual": {
+    "sourceId": "manual-2024-toyota-camry",
+    "yearConfirmed": true,
+    "note": "OM06291U (gas Camry; MY2024 per Helm https://www.helminc.com/helm/product2.asp?Sku=OM06291U&class_2=TOY&itemtype=N). Oil p.578, viscosity pp.578-579, tires pp.584-588 (printed = PDF-1). Hybrid: OM06293U added."
+  },
+  "specs": {
+    "oilCapacity": {
+      "value": "2.5L A25A-FKS: 4.5 qt (4.3 L) with filter, 4.2 qt without; 3.5L V6 2GR-FKS: 5.7 qt (5.4 L) with filter, 5.6 qt without | HYBRID 2.5L: 4.5 qt (4.3 L) with filter, 4.2 qt without, SAE 0W-16 (0W-20 allowed), GF-6B [OM06293U p.547]",
+      "source": "manual-2024-toyota-camry",
+      "page": null,
+      "sourceGrade": "A",
+      "verified": false,
+      "note": null
+    },
+    "oilViscosity": {
+      "value": "2.5L: SAE 0W-16 (0W-20 allowed, replace with 0W-16 at next change), ILSAC GF-6B; 3.5L V6: SAE 0W-20 (5W-20 allowed), ILSAC GF-6A",
+      "source": "manual-2024-toyota-camry",
+      "page": null,
+      "sourceGrade": "A",
+      "verified": false,
+      "note": null
+    },
+    "wiperSizes": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "Not yet verified (blade sizes not stated in OM06244U/OM06291U/OM06246U/OM06293U)"
+    },
+    "batteryGroup": {
+      "value": "Gas [OM06291U p.565]: replace with same case size, ≥20HR and ≥CCA; Type A LN2 60Ah 563A, Type B LN3 70Ah 603A (manual does not say which trim gets which type). Hybrid 12-volt [OM06293U p.534]: LN2; without moon roof ≥55Ah/≥345A CCA, with moon roof ≥60Ah/≥563A CCA",
+      "source": "manual-2024-toyota-camry",
+      "page": null,
+      "sourceGrade": "A",
+      "verified": false,
+      "note": null
+    },
+    "towingCapacity": {
+      "value": "Toyota does not recommend towing a trailer (gas OM06291U pp.206-207; hybrid OM06293U pp.203-204)",
+      "source": "manual-2024-toyota-camry",
+      "sourceGrade": "A",
+      "verified": false,
+      "note": null
+    },
+    "tpmsReset": {
+      "value": "Park, stop engine/hybrid system ≥20 min; set cold pressures; then multi-information display > Vehicle Settings > TPWS > 'Set Pressure', press and hold until tire pressure warning light blinks 3 times; with pressure display: drive ~25 mph+ for 10-30 min. Required after pressure change, tire size change, rotation. (gas OM06291U pp.475-476; hybrid OM06293U pp.447-448)",
+      "source": "manual-2024-toyota-camry",
+      "page": null,
+      "sourceGrade": "A",
+      "verified": false,
+      "note": null
+    }
+  },
+  "tires": {
+    "rows": [
+      {
+        "wheel": "16",
+        "config": "2WD type A",
+        "tireSize": "205/65R16 95H",
+        "frontPsi": 35,
+        "rearPsi": 35,
+        "page": "p.584",
+        "source": "manual-2024-toyota-camry",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "17",
+        "config": "2WD type B",
+        "tireSize": "215/55R17 94V",
+        "frontPsi": 35,
+        "rearPsi": 35,
+        "page": "p.584",
+        "source": "manual-2024-toyota-camry",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "18",
+        "config": "2WD type C",
+        "tireSize": "235/45R18 94V",
+        "frontPsi": 35,
+        "rearPsi": 35,
+        "page": "p.585",
+        "source": "manual-2024-toyota-camry",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "19",
+        "config": "2WD type D",
+        "tireSize": "235/40R19 92V",
+        "frontPsi": 35,
+        "rearPsi": 35,
+        "page": "p.585",
+        "source": "manual-2024-toyota-camry",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "19",
+        "config": "2WD type E",
+        "tireSize": "235/40R19 92V",
+        "frontPsi": 35,
+        "rearPsi": 35,
+        "page": "p.586",
+        "source": "manual-2024-toyota-camry",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "19",
+        "config": "2WD type F",
+        "tireSize": "235/40R19 96Y",
+        "frontPsi": 33,
+        "rearPsi": 33,
+        "page": "p.586",
+        "source": "manual-2024-toyota-camry",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "17",
+        "config": "AWD type A",
+        "tireSize": "215/55R17 94V",
+        "frontPsi": 36,
+        "rearPsi": 36,
+        "page": "p.587",
+        "source": "manual-2024-toyota-camry",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "18",
+        "config": "AWD type B",
+        "tireSize": "235/45R18 94V",
+        "frontPsi": 36,
+        "rearPsi": 36,
+        "page": "p.587",
+        "source": "manual-2024-toyota-camry",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "19",
+        "config": "AWD type C",
+        "tireSize": "235/40R19 92V",
+        "frontPsi": 36,
+        "rearPsi": 36,
+        "page": "p.588",
+        "source": "manual-2024-toyota-camry",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "19",
+        "config": "AWD type D",
+        "tireSize": "235/40R19 92V",
+        "frontPsi": 35,
+        "rearPsi": 35,
+        "page": "p.588",
+        "source": "manual-2024-toyota-camry",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "16",
+        "config": "Hybrid type A",
+        "tireSize": "205/65R16 95H",
+        "frontPsi": 35,
+        "rearPsi": 35,
+        "page": "p.551",
+        "source": "doc-OM06293U",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "17",
+        "config": "Hybrid type B",
+        "tireSize": "215/55R17 94V",
+        "frontPsi": 35,
+        "rearPsi": 35,
+        "page": "p.551",
+        "source": "doc-OM06293U",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "18",
+        "config": "Hybrid type C",
+        "tireSize": "235/45R18 94V",
+        "frontPsi": 35,
+        "rearPsi": 35,
+        "page": "p.552",
+        "source": "doc-OM06293U",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "19",
+        "config": "Hybrid type D",
+        "tireSize": "235/40R19 92V",
+        "frontPsi": 35,
+        "rearPsi": 35,
+        "page": "p.552",
+        "source": "doc-OM06293U",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "19",
+        "config": "Hybrid type E",
+        "tireSize": "235/40R19 92V",
+        "frontPsi": 35,
+        "rearPsi": 35,
+        "page": "p.553",
+        "source": "doc-OM06293U",
+        "sourceGrade": "A"
+      }
+    ],
+    "origin": "tire_rows.csv",
+    "note": null
+  },
+  "extraManuals": [],
+  "fuelEconomy": [
+    {
+      "feId": "47085",
+      "model": "Camry",
+      "option": "Auto (S8), 6 cyl, 3.5 L",
+      "engineL": 3.5,
+      "cyl": 6,
+      "trans": "Automatic (S8)",
+      "drive": "Front-Wheel Drive",
+      "mpgCity": 22,
+      "mpgHwy": 33,
+      "mpgComb": 26,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/47085",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "47088",
+      "model": "Camry AWD LE/SE",
+      "option": "Auto (S8), 4 cyl, 2.5 L",
+      "engineL": 2.5,
+      "cyl": 4,
+      "trans": "Automatic (S8)",
+      "drive": "All-Wheel Drive",
+      "mpgCity": 25,
+      "mpgHwy": 34,
+      "mpgComb": 29,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/47088",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "47089",
+      "model": "Camry AWD XLE/XSE",
+      "option": "Auto (S8), 4 cyl, 2.5 L",
+      "engineL": 2.5,
+      "cyl": 4,
+      "trans": "Automatic (S8)",
+      "drive": "All-Wheel Drive",
+      "mpgCity": 25,
+      "mpgHwy": 34,
+      "mpgComb": 28,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/47089",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    }
+  ],
+  "fuelEconomyFetched": "2026-10-15",
+  "recalls": [
+    {
+      "campaign": "24V128000",
+      "component": "SEATS",
+      "date": "2024-02-21",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2023-2024 Camry and Camry Hybrid vehicles. The second-row center and right-side seats may have insufficiently welded head restraint brackets.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle ",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    }
+  ],
+  "recallsFetched": "2026-10-15",
+  "recallsUrl": "https://www.nhtsa.gov/recalls?nhtsaId=&make=Toyota&model=Camry&year=2024",
+  "related": {
+    "issues": []
+  },
+  "publishDate": "2026-10-15",
+  "dataUpdated": "2026-10-15",
+  "signOff": {
+    "by": "小数",
+    "date": "2026-10-15"
+  }
+}

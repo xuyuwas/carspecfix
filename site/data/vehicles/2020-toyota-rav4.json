@@ -1,0 +1,291 @@
+{
+  "slug": "2020-toyota-rav4",
+  "year": 2020,
+  "make": "Toyota",
+  "model": "RAV4",
+  "makeSlug": "toyota",
+  "modelSlug": "rav4",
+  "powertrain": "ice",
+  "vpicConfirmed": true,
+  "manual": {
+    "sourceId": "manual-2020-toyota-rav4",
+    "yearConfirmed": true,
+    "note": "OM0R024U, PDF created 2019-07-22; text has no model-year statement (only \"RAV4_OM_OM0R024U_(U)\"). Creation date fits MY2020, but MY confirmation via toyota.com owners portal still TODO (portal is JS-rendered)"
+  },
+  "specs": {
+    "oilCapacity": {
+      "value": "4.8 qt (4.5 L) with filter; 4.4 qt without",
+      "source": "manual-2020-toyota-rav4",
+      "page": "p.666",
+      "sourceGrade": "A",
+      "verified": false,
+      "note": null
+    },
+    "oilViscosity": {
+      "value": "SAE 0W-16 (0W-20 acceptable)",
+      "source": "manual-2020-toyota-rav4",
+      "page": "p.667",
+      "sourceGrade": "A",
+      "verified": false,
+      "note": null
+    },
+    "wiperSizes": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "no citable source yet"
+    },
+    "batteryGroup": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "no citable source yet"
+    },
+    "towingCapacity": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false
+    },
+    "tpmsReset": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": null
+    }
+  },
+  "tires": {
+    "rows": [
+      {
+        "wheel": "17",
+        "config": "Vehicles with 17-inch wheels type A",
+        "tireSize": "225/65R17 102H",
+        "frontPsi": 35,
+        "rearPsi": 35,
+        "page": "p.671",
+        "source": "manual-2020-toyota-rav4",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "17",
+        "config": "Vehicles with 17-inch wheels type B",
+        "tireSize": "225/65R17 102H",
+        "frontPsi": 36,
+        "rearPsi": 36,
+        "page": "p.671",
+        "source": "manual-2020-toyota-rav4",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "17",
+        "config": "Vehicles with 17-inch wheels type C",
+        "tireSize": "225/65R17 102H",
+        "frontPsi": 33,
+        "rearPsi": 33,
+        "page": "p.672",
+        "source": "manual-2020-toyota-rav4",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "17",
+        "config": "Vehicles with 17-inch wheels type D",
+        "tireSize": "225/65R17 102H",
+        "frontPsi": 35,
+        "rearPsi": 35,
+        "page": "p.672",
+        "source": "manual-2020-toyota-rav4",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "17",
+        "config": "Vehicles with 17-inch wheels type E",
+        "tireSize": "225/65R17 102H",
+        "frontPsi": 36,
+        "rearPsi": 36,
+        "page": "p.673",
+        "source": "manual-2020-toyota-rav4",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "18",
+        "config": "Vehicles with 18-inch wheels",
+        "tireSize": "225/60R18 100H",
+        "frontPsi": 33,
+        "rearPsi": 33,
+        "page": "p.673",
+        "source": "manual-2020-toyota-rav4",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "19",
+        "config": "Vehicles with 19-inch wheels type A",
+        "tireSize": "235/55R19 101V",
+        "frontPsi": 33,
+        "rearPsi": 33,
+        "page": "p.674",
+        "source": "manual-2020-toyota-rav4",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "19",
+        "config": "Vehicles with 19-inch wheels type B",
+        "tireSize": "235/55R19 101V",
+        "frontPsi": 35,
+        "rearPsi": 35,
+        "page": "p.674",
+        "source": "manual-2020-toyota-rav4",
+        "sourceGrade": "A"
+      }
+    ],
+    "origin": "tire_rows.csv",
+    "note": null
+  },
+  "extraManuals": [],
+  "fuelEconomy": [
+    {
+      "feId": "42181",
+      "model": "RAV4",
+      "option": "Auto (S8), 4 cyl, 2.5 L, SIDI & PFI",
+      "engineL": 2.5,
+      "cyl": 4,
+      "trans": "Automatic (S8)",
+      "drive": "Front-Wheel Drive",
+      "mpgCity": 27,
+      "mpgHwy": 35,
+      "mpgComb": 30,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/42181",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "42182",
+      "model": "RAV4",
+      "option": "Auto (S8), 4 cyl, 2.5 L, SIDI & PFI; Stop-Start",
+      "engineL": 2.5,
+      "cyl": 4,
+      "trans": "Automatic (S8)",
+      "drive": "Front-Wheel Drive",
+      "mpgCity": 28,
+      "mpgHwy": 35,
+      "mpgComb": 30,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/42182",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "42185",
+      "model": "RAV4 AWD",
+      "option": "Auto (S8), 4 cyl, 2.5 L, SIDI & PFI",
+      "engineL": 2.5,
+      "cyl": 4,
+      "trans": "Automatic (S8)",
+      "drive": "All-Wheel Drive",
+      "mpgCity": 25,
+      "mpgHwy": 33,
+      "mpgComb": 28,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/42185",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "42186",
+      "model": "RAV4 AWD",
+      "option": "Auto (S8), 4 cyl, 2.5 L, SIDI & PFI; Stop-Start",
+      "engineL": 2.5,
+      "cyl": 4,
+      "trans": "Automatic (S8)",
+      "drive": "All-Wheel Drive",
+      "mpgCity": 27,
+      "mpgHwy": 33,
+      "mpgComb": 29,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/42186",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "42189",
+      "model": "RAV4 AWD LE",
+      "option": "Auto (S8), 4 cyl, 2.5 L",
+      "engineL": 2.5,
+      "cyl": 4,
+      "trans": "Automatic (S8)",
+      "drive": "All-Wheel Drive",
+      "mpgCity": 27,
+      "mpgHwy": 34,
+      "mpgComb": 30,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/42189",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    }
+  ],
+  "fuelEconomyFetched": "2026-10-15",
+  "recalls": [
+    {
+      "campaign": "20V682000",
+      "component": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+      "date": "2020-11-04",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2018-2019 4Runner, 2019-2020 Avalon, 2019 Corolla Hatchback, 2017-2019 Highlander, 2018-2020 Camry, 2020 Corolla, 2018-2019 Land Cruiser, 2017-2020 Tacoma, 2019-2020 RAV4, 2019-2020 Sequoia, 2017-2020 Sienna, 2019-2020 Tundra, 20",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "20V734000",
+      "component": "AIR BAGS:FRONTAL",
+      "date": "2020-11-25",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2020-2021 Toyota Avalon and 2020 Avalon Hybrid, RAV4, and RAV4 Hybrid vehicles.  Breakaway pins within the steering column, designed to absorb energy and reduce injury during a crash, could have been damaged during production, po",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "20V064000",
+      "component": "ENGINE AND ENGINE COOLING",
+      "date": "2020-02-06",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2020 Toyota Avalon Hybrid, Camry, Camry Hybrid and  Lexus ES300h and 2019-2020 RAV4 and RAV4 Hybrid vehicles equipped with 2.5L 4-Cylinder engines.  Porosity in the engine castings may result in cracks than can allow coolant to l",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "20V373000",
+      "component": "STEERING:ELECTRIC POWER ASSIST SYSTEM",
+      "date": "2020-06-24",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2019-2020 RAV4 and 2020 RAV4 Hybrid vehicles equipped with electric power steering (EPS).  Water may enter through the steering gear box cover and cause a loss of electric power steering assist.",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "20V286000",
+      "component": "SUSPENSION:FRONT:CONTROL ARM:LOWER ARM",
+      "date": "2020-05-20",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2019-2020 RAV4 and RAV4 Hybrid vehicles.  The front lower suspension arms may have cracks, which may result in the suspension arm separating from the front wheel assembly.",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "23V865000",
+      "component": "AIR BAGS:SENSOR:OCCUPANT CLASSIFICATION",
+      "date": "2023-12-20",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2020-2021 Avalon, Avalon Hybrid, Corolla, Highlander, Highlander Hybrid, RAV4, RAV4 Hybrid, Lexus ES350, Lexus RX350, Lexus RX450H, 2021 Sienna Hybrid, Lexus ES250, 2020-2022 Camry, Camry Hybrid, and ES300H vehicles.  A short cir",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    }
+  ],
+  "recallsFetched": "2026-10-15",
+  "recallsUrl": "https://www.nhtsa.gov/recalls?nhtsaId=&make=Toyota&model=RAV4&year=2020",
+  "related": {
+    "issues": []
+  },
+  "publishDate": "2026-10-15",
+  "dataUpdated": "2026-10-15",
+  "signOff": {
+    "by": "小数",
+    "date": "2026-10-15"
+  }
+}

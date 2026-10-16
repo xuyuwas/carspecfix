@@ -1,0 +1,781 @@
+target_url,section,primary_keyword,n_secondary,priority
+/codes/p0420/,codes,p0420 code,669,P1
+/codes/p0171/,codes,p0171 code,648,P1
+/codes/p0300/,codes,p0300 code,634,P1
+/codes/p0455/,codes,p0455 code,606,P1
+/symptoms/car-shaking-when-accelerating/,symptoms,car shaking when accelerating,544,P1
+/codes/p0442/,codes,p0442 code,530,P1
+/symptoms/car-cranks-but-wont-start/,symptoms,car cranks but wont start,492,P1
+/symptoms/brakes-squeaking/,symptoms,brakes squeaking,424,P1
+/symptoms/car-jerks-when-accelerating/,symptoms,car jerks when accelerating,419,P1
+/codes/p0456/,codes,p0456 code,333,P1
+/symptoms/car-shakes-when-braking/,symptoms,car shakes when braking,320,P1
+/symptoms/grinding-noise-when-braking/,symptoms,grinding noise when braking,204,P1
+/specs/toyota/tacoma/2022/,specs,2022 tacoma specs,95,P1
+/specs/chevrolet/silverado-1500/2022/,specs,2022 silverado 1500 specs,93,P1
+/specs/ford/f-150/2023/,specs,2023 f-150 specs,92,P1
+/specs/ford/f-150/2021/,specs,2021 f-150 specs,90,P1
+/specs/toyota/corolla/2022/,specs,2022 corolla specs,90,P1
+/specs/toyota/rav4/2024/,specs,2024 rav4 specs,90,P1
+/specs/honda/civic/2022/,specs,2022 civic specs,88,P1
+/specs/honda/accord/2022/,specs,2022 accord specs,87,P1
+/specs/toyota/rav4/2020/,specs,2020 rav4 specs,86,P1
+/specs/toyota/camry/2022/,specs,2022 toyota camry specs,84,P1
+/specs/toyota/camry/2024/,specs,2024 camry specs,84,P1
+/specs/chevrolet/equinox/2022/,specs,2022 equinox specs,83,P1
+/specs/honda/cr-v/2024/,specs,2024 cr-v specs,73,P1
+/specs/honda/cr-v/2022/,specs,2022 cr-v specs,70,P1
+/specs/tesla/model-y/2023/,specs,2023 model y specs,50,P1
+/symptoms/car-wont-start-clicking/,symptoms,car wont start clicking noise,27,P1
+/symptoms/abs-light-on/,symptoms,abs light on,0,P1
+/codes/p0301/,codes,p0301 code,0,P1
+/symptoms/tire-pressure-light/,symptoms,tire pressure light,1467,P2
+/symptoms/check-engine-light/,symptoms,check engine light,662,P2
+/symptoms/car-ac-not-blowing-cold/,symptoms,car ac not blowing cold,549,P2
+/symptoms/engine-ticking-noise/,symptoms,engine ticking noise,335,P2
+/specs/honda/civic/2016/,specs,2016 honda civic specs,154,P2
+/symptoms/burning-smell/,symptoms,burning smell,138,P2
+/specs/honda/cr-v/2019/,specs,2019 honda cr v specs,118,P2
+/specs/ford/explorer/2020/,specs,2020 ford explorer specs,100,P2
+/specs/gmc/sierra/2024/,specs,2024 gmc sierra specs,99,P2
+/specs/ford/ranger/2021/,specs,2021 ford ranger specs,98,P2
+/specs/gmc/sierra/2022/,specs,2022 gmc sierra specs,98,P2
+/specs/ford/ranger/2024/,specs,2024 ford ranger specs,98,P2
+/specs/gmc/sierra/2025/,specs,2025 gmc sierra specs,98,P2
+/specs/ford/edge/2020/,specs,2020 ford edge specs,97,P2
+/specs/ford/ranger/2020/,specs,2020 ford ranger specs,97,P2
+/specs/chevrolet/silverado-1500/2021/,specs,2021 chevrolet silverado 1500 specs,97,P2
+/specs/nissan/rogue/2021/,specs,2021 nissan rogue specs,97,P2
+/specs/gmc/sierra/2023/,specs,2023 gmc sierra specs,97,P2
+/specs/kia/sportage/2023/,specs,2023 kia sportage specs,97,P2
+/specs/ford/ranger/2019/,specs,2019 ford ranger specs,96,P2
+/specs/chevrolet/equinox/2020/,specs,2020 chevrolet equinox specs,96,P2
+/specs/nissan/rogue/2023/,specs,2023 nissan rogue specs,96,P2
+/specs/honda/odyssey/2016/,specs,2016 honda odyssey specs,95,P2
+/specs/gmc/sierra/2018/,specs,2018 gmc sierra specs,95,P2
+/specs/gmc/sierra/2021/,specs,2021 gmc sierra specs,95,P2
+/specs/chevrolet/silverado-1500/2024/,specs,2024 chevrolet silverado 1500 specs,95,P2
+/specs/nissan/rogue/2015/,specs,2015 nissan rogue specs,94,P2
+/specs/ford/explorer/2017/,specs,2017 ford explorer specs,94,P2
+/specs/nissan/rogue/2017/,specs,2017 nissan rogue specs,94,P2
+/specs/toyota/tacoma/2019/,specs,2019 toyota tacoma specs,94,P2
+/specs/gmc/sierra/2020/,specs,2020 gmc sierra specs,94,P2
+/specs/chevrolet/silverado-1500/2020/,specs,2020 chevrolet silverado 1500 specs,94,P2
+/specs/toyota/tacoma/2023/,specs,2023 toyota tacoma specs,94,P2
+/specs/toyota/corolla/2024/,specs,2024 toyota corolla specs,94,P2
+/specs/toyota/highlander/2024/,maintenance how-to,2024 toyota highlander specs,94,P2
+/specs/toyota/corolla/2025/,maintenance how-to,2025 toyota corolla specs,94,P2
+/specs/ford/escape/2016/,specs,2016 ford escape specs,93,P2
+/specs/chevrolet/equinox/2018/,specs,2018 chevrolet equinox specs,93,P2
+/specs/nissan/rogue/2018/,specs,2018 nissan rogue specs,93,P2
+/specs/chevrolet/silverado-1500/2019/,specs,2019 chevrolet silverado 1500 specs,93,P2
+/specs/toyota/highlander/2019/,specs,2019 toyota highlander specs,93,P2
+/specs/nissan/rogue/2020/,specs,2020 nissan rogue specs,93,P2
+/specs/subaru/crosstrek/2021/,specs,2021 subaru crosstrek specs,93,P2
+/specs/toyota/tacoma/2021/,specs,2021 toyota tacoma specs,93,P2
+/specs/ford/escape/2022/,specs,2022 ford escape specs,93,P2
+/specs/subaru/crosstrek/2024/,specs,2024 subaru crosstrek specs,93,P2
+/specs/toyota/rav4/2025/,specs,2025 toyota rav4 specs,93,P2
+/specs/ford/edge/2015/,specs,2015 ford edge specs,92,P2
+/specs/ford/explorer/2016/,specs,2016 ford explorer specs,92,P2
+/specs/chevrolet/equinox/2019/,specs,2019 chevrolet equinox specs,92,P2
+/specs/ford/edge/2019/,specs,2019 ford edge specs,92,P2
+/specs/ford/escape/2019/,specs,2019 ford escape specs,92,P2
+/specs/nissan/rogue/2019/,specs,2019 nissan rogue specs,92,P2
+/specs/honda/civic/2020/,specs,2020 honda civic specs,92,P2
+/specs/ford/escape/2020/,specs,2020 ford escape specs,92,P2
+/specs/toyota/tacoma/2020/,specs,2020 toyota tacoma specs,92,P2
+/specs/ford/escape/2021/,specs,2021 ford escape specs,92,P2
+/specs/toyota/corolla/2023/,specs,2023 toyota corolla specs,92,P2
+/specs/ford/escape/2024/,specs,2024 ford escape specs,92,P2
+/specs/ford/f-150/2024/,specs,2024 ford f 150 specs,92,P2
+/specs/honda/civic/2025/,specs,2025 honda civic specs,92,P2
+/specs/ford/ranger/2025/,specs,2025 ford ranger specs,92,P2
+/specs/ford/escape/2015/,specs,2015 ford escape specs,91,P2
+/specs/nissan/rogue/2016/,specs,2016 nissan rogue specs,91,P2
+/specs/ford/escape/2017/,specs,2017 ford escape specs,91,P2
+/specs/ford/f-150/2017/,specs,2017 ford f 150 specs,91,P2
+/specs/chevrolet/silverado-1500/2018/,specs,2018 chevrolet silverado 1500 specs,91,P2
+/specs/ford/edge/2018/,specs,2018 ford edge specs,91,P2
+/specs/hyundai/elantra/2018/,specs,2018 hyundai elantra specs,91,P2
+/specs/ford/escape/2018/,specs,2018 ford escape specs,91,P2
+/specs/subaru/outback/2018/,specs,2018 subaru outback specs,91,P2
+/specs/ford/bronco/2021/,specs,2021 ford bronco specs,91,P2
+/specs/ford/explorer/2021/,specs,2021 ford explorer specs,91,P2
+/specs/ford/ranger/2022/,specs,2022 ford ranger specs,91,P2
+/specs/nissan/rogue/2022/,specs,2022 nissan rogue specs,91,P2
+/specs/hyundai/elantra/2023/,specs,2023 hyundai elantra specs,91,P2
+/specs/toyota/highlander/2023/,specs,2023 toyota highlander specs,91,P2
+/specs/kia/sportage/2024/,specs,2024 kia sportage specs,91,P2
+/specs/chevrolet/equinox/2025/,specs,2025 chevrolet equinox specs,91,P2
+/specs/ford/explorer/2015/,specs,2015 ford explorer specs,90,P2
+/specs/ford/f-150/2016/,specs,2016 ford f 150 specs,90,P2
+/specs/honda/accord/2017/,specs,2017 honda accord specs,90,P2
+/specs/ford/edge/2017/,specs,2017 ford edge specs,90,P2
+/specs/kia/sportage/2017/,specs,2017 kia sportage specs,90,P2
+/specs/ford/explorer/2018/,specs,2018 ford explorer specs,90,P2
+/specs/ford/f-150/2019/,specs,2019 ford f 150 specs,90,P2
+/specs/honda/pilot/2019/,specs,2019 honda pilot specs,90,P2
+/specs/ford/f-150/2020/,specs,2020 ford f 150 specs,90,P2
+/specs/subaru/forester/2020/,specs,2020 subaru forester specs,90,P2
+/specs/toyota/highlander/2021/,specs,2021 toyota highlander specs,90,P2
+/specs/honda/pilot/2021/,specs,2021 honda pilot specs,90,P2
+/specs/jeep/wrangler/2021/,specs,2021 jeep wrangler specs,90,P2
+/specs/subaru/outback/2021/,specs,2021 subaru outback specs,90,P2
+/specs/ford/explorer/2022/,specs,2022 ford explorer specs,90,P2
+/specs/ford/f-150/2022/,specs,2022 ford f 150 specs,90,P2
+/specs/toyota/highlander/2022/,specs,2022 toyota highlander specs,90,P2
+/specs/ford/explorer/2023/,specs,2023 ford explorer specs,90,P2
+/specs/toyota/tundra/2023/,specs,2023 toyota tundra specs,90,P2
+/specs/hyundai/tucson/2024/,specs,2024 hyundai tucson specs,90,P2
+/specs/ford/edge/2016/,specs,2016 ford edge specs,89,P2
+/specs/hyundai/elantra/2016/,specs,2016 hyundai elantra specs,89,P2
+/specs/ford/f-150/2018/,specs,2018 ford f 150 specs,89,P2
+/specs/toyota/highlander/2018/,specs,2018 toyota highlander specs,89,P2
+/specs/ford/fusion/2020/,specs,2020 ford fusion specs,89,P2
+/specs/kia/sportage/2020/,specs,2020 kia sportage specs,89,P2
+/specs/ford/bronco/2022/,specs,2022 ford bronco specs,89,P2
+/specs/toyota/rav4/2023/,specs,2023 toyota rav4 specs,89,P2
+/specs/honda/civic/2024/,specs,2024 honda civic specs,89,P2
+/specs/toyota/tundra/2024/,specs,2024 toyota tundra specs,89,P2
+/specs/ford/escape/2025/,specs,2025 ford escape specs,89,P2
+/specs/ford/explorer/2025/,specs,2025 ford explorer specs,89,P2
+/specs/ford/f-150/2025/,specs,2025 ford f 150 specs,89,P2
+/specs/honda/accord/2015/,specs,2015 honda accord specs,88,P2
+/specs/chevrolet/tahoe/2015/,specs,2015 chevrolet tahoe specs,88,P2
+/specs/chevrolet/silverado-1500/2015/,specs,2015 chevrolet silverado 1500 specs,88,P2
+/specs/ford/f-150/2015/,specs,2015 ford f 150 specs,88,P2
+/specs/honda/accord/2016/,specs,2016 honda accord specs,88,P2
+/specs/honda/pilot/2016/,specs,2016 honda pilot specs,88,P2
+/specs/honda/pilot/2017/,specs,2017 honda pilot specs,88,P2
+/specs/honda/accord/2018/,specs,2018 honda accord specs,88,P2
+/specs/toyota/camry/2018/,specs,2018 toyota camry specs,88,P2
+/specs/jeep/wrangler/2018/,specs,2018 jeep wrangler specs,88,P2
+/specs/gmc/sierra/2019/,specs,2019 gmc sierra specs,88,P2
+/specs/chevrolet/traverse/2020/,specs,2020 chevrolet traverse specs,88,P2
+/specs/toyota/corolla/2020/,specs,2020 toyota corolla specs,88,P2
+/specs/hyundai/elantra/2020/,specs,2020 hyundai elantra specs,88,P2
+/specs/jeep/wrangler/2020/,specs,2020 jeep wrangler specs,88,P2
+/specs/subaru/outback/2020/,specs,2020 subaru outback specs,88,P2
+/specs/chevrolet/tahoe/2021/,specs,2021 chevrolet tahoe specs,88,P2
+/specs/honda/civic/2021/,specs,2021 honda civic specs,88,P2
+/specs/hyundai/tucson/2022/,specs,2022 hyundai tucson specs,88,P2
+/specs/subaru/outback/2022/,specs,2022 subaru outback specs,88,P2
+/specs/ford/bronco/2023/,specs,2023 ford bronco specs,88,P2
+/specs/ford/ranger/2023/,specs,2023 ford ranger specs,88,P2
+/specs/toyota/tacoma/2024/,specs,2024 toyota tacoma specs,88,P2
+/specs/kia/sportage/2025/,specs,2025 kia sportage specs,88,P2
+/specs/toyota/tacoma/2025/,specs,2025 toyota tacoma specs,88,P2
+/specs/jeep/wrangler/2016/,specs,2016 jeep wrangler specs,87,P2
+/specs/nissan/altima/2016/,specs,2016 nissan altima specs,87,P2
+/specs/subaru/outback/2016/,specs,2016 subaru outback specs,87,P2
+/specs/ford/explorer/2019/,specs,2019 ford explorer specs,87,P2
+/specs/honda/odyssey/2019/,specs,2019 honda odyssey specs,87,P2
+/specs/toyota/camry/2020/,specs,2020 toyota camry specs,87,P2
+/specs/toyota/camry/2021/,specs,2021 toyota camry specs,87,P2
+/specs/toyota/rav4/2022/,specs,2022 toyota rav4 specs,87,P2
+/specs/toyota/camry/2023/,specs,2023 toyota camry specs,87,P2
+/specs/chevrolet/tahoe/2023/,specs,2023 chevrolet tahoe specs,87,P2
+/specs/honda/civic/2023/,specs,2023 honda civic specs,87,P2
+/specs/ford/escape/2023/,specs,2023 ford escape specs,87,P2
+/specs/nissan/rogue/2024/,specs,2024 nissan rogue specs,87,P2
+/specs/chevrolet/silverado-1500/2025/,specs,2025 chevrolet silverado 1500 specs,87,P2
+/specs/chevrolet/malibu/2016/,specs,2016 chevrolet malibu specs,86,P2
+/specs/chevrolet/colorado/2016/,specs,2016 chevrolet colorado specs,86,P2
+/specs/chevrolet/silverado-1500/2016/,specs,2016 chevrolet silverado 1500 specs,86,P2
+/specs/chevrolet/equinox/2017/,specs,2017 chevrolet equinox specs,86,P2
+/specs/honda/civic/2018/,specs,2018 honda civic specs,86,P2
+/specs/subaru/forester/2018/,specs,2018 subaru forester specs,86,P2
+/specs/toyota/tundra/2018/,specs,2018 toyota tundra specs,86,P2
+/specs/toyota/camry/2019/,specs,2019 toyota camry specs,86,P2
+/specs/honda/civic/2019/,specs,2019 honda civic specs,86,P2
+/specs/hyundai/elantra/2019/,specs,2019 hyundai elantra specs,86,P2
+/specs/honda/accord/2020/,specs,2020 honda accord specs,86,P2
+/specs/toyota/corolla/2021/,specs,2021 toyota corolla specs,86,P2
+/specs/jeep/wrangler/2022/,specs,2022 jeep wrangler specs,86,P2
+/specs/ford/edge/2024/,specs,2024 ford edge specs,86,P2
+/specs/jeep/wrangler/2024/,specs,2024 jeep wrangler specs,86,P2
+/specs/subaru/outback/2024/,specs,2024 subaru outback specs,86,P2
+/specs/toyota/camry/2025/,specs,2025 toyota camry specs,86,P2
+/specs/hyundai/tucson/2025/,specs,2025 hyundai tucson specs,86,P2
+/specs/honda/civic/2015/,specs,2015 honda civic specs,85,P2
+/specs/ford/fusion/2015/,specs,2015 ford fusion specs,85,P2
+/specs/jeep/grand-cherokee/2015/,specs,2015 jeep grand cherokee specs,85,P2
+/specs/jeep/wrangler/2015/,specs,2015 jeep wrangler specs,85,P2
+/specs/chevrolet/equinox/2016/,specs,2016 chevrolet equinox specs,85,P2
+/specs/honda/civic/2017/,specs,2017 honda civic specs,85,P2
+/specs/toyota/highlander/2017/,specs,2017 toyota highlander specs,85,P2
+/specs/subaru/outback/2017/,specs,2017 subaru outback specs,85,P2
+/specs/honda/pilot/2018/,specs,2018 honda pilot specs,85,P2
+/specs/hyundai/tucson/2018/,specs,2018 hyundai tucson specs,85,P2
+/specs/toyota/tacoma/2018/,specs,2018 toyota tacoma specs,85,P2
+/specs/subaru/crosstrek/2019/,specs,2019 subaru crosstrek specs,85,P2
+/specs/toyota/4runner/2020/,specs,2020 toyota 4runner specs,85,P2
+/specs/honda/accord/2021/,specs,2021 honda accord specs,85,P2
+/specs/honda/pilot/2022/,specs,2022 honda pilot specs,85,P2
+/specs/chevrolet/silverado-1500/2023/,specs,2023 chevrolet silverado 1500 specs,85,P2
+/specs/jeep/wrangler/2023/,specs,2023 jeep wrangler specs,85,P2
+/specs/subaru/outback/2023/,specs,2023 subaru outback specs,85,P2
+/specs/toyota/tundra/2025/,specs,2025 toyota tundra specs,85,P2
+/specs/chevrolet/tahoe/2016/,specs,2016 chevrolet tahoe specs,84,P2
+/specs/ford/fusion/2016/,specs,2016 ford fusion specs,84,P2
+/specs/ford/mustang/2016/,specs,2016 ford mustang specs,84,P2
+/specs/chevrolet/silverado-1500/2017/,specs,2017 chevrolet silverado 1500 specs,84,P2
+/specs/toyota/rav4/2018/,specs,2018 toyota rav4 specs,84,P2
+/specs/honda/accord/2019/,specs,2019 honda accord specs,84,P2
+/specs/toyota/rav4/2019/,specs,2019 toyota rav4 specs,84,P2
+/specs/toyota/highlander/2020/,specs,2020 toyota highlander specs,84,P2
+/specs/honda/pilot/2020/,specs,2020 honda pilot specs,84,P2
+/specs/toyota/tundra/2020/,specs,2020 toyota tundra specs,84,P2
+/specs/toyota/rav4/2021/,specs,2021 toyota rav4 specs,84,P2
+/specs/subaru/forester/2022/,specs,2022 subaru forester specs,84,P2
+/specs/mazda/,specs,mazda specs,363,P3
+/repair-cost/battery/,repair cost,battery replacement cost,198,P3
+/specs/chevrolet/,specs,chevrolet specs,175,P3
+/specs/gmc/,specs,gmc specs,161,P3
+/specs/jeep/,specs,jeep specs,113,P3
+/repair-cost/oil-change/,repair cost,oil change replacement cost,97,P3
+/repair-cost/,repair cost,car repair cost,90,P3
+/specs/toyota/4runner/2023/,specs,2023 toyota 4runner specs,84,P3
+/specs/ford/mustang/2024/,specs,2024 ford mustang specs,84,P3
+/specs/honda/accord/2024/,specs,2024 honda accord specs,84,P3
+/specs/nissan/altima/2015/,specs,2015 nissan altima specs,83,P3
+/specs/honda/odyssey/2018/,specs,2018 honda odyssey specs,83,P3
+/specs/nissan/altima/2019/,specs,2019 nissan altima specs,83,P3
+/specs/chevrolet/traverse/2019/,specs,2019 chevrolet traverse specs,83,P3
+/specs/chevrolet/colorado/2019/,specs,2019 chevrolet colorado specs,83,P3
+/specs/subaru/outback/2019/,specs,2019 subaru outback specs,83,P3
+/specs/hyundai/tucson/2020/,specs,2020 hyundai tucson specs,83,P3
+/specs/chevrolet/tahoe/2022/,specs,2022 chevrolet tahoe specs,83,P3
+/specs/subaru/crosstrek/2023/,specs,2023 subaru crosstrek specs,83,P3
+/specs/hyundai/elantra/2025/,specs,2025 hyundai elantra specs,83,P3
+/specs/toyota/sienna/2025/,specs,2025 toyota sienna specs,83,P3
+/specs/toyota/camry/2015/,specs,2015 toyota camry specs,82,P3
+/specs/toyota/rav4/2015/,specs,2015 toyota rav4 specs,82,P3
+/specs/toyota/camry/2016/,specs,2016 toyota camry specs,82,P3
+/specs/toyota/highlander/2016/,specs,2016 toyota highlander specs,82,P3
+/specs/chevrolet/tahoe/2017/,specs,2017 chevrolet tahoe specs,82,P3
+/specs/ford/fusion/2017/,maintenance how-to,2017 ford fusion specs,82,P3
+/specs/ford/fusion/2018/,specs,2018 ford fusion specs,82,P3
+/specs/ford/ranger/2018/,specs,2018 ford ranger specs,82,P3
+/specs/subaru/forester/2019/,specs,2019 subaru forester specs,82,P3
+/specs/hyundai/tucson/2019/,specs,2019 hyundai tucson specs,82,P3
+/specs/jeep/wrangler/2019/,specs,2019 jeep wrangler specs,82,P3
+/specs/ford/mustang/2021/,specs,2021 ford mustang specs,82,P3
+/specs/toyota/4runner/2022/,specs,2022 toyota 4runner specs,82,P3
+/specs/hyundai/elantra/2022/,specs,2022 hyundai elantra specs,82,P3
+/specs/ford/mustang/2022/,specs,2022 ford mustang specs,82,P3
+/specs/toyota/tundra/2022/,specs,2022 toyota tundra specs,82,P3
+/specs/chevrolet/traverse/2023/,specs,2023 chevrolet traverse specs,82,P3
+/specs/subaru/forester/2023/,specs,2023 subaru forester specs,82,P3
+/specs/ford/bronco/2024/,specs,2024 ford bronco specs,82,P3
+/specs/ford/mustang/2025/,specs,2025 ford mustang specs,82,P3
+/specs/toyota/highlander/2025/,specs,2025 toyota highlander specs,82,P3
+/specs/chevrolet/malibu/2015/,specs,2015 chevrolet malibu specs,81,P3
+/specs/subaru/forester/2015/,specs,2015 subaru forester specs,81,P3
+/specs/ford/ranger/2017/,specs,2017 ford ranger specs,81,P3
+/specs/gmc/sierra/2017/,specs,2017 gmc sierra specs,81,P3
+/specs/toyota/sienna/2017/,specs,2017 toyota sienna specs,81,P3
+/specs/chevrolet/colorado/2018/,specs,2018 chevrolet colorado specs,81,P3
+/specs/chevrolet/tahoe/2019/,maintenance how-to,2019 chevrolet tahoe specs,81,P3
+/specs/ford/fusion/2019/,specs,2019 ford fusion specs,81,P3
+/specs/nissan/sentra/2019/,specs,2019 nissan sentra specs,81,P3
+/specs/toyota/tundra/2019/,specs,2019 toyota tundra specs,81,P3
+/specs/nissan/altima/2020/,specs,2020 nissan altima specs,81,P3
+/specs/subaru/forester/2021/,specs,2021 subaru forester specs,81,P3
+/specs/honda/accord/2023/,specs,2023 honda accord specs,81,P3
+/specs/hyundai/tucson/2023/,specs,2023 hyundai tucson specs,81,P3
+/specs/nissan/rogue/2025/,specs,2025 nissan rogue specs,81,P3
+/specs/toyota/highlander/2015/,specs,2015 toyota highlander specs,80,P3
+/specs/chevrolet/traverse/2016/,specs,2016 chevrolet traverse specs,80,P3
+/specs/toyota/camry/2017/,specs,2017 toyota camry specs,80,P3
+/specs/chevrolet/traverse/2017/,specs,2017 chevrolet traverse specs,80,P3
+/specs/toyota/corolla/2017/,specs,2017 toyota corolla specs,80,P3
+/specs/subaru/forester/2017/,specs,2017 subaru forester specs,80,P3
+/specs/toyota/rav4/2017/,specs,2017 toyota rav4 specs,80,P3
+/specs/chevrolet/tahoe/2018/,specs,2018 chevrolet tahoe specs,80,P3
+/specs/ford/mustang/2020/,specs,2020 ford mustang specs,80,P3
+/specs/toyota/4runner/2021/,specs,2021 toyota 4runner specs,80,P3
+/specs/chevrolet/equinox/2021/,specs,2021 chevrolet equinox specs,80,P3
+/specs/hyundai/elantra/2021/,specs,2021 hyundai elantra specs,80,P3
+/specs/toyota/sienna/2021/,specs,2021 toyota sienna specs,80,P3
+/specs/chevrolet/colorado/2024/,specs,2024 chevrolet colorado specs,80,P3
+/specs/subaru/forester/2025/,specs,2025 subaru forester specs,80,P3
+/specs/honda/odyssey/2015/,specs,2015 honda odyssey specs,79,P3
+/specs/toyota/prius/2015/,specs,2015 toyota prius specs,79,P3
+/specs/ford/ranger/2016/,specs,2016 ford ranger specs,79,P3
+/specs/subaru/forester/2016/,specs,2016 subaru forester specs,79,P3
+/specs/nissan/altima/2017/,specs,2017 nissan altima specs,79,P3
+/specs/ford/mustang/2017/,specs,2017 ford mustang specs,79,P3
+/specs/nissan/sentra/2017/,specs,2017 nissan sentra specs,79,P3
+/specs/toyota/tundra/2017/,specs,2017 toyota tundra specs,79,P3
+/specs/chevrolet/traverse/2018/,specs,2018 chevrolet traverse specs,79,P3
+/specs/toyota/4runner/2019/,specs,2019 toyota 4runner specs,79,P3
+/specs/toyota/corolla/2019/,specs,2019 toyota corolla specs,79,P3
+/specs/chevrolet/colorado/2023/,specs,2023 chevrolet colorado specs,79,P3
+/specs/toyota/4runner/2025/,specs,2025 toyota 4runner specs,79,P3
+/specs/honda/accord/2025/,specs,2025 honda accord specs,79,P3
+/specs/ford/bronco/2025/,specs,2025 ford bronco specs,79,P3
+/specs/honda/pilot/2025/,specs,2025 honda pilot specs,79,P3
+/specs/hyundai/elantra/2015/,specs,2015 hyundai elantra specs,78,P3
+/specs/chevrolet/colorado/2017/,specs,2017 chevrolet colorado specs,78,P3
+/specs/toyota/corolla/2018/,specs,2018 toyota corolla specs,78,P3
+/specs/subaru/crosstrek/2018/,specs,2018 subaru crosstrek specs,78,P3
+/specs/ford/mustang/2019/,specs,2019 ford mustang specs,78,P3
+/specs/honda/cr-v/2020/,specs,2020 honda cr v specs,78,P3
+/specs/nissan/altima/2021/,specs,2021 nissan altima specs,78,P3
+/specs/ford/edge/2021/,specs,2021 ford edge specs,78,P3
+/specs/hyundai/tucson/2021/,specs,2021 hyundai tucson specs,78,P3
+/specs/toyota/tundra/2021/,specs,2021 toyota tundra specs,78,P3
+/specs/toyota/4runner/2015/,specs,2015 toyota 4runner specs,77,P3
+/specs/ford/mustang/2015/,specs,2015 ford mustang specs,77,P3
+/specs/ford/ranger/2015/,specs,2015 ford ranger specs,77,P3
+/specs/honda/pilot/2015/,specs,2015 honda pilot specs,77,P3
+/specs/toyota/corolla/2016/,specs,2016 toyota corolla specs,77,P3
+/specs/toyota/sienna/2022/,specs,2022 toyota sienna specs,77,P3
+/specs/hyundai/elantra/2024/,specs,2024 hyundai elantra specs,77,P3
+/specs/subaru/forester/2024/,specs,2024 subaru forester specs,77,P3
+/specs/subaru/outback/2025/,specs,2025 subaru outback specs,77,P3
+/specs/toyota/sienna/2016/,specs,2016 toyota sienna specs,76,P3
+/specs/toyota/4runner/2018/,specs,2018 toyota 4runner specs,76,P3
+/specs/nissan/altima/2018/,specs,2018 nissan altima specs,76,P3
+/specs/honda/cr-v/2018/,specs,2018 honda cr v specs,76,P3
+/specs/kia/sportage/2018/,specs,2018 kia sportage specs,76,P3
+/specs/nissan/sentra/2018/,specs,2018 nissan sentra specs,76,P3
+/specs/honda/odyssey/2020/,specs,2020 honda odyssey specs,76,P3
+/specs/chevrolet/traverse/2021/,specs,2021 chevrolet traverse specs,76,P3
+/specs/nissan/sentra/2021/,specs,2021 nissan sentra specs,76,P3
+/specs/ford/edge/2022/,specs,2022 ford edge specs,76,P3
+/specs/subaru/crosstrek/2022/,specs,2022 subaru crosstrek specs,76,P3
+/specs/nissan/altima/2023/,specs,2023 nissan altima specs,76,P3
+/specs/chevrolet/equinox/2024/,specs,2024 chevrolet equinox specs,76,P3
+/specs/subaru/crosstrek/2025/,specs,2025 subaru crosstrek specs,76,P3
+/specs/honda/cr-v/2015/,specs,2015 honda cr v specs,75,P3
+/specs/chevrolet/malibu/2020/,specs,2020 chevrolet malibu specs,75,P3
+/specs/chevrolet/colorado/2021/,specs,2021 chevrolet colorado specs,75,P3
+/specs/kia/sportage/2021/,specs,2021 kia sportage specs,75,P3
+/specs/honda/pilot/2023/,specs,2023 honda pilot specs,75,P3
+/specs/toyota/prius/2024/,specs,2024 toyota prius specs,75,P3
+/specs/jeep/wrangler/2025/,specs,2025 jeep wrangler specs,75,P3
+/specs/chevrolet/colorado/2015/,specs,2015 chevrolet colorado specs,74,P3
+/specs/gmc/sierra/2015/,specs,2015 gmc sierra specs,74,P3
+/specs/nissan/sentra/2016/,specs,2016 nissan sentra specs,74,P3
+/specs/honda/cr-v/2017/,specs,2017 honda cr v specs,74,P3
+/specs/chevrolet/malibu/2018/,specs,2018 chevrolet malibu specs,74,P3
+/specs/chevrolet/colorado/2020/,specs,2020 chevrolet colorado specs,74,P3
+/specs/kia/sportage/2022/,specs,2022 kia sportage specs,74,P3
+/specs/ford/explorer/2024/,specs,2024 ford explorer specs,74,P3
+/specs/chevrolet/tahoe/2025/,specs,2025 chevrolet tahoe specs,74,P3
+/specs/toyota/corolla/2015/,specs,2015 toyota corolla specs,73,P3
+/specs/chevrolet/tahoe/2020/,specs,2020 chevrolet tahoe specs,73,P3
+/specs/chevrolet/colorado/2022/,specs,2022 chevrolet colorado specs,73,P3
+/specs/honda/cr-v/2025/,specs,2025 honda cr v specs,73,P3
+/specs/nissan/sentra/2015/,specs,2015 nissan sentra specs,72,P3
+/specs/chevrolet/malibu/2017/,specs,2017 chevrolet malibu specs,72,P3
+/specs/chevrolet/equinox/2023/,specs,2023 chevrolet equinox specs,72,P3
+/specs/chevrolet/traverse/2024/,specs,2024 chevrolet traverse specs,72,P3
+/specs/chevrolet/tahoe/2024/,specs,2024 chevrolet tahoe specs,72,P3
+/specs/honda/pilot/2024/,specs,2024 honda pilot specs,72,P3
+/specs/toyota/prius/2018/,specs,2018 toyota prius specs,71,P3
+/specs/honda/cr-v/2021/,specs,2021 honda cr v specs,71,P3
+/specs/jeep/grand-cherokee/2023/,specs,2023 jeep grand cherokee specs,71,P3
+/specs/toyota/4runner/2024/,specs,2024 toyota 4runner specs,71,P3
+/specs/nissan/altima/2024/,specs,2024 nissan altima specs,71,P3
+/specs/nissan/sentra/2024/,specs,2024 nissan sentra specs,71,P3
+/specs/toyota/sienna/2024/,specs,2024 toyota sienna specs,71,P3
+/specs/jeep/grand-cherokee/2025/,specs,2025 jeep grand cherokee specs,71,P3
+/specs/honda/cr-v/2016/,specs,2016 honda cr v specs,70,P3
+/specs/kia/sportage/2019/,specs,2019 kia sportage specs,70,P3
+/specs/toyota/sienna/2020/,specs,2020 toyota sienna specs,70,P3
+/specs/nissan/altima/2022/,specs,2022 nissan altima specs,70,P3
+/specs/toyota/prius/2019/,specs,2019 toyota prius specs,69,P3
+/specs/ford/mustang/2023/,maintenance how-to,2023 ford mustang specs,69,P3
+/specs/chevrolet/traverse/2025/,specs,2025 chevrolet traverse specs,69,P3
+/specs/dodge/,specs,dodge specs,68,P3
+/specs/ford/mustang/2018/,specs,2018 ford mustang specs,68,P3
+/specs/subaru/crosstrek/2020/,specs,2020 subaru crosstrek specs,68,P3
+/specs/honda/odyssey/2022/,specs,2022 honda odyssey specs,68,P3
+/specs/nissan/sentra/2022/,specs,2022 nissan sentra specs,68,P3
+/specs/toyota/prius/2022/,specs,2022 toyota prius specs,68,P3
+/specs/honda/odyssey/2023/,maintenance how-to,2023 honda odyssey specs,68,P3
+/specs/chevrolet/colorado/2025/,specs,2025 chevrolet colorado specs,68,P3
+/specs/nissan/sentra/2025/,specs,2025 nissan sentra specs,68,P3
+/specs/toyota/prius/2025/,specs,2025 toyota prius specs,68,P3
+/specs/chevrolet/malibu/2019/,specs,2019 chevrolet malibu specs,67,P3
+/specs/nissan/sentra/2023/,specs,2023 nissan sentra specs,67,P3
+/specs/jeep/grand-cherokee/2024/,specs,2024 jeep grand cherokee specs,67,P3
+/specs/nissan/sentra/2020/,specs,2020 nissan sentra specs,66,P3
+/specs/toyota/prius/2020/,specs,2020 toyota prius specs,66,P3
+/specs/ford/edge/2023/,specs,2023 ford edge specs,66,P3
+/specs/subaru/crosstrek/2015/,specs,2015 subaru crosstrek specs,65,P3
+/specs/toyota/prius/2021/,specs,2021 toyota prius specs,65,P3
+/specs/toyota/sienna/2023/,specs,2023 toyota sienna specs,65,P3
+/specs/honda/odyssey/2025/,specs,2025 honda odyssey specs,65,P3
+/specs/toyota/sienna/2018/,specs,2018 toyota sienna specs,64,P3
+/specs/chevrolet/traverse/2022/,specs,2022 chevrolet traverse specs,64,P3
+/specs/jeep/grand-cherokee/2022/,specs,2022 jeep grand cherokee specs,64,P3
+/specs/honda/cr-v/2023/,specs,2023 honda cr v specs,63,P3
+/specs/toyota/prius/2023/,maintenance how-to,2023 toyota prius specs,63,P3
+/specs/honda/odyssey/2024/,maintenance how-to,2024 honda odyssey specs,63,P3
+/specs/chevrolet/malibu/2021/,specs,2021 chevrolet malibu specs,62,P3
+/specs/subaru/crosstrek/2017/,specs,2017 subaru crosstrek specs,61,P3
+/specs/jeep/grand-cherokee/2021/,specs,2021 jeep grand cherokee specs,61,P3
+/specs/chevrolet/malibu/2022/,specs,2022 chevrolet malibu specs,60,P3
+/specs/hyundai/tucson/2015/,specs,2015 hyundai tucson specs,59,P3
+/specs/chevrolet/malibu/2023/,specs,2023 chevrolet malibu specs,59,P3
+/specs/jeep/grand-cherokee/2018/,specs,2018 jeep grand cherokee specs,58,P3
+/specs/toyota/sienna/2019/,specs,2019 toyota sienna specs,58,P3
+/specs/chevrolet/malibu/2024/,specs,2024 chevrolet malibu specs,58,P3
+/specs/toyota/rav4/,specs,toyota rav4 specs,58,P3
+/specs/kia/sportage/2015/,specs,2015 kia sportage specs,57,P3
+/specs/jeep/grand-cherokee/2017/,specs,2017 jeep grand cherokee specs,57,P3
+/specs/honda/odyssey/2021/,specs,2021 honda odyssey specs,57,P3
+/specs/nissan/altima/2025/,specs,2025 nissan altima specs,56,P3
+/specs/kia/sportage/,specs,kia sportage specs,56,P3
+/specs/jeep/cherokee/2016/,specs,2016 jeep cherokee specs,55,P3
+/specs/jeep/wrangler/2017/,specs,2017 jeep wrangler specs,55,P3
+/specs/jeep/grand-cherokee/2020/,specs,2020 jeep grand cherokee specs,54,P3
+/specs/jeep/cherokee/2019/,specs,2019 jeep cherokee specs,52,P3
+/specs/toyota/tacoma/,specs,toyota tacoma specs,52,P3
+/specs/honda/odyssey/2017/,specs,2017 honda odyssey specs,48,P3
+/specs/subaru/outback/,specs,subaru outback specs,46,P3
+/specs/hyundai/tucson/,maintenance how-to,hyundai tucson specs,46,P3
+/repair-cost/hybrid-battery/,repair cost,hybrid battery replacement cost,45,P3
+/specs/tesla/model-y/2022/,specs,2022 tesla model y specs,45,P3
+/specs/toyota/tundra/,specs,toyota tundra specs,45,P3
+/specs/toyota/tacoma/2017/,specs,2017 toyota tacoma specs,44,P3
+/specs/tesla/model-y/2024/,specs,2024 tesla model y specs,44,P3
+/specs/jeep/grand-cherokee/2019/,specs,2019 jeep grand cherokee specs,43,P3
+/specs/tesla/model-y/2021/,specs,2021 tesla model y specs,43,P3
+/specs/ram/ram-1500/2022/,specs,2022 ram ram 1500 specs,43,P3
+/specs/toyota/4runner/2016/,specs,2016 toyota 4runner specs,41,P3
+/specs/tesla/model-3/2021/,specs,2021 tesla model 3 specs,41,P3
+/specs/ram/ram-1500/2016/,specs,2016 ram ram 1500 specs,40,P3
+/specs/ram/ram-1500/2019/,specs,2019 ram ram 1500 specs,40,P3
+/specs/ram/ram-1500/2020/,specs,2020 ram ram 1500 specs,40,P3
+/specs/tesla/model-3/2023/,specs,2023 tesla model 3 specs,40,P3
+/specs/tesla/model-3/2020/,specs,2020 tesla model 3 specs,39,P3
+/specs/jeep/grand-cherokee/2016/,specs,2016 jeep grand cherokee specs,38,P3
+/specs/toyota/prius/2016/,specs,2016 toyota prius specs,38,P3
+/specs/jeep/cherokee/2017/,specs,2017 jeep cherokee specs,38,P3
+/specs/tesla/model-3/2019/,specs,2019 tesla model 3 specs,38,P3
+/specs/jeep/cherokee/2020/,specs,2020 jeep cherokee specs,38,P3
+/specs/toyota/4runner/,specs,toyota 4runner specs,38,P3
+/specs/gmc/sierra/,specs,gmc sierra specs,38,P3
+/specs/tesla/model-3/2018/,specs,2018 tesla model 3 specs,37,P3
+/specs/ram/ram-1500/2021/,specs,2021 ram ram 1500 specs,37,P3
+/specs/tesla/model-3/2022/,specs,2022 tesla model 3 specs,37,P3
+/specs/ram/ram-1500/2025/,specs,2025 ram ram 1500 specs,37,P3
+/specs/chevrolet/equinox/,specs,chevrolet equinox specs,37,P3
+/specs/toyota/sienna/,specs,toyota sienna specs,37,P3
+/specs/toyota/prius/2017/,specs,2017 toyota prius specs,36,P3
+/specs/honda/hr-v/2022/,specs,2022 honda hr v specs,36,P3
+/specs/subaru/crosstrek/,specs,subaru crosstrek specs,36,P3
+/specs/honda/hr-v/2016/,specs,2016 honda hr v specs,35,P3
+/specs/toyota/tundra/2016/,specs,2016 toyota tundra specs,35,P3
+/specs/ram/ram-1500/2017/,specs,2017 ram ram 1500 specs,35,P3
+/specs/jeep/cherokee/2018/,specs,2018 jeep cherokee specs,35,P3
+/specs/ram/ram-1500/2023/,specs,2023 ram ram 1500 specs,35,P3
+/specs/toyota/prius/,specs,toyota prius specs,35,P3
+/specs/ram/ram-1500/2015/,specs,2015 ram ram 1500 specs,34,P3
+/specs/toyota/tacoma/2016/,specs,2016 toyota tacoma specs,34,P3
+/specs/tesla/model-y/2025/,specs,2025 tesla model y specs,34,P3
+/specs/tesla/model-y/,specs,tesla model y specs,34,P3
+/specs/ram/ram-1500/2018/,specs,2018 ram ram 1500 specs,33,P3
+/specs/toyota/tacoma/2015/,specs,2015 toyota tacoma specs,32,P3
+/specs/toyota/4runner/2017/,maintenance how-to,2017 toyota 4runner specs,32,P3
+/specs/tesla/model-y/2020/,maintenance how-to,2020 tesla model y specs,32,P3
+/specs/chevrolet/traverse/,specs,chevrolet traverse specs,32,P3
+/specs/chevrolet/malibu/2025/,specs,2025 chevrolet malibu specs,31,P3
+/specs/gmc/sierra/2016/,specs,2016 gmc sierra specs,30,P3
+/specs/hyundai/tucson/2016/,specs,2016 hyundai tucson specs,30,P3
+/specs/honda/hr-v/2019/,specs,2019 honda hr v specs,30,P3
+/specs/jeep/cherokee/2021/,specs,2021 jeep cherokee specs,30,P3
+/specs/tesla/model-3/2024/,specs,2024 tesla model 3 specs,30,P3
+/specs/tesla/model-3/2025/,specs,2025 tesla model 3 specs,30,P3
+/specs/jeep/cherokee/2022/,specs,2022 jeep cherokee specs,29,P3
+/specs/chevrolet/equinox/2015/,specs,2015 chevrolet equinox specs,28,P3
+/specs/toyota/rav4/2016/,specs,2016 toyota rav4 specs,28,P3
+/specs/chevrolet/traverse/2015/,specs,2015 chevrolet traverse specs,27,P3
+/specs/tesla/,specs,tesla specs,27,P3
+/specs/toyota/,specs,toyota specs,27,P3
+/specs/toyota/tundra/2015/,specs,2015 toyota tundra specs,27,P3
+/specs/hyundai/tucson/2017/,specs,2017 hyundai tucson specs,27,P3
+/specs/ram/ram-1500/2024/,specs,2024 ram ram 1500 specs,27,P3
+/specs/honda/hr-v/2025/,specs,2025 honda hr v specs,27,P3
+/specs/ram/,specs,ram specs,26,P3
+/specs/toyota/sienna/2015/,maintenance how-to,2015 toyota sienna specs,26,P3
+/specs/subaru/crosstrek/2016/,maintenance how-to,2016 subaru crosstrek specs,26,P3
+/specs/hyundai/elantra/,specs,hyundai elantra specs,26,P3
+/specs/honda/hr-v/2024/,specs,2024 honda hr v specs,25,P3
+/specs/ford/f-150/,specs,ford f 150 specs,25,P3
+/specs/honda/hr-v/2020/,specs,2020 honda hr v specs,24,P3
+/specs/honda/hr-v/2023/,specs,2023 honda hr v specs,24,P3
+/specs/ford/bronco/2020/,specs,2020 ford bronco specs,23,P3
+/specs/kia/,specs,kia specs,23,P3
+/specs/honda/hr-v/2021/,maintenance how-to,2021 honda hr v specs,23,P3
+/specs/toyota/camry/,specs,toyota camry specs,23,P3
+/specs/nissan/,specs,nissan specs,22,P3
+/specs/subaru/outback/2015/,maintenance how-to,2015 subaru outback specs,20,P3
+/specs/hyundai/elantra/2017/,specs,2017 hyundai elantra specs,20,P3
+/repair-cost/tire-pressure-sensor/,repair cost,tire pressure sensor replacement cost,19,P3
+/specs/honda/hr-v/2017/,maintenance how-to,2017 honda hr v specs,19,P3
+/specs/jeep/cherokee/2023/,specs,2023 jeep cherokee specs,19,P3
+/symptoms/car-wont-start/,symptoms,car wont start,18,P3
+/specs/honda/hr-v/2018/,specs,2018 honda hr v specs,18,P3
+/specs/ford/,specs,ford specs,17,P3
+/specs/ford/edge/2025/,specs,2025 ford edge specs,17,P3
+/specs/toyota/corolla/,specs,toyota corolla specs,17,P3
+/specs/jeep/cherokee/2024/,specs,2024 jeep cherokee specs,16,P3
+/specs/chevrolet/silverado-1500/,specs,chevrolet silverado 1500 specs,16,P3
+/specs/volvo/,specs,volvo specs,16,P3
+/specs/honda/accord/,specs,honda accord specs,15,P3
+/how-to/tire-pressure/,maintenance how-to,2015 jeep tire pressure reset,14,P3
+/specs/honda/civic/,specs,honda civic specs,13,P3
+/how-to/general/,maintenance how-to,2017 jeep oil change,13,P3
+/specs/honda/,specs,honda specs,13,P3
+/specs/jeep/cherokee/2025/,specs,2025 jeep cherokee specs,13,P3
+/specs/jeep/wrangler/,specs,jeep wrangler specs,13,P3
+/specs/tesla/model-3/,specs,tesla model 3 specs,13,P3
+/codes/p0441/,codes,toyota rav4 p0441 p0455,12,P3
+/specs/hyundai/,specs,hyundai specs,12,P3
+/specs/ford/fusion/2021/,maintenance how-to,2021 ford fusion specs,12,P3
+/specs/ford/ranger/,specs,ford ranger specs,12,P3
+/specs/subaru/,specs,subaru specs,11,P3
+/specs/ford/fusion/2022/,maintenance how-to,2022 ford fusion specs,11,P3
+/specs/ram/ram-1500/,specs,ram ram 1500 specs,11,P3
+/specs/honda/cr-v/,specs,honda cr v specs,11,P3
+/specs/toyota/highlander/,specs,toyota highlander specs,11,P3
+/specs/hyundai/elantra/2013/,specs,2013 hyundai elantra specs,10,P3
+/specs/kia/sportage/2016/,specs,2016 kia sportage specs,10,P3
+/specs/bmw/,specs,bmw specs,10,P3
+/specs/ford/fusion/2024/,specs,2024 ford fusion specs,10,P3
+/specs/vw/,specs,vw specs,10,P3
+/specs/audi/,specs,audi specs,10,P3
+/specs/toyota/prius/2010/,specs,2010 toyota prius specs,9,P3
+/how-to/wiper/,maintenance how-to,2016 mazda cx 5 wiper blade change,9,P3
+/specs/jeep/grand-cherokee/,specs,jeep grand cherokee specs,9,P3
+/specs/honda/odyssey/,specs,honda odyssey specs,9,P3
+/symptoms/car-vibration-at-high-speed/,symptoms,car vibration at high speed,8,P3
+/specs/ford/bronco/,specs,ford bronco specs,7,P3
+/specs/ford/fusion/,specs,ford fusion specs,7,P3
+/specs/ford/explorer/,specs,ford explorer specs,7,P3
+/specs/lexus/,specs,lexus specs,7,P3
+/specs/chevrolet/silverado-1500/2014/,specs,2014 chevrolet silverado 1500 specs,6,P3
+/specs/honda/hr-v/2015/,specs,2015 honda hr v specs,6,P3
+/specs/tesla/model-3/2017/,specs,2017 tesla model 3 specs,6,P3
+/specs/ford/fusion/2023/,specs,2023 ford fusion specs,6,P3
+/specs/ford/fusion/2025/,specs,2025 ford fusion specs,6,P3
+/specs/honda/pilot/,specs,honda pilot specs,6,P3
+/specs/nissan/sentra/,specs,nissan sentra specs,6,P3
+/specs/chevrolet/colorado/,specs,chevrolet colorado specs,6,P3
+/specs/infiniti/,specs,infiniti specs,5,P3
+/specs/toyota/sienna/2011/,specs,2011 toyota sienna specs,5,P3
+/specs/subaru/crosstrek/2014/,specs,2014 subaru crosstrek specs,5,P3
+/specs/jeep/cherokee/2015/,specs,2015 jeep cherokee specs,5,P3
+/repair-cost/model-s-battery/,repair cost,model s battery replacement cost,5,P3
+/specs/mazda/cx-5/2016/,specs,2016 mazda cx 5 specs,5,P3
+/specs/mazda/cx-5/2025/,specs,2025 mazda cx 5 specs,5,P3
+/specs/nissan/altima/,specs,nissan altima specs,5,P3
+/specs/kia/sorento/,specs,kia sorento specs,5,P3
+/specs/mitsubishi/,specs,mitsubishi specs,5,P3
+/repair-cost/general/,repair cost,general replacement cost,5,P3
+/specs/mercedes/,specs,mercedes specs,5,P3
+/specs/nissan/rogue/,specs,nissan rogue specs,5,P3
+/specs/toyota/prius/2011/,specs,2011 toyota prius specs,4,P3
+/specs/toyota/sienna/2012/,specs,2012 toyota sienna specs,4,P3
+/specs/toyota/prius/2013/,specs,2013 toyota prius specs,4,P3
+/specs/mazda/cx-5/2017/,specs,2017 mazda cx 5 specs,4,P3
+/symptoms/brake-pedal-to-floor/,symptoms,brake pedal to floor,4,P3
+/specs/chrysler/,specs,chrysler specs,4,P3
+/specs/mazda/cx-5/2021/,specs,2021 mazda cx 5 specs,4,P3
+/repair-cost/alternator/,repair cost,alternator replacement cost,4,P3
+/specs/chevrolet/malibu/,specs,chevrolet malibu specs,4,P3
+/repair-cost/insurance/,repair cost,insurance replacement cost,4,P3
+/repair-cost/ac-not-blowing-cold-air/,repair cost,ac not blowing cold air replacement cost,4,P3
+/repair-cost/radiator/,repair cost,radiator replacement cost,4,P3
+/repair-cost/windshield/,repair cost,windshield replacement cost,4,P3
+/specs/chevrolet/tahoe/,specs,chevrolet tahoe specs,4,P3
+/specs/jeep/cherokee/,specs,jeep cherokee specs,4,P3
+/specs/gmc/sierra/2026/,specs,2026 gmc sierra specs,4,P3
+/specs/honda/hr-v/,specs,honda hr v specs,4,P3
+/specs/kia/sportage/2026/,specs,2026 kia sportage specs,4,P3
+/specs/toyota/rav4/2026/,specs,2026 toyota rav4 specs,4,P3
+/repair-cost/key/,repair cost,key replacement cost,4,P3
+/specs/toyota/tundra/2026/,specs,2026 toyota tundra specs,4,P3
+/specs/toyota/prius/2008/,specs,2008 toyota prius specs,4,P3
+/specs/toyota/sienna/2004/,specs,2004 toyota sienna specs,3,P3
+/specs/toyota/sienna/2006/,specs,2006 toyota sienna specs,3,P3
+/specs/honda/pilot/2009/,specs,2009 honda pilot specs,3,P3
+/specs/chevrolet/equinox/2011/,specs,2011 chevrolet equinox specs,3,P3
+/specs/subaru/crosstrek/2013/,specs,2013 subaru crosstrek specs,3,P3
+/specs/chevrolet/equinox/2013/,specs,2013 chevrolet equinox specs,3,P3
+/specs/honda/odyssey/2013/,specs,2013 honda odyssey specs,3,P3
+/specs/subaru/outback/2013/,specs,2013 subaru outback specs,3,P3
+/specs/chevrolet/tahoe/2013/,specs,2013 chevrolet tahoe specs,3,P3
+/specs/gmc/sierra/2014/,specs,2014 gmc sierra specs,3,P3
+/specs/hyundai/elantra/2014/,specs,2014 hyundai elantra specs,3,P3
+/specs/mazda/cx-5/2015/,specs,2015 mazda cx 5 specs,3,P3
+/specs/mazda/cx-5/2018/,specs,2018 mazda cx 5 specs,3,P3
+/specs/ford/bronco/2019/,specs,2019 ford bronco specs,3,P3
+/specs/mazda/cx-5/2019/,specs,2019 mazda cx 5 specs,3,P3
+/specs/mazda/cx-5/2023/,specs,2023 mazda cx 5 specs,3,P3
+/specs/mazda/cx-5/2024/,specs,2024 mazda cx 5 specs,3,P3
+/specs/toyota/prius/2026/,specs,2026 toyota prius specs,3,P3
+/specs/chevrolet/equinox/2026/,specs,2026 chevrolet equinox specs,3,P3
+/specs/chevrolet/traverse/2026/,specs,2026 chevrolet traverse specs,3,P3
+/repair-cost/transmission/,repair cost,transmission replacement cost,3,P3
+/specs/ford/edge/,specs,ford edge specs,3,P3
+/specs/acura/,specs,acura specs,3,P3
+/specs/ford/f-150/2004/,specs,2004 ford f 150 specs,3,P3
+/specs/volkswagen/,specs,volkswagen specs,3,P3
+/specs/hyundai/tucson/2026/,specs,2026 hyundai tucson specs,3,P3
+/specs/subaru/forester/,specs,subaru forester specs,3,P3
+/specs/subaru/crosstrek/2026/,specs,2026 subaru crosstrek specs,3,P3
+/specs/subaru/outback/2026/,specs,2026 subaru outback specs,3,P3
+/specs/toyota/4runner/2026/,specs,2026 toyota 4runner specs,3,P3
+/specs/toyota/prius/2012/,specs,2012 toyota prius specs,3,P3
+/specs/toyota/sienna/2026/,specs,2026 toyota sienna specs,3,P3
+/specs/toyota/sienna/2014/,specs,2014 toyota sienna specs,3,P3
+/specs/toyota/tacoma/2026/,specs,2026 toyota tacoma specs,3,P3
+/specs/honda/odyssey/2009/,specs,2009 honda odyssey specs,2,P3
+/specs/nissan/sentra/2009/,specs,2009 nissan sentra specs,2,P3
+/specs/chevrolet/traverse/2010/,specs,2010 chevrolet traverse specs,2,P3
+/specs/chevrolet/traverse/2011/,specs,2011 chevrolet traverse specs,2,P3
+/specs/honda/odyssey/2011/,specs,2011 honda odyssey specs,2,P3
+/specs/subaru/outback/2011/,specs,2011 subaru outback specs,2,P3
+/specs/chevrolet/tahoe/2012/,specs,2012 chevrolet tahoe specs,2,P3
+/specs/ford/f-150/2013/,specs,2013 ford f 150 specs,2,P3
+/specs/ford/edge/2013/,specs,2013 ford edge specs,2,P3
+/specs/honda/accord/2013/,specs,2013 honda accord specs,2,P3
+/specs/hyundai/tucson/2013/,specs,2013 hyundai tucson specs,2,P3
+/specs/ford/mustang/2013/,specs,2013 ford mustang specs,2,P3
+/specs/subaru/forester/2013/,specs,2013 subaru forester specs,2,P3
+/specs/chevrolet/malibu/2014/,specs,2014 chevrolet malibu specs,2,P3
+/specs/hyundai/tucson/2014/,specs,2014 hyundai tucson specs,2,P3
+/specs/toyota/prius/2014/,specs,2014 toyota prius specs,2,P3
+/specs/chevrolet/tahoe/2014/,specs,2014 chevrolet tahoe specs,2,P3
+/specs/ford/bronco/2015/,specs,2015 ford bronco specs,2,P3
+/specs/ford/bronco/2018/,specs,2018 ford bronco specs,2,P3
+/specs/mazda/cx-5/2020/,specs,2020 mazda cx 5 specs,2,P3
+/specs/mazda/cx-5/2022/,specs,2022 mazda cx 5 specs,2,P3
+/repair-cost/alternator-yaris/,repair cost,alternator yaris replacement cost,2,P3
+/specs/ford/mustang/,specs,ford mustang specs,2,P3
+/repair-cost/shakes-when-braking/,repair cost,shakes when braking replacement cost,2,P3
+/specs/chevrolet/equinox/2014/,specs,2014 chevrolet equinox specs,2,P3
+/specs/chevrolet/equinox/2012/,specs,2012 chevrolet equinox specs,2,P3
+/specs/chevrolet/traverse/2014/,specs,2014 chevrolet traverse specs,2,P3
+/repair-cost/coolant-leak/,repair cost,coolant leak replacement cost,2,P3
+/repair-cost/head-gasket/,repair cost,head gasket replacement cost,2,P3
+/repair-cost/slipping-transmission/,repair cost,slipping transmission replacement cost,2,P3
+/repair-cost/wheel-bearing/,repair cost,wheel bearing replacement cost,2,P3
+/repair-cost/ac-compressor/,repair cost,ac compressor replacement cost,2,P3
+/repair-cost/brake-pads/,repair cost,brake pads replacement cost,2,P3
+/repair-cost/bumper/,repair cost,bumper replacement cost,2,P3
+/repair-cost/death-wobble/,repair cost,death wobble replacement cost,2,P3
+/repair-cost/serpentine-belt/,repair cost,serpentine belt replacement cost,2,P3
+/specs/ford/escape/,specs,ford escape specs,2,P3
+/specs/hyundai/elantra/2026/,specs,2026 hyundai elantra specs,2,P3
+/specs/kia/sportage/2013/,specs,2013 kia sportage specs,2,P3
+/specs/subaru/outback/2012/,specs,2012 subaru outback specs,2,P3
+/specs/lincoln/,specs,lincoln specs,2,P3
+/specs/toyota/prius/2009/,specs,2009 toyota prius specs,2,P3
+/specs/toyota/prius/2007/,specs,2007 toyota prius specs,2,P3
+/specs/toyota/rav4/2007/,specs,2007 toyota rav4 specs,2,P3
+/specs/toyota/rav4/2013/,specs,2013 toyota rav4 specs,2,P3
+/specs/toyota/rav4/2014/,specs,2014 toyota rav4 specs,2,P3
+/specs/toyota/sienna/2013/,specs,2013 toyota sienna specs,2,P3
+/specs/toyota/tundra/2014/,specs,2014 toyota tundra specs,2,P3
+/specs/nissan/altima/2014/,specs,2014 nissan altima specs,2,P3
+/specs/ford/mustang/1984/,specs,1984 ford mustang specs,1,P3
+/specs/honda/civic/1991/,specs,1991 honda civic specs,1,P3
+/specs/jeep/cherokee/1991/,specs,1991 jeep cherokee specs,1,P3
+/specs/jeep/wrangler/1991/,specs,1991 jeep wrangler specs,1,P3
+/specs/ford/mustang/1991/,specs,1991 ford mustang specs,1,P3
+/specs/jeep/wrangler/1992/,specs,1992 jeep wrangler specs,1,P3
+/specs/toyota/tacoma/1995/,specs,1995 toyota tacoma specs,1,P3
+/specs/chevrolet/tahoe/2003/,specs,2003 chevrolet tahoe specs,1,P3
+/specs/chevrolet/tahoe/2004/,specs,2004 chevrolet tahoe specs,1,P3
+/specs/toyota/4runner/2008/,specs,2008 toyota 4runner specs,1,P3
+/specs/gmc/sierra/2008/,specs,2008 gmc sierra specs,1,P3
+/specs/honda/odyssey/2008/,specs,2008 honda odyssey specs,1,P3
+/specs/honda/pilot/2008/,specs,2008 honda pilot specs,1,P3
+/specs/honda/cr-v/2009/,specs,2009 honda cr v specs,1,P3
+/specs/chevrolet/malibu/2009/,specs,2009 chevrolet malibu specs,1,P3
+/specs/ford/mustang/2009/,specs,2009 ford mustang specs,1,P3
+/specs/nissan/altima/2009/,specs,2009 nissan altima specs,1,P3
+/specs/nissan/rogue/2009/,specs,2009 nissan rogue specs,1,P3
+/specs/toyota/sienna/2009/,specs,2009 toyota sienna specs,1,P3
+/specs/chevrolet/tahoe/2009/,specs,2009 chevrolet tahoe specs,1,P3
+/specs/toyota/camry/2009/,specs,2009 toyota camry specs,1,P3
+/specs/toyota/corolla/2009/,specs,2009 toyota corolla specs,1,P3
+/specs/chevrolet/colorado/2010/,specs,2010 chevrolet colorado specs,1,P3
+/specs/honda/civic/2010/,specs,2010 honda civic specs,1,P3
+/specs/honda/odyssey/2010/,specs,2010 honda odyssey specs,1,P3
+/specs/honda/pilot/2010/,specs,2010 honda pilot specs,1,P3
+/specs/chevrolet/colorado/2011/,specs,2011 chevrolet colorado specs,1,P3
+/specs/ford/escape/2011/,specs,2011 ford escape specs,1,P3
+/specs/gmc/sierra/2011/,specs,2011 gmc sierra specs,1,P3
+/specs/chevrolet/malibu/2011/,specs,2011 chevrolet malibu specs,1,P3
+/specs/chevrolet/colorado/2012/,specs,2012 chevrolet colorado specs,1,P3
+/specs/ford/escape/2012/,specs,2012 ford escape specs,1,P3
+/specs/ford/fusion/2012/,specs,2012 ford fusion specs,1,P3
+/specs/honda/accord/2012/,specs,2012 honda accord specs,1,P3
+/specs/honda/odyssey/2012/,specs,2012 honda odyssey specs,1,P3
+/specs/ford/mustang/2012/,specs,2012 ford mustang specs,1,P3
+/specs/nissan/sentra/2012/,specs,2012 nissan sentra specs,1,P3
+/specs/honda/pilot/2012/,specs,2012 honda pilot specs,1,P3
+/specs/toyota/4runner/2013/,specs,2013 toyota 4runner specs,1,P3
+/specs/chevrolet/malibu/2013/,specs,2013 chevrolet malibu specs,1,P3
+/specs/chevrolet/traverse/2013/,specs,2013 chevrolet traverse specs,1,P3
+/specs/honda/civic/2013/,specs,2013 honda civic specs,1,P3
+/specs/ford/fusion/2013/,specs,2013 ford fusion specs,1,P3
+/specs/honda/pilot/2013/,specs,2013 honda pilot specs,1,P3
+/specs/mazda/cx-5/2013/,specs,2013 mazda cx 5 specs,1,P3
+/specs/nissan/rogue/2013/,specs,2013 nissan rogue specs,1,P3
+/specs/toyota/corolla/2014/,specs,2014 toyota corolla specs,1,P3
+/specs/honda/cr-v/2014/,specs,2014 honda cr v specs,1,P3
+/specs/ford/escape/2014/,maintenance how-to,2014 ford escape specs,1,P3
+/specs/ford/explorer/2014/,specs,2014 ford explorer specs,1,P3
+/specs/ford/fusion/2014/,specs,2014 ford fusion specs,1,P3
+/specs/honda/pilot/2014/,specs,2014 honda pilot specs,1,P3
+/specs/ford/mustang/2014/,specs,2014 ford mustang specs,1,P3
+/specs/nissan/rogue/2014/,specs,2014 nissan rogue specs,1,P3
+/specs/toyota/highlander/2014/,specs,2014 toyota highlander specs,1,P3
+/specs/ford/bronco/2016/,specs,2016 ford bronco specs,1,P3
+/specs/tesla/model-3/2016/,specs,2016 tesla model 3 specs,1,P3
+/specs/tesla/model-y/2018/,specs,2018 tesla model y specs,1,P3
+/specs/tesla/model-y/2019/,specs,2019 tesla model y specs,1,P3
+/specs/toyota/camry/2026/,specs,2026 toyota camry specs,1,P3
+/specs/chevrolet/traverse/2012/,specs,2012 chevrolet traverse specs,1,P3
+/specs/toyota/corolla/2026/,specs,2026 toyota corolla specs,1,P3
+/specs/hyundai/elantra/2012/,specs,2012 hyundai elantra specs,1,P3
+/specs/ford/edge/2014/,specs,2014 ford edge specs,1,P3
+/specs/ford/ranger/2014/,specs,2014 ford ranger specs,1,P3
+/specs/ford/f-150/2014/,specs,2014 ford f 150 specs,1,P3
+/specs/jeep/grand-cherokee/2014/,specs,2014 jeep grand cherokee specs,1,P3
+/specs/ford/f-150/2007/,specs,2007 ford f 150 specs,1,P3
+/specs/nissan/altima/2013/,specs,2013 nissan altima specs,1,P3
+/specs/ford/f-150/2005/,specs,2005 ford f 150 specs,1,P3
+/specs/gmc/sierra/2013/,specs,2013 gmc sierra specs,1,P3
+/specs/gmc/sierra/2012/,specs,2012 gmc sierra specs,1,P3
+/specs/hyundai/tucson/2012/,specs,2012 hyundai tucson specs,1,P3
+/specs/kia/sorento/2019/,specs,2019 kia sorento specs,1,P3
+/specs/kia/sportage/2012/,specs,2012 kia sportage specs,1,P3
+/specs/kia/sportage/2005/,specs,2005 kia sportage specs,1,P3
+/specs/subaru/outback/2005/,specs,2005 subaru outback specs,1,P3
+/specs/subaru/outback/2014/,specs,2014 subaru outback specs,1,P3
+/specs/buick/,specs,buick specs,1,P3
+/specs/ford/f-250/,specs,ford f 250 specs,1,P3
+/specs/toyota/4runner/2012/,specs,2012 toyota 4runner specs,1,P3
+/specs/toyota/rav4/2004/,specs,2004 toyota rav4 specs,1,P3
+/specs/toyota/sienna/2010/,specs,2010 toyota sienna specs,1,P3
+/specs/toyota/sienna/2007/,specs,2007 toyota sienna specs,1,P3
+/specs/toyota/sienna/2008/,specs,2008 toyota sienna specs,1,P3
+/specs/toyota/tundra/2012/,specs,2012 toyota tundra specs,1,P3
+/specs/toyota/tundra/2010/,specs,2010 toyota tundra specs,1,P3
+/specs/toyota/tundra/2008/,specs,2008 toyota tundra specs,1,P3
+/specs/honda/accord/2010/,specs,2010 honda accord specs,1,P3
+/how-to/battery/,maintenance how-to,2017 jeep battery replacement,0,P3
+/codes/p0013/,codes,chevrolet equinox check engine light code p0013,0,P3
+/codes/u0100/,codes,u0100 p0300 opel astra j,0,P3

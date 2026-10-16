@@ -1,0 +1,6 @@
+---
+const icons = import.meta.glob('../icons/icon-*.svg', { query: '?raw', import: 'default', eager: true });
+const { name } = Astro.props;
+const svg = String(icons[`../icons/icon-${name}.svg`] ?? '').replace('<svg ', `<svg class="ic" aria-hidden="true" focusable="false" `);
+---
+<Fragment set:html={svg} />

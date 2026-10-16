@@ -1,0 +1,218 @@
+{
+  "slug": "2022-honda-civic",
+  "year": 2022,
+  "make": "Honda",
+  "model": "Civic",
+  "makeSlug": "honda",
+  "modelSlug": "civic",
+  "powertrain": "ice",
+  "vpicConfirmed": true,
+  "manual": {
+    "sourceId": "manual-2022-honda-civic",
+    "yearConfirmed": true,
+    "note": "Honda TechInfo official online owner manual, Civic Sedan 2022 (AT202222IOM), section Information > Specifications"
+  },
+  "specs": {
+    "oilCapacity": {
+      "value": "1.5L turbo: 3.7 US qt (3.5 L) incl. filter; 2.0L: 4.4 US qt (4.2 L) incl. filter",
+      "source": "manual-2022-honda-civic",
+      "page": null,
+      "sourceGrade": "A",
+      "verified": false,
+      "note": null
+    },
+    "oilViscosity": {
+      "value": "0W-20 (both engines)",
+      "source": "manual-2022-honda-civic",
+      "page": null,
+      "sourceGrade": "A",
+      "verified": false,
+      "note": null
+    },
+    "wiperSizes": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "no citable source yet"
+    },
+    "batteryGroup": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "no citable source yet"
+    },
+    "towingCapacity": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false
+    },
+    "tpmsReset": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": null
+    }
+  },
+  "tires": {
+    "rows": [
+      {
+        "wheel": "17",
+        "config": "1.5L",
+        "tireSize": "215/50R17 91H",
+        "frontPsi": 33,
+        "rearPsi": 33,
+        "page": "Specifications",
+        "source": "manual-2022-honda-civic",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "18",
+        "config": "1.5L",
+        "tireSize": "235/40R18 91W or 235/40R18 95Y",
+        "frontPsi": 33,
+        "rearPsi": 32,
+        "page": "Specifications",
+        "source": "manual-2022-honda-civic",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "16",
+        "config": "2.0L",
+        "tireSize": "215/55R16 93H",
+        "frontPsi": 32,
+        "rearPsi": 32,
+        "page": "Specifications",
+        "source": "manual-2022-honda-civic",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "18",
+        "config": "2.0L",
+        "tireSize": "235/40R18 91W",
+        "frontPsi": 33,
+        "rearPsi": 32,
+        "page": "Specifications",
+        "source": "manual-2022-honda-civic",
+        "sourceGrade": "A"
+      }
+    ],
+    "note": null
+  },
+  "extraManuals": [],
+  "fuelEconomy": [
+    {
+      "feId": "44132",
+      "model": "Civic 4Dr",
+      "option": "Auto (AV-S7), 4 cyl, 1.5 L, Turbo",
+      "engineL": 1.5,
+      "cyl": 4,
+      "trans": "Automatic (AV-S7)",
+      "drive": "Front-Wheel Drive",
+      "mpgCity": 31,
+      "mpgHwy": 38,
+      "mpgComb": 34,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/44132",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "44134",
+      "model": "Civic 4Dr",
+      "option": "Auto (AV-S7), 4 cyl, 2.0 L",
+      "engineL": 2,
+      "cyl": 4,
+      "trans": "Automatic (AV-S7)",
+      "drive": "Front-Wheel Drive",
+      "mpgCity": 30,
+      "mpgHwy": 37,
+      "mpgComb": 33,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/44134",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "44546",
+      "model": "Civic 5Dr",
+      "option": "Auto (AV-S7), 4 cyl, 1.5 L, Turbo",
+      "engineL": 1.5,
+      "cyl": 4,
+      "trans": "Automatic (AV-S7)",
+      "drive": "Front-Wheel Drive",
+      "mpgCity": 30,
+      "mpgHwy": 37,
+      "mpgComb": 33,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/44546",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "44549",
+      "model": "Civic 5Dr",
+      "option": "Auto (AV-S7), 4 cyl, 2.0 L",
+      "engineL": 2,
+      "cyl": 4,
+      "trans": "Automatic (AV-S7)",
+      "drive": "Front-Wheel Drive",
+      "mpgCity": 29,
+      "mpgHwy": 37,
+      "mpgComb": 32,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/44549",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    }
+  ],
+  "fuelEconomyFetched": "2026-10-15",
+  "recalls": [
+    {
+      "campaign": "23V704000",
+      "component": "STEERING:RACK AND PINION",
+      "date": "2023-10-19",
+      "summary": "Honda (American Honda Motor Co.) is recalling certain 2022-2024 Civic 4-door and Civic 5-door vehicles that received a replacement power steering rack as part of a service repair.  The steering rack may have been incorrectly assembled, which can allow the tire to chafe against the lower suspension o",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "24V064000",
+      "component": "AIR BAGS:SENSOR:OCCUPANT CLASSIFICATION:FRONT PASSENGER",
+      "date": "2024-02-01",
+      "summary": "Honda (American Honda Motor Co.) is recalling certain 2020-2022 Pilot, Accord, Civic sedan, HR-V, Odyssey, 2020 Civic coupe, Fit, 2021-2022 Civic hatchback, 2021 Civic Type R, Insight, 2020-2021 CR-V, CR-V Hybrid, Passport, Ridgeline, Accord Hybrid, 2020 Acura MDX, 2022 Acura MDX, 2020-2022 Acura RD",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "24V744000",
+      "component": "STEERING",
+      "date": "2024-10-03",
+      "summary": "Honda (American Honda Motor Co.) is recalling certain 2023-2025 Acura Integra, Civic Type R, CR-V Hybrid, CR-V, HR-V, 2022-2025 Civic, Civic Hatchback, 2024-2025 Acura Integra Type S, 2025 CR-V Fuel Cell EV, Civic Hybrid, and Civic Hatchback Hybrid vehicles.  The steering gearbox assembly may have b",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "26V332000",
+      "component": "AIR BAGS:SENSOR:OCCUPANT CLASSIFICATION:FRONT PASSENGER",
+      "date": "2026-05-21",
+      "summary": "Honda (American Honda Motor Co.) is recalling certain 2018-2021, 2023 Acura TLX, 2019-2024 RDX, 2017-2020, 2022-2026 MDX, 2017-2021, 2023, 2025 Honda Ridgeline, 2017-2022 Pilot, 2019-2021 Passport, 2018-2026 Odyssey, 2019-2022 Insight, 2019-2021 HR-V, 2018-2020 Fit, 2020-2022 CR-V Hybrid, 2017-2022 ",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    }
+  ],
+  "recallsFetched": "2026-10-15",
+  "recallsUrl": "https://www.nhtsa.gov/recalls?nhtsaId=&make=Honda&model=Civic&year=2022",
+  "related": {
+    "issues": []
+  },
+  "publishDate": "2026-10-15",
+  "dataUpdated": "2026-10-15",
+  "signOff": {
+    "by": "小数",
+    "date": "2026-10-15"
+  }
+}

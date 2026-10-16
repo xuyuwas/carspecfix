@@ -1,0 +1,28 @@
+/* CarSpecFix v3 tokens — modern automotive media */
+:root{
+  /* primitives */
+  --navy-950:#071A33; --navy-900:#0B2545; --navy-700:#1E3D66; --navy-100:#E3EAF3; --navy-50:#F2F5F9;
+  --orange-600:#B8460A; --orange-700:#C2410C; --orange-800:#9A3412; --orange-500:#F26B1D; --orange-50:#FFF2EA;
+  --gray-950:#0F1419; --gray-700:#3D4752; --gray-500:#5B6570; --gray-300:#C5CCD4; --gray-200:#DDE2E8; --gray-100:#EDF0F3; --gray-50:#F7F8FA; --white:#FFFFFF;
+  --green-700:#1F7A3D; --green-50:#E8F5EC; --yellow-700:#8A5A00; --yellow-50:#FFF6D6; --red-700:#B42318; --red-50:#FDECEA;
+  /* semantic */
+  --surface:var(--white); --surface-alt:var(--gray-50); --surface-brand:var(--navy-900);
+  --text:var(--gray-950); --text-2:var(--gray-700); --text-3:var(--gray-500); --text-inverse:var(--white);
+  --border:var(--gray-200); --border-strong:var(--gray-300);
+  --primary:var(--navy-900); --primary-hover:var(--navy-700); --primary-tint:var(--navy-50);
+  --accent:var(--orange-500); --accent-strong:var(--orange-600); --accent-tint:var(--orange-50);
+  --accent-btn:var(--orange-700); --accent-btn-hover:var(--orange-800); /* white text 5.2:1 (WCAG AA) */
+  --link:#1A56A8;
+  --sev-low:var(--green-700); --sev-low-bg:var(--green-50); --sev-med:var(--yellow-700); --sev-med-bg:var(--yellow-50); --sev-high:var(--red-700); --sev-high-bg:var(--red-50);
+  /* spacing (4px grid) */
+  --sp-1:4px; --sp-2:8px; --sp-3:12px; --sp-4:16px; --sp-5:20px; --sp-6:24px; --sp-8:32px; --sp-10:40px; --sp-12:48px;
+  /* radius */
+  --r-sm:4px; --r-md:6px; --r-full:999px;
+  /* type */
+  --font-display:"Archivo",system-ui,sans-serif;
+  --font-body:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+  --fs-12:12px; --fs-13:13px; --fs-14:14px; --fs-15:15px; --fs-16:16px; --fs-18:18px; --fs-20:20px; --fs-24:24px; --fs-32:32px; --fs-40:40px; --fs-56:56px; --fs-72:72px;
+  /* layout */
+  --container:1200px; --sidebar:300px; --header-h:64px;
+}

@@ -1,0 +1,10 @@
+---
+import Base from './Base.astro';
+const { title, description, path, crumbs, jsonld = [], h1, nav, noindex = false, narrow = false } = Astro.props;
+---
+<Base title={title} description={description} path={path} crumbs={crumbs} jsonld={jsonld} nav={nav} noindex={noindex}>
+<div class={`container${narrow ? " container--narrow" : ""}`}><div class="phead">
+{crumbs && <nav class="crumbs" aria-label="Breadcrumb">{crumbs.map((c, n) => <>{n > 0 && <span class="sep">/</span>}{n < crumbs.length - 1 ? <a href={c.url}>{c.name}</a> : <span aria-current="page">{c.name}</span>}</>)}</nav>}
+<h1 class="ptitle">{h1}</h1></div>
+<div class="prose" style="padding-bottom:48px"><slot /></div></div>
+</Base>

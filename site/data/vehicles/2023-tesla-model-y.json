@@ -1,0 +1,311 @@
+{
+  "slug": "2023-tesla-model-y",
+  "year": 2023,
+  "make": "Tesla",
+  "model": "Model Y",
+  "makeSlug": "tesla",
+  "modelSlug": "model-y",
+  "powertrain": "ev",
+  "vpicConfirmed": true,
+  "manual": {
+    "sourceId": "manual-2023-tesla-model-y",
+    "yearConfirmed": true,
+    "note": "Tesla Model Y Owner's Manual, 2020-2024 edition (web), Specifications > Wheels and Tires (no page numbers; HTML section). Fetched 2026-10-15. PDF URLs return 403 from box."
+  },
+  "specs": {
+    "wiperSizes": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "no citable source yet"
+    },
+    "batteryGroup": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "no citable source yet"
+    },
+    "towingCapacity": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false
+    },
+    "tpmsReset": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": null
+    },
+    "evRange": {
+      "value": "Model Y AWD: 279 mi; Model Y Long Range AWD: 330 mi; Model Y Performance AWD: 303 mi",
+      "source": "fe-ev-2023-tesla-model-y",
+      "sourceGrade": "A",
+      "verified": false,
+      "note": null
+    },
+    "evEfficiency": {
+      "value": "Model Y AWD: 27.5 kWh/100 mi (123 MPGe comb); Model Y Long Range AWD: 27.6 kWh/100 mi (122 MPGe comb); Model Y Performance AWD: 30.5 kWh/100 mi (111 MPGe comb)",
+      "source": "fe-ev-2023-tesla-model-y",
+      "sourceGrade": "A",
+      "verified": false,
+      "note": null
+    },
+    "battery12v": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false
+    }
+  },
+  "tires": {
+    "rows": [
+      {
+        "wheel": "19",
+        "config": "19-inch wheels (front/rear)",
+        "tireSize": "255/45R19 XL",
+        "frontPsi": null,
+        "rearPsi": null,
+        "page": null,
+        "source": "manual-2023-tesla-model-y",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "20",
+        "config": "20-inch wheels (front/rear)",
+        "tireSize": "255/40R20 XL",
+        "frontPsi": null,
+        "rearPsi": null,
+        "page": null,
+        "source": "manual-2023-tesla-model-y",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "21",
+        "config": "21-inch wheels, front",
+        "tireSize": "255/35R21 XL",
+        "frontPsi": null,
+        "rearPsi": null,
+        "page": null,
+        "source": "manual-2023-tesla-model-y",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "21",
+        "config": "21-inch wheels, rear",
+        "tireSize": "275/35R21 XL",
+        "frontPsi": null,
+        "rearPsi": null,
+        "page": null,
+        "source": "manual-2023-tesla-model-y",
+        "sourceGrade": "A"
+      }
+    ],
+    "origin": "tire_rows.csv",
+    "note": null
+  },
+  "extraManuals": [],
+  "fuelEconomy": [
+    {
+      "feId": "46211",
+      "model": "Model Y AWD",
+      "option": "Auto (A1)",
+      "engineL": null,
+      "cyl": null,
+      "trans": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "mpgCity": 129,
+      "mpgHwy": 116,
+      "mpgComb": 123,
+      "fuel": "Electricity",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/46211",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "46212",
+      "model": "Model Y Long Range AWD",
+      "option": "Auto (A1)",
+      "engineL": null,
+      "cyl": null,
+      "trans": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "mpgCity": 127,
+      "mpgHwy": 117,
+      "mpgComb": 122,
+      "fuel": "Electricity",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/46212",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "46213",
+      "model": "Model Y Performance AWD",
+      "option": "Auto (A1)",
+      "engineL": null,
+      "cyl": null,
+      "trans": "Automatic (A1)",
+      "drive": "All-Wheel Drive",
+      "mpgCity": 115,
+      "mpgHwy": 106,
+      "mpgComb": 111,
+      "fuel": "Electricity",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/46213",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    }
+  ],
+  "fuelEconomyFetched": "2026-10-15",
+  "recalls": [
+    {
+      "campaign": "22V844000",
+      "component": "EXTERIOR LIGHTING:TAIL LIGHTS",
+      "date": "2022-11-15",
+      "summary": "Tesla, Inc. (Tesla) is recalling certain 2023 Model 3 and 2020-2023 Model Y vehicles.  One or both taillights may intermittently fail to illuminate.",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "22V895000",
+      "component": "SUSPENSION:SUBFRAME/MOUNTING BRACKET",
+      "date": "2022-12-06",
+      "summary": "Tesla, Inc. (Tesla) is recalling certain 2023 Model Y vehicles.  The front suspension lateral link fasteners may not have been properly attached to the sub-frame.",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "23V085000",
+      "component": "STEERING:AUTOMATED/ADAPTIVE STEERING",
+      "date": "2023-02-15",
+      "summary": "Tesla, Inc. (Tesla) is recalling certain 2016-2023 Model S, Model X, 2017-2023 Model 3, and 2020-2023 Model Y vehicles equipped with Full Self-Driving Beta (FSD Beta) software or pending installation.  The FSD Beta system may allow the vehicle to act unsafe around intersections, such as traveling st",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "23V130000",
+      "component": "SEATS:CRITICAL FASTENERS",
+      "date": "2023-02-27",
+      "summary": "Tesla, Inc. (Tesla) is recalling certain 2022-2023 Model Y vehicles.  The bolts securing the second-row seat back frames may not have been securely tightened.",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "23V385000",
+      "component": "STEERING: STEERING WHEEL/HANDLE BAR",
+      "date": "2023-05-30",
+      "summary": "Tesla, Inc. (Tesla) is recalling certain 2022-2023 Model Y vehicles.  The steering wheel fastener may be loose.",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "23V434000",
+      "component": "ELECTRICAL SYSTEM:PROPULSION SYSTEM:TRACTION BATTERY",
+      "date": "2023-06-19",
+      "summary": "Tesla, Inc. (Tesla) is recalling certain 2023 Model 3 and Model Y vehicles.  The pyrotechnic battery disconnect may be defective.",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "23V489000",
+      "component": "FORWARD COLLISION AVOIDANCE: SENSING SYSTEM: CAMERA",
+      "date": "2023-07-14",
+      "summary": "Tesla, Inc. (Tesla) is recalling certain 2023 Model S, Model X, and Model Y vehicles.  The forward-facing camera may be misaligned, causing some of the active safety features such as emergency braking, forward collision warning, and lane assist to become unavailable without alerting the driver.",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "23V838000",
+      "component": "ELECTRICAL SYSTEM:ADAS:AUTONOMOUS/SELF DRIVING:SOFTWARE",
+      "date": "2023-12-12",
+      "summary": "Tesla, Inc. (Tesla) is recalling 2012-2023 Model S, 2016-2023 Model X, 2017-2023 Model 3, and 2020-2023 Model Y vehicles equipped with all versions of Autosteer leading up to the version(s) that contains the recall remedy.  In certain circumstances when Autosteer is engaged, the prominence and scope",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "24V035000",
+      "component": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+      "date": "2024-01-22",
+      "summary": "Tesla, Inc. (Tesla) is recalling certain 2023 Model S, X, and Y vehicles equipped with full self-driving computer 4.0 and running a software release version 2023.44.30 through 2023.44.30.6 or 2023.44.100.  Software instability may prevent the rearview camera image from displaying.",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "24V051000",
+      "component": "ELECTRICAL SYSTEM: INSTRUMENT CLUSTER/PANEL",
+      "date": "2024-01-30",
+      "summary": "Tesla, Inc. (Tesla) is recalling certain 2012-2023 Model S, 2016-2024 Model X, 2017-2023 Model 3, 2019-2024 Model Y, and 2024 Cybertruck vehicles.  An incorrect font size is displayed on the instrument panel for the Brake, Park, and Antilock Brake System (ABS) warning lights.  As such, these vehicle",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "24V376000",
+      "component": "SEAT BELTS:FRONT:WARNING LIGHT/DEVICES",
+      "date": "2024-05-28",
+      "summary": "Tesla, Inc. (Tesla) is recalling certain 2012-2024 Model S, 2015-2024 Model X, 2017-2023 Model 3, and 2020-2023 Model Y vehicles.  In the event of an unbelted driver, the seat belt warning light and audible chime may not activate as intended.  As such, these vehicles fail to comply with the requirem",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "24V554000",
+      "component": "LATCHES/LOCKS/LINKAGES:HOOD:LATCH",
+      "date": "2024-07-24",
+      "summary": "Tesla, Inc. (Tesla) is recalling certain 2021-2024 Model 3, Model S, Model X, and 2020-2024 Model Y vehicles.  The hood latch assembly may fail to detect an unlatched hood condition after the hood has been opened.",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "24V935000",
+      "component": "TIRES:PRESSURE MONITORING AND REGULATING SYSTEMS",
+      "date": "2024-12-17",
+      "summary": "Tesla, Inc. (Tesla) is recalling certain 2024 Cybertruck, 2017-2025 Model 3, and 2020-2025 Model Y vehicles.  The tire pressure monitoring system (TPMS) warning light may not remain illuminated between drive cycles, failing to warn the driver of low tire pressure.  As such, these vehicles fail to co",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "25V002000",
+      "component": "BACK OVER PREVENTION:SOFTWARE",
+      "date": "2025-01-07",
+      "summary": "Tesla, Inc. (Tesla) is recalling certain 2024-2025 Model 3, Model S, 2023-2025 Model X, and Model Y vehicles.  The computer circuit board may short, resulting in the loss of the rearview camera image.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Stand",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "25V092000",
+      "component": "STEERING:ELECTRIC POWER ASSIST SYSTEM",
+      "date": "2025-02-14",
+      "summary": "Tesla, Inc. (Tesla) is recalling certain 2023 Model 3 and Model Y vehicles operating software prior to 2023.38.4.  The printed circuit board for the electronic power steering assist may experience an overstress condition, causing a loss of power steering assist when the vehicle reaches a stop and th",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "26V283000",
+      "component": "BACK OVER PREVENTION:SOFTWARE",
+      "date": "2026-05-05",
+      "summary": "Tesla, Inc. (Tesla) is recalling certain 2017, 2021-2023 Model 3, 2020-2023 Model Y, 2021-2023 Model S, and Model X vehicles operating software version 2026.8.6. The rearview camera image may be delayed when the vehicle is placed in reverse. As such, these vehicles fail to comply with the requiremen",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "26V507000",
+      "component": "EXTERIOR LIGHTING:HEADLIGHTS",
+      "date": "2026-08-05",
+      "summary": "Tesla, Inc. (Tesla) is recalling certain 2017-2023 Model 3 and 2020-2023 Model Y vehicles. The headlight low beams may be too bright and exceed the maximum light output. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) number 108, \"Lamps, ",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    }
+  ],
+  "recallsFetched": "2026-10-15",
+  "recallsUrl": "https://www.nhtsa.gov/recalls?nhtsaId=&make=Tesla&model=Model Y&year=2023",
+  "related": {
+    "issues": []
+  },
+  "publishDate": "2026-10-15",
+  "dataUpdated": "2026-10-15",
+  "signOff": {
+    "by": "小数",
+    "date": "2026-10-15"
+  }
+}

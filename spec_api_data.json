@@ -1,0 +1,1648 @@
+[
+ {
+  "slug": "2020-toyota-rav4",
+  "year": 2020,
+  "make": "Toyota",
+  "model": "RAV4",
+  "vpic_confirmed": true,
+  "recalls": [
+   {
+    "campaign": "20V682000",
+    "component": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+    "date": "04/11/2020",
+    "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2018-2019 4Runner, 2019-2020 Avalon, 2019 Corolla Hatchback, 2017-2019 Highlander, 2018-2020 Camry, 2020 Corolla, 2018-2019 Land Cruiser, 2017-2020 Tacoma, 2019-2020 RAV4, 2019-2020 Sequoia, 2017-2020 Sienna, 2019-2020 Tundra, 20"
+   },
+   {
+    "campaign": "20V734000",
+    "component": "AIR BAGS:FRONTAL",
+    "date": "25/11/2020",
+    "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2020-2021 Toyota Avalon and 2020 Avalon Hybrid, RAV4, and RAV4 Hybrid vehicles.  Breakaway pins within the steering column, designed to absorb energy and reduce injury during a crash, could have been damaged during production, po"
+   },
+   {
+    "campaign": "20V064000",
+    "component": "ENGINE AND ENGINE COOLING",
+    "date": "06/02/2020",
+    "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2020 Toyota Avalon Hybrid, Camry, Camry Hybrid and  Lexus ES300h and 2019-2020 RAV4 and RAV4 Hybrid vehicles equipped with 2.5L 4-Cylinder engines.  Porosity in the engine castings may result in cracks than can allow coolant to l"
+   },
+   {
+    "campaign": "20V373000",
+    "component": "STEERING:ELECTRIC POWER ASSIST SYSTEM",
+    "date": "24/06/2020",
+    "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2019-2020 RAV4 and 2020 RAV4 Hybrid vehicles equipped with electric power steering (EPS).  Water may enter through the steering gear box cover and cause a loss of electric power steering assist."
+   },
+   {
+    "campaign": "20V286000",
+    "component": "SUSPENSION:FRONT:CONTROL ARM:LOWER ARM",
+    "date": "20/05/2020",
+    "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2019-2020 RAV4 and RAV4 Hybrid vehicles.  The front lower suspension arms may have cracks, which may result in the suspension arm separating from the front wheel assembly."
+   },
+   {
+    "campaign": "23V865000",
+    "component": "AIR BAGS:SENSOR:OCCUPANT CLASSIFICATION",
+    "date": "20/12/2023",
+    "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2020-2021 Avalon, Avalon Hybrid, Corolla, Highlander, Highlander Hybrid, RAV4, RAV4 Hybrid, Lexus ES350, Lexus RX350, Lexus RX450H, 2021 Sienna Hybrid, Lexus ES250, 2020-2022 Camry, Camry Hybrid, and ES300H vehicles.  A short cir"
+   }
+  ],
+  "recalls_source": "https://www.nhtsa.gov/recalls?nhtsaId=&make=Toyota&model=RAV4&year=2020",
+  "fueleconomy": [
+   {
+    "fe_id": "42181",
+    "model": "RAV4",
+    "option": "Auto (S8), 4 cyl, 2.5 L, SIDI & PFI",
+    "engine_l": "2.5",
+    "cyl": "4",
+    "trans": "Automatic (S8)",
+    "drive": "Front-Wheel Drive",
+    "mpg_city": "27",
+    "mpg_hwy": "35",
+    "mpg_comb": "30",
+    "fuel": "Regular",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2020&year2=2020&make=Toyota&baseModel=RAV4",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/42181"
+   },
+   {
+    "fe_id": "42182",
+    "model": "RAV4",
+    "option": "Auto (S8), 4 cyl, 2.5 L, SIDI & PFI; Stop-Start",
+    "engine_l": "2.5",
+    "cyl": "4",
+    "trans": "Automatic (S8)",
+    "drive": "Front-Wheel Drive",
+    "mpg_city": "28",
+    "mpg_hwy": "35",
+    "mpg_comb": "30",
+    "fuel": "Regular",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2020&year2=2020&make=Toyota&baseModel=RAV4",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/42182"
+   },
+   {
+    "fe_id": "42185",
+    "model": "RAV4 AWD",
+    "option": "Auto (S8), 4 cyl, 2.5 L, SIDI & PFI",
+    "engine_l": "2.5",
+    "cyl": "4",
+    "trans": "Automatic (S8)",
+    "drive": "All-Wheel Drive",
+    "mpg_city": "25",
+    "mpg_hwy": "33",
+    "mpg_comb": "28",
+    "fuel": "Regular",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2020&year2=2020&make=Toyota&baseModel=RAV4",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/42185"
+   },
+   {
+    "fe_id": "42186",
+    "model": "RAV4 AWD",
+    "option": "Auto (S8), 4 cyl, 2.5 L, SIDI & PFI; Stop-Start",
+    "engine_l": "2.5",
+    "cyl": "4",
+    "trans": "Automatic (S8)",
+    "drive": "All-Wheel Drive",
+    "mpg_city": "27",
+    "mpg_hwy": "33",
+    "mpg_comb": "29",
+    "fuel": "Regular",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2020&year2=2020&make=Toyota&baseModel=RAV4",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/42186"
+   },
+   {
+    "fe_id": "42189",
+    "model": "RAV4 AWD LE",
+    "option": "Auto (S8), 4 cyl, 2.5 L",
+    "engine_l": "2.5",
+    "cyl": "4",
+    "trans": "Automatic (S8)",
+    "drive": "All-Wheel Drive",
+    "mpg_city": "27",
+    "mpg_hwy": "34",
+    "mpg_comb": "30",
+    "fuel": "Regular",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2020&year2=2020&make=Toyota&baseModel=RAV4",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/42189"
+   }
+  ]
+ },
+ {
+  "slug": "2024-toyota-rav4",
+  "year": 2024,
+  "make": "Toyota",
+  "model": "RAV4",
+  "vpic_confirmed": true,
+  "recalls": [
+   {
+    "campaign": "24V911000",
+    "component": "SERVICE BRAKES, HYDRAULIC:FOUNDATION COMPONENTS:DISC:CALIPER",
+    "date": "05/12/2024",
+    "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2024 RAV4 and 2025 Lexus NX vehicles.  Some of the bolts that secure the front brake caliper and the wheel hub bearing may be loose, which can result in a damaged caliper brake hose or possible wheel detachment."
+   },
+   {
+    "campaign": "25V595000",
+    "component": "ELECTRICAL SYSTEM: INSTRUMENT CLUSTER/PANEL",
+    "date": "11/09/2025",
+    "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2023-2024 Toyota Venza, 2023-2025 RAV4 Prime, RAV4, Highlander, GR Corolla, Crown, 2024-2025 Lexus TX, LS, Toyota Tacoma, Grand Highlander, and 2025 Lexus RX, Toyota Crown Signia, Camry, RAV 4 Plug-in Hybrid (PHEV), and 4 Runner "
+   },
+   {
+    "campaign": "25V744000",
+    "component": "BACK OVER PREVENTION:DISPLAY FUNCTION",
+    "date": "30/10/2025",
+    "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2022-2026 Toyota, Lexus, and Subaru Solterra vehicles equipped with a Panoramic View Monitor (PVM) system. Please see the recall report for a complete list of models. A software error may cause the rearview camera to freeze or di"
+   }
+  ],
+  "recalls_source": "https://www.nhtsa.gov/recalls?nhtsaId=&make=Toyota&model=RAV4&year=2024",
+  "fueleconomy": [
+   {
+    "fe_id": "47374",
+    "model": "RAV4",
+    "option": "Auto (S8), 4 cyl, 2.5 L",
+    "engine_l": "2.5",
+    "cyl": "4",
+    "trans": "Automatic (S8)",
+    "drive": "Front-Wheel Drive",
+    "mpg_city": "27",
+    "mpg_hwy": "35",
+    "mpg_comb": "30",
+    "fuel": "Regular",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2024&year2=2024&make=Toyota&baseModel=RAV4",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/47374"
+   },
+   {
+    "fe_id": "47387",
+    "model": "RAV4 AWD",
+    "option": "Auto (S8), 4 cyl, 2.5 L, SIDI & PFI; with Stop-Start",
+    "engine_l": "2.5",
+    "cyl": "4",
+    "trans": "Automatic (S8)",
+    "drive": "All-Wheel Drive",
+    "mpg_city": "27",
+    "mpg_hwy": "33",
+    "mpg_comb": "29",
+    "fuel": "Regular",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2024&year2=2024&make=Toyota&baseModel=RAV4",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/47387"
+   },
+   {
+    "fe_id": "47388",
+    "model": "RAV4 AWD",
+    "option": "Auto (S8), 4 cyl, 2.5 L, SIDI & PFI",
+    "engine_l": "2.5",
+    "cyl": "4",
+    "trans": "Automatic (S8)",
+    "drive": "All-Wheel Drive",
+    "mpg_city": "25",
+    "mpg_hwy": "33",
+    "mpg_comb": "28",
+    "fuel": "Regular",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2024&year2=2024&make=Toyota&baseModel=RAV4",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/47388"
+   },
+   {
+    "fe_id": "47390",
+    "model": "RAV4 AWD LE",
+    "option": "Auto (S8), 4 cyl, 2.5 L",
+    "engine_l": "2.5",
+    "cyl": "4",
+    "trans": "Automatic (S8)",
+    "drive": "All-Wheel Drive",
+    "mpg_city": "27",
+    "mpg_hwy": "34",
+    "mpg_comb": "30",
+    "fuel": "Regular",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2024&year2=2024&make=Toyota&baseModel=RAV4",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/47390"
+   }
+  ]
+ },
+ {
+  "slug": "2022-toyota-camry",
+  "year": 2022,
+  "make": "Toyota",
+  "model": "Camry",
+  "vpic_confirmed": true,
+  "recalls": [
+   {
+    "campaign": "23V865000",
+    "component": "AIR BAGS:SENSOR:OCCUPANT CLASSIFICATION",
+    "date": "20/12/2023",
+    "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2020-2021 Avalon, Avalon Hybrid, Corolla, Highlander, Highlander Hybrid, RAV4, RAV4 Hybrid, Lexus ES350, Lexus RX350, Lexus RX450H, 2021 Sienna Hybrid, Lexus ES250, 2020-2022 Camry, Camry Hybrid, and ES300H vehicles.  A short cir"
+   }
+  ],
+  "recalls_source": "https://www.nhtsa.gov/recalls?nhtsaId=&make=Toyota&model=Camry&year=2022",
+  "fueleconomy": [
+   {
+    "fe_id": "44343",
+    "model": "Camry",
+    "option": "Auto (S8), 6 cyl, 3.5 L",
+    "engine_l": "3.5",
+    "cyl": "6",
+    "trans": "Automatic (S8)",
+    "drive": "Front-Wheel Drive",
+    "mpg_city": "22",
+    "mpg_hwy": "33",
+    "mpg_comb": "26",
+    "fuel": "Regular",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2022&year2=2022&make=Toyota&baseModel=Camry",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/44343"
+   },
+   {
+    "fe_id": "44346",
+    "model": "Camry AWD LE/SE",
+    "option": "Auto (S8), 4 cyl, 2.5 L",
+    "engine_l": "2.5",
+    "cyl": "4",
+    "trans": "Automatic (S8)",
+    "drive": "All-Wheel Drive",
+    "mpg_city": "25",
+    "mpg_hwy": "34",
+    "mpg_comb": "29",
+    "fuel": "Regular",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2022&year2=2022&make=Toyota&baseModel=Camry",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/44346"
+   },
+   {
+    "fe_id": "44347",
+    "model": "Camry AWD XLE/XSE",
+    "option": "Auto (S8), 4 cyl, 2.5 L",
+    "engine_l": "2.5",
+    "cyl": "4",
+    "trans": "Automatic (S8)",
+    "drive": "All-Wheel Drive",
+    "mpg_city": "25",
+    "mpg_hwy": "34",
+    "mpg_comb": "28",
+    "fuel": "Regular",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2022&year2=2022&make=Toyota&baseModel=Camry",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/44347"
+   }
+  ]
+ },
+ {
+  "slug": "2024-toyota-camry",
+  "year": 2024,
+  "make": "Toyota",
+  "model": "Camry",
+  "vpic_confirmed": true,
+  "recalls": [
+   {
+    "campaign": "24V128000",
+    "component": "SEATS",
+    "date": "21/02/2024",
+    "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2023-2024 Camry and Camry Hybrid vehicles. The second-row center and right-side seats may have insufficiently welded head restraint brackets.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle "
+   }
+  ],
+  "recalls_source": "https://www.nhtsa.gov/recalls?nhtsaId=&make=Toyota&model=Camry&year=2024",
+  "fueleconomy": [
+   {
+    "fe_id": "47085",
+    "model": "Camry",
+    "option": "Auto (S8), 6 cyl, 3.5 L",
+    "engine_l": "3.5",
+    "cyl": "6",
+    "trans": "Automatic (S8)",
+    "drive": "Front-Wheel Drive",
+    "mpg_city": "22",
+    "mpg_hwy": "33",
+    "mpg_comb": "26",
+    "fuel": "Regular",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2024&year2=2024&make=Toyota&baseModel=Camry",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/47085"
+   },
+   {
+    "fe_id": "47088",
+    "model": "Camry AWD LE/SE",
+    "option": "Auto (S8), 4 cyl, 2.5 L",
+    "engine_l": "2.5",
+    "cyl": "4",
+    "trans": "Automatic (S8)",
+    "drive": "All-Wheel Drive",
+    "mpg_city": "25",
+    "mpg_hwy": "34",
+    "mpg_comb": "29",
+    "fuel": "Regular",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2024&year2=2024&make=Toyota&baseModel=Camry",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/47088"
+   },
+   {
+    "fe_id": "47089",
+    "model": "Camry AWD XLE/XSE",
+    "option": "Auto (S8), 4 cyl, 2.5 L",
+    "engine_l": "2.5",
+    "cyl": "4",
+    "trans": "Automatic (S8)",
+    "drive": "All-Wheel Drive",
+    "mpg_city": "25",
+    "mpg_hwy": "34",
+    "mpg_comb": "28",
+    "fuel": "Regular",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2024&year2=2024&make=Toyota&baseModel=Camry",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/47089"
+   }
+  ]
+ },
+ {
+  "slug": "2022-honda-cr-v",
+  "year": 2022,
+  "make": "Honda",
+  "model": "CR-V",
+  "vpic_confirmed": true,
+  "recalls": [
+   {
+    "campaign": "23V524000",
+    "component": "EQUIPMENT:OTHER:LABELS",
+    "date": "27/07/2023",
+    "summary": "Honda (American Honda Motor Co.) is recalling certain 2017, 2020, and 2022 CR-V vehicles.  The certification label on the driver's side door states incorrect Gross Vehicle Weight Rating (GVWR), Gross Axle Weight Rating (GAWR), and tire size information.  As such, these vehicles fail to comply with t"
+   },
+   {
+    "campaign": "23V858000",
+    "component": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+    "date": "18/12/2023",
+    "summary": "Honda (American Honda Motor Co.) is recalling certain 2013-2023 Honda Accord, Civic Coupe, Civic Sedan, Civic Hatchback, Civic Type R, CR-V, HR-V, Ridgeline, Odyssey, Acura ILX, MDX, MDX Hybrid, RDX, RLX, TLX, 2019-2022 Honda Insight, Passport, 2020 Honda CR-V Hybrid, 2018-2019 Honda Clarity PHEV, F"
+   },
+   {
+    "campaign": "26V332000",
+    "component": "AIR BAGS:SENSOR:OCCUPANT CLASSIFICATION:FRONT PASSENGER",
+    "date": "21/05/2026",
+    "summary": "Honda (American Honda Motor Co.) is recalling certain 2018-2021, 2023 Acura TLX, 2019-2024 RDX, 2017-2020, 2022-2026 MDX, 2017-2021, 2023, 2025 Honda Ridgeline, 2017-2022 Pilot, 2019-2021 Passport, 2018-2026 Odyssey, 2019-2022 Insight, 2019-2021 HR-V, 2018-2020 Fit, 2020-2022 CR-V Hybrid, 2017-2022 "
+   }
+  ],
+  "recalls_source": "https://www.nhtsa.gov/recalls?nhtsaId=&make=Honda&model=CR-V&year=2022",
+  "fueleconomy": [
+   {
+    "fe_id": "44434",
+    "model": "CR-V AWD",
+    "option": "Auto (variable gear ratios), 4 cyl, 1.5 L, Turbo",
+    "engine_l": "1.5",
+    "cyl": "4",
+    "trans": "Automatic (variable gear ratios)",
+    "drive": "All-Wheel Drive",
+    "mpg_city": "27",
+    "mpg_hwy": "32",
+    "mpg_comb": "29",
+    "fuel": "Regular",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2022&year2=2022&make=Honda&baseModel=CR-V",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/44434"
+   },
+   {
+    "fe_id": "44432",
+    "model": "CR-V FWD",
+    "option": "Auto (variable gear ratios), 4 cyl, 1.5 L, Turbo",
+    "engine_l": "1.5",
+    "cyl": "4",
+    "trans": "Automatic (variable gear ratios)",
+    "drive": "Front-Wheel Drive",
+    "mpg_city": "28",
+    "mpg_hwy": "34",
+    "mpg_comb": "30",
+    "fuel": "Regular",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2022&year2=2022&make=Honda&baseModel=CR-V",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/44432"
+   },
+   {
+    "fe_id": "44435",
+    "model": "CR-V Hybrid AWD",
+    "option": "Auto (variable gear ratios), 4 cyl, 2.0 L",
+    "engine_l": "2.0",
+    "cyl": "4",
+    "trans": "Automatic (variable gear ratios)",
+    "drive": "All-Wheel Drive",
+    "mpg_city": "40",
+    "mpg_hwy": "35",
+    "mpg_comb": "38",
+    "fuel": "Regular",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2022&year2=2022&make=Honda&baseModel=CR-V",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/44435"
+   }
+  ]
+ },
+ {
+  "slug": "2024-honda-cr-v",
+  "year": 2024,
+  "make": "Honda",
+  "model": "CR-V",
+  "vpic_confirmed": true,
+  "recalls": [
+   {
+    "campaign": "24V508000",
+    "component": "TIRES:MARKINGS",
+    "date": "02/07/2024",
+    "summary": "Honda (America Honda Motor Co.) is recalling certain 2024 CR-V vehicles.  The tire identification number (TIN) is missing the four-digit date code.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 139, \"New Pneumatic Radial Tires for Light"
+   },
+   {
+    "campaign": "24V744000",
+    "component": "STEERING",
+    "date": "03/10/2024",
+    "summary": "Honda (American Honda Motor Co.) is recalling certain 2023-2025 Acura Integra, Civic Type R, CR-V Hybrid, CR-V, HR-V, 2022-2025 Civic, Civic Hatchback, 2024-2025 Acura Integra Type S, 2025 CR-V Fuel Cell EV, Civic Hybrid, and Civic Hatchback Hybrid vehicles.  The steering gearbox assembly may have b"
+   }
+  ],
+  "recalls_source": "https://www.nhtsa.gov/recalls?nhtsaId=&make=Honda&model=CR-V&year=2024",
+  "fueleconomy": [
+   {
+    "fe_id": "46715",
+    "model": "CR-V AWD",
+    "option": "Auto (variable gear ratios), 4 cyl, 1.5 L, Turbo",
+    "engine_l": "1.5",
+    "cyl": "4",
+    "trans": "Automatic (variable gear ratios)",
+    "drive": "All-Wheel Drive",
+    "mpg_city": "27",
+    "mpg_hwy": "32",
+    "mpg_comb": "29",
+    "fuel": "Regular",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2024&year2=2024&make=Honda&baseModel=CR-V",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/46715"
+   },
+   {
+    "fe_id": "46716",
+    "model": "CR-V AWD",
+    "option": "Auto (variable gear ratios), 4 cyl, 2.0 L",
+    "engine_l": "2.0",
+    "cyl": "4",
+    "trans": "Automatic (variable gear ratios)",
+    "drive": "All-Wheel Drive",
+    "mpg_city": "40",
+    "mpg_hwy": "34",
+    "mpg_comb": "37",
+    "fuel": "Regular",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2024&year2=2024&make=Honda&baseModel=CR-V",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/46716"
+   },
+   {
+    "fe_id": "46693",
+    "model": "CR-V FWD",
+    "option": "Auto (variable gear ratios), 4 cyl, 1.5 L, Turbo",
+    "engine_l": "1.5",
+    "cyl": "4",
+    "trans": "Automatic (variable gear ratios)",
+    "drive": "Front-Wheel Drive",
+    "mpg_city": "28",
+    "mpg_hwy": "34",
+    "mpg_comb": "30",
+    "fuel": "Regular",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2024&year2=2024&make=Honda&baseModel=CR-V",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/46693"
+   },
+   {
+    "fe_id": "46694",
+    "model": "CR-V FWD",
+    "option": "Auto (variable gear ratios), 4 cyl, 2.0 L",
+    "engine_l": "2.0",
+    "cyl": "4",
+    "trans": "Automatic (variable gear ratios)",
+    "drive": "Front-Wheel Drive",
+    "mpg_city": "43",
+    "mpg_hwy": "36",
+    "mpg_comb": "40",
+    "fuel": "Regular",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2024&year2=2024&make=Honda&baseModel=CR-V",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/46694"
+   }
+  ]
+ },
+ {
+  "slug": "2021-ford-f-150",
+  "year": 2021,
+  "make": "Ford",
+  "model": "F-150",
+  "vpic_confirmed": true,
+  "recalls": [
+   {
+    "campaign": "21V986000",
+    "component": "POWER TRAIN:DRIVELINE:DRIVESHAFT",
+    "date": "16/12/2021",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2022 F-150 vehicles.  Underbody heat and noise insulators may loosen and contact the aluminum driveshaft, which could damage the driveshaft and cause it to fracture."
+   },
+   {
+    "campaign": "21V090000",
+    "component": "VISIBILITY:WINDSHIELD:CRITICAL FASTENERS",
+    "date": "18/02/2021",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021 F-150 and 2020-2021 F-250, F-350, F-450, and F-550 Super Duty vehicles.  During manufacturing, the windshield may not have been properly bonded to the vehicle, allowing it to detach in a crash.  As such, these vehicles fail to comply with the requi"
+   },
+   {
+    "campaign": "21V805000",
+    "component": "AIR BAGS:SENSOR:SIDE IMPACT",
+    "date": "15/10/2021",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2022 Super Duty F-250, F-350, 2021 F-150, Expedition, and Lincoln Navigator vehicles.  The front-door side impact pressure sensor modules may have been damaged during supplier assembly, which can cause the side impact air bags to not deploy properly in "
+   },
+   {
+    "campaign": "21V533000",
+    "component": "SERVICE BRAKES, HYDRAULIC",
+    "date": "15/07/2021",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021 F-150 vehicles.  The electronic brake booster may leak brake fluid into the electronic control unit, which could result in reduced braking performance."
+   },
+   {
+    "campaign": "21V653000",
+    "component": "SEAT BELTS:FRONT:WEBBING",
+    "date": "23/08/2021",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021 F-150 Super Cab vehicles.  The front seatbelt webbing may be incorrectly routed."
+   },
+   {
+    "campaign": "21V381000",
+    "component": "POWER TRAIN:DRIVELINE:DRIVESHAFT",
+    "date": "24/05/2021",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021 F-150 vehicles.  The two-piece driveshafts may have been improperly assembled, which could result in driveshaft separation."
+   },
+   {
+    "campaign": "21V407000",
+    "component": "STEERING:GEAR BOX (OTHER THAN RACK AND PINION)",
+    "date": "29/05/2021",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021 F-150 vehicles.  The steering gear may have internal damage, which could result in difficulty steering, or the inability to rotate the steering wheel while driving."
+   },
+   {
+    "campaign": "22V142000",
+    "component": "VISIBILITY:WINDSHIELD WIPER/WASHER:MOTOR",
+    "date": "11/03/2022",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021 F-150 vehicles.  The front windshield wiper motor may become inoperative, causing the wipers to fail."
+   },
+   {
+    "campaign": "22V193000",
+    "component": "ELECTRICAL SYSTEM: INTEGRATED TRAILER BRAKE CONTROL",
+    "date": "25/03/2022",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2022 F-150, 2022 Maverick, Expedition, Lincoln Navigator, F-250, F-350, F-450, and F-550 vehicles.  Due to a software error, a towed trailer equipped with an electric or electric-over hydraulic brake system may not brake."
+   },
+   {
+    "campaign": "22V188000",
+    "component": "POWER TRAIN:AUTOMATIC TRANSMISSION:CONTROL MODULE (TCM/PCM/TECM)",
+    "date": "25/03/2022",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021 F-150 vehicles.  The Diagnostic Trouble Code (DTC) for low transmission fluid pressure may falsely activate and cause the transmission to unexpectedly shift into neutral."
+   },
+   {
+    "campaign": "22V250000",
+    "component": "VISIBILITY:WINDSHIELD WIPER/WASHER:LINKAGES",
+    "date": "14/04/2022",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2020-2021 F-150, Expedition, 2020-2022 Super Duty F-250, F-350, F-450, F-550, and 2020-2021 Lincoln Navigator vehicles.  The windshield wiper arms may break, causing the windshield wipers to fail."
+   },
+   {
+    "campaign": "22V414000",
+    "component": "FUEL SYSTEM, GASOLINE:STORAGE",
+    "date": "10/06/2022",
+    "summary": "Ford Motor Company (Ford) is recalling one 2021 F-150 vehicle.  A single vehicle may have been assembled without a fuel tank front attachment resulting in an unsecured fuel tank attachment strap."
+   },
+   {
+    "campaign": "22V623000",
+    "component": "POWER TRAIN:DRIVELINE:DRIVESHAFT",
+    "date": "12/08/2022",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2022 F-150 vehicles.  Underbody heat and noise insulators may loosen and contact the aluminum driveshaft, which could damage the driveshaft and cause it to fracture."
+   },
+   {
+    "campaign": "22V842000",
+    "component": "VISIBILITY:WINDSHIELD WIPER/WASHER:MOTOR",
+    "date": "15/11/2022",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2022 F-150 vehicles.  The front windshield wiper motor may become inoperative, causing the wipers to fail."
+   },
+   {
+    "campaign": "23V163000",
+    "component": "VISIBILITY:WINDSHIELD WIPER/WASHER:LINKAGES",
+    "date": "10/03/2023",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021 F-150 vehicles.  The windshield wiper arms may break, causing the windshield wipers to fail."
+   },
+   {
+    "campaign": "23V509000",
+    "component": "PARKING BRAKE:ELECTRICAL",
+    "date": "21/07/2023",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2023 F-150 vehicles equipped with a single exhaust system.  Contact with the rear axle housing may damage the wiring harness, causing the electric parking brake to activate unexpectedly."
+   },
+   {
+    "campaign": "23V896000",
+    "component": "POWER TRAIN:AXLE HUBS",
+    "date": "22/12/2023",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2023 F-150 vehicles equipped with the Trailer Tow Max Duty package and a 9.75-inch heavy duty axle with a 3/4 float axle design.  The rear axle hub bolt may fatigue and break, which can result in damage to the axle hub splines."
+   },
+   {
+    "campaign": "24V443000",
+    "component": "ELECTRICAL SYSTEM:BODY CONTROL MODULE:SOFTWARE",
+    "date": "14/06/2024",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021 F-150 vehicles equipped with the Onboard Scales feature.  An over-the-air software update to the body control module (BCM) may have disabled both reverse lights."
+   },
+   {
+    "campaign": "24V635000",
+    "component": "ENGINE AND ENGINE COOLING:ENGINE:HARD PARTS INTERNAL/MECHANICAL",
+    "date": "23/08/2024",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2022 Bronco, F-150, Edge, Explorer, Lincoln Nautilus, and Lincoln Aviator vehicles equipped with either a 2.7L or 3.0L Nano EcoBoost engine.  The engine intake valves may break while driving, which can result in engine failure and a loss of drive p"
+   },
+   {
+    "campaign": "24V852000",
+    "component": "EQUIPMENT:OTHER:LABELS",
+    "date": "08/11/2024",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2020-2025 Explorer, Lincoln Aviator, 2020-2024 Escape, Lincoln Corsair, 2018-2024 F-150, Expedition and Lincoln Navigator vehicles.  The air bag warning label may be missing from the dashboard.  As such, these vehicles fail to comply with the requiremen"
+   },
+   {
+    "campaign": "25V132000",
+    "component": "ELECTRICAL SYSTEM: INTEGRATED TRAILER BRAKE CONTROL",
+    "date": "28/02/2025",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2022 F-150, 2022 Maverick, Expedition, Lincoln Navigator, F-250, F-350, F-450, and F-550 vehicles previously repaired incorrectly under recall number 22V-193.  Due to a software error, a towed trailer equipped with an electric or electric-over hydr"
+   },
+   {
+    "campaign": "25V169000",
+    "component": "POWER TRAIN:AUTOMATIC TRANSMISSION:CONTROL MODULE (TCM/PCM/TECM)",
+    "date": "14/03/2025",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021 F-150 vehicles previously repaired incorrectly under recall number 22V-188.  The Diagnostic Trouble Code (DTC) for low transmission fluid pressure may falsely activate and cause the transmission to unexpectedly shift into neutral."
+   },
+   {
+    "campaign": "25V315000",
+    "component": "BACK OVER PREVENTION:SOFTWARE",
+    "date": "09/05/2025",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2024 Bronco, F-150, 2021-2024 Edge, 2022-2025 Escape, F-250, F-350, F-450, F-550, F-600, 2022-2024 Expedition, 2022-2025 Transit, 2021-2023 Mach-E, 2024 Ranger, Mustang, 2021-2023 Lincoln Nautilus, 2022-2024 Navigator, and 2023-2024 Corsair vehicle"
+   },
+   {
+    "campaign": "25V348000",
+    "component": "EXTERIOR LIGHTING:BACK UP LIGHTS",
+    "date": "23/05/2025",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021 F-150 vehicles equipped with the Onboard Scales feature that were repaired incorrectly under recall 24V443. An over-the-air software update to the body control module (BCM) may have disabled both reverse lights."
+   },
+   {
+    "campaign": "25V455000",
+    "component": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+    "date": "07/07/2025",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2023 Bronco, Explorer, Lincoln Aviator, F-250 SD, F-350 SD, F-450 SD,  F-550 SD, 2021-2022 Lincoln Navigator, Mustang, F-150, and 2022 Expedition vehicles. The low-pressure fuel pump may fail, which can result in an engine stall while driving."
+   },
+   {
+    "campaign": "25V729000",
+    "component": "VISIBILITY:SUN/MOON ROOF ASSEMBLY",
+    "date": "24/10/2025",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2022 Expedition, Lincoln Navigator, 2021-2023 F-150, 2022 F-250 SD, F-350 SD, and F-450 SD vehicles. The moonroof wind deflector clips may be inadequately attached to the moonroof frame, which can result in the wind deflector detaching from the veh"
+   },
+   {
+    "campaign": "26V104000",
+    "component": "ELECTRICAL SYSTEM: INTEGRATED TRAILER BRAKE CONTROL",
+    "date": "20/02/2026",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2026 F-150, 2022-2026 F-250 SD, F-350 SD, F-450 SD, F-550 SD, Maverick, 2024-2026 Ranger, 2023-2026 F-600 SD, 2022-2027 Lincoln Navigator, Expedition, and 2026 E-Transit vehicles. When towing a trailer, the integrated trailer module (ITRM) may lose"
+   },
+   {
+    "campaign": "26V402000",
+    "component": "POWER TRAIN:AUTOMATIC TRANSMISSION",
+    "date": "24/06/2026",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2018-2021 Navigator, Expedition, 2020-2021 Explorer, Lincoln Aviator, and 2021 F-150 vehicles. The transmission park pawl may engage while the vehicle is in motion, resulting in park system damage."
+   },
+   {
+    "campaign": "26V489000",
+    "component": "BACK OVER PREVENTION:DISPLAY FUNCTION",
+    "date": "28/07/2026",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2023 F-150 and 2023-2026 F-250 SD vehicles equipped with 8-inch SYNC infotainment screens. A software error may cause the rearview camera image to be obstructed by the infotainment home screen menu when the vehicle is placed in reverse. As such, th"
+   }
+  ],
+  "recalls_source": "https://www.nhtsa.gov/recalls?nhtsaId=&make=Ford&model=F-150&year=2021",
+  "fueleconomy": [
+   {
+    "fe_id": "43457",
+    "model": "F150 Pickup 2WD",
+    "option": "Auto (S10), 6 cyl, 3.5 L, Turbo, SIDI & PFI",
+    "engine_l": "3.5",
+    "cyl": "6",
+    "trans": "Automatic (S10)",
+    "drive": "Rear-Wheel Drive",
+    "mpg_city": "18",
+    "mpg_hwy": "24",
+    "mpg_comb": "20",
+    "fuel": "Regular",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2021&year2=2021&make=Ford&baseModel=F150",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/43457"
+   },
+   {
+    "fe_id": "43458",
+    "model": "F150 Pickup 2WD",
+    "option": "Auto (S10), 6 cyl, 2.7 L, Turbo, SIDI & PFI",
+    "engine_l": "2.7",
+    "cyl": "6",
+    "trans": "Automatic (S10)",
+    "drive": "Rear-Wheel Drive",
+    "mpg_city": "20",
+    "mpg_hwy": "26",
+    "mpg_comb": "22",
+    "fuel": "Regular",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2021&year2=2021&make=Ford&baseModel=F150",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/43458"
+   },
+   {
+    "fe_id": "43459",
+    "model": "F150 Pickup 2WD FFV",
+    "option": "Auto (S10), 6 cyl, 3.3 L, SIDI & PFI; FFV",
+    "engine_l": "3.3",
+    "cyl": "6",
+    "trans": "Automatic (S10)",
+    "drive": "Rear-Wheel Drive",
+    "mpg_city": "20",
+    "mpg_hwy": "24",
+    "mpg_comb": "21",
+    "fuel": "Gasoline or E85",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2021&year2=2021&make=Ford&baseModel=F150",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/43459"
+   },
+   {
+    "fe_id": "43460",
+    "model": "F150 Pickup 2WD FFV",
+    "option": "Auto (S10), 8 cyl, 5.0 L, SIDI & PFI; FFV",
+    "engine_l": "5.0",
+    "cyl": "8",
+    "trans": "Automatic (S10)",
+    "drive": "Rear-Wheel Drive",
+    "mpg_city": "17",
+    "mpg_hwy": "24",
+    "mpg_comb": "20",
+    "fuel": "Gasoline or E85",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2021&year2=2021&make=Ford&baseModel=F150",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/43460"
+   },
+   {
+    "fe_id": "43614",
+    "model": "F150 Pickup 2WD HEV",
+    "option": "Auto (S10), 6 cyl, 3.5 L, Turbo",
+    "engine_l": "3.5",
+    "cyl": "6",
+    "trans": "Automatic (S10)",
+    "drive": "Rear-Wheel Drive",
+    "mpg_city": "25",
+    "mpg_hwy": "26",
+    "mpg_comb": "25",
+    "fuel": "Regular",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2021&year2=2021&make=Ford&baseModel=F150",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/43614"
+   }
+  ]
+ },
+ {
+  "slug": "2023-ford-f-150",
+  "year": 2023,
+  "make": "Ford",
+  "model": "F-150",
+  "vpic_confirmed": true,
+  "recalls": [
+   {
+    "campaign": "23V070000",
+    "component": "POWER TRAIN:AUTOMATIC TRANSMISSION",
+    "date": "10/02/2023",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2022-2023 F-150, Mustang, Explorer, Bronco, and 2023 Lincoln Aviator vehicles equipped with automatic transmissions.  The transmission may contain a loose bolt which could prevent the transmission from engaging the park gear, although the gear shifter p"
+   },
+   {
+    "campaign": "23V072000",
+    "component": "AIR BAGS:FRONTAL",
+    "date": "10/02/2023",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2023 F-150 vehicles.  The instrument panel top cover on the passenger-side may prevent the air bag from deploying as intended.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 208, \"Occupant C"
+   },
+   {
+    "campaign": "23V128000",
+    "component": "POWER TRAIN:AXLE ASSEMBLY",
+    "date": "24/02/2023",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2023 F-150, Expedition, and Lincoln Navigator vehicles.  The front axle pinion may not have been heat-treated, which can cause it to fracture."
+   },
+   {
+    "campaign": "23V509000",
+    "component": "PARKING BRAKE:ELECTRICAL",
+    "date": "21/07/2023",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2023 F-150 vehicles equipped with a single exhaust system.  Contact with the rear axle housing may damage the wiring harness, causing the electric parking brake to activate unexpectedly."
+   },
+   {
+    "campaign": "23V847000",
+    "component": "STEERING:COLUMN",
+    "date": "15/12/2023",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2023 F-150 and Ford SD F250, F350, F450, F550, and F600 vehicles.  The steering wheel clock spring may have an insufficient weld, causing a loss of electrical connection to the driver's frontal air bag."
+   },
+   {
+    "campaign": "23V896000",
+    "component": "POWER TRAIN:AXLE HUBS",
+    "date": "22/12/2023",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2023 F-150 vehicles equipped with the Trailer Tow Max Duty package and a 9.75-inch heavy duty axle with a 3/4 float axle design.  The rear axle hub bolt may fatigue and break, which can result in damage to the axle hub splines."
+   },
+   {
+    "campaign": "24V852000",
+    "component": "EQUIPMENT:OTHER:LABELS",
+    "date": "08/11/2024",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2020-2025 Explorer, Lincoln Aviator, 2020-2024 Escape, Lincoln Corsair, 2018-2024 F-150, Expedition and Lincoln Navigator vehicles.  The air bag warning label may be missing from the dashboard.  As such, these vehicles fail to comply with the requiremen"
+   },
+   {
+    "campaign": "25V315000",
+    "component": "BACK OVER PREVENTION:SOFTWARE",
+    "date": "09/05/2025",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2024 Bronco, F-150, 2021-2024 Edge, 2022-2025 Escape, F-250, F-350, F-450, F-550, F-600, 2022-2024 Expedition, 2022-2025 Transit, 2021-2023 Mach-E, 2024 Ranger, Mustang, 2021-2023 Lincoln Nautilus, 2022-2024 Navigator, and 2023-2024 Corsair vehicle"
+   },
+   {
+    "campaign": "25V512000",
+    "component": "POWER TRAIN:AXLE HUBS",
+    "date": "08/08/2025",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2023-2025 F-150 vehicles equipped with the Trailer Tow Max Duty package and a 9.75-inch heavy duty axle with a 3/4 float axle design. The rear axle hub bolt may fatigue and break, which can result in damage to the axle hub splines."
+   },
+   {
+    "campaign": "25V729000",
+    "component": "VISIBILITY:SUN/MOON ROOF ASSEMBLY",
+    "date": "24/10/2025",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2022 Expedition, Lincoln Navigator, 2021-2023 F-150, 2022 F-250 SD, F-350 SD, and F-450 SD vehicles. The moonroof wind deflector clips may be inadequately attached to the moonroof frame, which can result in the wind deflector detaching from the veh"
+   },
+   {
+    "campaign": "26V104000",
+    "component": "ELECTRICAL SYSTEM: INTEGRATED TRAILER BRAKE CONTROL",
+    "date": "20/02/2026",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2026 F-150, 2022-2026 F-250 SD, F-350 SD, F-450 SD, F-550 SD, Maverick, 2024-2026 Ranger, 2023-2026 F-600 SD, 2022-2027 Lincoln Navigator, Expedition, and 2026 E-Transit vehicles. When towing a trailer, the integrated trailer module (ITRM) may lose"
+   },
+   {
+    "campaign": "26V489000",
+    "component": "BACK OVER PREVENTION:DISPLAY FUNCTION",
+    "date": "28/07/2026",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2023 F-150 and 2023-2026 F-250 SD vehicles equipped with 8-inch SYNC infotainment screens. A software error may cause the rearview camera image to be obstructed by the infotainment home screen menu when the vehicle is placed in reverse. As such, th"
+   },
+   {
+    "campaign": "26V578000",
+    "component": "FUEL SYSTEM, GASOLINE:STORAGE:TANK ASSEMBLY:MOUNTING",
+    "date": "09/09/2026",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2023-2027 F-150 vehicles. The fuel tank may be improperly secured and leak fuel, or detach from the vehicle while driving."
+   }
+  ],
+  "recalls_source": "https://www.nhtsa.gov/recalls?nhtsaId=&make=Ford&model=F-150&year=2023",
+  "fueleconomy": [
+   {
+    "fe_id": "46159",
+    "model": "F150 Pickup 2WD",
+    "option": "Auto (S10), 6 cyl, 2.7 L, Turbo, SIDI; with Stop-Start",
+    "engine_l": "2.7",
+    "cyl": "6",
+    "trans": "Automatic (S10)",
+    "drive": "Rear-Wheel Drive",
+    "mpg_city": "18",
+    "mpg_hwy": "25",
+    "mpg_comb": "21",
+    "fuel": "Regular",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2023&year2=2023&make=Ford&baseModel=F150",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/46159"
+   },
+   {
+    "fe_id": "46160",
+    "model": "F150 Pickup 2WD",
+    "option": "Auto (S10), 6 cyl, 2.7 L, Turbo, SIDI & PFI; with Stop-start",
+    "engine_l": "2.7",
+    "cyl": "6",
+    "trans": "Automatic (S10)",
+    "drive": "Rear-Wheel Drive",
+    "mpg_city": "20",
+    "mpg_hwy": "26",
+    "mpg_comb": "22",
+    "fuel": "Regular",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2023&year2=2023&make=Ford&baseModel=F150",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/46160"
+   },
+   {
+    "fe_id": "46162",
+    "model": "F150 Pickup 2WD FFV",
+    "option": "Auto (S10), 6 cyl, 3.3 L, FFV",
+    "engine_l": "3.3",
+    "cyl": "6",
+    "trans": "Automatic (S10)",
+    "drive": "Rear-Wheel Drive",
+    "mpg_city": "19",
+    "mpg_hwy": "23",
+    "mpg_comb": "20",
+    "fuel": "Gasoline or E85",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2023&year2=2023&make=Ford&baseModel=F150",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/46162"
+   },
+   {
+    "fe_id": "46163",
+    "model": "F150 Pickup 2WD FFV",
+    "option": "Auto (S10), 6 cyl, 3.3 L, FFV; with Stop-start",
+    "engine_l": "3.3",
+    "cyl": "6",
+    "trans": "Automatic (S10)",
+    "drive": "Rear-Wheel Drive",
+    "mpg_city": "19",
+    "mpg_hwy": "24",
+    "mpg_comb": "21",
+    "fuel": "Gasoline or E85",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2023&year2=2023&make=Ford&baseModel=F150",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/46163"
+   },
+   {
+    "fe_id": "46166",
+    "model": "F150 Pickup 2WD HEV",
+    "option": "Auto (S10), 6 cyl, 3.5 L, Turbo",
+    "engine_l": "3.5",
+    "cyl": "6",
+    "trans": "Automatic (S10)",
+    "drive": "Rear-Wheel Drive",
+    "mpg_city": "25",
+    "mpg_hwy": "25",
+    "mpg_comb": "25",
+    "fuel": "Regular",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2023&year2=2023&make=Ford&baseModel=F150",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/46166"
+   }
+  ]
+ },
+ {
+  "slug": "2022-honda-civic",
+  "year": 2022,
+  "make": "Honda",
+  "model": "Civic",
+  "vpic_confirmed": true,
+  "recalls": [
+   {
+    "campaign": "23V704000",
+    "component": "STEERING:RACK AND PINION",
+    "date": "19/10/2023",
+    "summary": "Honda (American Honda Motor Co.) is recalling certain 2022-2024 Civic 4-door and Civic 5-door vehicles that received a replacement power steering rack as part of a service repair.  The steering rack may have been incorrectly assembled, which can allow the tire to chafe against the lower suspension o"
+   },
+   {
+    "campaign": "24V064000",
+    "component": "AIR BAGS:SENSOR:OCCUPANT CLASSIFICATION:FRONT PASSENGER",
+    "date": "01/02/2024",
+    "summary": "Honda (American Honda Motor Co.) is recalling certain 2020-2022 Pilot, Accord, Civic sedan, HR-V, Odyssey, 2020 Civic coupe, Fit, 2021-2022 Civic hatchback, 2021 Civic Type R, Insight, 2020-2021 CR-V, CR-V Hybrid, Passport, Ridgeline, Accord Hybrid, 2020 Acura MDX, 2022 Acura MDX, 2020-2022 Acura RD"
+   },
+   {
+    "campaign": "24V744000",
+    "component": "STEERING",
+    "date": "03/10/2024",
+    "summary": "Honda (American Honda Motor Co.) is recalling certain 2023-2025 Acura Integra, Civic Type R, CR-V Hybrid, CR-V, HR-V, 2022-2025 Civic, Civic Hatchback, 2024-2025 Acura Integra Type S, 2025 CR-V Fuel Cell EV, Civic Hybrid, and Civic Hatchback Hybrid vehicles.  The steering gearbox assembly may have b"
+   },
+   {
+    "campaign": "26V332000",
+    "component": "AIR BAGS:SENSOR:OCCUPANT CLASSIFICATION:FRONT PASSENGER",
+    "date": "21/05/2026",
+    "summary": "Honda (American Honda Motor Co.) is recalling certain 2018-2021, 2023 Acura TLX, 2019-2024 RDX, 2017-2020, 2022-2026 MDX, 2017-2021, 2023, 2025 Honda Ridgeline, 2017-2022 Pilot, 2019-2021 Passport, 2018-2026 Odyssey, 2019-2022 Insight, 2019-2021 HR-V, 2018-2020 Fit, 2020-2022 CR-V Hybrid, 2017-2022 "
+   }
+  ],
+  "recalls_source": "https://www.nhtsa.gov/recalls?nhtsaId=&make=Honda&model=Civic&year=2022",
+  "fueleconomy": [
+   {
+    "fe_id": "44132",
+    "model": "Civic 4Dr",
+    "option": "Auto (AV-S7), 4 cyl, 1.5 L, Turbo",
+    "engine_l": "1.5",
+    "cyl": "4",
+    "trans": "Automatic (AV-S7)",
+    "drive": "Front-Wheel Drive",
+    "mpg_city": "31",
+    "mpg_hwy": "38",
+    "mpg_comb": "34",
+    "fuel": "Regular",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2022&year2=2022&make=Honda&baseModel=Civic",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/44132"
+   },
+   {
+    "fe_id": "44134",
+    "model": "Civic 4Dr",
+    "option": "Auto (AV-S7), 4 cyl, 2.0 L",
+    "engine_l": "2.0",
+    "cyl": "4",
+    "trans": "Automatic (AV-S7)",
+    "drive": "Front-Wheel Drive",
+    "mpg_city": "30",
+    "mpg_hwy": "37",
+    "mpg_comb": "33",
+    "fuel": "Regular",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2022&year2=2022&make=Honda&baseModel=Civic",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/44134"
+   },
+   {
+    "fe_id": "44546",
+    "model": "Civic 5Dr",
+    "option": "Auto (AV-S7), 4 cyl, 1.5 L, Turbo",
+    "engine_l": "1.5",
+    "cyl": "4",
+    "trans": "Automatic (AV-S7)",
+    "drive": "Front-Wheel Drive",
+    "mpg_city": "30",
+    "mpg_hwy": "37",
+    "mpg_comb": "33",
+    "fuel": "Regular",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2022&year2=2022&make=Honda&baseModel=Civic",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/44546"
+   },
+   {
+    "fe_id": "44549",
+    "model": "Civic 5Dr",
+    "option": "Auto (AV-S7), 4 cyl, 2.0 L",
+    "engine_l": "2.0",
+    "cyl": "4",
+    "trans": "Automatic (AV-S7)",
+    "drive": "Front-Wheel Drive",
+    "mpg_city": "29",
+    "mpg_hwy": "37",
+    "mpg_comb": "32",
+    "fuel": "Regular",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2022&year2=2022&make=Honda&baseModel=Civic",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/44549"
+   }
+  ]
+ },
+ {
+  "slug": "2022-chevrolet-silverado-1500",
+  "year": 2022,
+  "make": "Chevrolet",
+  "model": "Silverado 1500",
+  "vpic_confirmed": true,
+  "recalls": [
+   {
+    "campaign": "22V463000",
+    "component": "EXTERIOR LIGHTING:BRAKE LIGHTS",
+    "date": "30/06/2022",
+    "summary": "General Motors (GM) has decided that certain 2022 model year Chevrolet Silverado, and GMC Sierra vehicles equipped with an accessory sport bar.  The accessory sport bar contains a high-mounted brake light that may not function.  In addition, it may block the vehicle's existing high-mounted brake lig"
+   },
+   {
+    "campaign": "22V873000",
+    "component": "AIR BAGS: AIR BAG/RESTRAINT CONTROL MODULE",
+    "date": "23/11/2022",
+    "summary": "General Motors, LLC (GM) is recalling certain 2022 Chevrolet Silverado 1500 vehicles.  The sensing diagnostic module (SDM) was left in manufacturing mode and not activated at the assembly plant prior to shipment.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle "
+   },
+   {
+    "campaign": "22V903000",
+    "component": "EXTERIOR LIGHTING:LIGHTING CONTROL MODULE:SOFTWARE",
+    "date": "08/12/2022",
+    "summary": "General Motors, LLC (GM) is recalling certain 2020-2023 Cadillac CT4 and CT5; 2021-2023 Buick Envision; and 2022-2023 Cadillac Escalade and Escalade ESV, Chevrolet Silverado 1500, Suburban, Tahoe, GMC Sierra 1500, Yukon, and Yukon XL vehicles.  The daytime running lights (DRLs) may not deactivate wh"
+   },
+   {
+    "campaign": "24V797000",
+    "component": "POWER TRAIN:AUTOMATIC TRANSMISSION:CONTROL MODULE:SOFTWARE",
+    "date": "24/10/2024",
+    "summary": "General Motors, LLC (GM) is recalling certain 2020-2022 Chevrolet Silverado 1500, 2500, 3500, GMC Sierra 1500, 2500, 3500, 2021 Cadillac Escalade, Escalade ESV, Chevrolet Tahoe, Suburban, GMC Yukon, and Yukon XL vehicles equipped with diesel engines.  The transmission control valve may fail and caus"
+   },
+   {
+    "campaign": "25V274000",
+    "component": "ENGINE AND ENGINE COOLING:ENGINE:HARD PARTS INTERNAL/MECHANICAL",
+    "date": "24/04/2025",
+    "summary": "General Motors LLC (GM) is recalling certain 2021-2024 Cadillac Escalade and Escalade ESV, Chevrolet Silverado 1500, Suburban, and Tahoe, GMC Sierra 1500, Yukon, and Yukon XL vehicles equipped with a 6.2L V8 gas engine.  The connecting rod and/or crankshaft engine components may have manufacturing d"
+   },
+   {
+    "campaign": "26V083000",
+    "component": "POWER TRAIN:AUTOMATIC TRANSMISSION:CONTROL MODULE:SOFTWARE",
+    "date": "12/02/2026",
+    "summary": "General Motors, LLC is recalling certain 2020 Chevrolet Silverado 2500, 3500, GMC Sierra 2500, 3500, and 2020-2022 Chevrolet Silverado 1500 and GMC Sierra 1500 vehicles that may have been repaired incorrectly under recall 24V797. The transmission control valve may fail and cause the rear wheels to l"
+   }
+  ],
+  "recalls_source": "https://www.nhtsa.gov/recalls?make=Chevrolet&model=Silverado 1500&year=2022",
+  "fueleconomy": [
+   {
+    "fe_id": "44580",
+    "model": "Silverado 2WD",
+    "option": "Auto 10-spd, 6 cyl, 3.0 L, Diesel, Turbo",
+    "engine_l": "3.0",
+    "cyl": "6",
+    "trans": "Automatic 10-spd",
+    "drive": "Rear-Wheel Drive",
+    "mpg_city": "23",
+    "mpg_hwy": "31",
+    "mpg_comb": "26",
+    "fuel": "Diesel",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2022&year2=2022&make=Chevrolet&baseModel=Silverado",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/44580"
+   },
+   {
+    "fe_id": "45159",
+    "model": "Silverado 2WD",
+    "option": "Auto 10-spd, 8 cyl, 5.3 L, SIDI; Stop-Start",
+    "engine_l": "5.3",
+    "cyl": "8",
+    "trans": "Automatic 10-spd",
+    "drive": "Rear-Wheel Drive",
+    "mpg_city": "16",
+    "mpg_hwy": "21",
+    "mpg_comb": "18",
+    "fuel": "Regular",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2022&year2=2022&make=Chevrolet&baseModel=Silverado",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/45159"
+   },
+   {
+    "fe_id": "44582",
+    "model": "Silverado 4WD",
+    "option": "Auto 10-spd, 6 cyl, 3.0 L, Diesel, Turbo, Stop-Start; Transmission with Sport Mode",
+    "engine_l": "3.0",
+    "cyl": "6",
+    "trans": "Automatic 10-spd",
+    "drive": "4-Wheel Drive",
+    "mpg_city": "22",
+    "mpg_hwy": "26",
+    "mpg_comb": "24",
+    "fuel": "Diesel",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2022&year2=2022&make=Chevrolet&baseModel=Silverado",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/44582"
+   },
+   {
+    "fe_id": "44634",
+    "model": "Silverado 4WD",
+    "option": "Auto 10-spd, 8 cyl, 5.3 L, SIDI",
+    "engine_l": "5.3",
+    "cyl": "8",
+    "trans": "Automatic 10-spd",
+    "drive": "4-Wheel Drive",
+    "mpg_city": "15",
+    "mpg_hwy": "19",
+    "mpg_comb": "16",
+    "fuel": "Regular",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2022&year2=2022&make=Chevrolet&baseModel=Silverado",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/44634"
+   },
+   {
+    "fe_id": "45129",
+    "model": "Silverado 4WD ZR2",
+    "option": "Auto 10-spd, 8 cyl, 6.2 L",
+    "engine_l": "6.2",
+    "cyl": "8",
+    "trans": "Automatic 10-spd",
+    "drive": "4-Wheel Drive",
+    "mpg_city": "14",
+    "mpg_hwy": "17",
+    "mpg_comb": "15",
+    "fuel": "Premium",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2022&year2=2022&make=Chevrolet&baseModel=Silverado",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/45129"
+   }
+  ]
+ },
+ {
+  "slug": "2023-tesla-model-y",
+  "year": 2023,
+  "make": "Tesla",
+  "model": "Model Y",
+  "vpic_confirmed": true,
+  "recalls": [
+   {
+    "campaign": "22V844000",
+    "component": "EXTERIOR LIGHTING:TAIL LIGHTS",
+    "date": "15/11/2022",
+    "summary": "Tesla, Inc. (Tesla) is recalling certain 2023 Model 3 and 2020-2023 Model Y vehicles.  One or both taillights may intermittently fail to illuminate."
+   },
+   {
+    "campaign": "22V895000",
+    "component": "SUSPENSION:SUBFRAME/MOUNTING BRACKET",
+    "date": "06/12/2022",
+    "summary": "Tesla, Inc. (Tesla) is recalling certain 2023 Model Y vehicles.  The front suspension lateral link fasteners may not have been properly attached to the sub-frame."
+   },
+   {
+    "campaign": "23V085000",
+    "component": "STEERING:AUTOMATED/ADAPTIVE STEERING",
+    "date": "15/02/2023",
+    "summary": "Tesla, Inc. (Tesla) is recalling certain 2016-2023 Model S, Model X, 2017-2023 Model 3, and 2020-2023 Model Y vehicles equipped with Full Self-Driving Beta (FSD Beta) software or pending installation.\u00a0 The FSD Beta system may allow the vehicle to act unsafe around intersections, such as traveling st"
+   },
+   {
+    "campaign": "23V130000",
+    "component": "SEATS:CRITICAL FASTENERS",
+    "date": "27/02/2023",
+    "summary": "Tesla, Inc. (Tesla) is recalling certain 2022-2023 Model Y vehicles.  The bolts securing the second-row seat back frames may not have been securely tightened."
+   },
+   {
+    "campaign": "23V385000",
+    "component": "STEERING: STEERING WHEEL/HANDLE BAR",
+    "date": "30/05/2023",
+    "summary": "Tesla, Inc. (Tesla) is recalling certain 2022-2023 Model Y vehicles.  The steering wheel fastener may be loose."
+   },
+   {
+    "campaign": "23V434000",
+    "component": "ELECTRICAL SYSTEM:PROPULSION SYSTEM:TRACTION BATTERY",
+    "date": "19/06/2023",
+    "summary": "Tesla, Inc. (Tesla) is recalling certain 2023 Model 3 and Model Y vehicles.  The pyrotechnic battery disconnect may be defective."
+   },
+   {
+    "campaign": "23V489000",
+    "component": "FORWARD COLLISION AVOIDANCE: SENSING SYSTEM: CAMERA",
+    "date": "14/07/2023",
+    "summary": "Tesla, Inc. (Tesla) is recalling certain 2023 Model S, Model X, and Model Y vehicles.  The forward-facing camera may be misaligned, causing some of the active safety features such as emergency braking, forward collision warning, and lane assist to become unavailable without alerting the driver."
+   },
+   {
+    "campaign": "23V838000",
+    "component": "ELECTRICAL SYSTEM:ADAS:AUTONOMOUS/SELF DRIVING:SOFTWARE",
+    "date": "12/12/2023",
+    "summary": "Tesla, Inc. (Tesla) is recalling 2012-2023 Model S, 2016-2023 Model X, 2017-2023 Model 3, and 2020-2023 Model Y vehicles equipped with all versions of Autosteer leading up to the version(s) that contains the recall remedy.  In certain circumstances when Autosteer is engaged, the prominence and scope"
+   },
+   {
+    "campaign": "24V035000",
+    "component": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+    "date": "22/01/2024",
+    "summary": "Tesla, Inc. (Tesla) is recalling certain 2023 Model S, X, and Y vehicles equipped with full self-driving computer 4.0 and running a software release version 2023.44.30 through 2023.44.30.6 or 2023.44.100.  Software instability may prevent the rearview camera image from displaying."
+   },
+   {
+    "campaign": "24V051000",
+    "component": "ELECTRICAL SYSTEM: INSTRUMENT CLUSTER/PANEL",
+    "date": "30/01/2024",
+    "summary": "Tesla, Inc. (Tesla) is recalling certain 2012-2023 Model S, 2016-2024 Model X, 2017-2023 Model 3, 2019-2024 Model Y, and 2024 Cybertruck vehicles.  An incorrect font size is displayed on the instrument panel for the Brake, Park, and Antilock Brake System (ABS) warning lights.  As such, these vehicle"
+   },
+   {
+    "campaign": "24V376000",
+    "component": "SEAT BELTS:FRONT:WARNING LIGHT/DEVICES",
+    "date": "28/05/2024",
+    "summary": "Tesla, Inc. (Tesla) is recalling certain 2012-2024 Model S, 2015-2024 Model X, 2017-2023 Model 3, and 2020-2023 Model Y vehicles.  In the event of an unbelted driver, the seat belt warning light and audible chime may not activate as intended.  As such, these vehicles fail to comply with the requirem"
+   },
+   {
+    "campaign": "24V554000",
+    "component": "LATCHES/LOCKS/LINKAGES:HOOD:LATCH",
+    "date": "24/07/2024",
+    "summary": "Tesla, Inc. (Tesla) is recalling certain 2021-2024 Model 3, Model S, Model X, and 2020-2024 Model Y vehicles.  The hood latch assembly may fail to detect an unlatched hood condition after the hood has been opened."
+   },
+   {
+    "campaign": "24V935000",
+    "component": "TIRES:PRESSURE MONITORING AND REGULATING SYSTEMS",
+    "date": "17/12/2024",
+    "summary": "Tesla, Inc. (Tesla) is recalling certain 2024 Cybertruck, 2017-2025 Model 3, and 2020-2025 Model Y vehicles.  The tire pressure monitoring system (TPMS) warning light may not remain illuminated between drive cycles, failing to warn the driver of low tire pressure.  As such, these vehicles fail to co"
+   },
+   {
+    "campaign": "25V002000",
+    "component": "BACK OVER PREVENTION:SOFTWARE",
+    "date": "07/01/2025",
+    "summary": "Tesla, Inc. (Tesla) is recalling certain 2024-2025 Model 3, Model S, 2023-2025 Model X, and Model Y vehicles.  The computer circuit board may short, resulting in the loss of the rearview camera image.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Stand"
+   },
+   {
+    "campaign": "25V092000",
+    "component": "STEERING:ELECTRIC POWER ASSIST SYSTEM",
+    "date": "14/02/2025",
+    "summary": "Tesla, Inc. (Tesla) is recalling certain 2023 Model 3 and Model Y vehicles operating software prior to 2023.38.4.  The printed circuit board for the electronic power steering assist may experience an overstress condition, causing a loss of power steering assist when the vehicle reaches a stop and th"
+   },
+   {
+    "campaign": "26V283000",
+    "component": "BACK OVER PREVENTION:SOFTWARE",
+    "date": "05/05/2026",
+    "summary": "Tesla, Inc. (Tesla) is recalling certain 2017, 2021-2023 Model 3, 2020-2023 Model Y, 2021-2023 Model S, and Model X vehicles operating software version 2026.8.6. The rearview camera image may be delayed when the vehicle is placed in reverse. As such, these vehicles fail to comply with the requiremen"
+   },
+   {
+    "campaign": "26V507000",
+    "component": "EXTERIOR LIGHTING:HEADLIGHTS",
+    "date": "05/08/2026",
+    "summary": "Tesla, Inc. (Tesla) is recalling certain 2017-2023 Model 3 and 2020-2023 Model Y vehicles. The headlight low beams may be too bright and exceed the maximum light output. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) number 108, \"Lamps, "
+   }
+  ],
+  "recalls_source": "https://www.nhtsa.gov/recalls?nhtsaId=&make=Tesla&model=Model Y&year=2023",
+  "fueleconomy": [
+   {
+    "fe_id": "46211",
+    "model": "Model Y AWD",
+    "option": "Auto (A1)",
+    "engine_l": "",
+    "cyl": "",
+    "trans": "Automatic (A1)",
+    "drive": "All-Wheel Drive",
+    "mpg_city": "129",
+    "mpg_hwy": "116",
+    "mpg_comb": "123",
+    "fuel": "Electricity",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2023&year2=2023&make=Tesla&baseModel=Model%20Y",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/46211"
+   },
+   {
+    "fe_id": "46212",
+    "model": "Model Y Long Range AWD",
+    "option": "Auto (A1)",
+    "engine_l": "",
+    "cyl": "",
+    "trans": "Automatic (A1)",
+    "drive": "All-Wheel Drive",
+    "mpg_city": "127",
+    "mpg_hwy": "117",
+    "mpg_comb": "122",
+    "fuel": "Electricity",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2023&year2=2023&make=Tesla&baseModel=Model%20Y",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/46212"
+   },
+   {
+    "fe_id": "46213",
+    "model": "Model Y Performance AWD",
+    "option": "Auto (A1)",
+    "engine_l": "",
+    "cyl": "",
+    "trans": "Automatic (A1)",
+    "drive": "All-Wheel Drive",
+    "mpg_city": "115",
+    "mpg_hwy": "106",
+    "mpg_comb": "111",
+    "fuel": "Electricity",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2023&year2=2023&make=Tesla&baseModel=Model%20Y",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/46213"
+   }
+  ]
+ },
+ {
+  "slug": "2022-chevrolet-equinox",
+  "year": 2022,
+  "make": "Chevrolet",
+  "model": "Equinox",
+  "vpic_confirmed": true,
+  "recalls": [
+   {
+    "campaign": "21V612000",
+    "component": "TIRES",
+    "date": "05/08/2021",
+    "summary": "General Motors, LLC (GM) is recalling certain 2021-2022 Chevrolet Equinox and GMC Terrain vehicles equipped with certain Hankook tires.  The tires may have been manufactured with an insufficient amount of curative agent, which could cause tread separation."
+   },
+   {
+    "campaign": "22V359000",
+    "component": "SEATS",
+    "date": "19/05/2022",
+    "summary": "General Motors, LLC (GM) is recalling certain 2021 Chevrolet Malibu, 2022 Chevrolet Equinox, Blazer and Cadillac XT4 vehicles.  The driver's seat cushion frame may have an improper weld in the power tilt-adjustment mechanism."
+   },
+   {
+    "campaign": "22V724000",
+    "component": "SEATS",
+    "date": "29/09/2022",
+    "summary": "General Motors, LLC (GM) is recalling certain 2022-2023 Chevrolet Equinox and 2022 GMC Terrain vehicles.  The driver's seat may have a stripped or loose bolt at the seat frame height-adjust pivot."
+   },
+   {
+    "campaign": "23V013000",
+    "component": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP:CONTROL/DRIVE MODULE",
+    "date": "19/01/2023",
+    "summary": "General Motors, LLC (GM) is recalling certain 2021-2022 Chevrolet Equinox and 2022 GMC Terrain vehicles.  The fuel pump module may not consistently provide sufficient fuel to the engine, resulting in an engine stall."
+   },
+   {
+    "campaign": "23V339000",
+    "component": "CHILD SEAT:VEHICLE LATCH ANCHOR",
+    "date": "11/05/2023",
+    "summary": "General Motors, LLC (GM) is recalling certain 2020-2023 Chevrolet Equinox and GMC Terrain vehicles.  The four rear-seat lower child seat LATCH anchorage bars may have excessive powder coating, which could prevent a child seat from being installed with the anchorage bars.  As such, these vehicles fai"
+   }
+  ],
+  "recalls_source": "https://www.nhtsa.gov/recalls?nhtsaId=&make=Chevrolet&model=Equinox&year=2022",
+  "fueleconomy": [
+   {
+    "fe_id": "43989",
+    "model": "Equinox AWD",
+    "option": "Auto 6-spd, 4 cyl, 1.5 L, Turbo",
+    "engine_l": "1.5",
+    "cyl": "4",
+    "trans": "Automatic 6-spd",
+    "drive": "All-Wheel Drive",
+    "mpg_city": "25",
+    "mpg_hwy": "30",
+    "mpg_comb": "27",
+    "fuel": "Regular",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2022&year2=2022&make=Chevrolet&baseModel=Equinox",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/43989"
+   },
+   {
+    "fe_id": "43985",
+    "model": "Equinox FWD",
+    "option": "Auto 6-spd, 4 cyl, 1.5 L, Turbo",
+    "engine_l": "1.5",
+    "cyl": "4",
+    "trans": "Automatic 6-spd",
+    "drive": "Front-Wheel Drive",
+    "mpg_city": "26",
+    "mpg_hwy": "31",
+    "mpg_comb": "28",
+    "fuel": "Regular",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2022&year2=2022&make=Chevrolet&baseModel=Equinox",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/43985"
+   }
+  ]
+ },
+ {
+  "slug": "2022-toyota-corolla",
+  "year": 2022,
+  "make": "Toyota",
+  "model": "Corolla",
+  "vpic_confirmed": true,
+  "recalls": [],
+  "recalls_source": "https://www.nhtsa.gov/recalls?nhtsaId=&make=Toyota&model=Corolla&year=2022",
+  "fueleconomy": [
+   {
+    "fe_id": "44074",
+    "model": "Corolla",
+    "option": "Auto (AV-S10), 4 cyl, 2.0 L",
+    "engine_l": "2.0",
+    "cyl": "4",
+    "trans": "Automatic (AV-S10)",
+    "drive": "Front-Wheel Drive",
+    "mpg_city": "31",
+    "mpg_hwy": "40",
+    "mpg_comb": "34",
+    "fuel": "Regular",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2022&year2=2022&make=Toyota&baseModel=Corolla",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/44074"
+   },
+   {
+    "fe_id": "44070",
+    "model": "Corolla",
+    "option": "Auto (variable gear ratios), 4 cyl, 1.8 L",
+    "engine_l": "1.8",
+    "cyl": "4",
+    "trans": "Automatic (variable gear ratios)",
+    "drive": "Front-Wheel Drive",
+    "mpg_city": "30",
+    "mpg_hwy": "38",
+    "mpg_comb": "33",
+    "fuel": "Regular",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2022&year2=2022&make=Toyota&baseModel=Corolla",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/44070"
+   },
+   {
+    "fe_id": "44077",
+    "model": "Corolla APEX",
+    "option": "Auto (AV-S10), 4 cyl, 2.0 L",
+    "engine_l": "2.0",
+    "cyl": "4",
+    "trans": "Automatic (AV-S10)",
+    "drive": "Front-Wheel Drive",
+    "mpg_city": "31",
+    "mpg_hwy": "38",
+    "mpg_comb": "34",
+    "fuel": "Regular",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2022&year2=2022&make=Toyota&baseModel=Corolla",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/44077"
+   },
+   {
+    "fe_id": "44078",
+    "model": "Corolla APEX",
+    "option": "Man 6-spd, 4 cyl, 2.0 L",
+    "engine_l": "2.0",
+    "cyl": "4",
+    "trans": "Manual 6-spd",
+    "drive": "Front-Wheel Drive",
+    "mpg_city": "28",
+    "mpg_hwy": "36",
+    "mpg_comb": "31",
+    "fuel": "Regular",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2022&year2=2022&make=Toyota&baseModel=Corolla",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/44078"
+   },
+   {
+    "fe_id": "44588",
+    "model": "Corolla Cross",
+    "option": "Auto (AV-S10), 4 cyl, 2.0 L",
+    "engine_l": "2.0",
+    "cyl": "4",
+    "trans": "Automatic (AV-S10)",
+    "drive": "Front-Wheel Drive",
+    "mpg_city": "31",
+    "mpg_hwy": "33",
+    "mpg_comb": "32",
+    "fuel": "Regular",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2022&year2=2022&make=Toyota&baseModel=Corolla",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/44588"
+   }
+  ]
+ },
+ {
+  "slug": "2022-toyota-tacoma",
+  "year": 2022,
+  "make": "Toyota",
+  "model": "Tacoma",
+  "vpic_confirmed": true,
+  "recalls": [
+   {
+    "campaign": "22V310000",
+    "component": "EQUIPMENT:OTHER:LABELS",
+    "date": "06/05/2022",
+    "summary": "Gulf States Toyota, Inc. (GST) is recalling certain 2022 4Runner, Tacoma, Highlander, and Highlander Hybrid vehicles.  The load carrying capacity modification labels may not be permanent and can fade, becoming illegible.  As such, these vehicles fail to comply with the requirements of Federal Motor "
+   },
+   {
+    "campaign": "22V520000",
+    "component": "CHILD SEAT:VEHICLE LATCH ANCHOR",
+    "date": "21/07/2022",
+    "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2022-2023 Tacoma vehicles.  One or more of the individual welds in the upper child seat anchors may be insufficient.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 22"
+   },
+   {
+    "campaign": "24V152000",
+    "component": "POWER TRAIN:AXLE ASSEMBLY",
+    "date": "27/02/2024",
+    "summary": "Toyota Motor Engineering & Manufacturer (Toyota) is recalling certain 2022-2023 Tacoma vehicles.  The axle shaft sub-assembly may separate from the axle housing due to debris causing improperly secured fasteners."
+   }
+  ],
+  "recalls_source": "https://www.nhtsa.gov/recalls?nhtsaId=&make=Toyota&model=Tacoma&year=2022",
+  "fueleconomy": [
+   {
+    "fe_id": "44474",
+    "model": "Tacoma 2WD",
+    "option": "Auto (S6), 6 cyl, 3.5 L",
+    "engine_l": "3.5",
+    "cyl": "6",
+    "trans": "Automatic (S6)",
+    "drive": "Rear-Wheel Drive",
+    "mpg_city": "19",
+    "mpg_hwy": "24",
+    "mpg_comb": "21",
+    "fuel": "Regular",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2022&year2=2022&make=Toyota&baseModel=Tacoma",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/44474"
+   },
+   {
+    "fe_id": "44475",
+    "model": "Tacoma 2WD",
+    "option": "Auto (S6), 4 cyl, 2.7 L",
+    "engine_l": "2.7",
+    "cyl": "4",
+    "trans": "Automatic (S6)",
+    "drive": "Rear-Wheel Drive",
+    "mpg_city": "20",
+    "mpg_hwy": "23",
+    "mpg_comb": "21",
+    "fuel": "Regular",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2022&year2=2022&make=Toyota&baseModel=Tacoma",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/44475"
+   },
+   {
+    "fe_id": "44477",
+    "model": "Tacoma 4WD",
+    "option": "Auto (S6), 6 cyl, 3.5 L",
+    "engine_l": "3.5",
+    "cyl": "6",
+    "trans": "Automatic (S6)",
+    "drive": "Part-time 4-Wheel Drive",
+    "mpg_city": "18",
+    "mpg_hwy": "22",
+    "mpg_comb": "20",
+    "fuel": "Regular",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2022&year2=2022&make=Toyota&baseModel=Tacoma",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/44477"
+   },
+   {
+    "fe_id": "44480",
+    "model": "Tacoma 4WD",
+    "option": "Auto (S6), 4 cyl, 2.7 L",
+    "engine_l": "2.7",
+    "cyl": "4",
+    "trans": "Automatic (S6)",
+    "drive": "Part-time 4-Wheel Drive",
+    "mpg_city": "19",
+    "mpg_hwy": "22",
+    "mpg_comb": "20",
+    "fuel": "Regular",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2022&year2=2022&make=Toyota&baseModel=Tacoma",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/44480"
+   },
+   {
+    "fe_id": "44479",
+    "model": "Tacoma 4WD D-CAB MT TRD-ORP/PRO",
+    "option": "Man 6-spd, 6 cyl, 3.5 L",
+    "engine_l": "3.5",
+    "cyl": "6",
+    "trans": "Manual 6-spd",
+    "drive": "Part-time 4-Wheel Drive",
+    "mpg_city": "17",
+    "mpg_hwy": "20",
+    "mpg_comb": "18",
+    "fuel": "Regular",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2022&year2=2022&make=Toyota&baseModel=Tacoma",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/44479"
+   }
+  ]
+ },
+ {
+  "slug": "2022-honda-accord",
+  "year": 2022,
+  "make": "Honda",
+  "model": "Accord",
+  "vpic_confirmed": true,
+  "recalls": [
+   {
+    "campaign": "23V430000",
+    "component": "SERVICE BRAKES, HYDRAULIC:ANTILOCK/TRACTION CONTROL/ELECTRONIC LIMITED SLIP:CONTROL UNIT/MODULE",
+    "date": "15/06/2023",
+    "summary": "Honda (America Honda Motor Co.) is recalling certain 2023 Civic, Acura RDX, Acura Integra, and 2022 Honda Accord vehicles.  A ball valve in the vehicle stability assist (VSA) modulator may leak brake fluid, which can result in unintended vehicle movement when the brake hold feature is engaged or an "
+   },
+   {
+    "campaign": "24V064000",
+    "component": "AIR BAGS:SENSOR:OCCUPANT CLASSIFICATION:FRONT PASSENGER",
+    "date": "01/02/2024",
+    "summary": "Honda (American Honda Motor Co.) is recalling certain 2020-2022 Pilot, Accord, Civic sedan, HR-V, Odyssey, 2020 Civic coupe, Fit, 2021-2022 Civic hatchback, 2021 Civic Type R, Insight, 2020-2021 CR-V, CR-V Hybrid, Passport, Ridgeline, Accord Hybrid, 2020 Acura MDX, 2022 Acura MDX, 2020-2022 Acura RD"
+   },
+   {
+    "campaign": "23V858000",
+    "component": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+    "date": "18/12/2023",
+    "summary": "Honda (American Honda Motor Co.) is recalling certain 2013-2023 Honda Accord, Civic Coupe, Civic Sedan, Civic Hatchback, Civic Type R, CR-V, HR-V, Ridgeline, Odyssey, Acura ILX, MDX, MDX Hybrid, RDX, RLX, TLX, 2019-2022 Honda Insight, Passport, 2020 Honda CR-V Hybrid, 2018-2019 Honda Clarity PHEV, F"
+   },
+   {
+    "campaign": "26V332000",
+    "component": "AIR BAGS:SENSOR:OCCUPANT CLASSIFICATION:FRONT PASSENGER",
+    "date": "21/05/2026",
+    "summary": "Honda (American Honda Motor Co.) is recalling certain 2018-2021, 2023 Acura TLX, 2019-2024 RDX, 2017-2020, 2022-2026 MDX, 2017-2021, 2023, 2025 Honda Ridgeline, 2017-2022 Pilot, 2019-2021 Passport, 2018-2026 Odyssey, 2019-2022 Insight, 2019-2021 HR-V, 2018-2020 Fit, 2020-2022 CR-V Hybrid, 2017-2022 "
+   }
+  ],
+  "recalls_source": "https://www.nhtsa.gov/recalls?nhtsaId=&make=Honda&model=Accord&year=2022",
+  "fueleconomy": [
+   {
+    "fe_id": "44565",
+    "model": "Accord",
+    "option": "Auto (variable gear ratios), 4 cyl, 1.5 L, Turbo",
+    "engine_l": "1.5",
+    "cyl": "4",
+    "trans": "Automatic (variable gear ratios)",
+    "drive": "Front-Wheel Drive",
+    "mpg_city": "30",
+    "mpg_hwy": "38",
+    "mpg_comb": "33",
+    "fuel": "Regular",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2022&year2=2022&make=Honda&baseModel=Accord",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/44565"
+   },
+   {
+    "fe_id": "44568",
+    "model": "Accord Hybrid",
+    "option": "Auto (variable gear ratios), 4 cyl, 2.0 L",
+    "engine_l": "2.0",
+    "cyl": "4",
+    "trans": "Automatic (variable gear ratios)",
+    "drive": "Front-Wheel Drive",
+    "mpg_city": "48",
+    "mpg_hwy": "47",
+    "mpg_comb": "47",
+    "fuel": "Regular",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2022&year2=2022&make=Honda&baseModel=Accord",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/44568"
+   },
+   {
+    "fe_id": "44569",
+    "model": "Accord Hybrid Sport/Touring",
+    "option": "Auto (variable gear ratios), 4 cyl, 2.0 L",
+    "engine_l": "2.0",
+    "cyl": "4",
+    "trans": "Automatic (variable gear ratios)",
+    "drive": "Front-Wheel Drive",
+    "mpg_city": "44",
+    "mpg_hwy": "41",
+    "mpg_comb": "43",
+    "fuel": "Regular",
+    "source": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2022&year2=2022&make=Honda&baseModel=Accord",
+    "api": "https://www.fueleconomy.gov/ws/rest/vehicle/44569"
+   }
+  ]
+ }
+]

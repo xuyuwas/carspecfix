@@ -1,0 +1,19 @@
+/* CarSpecFix v2 tokens — spec-sheet style */
+:root{
+  --navy:#0B2545; --navy-2:#1D3A5F; --navy-tint:#E8EDF3;
+  --ink:#16191D; --ink-2:#4A5059; --ink-3:#7A818B;
+  --rule:#C9CED6; --rule-2:#E3E6EA; --row-alt:#F6F7F9; --head-bg:#EDF0F3;
+  --white:#FFFFFF;
+  --accent:#E07B00; --accent-ink:#A34E00; --accent-tint:#FFF4E0;
+  --link:#0B4A8F; --link-visited:#5A3A8A;
+  --sev-low:#2E7D32; --sev-low-bg:#E6F2E6; --sev-med:#8A6200; --sev-med-bg:#FFF3C4; --sev-high:#B3261E; --sev-high-bg:#FBE4E2;
+  --ad-bg:#F2F3F5;
+  --s1:2px; --s2:4px; --s3:6px; --s4:8px; --s5:12px; --s6:16px; --s7:24px;
+  --radius:2px;
+  --font-ui:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  --font-cond:"IBM Plex Sans Condensed","Arial Narrow",var(--font-ui);
+  --font-mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+  --fs-xs:11px; --fs-sm:12px; --fs-base:14px; --fs-md:15px; --fs-lg:17px; --fs-h1:22px; --fs-h1-lg:26px; --fs-fig:24px; --fs-fig-lg:28px;
+  --lh:1.4;
+  --container:1200px; --sidebar:300px; --bp:1024px;
+}

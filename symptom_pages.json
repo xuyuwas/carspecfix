@@ -1,0 +1,373 @@
+[
+ {
+  "slug": "brakes-squeaking",
+  "url": "/symptoms/brakes-squeaking/",
+  "target_keyword": "brakes squeaking",
+  "type": "symptom",
+  "code_definition": "",
+  "causes": "TODO: list from cited public source (RepairPal 'Common causes', NAPA/AAA articles) \u2014 do not write from memory",
+  "severity": "TODO: cite source",
+  "can_i_drive": "TODO: cite source; default safety copy for brake/ABS pages = 'have it inspected promptly'",
+  "costs": [
+   {
+    "repair": "Brake pad replacement",
+    "range_usd": "$335\u2013$394",
+    "source": "https://repairpal.com/estimator/brake-pad-replacement-cost",
+    "source_date": "RepairPal estimates last updated 2026-09-03; national avg, excl. tax/location"
+   },
+   {
+    "repair": "Brake rotor replacement",
+    "range_usd": "$574\u2013$698",
+    "source": "https://repairpal.com/estimator/brake-rotor-replacement-cost",
+    "source_date": "RepairPal estimates last updated 2026-09-03; national avg, excl. tax/location"
+   }
+  ],
+  "related_specs": "link to spec pages of same make (internal)"
+ },
+ {
+  "slug": "car-shakes-when-braking",
+  "url": "/symptoms/car-shakes-when-braking/",
+  "target_keyword": "car shakes when braking",
+  "type": "symptom",
+  "code_definition": "",
+  "causes": "TODO: list from cited public source (RepairPal 'Common causes', NAPA/AAA articles) \u2014 do not write from memory",
+  "severity": "TODO: cite source",
+  "can_i_drive": "TODO: cite source; default safety copy for brake/ABS pages = 'have it inspected promptly'",
+  "costs": [
+   {
+    "repair": "Brake rotor replacement",
+    "range_usd": "$574\u2013$698",
+    "source": "https://repairpal.com/estimator/brake-rotor-replacement-cost",
+    "source_date": "RepairPal estimates last updated 2026-09-03; national avg, excl. tax/location"
+   },
+   {
+    "repair": "Brake pad replacement",
+    "range_usd": "$335\u2013$394",
+    "source": "https://repairpal.com/estimator/brake-pad-replacement-cost",
+    "source_date": "RepairPal estimates last updated 2026-09-03; national avg, excl. tax/location"
+   }
+  ],
+  "related_specs": "link to spec pages of same make (internal)"
+ },
+ {
+  "slug": "grinding-noise-when-braking",
+  "url": "/symptoms/grinding-noise-when-braking/",
+  "target_keyword": "grinding noise when braking",
+  "type": "symptom",
+  "code_definition": "",
+  "causes": "TODO: list from cited public source (RepairPal 'Common causes', NAPA/AAA articles) \u2014 do not write from memory",
+  "severity": "TODO: cite source",
+  "can_i_drive": "TODO: cite source; default safety copy for brake/ABS pages = 'have it inspected promptly'",
+  "costs": [
+   {
+    "repair": "Brake pad replacement",
+    "range_usd": "$335\u2013$394",
+    "source": "https://repairpal.com/estimator/brake-pad-replacement-cost",
+    "source_date": "RepairPal estimates last updated 2026-09-03; national avg, excl. tax/location"
+   },
+   {
+    "repair": "Brake rotor replacement",
+    "range_usd": "$574\u2013$698",
+    "source": "https://repairpal.com/estimator/brake-rotor-replacement-cost",
+    "source_date": "RepairPal estimates last updated 2026-09-03; national avg, excl. tax/location"
+   }
+  ],
+  "related_specs": "link to spec pages of same make (internal)"
+ },
+ {
+  "slug": "car-jerks-when-accelerating",
+  "url": "/symptoms/car-jerks-when-accelerating/",
+  "target_keyword": "car jerks when accelerating",
+  "type": "symptom",
+  "code_definition": "",
+  "causes": "TODO: list from cited public source (RepairPal 'Common causes', NAPA/AAA articles) \u2014 do not write from memory",
+  "severity": "TODO: cite source",
+  "can_i_drive": "TODO: cite source; default safety copy for brake/ABS pages = 'have it inspected promptly'",
+  "costs": [
+   {
+    "repair": "Spark plug replacement",
+    "range_usd": "$288\u2013$399",
+    "source": "https://repairpal.com/estimator/spark-plug-replacement-cost",
+    "source_date": "RepairPal estimates last updated 2026-09-03; national avg, excl. tax/location"
+   },
+   {
+    "repair": "Ignition coil replacement",
+    "range_usd": "$238\u2013$320",
+    "source": "https://repairpal.com/estimator/ignition-coil-replacement-cost",
+    "source_date": "RepairPal estimates last updated 2026-09-03; national avg, excl. tax/location"
+   },
+   {
+    "repair": "Mass air flow sensor replacement",
+    "range_usd": "TODO",
+    "source": "TODO (RepairPal page blocked by Cloudflare from box; fetch via browser)"
+   }
+  ],
+  "related_specs": "link to spec pages of same make (internal)"
+ },
+ {
+  "slug": "car-cranks-but-wont-start",
+  "url": "/symptoms/car-cranks-but-wont-start/",
+  "target_keyword": "car cranks but won't start",
+  "type": "symptom",
+  "code_definition": "",
+  "causes": "TODO: list from cited public source (RepairPal 'Common causes', NAPA/AAA articles) \u2014 do not write from memory",
+  "severity": "TODO: cite source",
+  "can_i_drive": "TODO: cite source; default safety copy for brake/ABS pages = 'have it inspected promptly'",
+  "costs": [
+   {
+    "repair": "Fuel pump replacement",
+    "range_usd": "TODO",
+    "source": "TODO (RepairPal page blocked by Cloudflare from box; fetch via browser)"
+   },
+   {
+    "repair": "Spark plug replacement",
+    "range_usd": "$288\u2013$399",
+    "source": "https://repairpal.com/estimator/spark-plug-replacement-cost",
+    "source_date": "RepairPal estimates last updated 2026-09-03; national avg, excl. tax/location"
+   },
+   {
+    "repair": "Ignition coil replacement",
+    "range_usd": "$238\u2013$320",
+    "source": "https://repairpal.com/estimator/ignition-coil-replacement-cost",
+    "source_date": "RepairPal estimates last updated 2026-09-03; national avg, excl. tax/location"
+   }
+  ],
+  "related_specs": "link to spec pages of same make (internal)"
+ },
+ {
+  "slug": "car-wont-start-clicking",
+  "url": "/symptoms/car-wont-start-clicking/",
+  "target_keyword": "car won't start clicking noise",
+  "type": "symptom",
+  "code_definition": "",
+  "causes": "TODO: list from cited public source (RepairPal 'Common causes', NAPA/AAA articles) \u2014 do not write from memory",
+  "severity": "TODO: cite source",
+  "can_i_drive": "TODO: cite source; default safety copy for brake/ABS pages = 'have it inspected promptly'",
+  "costs": [
+   {
+    "repair": "Battery replacement",
+    "range_usd": "$456\u2013$493",
+    "source": "https://repairpal.com/estimator/battery-replacement-cost",
+    "source_date": "RepairPal estimates last updated 2026-09-03; national avg, excl. tax/location"
+   },
+   {
+    "repair": "Starter replacement",
+    "range_usd": "$565\u2013$796",
+    "source": "https://repairpal.com/estimator/starter-replacement-cost",
+    "source_date": "RepairPal estimates last updated 2026-09-03; national avg, excl. tax/location"
+   }
+  ],
+  "related_specs": "link to spec pages of same make (internal)"
+ },
+ {
+  "slug": "abs-light-on",
+  "url": "/symptoms/abs-light-on/",
+  "target_keyword": "ABS light on",
+  "type": "symptom",
+  "code_definition": "",
+  "causes": "TODO: list from cited public source (RepairPal 'Common causes', NAPA/AAA articles) \u2014 do not write from memory",
+  "severity": "TODO: cite source",
+  "can_i_drive": "TODO: cite source; default safety copy for brake/ABS pages = 'have it inspected promptly'",
+  "costs": [
+   {
+    "repair": "ABS wheel speed sensor replacement",
+    "range_usd": "TODO",
+    "source": "TODO (RepairPal page blocked by Cloudflare from box; fetch via browser)"
+   }
+  ],
+  "related_specs": "link to spec pages of same make (internal)"
+ },
+ {
+  "slug": "car-shaking-when-accelerating",
+  "url": "/symptoms/car-shaking-when-accelerating/",
+  "target_keyword": "car shaking when accelerating",
+  "type": "symptom",
+  "code_definition": "",
+  "causes": "TODO: list from cited public source (RepairPal 'Common causes', NAPA/AAA articles) \u2014 do not write from memory",
+  "severity": "TODO: cite source",
+  "can_i_drive": "TODO: cite source; default safety copy for brake/ABS pages = 'have it inspected promptly'",
+  "costs": [
+   {
+    "repair": "Spark plug replacement",
+    "range_usd": "$288\u2013$399",
+    "source": "https://repairpal.com/estimator/spark-plug-replacement-cost",
+    "source_date": "RepairPal estimates last updated 2026-09-03; national avg, excl. tax/location"
+   },
+   {
+    "repair": "Ignition coil replacement",
+    "range_usd": "$238\u2013$320",
+    "source": "https://repairpal.com/estimator/ignition-coil-replacement-cost",
+    "source_date": "RepairPal estimates last updated 2026-09-03; national avg, excl. tax/location"
+   },
+   {
+    "repair": "CV axle replacement",
+    "range_usd": "TODO",
+    "source": "TODO (RepairPal page blocked by Cloudflare from box; fetch via browser)"
+   }
+  ],
+  "related_specs": "link to spec pages of same make (internal)"
+ },
+ {
+  "slug": "p0455",
+  "url": "/codes/p0455/",
+  "target_keyword": "P0455 code",
+  "type": "code",
+  "code_definition": "Evaporative Emission System Leak Detected (large leak) \u2014 SAE J2012 generic definition; cite a public source e.g. OEM/NHTSA/state emissions page (TODO)",
+  "causes": "TODO: list from cited public source (RepairPal 'Common causes', NAPA/AAA articles) \u2014 do not write from memory",
+  "severity": "TODO: cite source",
+  "can_i_drive": "TODO: cite source; default safety copy for brake/ABS pages = 'have it inspected promptly'",
+  "costs": [
+   {
+    "repair": "EVAP purge valve replacement",
+    "range_usd": "TODO",
+    "source": "TODO (RepairPal page blocked by Cloudflare from box; fetch via browser)"
+   },
+   {
+    "repair": "Gas cap replacement",
+    "range_usd": "TODO",
+    "source": "TODO (RepairPal page blocked by Cloudflare from box; fetch via browser)"
+   }
+  ],
+  "related_specs": "link to spec pages of same make (internal)"
+ },
+ {
+  "slug": "p0171",
+  "url": "/codes/p0171/",
+  "target_keyword": "P0171 code",
+  "type": "code",
+  "code_definition": "System Too Lean (Bank 1) \u2014 SAE J2012 generic definition; cite a public source e.g. OEM/NHTSA/state emissions page (TODO)",
+  "causes": "TODO: list from cited public source (RepairPal 'Common causes', NAPA/AAA articles) \u2014 do not write from memory",
+  "severity": "TODO: cite source",
+  "can_i_drive": "TODO: cite source; default safety copy for brake/ABS pages = 'have it inspected promptly'",
+  "costs": [
+   {
+    "repair": "Oxygen sensor replacement",
+    "range_usd": "$440\u2013$523",
+    "source": "https://repairpal.com/estimator/oxygen-sensor-replacement-cost",
+    "source_date": "RepairPal estimates last updated 2026-09-03; national avg, excl. tax/location"
+   },
+   {
+    "repair": "Mass air flow sensor replacement",
+    "range_usd": "TODO",
+    "source": "TODO (RepairPal page blocked by Cloudflare from box; fetch via browser)"
+   }
+  ],
+  "related_specs": "link to spec pages of same make (internal)"
+ },
+ {
+  "slug": "p0300",
+  "url": "/codes/p0300/",
+  "target_keyword": "P0300 code",
+  "type": "code",
+  "code_definition": "Random/Multiple Cylinder Misfire Detected \u2014 SAE J2012 generic definition; cite a public source e.g. OEM/NHTSA/state emissions page (TODO)",
+  "causes": "TODO: list from cited public source (RepairPal 'Common causes', NAPA/AAA articles) \u2014 do not write from memory",
+  "severity": "TODO: cite source",
+  "can_i_drive": "TODO: cite source; default safety copy for brake/ABS pages = 'have it inspected promptly'",
+  "costs": [
+   {
+    "repair": "Spark plug replacement",
+    "range_usd": "$288\u2013$399",
+    "source": "https://repairpal.com/estimator/spark-plug-replacement-cost",
+    "source_date": "RepairPal estimates last updated 2026-09-03; national avg, excl. tax/location"
+   },
+   {
+    "repair": "Ignition coil replacement",
+    "range_usd": "$238\u2013$320",
+    "source": "https://repairpal.com/estimator/ignition-coil-replacement-cost",
+    "source_date": "RepairPal estimates last updated 2026-09-03; national avg, excl. tax/location"
+   }
+  ],
+  "related_specs": "link to spec pages of same make (internal)"
+ },
+ {
+  "slug": "p0420",
+  "url": "/codes/p0420/",
+  "target_keyword": "P0420 code",
+  "type": "code",
+  "code_definition": "Catalyst System Efficiency Below Threshold (Bank 1) \u2014 SAE J2012 generic definition; cite a public source e.g. OEM/NHTSA/state emissions page (TODO)",
+  "causes": "TODO: list from cited public source (RepairPal 'Common causes', NAPA/AAA articles) \u2014 do not write from memory",
+  "severity": "TODO: cite source",
+  "can_i_drive": "TODO: cite source; default safety copy for brake/ABS pages = 'have it inspected promptly'",
+  "costs": [
+   {
+    "repair": "Catalytic converter replacement",
+    "range_usd": "$2,280\u2013$2,480",
+    "source": "https://repairpal.com/estimator/catalytic-converter-replacement-cost",
+    "source_date": "RepairPal estimates last updated 2026-09-03; national avg, excl. tax/location"
+   },
+   {
+    "repair": "Oxygen sensor replacement",
+    "range_usd": "$440\u2013$523",
+    "source": "https://repairpal.com/estimator/oxygen-sensor-replacement-cost",
+    "source_date": "RepairPal estimates last updated 2026-09-03; national avg, excl. tax/location"
+   }
+  ],
+  "related_specs": "link to spec pages of same make (internal)"
+ },
+ {
+  "slug": "p0456",
+  "url": "/codes/p0456/",
+  "target_keyword": "P0456 code",
+  "type": "code",
+  "code_definition": "Evaporative Emission System Leak Detected (very small leak) \u2014 SAE J2012 generic definition; cite a public source e.g. OEM/NHTSA/state emissions page (TODO)",
+  "causes": "TODO: list from cited public source (RepairPal 'Common causes', NAPA/AAA articles) \u2014 do not write from memory",
+  "severity": "TODO: cite source",
+  "can_i_drive": "TODO: cite source; default safety copy for brake/ABS pages = 'have it inspected promptly'",
+  "costs": [
+   {
+    "repair": "EVAP purge valve replacement",
+    "range_usd": "TODO",
+    "source": "TODO (RepairPal page blocked by Cloudflare from box; fetch via browser)"
+   }
+  ],
+  "related_specs": "link to spec pages of same make (internal)"
+ },
+ {
+  "slug": "p0301",
+  "url": "/codes/p0301/",
+  "target_keyword": "P0301 code",
+  "type": "code",
+  "code_definition": "Cylinder 1 Misfire Detected \u2014 SAE J2012 generic definition; cite a public source e.g. OEM/NHTSA/state emissions page (TODO)",
+  "causes": "TODO: list from cited public source (RepairPal 'Common causes', NAPA/AAA articles) \u2014 do not write from memory",
+  "severity": "TODO: cite source",
+  "can_i_drive": "TODO: cite source; default safety copy for brake/ABS pages = 'have it inspected promptly'",
+  "costs": [
+   {
+    "repair": "Spark plug replacement",
+    "range_usd": "$288\u2013$399",
+    "source": "https://repairpal.com/estimator/spark-plug-replacement-cost",
+    "source_date": "RepairPal estimates last updated 2026-09-03; national avg, excl. tax/location"
+   },
+   {
+    "repair": "Ignition coil replacement",
+    "range_usd": "$238\u2013$320",
+    "source": "https://repairpal.com/estimator/ignition-coil-replacement-cost",
+    "source_date": "RepairPal estimates last updated 2026-09-03; national avg, excl. tax/location"
+   }
+  ],
+  "related_specs": "link to spec pages of same make (internal)"
+ },
+ {
+  "slug": "p0442",
+  "url": "/codes/p0442/",
+  "target_keyword": "P0442 code",
+  "type": "code",
+  "code_definition": "Evaporative Emission System Leak Detected (small leak) \u2014 SAE J2012 generic definition; cite a public source e.g. OEM/NHTSA/state emissions page (TODO)",
+  "causes": "TODO: list from cited public source (RepairPal 'Common causes', NAPA/AAA articles) \u2014 do not write from memory",
+  "severity": "TODO: cite source",
+  "can_i_drive": "TODO: cite source; default safety copy for brake/ABS pages = 'have it inspected promptly'",
+  "costs": [
+   {
+    "repair": "EVAP purge valve replacement",
+    "range_usd": "TODO",
+    "source": "TODO (RepairPal page blocked by Cloudflare from box; fetch via browser)"
+   },
+   {
+    "repair": "Gas cap replacement",
+    "range_usd": "TODO",
+    "source": "TODO (RepairPal page blocked by Cloudflare from box; fetch via browser)"
+   }
+  ],
+  "related_specs": "link to spec pages of same make (internal)"
+ }
+]

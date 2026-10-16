@@ -1,0 +1,59 @@
+{
+  "slug": "grinding-noise-when-braking",
+  "type": "symptom",
+  "code": null,
+  "title": "Grinding noise when braking",
+  "targetKeyword": "grinding noise when braking",
+  "definition": null,
+  "causes": [
+    {
+      "text": "Scraping noise = brake pad wear limit indicator",
+      "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+      "document": "2022 Toyota Camry Owner's Manual OM06244U (year mapping per Helm listing; manual is Camry-specific)",
+      "page": "p.199",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "Toyota",
+      "docKind": "owner's manual",
+      "appliesTo": "Toyota Camry",
+      "quote": null
+    },
+    {
+      "text": "Grinding noises are a sign brakes need service",
+      "url": "https://www.chevrolet.com/support/vehicle/driving-safety/brakes/brakes-system",
+      "document": "Chevrolet Support: The Brake System",
+      "page": "web page",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "Chevrolet",
+      "docKind": "support page",
+      "appliesTo": "GM; no specific cause given",
+      "quote": null
+    }
+  ],
+  "urgency": [
+    {
+      "text": "Dangerous to drive when pad/disc wear limits exceeded; rotor damage may result",
+      "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+      "document": "2022 Toyota Camry Owner's Manual OM06244U (year mapping per Helm listing; manual is Camry-specific)",
+      "page": "p.199",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "Toyota",
+      "docKind": "owner's manual",
+      "appliesTo": "Toyota Camry",
+      "quote": null
+    }
+  ],
+  "guidancePrimary": "Not yet verified (no universal source); brand quotes are vehicle-specific extras only",
+  "guidance": [],
+  "firstStep": null,
+  "safetyCritical": true,
+  "related": {
+    "issues": [],
+    "vehicles": []
+  },
+  "publishDate": null,
+  "dataUpdated": "2026-10-15",
+  "signOff": null
+}

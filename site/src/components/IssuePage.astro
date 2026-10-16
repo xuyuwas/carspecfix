@@ -1,0 +1,80 @@
+---
+import Base from '../layouts/Base.astro';
+import Tools from './Tools.astro';
+import Feedback from './Feedback.astro';
+import { liveVehicles, liveIssues, issueGate, issueUrl, vehicleUrl, sourcedCauses, sourcedUrgency, guidance, allBrandDrive, SITE } from '../lib/gate.mjs';
+import { fitTitle } from '../lib/title.mjs';
+import { makeRefs } from '../lib/refs.mjs';
+import { AUTHOR } from '../lib/site.mjs';
+const { i } = Astro.props;
+const code = i.type === 'code';
+const path = issueUrl(i);
+const { list: refs, ref } = makeRefs();
+const r = it => ref(it.url, `${it.document}${it.page ? ', ' + it.page : ''}${it.fetched ? ', retrieved ' + it.fetched : ''}`, it.url);
+const def = i.definition && i.definition.sourceGrade === 'A' ? i.definition : null;
+const causes = sourcedCauses(i), top = allBrandDrive(i), brandLines = guidance(i).filter(g => !g.allBrands);
+const urgency = top;
+const scopeTag = g => (g.appliesTo || '').replace(/^vehicle-specific:\s*/i, '').replace(/^(\w+).*?(\d{4}).*$/, (m, a, y) => /Toyota/.test(m) ? 'Toyota only' : `${y} ${a} only`).trim();
+const label = code ? i.code : i.title;
+const title = code ? fitTitle(`${i.code} Code`, ['Meaning', 'Causes', 'Can You Keep Driving?'], { brand: true }).replace('Causes & Can', 'Causes & Can')
+                   : fitTitle(i.title, ['Causes', 'Is It Safe to Drive?']);
+const h1 = code ? `${i.code}: ${def ? def.value : 'meaning'}, causes & can you keep driving?` : `${i.title}: causes & is it safe to drive?`;
+const gp = top.length ? (i.guidancePrimary || '') : '';
+const steady = /steady/i.test(gp) ? 'Steady light: keep driving, get it serviced soon.' : '';
+const flash = /flashing/i.test(gp) ? 'If it flashes, reduce speed and get it serviced as soon as possible.' : '';
+const meaning = code && def ? `${i.code} means ${def.value.replace(/\.+$/, '')}. ` : '';   // never truncated
+const build = (g, withCauses) => `${meaning}${g}${withCauses && causes.length ? ' Causes from manufacturer documents.' : ''}`.replace(/\.\./g, '.').replace(/\s+/g, ' ').trim();
+const guide = [[steady, flash].filter(Boolean).join(' '), steady || flash];
+const cands = [...guide.map(g => build(g, true)), ...guide.map(g => build(g, false))];
+let desc = cands.find(d => d.length <= 160) ?? cands[cands.length - 1];   // still >160 -> kept; build warns (R-M1)
+if (!code) desc = `${i.title}: ${top.length ? 'whether you can keep driving, ' : ''}possible causes from manufacturer documents, and what to check first.`;
+const related = liveIssues.filter(x => i.related?.issues?.includes(x.slug));
+const vehicles = liveVehicles.filter(v => i.related?.vehicles?.includes(v.slug));   // R-L2 v2: only data-declared vehicles
+const hubUrl = code ? '/codes/' : '/symptoms/';
+const crumbs = [{ name: 'Home', url: '/' }, { name: code ? 'Trouble codes' : 'Symptoms', url: hubUrl }, { name: label, url: path }];
+const jsonld = [{ '@type': 'Article', headline: h1, dateModified: i.dataUpdated, author: { '@type': 'Person', name: AUTHOR.name, url: `${SITE}/authors/${AUTHOR.slug}/` }, mainEntityOfPage: SITE + path }];
+// 'Seen on' only with concrete models; internal notes stripped; vague scopes ('models listed') hidden
+const seenOn = c => { const t = (c.appliesTo || '').replace(/\s*\([^()]*(verbatim|APPLICABILITY|SIB|TSB|Tech Tip|bulletin)[^()]*\)\s*$/i, '').split(/;\s*/).filter(x => !/by me|not re-?downloaded|TODO|verify|snippet|search result|not fetched|upgrade to|internal/i.test(x)).join('; ').trim(); return !t || /models listed|universal|all obd|wording of the generic/i.test(t) || !/\d{4}|\d{2}-\d{2}/.test(t) ? null : t; };
+const toc = [['#quick', 'Quick answer'], ...(causes.length ? [['#causes', 'Possible causes']] : []), ...(related.length ? [['#related', 'Related codes']] : []), ...(vehicles.length ? [['#vehicles', 'Vehicles']] : []), ['#sources', 'Sources']];
+const docLine = c => `${c.maker ? c.maker + "'s " : ''}${c.docKind}`;
+---
+<Base title={title} description={desc} path={path} jsonld={jsonld} crumbs={crumbs} nav={code ? 'codes' : 'symptoms'}>
+<div class="container"><div class="phead" style="padding-bottom:20px">
+<nav class="crumbs" aria-label="Breadcrumb">{crumbs.map((c, n) => <>{n > 0 && <span class="sep">/</span>}{n < crumbs.length - 1 ? <a href={c.url}>{c.name}</a> : <span aria-current="page">{c.name}</span>}</>)}</nav>
+<div class="eyebrow" style="margin-top:8px">{code ? 'OBD-II trouble code' : 'Symptom'}</div>
+<h1 class="ptitle">{h1}</h1>
+<section class="qa" id="quick" data-copy-scope aria-label="Quick answer">
+  <div class="qa__head"><h2 class="qa__title">Quick answer</h2><Tools /></div>
+  {code && <div class="qa__item" style="border-bottom:1px solid var(--border)"><div class="qa__q">What it means</div>
+    {def ? <><div class="qa__a qa__a--text">{def.value}<sup class="ref"><a href={`#ref-${r(def)}`}>[{r(def)}]</a></sup></div>{def.sourceText && def.sourceText.replace(/^P\d{4}:\s*/, '') !== def.value && <div class="qa__src qa__src--wording">Source wording: “{def.sourceText}”</div>}<div class="qa__src">Wording from {def.document}{def.page && <>, <span class="pref">{def.page}</span></>}</div></> : <div class="qa__a qa__a--text"><span class="nv">Not yet verified — source pending</span></div>}</div>}
+  <div class="qa__grid">
+    <div class="qa__item"><div class="qa__q">Can I keep driving?</div>
+      {top.length ? top.map(u => <><div class="qa__a qa__a--text qa__a--drive">{u.text}<sup class="ref"><a href={`#ref-${r(u)}`}>[{r(u)}]</a></sup></div><div class="qa__src">{u.document}{u.page && <>, <span class="pref">{u.page}</span></>} · applies to all OBD-II vehicles</div></>)
+       : <div class="qa__a qa__a--text"><span class="nv">Not yet verified</span></div>}
+      {brandLines.map(b => <div class="qa__brand" style="font-size:15px;color:var(--text-3);margin-top:8px"><span class="tag tag--na" style="font-size:12px">{scopeTag(b)}</span> {b.text}<sup class="ref"><a href={`#ref-${r(b)}`}>[{r(b)}]</a></sup></div>)}
+      {i.safetyCritical && <div class="qa__more">Brake / ABS issue: have it inspected promptly.</div>}
+    </div>
+    <div class="qa__item"><div class="qa__q">How urgent?</div><div class="qa__a qa__a--text"><span class="tag tag--na">Not rated</span></div><div class="qa__more">Severity is rated only when a source states it.</div></div>
+    <div class="qa__item"><div class="qa__q">Shop visit or check it yourself first?</div>
+      {i.firstStep?.text && i.firstStep?.url ? <div class="qa__a qa__a--text">{i.firstStep.text}<sup class="ref"><a href={`#ref-${r(i.firstStep)}`}>[{r(i.firstStep)}]</a></sup></div> : <div class="qa__a qa__a--text"><span class="nv">Not yet verified — source pending</span></div>}</div>
+  </div>
+  <div class="qa__foot"><span>Last verified <span class="tnum">{i.signOff?.date ?? i.dataUpdated}</span></span><a href="#report">Report a data error</a></div>
+</section></div>
+<div class={`layout${toc.length >= 2 ? "" : " layout--single"}`}><div class="main">
+{causes.length > 0 && <section id="causes" data-copy-scope>
+  <div class="section__head"><div><h2 class="section__title">Possible causes</h2><p class="section__kicker">Each cause comes from a manufacturer document and applies to the models listed. Your vehicle may differ.</p></div><Tools /></div>
+  <ol class="causes">{causes.map(c => <li>
+    <div class="cause__src"><strong>{docLine(c).replace(/^./, m => m.toUpperCase())} ({c.document}{c.page && <>, <span class="pref">{c.page}</span></>})</strong> <sup class="ref"><a href={`#ref-${r(c)}`}>[{r(c)}]</a></sup></div>
+    <div>{c.text}</div>
+    {seenOn(c) && <div class="cause__seen"><span class="cause__seen-k">Seen on:</span> {seenOn(c)}</div>}
+  </li>)}</ol>
+</section>}
+{related.length > 0 && <section id="related"><div class="section__head"><div><h2 class="section__title">Related</h2></div></div><ul class="plist">{related.map(x => <li><a href={issueUrl(x)}>{x.type === 'code' ? `${x.code} code` : x.title}</a></li>)}</ul></section>}
+{vehicles.length > 0 && <div class="m-only"><section id="vehicles"><div class="section__head"><div><h2 class="section__title">Vehicles we have specs for</h2></div></div><ul class="plist">{vehicles.map(v => <li><a href={vehicleUrl(v)}>{v.year} {v.make} {v.model} specs</a></li>)}</ul></section></div>}
+<Feedback path={path} />
+<section id="sources"><div class="section__head"><div><h2 class="section__title">Sources</h2></div></div>
+<ol class="refs">{refs.map((x, n) => <li id={`ref-${n + 1}`}><a href={x.url} rel="nofollow noopener">{x.label}</a></li>)}</ol>
+<p class="ks__src">General information from manufacturer documents, not professional mechanical advice. See <a href="/sources/">Data sources</a>.</p></section>
+</div>
+{toc.length >= 2 && <aside class="side"><nav class="toc" aria-label="On this page"><h2 class="toc__title">On this page</h2><ul>{toc.map(([h, t]) => <li><a href={h}>{t}</a></li>)}</ul></nav></aside>}</div></div>
+</Base>

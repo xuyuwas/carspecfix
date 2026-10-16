@@ -1,0 +1,34 @@
+# run 2026-10-15T12:50:54Z  (url<TAB>http_status<TAB>saved_as<TAB>note)
+https://www.ford.com/support/owner-manuals-details/f150/2021/	403		page scan (ford-f150-2021)
+https://www.ford.com/support/owner-manuals-details/f150/2021/	403		html/empty
+https://www.fordservicecontent.com/Ford_Content/Catalog/owner_information/	403		page scan (ford-f150-2021)
+https://www.fordservicecontent.com/Ford_Content/Catalog/owner_information/	403		html/empty
+https://www.ford.com/support/owner-manuals-details/f150/2023/	403		page scan (ford-f150-2023)
+https://www.ford.com/support/owner-manuals-details/f150/2023/	403		html/empty
+https://www.fordservicecontent.com/Ford_Content/Catalog/owner_information/	403		page scan (ford-f150-2023)
+https://www.fordservicecontent.com/Ford_Content/Catalog/owner_information/	403		html/empty
+https://techinfo.honda.com/rjanisis/pubs/OM/AH/ATVA2222OM/enu/ATVA2222OM.PDF	200	honda-2022-accord-ATVA2222OM.pdf	pdf
+https://techinfo.honda.com/rjanisis/pubs/OM/AH/A3A02222OM/enu/A3A02222OM.PDF	200		html/empty
+https://techinfo.honda.com/rjanisis/pubs/OM/AH/ATMA2222OM/enu/ATMA2222OM.PDF	200		html/empty
+https://owners.honda.com/vehicles/information/2022/CR-V/manuals	200		page scan (honda-crv-2022)
+[200]	000		html/empty
+https://owners.honda.com/vehicles/information/2022/CR-V/manuals	200		html/empty
+->	000		html/empty
+-	000		html/empty
+https://mygarage.honda.com/s/owners-manuals?vehicle=CR-V&year=2022	200		page scan (honda-crv-2022)
+[200]	000		html/empty
+https://mygarage.honda.com/s/owners-manuals?vehicle=CR-V&year=2022	200		html/empty
+->	000		html/empty
+-	000		html/empty
+https://techinfo.honda.com/rjanisis/pubs/web/ATM02222.htm	200		page scan (honda-crv-2022)
+[200]	000		html/empty
+https://techinfo.honda.com/rjanisis/pubs/web/ATM02222.htm	200		html/empty
+->	000		html/empty
+-	000		html/empty
+https://www.chevrolet.com/support/vehicle/manuals-guides	200		page scan (chevy-silverado-1500-2022)
+https://my.chevrolet.com/how-to-support/manuals-and-guides/2022/silverado-1500	200		page scan (chevy-silverado-1500-2022)
+https://my.chevrolet.com/how-to-support/manuals-and-guides/2022/silverado-1500	200		html/empty
+https://www.chevrolet.com/support/vehicle/manuals-guides	200		page scan (chevy-equinox-2022)
+https://my.chevrolet.com/how-to-support/manuals-and-guides/2022/equinox	200		page scan (chevy-equinox-2022)
+https://my.chevrolet.com/how-to-support/manuals-and-guides/2022/equinox	200		html/empty
+http://techinfo.honda.com/rjanisis/pubs/OM/AH/ATVA2222OM/enu/ATVA2222OM.PDF	000		html/empty

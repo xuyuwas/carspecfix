@@ -1,0 +1,5 @@
+---
+import Icon from './Icon.astro';
+const { copy = '' } = Astro.props;
+---
+<div class="tools"><button class="btn" type="button" data-copy={copy}><Icon name="copy" /><span class="lbl">Copy</span></button><button class="btn btn-print" type="button" data-print><Icon name="print" /><span>Print</span></button></div>

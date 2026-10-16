@@ -1,0 +1,3 @@
+# Cloudflare Pages: trailing-slash and legacy rules. Case-folding + http/www one-hop 301 must be a Cloudflare Single Redirect rule (see tech-plan §12).
+/specs/  /  301
+/specs/:make/  /  301

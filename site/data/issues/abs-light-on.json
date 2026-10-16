@@ -1,0 +1,74 @@
+{
+  "slug": "abs-light-on",
+  "type": "symptom",
+  "code": null,
+  "title": "ABS light on",
+  "targetKeyword": "ABS light on",
+  "definition": null,
+  "causes": [
+    {
+      "text": "Malfunction in the ABS or brake assist system",
+      "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+      "document": "2022 Toyota Camry Owner's Manual OM06244U (year mapping per Helm listing; manual is Camry-specific)",
+      "page": "p.528",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "Toyota",
+      "docKind": "owner's manual",
+      "appliesTo": "Toyota Camry",
+      "quote": null
+    }
+  ],
+  "urgency": [
+    {
+      "text": "ABS light alone: have vehicle inspected immediately",
+      "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+      "document": "2022 Toyota Camry Owner's Manual OM06244U (year mapping per Helm listing; manual is Camry-specific)",
+      "page": "p.528",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "Toyota",
+      "docKind": "owner's manual",
+      "appliesTo": "Toyota Camry",
+      "quote": null
+    },
+    {
+      "text": "ABS + brake warning light both on: stop in a safe place immediately",
+      "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+      "document": "2022 Toyota Camry Owner's Manual OM06244U (year mapping per Helm listing; manual is Camry-specific)",
+      "page": "p.535",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "Toyota",
+      "docKind": "owner's manual",
+      "appliesTo": "Toyota Camry",
+      "quote": "Stop your vehicle in a safe place immediately and contact your Toyota dealer. The vehicle will become extremely unstable during braking, and the ABS system may fail"
+    }
+  ],
+  "guidancePrimary": "Not yet verified (no universal source); brand quotes are vehicle-specific extras only",
+  "guidance": [
+    {
+      "text": "Stop your vehicle in a safe place immediately and contact your Toyota dealer. The vehicle will become extremely unstable during braking, and the ABS system may fail",
+      "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+      "document": "2022 Toyota Camry Owner's Manual OM06244U (year mapping per Helm listing; manual is Camry-specific)",
+      "page": "p.535",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "Toyota",
+      "docKind": "owner's manual",
+      "appliesTo": "vehicle-specific: Toyota Camry 2022",
+      "quote": "Stop your vehicle in a safe place immediately and contact your Toyota dealer. The vehicle will become extremely unstable during braking, and the ABS system may fail",
+      "answers": "",
+      "allBrands": false
+    }
+  ],
+  "firstStep": null,
+  "safetyCritical": true,
+  "related": {
+    "issues": [],
+    "vehicles": []
+  },
+  "publishDate": null,
+  "dataUpdated": "2026-10-15",
+  "signOff": null
+}

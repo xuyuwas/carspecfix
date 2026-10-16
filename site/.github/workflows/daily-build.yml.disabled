@@ -1,0 +1,28 @@
+# NOT ACTIVE: rename to daily-build.yml after 队长 approves launch and repo secrets exist
+# (CLOUDFLARE_API_TOKEN, CLOUDFLARE_ACCOUNT_ID, INDEXNOW_KEY).
+name: daily-build
+on:
+  schedule: [{ cron: '0 13 * * *' }]   # 13:00 UTC = 21:00 Beijing = 09:00 US Eastern (EDT)
+  workflow_dispatch: {}
+  push: { branches: [main] }
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20, cache: npm }
+      - run: npm ci
+      - run: npm run build          # includes post-build checks; fails on any P0 error
+      - name: Block placeholders
+        run: "! grep -rl 'PENDING-' dist/"
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy dist --project-name=carspecfix --branch=main
+      - run: node scripts/indexnow.mjs
+        env: { INDEXNOW_KEY: '${{ secrets.INDEXNOW_KEY }}' }
+      - uses: actions/upload-artifact@v4
+        with: { name: build-report, path: reports/build-report.md }

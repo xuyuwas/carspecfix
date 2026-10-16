@@ -1,0 +1,2298 @@
+{
+ "rav4-2020-1280": {
+  "overflowX": 0,
+  "wide": [],
+  "qa_a": [
+   {
+    "t": "Depends on your wheels\n[3]",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "4.8 qt with filter\n[3]",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "4.4 qt without\n[3]",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "6\nNHTSA campaigns\n[1]",
+    "fs": "40px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   }
+  ],
+  "qaq": [
+   "TIRE PRESSURE (COLD)@418",
+   "ENGINE OIL@418",
+   "RECALLS@418"
+  ],
+  "qamore": [
+   [
+    "Vehicles with 17-inch wheels type A (225/65R17 102H): 35/35 psi",
+    "Vehicles with 17-inch wheels type B (225/65R17 102H): 36/36 psi",
+    "Vehicles with 17-inch wheels type C (225/65R17 102H): 33/33 psi",
+    "Vehicles with 17-inch wheels type D (225/65R17 102H): 35/35 psi",
+    "See all 8 configurations"
+   ],
+   [
+    "SAE 0W-16 (0W-20 acceptable)"
+   ],
+   [
+    "See campaign list",
+    "nhtsa.gov/recalls"
+   ]
+  ],
+  "pref": [
+   {
+    "c": "qa__src",
+    "t": "Manual p.671, p.672, p.673, p.674 · Chec",
+    "ff": "\"Source Sans 3\", system-u",
+    "fs": "12px",
+    "col": "rgb(91, 101, 112)",
+    "fw": "400"
+   },
+   {
+    "c": "qa__src",
+    "t": "Manual p.666 (capacity), p.667 (viscosit",
+    "ff": "\"Source Sans 3\", system-u",
+    "fs": "12px",
+    "col": "rgb(91, 101, 112)",
+    "fw": "400"
+   },
+   {
+    "c": "qa__src",
+    "t": "Fetched 2026-10-15",
+    "ff": "\"Source Sans 3\", system-u",
+    "fs": "12px",
+    "col": "rgb(91, 101, 112)",
+    "fw": "400"
+   },
+   {
+    "c": "mono",
+    "t": "23V865000",
+    "ff": "\"JetBrains Mono\", ui-mono",
+    "fs": "13.8px",
+    "col": "rgb(15, 20, 25)",
+    "fw": "400"
+   }
+  ],
+  "refs": [
+   {
+    "t": "NHTSA recalls database, 2020 Toyota RAV4, fetched 2026-10-15",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "fueleconomy.gov (U.S. EPA / DOE), 2020 Toyota RAV4, fetched 2026-10-15",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "Toyota owner's manual OM0R024U (2020 RAV4), retrieved 2026-10-15",
+    "links": 1,
+    "icons": 0
+   }
+  ],
+  "caption": {
+   "t": "Shown: 2020 Toyota RAV4 XLE\nPhoto: SsmIntrigue / CC BY-SA 4.0 / Source",
+   "ff": "\"Source Sans 3\", sys",
+   "fs": "13px",
+   "col": "rgb(91, 101, 112)"
+  },
+  "hero": {
+   "tag": "DIV",
+   "w": 360,
+   "h": 177,
+   "ratio": "2.03",
+   "fit": "fill",
+   "disp": "block"
+  },
+  "ads": [
+   "ad ad--below",
+   "ad ad--side"
+  ],
+  "print": 5,
+  "cost": false,
+  "caps": [
+   "BAGS:SENSOR:OCCUPANT CLASSIFICATION",
+   "GASOLINE:DELIVERY:FUEL PUMP",
+   "STEERING:ELECTRIC POWER ASSIST SYSTEM"
+  ],
+  "brand": [],
+  "h": 3304
+ },
+ "rav4-2020-390": {
+  "overflowX": 0,
+  "wide": [],
+  "qa_a": [
+   {
+    "t": "Depends on your wheels\n[3]",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "4.8 qt with filter\n[3]",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "4.4 qt without\n[3]",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "6\nNHTSA campaigns\n[1]",
+    "fs": "34px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   }
+  ],
+  "qaq": [
+   "TIRE PRESSURE (COLD)@326",
+   "ENGINE OIL@643",
+   "RECALLS@804"
+  ],
+  "qamore": [
+   [
+    "Vehicles with 17-inch wheels type A (225/65R17 102H): 35/35 psi",
+    "Vehicles with 17-inch wheels type B (225/65R17 102H): 36/36 psi",
+    "Vehicles with 17-inch wheels type C (225/65R17 102H): 33/33 psi",
+    "Vehicles with 17-inch wheels type D (225/65R17 102H): 35/35 psi",
+    "See all 8 configurations"
+   ],
+   [
+    "SAE 0W-16 (0W-20 acceptable)"
+   ],
+   [
+    "See campaign list",
+    "nhtsa.gov/recalls"
+   ]
+  ],
+  "pref": [
+   {
+    "c": "qa__src",
+    "t": "Manual p.671, p.672, p.673, p.674 · Chec",
+    "ff": "\"Source Sans 3\", system-u",
+    "fs": "12px",
+    "col": "rgb(91, 101, 112)",
+    "fw": "400"
+   },
+   {
+    "c": "qa__src",
+    "t": "Manual p.666 (capacity), p.667 (viscosit",
+    "ff": "\"Source Sans 3\", system-u",
+    "fs": "12px",
+    "col": "rgb(91, 101, 112)",
+    "fw": "400"
+   },
+   {
+    "c": "qa__src",
+    "t": "Fetched 2026-10-15",
+    "ff": "\"Source Sans 3\", system-u",
+    "fs": "12px",
+    "col": "rgb(91, 101, 112)",
+    "fw": "400"
+   },
+   {
+    "c": "mono",
+    "t": "23V865000",
+    "ff": "\"JetBrains Mono\", ui-mono",
+    "fs": "13.8px",
+    "col": "rgb(15, 20, 25)",
+    "fw": "400"
+   }
+  ],
+  "refs": [
+   {
+    "t": "NHTSA recalls database, 2020 Toyota RAV4, fetched 2026-10-15",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "fueleconomy.gov (U.S. EPA / DOE), 2020 Toyota RAV4, fetched 2026-10-15",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "Toyota owner's manual OM0R024U (2020 RAV4), retrieved 2026-10-15",
+    "links": 1,
+    "icons": 0
+   }
+  ],
+  "caption": {
+   "t": "Shown: 2020 Toyota RAV4 XLE\nPhoto: SsmIntrigue / CC BY-SA 4.0 / Source",
+   "ff": "\"Source Sans 3\", sys",
+   "fs": "13px",
+   "col": "rgb(91, 101, 112)"
+  },
+  "hero": {
+   "tag": "DIV",
+   "w": 0,
+   "h": 0,
+   "ratio": "NaN",
+   "fit": "fill",
+   "disp": "none"
+  },
+  "ads": [
+   "ad ad--below",
+   "ad ad--side(hidden)"
+  ],
+  "print": 0,
+  "cost": false,
+  "caps": [
+   "BAGS:SENSOR:OCCUPANT CLASSIFICATION",
+   "GASOLINE:DELIVERY:FUEL PUMP",
+   "STEERING:ELECTRIC POWER ASSIST SYSTEM"
+  ],
+  "brand": [],
+  "h": 4038
+ },
+ "civic-2022-1280": {
+  "overflowX": 0,
+  "wide": [],
+  "qa_a": [
+   {
+    "t": "Depends on your wheels\n[3]",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "1.5L turbo: 3.7 US qt incl. filter\n[3]",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "2.0L: 4.4 US qt incl. filter\n[3]",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "4\nNHTSA campaigns\n[1]",
+    "fs": "40px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   }
+  ],
+  "qaq": [
+   "TIRE PRESSURE (COLD)@418",
+   "ENGINE OIL@418",
+   "RECALLS@418"
+  ],
+  "qamore": [
+   [
+    "1.5L (215/50R17 91H): 33/33 psi",
+    "1.5L (235/40R18): 33/32 psi",
+    "2.0L (215/55R16 93H): 32/32 psi",
+    "2.0L (235/40R18 91W): 33/32 psi"
+   ],
+   [
+    "0W-20 (both engines)"
+   ],
+   [
+    "See campaign list",
+    "nhtsa.gov/recalls"
+   ]
+  ],
+  "pref": [
+   {
+    "c": "qa__src",
+    "t": "Check the tire placard on your driver's ",
+    "ff": "\"Source Sans 3\", system-u",
+    "fs": "12px",
+    "col": "rgb(91, 101, 112)",
+    "fw": "400"
+   },
+   {
+    "c": "qa__src",
+    "t": "Source [3]",
+    "ff": "\"Source Sans 3\", system-u",
+    "fs": "12px",
+    "col": "rgb(91, 101, 112)",
+    "fw": "400"
+   },
+   {
+    "c": "qa__src",
+    "t": "Fetched 2026-10-15",
+    "ff": "\"Source Sans 3\", system-u",
+    "fs": "12px",
+    "col": "rgb(91, 101, 112)",
+    "fw": "400"
+   },
+   {
+    "c": "mono",
+    "t": "26V332000",
+    "ff": "\"JetBrains Mono\", ui-mono",
+    "fs": "13.8px",
+    "col": "rgb(15, 20, 25)",
+    "fw": "400"
+   }
+  ],
+  "refs": [
+   {
+    "t": "NHTSA recalls database, 2022 Honda Civic, fetched 2026-10-15",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "fueleconomy.gov (U.S. EPA / DOE), 2022 Honda Civic, fetched 2026-10-15",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "2022 Honda Civic owner information, retrieved 2026-10-15",
+    "links": 1,
+    "icons": 0
+   }
+  ],
+  "caption": {
+   "t": "Shown: 2022 Honda Civic LX Sedan\nPhoto: MercurySable99 / CC BY-SA 4.0 / Source",
+   "ff": "\"Source Sans 3\", sys",
+   "fs": "13px",
+   "col": "rgb(91, 101, 112)"
+  },
+  "hero": {
+   "tag": "DIV",
+   "w": 360,
+   "h": 177,
+   "ratio": "2.03",
+   "fit": "fill",
+   "disp": "block"
+  },
+  "ads": [
+   "ad ad--below",
+   "ad ad--side"
+  ],
+  "print": 5,
+  "cost": false,
+  "caps": [
+   "BAGS:SENSOR:OCCUPANT CLASSIFICATION:FRONT PASSENGER",
+   "BAGS:SENSOR:OCCUPANT CLASSIFICATION:FRONT PASSENGER",
+   "STEERING:RACK AND PINION"
+  ],
+  "brand": [],
+  "h": 2800
+ },
+ "civic-2022-390": {
+  "overflowX": 0,
+  "wide": [],
+  "qa_a": [
+   {
+    "t": "Depends on your wheels\n[3]",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "1.5L turbo: 3.7 US qt incl. filter\n[3]",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "2.0L: 4.4 US qt incl. filter\n[3]",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "4\nNHTSA campaigns\n[1]",
+    "fs": "34px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   }
+  ],
+  "qaq": [
+   "TIRE PRESSURE (COLD)@326",
+   "ENGINE OIL@538",
+   "RECALLS@699"
+  ],
+  "qamore": [
+   [
+    "1.5L (215/50R17 91H): 33/33 psi",
+    "1.5L (235/40R18): 33/32 psi",
+    "2.0L (215/55R16 93H): 32/32 psi",
+    "2.0L (235/40R18 91W): 33/32 psi"
+   ],
+   [
+    "0W-20 (both engines)"
+   ],
+   [
+    "See campaign list",
+    "nhtsa.gov/recalls"
+   ]
+  ],
+  "pref": [
+   {
+    "c": "qa__src",
+    "t": "Check the tire placard on your driver's ",
+    "ff": "\"Source Sans 3\", system-u",
+    "fs": "12px",
+    "col": "rgb(91, 101, 112)",
+    "fw": "400"
+   },
+   {
+    "c": "qa__src",
+    "t": "Source [3]",
+    "ff": "\"Source Sans 3\", system-u",
+    "fs": "12px",
+    "col": "rgb(91, 101, 112)",
+    "fw": "400"
+   },
+   {
+    "c": "qa__src",
+    "t": "Fetched 2026-10-15",
+    "ff": "\"Source Sans 3\", system-u",
+    "fs": "12px",
+    "col": "rgb(91, 101, 112)",
+    "fw": "400"
+   },
+   {
+    "c": "mono",
+    "t": "26V332000",
+    "ff": "\"JetBrains Mono\", ui-mono",
+    "fs": "13.8px",
+    "col": "rgb(15, 20, 25)",
+    "fw": "400"
+   }
+  ],
+  "refs": [
+   {
+    "t": "NHTSA recalls database, 2022 Honda Civic, fetched 2026-10-15",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "fueleconomy.gov (U.S. EPA / DOE), 2022 Honda Civic, fetched 2026-10-15",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "2022 Honda Civic owner information, retrieved 2026-10-15",
+    "links": 1,
+    "icons": 0
+   }
+  ],
+  "caption": {
+   "t": "Shown: 2022 Honda Civic LX Sedan\nPhoto: MercurySable99 / CC BY-SA 4.0 / Source",
+   "ff": "\"Source Sans 3\", sys",
+   "fs": "13px",
+   "col": "rgb(91, 101, 112)"
+  },
+  "hero": {
+   "tag": "DIV",
+   "w": 0,
+   "h": 0,
+   "ratio": "NaN",
+   "fit": "fill",
+   "disp": "none"
+  },
+  "ads": [
+   "ad ad--below",
+   "ad ad--side(hidden)"
+  ],
+  "print": 0,
+  "cost": false,
+  "caps": [
+   "BAGS:SENSOR:OCCUPANT CLASSIFICATION:FRONT PASSENGER",
+   "BAGS:SENSOR:OCCUPANT CLASSIFICATION:FRONT PASSENGER",
+   "STEERING:RACK AND PINION"
+  ],
+  "brand": [],
+  "h": 3508
+ },
+ "crv-2024-1280": {
+  "overflowX": 0,
+  "wide": [],
+  "qa_a": [
+   {
+    "t": "Depends on your wheels\n[3]",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "1.5L turbo (non-hybrid): 3.7 US qt incl. filter\n[3",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "2\nNHTSA campaigns\n[1]",
+    "fs": "40px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   }
+  ],
+  "qaq": [
+   "TIRE PRESSURE (COLD)@418",
+   "ENGINE OIL@418",
+   "RECALLS@418"
+  ],
+  "qamore": [
+   [
+    "Non-hybrid (235/65R17 104H): 33/32 psi",
+    "Non-hybrid (235/60R18 103H): 35/32 psi"
+   ],
+   [
+    "0W-20 (1.5T)"
+   ],
+   [
+    "See campaign list",
+    "nhtsa.gov/recalls"
+   ]
+  ],
+  "pref": [
+   {
+    "c": "qa__src",
+    "t": "Check the tire placard on your driver's ",
+    "ff": "\"Source Sans 3\", system-u",
+    "fs": "12px",
+    "col": "rgb(91, 101, 112)",
+    "fw": "400"
+   },
+   {
+    "c": "qa__src",
+    "t": "Source [3] · other variants (e.g. hybrid",
+    "ff": "\"Source Sans 3\", system-u",
+    "fs": "12px",
+    "col": "rgb(91, 101, 112)",
+    "fw": "400"
+   },
+   {
+    "c": "qa__src",
+    "t": "Fetched 2026-10-15",
+    "ff": "\"Source Sans 3\", system-u",
+    "fs": "12px",
+    "col": "rgb(91, 101, 112)",
+    "fw": "400"
+   },
+   {
+    "c": "mono",
+    "t": "24V744000",
+    "ff": "\"JetBrains Mono\", ui-mono",
+    "fs": "13.8px",
+    "col": "rgb(15, 20, 25)",
+    "fw": "400"
+   }
+  ],
+  "refs": [
+   {
+    "t": "NHTSA recalls database, 2024 Honda CR-V, fetched 2026-10-15",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "fueleconomy.gov (U.S. EPA / DOE), 2024 Honda CR-V, fetched 2026-10-15",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "2024 Honda CR-V owner information, retrieved 2026-10-15",
+    "links": 1,
+    "icons": 0
+   }
+  ],
+  "caption": {
+   "t": "Shown: 2023 Honda CR-V EX-L (same generation)\nPhoto: MercurySable99 / CC BY-SA 4.0 / Source",
+   "ff": "\"Source Sans 3\", sys",
+   "fs": "13px",
+   "col": "rgb(91, 101, 112)"
+  },
+  "hero": {
+   "tag": "DIV",
+   "w": 360,
+   "h": 177,
+   "ratio": "2.03",
+   "fit": "fill",
+   "disp": "block"
+  },
+  "ads": [
+   "ad ad--below",
+   "ad ad--side"
+  ],
+  "print": 5,
+  "cost": false,
+  "caps": [],
+  "brand": [],
+  "h": 2548
+ },
+ "crv-2024-390": {
+  "overflowX": 0,
+  "wide": [],
+  "qa_a": [
+   {
+    "t": "Depends on your wheels\n[3]",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "1.5L turbo (non-hybrid): 3.7 US qt incl. filter\n[3",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "2\nNHTSA campaigns\n[1]",
+    "fs": "34px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   }
+  ],
+  "qaq": [
+   "TIRE PRESSURE (COLD)@326",
+   "ENGINE OIL@496",
+   "RECALLS@660"
+  ],
+  "qamore": [
+   [
+    "Non-hybrid (235/65R17 104H): 33/32 psi",
+    "Non-hybrid (235/60R18 103H): 35/32 psi"
+   ],
+   [
+    "0W-20 (1.5T)"
+   ],
+   [
+    "See campaign list",
+    "nhtsa.gov/recalls"
+   ]
+  ],
+  "pref": [
+   {
+    "c": "qa__src",
+    "t": "Check the tire placard on your driver's ",
+    "ff": "\"Source Sans 3\", system-u",
+    "fs": "12px",
+    "col": "rgb(91, 101, 112)",
+    "fw": "400"
+   },
+   {
+    "c": "qa__src",
+    "t": "Source [3] · other variants (e.g. hybrid",
+    "ff": "\"Source Sans 3\", system-u",
+    "fs": "12px",
+    "col": "rgb(91, 101, 112)",
+    "fw": "400"
+   },
+   {
+    "c": "qa__src",
+    "t": "Fetched 2026-10-15",
+    "ff": "\"Source Sans 3\", system-u",
+    "fs": "12px",
+    "col": "rgb(91, 101, 112)",
+    "fw": "400"
+   },
+   {
+    "c": "mono",
+    "t": "24V744000",
+    "ff": "\"JetBrains Mono\", ui-mono",
+    "fs": "13.8px",
+    "col": "rgb(15, 20, 25)",
+    "fw": "400"
+   }
+  ],
+  "refs": [
+   {
+    "t": "NHTSA recalls database, 2024 Honda CR-V, fetched 2026-10-15",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "fueleconomy.gov (U.S. EPA / DOE), 2024 Honda CR-V, fetched 2026-10-15",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "2024 Honda CR-V owner information, retrieved 2026-10-15",
+    "links": 1,
+    "icons": 0
+   }
+  ],
+  "caption": {
+   "t": "Shown: 2023 Honda CR-V EX-L (same generation)\nPhoto: MercurySable99 / CC BY-SA 4.0 / Source",
+   "ff": "\"Source Sans 3\", sys",
+   "fs": "13px",
+   "col": "rgb(91, 101, 112)"
+  },
+  "hero": {
+   "tag": "DIV",
+   "w": 0,
+   "h": 0,
+   "ratio": "NaN",
+   "fit": "fill",
+   "disp": "none"
+  },
+  "ads": [
+   "ad ad--below",
+   "ad ad--side(hidden)"
+  ],
+  "print": 0,
+  "cost": false,
+  "caps": [],
+  "brand": [],
+  "h": 3261
+ },
+ "rav4-2024-1280": {
+  "overflowX": 0,
+  "wide": [],
+  "qa_a": [
+   {
+    "t": "Depends on your wheels\n[3]",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "4.5 qt with filter\n[3]",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "4.2 qt without\n[3]",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "3\nNHTSA campaigns\n[1]",
+    "fs": "40px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   }
+  ],
+  "qaq": [
+   "TIRE PRESSURE (COLD)@418",
+   "ENGINE OIL@418",
+   "RECALLS@418"
+  ],
+  "qamore": [
+   [
+    "Vehicles with 17-inch wheels type A (225/65R17 102H): 35/35 psi",
+    "Vehicles with 17-inch wheels type B (225/65R17 102H): 36/36 psi",
+    "Vehicles with 17-inch wheels type C (225/65R17 102H): 33/33 psi",
+    "Vehicles with 17-inch wheels type D (225/65R17 102H): 35/35 psi",
+    "See all 11 configurations"
+   ],
+   [
+    "SAE 0W-16 (0W-20 acceptable)"
+   ],
+   [
+    "See campaign list",
+    "nhtsa.gov/recalls"
+   ]
+  ],
+  "pref": [
+   {
+    "c": "qa__src",
+    "t": "Manual p.491, p.492, p.493, p.494, p.501",
+    "ff": "\"Source Sans 3\", system-u",
+    "fs": "12px",
+    "col": "rgb(91, 101, 112)",
+    "fw": "400"
+   },
+   {
+    "c": "qa__src",
+    "t": "Manual p.486 (capacity), p.486 (viscosit",
+    "ff": "\"Source Sans 3\", system-u",
+    "fs": "12px",
+    "col": "rgb(91, 101, 112)",
+    "fw": "400"
+   },
+   {
+    "c": "qa__src",
+    "t": "Fetched 2026-10-15",
+    "ff": "\"Source Sans 3\", system-u",
+    "fs": "12px",
+    "col": "rgb(91, 101, 112)",
+    "fw": "400"
+   },
+   {
+    "c": "mono",
+    "t": "25V744000",
+    "ff": "\"JetBrains Mono\", ui-mono",
+    "fs": "13.8px",
+    "col": "rgb(15, 20, 25)",
+    "fw": "400"
+   }
+  ],
+  "refs": [
+   {
+    "t": "NHTSA recalls database, 2024 Toyota RAV4, fetched 2026-10-15",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "fueleconomy.gov (U.S. EPA / DOE), 2024 Toyota RAV4, fetched 2026-10-15",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "Toyota owner's manual OM0R147U (2024 RAV4), retrieved 2026-10-15",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "Toyota owner's manual OM42L49U (2024 RAV4), retrieved 2026-10-15",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "Toyota owner's manual OM0R069U (2024 RAV4, other production period; oil & tire tables identical for shared configuration",
+    "links": 1,
+    "icons": 0
+   }
+  ],
+  "caption": {
+   "t": "Shown: 2024 RAV4 Hybrid Woodland Edition\nPhoto: MercurySable99 / CC BY-SA 4.0 / Source",
+   "ff": "\"Source Sans 3\", sys",
+   "fs": "13px",
+   "col": "rgb(91, 101, 112)"
+  },
+  "hero": {
+   "tag": "DIV",
+   "w": 360,
+   "h": 177,
+   "ratio": "2.03",
+   "fit": "fill",
+   "disp": "block"
+  },
+  "ads": [
+   "ad ad--below",
+   "ad ad--side"
+  ],
+  "print": 5,
+  "cost": false,
+  "caps": [
+   "BACK OVER PREVENTION:DISPLAY FUNCTION",
+   "HYDRAULIC:FOUNDATION COMPONENTS:DISC:CALIPER"
+  ],
+  "brand": [],
+  "h": 3314
+ },
+ "rav4-2024-390": {
+  "overflowX": 0,
+  "wide": [],
+  "qa_a": [
+   {
+    "t": "Depends on your wheels\n[3]",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "4.5 qt with filter\n[3]",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "4.2 qt without\n[3]",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "3\nNHTSA campaigns\n[1]",
+    "fs": "34px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   }
+  ],
+  "qaq": [
+   "TIRE PRESSURE (COLD)@326",
+   "ENGINE OIL@643",
+   "RECALLS@804"
+  ],
+  "qamore": [
+   [
+    "Vehicles with 17-inch wheels type A (225/65R17 102H): 35/35 psi",
+    "Vehicles with 17-inch wheels type B (225/65R17 102H): 36/36 psi",
+    "Vehicles with 17-inch wheels type C (225/65R17 102H): 33/33 psi",
+    "Vehicles with 17-inch wheels type D (225/65R17 102H): 35/35 psi",
+    "See all 11 configurations"
+   ],
+   [
+    "SAE 0W-16 (0W-20 acceptable)"
+   ],
+   [
+    "See campaign list",
+    "nhtsa.gov/recalls"
+   ]
+  ],
+  "pref": [
+   {
+    "c": "qa__src",
+    "t": "Manual p.491, p.492, p.493, p.494, p.501",
+    "ff": "\"Source Sans 3\", system-u",
+    "fs": "12px",
+    "col": "rgb(91, 101, 112)",
+    "fw": "400"
+   },
+   {
+    "c": "qa__src",
+    "t": "Manual p.486 (capacity), p.486 (viscosit",
+    "ff": "\"Source Sans 3\", system-u",
+    "fs": "12px",
+    "col": "rgb(91, 101, 112)",
+    "fw": "400"
+   },
+   {
+    "c": "qa__src",
+    "t": "Fetched 2026-10-15",
+    "ff": "\"Source Sans 3\", system-u",
+    "fs": "12px",
+    "col": "rgb(91, 101, 112)",
+    "fw": "400"
+   },
+   {
+    "c": "mono",
+    "t": "25V744000",
+    "ff": "\"JetBrains Mono\", ui-mono",
+    "fs": "13.8px",
+    "col": "rgb(15, 20, 25)",
+    "fw": "400"
+   }
+  ],
+  "refs": [
+   {
+    "t": "NHTSA recalls database, 2024 Toyota RAV4, fetched 2026-10-15",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "fueleconomy.gov (U.S. EPA / DOE), 2024 Toyota RAV4, fetched 2026-10-15",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "Toyota owner's manual OM0R147U (2024 RAV4), retrieved 2026-10-15",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "Toyota owner's manual OM42L49U (2024 RAV4), retrieved 2026-10-15",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "Toyota owner's manual OM0R069U (2024 RAV4, other production period; oil & tire tables identical for shared configuration",
+    "links": 1,
+    "icons": 0
+   }
+  ],
+  "caption": {
+   "t": "Shown: 2024 RAV4 Hybrid Woodland Edition\nPhoto: MercurySable99 / CC BY-SA 4.0 / Source",
+   "ff": "\"Source Sans 3\", sys",
+   "fs": "13px",
+   "col": "rgb(91, 101, 112)"
+  },
+  "hero": {
+   "tag": "DIV",
+   "w": 0,
+   "h": 0,
+   "ratio": "NaN",
+   "fit": "fill",
+   "disp": "none"
+  },
+  "ads": [
+   "ad ad--below",
+   "ad ad--side(hidden)"
+  ],
+  "print": 0,
+  "cost": false,
+  "caps": [
+   "BACK OVER PREVENTION:DISPLAY FUNCTION",
+   "HYDRAULIC:FOUNDATION COMPONENTS:DISC:CALIPER"
+  ],
+  "brand": [],
+  "h": 4089
+ },
+ "rav4-hub-1280": {
+  "overflowX": 0,
+  "wide": [],
+  "qa_a": [],
+  "qaq": [],
+  "qamore": [],
+  "pref": [],
+  "refs": [],
+  "caption": null,
+  "ads": [],
+  "print": 0,
+  "cost": false,
+  "caps": [],
+  "brand": [],
+  "h": 800
+ },
+ "rav4-hub-390": {
+  "overflowX": 0,
+  "wide": [],
+  "qa_a": [],
+  "qaq": [],
+  "qamore": [],
+  "pref": [],
+  "refs": [],
+  "caption": null,
+  "ads": [],
+  "print": 0,
+  "cost": false,
+  "caps": [],
+  "brand": [],
+  "h": 861
+ },
+ "p0420-1280": {
+  "overflowX": 0,
+  "wide": [],
+  "qa_a": [
+   {
+    "t": "Catalyst System Efficiency Below Threshold (Bank 1",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "It is important to note that an illuminated dashbo",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "Under certain conditions, the dashboard light will",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "Not rated",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "Not yet verified — source pending",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   }
+  ],
+  "qaq": [
+   "WHAT IT MEANS@354",
+   "CAN I KEEP DRIVING?@458",
+   "HOW URGENT?@458",
+   "SHOP VISIT OR CHECK IT YOURSELF FIRST?@458"
+  ],
+  "qamore": [
+   []
+  ],
+  "pref": [
+   {
+    "c": "qa__src",
+    "t": "Wording from Subaru Service Information ",
+    "ff": "\"Source Sans 3\", system-u",
+    "fs": "12px",
+    "col": "rgb(91, 101, 112)",
+    "fw": "400"
+   },
+   {
+    "c": "qa__src",
+    "t": "U.S. EPA Fact Sheet EPA 420-F-97-003 (Ma",
+    "ff": "\"Source Sans 3\", system-u",
+    "fs": "12px",
+    "col": "rgb(91, 101, 112)",
+    "fw": "400"
+   },
+   {
+    "c": "qa__src",
+    "t": "U.S. EPA Fact Sheet EPA 420-F-97-003 (Ma",
+    "ff": "\"Source Sans 3\", system-u",
+    "fs": "12px",
+    "col": "rgb(91, 101, 112)",
+    "fw": "400"
+   }
+  ],
+  "refs": [
+   {
+    "t": "Subaru Service Information Bulletin, DTC P0420 Diagnostic Procedure, p.1, retrieved 2026-10-15",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "U.S. EPA Fact Sheet EPA 420-F-97-003 (May 1997), Frequently Asked Questions About On-Board Diagnostics, p.2, retrieved 2",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "2022 Toyota Camry Owner's Manual OM06244U, p.528, retrieved 2026-10-15",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "Honda Service Bulletin 22-040, p.1, retrieved 2026-10-15",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "Ford TSB 22-2260, p.1, retrieved 2026-10-15",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "Ford TSB 25-2119, p.1, retrieved 2026-10-15",
+    "links": 1,
+    "icons": 0
+   }
+  ],
+  "caption": null,
+  "ads": [
+   "ad ad--side"
+  ],
+  "print": 2,
+  "cost": false,
+  "caps": [],
+  "brand": [
+   {
+    "fs": "15px",
+    "col": "rgb(15, 20, 25)",
+    "top": 946
+   }
+  ],
+  "h": 2304
+ },
+ "p0420-390": {
+  "overflowX": 0,
+  "wide": [],
+  "qa_a": [
+   {
+    "t": "Catalyst System Efficiency Below Threshold (Bank 1",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "It is important to note that an illuminated dashbo",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "Under certain conditions, the dashboard light will",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "Not rated",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "Not yet verified — source pending",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   }
+  ],
+  "qaq": [
+   "WHAT IT MEANS@449",
+   "CAN I KEEP DRIVING?@600",
+   "HOW URGENT?@1308",
+   "SHOP VISIT OR CHECK IT YOURSELF FIRST?@1414"
+  ],
+  "qamore": [
+   []
+  ],
+  "pref": [
+   {
+    "c": "qa__src",
+    "t": "Wording from Subaru Service Information ",
+    "ff": "\"Source Sans 3\", system-u",
+    "fs": "12px",
+    "col": "rgb(91, 101, 112)",
+    "fw": "400"
+   },
+   {
+    "c": "qa__src",
+    "t": "U.S. EPA Fact Sheet EPA 420-F-97-003 (Ma",
+    "ff": "\"Source Sans 3\", system-u",
+    "fs": "12px",
+    "col": "rgb(91, 101, 112)",
+    "fw": "400"
+   },
+   {
+    "c": "qa__src",
+    "t": "U.S. EPA Fact Sheet EPA 420-F-97-003 (Ma",
+    "ff": "\"Source Sans 3\", system-u",
+    "fs": "12px",
+    "col": "rgb(91, 101, 112)",
+    "fw": "400"
+   }
+  ],
+  "refs": [
+   {
+    "t": "Subaru Service Information Bulletin, DTC P0420 Diagnostic Procedure, p.1, retrieved 2026-10-15",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "U.S. EPA Fact Sheet EPA 420-F-97-003 (May 1997), Frequently Asked Questions About On-Board Diagnostics, p.2, retrieved 2",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "2022 Toyota Camry Owner's Manual OM06244U, p.528, retrieved 2026-10-15",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "Honda Service Bulletin 22-040, p.1, retrieved 2026-10-15",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "Ford TSB 22-2260, p.1, retrieved 2026-10-15",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "Ford TSB 25-2119, p.1, retrieved 2026-10-15",
+    "links": 1,
+    "icons": 0
+   }
+  ],
+  "caption": null,
+  "ads": [
+   "ad ad--side(hidden)"
+  ],
+  "print": 0,
+  "cost": false,
+  "caps": [],
+  "brand": [
+   {
+    "fs": "15px",
+    "col": "rgb(15, 20, 25)",
+    "top": 1139
+   }
+  ],
+  "h": 3187
+ },
+ "p0171-1280": {
+  "overflowX": 0,
+  "wide": [],
+  "qa_a": [
+   {
+    "t": "System Too Lean (Bank 1)\n[1]",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "It is important to note that an illuminated dashbo",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "Under certain conditions, the dashboard light will",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "Not rated",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "Not yet verified — source pending",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   }
+  ],
+  "qaq": [
+   "WHAT IT MEANS@354",
+   "CAN I KEEP DRIVING?@458",
+   "HOW URGENT?@458",
+   "SHOP VISIT OR CHECK IT YOURSELF FIRST?@458"
+  ],
+  "qamore": [
+   []
+  ],
+  "pref": [
+   {
+    "c": "qa__src",
+    "t": "Source wording: “P0171: System too Lean ",
+    "ff": "\"Source Sans 3\", system-u",
+    "fs": "12px",
+    "col": "rgb(91, 101, 112)",
+    "fw": "400"
+   },
+   {
+    "c": "qa__src",
+    "t": "U.S. EPA Fact Sheet EPA 420-F-97-003 (Ma",
+    "ff": "\"Source Sans 3\", system-u",
+    "fs": "12px",
+    "col": "rgb(91, 101, 112)",
+    "fw": "400"
+   },
+   {
+    "c": "qa__src",
+    "t": "U.S. EPA Fact Sheet EPA 420-F-97-003 (Ma",
+    "ff": "\"Source Sans 3\", system-u",
+    "fs": "12px",
+    "col": "rgb(91, 101, 112)",
+    "fw": "400"
+   }
+  ],
+  "refs": [
+   {
+    "t": "Mitsubishi service manual 13A-DTC P0171 (2022), web page, retrieved 2026-10-15",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "U.S. EPA Fact Sheet EPA 420-F-97-003 (May 1997), Frequently Asked Questions About On-Board Diagnostics, p.2, retrieved 2",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "2022 Toyota Camry Owner's Manual OM06244U, p.533, retrieved 2026-10-15",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "GM PI1307 (2012-2014 Sonic), p.1, retrieved 2026-10-15",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "Ford PIP5549, p.1, retrieved 2026-10-15",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "Mazda M-Tip (P0171 Fuel Trim too Lean), p.1-2, retrieved 2026-10-15",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "VW Tech Tip 01-14-01TT, p.1, retrieved 2026-10-15",
+    "links": 1,
+    "icons": 0
+   }
+  ],
+  "caption": null,
+  "ads": [
+   "ad ad--side"
+  ],
+  "print": 2,
+  "cost": false,
+  "caps": [],
+  "brand": [
+   {
+    "fs": "15px",
+    "col": "rgb(15, 20, 25)",
+    "top": 946
+   },
+   {
+    "fs": "15px",
+    "col": "rgb(15, 20, 25)",
+    "top": 1113
+   }
+  ],
+  "h": 2500
+ },
+ "p0171-390": {
+  "overflowX": 0,
+  "wide": [],
+  "qa_a": [
+   {
+    "t": "System Too Lean (Bank 1)\n[1]",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "It is important to note that an illuminated dashbo",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "Under certain conditions, the dashboard light will",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "Not rated",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "Not yet verified — source pending",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   }
+  ],
+  "qaq": [
+   "WHAT IT MEANS@382",
+   "CAN I KEEP DRIVING?@504",
+   "HOW URGENT?@1401",
+   "SHOP VISIT OR CHECK IT YOURSELF FIRST?@1507"
+  ],
+  "qamore": [
+   []
+  ],
+  "pref": [
+   {
+    "c": "qa__src",
+    "t": "Source wording: “P0171: System too Lean ",
+    "ff": "\"Source Sans 3\", system-u",
+    "fs": "12px",
+    "col": "rgb(91, 101, 112)",
+    "fw": "400"
+   },
+   {
+    "c": "qa__src",
+    "t": "U.S. EPA Fact Sheet EPA 420-F-97-003 (Ma",
+    "ff": "\"Source Sans 3\", system-u",
+    "fs": "12px",
+    "col": "rgb(91, 101, 112)",
+    "fw": "400"
+   },
+   {
+    "c": "qa__src",
+    "t": "U.S. EPA Fact Sheet EPA 420-F-97-003 (Ma",
+    "ff": "\"Source Sans 3\", system-u",
+    "fs": "12px",
+    "col": "rgb(91, 101, 112)",
+    "fw": "400"
+   }
+  ],
+  "refs": [
+   {
+    "t": "Mitsubishi service manual 13A-DTC P0171 (2022), web page, retrieved 2026-10-15",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "U.S. EPA Fact Sheet EPA 420-F-97-003 (May 1997), Frequently Asked Questions About On-Board Diagnostics, p.2, retrieved 2",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "2022 Toyota Camry Owner's Manual OM06244U, p.533, retrieved 2026-10-15",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "GM PI1307 (2012-2014 Sonic), p.1, retrieved 2026-10-15",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "Ford PIP5549, p.1, retrieved 2026-10-15",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "Mazda M-Tip (P0171 Fuel Trim too Lean), p.1-2, retrieved 2026-10-15",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "VW Tech Tip 01-14-01TT, p.1, retrieved 2026-10-15",
+    "links": 1,
+    "icons": 0
+   }
+  ],
+  "caption": null,
+  "ads": [
+   "ad ad--side(hidden)"
+  ],
+  "print": 0,
+  "cost": false,
+  "caps": [],
+  "brand": [
+   {
+    "fs": "15px",
+    "col": "rgb(15, 20, 25)",
+    "top": 1042
+   },
+   {
+    "fs": "15px",
+    "col": "rgb(15, 20, 25)",
+    "top": 1232
+   }
+  ],
+  "h": 3306
+ },
+ "p0300-1280": {
+  "overflowX": 0,
+  "wide": [],
+  "qa_a": [
+   {
+    "t": "Random/Multiple Cylinder Misfire Detected\n[1]",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "Under certain conditions, the dashboard light will",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "It is important to note that an illuminated dashbo",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "Not rated",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "Not yet verified — source pending",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   }
+  ],
+  "qaq": [
+   "WHAT IT MEANS@354",
+   "CAN I KEEP DRIVING?@458",
+   "HOW URGENT?@458",
+   "SHOP VISIT OR CHECK IT YOURSELF FIRST?@458"
+  ],
+  "qamore": [
+   []
+  ],
+  "pref": [
+   {
+    "c": "qa__src",
+    "t": "Wording from VW TSB 01-16-13 Engine Misf",
+    "ff": "\"Source Sans 3\", system-u",
+    "fs": "12px",
+    "col": "rgb(91, 101, 112)",
+    "fw": "400"
+   },
+   {
+    "c": "qa__src",
+    "t": "U.S. EPA Fact Sheet EPA 420-F-97-003 (Ma",
+    "ff": "\"Source Sans 3\", system-u",
+    "fs": "12px",
+    "col": "rgb(91, 101, 112)",
+    "fw": "400"
+   },
+   {
+    "c": "qa__src",
+    "t": "U.S. EPA Fact Sheet EPA 420-F-97-003 (Ma",
+    "ff": "\"Source Sans 3\", system-u",
+    "fs": "12px",
+    "col": "rgb(91, 101, 112)",
+    "fw": "400"
+   }
+  ],
+  "refs": [
+   {
+    "t": "VW TSB 01-16-13 Engine Misfire Diagnostic Aid, p.1, retrieved 2026-10-15",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "U.S. EPA Fact Sheet EPA 420-F-97-003 (May 1997), Frequently Asked Questions About On-Board Diagnostics, p.2, retrieved 2",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "Ford 2023 Motorhome (chassis) Owner's Manual, hosted by NHTSA in investigation PE24-023, PDF p.33 (Instrument Cluster), ",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "2022 Toyota Camry Owner's Manual OM06244U, p.528, retrieved 2026-10-15",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "GM 15-06-01-002M, p.1, retrieved 2026-10-15",
+    "links": 1,
+    "icons": 0
+   }
+  ],
+  "caption": null,
+  "ads": [
+   "ad ad--side"
+  ],
+  "print": 2,
+  "cost": false,
+  "caps": [],
+  "brand": [
+   {
+    "fs": "15px",
+    "col": "rgb(15, 20, 25)",
+    "top": 946
+   },
+   {
+    "fs": "15px",
+    "col": "rgb(15, 20, 25)",
+    "top": 1091
+   }
+  ],
+  "h": 2460
+ },
+ "p0300-390": {
+  "overflowX": 0,
+  "wide": [],
+  "qa_a": [
+   {
+    "t": "Random/Multiple Cylinder Misfire Detected\n[1]",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "Under certain conditions, the dashboard light will",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "It is important to note that an illuminated dashbo",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "Not rated",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "Not yet verified — source pending",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   }
+  ],
+  "qaq": [
+   "WHAT IT MEANS@449",
+   "CAN I KEEP DRIVING?@582",
+   "HOW URGENT?@1435",
+   "SHOP VISIT OR CHECK IT YOURSELF FIRST?@1540"
+  ],
+  "qamore": [
+   []
+  ],
+  "pref": [
+   {
+    "c": "qa__src",
+    "t": "Wording from VW TSB 01-16-13 Engine Misf",
+    "ff": "\"Source Sans 3\", system-u",
+    "fs": "12px",
+    "col": "rgb(91, 101, 112)",
+    "fw": "400"
+   },
+   {
+    "c": "qa__src",
+    "t": "U.S. EPA Fact Sheet EPA 420-F-97-003 (Ma",
+    "ff": "\"Source Sans 3\", system-u",
+    "fs": "12px",
+    "col": "rgb(91, 101, 112)",
+    "fw": "400"
+   },
+   {
+    "c": "qa__src",
+    "t": "U.S. EPA Fact Sheet EPA 420-F-97-003 (Ma",
+    "ff": "\"Source Sans 3\", system-u",
+    "fs": "12px",
+    "col": "rgb(91, 101, 112)",
+    "fw": "400"
+   }
+  ],
+  "refs": [
+   {
+    "t": "VW TSB 01-16-13 Engine Misfire Diagnostic Aid, p.1, retrieved 2026-10-15",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "U.S. EPA Fact Sheet EPA 420-F-97-003 (May 1997), Frequently Asked Questions About On-Board Diagnostics, p.2, retrieved 2",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "Ford 2023 Motorhome (chassis) Owner's Manual, hosted by NHTSA in investigation PE24-023, PDF p.33 (Instrument Cluster), ",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "2022 Toyota Camry Owner's Manual OM06244U, p.528, retrieved 2026-10-15",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "GM 15-06-01-002M, p.1, retrieved 2026-10-15",
+    "links": 1,
+    "icons": 0
+   }
+  ],
+  "caption": null,
+  "ads": [
+   "ad ad--side(hidden)"
+  ],
+  "print": 0,
+  "cost": false,
+  "caps": [],
+  "brand": [
+   {
+    "fs": "15px",
+    "col": "rgb(15, 20, 25)",
+    "top": 1121
+   },
+   {
+    "fs": "15px",
+    "col": "rgb(15, 20, 25)",
+    "top": 1265
+   }
+  ],
+  "h": 3274
+ },
+ "p0456-1280": {
+  "overflowX": 0,
+  "wide": [],
+  "qa_a": [
+   {
+    "t": "Evaporative Emission System Leak Detected (Very Sm",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "It is important to note that an illuminated dashbo",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "Under certain conditions, the dashboard light will",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "Not rated",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "Not yet verified — source pending",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   }
+  ],
+  "qaq": [
+   "WHAT IT MEANS@354",
+   "CAN I KEEP DRIVING?@458",
+   "HOW URGENT?@458",
+   "SHOP VISIT OR CHECK IT YOURSELF FIRST?@458"
+  ],
+  "qamore": [
+   []
+  ],
+  "pref": [
+   {
+    "c": "qa__src",
+    "t": "Source wording: “P0456: EVAP system leak",
+    "ff": "\"Source Sans 3\", system-u",
+    "fs": "12px",
+    "col": "rgb(91, 101, 112)",
+    "fw": "400"
+   },
+   {
+    "c": "qa__src",
+    "t": "U.S. EPA Fact Sheet EPA 420-F-97-003 (Ma",
+    "ff": "\"Source Sans 3\", system-u",
+    "fs": "12px",
+    "col": "rgb(91, 101, 112)",
+    "fw": "400"
+   },
+   {
+    "c": "qa__src",
+    "t": "U.S. EPA Fact Sheet EPA 420-F-97-003 (Ma",
+    "ff": "\"Source Sans 3\", system-u",
+    "fs": "12px",
+    "col": "rgb(91, 101, 112)",
+    "fw": "400"
+   }
+  ],
+  "refs": [
+   {
+    "t": "Mazda Service Bulletin 01-013/18, p.1, retrieved 2026-10-15",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "U.S. EPA Fact Sheet EPA 420-F-97-003 (May 1997), Frequently Asked Questions About On-Board Diagnostics, p.2, retrieved 2",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "2022 Toyota Camry Owner's Manual OM06244U, p.533, retrieved 2026-10-15",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "Nissan TSB: DTC P0456 caused by EVAP leak at vent control valve O-ring, p.1, retrieved 2026-10-15",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "Stellantis wiTECH SLVT P0456 communication, p.1, retrieved 2026-10-15",
+    "links": 1,
+    "icons": 0
+   }
+  ],
+  "caption": null,
+  "ads": [
+   "ad ad--side"
+  ],
+  "print": 2,
+  "cost": false,
+  "caps": [],
+  "brand": [
+   {
+    "fs": "15px",
+    "col": "rgb(15, 20, 25)",
+    "top": 946
+   },
+   {
+    "fs": "15px",
+    "col": "rgb(15, 20, 25)",
+    "top": 1113
+   },
+   {
+    "fs": "15px",
+    "col": "rgb(15, 20, 25)",
+    "top": 1213
+   }
+  ],
+  "h": 2627
+ },
+ "p0456-390": {
+  "overflowX": 0,
+  "wide": [],
+  "qa_a": [
+   {
+    "t": "Evaporative Emission System Leak Detected (Very Sm",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "It is important to note that an illuminated dashbo",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "Under certain conditions, the dashboard light will",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "Not rated",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "Not yet verified — source pending",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   }
+  ],
+  "qaq": [
+   "WHAT IT MEANS@449",
+   "CAN I KEEP DRIVING?@600",
+   "HOW URGENT?@1597",
+   "SHOP VISIT OR CHECK IT YOURSELF FIRST?@1703"
+  ],
+  "qamore": [
+   []
+  ],
+  "pref": [
+   {
+    "c": "qa__src",
+    "t": "Source wording: “P0456: EVAP system leak",
+    "ff": "\"Source Sans 3\", system-u",
+    "fs": "12px",
+    "col": "rgb(91, 101, 112)",
+    "fw": "400"
+   },
+   {
+    "c": "qa__src",
+    "t": "U.S. EPA Fact Sheet EPA 420-F-97-003 (Ma",
+    "ff": "\"Source Sans 3\", system-u",
+    "fs": "12px",
+    "col": "rgb(91, 101, 112)",
+    "fw": "400"
+   },
+   {
+    "c": "qa__src",
+    "t": "U.S. EPA Fact Sheet EPA 420-F-97-003 (Ma",
+    "ff": "\"Source Sans 3\", system-u",
+    "fs": "12px",
+    "col": "rgb(91, 101, 112)",
+    "fw": "400"
+   }
+  ],
+  "refs": [
+   {
+    "t": "Mazda Service Bulletin 01-013/18, p.1, retrieved 2026-10-15",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "U.S. EPA Fact Sheet EPA 420-F-97-003 (May 1997), Frequently Asked Questions About On-Board Diagnostics, p.2, retrieved 2",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "2022 Toyota Camry Owner's Manual OM06244U, p.533, retrieved 2026-10-15",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "Nissan TSB: DTC P0456 caused by EVAP leak at vent control valve O-ring, p.1, retrieved 2026-10-15",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "Stellantis wiTECH SLVT P0456 communication, p.1, retrieved 2026-10-15",
+    "links": 1,
+    "icons": 0
+   }
+  ],
+  "caption": null,
+  "ads": [
+   "ad ad--side(hidden)"
+  ],
+  "print": 0,
+  "cost": false,
+  "caps": [],
+  "brand": [
+   {
+    "fs": "15px",
+    "col": "rgb(15, 20, 25)",
+    "top": 1139
+   },
+   {
+    "fs": "15px",
+    "col": "rgb(15, 20, 25)",
+    "top": 1328
+   },
+   {
+    "fs": "15px",
+    "col": "rgb(15, 20, 25)",
+    "top": 1428
+   }
+  ],
+  "h": 3501
+ },
+ "p0455-1280": {
+  "overflowX": 0,
+  "wide": [],
+  "qa_a": [
+   {
+    "t": "Evaporative Emission System Large Leak Detected\n[1",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "It is important to note that an illuminated dashbo",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "Under certain conditions, the dashboard light will",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "Not rated",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "Not yet verified — source pending",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   }
+  ],
+  "qaq": [
+   "WHAT IT MEANS@354",
+   "CAN I KEEP DRIVING?@458",
+   "HOW URGENT?@458",
+   "SHOP VISIT OR CHECK IT YOURSELF FIRST?@458"
+  ],
+  "qamore": [
+   []
+  ],
+  "pref": [
+   {
+    "c": "qa__src",
+    "t": "Wording from GM Service Bulletin 21-NA-1",
+    "ff": "\"Source Sans 3\", system-u",
+    "fs": "12px",
+    "col": "rgb(91, 101, 112)",
+    "fw": "400"
+   },
+   {
+    "c": "qa__src",
+    "t": "U.S. EPA Fact Sheet EPA 420-F-97-003 (Ma",
+    "ff": "\"Source Sans 3\", system-u",
+    "fs": "12px",
+    "col": "rgb(91, 101, 112)",
+    "fw": "400"
+   },
+   {
+    "c": "qa__src",
+    "t": "U.S. EPA Fact Sheet EPA 420-F-97-003 (Ma",
+    "ff": "\"Source Sans 3\", system-u",
+    "fs": "12px",
+    "col": "rgb(91, 101, 112)",
+    "fw": "400"
+   }
+  ],
+  "refs": [
+   {
+    "t": "GM Service Bulletin 21-NA-124 (EVAP P0442/P0455 diagnostic tips), p.1, retrieved 2026-10-15",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "U.S. EPA Fact Sheet EPA 420-F-97-003 (May 1997), Frequently Asked Questions About On-Board Diagnostics, p.2, retrieved 2",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "2022 Toyota Camry Owner's Manual OM06244U, p.533, retrieved 2026-10-15",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "Honda/Acura service bulletin (i-HDS), MC-10219672, p.1, retrieved 2026-10-15",
+    "links": 1,
+    "icons": 0
+   }
+  ],
+  "caption": null,
+  "ads": [
+   "ad ad--side"
+  ],
+  "print": 2,
+  "cost": false,
+  "caps": [],
+  "brand": [
+   {
+    "fs": "15px",
+    "col": "rgb(15, 20, 25)",
+    "top": 946
+   },
+   {
+    "fs": "15px",
+    "col": "rgb(15, 20, 25)",
+    "top": 1113
+   },
+   {
+    "fs": "15px",
+    "col": "rgb(15, 20, 25)",
+    "top": 1213
+   }
+  ],
+  "h": 2865
+ },
+ "p0455-390": {
+  "overflowX": 0,
+  "wide": [],
+  "qa_a": [
+   {
+    "t": "Evaporative Emission System Large Leak Detected\n[1",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "It is important to note that an illuminated dashbo",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "Under certain conditions, the dashboard light will",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "Not rated",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   },
+   {
+    "t": "Not yet verified — source pending",
+    "fs": "20px",
+    "ff": "Archivo, system-ui, ",
+    "fw": "800"
+   }
+  ],
+  "qaq": [
+   "WHAT IT MEANS@416",
+   "CAN I KEEP DRIVING?@566",
+   "HOW URGENT?@1564",
+   "SHOP VISIT OR CHECK IT YOURSELF FIRST?@1669"
+  ],
+  "qamore": [
+   []
+  ],
+  "pref": [
+   {
+    "c": "qa__src",
+    "t": "Wording from GM Service Bulletin 21-NA-1",
+    "ff": "\"Source Sans 3\", system-u",
+    "fs": "12px",
+    "col": "rgb(91, 101, 112)",
+    "fw": "400"
+   },
+   {
+    "c": "qa__src",
+    "t": "U.S. EPA Fact Sheet EPA 420-F-97-003 (Ma",
+    "ff": "\"Source Sans 3\", system-u",
+    "fs": "12px",
+    "col": "rgb(91, 101, 112)",
+    "fw": "400"
+   },
+   {
+    "c": "qa__src",
+    "t": "U.S. EPA Fact Sheet EPA 420-F-97-003 (Ma",
+    "ff": "\"Source Sans 3\", system-u",
+    "fs": "12px",
+    "col": "rgb(91, 101, 112)",
+    "fw": "400"
+   }
+  ],
+  "refs": [
+   {
+    "t": "GM Service Bulletin 21-NA-124 (EVAP P0442/P0455 diagnostic tips), p.1, retrieved 2026-10-15",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "U.S. EPA Fact Sheet EPA 420-F-97-003 (May 1997), Frequently Asked Questions About On-Board Diagnostics, p.2, retrieved 2",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "2022 Toyota Camry Owner's Manual OM06244U, p.533, retrieved 2026-10-15",
+    "links": 1,
+    "icons": 0
+   },
+   {
+    "t": "Honda/Acura service bulletin (i-HDS), MC-10219672, p.1, retrieved 2026-10-15",
+    "links": 1,
+    "icons": 0
+   }
+  ],
+  "caption": null,
+  "ads": [
+   "ad ad--side(hidden)"
+  ],
+  "print": 0,
+  "cost": false,
+  "caps": [],
+  "brand": [
+   {
+    "fs": "15px",
+    "col": "rgb(15, 20, 25)",
+    "top": 1105
+   },
+   {
+    "fs": "15px",
+    "col": "rgb(15, 20, 25)",
+    "top": 1295
+   },
+   {
+    "fs": "15px",
+    "col": "rgb(15, 20, 25)",
+    "top": 1394
+   }
+  ],
+  "h": 3819
+ },
+ "codes-1280": {
+  "overflowX": 0,
+  "wide": [],
+  "qa_a": [],
+  "qaq": [],
+  "qamore": [],
+  "pref": [],
+  "refs": [],
+  "caption": null,
+  "ads": [],
+  "print": 0,
+  "cost": false,
+  "caps": [],
+  "brand": [],
+  "h": 800
+ },
+ "codes-390": {
+  "overflowX": 0,
+  "wide": [],
+  "qa_a": [],
+  "qaq": [],
+  "qamore": [],
+  "pref": [],
+  "refs": [],
+  "caption": null,
+  "ads": [],
+  "print": 0,
+  "cost": false,
+  "caps": [],
+  "brand": [],
+  "h": 877
+ }
+}

@@ -1,0 +1,16 @@
+---
+// R-A1 / R-A3: UI + client logic; storage backend is a pluggable stub (public/feedback.js). No cookies, no personal data.
+const { path } = Astro.props;
+---
+<section id="feedback" class="feedback" aria-label="Feedback" data-page={path}>
+  <div class="feedback__row"><h2 class="feedback__q">Did this solve your problem?</h2>
+    <button class="btn" type="button" data-feedback="yes" aria-pressed="false">Yes</button>
+    <button class="btn" type="button" data-feedback="no" aria-pressed="false">No</button></div>
+  <p class="feedback__msg" role="status"></p>
+  <div class="feedback__more" hidden>
+    <label class="qa__q" for="fb-text">What was missing? (optional, no personal info)</label>
+    <textarea id="fb-text" maxlength="1000"></textarea>
+    <div><button class="btn btn--primary" type="button" data-feedback-send>Send</button></div>
+  </div>
+  <p class="report" id="report">Spotted a wrong number? <a href={`/contact/?report=${encodeURIComponent(path)}#report-form`}>Report a data error</a>. Corrections are reviewed and logged.</p>
+</section>

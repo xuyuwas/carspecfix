@@ -1,0 +1,87 @@
+{
+  "slug": "car-cranks-but-wont-start",
+  "type": "symptom",
+  "code": null,
+  "title": "Car cranks but won't start",
+  "targetKeyword": "car cranks but won't start",
+  "definition": null,
+  "causes": [
+    {
+      "text": "Insufficient fuel",
+      "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+      "document": "2022 Toyota Camry Owner's Manual OM06244U (year mapping per Helm listing; manual is Camry-specific)",
+      "page": "p.557",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "Toyota",
+      "docKind": "owner's manual",
+      "appliesTo": "Toyota Camry",
+      "quote": null
+    },
+    {
+      "text": "Engine flooded",
+      "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+      "document": "2022 Toyota Camry Owner's Manual OM06244U (year mapping per Helm listing; manual is Camry-specific)",
+      "page": "p.557",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "Toyota",
+      "docKind": "owner's manual",
+      "appliesTo": "Toyota Camry",
+      "quote": null
+    },
+    {
+      "text": "Engine immobilizer malfunction",
+      "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+      "document": "2022 Toyota Camry Owner's Manual OM06244U (year mapping per Helm listing; manual is Camry-specific)",
+      "page": "p.557",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "Toyota",
+      "docKind": "owner's manual",
+      "appliesTo": "Toyota Camry",
+      "quote": null
+    }
+  ],
+  "urgency": [],
+  "guidancePrimary": "Not yet verified (no universal source); brand quotes are vehicle-specific extras only",
+  "guidance": [
+    {
+      "text": "The engine will not start even though the starter motor operates normally. One of the following may be the cause of the problem: There may not be sufficient fuel in the vehicle's tank. Refuel the vehicle. The engine may be flooded. Try to restart the engine again following correct starting procedures.",
+      "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+      "document": "2022 Toyota Camry Owner's Manual OM06244U",
+      "page": "p.557",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "Toyota",
+      "docKind": "owner's manual",
+      "appliesTo": "vehicle-specific: Toyota Camry 2022",
+      "quote": "The engine will not start even though the starter motor operates normally. One of the following may be the cause of the problem: There may not be sufficient fuel in the vehicle's tank. Refuel the vehicle. The engine may be flooded. Try to restart the engine again following correct starting procedures.",
+      "answers": "check yourself first (fuel, retry start)",
+      "allBrands": false
+    },
+    {
+      "text": "Contact your Toyota dealer if the problem cannot be repaired, or if repair procedures are unknown.",
+      "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+      "document": "2022 Toyota Camry Owner's Manual OM06244U",
+      "page": "p.558",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "Toyota",
+      "docKind": "owner's manual",
+      "appliesTo": "vehicle-specific: Toyota Camry 2022",
+      "quote": "Contact your Toyota dealer if the problem cannot be repaired, or if repair procedures are unknown.",
+      "answers": "shop if not resolved",
+      "allBrands": false
+    }
+  ],
+  "firstStep": null,
+  "safetyCritical": false,
+  "related": {
+    "issues": [],
+    "vehicles": []
+  },
+  "publishDate": null,
+  "dataUpdated": "2026-10-15",
+  "signOff": null
+}

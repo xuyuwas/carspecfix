@@ -1,0 +1,143 @@
+{
+  "slug": "p0420",
+  "type": "code",
+  "code": "P0420",
+  "title": "P0420",
+  "targetKeyword": "P0420 code",
+  "definition": {
+    "text": "P0420: Catalyst System Efficiency Below Threshold (Bank 1)",
+    "url": "https://static.nhtsa.gov/odi/tsbs/2023/MC-10244906-0001.pdf",
+    "document": "Subaru Service Information Bulletin, DTC P0420 Diagnostic Procedure",
+    "page": "p.1",
+    "fetched": "2026-10-15",
+    "sourceGrade": "A",
+    "maker": "Subaru",
+    "docKind": "service bulletin",
+    "appliesTo": "Subaru wording",
+    "quote": null,
+    "value": "Catalyst System Efficiency Below Threshold (Bank 1)",
+    "sourceText": "P0420: Catalyst System Efficiency Below Threshold (Bank 1)"
+  },
+  "causes": [
+    {
+      "text": "Other engine/O2/fuel DTCs must be fixed first; then mode 6 catalyst test before replacement",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2023/MC-10244906-0001.pdf",
+      "document": "Subaru SIB P0420",
+      "page": "p.1-2",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "Subaru",
+      "docKind": "service bulletin",
+      "appliesTo": "2017-19MY Legacy & Outback 2.5L; 2020-23MY Legacy & Outback; 2017-23MY Impreza & Crosstrek; 2017-18MY Forester 2.5L; 2019-23MY Forester; 2017-23MY WRX; 2019-21MY Ascent (Subaru SIB 09-110-23, APPLICABILITY, verbatim)",
+      "quote": null
+    },
+    {
+      "text": "Sensors misinterpret catalyst as deteriorated, or catalyst actually deteriorated; PGM-FI software update",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2022/MC-10222076-0001.pdf",
+      "document": "Honda Service Bulletin 22-040",
+      "page": "p.1",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "Honda",
+      "docKind": "service bulletin",
+      "appliesTo": "2014-16 Honda CR-Z",
+      "quote": "Sensors on the vehicle may misinterpret the catalyst as deteriorated or it may have deteriorated."
+    },
+    {
+      "text": "High sulfur content in fuel; desulfation procedure",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2023/MC-10230765-0001.pdf",
+      "document": "Ford TSB 22-2260",
+      "page": "p.1",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "Ford",
+      "docKind": "service bulletin",
+      "appliesTo": "2018-20 F-150 2.7L, 2020-21 Expedition/Navigator",
+      "quote": null
+    },
+    {
+      "text": "PCM software",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2025/MC-11016083-0001.pdf",
+      "document": "Ford TSB 25-2119",
+      "page": "p.1",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "Ford",
+      "docKind": "service bulletin",
+      "appliesTo": "2021-2022 F-Super Duty 7.3L, Pickup only",
+      "quote": null
+    }
+  ],
+  "urgency": [],
+  "guidancePrimary": "universal: EPA 420-F-97-003 p.2 (steady: service ASAP, not need to stop; flashing: reduce speed, service ASAP)",
+  "guidance": [
+    {
+      "text": "It is important to note that an illuminated dashboard light, as described here, is intended to inform the driver of the need for service, NOT of the need to stop the vehicle. However, service should be sought as soon as possible.",
+      "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1009Z15.TXT",
+      "document": "U.S. EPA Fact Sheet EPA 420-F-97-003 (May 1997), Frequently Asked Questions About On-Board Diagnostics",
+      "page": "p.2",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "U.S. EPA",
+      "docKind": "fact sheet",
+      "appliesTo": "universal",
+      "quote": "It is important to note that an illuminated dashboard light, as described here, is intended to inform the driver of the need for service, NOT of the need to stop the vehicle. However, service should be sought as soon as possible.",
+      "answers": "can_i_keep_driving (steady light): yes; urgency: service as soon as possible",
+      "allBrands": true
+    },
+    {
+      "text": "Under certain conditions, the dashboard light will blink or flash. This indicates a rather severe level of engine misfire. When this occurs, the driver should reduce speed and seek service as soon as possible.",
+      "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1009Z15.TXT",
+      "document": "U.S. EPA Fact Sheet EPA 420-F-97-003 (May 1997), Frequently Asked Questions About On-Board Diagnostics",
+      "page": "p.2",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "U.S. EPA",
+      "docKind": "fact sheet",
+      "appliesTo": "universal",
+      "quote": "Under certain conditions, the dashboard light will blink or flash. This indicates a rather severe level of engine misfire. When this occurs, the driver should reduce speed and seek service as soon as possible.",
+      "answers": "flashing light: reduce speed, seek service as soon as possible",
+      "allBrands": true
+    },
+    {
+      "text": "Malfunction indicator lamp ... Indicates a malfunction in: The electronic engine control system; The electronic throttle control system; or The electronic automatic transmission control system → Have the vehicle inspected by your Toyota dealer immediately.",
+      "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+      "document": "2022 Toyota Camry Owner's Manual OM06244U",
+      "page": "p.528",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "Toyota",
+      "docKind": "owner's manual",
+      "appliesTo": "vehicle-specific: Toyota Camry 2022",
+      "quote": "Malfunction indicator lamp ... Indicates a malfunction in: The electronic engine control system; The electronic throttle control system; or The electronic automatic transmission control system → Have the vehicle inspected by your Toyota dealer immediately.",
+      "answers": "urgency per Toyota warning-light table: inspect immediately (note: stricter than p.533 and EPA)",
+      "allBrands": false
+    },
+    {
+      "text": "Only qualified, trained technicians equipped with the newest diagnostic and repair equipment should conduct OBD related service.",
+      "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1009Z15.TXT",
+      "document": "U.S. EPA Fact Sheet EPA 420-F-97-003 (May 1997), Frequently Asked Questions About On-Board Diagnostics",
+      "page": "p.4",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "U.S. EPA",
+      "docKind": "fact sheet",
+      "appliesTo": "universal",
+      "quote": "Only qualified, trained technicians equipped with the newest diagnostic and repair equipment should conduct OBD related service.",
+      "answers": "shop vs self: repair at a qualified shop",
+      "allBrands": true
+    }
+  ],
+  "firstStep": null,
+  "safetyCritical": false,
+  "related": {
+    "issues": [],
+    "vehicles": []
+  },
+  "publishDate": "2026-10-16",
+  "dataUpdated": "2026-10-15",
+  "signOff": {
+    "by": "小数",
+    "date": "2026-10-15"
+  }
+}

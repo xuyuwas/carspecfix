@@ -1,0 +1,176 @@
+{
+  "slug": "p0456",
+  "type": "code",
+  "code": "P0456",
+  "title": "P0456",
+  "targetKeyword": "P0456 code",
+  "definition": {
+    "text": "P0456: EVAP system leak detected (very small leak)",
+    "url": "https://static.nhtsa.gov/odi/tsbs/2018/MC-10142517-9999.pdf",
+    "document": "Mazda Service Bulletin 01-013/18",
+    "page": "p.1",
+    "fetched": "2026-10-15",
+    "sourceGrade": "A",
+    "maker": "Mazda",
+    "docKind": "service bulletin",
+    "appliesTo": "Mazda wording",
+    "quote": null,
+    "value": "Evaporative Emission System Leak Detected (Very Small Leak)",
+    "sourceText": "P0456: EVAP system leak detected (very small leak)"
+  },
+  "causes": [
+    {
+      "text": "Fuel cap not completely closed after fueling",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2018/MC-10142517-9999.pdf",
+      "document": "Mazda Service Bulletin 01-013/18",
+      "page": "p.1",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "Mazda",
+      "docKind": "service bulletin",
+      "appliesTo": "Mazda models in bulletin",
+      "quote": "The concern is most likely the result of the customer not getting the fuel cap completely closed after fueling the vehicle."
+    },
+    {
+      "text": "EVAP leak at vent control valve O-ring",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2019/MC-10153007-9999.pdf",
+      "document": "Nissan TSB: DTC P0456 caused by EVAP leak at vent control valve O-ring",
+      "page": "p.1",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "Nissan",
+      "docKind": "service bulletin",
+      "appliesTo": "Applied Nissan vehicles only; bulletin states not caused by loose cap for those vehicles",
+      "quote": null
+    },
+    {
+      "text": "Some P0456 concerns corrected by PCM software update (Stellantis; SLVT required)",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2023/MC-10236933-9999.pdf",
+      "document": "Stellantis wiTECH SLVT P0456 communication",
+      "page": "p.1",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "Stellantis",
+      "docKind": "service bulletin",
+      "appliesTo": "Stellantis vehicles",
+      "quote": null
+    }
+  ],
+  "urgency": [],
+  "guidancePrimary": "universal: EPA 420-F-97-003 p.2 (steady: service ASAP, not need to stop; flashing: reduce speed, service ASAP)",
+  "guidance": [
+    {
+      "text": "It is important to note that an illuminated dashboard light, as described here, is intended to inform the driver of the need for service, NOT of the need to stop the vehicle. However, service should be sought as soon as possible.",
+      "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1009Z15.TXT",
+      "document": "U.S. EPA Fact Sheet EPA 420-F-97-003 (May 1997), Frequently Asked Questions About On-Board Diagnostics",
+      "page": "p.2",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "U.S. EPA",
+      "docKind": "fact sheet",
+      "appliesTo": "universal",
+      "quote": "It is important to note that an illuminated dashboard light, as described here, is intended to inform the driver of the need for service, NOT of the need to stop the vehicle. However, service should be sought as soon as possible.",
+      "answers": "can_i_keep_driving (steady light): yes; urgency: service as soon as possible",
+      "allBrands": true
+    },
+    {
+      "text": "Under certain conditions, the dashboard light will blink or flash. This indicates a rather severe level of engine misfire. When this occurs, the driver should reduce speed and seek service as soon as possible.",
+      "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1009Z15.TXT",
+      "document": "U.S. EPA Fact Sheet EPA 420-F-97-003 (May 1997), Frequently Asked Questions About On-Board Diagnostics",
+      "page": "p.2",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "U.S. EPA",
+      "docKind": "fact sheet",
+      "appliesTo": "universal",
+      "quote": "Under certain conditions, the dashboard light will blink or flash. This indicates a rather severe level of engine misfire. When this occurs, the driver should reduce speed and seek service as soon as possible.",
+      "answers": "flashing light: reduce speed, seek service as soon as possible",
+      "allBrands": true
+    },
+    {
+      "text": "For example, if the gas cap is not properly tightened after refueling, the OBD system can detect the vapor leak that exists from the cap not being completely tightened. If the gas cap is subsequently tightened, the dashboard light should be extinguished within a few days.",
+      "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1009Z15.TXT",
+      "document": "U.S. EPA Fact Sheet EPA 420-F-97-003 (May 1997), Frequently Asked Questions About On-Board Diagnostics",
+      "page": "p.3",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "U.S. EPA",
+      "docKind": "fact sheet",
+      "appliesTo": "universal",
+      "quote": "For example, if the gas cap is not properly tightened after refueling, the OBD system can detect the vapor leak that exists from the cap not being completely tightened. If the gas cap is subsequently tightened, the dashboard light should be extinguished within a few days.",
+      "answers": "check yourself first: gas cap",
+      "allBrands": true
+    },
+    {
+      "text": "If the malfunction indicator lamp comes on while driving First check the following: Is the fuel tank empty? If it is, fill the fuel tank immediately. Is the fuel tank cap loose? If it is, tighten it securely. The light will go off after several driving trips. If the light does not go off even after several trips, contact your Toyota dealer as soon as possible.",
+      "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+      "document": "2022 Toyota Camry Owner's Manual OM06244U",
+      "page": "p.533",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "Toyota",
+      "docKind": "owner's manual",
+      "appliesTo": "vehicle-specific: Toyota Camry 2022",
+      "quote": "If the malfunction indicator lamp comes on while driving First check the following: Is the fuel tank empty? If it is, fill the fuel tank immediately. Is the fuel tank cap loose? If it is, tighten it securely. The light will go off after several driving trips. If the light does not go off even after several trips, contact your Toyota dealer as soon as possible.",
+      "answers": "check yourself first (fuel, cap), then dealer as soon as possible",
+      "allBrands": false
+    },
+    {
+      "text": "When \"Check Fuel Cap\" is displayed on the multi-information display: The fuel tank cap may be unfastened or loose. Turn the engine switch off, check the cap and tighten it securely.",
+      "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+      "document": "2022 Toyota Camry Owner's Manual OM06244U",
+      "page": "p.247",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "Toyota",
+      "docKind": "owner's manual",
+      "appliesTo": "vehicle-specific: Toyota Camry 2022",
+      "quote": "When \"Check Fuel Cap\" is displayed on the multi-information display: The fuel tank cap may be unfastened or loose. Turn the engine switch off, check the cap and tighten it securely.",
+      "answers": "check yourself first: fuel cap",
+      "allBrands": false
+    },
+    {
+      "text": "Malfunction indicator lamp ... Indicates a malfunction in: The electronic engine control system; The electronic throttle control system; or The electronic automatic transmission control system → Have the vehicle inspected by your Toyota dealer immediately.",
+      "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+      "document": "2022 Toyota Camry Owner's Manual OM06244U",
+      "page": "p.528",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "Toyota",
+      "docKind": "owner's manual",
+      "appliesTo": "vehicle-specific: Toyota Camry 2022",
+      "quote": "Malfunction indicator lamp ... Indicates a malfunction in: The electronic engine control system; The electronic throttle control system; or The electronic automatic transmission control system → Have the vehicle inspected by your Toyota dealer immediately.",
+      "answers": "urgency per Toyota warning-light table: inspect immediately (note: stricter than p.533 and EPA)",
+      "allBrands": false
+    },
+    {
+      "text": "Only qualified, trained technicians equipped with the newest diagnostic and repair equipment should conduct OBD related service.",
+      "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1009Z15.TXT",
+      "document": "U.S. EPA Fact Sheet EPA 420-F-97-003 (May 1997), Frequently Asked Questions About On-Board Diagnostics",
+      "page": "p.4",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "U.S. EPA",
+      "docKind": "fact sheet",
+      "appliesTo": "universal",
+      "quote": "Only qualified, trained technicians equipped with the newest diagnostic and repair equipment should conduct OBD related service.",
+      "answers": "shop vs self: repair at a qualified shop",
+      "allBrands": true
+    }
+  ],
+  "firstStep": null,
+  "safetyCritical": false,
+  "related": {
+    "issues": [
+      "p0455",
+      "p0442"
+    ],
+    "vehicles": []
+  },
+  "publishDate": "2026-10-16",
+  "dataUpdated": "2026-10-15",
+  "signOff": {
+    "by": "小数",
+    "date": "2026-10-15"
+  }
+}

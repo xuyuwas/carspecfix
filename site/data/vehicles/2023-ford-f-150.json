@@ -1,0 +1,262 @@
+{
+  "slug": "2023-ford-f-150",
+  "year": 2023,
+  "make": "Ford",
+  "model": "F-150",
+  "makeSlug": "ford",
+  "modelSlug": "f-150",
+  "powertrain": "ice",
+  "vpicConfirmed": true,
+  "manual": {
+    "sourceId": "manual-2023-ford-f-150",
+    "yearConfirmed": true,
+    "note": "Values from autoguidegalaxy mirror of 2023 owner manual (p.76 Capacities); verify in Ford official online manual | OIL A-grade: waiting on 队长 download: https://www.ford.com/support/owner-manuals-details/f150/2023/ (Owner's Manual PDF; fordservicecontent.com returns 403 from box)"
+  },
+  "specs": {
+    "oilCapacity": {
+      "value": "2.7L EB: 6.0 qt (5.7 L); 3.5L EB: 6.0 qt (5.7 L); 5.0L: 7.75 qt (7.33 L), incl. filter",
+      "source": "manual-2023-ford-f-150",
+      "page": null,
+      "sourceGrade": "B",
+      "verified": false,
+      "note": "[mirror, verify]"
+    },
+    "oilViscosity": {
+      "value": "5W-30",
+      "source": "manual-2023-ford-f-150",
+      "page": null,
+      "sourceGrade": "B",
+      "verified": false,
+      "note": "[mirror, verify]"
+    },
+    "wiperSizes": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "no citable source yet"
+    },
+    "batteryGroup": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "no citable source yet"
+    },
+    "towingCapacity": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false
+    },
+    "tpmsReset": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": null
+    }
+  },
+  "tires": {
+    "rows": [],
+    "note": "owner manual / door placard; owner manual"
+  },
+  "extraManuals": [],
+  "fuelEconomy": [
+    {
+      "feId": "46159",
+      "model": "F150 Pickup 2WD",
+      "option": "Auto (S10), 6 cyl, 2.7 L, Turbo, SIDI; with Stop-Start",
+      "engineL": 2.7,
+      "cyl": 6,
+      "trans": "Automatic (S10)",
+      "drive": "Rear-Wheel Drive",
+      "mpgCity": 18,
+      "mpgHwy": 25,
+      "mpgComb": 21,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/46159",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "46160",
+      "model": "F150 Pickup 2WD",
+      "option": "Auto (S10), 6 cyl, 2.7 L, Turbo, SIDI & PFI; with Stop-start",
+      "engineL": 2.7,
+      "cyl": 6,
+      "trans": "Automatic (S10)",
+      "drive": "Rear-Wheel Drive",
+      "mpgCity": 20,
+      "mpgHwy": 26,
+      "mpgComb": 22,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/46160",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "46162",
+      "model": "F150 Pickup 2WD FFV",
+      "option": "Auto (S10), 6 cyl, 3.3 L, FFV",
+      "engineL": 3.3,
+      "cyl": 6,
+      "trans": "Automatic (S10)",
+      "drive": "Rear-Wheel Drive",
+      "mpgCity": 19,
+      "mpgHwy": 23,
+      "mpgComb": 20,
+      "fuel": "Gasoline or E85",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/46162",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "46163",
+      "model": "F150 Pickup 2WD FFV",
+      "option": "Auto (S10), 6 cyl, 3.3 L, FFV; with Stop-start",
+      "engineL": 3.3,
+      "cyl": 6,
+      "trans": "Automatic (S10)",
+      "drive": "Rear-Wheel Drive",
+      "mpgCity": 19,
+      "mpgHwy": 24,
+      "mpgComb": 21,
+      "fuel": "Gasoline or E85",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/46163",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "46166",
+      "model": "F150 Pickup 2WD HEV",
+      "option": "Auto (S10), 6 cyl, 3.5 L, Turbo",
+      "engineL": 3.5,
+      "cyl": 6,
+      "trans": "Automatic (S10)",
+      "drive": "Rear-Wheel Drive",
+      "mpgCity": 25,
+      "mpgHwy": 25,
+      "mpgComb": 25,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/46166",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    }
+  ],
+  "fuelEconomyFetched": "2026-10-15",
+  "recalls": [
+    {
+      "campaign": "23V070000",
+      "component": "POWER TRAIN:AUTOMATIC TRANSMISSION",
+      "date": "2023-02-10",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2022-2023 F-150, Mustang, Explorer, Bronco, and 2023 Lincoln Aviator vehicles equipped with automatic transmissions.  The transmission may contain a loose bolt which could prevent the transmission from engaging the park gear, although the gear shifter p",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "23V072000",
+      "component": "AIR BAGS:FRONTAL",
+      "date": "2023-02-10",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2023 F-150 vehicles.  The instrument panel top cover on the passenger-side may prevent the air bag from deploying as intended.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 208, \"Occupant C",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "23V128000",
+      "component": "POWER TRAIN:AXLE ASSEMBLY",
+      "date": "2023-02-24",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2023 F-150, Expedition, and Lincoln Navigator vehicles.  The front axle pinion may not have been heat-treated, which can cause it to fracture.",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "23V509000",
+      "component": "PARKING BRAKE:ELECTRICAL",
+      "date": "2023-07-21",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2021-2023 F-150 vehicles equipped with a single exhaust system.  Contact with the rear axle housing may damage the wiring harness, causing the electric parking brake to activate unexpectedly.",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "23V847000",
+      "component": "STEERING:COLUMN",
+      "date": "2023-12-15",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2023 F-150 and Ford SD F250, F350, F450, F550, and F600 vehicles.  The steering wheel clock spring may have an insufficient weld, causing a loss of electrical connection to the driver's frontal air bag.",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "23V896000",
+      "component": "POWER TRAIN:AXLE HUBS",
+      "date": "2023-12-22",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2021-2023 F-150 vehicles equipped with the Trailer Tow Max Duty package and a 9.75-inch heavy duty axle with a 3/4 float axle design.  The rear axle hub bolt may fatigue and break, which can result in damage to the axle hub splines.",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "24V852000",
+      "component": "EQUIPMENT:OTHER:LABELS",
+      "date": "2024-11-08",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2020-2025 Explorer, Lincoln Aviator, 2020-2024 Escape, Lincoln Corsair, 2018-2024 F-150, Expedition and Lincoln Navigator vehicles.  The air bag warning label may be missing from the dashboard.  As such, these vehicles fail to comply with the requiremen",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "25V315000",
+      "component": "BACK OVER PREVENTION:SOFTWARE",
+      "date": "2025-05-09",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2021-2024 Bronco, F-150, 2021-2024 Edge, 2022-2025 Escape, F-250, F-350, F-450, F-550, F-600, 2022-2024 Expedition, 2022-2025 Transit, 2021-2023 Mach-E, 2024 Ranger, Mustang, 2021-2023 Lincoln Nautilus, 2022-2024 Navigator, and 2023-2024 Corsair vehicle",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "25V512000",
+      "component": "POWER TRAIN:AXLE HUBS",
+      "date": "2025-08-08",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2023-2025 F-150 vehicles equipped with the Trailer Tow Max Duty package and a 9.75-inch heavy duty axle with a 3/4 float axle design. The rear axle hub bolt may fatigue and break, which can result in damage to the axle hub splines.",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "25V729000",
+      "component": "VISIBILITY:SUN/MOON ROOF ASSEMBLY",
+      "date": "2025-10-24",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2021-2022 Expedition, Lincoln Navigator, 2021-2023 F-150, 2022 F-250 SD, F-350 SD, and F-450 SD vehicles. The moonroof wind deflector clips may be inadequately attached to the moonroof frame, which can result in the wind deflector detaching from the veh",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "26V104000",
+      "component": "ELECTRICAL SYSTEM: INTEGRATED TRAILER BRAKE CONTROL",
+      "date": "2026-02-20",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2021-2026 F-150, 2022-2026 F-250 SD, F-350 SD, F-450 SD, F-550 SD, Maverick, 2024-2026 Ranger, 2023-2026 F-600 SD, 2022-2027 Lincoln Navigator, Expedition, and 2026 E-Transit vehicles. When towing a trailer, the integrated trailer module (ITRM) may lose",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "26V489000",
+      "component": "BACK OVER PREVENTION:DISPLAY FUNCTION",
+      "date": "2026-07-28",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2021-2023 F-150 and 2023-2026 F-250 SD vehicles equipped with 8-inch SYNC infotainment screens. A software error may cause the rearview camera image to be obstructed by the infotainment home screen menu when the vehicle is placed in reverse. As such, th",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "26V578000",
+      "component": "FUEL SYSTEM, GASOLINE:STORAGE:TANK ASSEMBLY:MOUNTING",
+      "date": "2026-09-09",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2023-2027 F-150 vehicles. The fuel tank may be improperly secured and leak fuel, or detach from the vehicle while driving.",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    }
+  ],
+  "recallsFetched": "2026-10-15",
+  "recallsUrl": "https://www.nhtsa.gov/recalls?nhtsaId=&make=Ford&model=F-150&year=2023",
+  "related": {
+    "issues": []
+  },
+  "publishDate": null,
+  "dataUpdated": "2026-10-15",
+  "signOff": null
+}

@@ -1,0 +1,6 @@
+---
+import IssuePage from '../../../components/IssuePage.astro';
+import { liveIssues } from '../../../lib/gate.mjs';
+export function getStaticPaths() { return liveIssues.filter(i => i.type === 'code').map(i => ({ params: { slug: i.slug }, props: { i } })); }
+---
+<IssuePage i={Astro.props.i} />

@@ -1,0 +1,10 @@
+---
+// /codes/ and /symptoms/ are generated only when they have ≥1 live child page.
+import IssueIndex from "../../components/IssueIndex.astro";
+import { liveIssueHub } from "../../lib/gate.mjs";
+export function getStaticPaths() {
+  return [['codes', 'code'], ['symptoms', 'symptom']].filter(([, t]) => liveIssueHub(t)).map(([hub, type]) => ({ params: { hub }, props: { type } }));
+}
+const { type } = Astro.props;
+---
+<IssueIndex type={type} />

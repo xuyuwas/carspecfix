@@ -1,0 +1,12 @@
+---
+import Page from '../../../layouts/Page.astro';
+import { AUTHOR } from '../../../lib/site.mjs';
+import { SITE } from '../../../lib/gate.mjs';
+export function getStaticPaths() { return [{ params: { slug: AUTHOR.slug } }]; }
+const path = `/authors/${AUTHOR.slug}/`;
+const jsonld = [{ '@type': 'ProfilePage', mainEntity: { '@type': 'Person', name: AUTHOR.name, url: SITE + path, description: AUTHOR.bio } }];
+---
+<Page title={`${AUTHOR.name} – Editor | CarSpecFix`} description={`${AUTHOR.name} compiles and checks the data on CarSpecFix.`} path={path} jsonld={jsonld} crumbs={[{ name: 'Home', url: '/' }, { name: AUTHOR.name, url: path }]} h1={AUTHOR.name}>
+<p>{AUTHOR.bio}</p>
+<h2 class="section__title">Editorial process</h2><p>Each page is compiled from cited sources and checked by a person before publishing. Brake, ABS and airbag topics use conservative safety advice.</p>
+</Page>

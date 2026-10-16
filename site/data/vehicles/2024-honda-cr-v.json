@@ -1,0 +1,182 @@
+{
+  "slug": "2024-honda-cr-v",
+  "year": 2024,
+  "make": "Honda",
+  "model": "CR-V",
+  "makeSlug": "honda",
+  "modelSlug": "cr-v",
+  "powertrain": "ice",
+  "vpicConfirmed": true,
+  "manual": {
+    "sourceId": "manual-2024-honda-cr-v",
+    "yearConfirmed": true,
+    "note": "Honda TechInfo official owner manual CR-V 2024 non-hybrid (A3A02424IOM) > Specifications. Hybrid manual A3D42424IOM not yet read | Signoff scope: non-hybrid only; hybrid fields display Not yet verified"
+  },
+  "specs": {
+    "oilCapacity": {
+      "value": "1.5L turbo (non-hybrid): 3.7 US qt (3.5 L) incl. filter",
+      "source": "manual-2024-honda-cr-v",
+      "page": null,
+      "sourceGrade": "A",
+      "verified": false,
+      "note": "some variants not yet sourced"
+    },
+    "oilViscosity": {
+      "value": "0W-20 (1.5T)",
+      "source": "manual-2024-honda-cr-v",
+      "page": null,
+      "sourceGrade": "A",
+      "verified": false,
+      "note": null
+    },
+    "wiperSizes": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "no citable source yet"
+    },
+    "batteryGroup": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "no citable source yet"
+    },
+    "towingCapacity": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false
+    },
+    "tpmsReset": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": null
+    }
+  },
+  "tires": {
+    "rows": [
+      {
+        "wheel": "17",
+        "config": "Non-hybrid",
+        "tireSize": "235/65R17 104H",
+        "frontPsi": 33,
+        "rearPsi": 32,
+        "page": "Specifications",
+        "source": "manual-2024-honda-cr-v",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "18",
+        "config": "Non-hybrid",
+        "tireSize": "235/60R18 103H",
+        "frontPsi": 35,
+        "rearPsi": 32,
+        "page": "Specifications",
+        "source": "manual-2024-honda-cr-v",
+        "sourceGrade": "A"
+      }
+    ],
+    "note": null
+  },
+  "extraManuals": [],
+  "fuelEconomy": [
+    {
+      "feId": "46715",
+      "model": "CR-V AWD",
+      "option": "Auto (variable gear ratios), 4 cyl, 1.5 L, Turbo",
+      "engineL": 1.5,
+      "cyl": 4,
+      "trans": "Automatic (variable gear ratios)",
+      "drive": "All-Wheel Drive",
+      "mpgCity": 27,
+      "mpgHwy": 32,
+      "mpgComb": 29,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/46715",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "46716",
+      "model": "CR-V AWD",
+      "option": "Auto (variable gear ratios), 4 cyl, 2.0 L",
+      "engineL": 2,
+      "cyl": 4,
+      "trans": "Automatic (variable gear ratios)",
+      "drive": "All-Wheel Drive",
+      "mpgCity": 40,
+      "mpgHwy": 34,
+      "mpgComb": 37,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/46716",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "46693",
+      "model": "CR-V FWD",
+      "option": "Auto (variable gear ratios), 4 cyl, 1.5 L, Turbo",
+      "engineL": 1.5,
+      "cyl": 4,
+      "trans": "Automatic (variable gear ratios)",
+      "drive": "Front-Wheel Drive",
+      "mpgCity": 28,
+      "mpgHwy": 34,
+      "mpgComb": 30,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/46693",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "46694",
+      "model": "CR-V FWD",
+      "option": "Auto (variable gear ratios), 4 cyl, 2.0 L",
+      "engineL": 2,
+      "cyl": 4,
+      "trans": "Automatic (variable gear ratios)",
+      "drive": "Front-Wheel Drive",
+      "mpgCity": 43,
+      "mpgHwy": 36,
+      "mpgComb": 40,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/46694",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    }
+  ],
+  "fuelEconomyFetched": "2026-10-15",
+  "recalls": [
+    {
+      "campaign": "24V508000",
+      "component": "TIRES:MARKINGS",
+      "date": "2024-07-02",
+      "summary": "Honda (America Honda Motor Co.) is recalling certain 2024 CR-V vehicles.  The tire identification number (TIN) is missing the four-digit date code.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 139, \"New Pneumatic Radial Tires for Light",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "24V744000",
+      "component": "STEERING",
+      "date": "2024-10-03",
+      "summary": "Honda (American Honda Motor Co.) is recalling certain 2023-2025 Acura Integra, Civic Type R, CR-V Hybrid, CR-V, HR-V, 2022-2025 Civic, Civic Hatchback, 2024-2025 Acura Integra Type S, 2025 CR-V Fuel Cell EV, Civic Hybrid, and Civic Hatchback Hybrid vehicles.  The steering gearbox assembly may have b",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    }
+  ],
+  "recallsFetched": "2026-10-15",
+  "recallsUrl": "https://www.nhtsa.gov/recalls?nhtsaId=&make=Honda&model=CR-V&year=2024",
+  "related": {
+    "issues": []
+  },
+  "publishDate": "2026-10-15",
+  "dataUpdated": "2026-10-15",
+  "signOff": {
+    "by": "小数",
+    "date": "2026-10-15"
+  }
+}

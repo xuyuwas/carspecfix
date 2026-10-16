@@ -1,0 +1,193 @@
+{
+  "slug": "2022-honda-accord",
+  "year": 2022,
+  "make": "Honda",
+  "model": "Accord",
+  "makeSlug": "honda",
+  "modelSlug": "accord",
+  "powertrain": "ice",
+  "vpicConfirmed": true,
+  "manual": {
+    "sourceId": "manual-2022-honda-accord",
+    "yearConfirmed": true,
+    "note": "ATVA2222OM PDF downloaded 2026-10-15 to manuals/from-captain/; printed page = PDF page - 2"
+  },
+  "specs": {
+    "oilCapacity": {
+      "value": "1.5L turbo: 3.7 US qt (3.5 L) including filter, 3.4 US qt (3.2 L) change without filter; 2.0L turbo: 5.0 US qt (4.8 L) including filter, 4.6 US qt (4.4 L) without filter [ATVA2222OM pp.558, 633, 635]; hybrid: Not yet verified",
+      "source": "manual-2022-honda-accord",
+      "page": null,
+      "sourceGrade": "A",
+      "verified": false,
+      "note": null
+    },
+    "oilViscosity": {
+      "value": "0W-20 [ATVA2222OM pp.633, 635]",
+      "source": "manual-2022-honda-accord",
+      "page": null,
+      "sourceGrade": "A",
+      "verified": false,
+      "note": null
+    },
+    "wiperSizes": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "no citable source yet"
+    },
+    "batteryGroup": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "no citable source yet"
+    },
+    "towingCapacity": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false
+    },
+    "tpmsReset": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": null
+    }
+  },
+  "tires": {
+    "rows": [
+      {
+        "wheel": "17",
+        "config": "1.5 L engine models: Models with 17 inch wheel",
+        "tireSize": "225/50R17 94V",
+        "frontPsi": 32,
+        "rearPsi": 32,
+        "page": "p.633",
+        "source": "doc-2022-honda-accord-23",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "19",
+        "config": "1.5 L engine models: Models with 19 inch wheel",
+        "tireSize": "235/40R19 96V",
+        "frontPsi": 33,
+        "rearPsi": 33,
+        "page": "p.633",
+        "source": "doc-2022-honda-accord-23",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "19",
+        "config": "2.0 L engine models",
+        "tireSize": "235/40R19 96V",
+        "frontPsi": 33,
+        "rearPsi": 33,
+        "page": "p.635",
+        "source": "doc-2022-honda-accord-23",
+        "sourceGrade": "A"
+      }
+    ],
+    "origin": "tire_rows.csv",
+    "note": null
+  },
+  "extraManuals": [],
+  "fuelEconomy": [
+    {
+      "feId": "44565",
+      "model": "Accord",
+      "option": "Auto (variable gear ratios), 4 cyl, 1.5 L, Turbo",
+      "engineL": 1.5,
+      "cyl": 4,
+      "trans": "Automatic (variable gear ratios)",
+      "drive": "Front-Wheel Drive",
+      "mpgCity": 30,
+      "mpgHwy": 38,
+      "mpgComb": 33,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/44565",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "44568",
+      "model": "Accord Hybrid",
+      "option": "Auto (variable gear ratios), 4 cyl, 2.0 L",
+      "engineL": 2,
+      "cyl": 4,
+      "trans": "Automatic (variable gear ratios)",
+      "drive": "Front-Wheel Drive",
+      "mpgCity": 48,
+      "mpgHwy": 47,
+      "mpgComb": 47,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/44568",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "44569",
+      "model": "Accord Hybrid Sport/Touring",
+      "option": "Auto (variable gear ratios), 4 cyl, 2.0 L",
+      "engineL": 2,
+      "cyl": 4,
+      "trans": "Automatic (variable gear ratios)",
+      "drive": "Front-Wheel Drive",
+      "mpgCity": 44,
+      "mpgHwy": 41,
+      "mpgComb": 43,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/44569",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    }
+  ],
+  "fuelEconomyFetched": "2026-10-15",
+  "recalls": [
+    {
+      "campaign": "23V430000",
+      "component": "SERVICE BRAKES, HYDRAULIC:ANTILOCK/TRACTION CONTROL/ELECTRONIC LIMITED SLIP:CONTROL UNIT/MODULE",
+      "date": "2023-06-15",
+      "summary": "Honda (America Honda Motor Co.) is recalling certain 2023 Civic, Acura RDX, Acura Integra, and 2022 Honda Accord vehicles.  A ball valve in the vehicle stability assist (VSA) modulator may leak brake fluid, which can result in unintended vehicle movement when the brake hold feature is engaged or an ",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "24V064000",
+      "component": "AIR BAGS:SENSOR:OCCUPANT CLASSIFICATION:FRONT PASSENGER",
+      "date": "2024-02-01",
+      "summary": "Honda (American Honda Motor Co.) is recalling certain 2020-2022 Pilot, Accord, Civic sedan, HR-V, Odyssey, 2020 Civic coupe, Fit, 2021-2022 Civic hatchback, 2021 Civic Type R, Insight, 2020-2021 CR-V, CR-V Hybrid, Passport, Ridgeline, Accord Hybrid, 2020 Acura MDX, 2022 Acura MDX, 2020-2022 Acura RD",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "23V858000",
+      "component": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+      "date": "2023-12-18",
+      "summary": "Honda (American Honda Motor Co.) is recalling certain 2013-2023 Honda Accord, Civic Coupe, Civic Sedan, Civic Hatchback, Civic Type R, CR-V, HR-V, Ridgeline, Odyssey, Acura ILX, MDX, MDX Hybrid, RDX, RLX, TLX, 2019-2022 Honda Insight, Passport, 2020 Honda CR-V Hybrid, 2018-2019 Honda Clarity PHEV, F",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "26V332000",
+      "component": "AIR BAGS:SENSOR:OCCUPANT CLASSIFICATION:FRONT PASSENGER",
+      "date": "2026-05-21",
+      "summary": "Honda (American Honda Motor Co.) is recalling certain 2018-2021, 2023 Acura TLX, 2019-2024 RDX, 2017-2020, 2022-2026 MDX, 2017-2021, 2023, 2025 Honda Ridgeline, 2017-2022 Pilot, 2019-2021 Passport, 2018-2026 Odyssey, 2019-2022 Insight, 2019-2021 HR-V, 2018-2020 Fit, 2020-2022 CR-V Hybrid, 2017-2022 ",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    }
+  ],
+  "recallsFetched": "2026-10-15",
+  "recallsUrl": "https://www.nhtsa.gov/recalls?nhtsaId=&make=Honda&model=Accord&year=2022",
+  "related": {
+    "issues": []
+  },
+  "publishDate": "2026-10-15",
+  "dataUpdated": "2026-10-15",
+  "signOff": {
+    "by": "小数",
+    "date": "2026-10-15"
+  }
+}

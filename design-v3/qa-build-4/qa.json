@@ -1,0 +1,348 @@
+{
+ "rav4-hub-1280": {
+  "ovf": 0,
+  "h1c": "container container--narrow 256/768",
+  "lists": [
+   "UL.links 280/720 cols:none li:281/718",
+   "TABLE.tbl 281/718 cols:none li:281/718"
+  ],
+  "pref": [],
+  "oil": [],
+  "seen": [],
+  "refs": [],
+  "ads": 0,
+  "print": 0,
+  "photo": [],
+  "ftr": 40,
+  "canon": false,
+  "robots": "noindex,follow"
+ },
+ "rav4-hub-390": {
+  "ovf": 0,
+  "h1c": "container container--narrow 0/390",
+  "lists": [
+   "UL.links 16/358 cols:none li:17/356",
+   "TABLE.tbl 17/640 cols:none li:17/640"
+  ],
+  "pref": [],
+  "oil": [],
+  "seen": [],
+  "refs": [],
+  "ads": 0,
+  "print": 0,
+  "photo": [],
+  "ftr": 16,
+  "canon": false,
+  "robots": "noindex,follow"
+ },
+ "codes-1280": {
+  "ovf": 0,
+  "h1c": "container container--narrow 256/768",
+  "lists": [
+   "UL.links 280/720 cols:none li:281/718"
+  ],
+  "pref": [],
+  "oil": [],
+  "seen": [],
+  "refs": [],
+  "ads": 0,
+  "print": 0,
+  "photo": [],
+  "ftr": 40,
+  "canon": false,
+  "robots": "noindex,follow"
+ },
+ "codes-390": {
+  "ovf": 0,
+  "h1c": "container container--narrow 0/390",
+  "lists": [
+   "UL.links 16/358 cols:none li:17/356"
+  ],
+  "pref": [],
+  "oil": [],
+  "seen": [],
+  "refs": [],
+  "ads": 0,
+  "print": 0,
+  "photo": [],
+  "ftr": 16,
+  "canon": false,
+  "robots": "noindex,follow"
+ },
+ "symptoms-1280": {
+  "ovf": 0,
+  "h1c": "container container--narrow 256/768",
+  "lists": [
+   "UL.links 280/720 cols:none li:281/718"
+  ],
+  "pref": [],
+  "oil": [],
+  "seen": [],
+  "refs": [],
+  "ads": 0,
+  "print": 0,
+  "photo": [],
+  "ftr": 40,
+  "canon": false,
+  "robots": "noindex,follow"
+ },
+ "symptoms-390": {
+  "ovf": 0,
+  "h1c": "container container--narrow 0/390",
+  "lists": [
+   "UL.links 16/358 cols:none li:17/356"
+  ],
+  "pref": [],
+  "oil": [],
+  "seen": [],
+  "refs": [],
+  "ads": 0,
+  "print": 0,
+  "photo": [],
+  "ftr": 16,
+  "canon": false,
+  "robots": "noindex,follow"
+ },
+ "rav4-2020-1280": {
+  "ovf": 0,
+  "h1c": "container 40/1200",
+  "lists": [
+   "TABLE.tbl 65/810 cols:none li:65/810",
+   "TABLE.tbl tbl--wide 65/810 cols:none li:65/810",
+   "TABLE.tbl 65/810 cols:none li:65/810"
+  ],
+  "pref": [
+   "p.671|ls normal|w39",
+   "p.672|ls normal|w39"
+  ],
+  "oil": [
+   "ENGINE OIL | 4.8 | qt with filter | [3] | 4.4 qt without | SAE 0W-16 (0W-20 acceptable) | Manual p.666 (capacity), p.667 (viscosity)"
+  ],
+  "seen": [],
+  "refs": [
+   "NHTSA recalls database, 2020 Toyota RAV4, fetched 2026-10-15",
+   "fueleconomy.gov (U.S. EPA / DOE), 2020 Toyota RAV4, fetched 2026-10-15",
+   "Toyota owner's manual OM0R024U (2020 RAV4), retrieved 2026-10-15"
+  ],
+  "ads": 0,
+  "print": 5,
+  "photo": [
+   "2.67"
+  ],
+  "ftr": 40,
+  "canon": false,
+  "robots": "noindex,follow"
+ },
+ "rav4-2020-390": {
+  "ovf": 0,
+  "h1c": "container 0/390",
+  "lists": [
+   "TABLE.tbl 17/640 cols:none li:17/640",
+   "TABLE.tbl tbl--wide 17/760 cols:none li:17/760",
+   "TABLE.tbl 17/640 cols:none li:17/640"
+  ],
+  "pref": [
+   "p.671|ls normal|w39",
+   "p.672|ls normal|w39"
+  ],
+  "oil": [
+   "ENGINE OIL | 4.8 | qt with filter | [3] | 4.4 qt without | SAE 0W-16 (0W-20 acceptable) | Manual p.666 (capacity), p.667 (viscosity)"
+  ],
+  "seen": [],
+  "refs": [
+   "NHTSA recalls database, 2020 Toyota RAV4, fetched 2026-10-15",
+   "fueleconomy.gov (U.S. EPA / DOE), 2020 Toyota RAV4, fetched 2026-10-15",
+   "Toyota owner's manual OM0R024U (2020 RAV4), retrieved 2026-10-15"
+  ],
+  "ads": 0,
+  "print": 5,
+  "photo": [
+   "2.67"
+  ],
+  "ftr": 16,
+  "canon": false,
+  "robots": "noindex,follow"
+ },
+ "p0420-1280": {
+  "ovf": 0,
+  "h1c": "container 40/1200",
+  "lists": [
+   "OL.causes 64/812 cols:none li:65/810",
+   "OL.refs 64/812 cols:none li:88/788"
+  ],
+  "pref": [
+   "p.1|ls normal|w23",
+   "p.2|ls normal|w23"
+  ],
+  "oil": [],
+  "seen": [
+   "Seen on:",
+   "Seen on:"
+  ],
+  "refs": [
+   "Subaru Service Information Bulletin, DTC P0420 Diagnostic Procedure, p",
+   "U.S. EPA Fact Sheet EPA 420-F-97-003 (May 1997), Frequently Asked Ques",
+   "2022 Toyota Camry Owner's Manual OM06244U, p.528, retrieved 2026-10-15",
+   "Honda Service Bulletin 22-040, p.1, retrieved 2026-10-15",
+   "Ford TSB 22-2260, p.1, retrieved 2026-10-15",
+   "Ford TSB 25-2119, p.1, retrieved 2026-10-15"
+  ],
+  "ads": 0,
+  "print": 2,
+  "photo": [],
+  "ftr": 40,
+  "canon": false,
+  "robots": "noindex,follow"
+ },
+ "p0420-390": {
+  "ovf": 0,
+  "h1c": "container 0/390",
+  "lists": [
+   "OL.causes 16/358 cols:none li:17/356",
+   "OL.refs 16/358 cols:none li:40/334"
+  ],
+  "pref": [
+   "p.1|ls normal|w23",
+   "p.2|ls normal|w23"
+  ],
+  "oil": [],
+  "seen": [
+   "Seen on:",
+   "Seen on:"
+  ],
+  "refs": [
+   "Subaru Service Information Bulletin, DTC P0420 Diagnostic Procedure, p",
+   "U.S. EPA Fact Sheet EPA 420-F-97-003 (May 1997), Frequently Asked Ques",
+   "2022 Toyota Camry Owner's Manual OM06244U, p.528, retrieved 2026-10-15",
+   "Honda Service Bulletin 22-040, p.1, retrieved 2026-10-15",
+   "Ford TSB 22-2260, p.1, retrieved 2026-10-15",
+   "Ford TSB 25-2119, p.1, retrieved 2026-10-15"
+  ],
+  "ads": 0,
+  "print": 2,
+  "photo": [],
+  "ftr": 16,
+  "canon": false,
+  "robots": "noindex,follow"
+ },
+ "civic-2022-1280": {
+  "ovf": 0,
+  "h1c": "container 40/1200",
+  "lists": [
+   "TABLE.tbl 65/810 cols:none li:65/810",
+   "TABLE.tbl tbl--wide 65/857 cols:none li:65/857",
+   "TABLE.tbl 65/810 cols:none li:65/810"
+  ],
+  "pref": [
+   "Honda owner's manual AT202222IOM (2022 Civic)|ls normal|w351",
+   "Honda owner's manual AT202222IOM (2022 Civic)|ls normal|w351"
+  ],
+  "oil": [
+   "ENGINE OIL | 3.7–4.4 | qt with filter | [3] | 1.5L turbo: 3.7 US qt incl. filter | 2.0L: 4.4 US qt incl. filter | 0W-20 (both engines) | Source [3]"
+  ],
+  "seen": [],
+  "refs": [
+   "NHTSA recalls database, 2022 Honda Civic, fetched 2026-10-15",
+   "fueleconomy.gov (U.S. EPA / DOE), 2022 Honda Civic, fetched 2026-10-15",
+   "Honda owner's manual AT202222IOM (2022 Civic), retrieved 2026-10-15"
+  ],
+  "ads": 0,
+  "print": 5,
+  "photo": [
+   "2.67"
+  ],
+  "ftr": 40,
+  "canon": false,
+  "robots": "noindex,follow"
+ },
+ "civic-2022-390": {
+  "ovf": 0,
+  "h1c": "container 0/390",
+  "lists": [
+   "TABLE.tbl 17/640 cols:none li:17/640",
+   "TABLE.tbl tbl--wide 17/857 cols:none li:17/857",
+   "TABLE.tbl 17/640 cols:none li:17/640"
+  ],
+  "pref": [
+   "Honda owner's manual AT202222IOM (2022 Civic)|ls normal|w351",
+   "Honda owner's manual AT202222IOM (2022 Civic)|ls normal|w351"
+  ],
+  "oil": [
+   "ENGINE OIL | 3.7–4.4 | qt with filter | [3] | 1.5L turbo: 3.7 US qt incl. filter | 2.0L: 4.4 US qt incl. filter | 0W-20 (both engines) | Source [3]"
+  ],
+  "seen": [],
+  "refs": [
+   "NHTSA recalls database, 2022 Honda Civic, fetched 2026-10-15",
+   "fueleconomy.gov (U.S. EPA / DOE), 2022 Honda Civic, fetched 2026-10-15",
+   "Honda owner's manual AT202222IOM (2022 Civic), retrieved 2026-10-15"
+  ],
+  "ads": 0,
+  "print": 5,
+  "photo": [
+   "2.67"
+  ],
+  "ftr": 16,
+  "canon": false,
+  "robots": "noindex,follow"
+ },
+ "crv-2024-1280": {
+  "ovf": 0,
+  "h1c": "container 40/1200",
+  "lists": [
+   "TABLE.tbl 65/810 cols:none li:65/810",
+   "TABLE.tbl tbl--wide 65/856 cols:none li:65/856",
+   "TABLE.tbl 65/810 cols:none li:65/810"
+  ],
+  "pref": [
+   "Honda owner's manual A3A02424IOM (2024 CR-V)|ls normal|w343",
+   "Honda owner's manual A3A02424IOM (2024 CR-V)|ls normal|w343"
+  ],
+  "oil": [
+   "ENGINE OIL | 3.7 | qt with filter | [3] | 1.5L turbo (non-hybrid): 3.7 US qt incl. filter | 0W-20 (1.5T) | Source [3] · other variants (e.g. hybrid): Not yet verified"
+  ],
+  "seen": [],
+  "refs": [
+   "NHTSA recalls database, 2024 Honda CR-V, fetched 2026-10-15",
+   "fueleconomy.gov (U.S. EPA / DOE), 2024 Honda CR-V, fetched 2026-10-15",
+   "Honda owner's manual A3A02424IOM (2024 CR-V), retrieved 2026-10-15"
+  ],
+  "ads": 0,
+  "print": 5,
+  "photo": [
+   "2.67"
+  ],
+  "ftr": 40,
+  "canon": false,
+  "robots": "noindex,follow"
+ },
+ "crv-2024-390": {
+  "ovf": 0,
+  "h1c": "container 0/390",
+  "lists": [
+   "TABLE.tbl 17/640 cols:none li:17/640",
+   "TABLE.tbl tbl--wide 17/856 cols:none li:17/856",
+   "TABLE.tbl 17/640 cols:none li:17/640"
+  ],
+  "pref": [
+   "Honda owner's manual A3A02424IOM (2024 CR-V)|ls normal|w343",
+   "Honda owner's manual A3A02424IOM (2024 CR-V)|ls normal|w343"
+  ],
+  "oil": [
+   "ENGINE OIL | 3.7 | qt with filter | [3] | 1.5L turbo (non-hybrid): 3.7 US qt incl. filter | 0W-20 (1.5T) | Source [3] · other variants (e.g. hybrid): Not yet verified"
+  ],
+  "seen": [],
+  "refs": [
+   "NHTSA recalls database, 2024 Honda CR-V, fetched 2026-10-15",
+   "fueleconomy.gov (U.S. EPA / DOE), 2024 Honda CR-V, fetched 2026-10-15",
+   "Honda owner's manual A3A02424IOM (2024 CR-V), retrieved 2026-10-15"
+  ],
+  "ads": 0,
+  "print": 5,
+  "photo": [
+   "2.67"
+  ],
+  "ftr": 16,
+  "canon": false,
+  "robots": "noindex,follow"
+ }
+}

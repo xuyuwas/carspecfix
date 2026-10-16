@@ -1,0 +1,169 @@
+{
+  "slug": "p0171",
+  "type": "code",
+  "code": "P0171",
+  "title": "P0171",
+  "targetKeyword": "P0171 code",
+  "definition": {
+    "text": "P0171: System too Lean",
+    "url": "https://mitsubishitechinfo.com/data/REEV22/2022/13/HTML/M113155350163700USA.htm",
+    "document": "Mitsubishi service manual 13A-DTC P0171 (2022)",
+    "page": "web page",
+    "fetched": "2026-10-15",
+    "sourceGrade": "A",
+    "maker": "Mitsubishi",
+    "docKind": "service manual",
+    "appliesTo": "Mitsubishi OEM service info; GM uses 'Fuel Trim System Lean'",
+    "quote": null,
+    "value": "System Too Lean",
+    "sourceText": "P0171: System too Lean"
+  },
+  "causes": [
+    {
+      "text": "Split air cleaner outlet duct after MAF letting unmetered air in",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2014/MC-10114295-9999.pdf",
+      "document": "GM PI1307 (2012-2014 Sonic)",
+      "page": "p.1",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "GM",
+      "docKind": "service bulletin",
+      "appliesTo": "2012-14 Chevrolet Sonic",
+      "quote": null
+    },
+    {
+      "text": "Vacuum leak in intake (foul-air/PCV tube) or purge valve",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2018/MC-10129098-9999.pdf",
+      "document": "Ford PIP5549",
+      "page": "p.1",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "Ford",
+      "docKind": "service bulletin",
+      "appliesTo": "Ford vehicles in PIP",
+      "quote": "Possible Cause Vacuum leak in intake or Purge."
+    },
+    {
+      "text": "Air box/filter fitment, MAF, A/F sensor faults; fuel injectors",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2022/MC-10228648-0001.pdf",
+      "document": "Mazda M-Tip (P0171 Fuel Trim too Lean)",
+      "page": "p.1-2",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "Mazda",
+      "docKind": "tech tip",
+      "appliesTo": "Listed Mazda SKYACTIV models",
+      "quote": null
+    },
+    {
+      "text": "Crankcase leak e.g. rear main seal / breather",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2017/MC-10125599-9999.pdf",
+      "document": "VW Tech Tip 01-14-01TT",
+      "page": "p.1",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "VW",
+      "docKind": "tech tip",
+      "appliesTo": "Tiguan, Passat, CC, Jetta, Sportwagen, GTI, Eos; 2008-2017; 2.0L (CCTA, CBFA) (VW Tech Tip 01-14-01TT)",
+      "quote": null
+    },
+    {
+      "text": "OEM list: A/F sensor, MAF, injector, fuel pressure, intake air leak at gaskets, ECT/IAT/baro/MAP sensors, exhaust leak, purge solenoid, contaminated fuel, harness, ECM",
+      "url": "https://mitsubishitechinfo.com/data/REEV22/2022/13/HTML/M113155350163700USA.htm",
+      "document": "Mitsubishi 13A-DTC P0171",
+      "page": "Troubleshooting hints",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "Mitsubishi",
+      "docKind": "service bulletin",
+      "appliesTo": "2022 Mitsubishi models (service manual; specific model not named on the cited page)",
+      "quote": null
+    }
+  ],
+  "urgency": [],
+  "guidancePrimary": "universal: EPA 420-F-97-003 p.2 (steady: service ASAP, not need to stop; flashing: reduce speed, service ASAP)",
+  "guidance": [
+    {
+      "text": "It is important to note that an illuminated dashboard light, as described here, is intended to inform the driver of the need for service, NOT of the need to stop the vehicle. However, service should be sought as soon as possible.",
+      "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1009Z15.TXT",
+      "document": "U.S. EPA Fact Sheet EPA 420-F-97-003 (May 1997), Frequently Asked Questions About On-Board Diagnostics",
+      "page": "p.2",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "U.S. EPA",
+      "docKind": "fact sheet",
+      "appliesTo": "universal",
+      "quote": "It is important to note that an illuminated dashboard light, as described here, is intended to inform the driver of the need for service, NOT of the need to stop the vehicle. However, service should be sought as soon as possible.",
+      "answers": "can_i_keep_driving (steady light): yes; urgency: service as soon as possible",
+      "allBrands": true
+    },
+    {
+      "text": "Under certain conditions, the dashboard light will blink or flash. This indicates a rather severe level of engine misfire. When this occurs, the driver should reduce speed and seek service as soon as possible.",
+      "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1009Z15.TXT",
+      "document": "U.S. EPA Fact Sheet EPA 420-F-97-003 (May 1997), Frequently Asked Questions About On-Board Diagnostics",
+      "page": "p.2",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "U.S. EPA",
+      "docKind": "fact sheet",
+      "appliesTo": "universal",
+      "quote": "Under certain conditions, the dashboard light will blink or flash. This indicates a rather severe level of engine misfire. When this occurs, the driver should reduce speed and seek service as soon as possible.",
+      "answers": "flashing light: reduce speed, seek service as soon as possible",
+      "allBrands": true
+    },
+    {
+      "text": "If the malfunction indicator lamp comes on while driving First check the following: Is the fuel tank empty? If it is, fill the fuel tank immediately. Is the fuel tank cap loose? If it is, tighten it securely. The light will go off after several driving trips. If the light does not go off even after several trips, contact your Toyota dealer as soon as possible.",
+      "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+      "document": "2022 Toyota Camry Owner's Manual OM06244U",
+      "page": "p.533",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "Toyota",
+      "docKind": "owner's manual",
+      "appliesTo": "vehicle-specific: Toyota Camry 2022",
+      "quote": "If the malfunction indicator lamp comes on while driving First check the following: Is the fuel tank empty? If it is, fill the fuel tank immediately. Is the fuel tank cap loose? If it is, tighten it securely. The light will go off after several driving trips. If the light does not go off even after several trips, contact your Toyota dealer as soon as possible.",
+      "answers": "check yourself first (fuel, cap), then dealer as soon as possible",
+      "allBrands": false
+    },
+    {
+      "text": "Malfunction indicator lamp ... Indicates a malfunction in: The electronic engine control system; The electronic throttle control system; or The electronic automatic transmission control system → Have the vehicle inspected by your Toyota dealer immediately.",
+      "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+      "document": "2022 Toyota Camry Owner's Manual OM06244U",
+      "page": "p.528",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "Toyota",
+      "docKind": "owner's manual",
+      "appliesTo": "vehicle-specific: Toyota Camry 2022",
+      "quote": "Malfunction indicator lamp ... Indicates a malfunction in: The electronic engine control system; The electronic throttle control system; or The electronic automatic transmission control system → Have the vehicle inspected by your Toyota dealer immediately.",
+      "answers": "urgency per Toyota warning-light table: inspect immediately (note: stricter than p.533 and EPA)",
+      "allBrands": false
+    },
+    {
+      "text": "Only qualified, trained technicians equipped with the newest diagnostic and repair equipment should conduct OBD related service.",
+      "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1009Z15.TXT",
+      "document": "U.S. EPA Fact Sheet EPA 420-F-97-003 (May 1997), Frequently Asked Questions About On-Board Diagnostics",
+      "page": "p.4",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "U.S. EPA",
+      "docKind": "fact sheet",
+      "appliesTo": "universal",
+      "quote": "Only qualified, trained technicians equipped with the newest diagnostic and repair equipment should conduct OBD related service.",
+      "answers": "shop vs self: repair at a qualified shop",
+      "allBrands": true
+    }
+  ],
+  "firstStep": null,
+  "safetyCritical": false,
+  "related": {
+    "issues": [],
+    "vehicles": []
+  },
+  "publishDate": "2026-10-16",
+  "dataUpdated": "2026-10-15",
+  "signOff": {
+    "by": "小数",
+    "date": "2026-10-15"
+  }
+}

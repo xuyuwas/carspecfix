@@ -1,0 +1,68 @@
+slug,wheel_in,config,tire_size,front_psi,rear_psi,manual_page,source,grade
+2020-toyota-rav4,17,Vehicles with 17-inch wheels type A,225/65R17 102H,35,35,671,https://assets.sia.toyota.com/publications/en/om-s/OM0R024U/pdf/OM0R024U.pdf,A
+2020-toyota-rav4,17,Vehicles with 17-inch wheels type B,225/65R17 102H,36,36,671,https://assets.sia.toyota.com/publications/en/om-s/OM0R024U/pdf/OM0R024U.pdf,A
+2020-toyota-rav4,17,Vehicles with 17-inch wheels type C,225/65R17 102H,33,33,672,https://assets.sia.toyota.com/publications/en/om-s/OM0R024U/pdf/OM0R024U.pdf,A
+2020-toyota-rav4,17,Vehicles with 17-inch wheels type D,225/65R17 102H,35,35,672,https://assets.sia.toyota.com/publications/en/om-s/OM0R024U/pdf/OM0R024U.pdf,A
+2020-toyota-rav4,17,Vehicles with 17-inch wheels type E,225/65R17 102H,36,36,673,https://assets.sia.toyota.com/publications/en/om-s/OM0R024U/pdf/OM0R024U.pdf,A
+2020-toyota-rav4,18,Vehicles with 18-inch wheels,225/60R18 100H,33,33,673,https://assets.sia.toyota.com/publications/en/om-s/OM0R024U/pdf/OM0R024U.pdf,A
+2020-toyota-rav4,19,Vehicles with 19-inch wheels type A,235/55R19 101V,33,33,674,https://assets.sia.toyota.com/publications/en/om-s/OM0R024U/pdf/OM0R024U.pdf,A
+2020-toyota-rav4,19,Vehicles with 19-inch wheels type B,235/55R19 101V,35,35,674,https://assets.sia.toyota.com/publications/en/om-s/OM0R024U/pdf/OM0R024U.pdf,A
+2024-toyota-rav4,17,Vehicles with 17-inch wheels type A,225/65R17 102H,35,35,491,https://assets.sia.toyota.com/publications/en/om-s/OM0R147U/pdf/OM0R147U.pdf,A
+2024-toyota-rav4,17,Vehicles with 17-inch wheels type B,225/65R17 102H,36,36,491,https://assets.sia.toyota.com/publications/en/om-s/OM0R147U/pdf/OM0R147U.pdf,A
+2024-toyota-rav4,17,Vehicles with 17-inch wheels type C,225/65R17 102H,33,33,492,https://assets.sia.toyota.com/publications/en/om-s/OM0R147U/pdf/OM0R147U.pdf,A
+2024-toyota-rav4,17,Vehicles with 17-inch wheels type D,225/65R17 102H,35,35,492,https://assets.sia.toyota.com/publications/en/om-s/OM0R147U/pdf/OM0R147U.pdf,A
+2024-toyota-rav4,17,Vehicles with 17-inch wheels type E,225/65R17 102H,36,36,493,https://assets.sia.toyota.com/publications/en/om-s/OM0R147U/pdf/OM0R147U.pdf,A
+2024-toyota-rav4,18,Vehicles with 18-inch wheels,225/60R18 100H,33,33,493,https://assets.sia.toyota.com/publications/en/om-s/OM0R147U/pdf/OM0R147U.pdf,A
+2024-toyota-rav4,19,Vehicles with 19-inch wheels type A,235/55R19 101V,33,33,494,https://assets.sia.toyota.com/publications/en/om-s/OM0R147U/pdf/OM0R147U.pdf,A
+2024-toyota-rav4,19,Vehicles with 19-inch wheels type B,235/55R19 101V,35,35,494,https://assets.sia.toyota.com/publications/en/om-s/OM0R147U/pdf/OM0R147U.pdf,A
+2024-toyota-rav4,17,Vehicles with 17-inch wheels type F,225/65R17 102H,33,33,501,https://assets.sia.toyota.com/publications/en/om-s/OM42L49U/pdf/OM42L49U.pdf,A
+2024-toyota-rav4,17,Vehicles with 17-inch wheels type G,225/65R17 102H,35,35,501,https://assets.sia.toyota.com/publications/en/om-s/OM42L49U/pdf/OM42L49U.pdf,A
+2024-toyota-rav4,19,Vehicles with 19-inch wheels type C,235/55R19 101V,33,33,503,https://assets.sia.toyota.com/publications/en/om-s/OM42L49U/pdf/OM42L49U.pdf,A
+2022-toyota-camry,16,2WD type A,205/65R16 95H,35,35,584,https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf,A
+2022-toyota-camry,17,2WD type B,215/55R17 94V,35,35,584,https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf,A
+2022-toyota-camry,18,2WD type C,235/45R18 94V,35,35,585,https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf,A
+2022-toyota-camry,19,2WD type D,235/40R19 92V,35,35,585,https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf,A
+2022-toyota-camry,19,2WD type E,235/40R19 92V,35,35,586,https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf,A
+2022-toyota-camry,19,2WD type F,235/40R19 96Y,33,33,586,https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf,A
+2022-toyota-camry,17,AWD type A,215/55R17 94V,36,36,587,https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf,A
+2022-toyota-camry,18,AWD type B,235/45R18 94V,36,36,587,https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf,A
+2022-toyota-camry,19,AWD type C,235/40R19 92V,36,36,588,https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf,A
+2022-toyota-camry,19,AWD type D,235/40R19 92V,35,35,588,https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf,A
+2022-toyota-camry,16,Hybrid type A,205/65R16 95H,35,35,550,https://assets.sia.toyota.com/publications/en/om-s/OM06246U/pdf/OM06246U.pdf,A
+2022-toyota-camry,17,Hybrid type B,215/55R17 94V,35,35,550,https://assets.sia.toyota.com/publications/en/om-s/OM06246U/pdf/OM06246U.pdf,A
+2022-toyota-camry,18,Hybrid type C,235/45R18 94V,35,35,551,https://assets.sia.toyota.com/publications/en/om-s/OM06246U/pdf/OM06246U.pdf,A
+2022-toyota-camry,19,Hybrid type D,235/40R19 92V,35,35,551,https://assets.sia.toyota.com/publications/en/om-s/OM06246U/pdf/OM06246U.pdf,A
+2024-toyota-camry,16,2WD type A,205/65R16 95H,35,35,584,https://assets.sia.toyota.com/publications/en/om-s/OM06291U/pdf/OM06291U.pdf,A
+2024-toyota-camry,17,2WD type B,215/55R17 94V,35,35,584,https://assets.sia.toyota.com/publications/en/om-s/OM06291U/pdf/OM06291U.pdf,A
+2024-toyota-camry,18,2WD type C,235/45R18 94V,35,35,585,https://assets.sia.toyota.com/publications/en/om-s/OM06291U/pdf/OM06291U.pdf,A
+2024-toyota-camry,19,2WD type D,235/40R19 92V,35,35,585,https://assets.sia.toyota.com/publications/en/om-s/OM06291U/pdf/OM06291U.pdf,A
+2024-toyota-camry,19,2WD type E,235/40R19 92V,35,35,586,https://assets.sia.toyota.com/publications/en/om-s/OM06291U/pdf/OM06291U.pdf,A
+2024-toyota-camry,19,2WD type F,235/40R19 96Y,33,33,586,https://assets.sia.toyota.com/publications/en/om-s/OM06291U/pdf/OM06291U.pdf,A
+2024-toyota-camry,17,AWD type A,215/55R17 94V,36,36,587,https://assets.sia.toyota.com/publications/en/om-s/OM06291U/pdf/OM06291U.pdf,A
+2024-toyota-camry,18,AWD type B,235/45R18 94V,36,36,587,https://assets.sia.toyota.com/publications/en/om-s/OM06291U/pdf/OM06291U.pdf,A
+2024-toyota-camry,19,AWD type C,235/40R19 92V,36,36,588,https://assets.sia.toyota.com/publications/en/om-s/OM06291U/pdf/OM06291U.pdf,A
+2024-toyota-camry,19,AWD type D,235/40R19 92V,35,35,588,https://assets.sia.toyota.com/publications/en/om-s/OM06291U/pdf/OM06291U.pdf,A
+2024-toyota-camry,16,Hybrid type A,205/65R16 95H,35,35,551,https://assets.sia.toyota.com/publications/en/om-s/OM06293U/pdf/OM06293U.pdf,A
+2024-toyota-camry,17,Hybrid type B,215/55R17 94V,35,35,551,https://assets.sia.toyota.com/publications/en/om-s/OM06293U/pdf/OM06293U.pdf,A
+2024-toyota-camry,18,Hybrid type C,235/45R18 94V,35,35,552,https://assets.sia.toyota.com/publications/en/om-s/OM06293U/pdf/OM06293U.pdf,A
+2024-toyota-camry,19,Hybrid type D,235/40R19 92V,35,35,552,https://assets.sia.toyota.com/publications/en/om-s/OM06293U/pdf/OM06293U.pdf,A
+2024-toyota-camry,19,Hybrid type E,235/40R19 92V,35,35,553,https://assets.sia.toyota.com/publications/en/om-s/OM06293U/pdf/OM06293U.pdf,A
+2022-toyota-corolla,15,Sedan type A,195/65R15 91S,38,36,558,https://assets.sia.toyota.com/publications/en/om-s/OM02617U/pdf/OM02617U.pdf,A
+2022-toyota-corolla,16,Sedan type B,205/55R16 91H,35,33,558,https://assets.sia.toyota.com/publications/en/om-s/OM02617U/pdf/OM02617U.pdf,A
+2022-toyota-corolla,18,Sedan type C,225/40R18 88V,33,30,559,https://assets.sia.toyota.com/publications/en/om-s/OM02617U/pdf/OM02617U.pdf,A
+2022-toyota-corolla,15,Sedan type D (no spare),195/65R15 91S,38,36,559,https://assets.sia.toyota.com/publications/en/om-s/OM02617U/pdf/OM02617U.pdf,A
+2022-toyota-corolla,16,Sedan type E (no spare),205/55R16 91H,35,33,559,https://assets.sia.toyota.com/publications/en/om-s/OM02617U/pdf/OM02617U.pdf,A
+2022-toyota-corolla,18,Sedan type F,225/40R18 88W,33,30,560,https://assets.sia.toyota.com/publications/en/om-s/OM02617U/pdf/OM02617U.pdf,A
+2022-toyota-corolla,15,Hybrid type A,195/65R15 91S,38,36,513,https://assets.sia.toyota.com/publications/en/om-s/OM12R27U/pdf/OM12R27U.pdf,A
+2022-toyota-corolla,15,Hybrid type B (no spare),195/65R15 91S,38,36,514,https://assets.sia.toyota.com/publications/en/om-s/OM12R27U/pdf/OM12R27U.pdf,A
+2022-toyota-corolla,15,Hatchback 15-inch tires,195/65R15 91S,38,36,519,https://assets.sia.toyota.com/publications/en/om-s/OM12Q05U/pdf/OM12Q05U.pdf,A
+2022-toyota-corolla,16,Hatchback 16-inch tires,205/55R16 91H,35,33,519,https://assets.sia.toyota.com/publications/en/om-s/OM12Q05U/pdf/OM12Q05U.pdf,A
+2022-toyota-corolla,18,Hatchback 18-inch tires,225/40R18 88V,33,30,520,https://assets.sia.toyota.com/publications/en/om-s/OM12Q05U/pdf/OM12Q05U.pdf,A
+2022-toyota-tacoma,16,Type A,P245/75R16 109S,32,32,551,https://assets.sia.toyota.com/publications/en/om-s/OM04037U/pdf/OM04037U.pdf,A
+2022-toyota-tacoma,16,Type B,265/70R16 112T,30,30,551,https://assets.sia.toyota.com/publications/en/om-s/OM04037U/pdf/OM04037U.pdf,A
+2022-toyota-tacoma,17,Type C (17-inch),P265/65R17 110S,29,29,552,https://assets.sia.toyota.com/publications/en/om-s/OM04037U/pdf/OM04037U.pdf,A
+2022-toyota-tacoma,18,Type C (18-inch),P265/60R18 109H,29,29,552,https://assets.sia.toyota.com/publications/en/om-s/OM04037U/pdf/OM04037U.pdf,A
+2023-tesla-model-y,19,19-inch wheels (front/rear),255/45R19 XL,,,,https://www.tesla.com/ownersmanual/2020_2024_modely/en_us/GUID-FDDB10EF-FFA9-46EB-B8CC-03614AE92B6B.html,A
+2023-tesla-model-y,20,20-inch wheels (front/rear),255/40R20 XL,,,,https://www.tesla.com/ownersmanual/2020_2024_modely/en_us/GUID-FDDB10EF-FFA9-46EB-B8CC-03614AE92B6B.html,A
+2023-tesla-model-y,21,"21-inch wheels, front",255/35R21 XL,,,,https://www.tesla.com/ownersmanual/2020_2024_modely/en_us/GUID-FDDB10EF-FFA9-46EB-B8CC-03614AE92B6B.html,A
+2023-tesla-model-y,21,"21-inch wheels, rear",275/35R21 XL,,,,https://www.tesla.com/ownersmanual/2020_2024_modely/en_us/GUID-FDDB10EF-FFA9-46EB-B8CC-03614AE92B6B.html,A

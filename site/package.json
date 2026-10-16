@@ -1,0 +1,17 @@
+{
+  "name": "carspecfix-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "import": "node scripts/import-legacy.mjs",
+    "build": "node scripts/images.mjs && astro build && node scripts/postbuild-check.mjs",
+    "dev": "astro dev",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@fontsource/archivo": "^5.3.0",
+    "@fontsource/jetbrains-mono": "^5.3.0",
+    "@fontsource/source-sans-3": "^5.3.1",
+    "astro": "^5.18.2"
+  }
+}

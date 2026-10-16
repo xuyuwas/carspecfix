@@ -1,0 +1,16 @@
+---
+import Page from '../../layouts/Page.astro';
+import { CONTACT_EMAIL } from '../../lib/site.mjs';
+---
+<Page title="Contact & Report a Data Error | CarSpecFix" description="Contact CarSpecFix or report a wrong number on any page." path="/contact/" crumbs={[{ name: 'Home', url: '/' }, { name: 'Contact', url: '/contact/' }]} h1="Contact">
+<p>Email <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.</p>
+<h2 class="section__title" id="report-form">Report a data error</h2>
+<form class="feedback" data-report style="display:flex;flex-direction:column;gap:12px;max-width:560px">
+  <label class="field"><span>Page</span><input name="page" required placeholder="/specs/honda/civic/2022/"></label>
+  <label class="field"><span>Which value? (e.g. oil capacity, front psi)</span><input name="field" required maxlength="200"></label>
+  <label class="field"><span>What's wrong, and the source you're checking against (no personal info)</span><textarea name="details" required maxlength="2000"></textarea></label>
+  <div><button class="btn btn--primary" type="submit">Send report</button></div>
+  <p role="status" class="feedback__msg"></p>
+</form>
+<script is:inline>(function(){var p=new URLSearchParams(location.search).get('report');var f=document.querySelector('[data-report]');if(p&&f&&/^\/[a-z0-9\/-]*$/.test(p))f.page.value=p})();</script>
+</Page>

@@ -1,0 +1,151 @@
+{
+  "slug": "2022-chevrolet-equinox",
+  "year": 2022,
+  "make": "Chevrolet",
+  "model": "Equinox",
+  "makeSlug": "chevrolet",
+  "modelSlug": "equinox",
+  "powertrain": "ice",
+  "vpicConfirmed": true,
+  "manual": {
+    "sourceId": "manual-2022-chevrolet-equinox",
+    "yearConfirmed": true,
+    "note": "GM TechLink 2022 oil capacity table, row Equinox. Tire size/pressure TODO (owner manual PDF blocked)"
+  },
+  "specs": {
+    "oilCapacity": {
+      "value": "1.5L LYX FWD: 4.2 qt (4.0 L); AWD: 5.3 qt (5.0 L), with filter",
+      "source": "manual-2022-chevrolet-equinox",
+      "page": null,
+      "sourceGrade": "A",
+      "verified": false,
+      "note": null
+    },
+    "oilViscosity": {
+      "value": "dexos1 0W-20",
+      "source": "manual-2022-chevrolet-equinox",
+      "page": null,
+      "sourceGrade": "A",
+      "verified": false,
+      "note": null
+    },
+    "wiperSizes": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "no citable source yet"
+    },
+    "batteryGroup": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "no citable source yet"
+    },
+    "towingCapacity": {
+      "value": "1,500 lb (680 kg)",
+      "source": "towing-2022-chevrolet-equinox",
+      "sourceGrade": "A",
+      "verified": false,
+      "note": null
+    },
+    "tpmsReset": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": null
+    }
+  },
+  "tires": {
+    "rows": [],
+    "note": "owner manual / door placard; owner manual"
+  },
+  "extraManuals": [],
+  "fuelEconomy": [
+    {
+      "feId": "43989",
+      "model": "Equinox AWD",
+      "option": "Auto 6-spd, 4 cyl, 1.5 L, Turbo",
+      "engineL": 1.5,
+      "cyl": 4,
+      "trans": "Automatic 6-spd",
+      "drive": "All-Wheel Drive",
+      "mpgCity": 25,
+      "mpgHwy": 30,
+      "mpgComb": 27,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/43989",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "43985",
+      "model": "Equinox FWD",
+      "option": "Auto 6-spd, 4 cyl, 1.5 L, Turbo",
+      "engineL": 1.5,
+      "cyl": 4,
+      "trans": "Automatic 6-spd",
+      "drive": "Front-Wheel Drive",
+      "mpgCity": 26,
+      "mpgHwy": 31,
+      "mpgComb": 28,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/43985",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    }
+  ],
+  "fuelEconomyFetched": "2026-10-15",
+  "recalls": [
+    {
+      "campaign": "21V612000",
+      "component": "TIRES",
+      "date": "2021-08-05",
+      "summary": "General Motors, LLC (GM) is recalling certain 2021-2022 Chevrolet Equinox and GMC Terrain vehicles equipped with certain Hankook tires.  The tires may have been manufactured with an insufficient amount of curative agent, which could cause tread separation.",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "22V359000",
+      "component": "SEATS",
+      "date": "2022-05-19",
+      "summary": "General Motors, LLC (GM) is recalling certain 2021 Chevrolet Malibu, 2022 Chevrolet Equinox, Blazer and Cadillac XT4 vehicles.  The driver's seat cushion frame may have an improper weld in the power tilt-adjustment mechanism.",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "22V724000",
+      "component": "SEATS",
+      "date": "2022-09-29",
+      "summary": "General Motors, LLC (GM) is recalling certain 2022-2023 Chevrolet Equinox and 2022 GMC Terrain vehicles.  The driver's seat may have a stripped or loose bolt at the seat frame height-adjust pivot.",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "23V013000",
+      "component": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP:CONTROL/DRIVE MODULE",
+      "date": "2023-01-19",
+      "summary": "General Motors, LLC (GM) is recalling certain 2021-2022 Chevrolet Equinox and 2022 GMC Terrain vehicles.  The fuel pump module may not consistently provide sufficient fuel to the engine, resulting in an engine stall.",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "23V339000",
+      "component": "CHILD SEAT:VEHICLE LATCH ANCHOR",
+      "date": "2023-05-11",
+      "summary": "General Motors, LLC (GM) is recalling certain 2020-2023 Chevrolet Equinox and GMC Terrain vehicles.  The four rear-seat lower child seat LATCH anchorage bars may have excessive powder coating, which could prevent a child seat from being installed with the anchorage bars.  As such, these vehicles fai",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    }
+  ],
+  "recallsFetched": "2026-10-15",
+  "recallsUrl": "https://www.nhtsa.gov/recalls?nhtsaId=&make=Chevrolet&model=Equinox&year=2022",
+  "related": {
+    "issues": []
+  },
+  "publishDate": null,
+  "dataUpdated": "2026-10-15",
+  "signOff": null
+}

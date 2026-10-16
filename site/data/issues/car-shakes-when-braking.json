@@ -1,0 +1,46 @@
+{
+  "slug": "car-shakes-when-braking",
+  "type": "symptom",
+  "code": null,
+  "title": "Car shakes when braking",
+  "targetKeyword": "car shakes when braking",
+  "definition": null,
+  "causes": [
+    {
+      "text": "Vibration in brake pedal or steering wheel when braking is a sign of needed brake service",
+      "url": "https://www.chevrolet.com/support/vehicle/driving-safety/brakes/brakes-system",
+      "document": "Chevrolet Support: The Brake System",
+      "page": "web page",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "Chevrolet",
+      "docKind": "support page",
+      "appliesTo": "GM; cause not specified",
+      "quote": null
+    },
+    {
+      "text": "Normal: ABS operation may cause vibration through body/steering and pedal pulsation",
+      "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+      "document": "2022 Toyota Camry Owner's Manual OM06244U (year mapping per Helm listing; manual is Camry-specific)",
+      "page": "p.326",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "Toyota",
+      "docKind": "owner's manual",
+      "appliesTo": "Toyota Camry; ABS activation only",
+      "quote": null
+    }
+  ],
+  "urgency": [],
+  "guidancePrimary": "Not yet verified (no universal source); brand quotes are vehicle-specific extras only",
+  "guidance": [],
+  "firstStep": null,
+  "safetyCritical": true,
+  "related": {
+    "issues": [],
+    "vehicles": []
+  },
+  "publishDate": null,
+  "dataUpdated": "2026-10-15",
+  "signOff": null
+}

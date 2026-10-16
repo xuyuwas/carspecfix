@@ -1,0 +1,1226 @@
+{
+  "generated": "2026-10-15",
+  "note": "Grade A = OEM/government original. TSBs are vehicle-specific; 'scope' says which vehicles. SAE J2012 text itself not obtained (paywalled); definitions use OEM wording. No EPA/CARB document fetched.",
+  "repairpal_terms": {
+    "url": "https://repairpal.com/terms_of_service",
+    "fetched": "2026-10-15",
+    "clauses": [
+      "RepairPal grants you permission to use the Service as set forth in this Agreement, provided that: (i) you will not copy, distribute, or disclose any part of the Service in any medium; (ii) you will not alter or modify any part of the Service other than as may be reasonably necessary to use the Service for its intended purpose; and (iii) you will otherwise comply with the terms and conditions of this Agreement.",
+      "Except for your User Content, the Service and all materials therein or transferred thereby, including, without limitation, software, images, text, graphics, ... (the \"RepairPal Content\"), and all Intellectual Property Rights related thereto, are the exclusive property of RepairPal and its licensors. Except as explicitly provided herein, nothing in this Agreement shall be deemed to create a license in or under any such Intellectual Property Rights, and you agree not to sell, license, rent, modify, distribute, copy, reproduce, transmit, publicly display, publicly perform, publish, adapt, edit or create derivative works from any materials or content accessible on the Service. Use of the RepairPal Content or materials on the Service for any purpose not expressly permitted by this Agreement is strictly prohibited.",
+      "You agree not to use or launch any automated system, including without limitation, \"robots,\" \"spiders,\" \"offline readers,\" etc., that accesses the Service in a manner that sends more request messages to the RepairPal servers than a human can reasonably produce..."
+    ],
+    "conclusion": "Prohibited under the ToS: no attribution/citation exception; 'publish' and 'reproduce' any content accessible on the Service are barred. Whether quoting a bare price range is fair use is a legal question (unclear), but contractually it is not permitted. Recommend not using RepairPal price ranges."
+  },
+  "codes": {
+    "p0455": {
+      "definition": {
+        "fact": "P0455: Evaporative Emission System Large Leak Detected",
+        "url": "https://static.nhtsa.gov/odi/tsbs/2022/MC-10228888-0001.pdf",
+        "document": "GM Service Bulletin 21-NA-124 (EVAP P0442/P0455 diagnostic tips)",
+        "page": "p.1",
+        "fetched": "2026-10-15",
+        "grade": "A",
+        "scope": "GM wording of the generic code; SAE J2012 original text not obtained",
+        "display_name": "Evaporative Emission System Large Leak Detected",
+        "display_note": "identical to source text"
+      },
+      "causes": [
+        {
+          "fact": "Large leak or purge blockage: unseated EVAP tube connection",
+          "url": "https://static.nhtsa.gov/odi/tsbs/2022/MC-10228888-0001.pdf",
+          "document": "GM Service Bulletin 21-NA-124 (EVAP P0442/P0455 diagnostic tips)",
+          "page": "p.1",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "GM vehicles listed in bulletin",
+          "quote": "A large leak can occur from an unseated tube connection, a damaged tube, a stuck opened canister vent valve or a stuck closed purge valve."
+        },
+        {
+          "fact": "Damaged EVAP tube/line",
+          "url": "https://static.nhtsa.gov/odi/tsbs/2022/MC-10228888-0001.pdf",
+          "document": "GM Service Bulletin 21-NA-124 (EVAP P0442/P0455 diagnostic tips)",
+          "page": "p.1",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "GM vehicles listed in bulletin"
+        },
+        {
+          "fact": "Canister vent valve stuck open",
+          "url": "https://static.nhtsa.gov/odi/tsbs/2022/MC-10228888-0001.pdf",
+          "document": "GM Service Bulletin 21-NA-124 (EVAP P0442/P0455 diagnostic tips)",
+          "page": "p.1",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "GM vehicles listed in bulletin"
+        },
+        {
+          "fact": "Purge valve stuck closed",
+          "url": "https://static.nhtsa.gov/odi/tsbs/2022/MC-10228888-0001.pdf",
+          "document": "GM Service Bulletin 21-NA-124 (EVAP P0442/P0455 diagnostic tips)",
+          "page": "p.1",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "GM vehicles listed in bulletin"
+        },
+        {
+          "fact": "Fuel tank cap not closed properly (one of 7 connections to inspect)",
+          "url": "https://static.nhtsa.gov/odi/tsbs/2022/MC-10228888-0001.pdf",
+          "document": "GM Service Bulletin 21-NA-124 (EVAP P0442/P0455 diagnostic tips)",
+          "page": "p.1-2",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "GM vehicles listed in bulletin",
+          "quote": "7. Fuel tank cap is closed properly (at refuel compartment)"
+        },
+        {
+          "fact": "Fuel filler pipe main flap unit stuck open",
+          "url": "https://static.nhtsa.gov/odi/tsbs/2022/MC-10219672-0001.pdf",
+          "document": "Honda/Acura service bulletin (i-HDS), MC-10219672",
+          "page": "p.1",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "Specific Acura models in bulletin only",
+          "quote": "The fuel main flap unit may have stuck open, causing a DTC to set."
+        }
+      ],
+      "driving_guidance": [
+        {
+          "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1009Z15.TXT",
+          "document": "U.S. EPA Fact Sheet EPA 420-F-97-003 (May 1997), Frequently Asked Questions About On-Board Diagnostics",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "universal",
+          "answers": "can_i_keep_driving (steady light): yes; urgency: service as soon as possible",
+          "quote": "It is important to note that an illuminated dashboard light, as described here, is intended to inform the driver of the need for service, NOT of the need to stop the vehicle. However, service should be sought as soon as possible.",
+          "page": "p.2"
+        },
+        {
+          "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1009Z15.TXT",
+          "document": "U.S. EPA Fact Sheet EPA 420-F-97-003 (May 1997), Frequently Asked Questions About On-Board Diagnostics",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "universal",
+          "answers": "flashing light: reduce speed, seek service as soon as possible",
+          "quote": "Under certain conditions, the dashboard light will blink or flash. This indicates a rather severe level of engine misfire. When this occurs, the driver should reduce speed and seek service as soon as possible.",
+          "page": "p.2"
+        },
+        {
+          "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1009Z15.TXT",
+          "document": "U.S. EPA Fact Sheet EPA 420-F-97-003 (May 1997), Frequently Asked Questions About On-Board Diagnostics",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "universal",
+          "answers": "check yourself first: gas cap",
+          "quote": "For example, if the gas cap is not properly tightened after refueling, the OBD system can detect the vapor leak that exists from the cap not being completely tightened. If the gas cap is subsequently tightened, the dashboard light should be extinguished within a few days.",
+          "page": "p.3"
+        },
+        {
+          "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+          "document": "2022 Toyota Camry Owner's Manual OM06244U",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "vehicle-specific: Toyota Camry 2022",
+          "answers": "check yourself first (fuel, cap), then dealer as soon as possible",
+          "quote": "If the malfunction indicator lamp comes on while driving First check the following: Is the fuel tank empty? If it is, fill the fuel tank immediately. Is the fuel tank cap loose? If it is, tighten it securely. The light will go off after several driving trips. If the light does not go off even after several trips, contact your Toyota dealer as soon as possible.",
+          "page": "p.533"
+        },
+        {
+          "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+          "document": "2022 Toyota Camry Owner's Manual OM06244U",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "vehicle-specific: Toyota Camry 2022",
+          "answers": "check yourself first: fuel cap",
+          "quote": "When \"Check Fuel Cap\" is displayed on the multi-information display: The fuel tank cap may be unfastened or loose. Turn the engine switch off, check the cap and tighten it securely.",
+          "page": "p.247"
+        },
+        {
+          "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+          "document": "2022 Toyota Camry Owner's Manual OM06244U",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "vehicle-specific: Toyota Camry 2022",
+          "answers": "urgency per Toyota warning-light table: inspect immediately (note: stricter than p.533 and EPA)",
+          "quote": "Malfunction indicator lamp ... Indicates a malfunction in: The electronic engine control system; The electronic throttle control system; or The electronic automatic transmission control system → Have the vehicle inspected by your Toyota dealer immediately.",
+          "page": "p.528"
+        },
+        {
+          "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1009Z15.TXT",
+          "document": "U.S. EPA Fact Sheet EPA 420-F-97-003 (May 1997), Frequently Asked Questions About On-Board Diagnostics",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "universal",
+          "answers": "shop vs self: repair at a qualified shop",
+          "quote": "Only qualified, trained technicians equipped with the newest diagnostic and repair equipment should conduct OBD related service.",
+          "page": "p.4"
+        }
+      ],
+      "driving_guidance_primary": "universal: EPA 420-F-97-003 p.2 (steady: service ASAP, not need to stop; flashing: reduce speed, service ASAP)",
+      "signoff": {
+        "reviewed_by": "小数",
+        "reviewed_at": "2026-10-15",
+        "signoff": "yes",
+        "checked": "EPA 420-F-97-003 (nepis P1009Z15) p.2 steady/flashing, p.3 gas cap, p.4 qualified technicians: all quotes verbatim; universal EPA listed before brand-specific entries, Toyota/Ford labeled vehicle-specific"
+      }
+    },
+    "p0442": {
+      "definition": {
+        "fact": "P0442: Evaporative Emission System Small Leak Detected",
+        "url": "https://static.nhtsa.gov/odi/tsbs/2022/MC-10228888-0001.pdf",
+        "document": "GM Service Bulletin 21-NA-124 (EVAP P0442/P0455 diagnostic tips)",
+        "page": "p.1",
+        "fetched": "2026-10-15",
+        "grade": "A",
+        "scope": "GM wording",
+        "display_name": "Evaporative Emission System Small Leak Detected",
+        "display_note": "identical to source text"
+      },
+      "causes": [
+        {
+          "fact": "Purge valve stuck open",
+          "url": "https://static.nhtsa.gov/odi/tsbs/2022/MC-10228888-0001.pdf",
+          "document": "GM Service Bulletin 21-NA-124 (EVAP P0442/P0455 diagnostic tips)",
+          "page": "p.1",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "GM vehicles listed",
+          "quote": "The leak can occur from a stuck open purge valve or stuck open canister vent valve."
+        },
+        {
+          "fact": "Canister vent valve stuck open",
+          "url": "https://static.nhtsa.gov/odi/tsbs/2022/MC-10228888-0001.pdf",
+          "document": "GM Service Bulletin 21-NA-124 (EVAP P0442/P0455 diagnostic tips)",
+          "page": "p.1",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "GM vehicles listed"
+        },
+        {
+          "fact": "EVAP system not sealed / purge lines not properly connected",
+          "url": "https://static.nhtsa.gov/odi/tsbs/2022/MC-10228888-0001.pdf",
+          "document": "GM Service Bulletin 21-NA-124 (EVAP P0442/P0455 diagnostic tips)",
+          "page": "p.1",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "GM vehicles listed"
+        }
+      ],
+      "driving_guidance": [
+        {
+          "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1009Z15.TXT",
+          "document": "U.S. EPA Fact Sheet EPA 420-F-97-003 (May 1997), Frequently Asked Questions About On-Board Diagnostics",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "universal",
+          "answers": "can_i_keep_driving (steady light): yes; urgency: service as soon as possible",
+          "quote": "It is important to note that an illuminated dashboard light, as described here, is intended to inform the driver of the need for service, NOT of the need to stop the vehicle. However, service should be sought as soon as possible.",
+          "page": "p.2"
+        },
+        {
+          "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1009Z15.TXT",
+          "document": "U.S. EPA Fact Sheet EPA 420-F-97-003 (May 1997), Frequently Asked Questions About On-Board Diagnostics",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "universal",
+          "answers": "flashing light: reduce speed, seek service as soon as possible",
+          "quote": "Under certain conditions, the dashboard light will blink or flash. This indicates a rather severe level of engine misfire. When this occurs, the driver should reduce speed and seek service as soon as possible.",
+          "page": "p.2"
+        },
+        {
+          "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1009Z15.TXT",
+          "document": "U.S. EPA Fact Sheet EPA 420-F-97-003 (May 1997), Frequently Asked Questions About On-Board Diagnostics",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "universal",
+          "answers": "check yourself first: gas cap",
+          "quote": "For example, if the gas cap is not properly tightened after refueling, the OBD system can detect the vapor leak that exists from the cap not being completely tightened. If the gas cap is subsequently tightened, the dashboard light should be extinguished within a few days.",
+          "page": "p.3"
+        },
+        {
+          "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+          "document": "2022 Toyota Camry Owner's Manual OM06244U",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "vehicle-specific: Toyota Camry 2022",
+          "answers": "check yourself first (fuel, cap), then dealer as soon as possible",
+          "quote": "If the malfunction indicator lamp comes on while driving First check the following: Is the fuel tank empty? If it is, fill the fuel tank immediately. Is the fuel tank cap loose? If it is, tighten it securely. The light will go off after several driving trips. If the light does not go off even after several trips, contact your Toyota dealer as soon as possible.",
+          "page": "p.533"
+        },
+        {
+          "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+          "document": "2022 Toyota Camry Owner's Manual OM06244U",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "vehicle-specific: Toyota Camry 2022",
+          "answers": "check yourself first: fuel cap",
+          "quote": "When \"Check Fuel Cap\" is displayed on the multi-information display: The fuel tank cap may be unfastened or loose. Turn the engine switch off, check the cap and tighten it securely.",
+          "page": "p.247"
+        },
+        {
+          "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+          "document": "2022 Toyota Camry Owner's Manual OM06244U",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "vehicle-specific: Toyota Camry 2022",
+          "answers": "urgency per Toyota warning-light table: inspect immediately (note: stricter than p.533 and EPA)",
+          "quote": "Malfunction indicator lamp ... Indicates a malfunction in: The electronic engine control system; The electronic throttle control system; or The electronic automatic transmission control system → Have the vehicle inspected by your Toyota dealer immediately.",
+          "page": "p.528"
+        },
+        {
+          "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1009Z15.TXT",
+          "document": "U.S. EPA Fact Sheet EPA 420-F-97-003 (May 1997), Frequently Asked Questions About On-Board Diagnostics",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "universal",
+          "answers": "shop vs self: repair at a qualified shop",
+          "quote": "Only qualified, trained technicians equipped with the newest diagnostic and repair equipment should conduct OBD related service.",
+          "page": "p.4"
+        }
+      ],
+      "driving_guidance_primary": "universal: EPA 420-F-97-003 p.2 (steady: service ASAP, not need to stop; flashing: reduce speed, service ASAP)",
+      "signoff": {
+        "reviewed_by": "小数",
+        "reviewed_at": "2026-10-15",
+        "signoff": "yes",
+        "checked": "EPA 420-F-97-003 (nepis P1009Z15) p.2 steady/flashing, p.3 gas cap, p.4 qualified technicians: all quotes verbatim; universal EPA listed before brand-specific entries, Toyota/Ford labeled vehicle-specific"
+      }
+    },
+    "p0456": {
+      "definition": {
+        "fact": "P0456: EVAP system leak detected (very small leak)",
+        "url": "https://static.nhtsa.gov/odi/tsbs/2018/MC-10142517-9999.pdf",
+        "document": "Mazda Service Bulletin 01-013/18",
+        "page": "p.1",
+        "fetched": "2026-10-15",
+        "grade": "A",
+        "scope": "Mazda wording",
+        "display_name": "Evaporative Emission System Leak Detected (Very Small Leak)",
+        "display_note": "capitalization + 'EVAP' expanded to 'Evaporative Emission' (same expansion GM 21-NA-124 uses for P0442/P0455); source text kept in fact"
+      },
+      "causes": [
+        {
+          "fact": "Fuel cap not completely closed after fueling",
+          "url": "https://static.nhtsa.gov/odi/tsbs/2018/MC-10142517-9999.pdf",
+          "document": "Mazda Service Bulletin 01-013/18",
+          "page": "p.1",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "Mazda models in bulletin",
+          "quote": "The concern is most likely the result of the customer not getting the fuel cap completely closed after fueling the vehicle."
+        },
+        {
+          "fact": "EVAP leak at vent control valve O-ring",
+          "url": "https://static.nhtsa.gov/odi/tsbs/2019/MC-10153007-9999.pdf",
+          "document": "Nissan TSB: DTC P0456 caused by EVAP leak at vent control valve O-ring",
+          "page": "p.1",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "Applied Nissan vehicles only; bulletin states not caused by loose cap for those vehicles"
+        },
+        {
+          "fact": "Some P0456 concerns corrected by PCM software update (Stellantis; SLVT required)",
+          "url": "https://static.nhtsa.gov/odi/tsbs/2023/MC-10236933-9999.pdf",
+          "document": "Stellantis wiTECH SLVT P0456 communication",
+          "page": "p.1",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "Stellantis vehicles"
+        }
+      ],
+      "driving_guidance": [
+        {
+          "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1009Z15.TXT",
+          "document": "U.S. EPA Fact Sheet EPA 420-F-97-003 (May 1997), Frequently Asked Questions About On-Board Diagnostics",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "universal",
+          "answers": "can_i_keep_driving (steady light): yes; urgency: service as soon as possible",
+          "quote": "It is important to note that an illuminated dashboard light, as described here, is intended to inform the driver of the need for service, NOT of the need to stop the vehicle. However, service should be sought as soon as possible.",
+          "page": "p.2"
+        },
+        {
+          "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1009Z15.TXT",
+          "document": "U.S. EPA Fact Sheet EPA 420-F-97-003 (May 1997), Frequently Asked Questions About On-Board Diagnostics",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "universal",
+          "answers": "flashing light: reduce speed, seek service as soon as possible",
+          "quote": "Under certain conditions, the dashboard light will blink or flash. This indicates a rather severe level of engine misfire. When this occurs, the driver should reduce speed and seek service as soon as possible.",
+          "page": "p.2"
+        },
+        {
+          "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1009Z15.TXT",
+          "document": "U.S. EPA Fact Sheet EPA 420-F-97-003 (May 1997), Frequently Asked Questions About On-Board Diagnostics",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "universal",
+          "answers": "check yourself first: gas cap",
+          "quote": "For example, if the gas cap is not properly tightened after refueling, the OBD system can detect the vapor leak that exists from the cap not being completely tightened. If the gas cap is subsequently tightened, the dashboard light should be extinguished within a few days.",
+          "page": "p.3"
+        },
+        {
+          "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+          "document": "2022 Toyota Camry Owner's Manual OM06244U",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "vehicle-specific: Toyota Camry 2022",
+          "answers": "check yourself first (fuel, cap), then dealer as soon as possible",
+          "quote": "If the malfunction indicator lamp comes on while driving First check the following: Is the fuel tank empty? If it is, fill the fuel tank immediately. Is the fuel tank cap loose? If it is, tighten it securely. The light will go off after several driving trips. If the light does not go off even after several trips, contact your Toyota dealer as soon as possible.",
+          "page": "p.533"
+        },
+        {
+          "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+          "document": "2022 Toyota Camry Owner's Manual OM06244U",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "vehicle-specific: Toyota Camry 2022",
+          "answers": "check yourself first: fuel cap",
+          "quote": "When \"Check Fuel Cap\" is displayed on the multi-information display: The fuel tank cap may be unfastened or loose. Turn the engine switch off, check the cap and tighten it securely.",
+          "page": "p.247"
+        },
+        {
+          "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+          "document": "2022 Toyota Camry Owner's Manual OM06244U",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "vehicle-specific: Toyota Camry 2022",
+          "answers": "urgency per Toyota warning-light table: inspect immediately (note: stricter than p.533 and EPA)",
+          "quote": "Malfunction indicator lamp ... Indicates a malfunction in: The electronic engine control system; The electronic throttle control system; or The electronic automatic transmission control system → Have the vehicle inspected by your Toyota dealer immediately.",
+          "page": "p.528"
+        },
+        {
+          "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1009Z15.TXT",
+          "document": "U.S. EPA Fact Sheet EPA 420-F-97-003 (May 1997), Frequently Asked Questions About On-Board Diagnostics",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "universal",
+          "answers": "shop vs self: repair at a qualified shop",
+          "quote": "Only qualified, trained technicians equipped with the newest diagnostic and repair equipment should conduct OBD related service.",
+          "page": "p.4"
+        }
+      ],
+      "driving_guidance_primary": "universal: EPA 420-F-97-003 p.2 (steady: service ASAP, not need to stop; flashing: reduce speed, service ASAP)",
+      "signoff": {
+        "reviewed_by": "小数",
+        "reviewed_at": "2026-10-15",
+        "signoff": "yes",
+        "checked": "EPA 420-F-97-003 (nepis P1009Z15) p.2 steady/flashing, p.3 gas cap, p.4 qualified technicians: all quotes verbatim; universal EPA listed before brand-specific entries, Toyota/Ford labeled vehicle-specific"
+      }
+    },
+    "p0171": {
+      "definition": {
+        "fact": "P0171: System too Lean",
+        "url": "https://mitsubishitechinfo.com/data/REEV22/2022/13/HTML/M113155350163700USA.htm",
+        "document": "Mitsubishi service manual 13A-DTC P0171 (2022)",
+        "page": "web page",
+        "fetched": "2026-10-15",
+        "grade": "A",
+        "scope": "Mitsubishi OEM service info; GM uses 'Fuel Trim System Lean'",
+        "display_name": "System Too Lean",
+        "display_note": "capitalization only ('too'->'Too'); source text kept in fact"
+      },
+      "causes": [
+        {
+          "fact": "Split air cleaner outlet duct after MAF letting unmetered air in",
+          "url": "https://static.nhtsa.gov/odi/tsbs/2014/MC-10114295-9999.pdf",
+          "document": "GM PI1307 (2012-2014 Sonic)",
+          "page": "p.1",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "2012-14 Chevrolet Sonic"
+        },
+        {
+          "fact": "Vacuum leak in intake (foul-air/PCV tube) or purge valve",
+          "url": "https://static.nhtsa.gov/odi/tsbs/2018/MC-10129098-9999.pdf",
+          "document": "Ford PIP5549",
+          "page": "p.1",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "Ford vehicles in PIP",
+          "quote": "Possible Cause Vacuum leak in intake or Purge."
+        },
+        {
+          "fact": "Air box/filter fitment, MAF, A/F sensor faults; fuel injectors",
+          "url": "https://static.nhtsa.gov/odi/tsbs/2022/MC-10228648-0001.pdf",
+          "document": "Mazda M-Tip (P0171 Fuel Trim too Lean)",
+          "page": "p.1-2",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "Listed Mazda SKYACTIV models"
+        },
+        {
+          "fact": "Crankcase leak e.g. rear main seal / breather",
+          "url": "https://static.nhtsa.gov/odi/tsbs/2017/MC-10125599-9999.pdf",
+          "document": "VW Tech Tip 01-14-01TT",
+          "page": "p.1",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "Tiguan, Passat, CC, Jetta, Sportwagen, GTI, Eos; 2008-2017; 2.0L (CCTA, CBFA) (VW Tech Tip 01-14-01TT)"
+        },
+        {
+          "fact": "OEM list: A/F sensor, MAF, injector, fuel pressure, intake air leak at gaskets, ECT/IAT/baro/MAP sensors, exhaust leak, purge solenoid, contaminated fuel, harness, ECM",
+          "url": "https://mitsubishitechinfo.com/data/REEV22/2022/13/HTML/M113155350163700USA.htm",
+          "document": "Mitsubishi 13A-DTC P0171",
+          "page": "Troubleshooting hints",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "Mitsubishi REEV22 (2022) service manual, 13A-DTC P0171"
+        }
+      ],
+      "driving_guidance": [
+        {
+          "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1009Z15.TXT",
+          "document": "U.S. EPA Fact Sheet EPA 420-F-97-003 (May 1997), Frequently Asked Questions About On-Board Diagnostics",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "universal",
+          "answers": "can_i_keep_driving (steady light): yes; urgency: service as soon as possible",
+          "quote": "It is important to note that an illuminated dashboard light, as described here, is intended to inform the driver of the need for service, NOT of the need to stop the vehicle. However, service should be sought as soon as possible.",
+          "page": "p.2"
+        },
+        {
+          "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1009Z15.TXT",
+          "document": "U.S. EPA Fact Sheet EPA 420-F-97-003 (May 1997), Frequently Asked Questions About On-Board Diagnostics",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "universal",
+          "answers": "flashing light: reduce speed, seek service as soon as possible",
+          "quote": "Under certain conditions, the dashboard light will blink or flash. This indicates a rather severe level of engine misfire. When this occurs, the driver should reduce speed and seek service as soon as possible.",
+          "page": "p.2"
+        },
+        {
+          "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+          "document": "2022 Toyota Camry Owner's Manual OM06244U",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "vehicle-specific: Toyota Camry 2022",
+          "answers": "check yourself first (fuel, cap), then dealer as soon as possible",
+          "quote": "If the malfunction indicator lamp comes on while driving First check the following: Is the fuel tank empty? If it is, fill the fuel tank immediately. Is the fuel tank cap loose? If it is, tighten it securely. The light will go off after several driving trips. If the light does not go off even after several trips, contact your Toyota dealer as soon as possible.",
+          "page": "p.533"
+        },
+        {
+          "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+          "document": "2022 Toyota Camry Owner's Manual OM06244U",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "vehicle-specific: Toyota Camry 2022",
+          "answers": "urgency per Toyota warning-light table: inspect immediately (note: stricter than p.533 and EPA)",
+          "quote": "Malfunction indicator lamp ... Indicates a malfunction in: The electronic engine control system; The electronic throttle control system; or The electronic automatic transmission control system → Have the vehicle inspected by your Toyota dealer immediately.",
+          "page": "p.528"
+        },
+        {
+          "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1009Z15.TXT",
+          "document": "U.S. EPA Fact Sheet EPA 420-F-97-003 (May 1997), Frequently Asked Questions About On-Board Diagnostics",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "universal",
+          "answers": "shop vs self: repair at a qualified shop",
+          "quote": "Only qualified, trained technicians equipped with the newest diagnostic and repair equipment should conduct OBD related service.",
+          "page": "p.4"
+        }
+      ],
+      "driving_guidance_primary": "universal: EPA 420-F-97-003 p.2 (steady: service ASAP, not need to stop; flashing: reduce speed, service ASAP)",
+      "signoff": {
+        "reviewed_by": "小数",
+        "reviewed_at": "2026-10-15",
+        "signoff": "yes",
+        "checked": "EPA 420-F-97-003 (nepis P1009Z15) p.2 steady/flashing, p.3 gas cap, p.4 qualified technicians: all quotes verbatim; universal EPA listed before brand-specific entries, Toyota/Ford labeled vehicle-specific"
+      }
+    },
+    "p0420": {
+      "definition": {
+        "fact": "P0420: Catalyst System Efficiency Below Threshold (Bank 1)",
+        "url": "https://static.nhtsa.gov/odi/tsbs/2023/MC-10244906-0001.pdf",
+        "document": "Subaru Service Information Bulletin, DTC P0420 Diagnostic Procedure",
+        "page": "p.1",
+        "fetched": "2026-10-15",
+        "grade": "A",
+        "scope": "Subaru wording",
+        "display_name": "Catalyst System Efficiency Below Threshold (Bank 1)",
+        "display_note": "identical to source text"
+      },
+      "causes": [
+        {
+          "fact": "Other engine/O2/fuel DTCs must be fixed first; then mode 6 catalyst test before replacement",
+          "url": "https://static.nhtsa.gov/odi/tsbs/2023/MC-10244906-0001.pdf",
+          "document": "Subaru SIB P0420",
+          "page": "p.1-2",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "2017-19MY Legacy & Outback 2.5L; 2020-23MY Legacy & Outback; 2017-23MY Impreza & Crosstrek; 2017-18MY Forester 2.5L; 2019-23MY Forester; 2017-23MY WRX; 2019-21MY Ascent (Subaru SIB 09-110-23, APPLICABILITY, verbatim)"
+        },
+        {
+          "fact": "Sensors misinterpret catalyst as deteriorated, or catalyst actually deteriorated; PGM-FI software update",
+          "url": "https://static.nhtsa.gov/odi/tsbs/2022/MC-10222076-0001.pdf",
+          "document": "Honda Service Bulletin 22-040",
+          "page": "p.1",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "2014-16 Honda CR-Z",
+          "quote": "Sensors on the vehicle may misinterpret the catalyst as deteriorated or it may have deteriorated."
+        },
+        {
+          "fact": "High sulfur content in fuel; desulfation procedure",
+          "url": "https://static.nhtsa.gov/odi/tsbs/2023/MC-10230765-0001.pdf",
+          "document": "Ford TSB 22-2260",
+          "page": "p.1",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "2018-20 F-150 2.7L, 2020-21 Expedition/Navigator"
+        },
+        {
+          "fact": "PCM software",
+          "url": "https://static.nhtsa.gov/odi/tsbs/2025/MC-11016083-0001.pdf",
+          "document": "Ford TSB 25-2119",
+          "page": "p.1",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "2021-2022 F-Super Duty 7.3L, Pickup only"
+        }
+      ],
+      "driving_guidance": [
+        {
+          "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1009Z15.TXT",
+          "document": "U.S. EPA Fact Sheet EPA 420-F-97-003 (May 1997), Frequently Asked Questions About On-Board Diagnostics",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "universal",
+          "answers": "can_i_keep_driving (steady light): yes; urgency: service as soon as possible",
+          "quote": "It is important to note that an illuminated dashboard light, as described here, is intended to inform the driver of the need for service, NOT of the need to stop the vehicle. However, service should be sought as soon as possible.",
+          "page": "p.2"
+        },
+        {
+          "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1009Z15.TXT",
+          "document": "U.S. EPA Fact Sheet EPA 420-F-97-003 (May 1997), Frequently Asked Questions About On-Board Diagnostics",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "universal",
+          "answers": "flashing light: reduce speed, seek service as soon as possible",
+          "quote": "Under certain conditions, the dashboard light will blink or flash. This indicates a rather severe level of engine misfire. When this occurs, the driver should reduce speed and seek service as soon as possible.",
+          "page": "p.2"
+        },
+        {
+          "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+          "document": "2022 Toyota Camry Owner's Manual OM06244U",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "vehicle-specific: Toyota Camry 2022",
+          "answers": "urgency per Toyota warning-light table: inspect immediately (note: stricter than p.533 and EPA)",
+          "quote": "Malfunction indicator lamp ... Indicates a malfunction in: The electronic engine control system; The electronic throttle control system; or The electronic automatic transmission control system → Have the vehicle inspected by your Toyota dealer immediately.",
+          "page": "p.528"
+        },
+        {
+          "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1009Z15.TXT",
+          "document": "U.S. EPA Fact Sheet EPA 420-F-97-003 (May 1997), Frequently Asked Questions About On-Board Diagnostics",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "universal",
+          "answers": "shop vs self: repair at a qualified shop",
+          "quote": "Only qualified, trained technicians equipped with the newest diagnostic and repair equipment should conduct OBD related service.",
+          "page": "p.4"
+        }
+      ],
+      "driving_guidance_primary": "universal: EPA 420-F-97-003 p.2 (steady: service ASAP, not need to stop; flashing: reduce speed, service ASAP)",
+      "signoff": {
+        "reviewed_by": "小数",
+        "reviewed_at": "2026-10-15",
+        "signoff": "yes",
+        "checked": "EPA 420-F-97-003 (nepis P1009Z15) p.2 steady/flashing, p.3 gas cap, p.4 qualified technicians: all quotes verbatim; universal EPA listed before brand-specific entries, Toyota/Ford labeled vehicle-specific"
+      }
+    },
+    "p0300": {
+      "definition": {
+        "fact": "P0300: Random/Multiple Cylinder Misfire Detected",
+        "url": "https://static.nhtsa.gov/odi/tsbs/2022/MC-10214471-0001.pdf",
+        "document": "VW TSB 01-16-13 Engine Misfire Diagnostic Aid",
+        "page": "p.1",
+        "fetched": "2026-10-15",
+        "grade": "A",
+        "scope": "VW wording",
+        "display_name": "Random/Multiple Cylinder Misfire Detected",
+        "display_note": "identical to source text"
+      },
+      "causes": [
+        {
+          "fact": "Low fuel level can cause misfire codes (with P1250)",
+          "url": "https://static.nhtsa.gov/odi/tsbs/2022/MC-10214471-0001.pdf",
+          "document": "VW 01-16-13",
+          "page": "p.1",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "VW vehicles"
+        },
+        {
+          "fact": "P0300 alone is not a reason to replace all injectors, plugs or coils",
+          "url": "https://static.nhtsa.gov/odi/tsbs/2022/MC-10214471-0001.pdf",
+          "document": "VW 01-16-13",
+          "page": "p.2",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "VW vehicles (diagnostic guidance, not a cause)"
+        },
+        {
+          "fact": "AFM lifter collapsed/stuck, lifter locking pin damage from oil aeration, bent pushrod",
+          "url": "https://static.nhtsa.gov/odi/tsbs/2023/MC-10230583-0001.pdf",
+          "document": "GM 15-06-01-002M",
+          "page": "p.1",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "GM V8 with AFM/DFM per bulletin"
+        }
+      ],
+      "driving_guidance": [
+        {
+          "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1009Z15.TXT",
+          "document": "U.S. EPA Fact Sheet EPA 420-F-97-003 (May 1997), Frequently Asked Questions About On-Board Diagnostics",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "universal",
+          "answers": "flashing light: reduce speed, seek service as soon as possible",
+          "quote": "Under certain conditions, the dashboard light will blink or flash. This indicates a rather severe level of engine misfire. When this occurs, the driver should reduce speed and seek service as soon as possible.",
+          "page": "p.2"
+        },
+        {
+          "url": "https://static.nhtsa.gov/odi/inv/2024/INRD-PE24023-27812.pdf",
+          "document": "Ford 2023 Motorhome (chassis) Owner's Manual, hosted by NHTSA in investigation PE24-023",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "vehicle-specific: Ford 2023 motorhome chassis",
+          "page": "PDF p.33 (Instrument Cluster)",
+          "answers": "flashing: drive moderately, check ASAP",
+          "quote": "If it flashes, engine misfire could be occurring. Increased exhaust gas temperatures could damage the catalytic converter or other vehicle components. Drive in a moderate fashion (avoid heavy acceleration and deceleration) and have your vehicle checked as soon as possible."
+        },
+        {
+          "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1009Z15.TXT",
+          "document": "U.S. EPA Fact Sheet EPA 420-F-97-003 (May 1997), Frequently Asked Questions About On-Board Diagnostics",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "universal",
+          "answers": "can_i_keep_driving (steady light): yes; urgency: service as soon as possible",
+          "quote": "It is important to note that an illuminated dashboard light, as described here, is intended to inform the driver of the need for service, NOT of the need to stop the vehicle. However, service should be sought as soon as possible.",
+          "page": "p.2"
+        },
+        {
+          "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+          "document": "2022 Toyota Camry Owner's Manual OM06244U",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "vehicle-specific: Toyota Camry 2022",
+          "answers": "urgency per Toyota warning-light table: inspect immediately (note: stricter than p.533 and EPA)",
+          "quote": "Malfunction indicator lamp ... Indicates a malfunction in: The electronic engine control system; The electronic throttle control system; or The electronic automatic transmission control system → Have the vehicle inspected by your Toyota dealer immediately.",
+          "page": "p.528"
+        },
+        {
+          "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1009Z15.TXT",
+          "document": "U.S. EPA Fact Sheet EPA 420-F-97-003 (May 1997), Frequently Asked Questions About On-Board Diagnostics",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "universal",
+          "answers": "shop vs self: repair at a qualified shop",
+          "quote": "Only qualified, trained technicians equipped with the newest diagnostic and repair equipment should conduct OBD related service.",
+          "page": "p.4"
+        }
+      ],
+      "driving_guidance_primary": "universal: EPA 420-F-97-003 p.2 (steady: service ASAP, not need to stop; flashing: reduce speed, service ASAP)",
+      "signoff": {
+        "reviewed_by": "小数",
+        "reviewed_at": "2026-10-15",
+        "signoff": "yes",
+        "checked": "EPA 420-F-97-003 (nepis P1009Z15) p.2 steady/flashing, p.3 gas cap, p.4 qualified technicians: all quotes verbatim; universal EPA listed before brand-specific entries, Toyota/Ford labeled vehicle-specific"
+      }
+    },
+    "p0301": {
+      "definition": {
+        "fact": "P0301: Cyl.1 Misfire Detected",
+        "url": "https://static.nhtsa.gov/odi/tsbs/2022/MC-10214471-0001.pdf",
+        "document": "VW 01-16-13",
+        "page": "p.1",
+        "fetched": "2026-10-15",
+        "grade": "A",
+        "scope": "VW wording",
+        "display_name": "Cylinder 1 Misfire Detected",
+        "display_note": "'Cyl.1'->'Cylinder 1' (VW same doc spells out 'Cylinder' in P0300); source text kept in fact"
+      },
+      "causes": [
+        {
+          "fact": "Fuel injector, spark plug or ignition coil on the misfiring cylinder (replace only the one causing the misfire)",
+          "url": "https://static.nhtsa.gov/odi/tsbs/2022/MC-10214471-0001.pdf",
+          "document": "VW 01-16-13",
+          "page": "p.2",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "VW vehicles"
+        },
+        {
+          "fact": "Low fuel level",
+          "url": "https://static.nhtsa.gov/odi/tsbs/2022/MC-10214471-0001.pdf",
+          "document": "VW 01-16-13",
+          "page": "p.1",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "VW vehicles"
+        }
+      ],
+      "driving_guidance": [
+        {
+          "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1009Z15.TXT",
+          "document": "U.S. EPA Fact Sheet EPA 420-F-97-003 (May 1997), Frequently Asked Questions About On-Board Diagnostics",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "universal",
+          "answers": "flashing light: reduce speed, seek service as soon as possible",
+          "quote": "Under certain conditions, the dashboard light will blink or flash. This indicates a rather severe level of engine misfire. When this occurs, the driver should reduce speed and seek service as soon as possible.",
+          "page": "p.2"
+        },
+        {
+          "url": "https://static.nhtsa.gov/odi/inv/2024/INRD-PE24023-27812.pdf",
+          "document": "Ford 2023 Motorhome (chassis) Owner's Manual, hosted by NHTSA in investigation PE24-023",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "vehicle-specific: Ford 2023 motorhome chassis",
+          "page": "PDF p.33 (Instrument Cluster)",
+          "answers": "flashing: drive moderately, check ASAP",
+          "quote": "If it flashes, engine misfire could be occurring. Increased exhaust gas temperatures could damage the catalytic converter or other vehicle components. Drive in a moderate fashion (avoid heavy acceleration and deceleration) and have your vehicle checked as soon as possible."
+        },
+        {
+          "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1009Z15.TXT",
+          "document": "U.S. EPA Fact Sheet EPA 420-F-97-003 (May 1997), Frequently Asked Questions About On-Board Diagnostics",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "universal",
+          "answers": "can_i_keep_driving (steady light): yes; urgency: service as soon as possible",
+          "quote": "It is important to note that an illuminated dashboard light, as described here, is intended to inform the driver of the need for service, NOT of the need to stop the vehicle. However, service should be sought as soon as possible.",
+          "page": "p.2"
+        },
+        {
+          "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+          "document": "2022 Toyota Camry Owner's Manual OM06244U",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "vehicle-specific: Toyota Camry 2022",
+          "answers": "urgency per Toyota warning-light table: inspect immediately (note: stricter than p.533 and EPA)",
+          "quote": "Malfunction indicator lamp ... Indicates a malfunction in: The electronic engine control system; The electronic throttle control system; or The electronic automatic transmission control system → Have the vehicle inspected by your Toyota dealer immediately.",
+          "page": "p.528"
+        },
+        {
+          "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1009Z15.TXT",
+          "document": "U.S. EPA Fact Sheet EPA 420-F-97-003 (May 1997), Frequently Asked Questions About On-Board Diagnostics",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "universal",
+          "answers": "shop vs self: repair at a qualified shop",
+          "quote": "Only qualified, trained technicians equipped with the newest diagnostic and repair equipment should conduct OBD related service.",
+          "page": "p.4"
+        }
+      ],
+      "driving_guidance_primary": "universal: EPA 420-F-97-003 p.2 (steady: service ASAP, not need to stop; flashing: reduce speed, service ASAP)",
+      "signoff": {
+        "reviewed_by": "小数",
+        "reviewed_at": "2026-10-15",
+        "signoff": "yes",
+        "checked": "EPA 420-F-97-003 (nepis P1009Z15) p.2 steady/flashing, p.3 gas cap, p.4 qualified technicians: all quotes verbatim; universal EPA listed before brand-specific entries, Toyota/Ford labeled vehicle-specific"
+      }
+    }
+  },
+  "symptoms": {
+    "brakes-squeaking": {
+      "causes": [
+        {
+          "fact": "Brake pad wear limit indicator squealing",
+          "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+          "document": "2022 Toyota Camry Owner's Manual OM06244U (year mapping per Helm listing; manual is Camry-specific)",
+          "page": "p.199",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "Toyota Camry",
+          "quote": "If you hear a squealing or scraping noise (brake pad wear limit indicators) Have the brake pads checked and replaced by your Toyota dealer as soon as possible."
+        },
+        {
+          "fact": "Brake wear indicator tabs rub rotor: chirping, squealing or whistling",
+          "url": "https://www.chevrolet.com/support/vehicle/driving-safety/brakes/brakes-system",
+          "document": "Chevrolet Support: The Brake System",
+          "page": "web page",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "GM vehicles"
+        }
+      ],
+      "urgency": [
+        {
+          "fact": "'As soon as possible'; dangerous to drive past pad/disc wear limits",
+          "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+          "document": "2022 Toyota Camry Owner's Manual OM06244U (year mapping per Helm listing; manual is Camry-specific)",
+          "page": "p.199",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "Toyota Camry"
+        }
+      ],
+      "signoff": {
+        "reviewed_by": "小数",
+        "reviewed_at": "2026-10-15",
+        "signoff": "pending",
+        "checked": "OM06244U printed pp.199/528/535 (PDF pp.200/529/536) + chevrolet.com brakes-system page, all cited text present | 2026-10-15 set pending: main answer Not yet verified, no universal source"
+      },
+      "driving_guidance": [
+        {
+          "fact": "Not yet verified: no universal (NHTSA/EPA/FTC/other US gov) source found answering can-I-keep-driving/urgency for this symptom (searched 2026-10-15; only shop/OEM brand pages and vehicle-specific TSBs found)",
+          "scope": "universal",
+          "grade": "none",
+          "fetched": "2026-10-15"
+        },
+        {
+          "fact": "'As soon as possible'; dangerous to drive past pad/disc wear limits",
+          "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+          "document": "2022 Toyota Camry Owner's Manual OM06244U (year mapping per Helm listing; manual is Camry-specific)",
+          "page": "p.199",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "vehicle-specific: Toyota Camry 2022",
+          "note": "copied from urgency[] as vehicle-specific extra"
+        }
+      ],
+      "driving_guidance_primary": "Not yet verified (no universal source); brand quotes are vehicle-specific extras only"
+    },
+    "grinding-noise-when-braking": {
+      "causes": [
+        {
+          "fact": "Scraping noise = brake pad wear limit indicator",
+          "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+          "document": "2022 Toyota Camry Owner's Manual OM06244U (year mapping per Helm listing; manual is Camry-specific)",
+          "page": "p.199",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "Toyota Camry"
+        },
+        {
+          "fact": "Grinding noises are a sign brakes need service",
+          "url": "https://www.chevrolet.com/support/vehicle/driving-safety/brakes/brakes-system",
+          "document": "Chevrolet Support: The Brake System",
+          "page": "web page",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "GM; no specific cause given"
+        }
+      ],
+      "urgency": [
+        {
+          "fact": "Dangerous to drive when pad/disc wear limits exceeded; rotor damage may result",
+          "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+          "document": "2022 Toyota Camry Owner's Manual OM06244U (year mapping per Helm listing; manual is Camry-specific)",
+          "page": "p.199",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "Toyota Camry"
+        }
+      ],
+      "signoff": {
+        "reviewed_by": "小数",
+        "reviewed_at": "2026-10-15",
+        "signoff": "pending",
+        "checked": "OM06244U printed pp.199/528/535 (PDF pp.200/529/536) + chevrolet.com brakes-system page, all cited text present | 2026-10-15 set pending: main answer Not yet verified, no universal source"
+      },
+      "driving_guidance": [
+        {
+          "fact": "Not yet verified: no universal (NHTSA/EPA/FTC/other US gov) source found answering can-I-keep-driving/urgency for this symptom (searched 2026-10-15; only shop/OEM brand pages and vehicle-specific TSBs found)",
+          "scope": "universal",
+          "grade": "none",
+          "fetched": "2026-10-15"
+        },
+        {
+          "fact": "Dangerous to drive when pad/disc wear limits exceeded; rotor damage may result",
+          "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+          "document": "2022 Toyota Camry Owner's Manual OM06244U (year mapping per Helm listing; manual is Camry-specific)",
+          "page": "p.199",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "vehicle-specific: Toyota Camry 2022",
+          "note": "copied from urgency[] as vehicle-specific extra"
+        }
+      ],
+      "driving_guidance_primary": "Not yet verified (no universal source); brand quotes are vehicle-specific extras only"
+    },
+    "car-shakes-when-braking": {
+      "causes": [
+        {
+          "fact": "Vibration in brake pedal or steering wheel when braking is a sign of needed brake service",
+          "url": "https://www.chevrolet.com/support/vehicle/driving-safety/brakes/brakes-system",
+          "document": "Chevrolet Support: The Brake System",
+          "page": "web page",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "GM; cause not specified"
+        },
+        {
+          "fact": "Normal: ABS operation may cause vibration through body/steering and pedal pulsation",
+          "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+          "document": "2022 Toyota Camry Owner's Manual OM06244U (year mapping per Helm listing; manual is Camry-specific)",
+          "page": "p.326",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "Toyota Camry; ABS activation only"
+        }
+      ],
+      "urgency": [
+        {
+          "fact": "not verified",
+          "url": "",
+          "document": "",
+          "page": "",
+          "fetched": "2026-10-15",
+          "grade": "-",
+          "scope": "No OEM/gov urgency statement found"
+        }
+      ],
+      "driving_guidance": [
+        {
+          "fact": "Not yet verified: no A-grade (OEM manual/NHTSA/government) source found stating whether you can keep driving with brake vibration on dry-road braking; only shop blogs found (not usable). Camry p.326 covers normal ABS vibration only. Needs GM/Ford/Honda owner-manual brake section from owner's PC.",
+          "grade": "none",
+          "fetched": "2026-10-15"
+        }
+      ],
+      "driving_guidance_primary": "Not yet verified (no universal source); brand quotes are vehicle-specific extras only"
+    },
+    "abs-light-on": {
+      "causes": [
+        {
+          "fact": "Malfunction in the ABS or brake assist system",
+          "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+          "document": "2022 Toyota Camry Owner's Manual OM06244U (year mapping per Helm listing; manual is Camry-specific)",
+          "page": "p.528",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "Toyota Camry"
+        }
+      ],
+      "urgency": [
+        {
+          "fact": "ABS light alone: have vehicle inspected immediately",
+          "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+          "document": "2022 Toyota Camry Owner's Manual OM06244U (year mapping per Helm listing; manual is Camry-specific)",
+          "page": "p.528",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "Toyota Camry"
+        },
+        {
+          "fact": "ABS + brake warning light both on: stop in a safe place immediately",
+          "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+          "document": "2022 Toyota Camry Owner's Manual OM06244U (year mapping per Helm listing; manual is Camry-specific)",
+          "page": "p.535",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "Toyota Camry",
+          "quote": "Stop your vehicle in a safe place immediately and contact your Toyota dealer. The vehicle will become extremely unstable during braking, and the ABS system may fail"
+        }
+      ],
+      "signoff": {
+        "reviewed_by": "小数",
+        "reviewed_at": "2026-10-15",
+        "signoff": "pending",
+        "checked": "OM06244U printed pp.199/528/535 (PDF pp.200/529/536) + chevrolet.com brakes-system page, all cited text present | 2026-10-15 set pending: main answer Not yet verified, no universal source"
+      },
+      "driving_guidance": [
+        {
+          "fact": "Not yet verified: no universal (NHTSA/EPA/FTC/other US gov) source found answering can-I-keep-driving/urgency for this symptom (searched 2026-10-15; only shop/OEM brand pages and vehicle-specific TSBs found)",
+          "scope": "universal",
+          "grade": "none",
+          "fetched": "2026-10-15"
+        },
+        {
+          "fact": "ABS light alone: have vehicle inspected immediately",
+          "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+          "document": "2022 Toyota Camry Owner's Manual OM06244U (year mapping per Helm listing; manual is Camry-specific)",
+          "page": "p.528",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "vehicle-specific: Toyota Camry 2022",
+          "note": "copied from urgency[] as vehicle-specific extra"
+        },
+        {
+          "fact": "ABS + brake warning light both on: stop in a safe place immediately",
+          "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+          "document": "2022 Toyota Camry Owner's Manual OM06244U (year mapping per Helm listing; manual is Camry-specific)",
+          "page": "p.535",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "vehicle-specific: Toyota Camry 2022",
+          "quote": "Stop your vehicle in a safe place immediately and contact your Toyota dealer. The vehicle will become extremely unstable during braking, and the ABS system may fail",
+          "note": "copied from urgency[] as vehicle-specific extra"
+        }
+      ],
+      "driving_guidance_primary": "Not yet verified (no universal source); brand quotes are vehicle-specific extras only"
+    },
+    "car-cranks-but-wont-start": {
+      "causes": [
+        {
+          "fact": "Insufficient fuel",
+          "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+          "document": "2022 Toyota Camry Owner's Manual OM06244U (year mapping per Helm listing; manual is Camry-specific)",
+          "page": "p.557",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "Toyota Camry"
+        },
+        {
+          "fact": "Engine flooded",
+          "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+          "document": "2022 Toyota Camry Owner's Manual OM06244U (year mapping per Helm listing; manual is Camry-specific)",
+          "page": "p.557",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "Toyota Camry"
+        },
+        {
+          "fact": "Engine immobilizer malfunction",
+          "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+          "document": "2022 Toyota Camry Owner's Manual OM06244U (year mapping per Helm listing; manual is Camry-specific)",
+          "page": "p.557",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "Toyota Camry"
+        }
+      ],
+      "urgency": [
+        {
+          "fact": "not verified (not a driving-safety question; manual says contact dealer if unresolved)",
+          "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+          "document": "2022 Toyota Camry Owner's Manual OM06244U (year mapping per Helm listing; manual is Camry-specific)",
+          "page": "p.558",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "Toyota Camry"
+        }
+      ],
+      "driving_guidance": [
+        {
+          "fact": "Not yet verified: no universal (NHTSA/EPA/FTC/other US gov) source found answering can-I-keep-driving/urgency for this symptom (searched 2026-10-15; only shop/OEM brand pages and vehicle-specific TSBs found)",
+          "scope": "universal",
+          "grade": "none",
+          "fetched": "2026-10-15"
+        },
+        {
+          "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+          "document": "2022 Toyota Camry Owner's Manual OM06244U",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "vehicle-specific: Toyota Camry 2022",
+          "answers": "check yourself first (fuel, retry start)",
+          "quote": "The engine will not start even though the starter motor operates normally. One of the following may be the cause of the problem: There may not be sufficient fuel in the vehicle's tank. Refuel the vehicle. The engine may be flooded. Try to restart the engine again following correct starting procedures.",
+          "page": "p.557"
+        },
+        {
+          "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+          "document": "2022 Toyota Camry Owner's Manual OM06244U",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "vehicle-specific: Toyota Camry 2022",
+          "answers": "shop if not resolved",
+          "quote": "Contact your Toyota dealer if the problem cannot be repaired, or if repair procedures are unknown.",
+          "page": "p.558"
+        }
+      ],
+      "driving_guidance_primary": "Not yet verified (no universal source); brand quotes are vehicle-specific extras only"
+    },
+    "car-wont-start-clicking": {
+      "causes": [
+        {
+          "fact": "Starter turns slowly/dim lights: battery discharged or terminals loose/corroded",
+          "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+          "document": "2022 Toyota Camry Owner's Manual OM06244U (year mapping per Helm listing; manual is Camry-specific)",
+          "page": "p.557",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "Toyota Camry; manual does not use the word 'clicking'"
+        },
+        {
+          "fact": "Starter does not turn over: battery discharged, terminal disconnected, steering lock malfunction",
+          "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+          "document": "2022 Toyota Camry Owner's Manual OM06244U (year mapping per Helm listing; manual is Camry-specific)",
+          "page": "p.558",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "Toyota Camry; 'clicking' not mentioned"
+        }
+      ],
+      "urgency": [
+        {
+          "fact": "not verified",
+          "url": "",
+          "document": "",
+          "page": "",
+          "fetched": "2026-10-15",
+          "grade": "-",
+          "scope": ""
+        }
+      ],
+      "driving_guidance": [
+        {
+          "fact": "Not yet verified: no A-grade source found that names a 'clicking' sound and gives urgency",
+          "grade": "none",
+          "fetched": "2026-10-15"
+        },
+        {
+          "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+          "document": "2022 Toyota Camry Owner's Manual OM06244U",
+          "fetched": "2026-10-15",
+          "grade": "A",
+          "scope": "vehicle-specific: Toyota Camry 2022",
+          "answers": "check yourself first: battery (jump start p.562); manual never uses the word 'clicking' — mapping clicking→this row is our inference, so wording on page must not claim the manual says 'clicking'",
+          "quote": "The starter motor turns over slowly, the interior lights and headlights are dim, or the horn does not sound or sounds at a low volume. ... The battery may be discharged.",
+          "page": "p.557"
+        }
+      ],
+      "driving_guidance_primary": "Not yet verified (no universal source); brand quotes are vehicle-specific extras only"
+    },
+    "car-jerks-when-accelerating": {
+      "causes": [
+        {
+          "fact": "not verified",
+          "url": "",
+          "document": "",
+          "page": "",
+          "fetched": "2026-10-15",
+          "grade": "-",
+          "scope": "No OEM/gov source found in this pass; misfire TSBs (P0300) are related but don't name the symptom"
+        }
+      ],
+      "urgency": [
+        {
+          "fact": "not verified",
+          "url": "",
+          "document": "",
+          "page": "",
+          "fetched": "2026-10-15",
+          "grade": "-",
+          "scope": ""
+        }
+      ]
+    },
+    "car-shaking-when-accelerating": {
+      "causes": [
+        {
+          "fact": "not verified",
+          "url": "",
+          "document": "",
+          "page": "",
+          "fetched": "2026-10-15",
+          "grade": "-",
+          "scope": "No OEM/gov source found; Camry manual p.~201 only links abnormal vibration to a flat/damaged tire while driving"
+        }
+      ],
+      "urgency": [
+        {
+          "fact": "not verified",
+          "url": "",
+          "document": "",
+          "page": "",
+          "fetched": "2026-10-15",
+          "grade": "-",
+          "scope": ""
+        }
+      ]
+    }
+  },
+  "driving_guidance_note": "Added 2026-10-15 (batch 2). EPA 420-F-97-003 is a 1997 federal fact sheet: still official, but dated; also contains cost wording that must NOT be quoted on site. Toyota p.528 ('immediately') and p.533 ('as soon as possible' after self-check) differ; present both, scoped to Toyota."
+}

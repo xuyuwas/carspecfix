@@ -1,0 +1,61 @@
+{
+  "slug": "car-wont-start-clicking",
+  "type": "symptom",
+  "code": null,
+  "title": "Car won't start clicking noise",
+  "targetKeyword": "car won't start clicking noise",
+  "definition": null,
+  "causes": [
+    {
+      "text": "Starter turns slowly/dim lights: battery discharged or terminals loose/corroded",
+      "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+      "document": "2022 Toyota Camry Owner's Manual OM06244U (year mapping per Helm listing; manual is Camry-specific)",
+      "page": "p.557",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "Toyota",
+      "docKind": "owner's manual",
+      "appliesTo": "Toyota Camry; manual does not use the word 'clicking'",
+      "quote": null
+    },
+    {
+      "text": "Starter does not turn over: battery discharged, terminal disconnected, steering lock malfunction",
+      "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+      "document": "2022 Toyota Camry Owner's Manual OM06244U (year mapping per Helm listing; manual is Camry-specific)",
+      "page": "p.558",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "Toyota",
+      "docKind": "owner's manual",
+      "appliesTo": "Toyota Camry; 'clicking' not mentioned",
+      "quote": null
+    }
+  ],
+  "urgency": [],
+  "guidancePrimary": "Not yet verified (no universal source); brand quotes are vehicle-specific extras only",
+  "guidance": [
+    {
+      "text": "The starter motor turns over slowly, the interior lights and headlights are dim, or the horn does not sound or sounds at a low volume. ... The battery may be discharged.",
+      "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+      "document": "2022 Toyota Camry Owner's Manual OM06244U",
+      "page": "p.557",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "Toyota",
+      "docKind": "owner's manual",
+      "appliesTo": "vehicle-specific: Toyota Camry 2022",
+      "quote": "The starter motor turns over slowly, the interior lights and headlights are dim, or the horn does not sound or sounds at a low volume. ... The battery may be discharged.",
+      "answers": "check yourself first: battery (jump start p.562); manual never uses the word 'clicking' — mapping clicking→this row is our inference, so wording on page must not claim the manual says 'clicking'",
+      "allBrands": false
+    }
+  ],
+  "firstStep": null,
+  "safetyCritical": false,
+  "related": {
+    "issues": [],
+    "vehicles": []
+  },
+  "publishDate": null,
+  "dataUpdated": "2026-10-15",
+  "signOff": null
+}

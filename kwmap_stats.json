@@ -1,0 +1,43 @@
+{
+ "raw": 54403,
+ "drop": {
+  "spec without vehicle": 1460,
+  "noise/no car intent": 4459,
+  "noise pattern": 391,
+  "dup": 24,
+  "repair cost non-car": 364
+ },
+ "kept": 48461,
+ "seeds": 756,
+ "sec": {
+  "specs": 35521,
+  "symptoms": 5627,
+  "codes": 3442,
+  "maintenance how-to": 3338,
+  "repair cost": 533
+ },
+ "kwpri": {
+  "P2": 20900,
+  "P3": 20426,
+  "P1": 7135
+ },
+ "pagepri": {
+  "P3": 550,
+  "P2": 200,
+  "P1": 30
+ },
+ "pages": 780,
+ "pagesec": {
+  "codes|P1": 7,
+  "codes|P3": 3,
+  "maintenance how-to|P2": 2,
+  "maintenance how-to|P3": 21,
+  "repair cost|P3": 25,
+  "specs|P1": 15,
+  "specs|P2": 193,
+  "specs|P3": 498,
+  "symptoms|P1": 8,
+  "symptoms|P2": 5,
+  "symptoms|P3": 3
+ }
+}

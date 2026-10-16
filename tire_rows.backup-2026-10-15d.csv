@@ -1,0 +1,20 @@
+slug,wheel_in,config,tire_size,front_psi,rear_psi,manual_page,source,grade
+2020-toyota-rav4,17,Vehicles with 17-inch wheels type A,225/65R17 102H,35,35,671,https://assets.sia.toyota.com/publications/en/om-s/OM0R024U/pdf/OM0R024U.pdf,A
+2020-toyota-rav4,17,Vehicles with 17-inch wheels type B,225/65R17 102H,36,36,671,https://assets.sia.toyota.com/publications/en/om-s/OM0R024U/pdf/OM0R024U.pdf,A
+2020-toyota-rav4,17,Vehicles with 17-inch wheels type C,225/65R17 102H,33,33,672,https://assets.sia.toyota.com/publications/en/om-s/OM0R024U/pdf/OM0R024U.pdf,A
+2020-toyota-rav4,17,Vehicles with 17-inch wheels type D,225/65R17 102H,35,35,672,https://assets.sia.toyota.com/publications/en/om-s/OM0R024U/pdf/OM0R024U.pdf,A
+2020-toyota-rav4,17,Vehicles with 17-inch wheels type E,225/65R17 102H,36,36,673,https://assets.sia.toyota.com/publications/en/om-s/OM0R024U/pdf/OM0R024U.pdf,A
+2020-toyota-rav4,18,Vehicles with 18-inch wheels,225/60R18 100H,33,33,673,https://assets.sia.toyota.com/publications/en/om-s/OM0R024U/pdf/OM0R024U.pdf,A
+2020-toyota-rav4,19,Vehicles with 19-inch wheels type A,235/55R19 101V,33,33,674,https://assets.sia.toyota.com/publications/en/om-s/OM0R024U/pdf/OM0R024U.pdf,A
+2020-toyota-rav4,19,Vehicles with 19-inch wheels type B,235/55R19 101V,35,35,674,https://assets.sia.toyota.com/publications/en/om-s/OM0R024U/pdf/OM0R024U.pdf,A
+2024-toyota-rav4,17,Vehicles with 17-inch wheels type A,225/65R17 102H,35,35,491,https://assets.sia.toyota.com/publications/en/om-s/OM0R147U/pdf/OM0R147U.pdf,A
+2024-toyota-rav4,17,Vehicles with 17-inch wheels type B,225/65R17 102H,36,36,491,https://assets.sia.toyota.com/publications/en/om-s/OM0R147U/pdf/OM0R147U.pdf,A
+2024-toyota-rav4,17,Vehicles with 17-inch wheels type C,225/65R17 102H,33,33,492,https://assets.sia.toyota.com/publications/en/om-s/OM0R147U/pdf/OM0R147U.pdf,A
+2024-toyota-rav4,17,Vehicles with 17-inch wheels type D,225/65R17 102H,35,35,492,https://assets.sia.toyota.com/publications/en/om-s/OM0R147U/pdf/OM0R147U.pdf,A
+2024-toyota-rav4,17,Vehicles with 17-inch wheels type E,225/65R17 102H,36,36,493,https://assets.sia.toyota.com/publications/en/om-s/OM0R147U/pdf/OM0R147U.pdf,A
+2024-toyota-rav4,18,Vehicles with 18-inch wheels,225/60R18 100H,33,33,493,https://assets.sia.toyota.com/publications/en/om-s/OM0R147U/pdf/OM0R147U.pdf,A
+2024-toyota-rav4,19,Vehicles with 19-inch wheels type A,235/55R19 101V,33,33,494,https://assets.sia.toyota.com/publications/en/om-s/OM0R147U/pdf/OM0R147U.pdf,A
+2024-toyota-rav4,19,Vehicles with 19-inch wheels type B,235/55R19 101V,35,35,494,https://assets.sia.toyota.com/publications/en/om-s/OM0R147U/pdf/OM0R147U.pdf,A
+2024-toyota-rav4,17,Vehicles with 17-inch wheels type F,225/65R17 102H,33,33,501,https://assets.sia.toyota.com/publications/en/om-s/OM42L49U/pdf/OM42L49U.pdf,A
+2024-toyota-rav4,17,Vehicles with 17-inch wheels type G,225/65R17 102H,35,35,501,https://assets.sia.toyota.com/publications/en/om-s/OM42L49U/pdf/OM42L49U.pdf,A
+2024-toyota-rav4,19,Vehicles with 19-inch wheels type C,235/55R19 101V,33,33,503,https://assets.sia.toyota.com/publications/en/om-s/OM42L49U/pdf/OM42L49U.pdf,A

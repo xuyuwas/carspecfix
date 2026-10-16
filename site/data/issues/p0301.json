@@ -1,0 +1,135 @@
+{
+  "slug": "p0301",
+  "type": "code",
+  "code": "P0301",
+  "title": "P0301",
+  "targetKeyword": "P0301 code",
+  "definition": {
+    "text": "P0301: Cyl.1 Misfire Detected",
+    "url": "https://static.nhtsa.gov/odi/tsbs/2022/MC-10214471-0001.pdf",
+    "document": "VW 01-16-13",
+    "page": "p.1",
+    "fetched": "2026-10-15",
+    "sourceGrade": "A",
+    "maker": "VW",
+    "docKind": "service bulletin",
+    "appliesTo": "VW wording",
+    "quote": null,
+    "value": "Cylinder 1 Misfire Detected",
+    "sourceText": "P0301: Cyl.1 Misfire Detected"
+  },
+  "causes": [
+    {
+      "text": "Fuel injector, spark plug or ignition coil on the misfiring cylinder (replace only the one causing the misfire)",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2022/MC-10214471-0001.pdf",
+      "document": "VW 01-16-13",
+      "page": "p.2",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "VW",
+      "docKind": "service bulletin",
+      "appliesTo": "VW vehicles",
+      "quote": null
+    },
+    {
+      "text": "Low fuel level",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2022/MC-10214471-0001.pdf",
+      "document": "VW 01-16-13",
+      "page": "p.1",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "VW",
+      "docKind": "service bulletin",
+      "appliesTo": "VW vehicles",
+      "quote": null
+    }
+  ],
+  "urgency": [],
+  "guidancePrimary": "universal: EPA 420-F-97-003 p.2 (steady: service ASAP, not need to stop; flashing: reduce speed, service ASAP)",
+  "guidance": [
+    {
+      "text": "Under certain conditions, the dashboard light will blink or flash. This indicates a rather severe level of engine misfire. When this occurs, the driver should reduce speed and seek service as soon as possible.",
+      "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1009Z15.TXT",
+      "document": "U.S. EPA Fact Sheet EPA 420-F-97-003 (May 1997), Frequently Asked Questions About On-Board Diagnostics",
+      "page": "p.2",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "U.S. EPA",
+      "docKind": "fact sheet",
+      "appliesTo": "universal",
+      "quote": "Under certain conditions, the dashboard light will blink or flash. This indicates a rather severe level of engine misfire. When this occurs, the driver should reduce speed and seek service as soon as possible.",
+      "answers": "flashing light: reduce speed, seek service as soon as possible",
+      "allBrands": true
+    },
+    {
+      "text": "If it flashes, engine misfire could be occurring. Increased exhaust gas temperatures could damage the catalytic converter or other vehicle components. Drive in a moderate fashion (avoid heavy acceleration and deceleration) and have your vehicle checked as soon as possible.",
+      "url": "https://static.nhtsa.gov/odi/inv/2024/INRD-PE24023-27812.pdf",
+      "document": "Ford 2023 Motorhome (chassis) Owner's Manual, hosted by NHTSA in investigation PE24-023",
+      "page": "PDF p.33 (Instrument Cluster)",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "Ford",
+      "docKind": "owner's manual",
+      "appliesTo": "vehicle-specific: Ford 2023 motorhome chassis",
+      "quote": "If it flashes, engine misfire could be occurring. Increased exhaust gas temperatures could damage the catalytic converter or other vehicle components. Drive in a moderate fashion (avoid heavy acceleration and deceleration) and have your vehicle checked as soon as possible.",
+      "answers": "flashing: drive moderately, check ASAP",
+      "allBrands": false
+    },
+    {
+      "text": "It is important to note that an illuminated dashboard light, as described here, is intended to inform the driver of the need for service, NOT of the need to stop the vehicle. However, service should be sought as soon as possible.",
+      "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1009Z15.TXT",
+      "document": "U.S. EPA Fact Sheet EPA 420-F-97-003 (May 1997), Frequently Asked Questions About On-Board Diagnostics",
+      "page": "p.2",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "U.S. EPA",
+      "docKind": "fact sheet",
+      "appliesTo": "universal",
+      "quote": "It is important to note that an illuminated dashboard light, as described here, is intended to inform the driver of the need for service, NOT of the need to stop the vehicle. However, service should be sought as soon as possible.",
+      "answers": "can_i_keep_driving (steady light): yes; urgency: service as soon as possible",
+      "allBrands": true
+    },
+    {
+      "text": "Malfunction indicator lamp ... Indicates a malfunction in: The electronic engine control system; The electronic throttle control system; or The electronic automatic transmission control system → Have the vehicle inspected by your Toyota dealer immediately.",
+      "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+      "document": "2022 Toyota Camry Owner's Manual OM06244U",
+      "page": "p.528",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "Toyota",
+      "docKind": "owner's manual",
+      "appliesTo": "vehicle-specific: Toyota Camry 2022",
+      "quote": "Malfunction indicator lamp ... Indicates a malfunction in: The electronic engine control system; The electronic throttle control system; or The electronic automatic transmission control system → Have the vehicle inspected by your Toyota dealer immediately.",
+      "answers": "urgency per Toyota warning-light table: inspect immediately (note: stricter than p.533 and EPA)",
+      "allBrands": false
+    },
+    {
+      "text": "Only qualified, trained technicians equipped with the newest diagnostic and repair equipment should conduct OBD related service.",
+      "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1009Z15.TXT",
+      "document": "U.S. EPA Fact Sheet EPA 420-F-97-003 (May 1997), Frequently Asked Questions About On-Board Diagnostics",
+      "page": "p.4",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "U.S. EPA",
+      "docKind": "fact sheet",
+      "appliesTo": "universal",
+      "quote": "Only qualified, trained technicians equipped with the newest diagnostic and repair equipment should conduct OBD related service.",
+      "answers": "shop vs self: repair at a qualified shop",
+      "allBrands": true
+    }
+  ],
+  "firstStep": null,
+  "safetyCritical": false,
+  "related": {
+    "issues": [
+      "p0300"
+    ],
+    "vehicles": []
+  },
+  "publishDate": "2026-10-16",
+  "dataUpdated": "2026-10-15",
+  "signOff": {
+    "by": "小数",
+    "date": "2026-10-15"
+  }
+}
