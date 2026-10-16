@@ -13,7 +13,11 @@ import { SITE, PREVIEW, liveIssues } from '../lib/gate.mjs';
 interface Props { title: string; description: string; path: string; jsonld?: any[]; noindex?: boolean; crumbs?: { name: string; url?: string }[]; nav?: string; preload?: string }
 const { title, description, path, jsonld = [], noindex = false, crumbs, nav, preload } = Astro.props;
 const canonical = SITE + path;
-const graph: any[] = [...jsonld];
+const siteJsonLd: any[] = [
+  { '@type': 'Organization', name: 'CarSpecFix', url: SITE + '/', logo: SITE + '/logo.svg' },
+  { '@type': 'WebSite', name: 'CarSpecFix', url: SITE + '/' }
+];
+const graph: any[] = [...siteJsonLd, ...jsonld];
 if (crumbs) graph.push({ '@type': 'BreadcrumbList', itemListElement: crumbs.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, ...(c.url ? { item: SITE + c.url } : {}) })) });
 const robots = noindex || PREVIEW ? 'noindex,follow' : null;   // R-Q1 v2: no noindex anywhere except 404 / preview builds
 const liveCodes = liveIssues.filter(i => i.type === 'code').map(i => i.slug);

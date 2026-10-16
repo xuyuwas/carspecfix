@@ -2,13 +2,12 @@
 import Base from '../layouts/Base.astro';
 import Feedback from '../components/Feedback.astro';
 import Photo from '../components/Photo.astro';
-import { liveVehicles, liveIssues, liveHubs, vehicleUrl, issueUrl, SITE } from '../lib/gate.mjs';
+import { liveVehicles, liveIssues, liveHubs, vehicleUrl, issueUrl } from '../lib/gate.mjs';
 import { SEGMENT } from '../lib/refs.mjs';
 const codes = liveIssues.filter(i => i.type === 'code'), syms = liveIssues.filter(i => i.type === 'symptom');
 const sorted = [...liveVehicles].sort((a, b) => a.make.localeCompare(b.make) || a.model.localeCompare(b.model) || b.year - a.year);
-const jsonld = [{ '@type': 'Organization', name: 'CarSpecFix', url: SITE + '/', logo: SITE + '/logo.svg' }, { '@type': 'WebSite', name: 'CarSpecFix', url: SITE + '/' }];
 ---
-<Base title="Car Specs by Year, Make & Model: Oil, Tires, Recalls" description="Oil capacity and type, tire size and pressure, and NHTSA recalls by year, make and model, with the owner's-manual page cited for every number." path="/" jsonld={jsonld} nav="specs">
+<Base title="Car Specs by Year, Make & Model: Oil, Tires, Recalls" description="Oil capacity and type, tire size and pressure, and NHTSA recalls by year, make and model, with the owner's-manual page cited for every number." path="/" nav="specs">
 <section class="finder"><div class="container"><h1>Car Specs by Year, Make &amp; Model: Oil, Tires, Recalls</h1><p>Oil capacity, tire pressure and recalls, with a source for every number.</p>
 <div class="finder__tabs"><a href="#" aria-current="true">By vehicle</a>{liveIssues.some(x => x.type === "code") && <a href="/codes/">By trouble code</a>}</div>
 {sorted.length > 0 && <form class="finder__form" data-goto><label class="field"><span>Vehicle</span><select name="u">{sorted.map(v => <option value={vehicleUrl(v)}>{v.year} {v.make} {v.model}</option>)}</select></label><button class="btn btn--accent btn--lg" type="submit">Show specs</button></form>}
