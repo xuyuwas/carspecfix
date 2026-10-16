@@ -32,6 +32,14 @@ const liveCodes = liveIssues.filter(i => i.type === 'code').map(i => i.slug);
 <meta property="og:type" content="website"><meta property="og:title" content={title}><meta property="og:description" content={description}><meta property="og:url" content={canonical}><meta property="og:image" content={SITE + '/logo.svg'}><meta name="twitter:card" content="summary">
 <link rel="icon" href="/logo.svg" type="image/svg+xml">
 {graph.length > 0 && <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@graph': graph })} />}
+{/* Google Analytics */}
+<script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-PZGWPZXGY5"></script>
+<script is:inline>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-PZGWPZXGY5');
+</script>
 </head>
 <body>
 {PREVIEW && <div class="preview-banner">PREVIEW BUILD — includes pages that have not passed the publish gate. Not for deployment.</div>}
