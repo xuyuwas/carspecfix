@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import Feedback from '../components/Feedback.astro';
+import Photo from '../components/Photo.astro';
 import { liveVehicles, liveIssues, liveHubs, vehicleUrl, issueUrl, SITE } from '../lib/gate.mjs';
 import { SEGMENT } from '../lib/refs.mjs';
 const codes = liveIssues.filter(i => i.type === 'code'), syms = liveIssues.filter(i => i.type === 'symptom');
@@ -14,7 +15,7 @@ const jsonld = [{ '@type': 'Organization', name: 'CarSpecFix', url: SITE + '/', 
 </div></section>
 <div class="container">
 <section class="hsec"><div class="hsec__head"><h2 class="section__title">Vehicles</h2></div>
-{sorted.length ? <div class="vgrid">{sorted.map(v => <a href={vehicleUrl(v)} class="vcard"><div class="vcard__art"><img src={`/car-${SEGMENT[v.modelSlug] || 'sedan'}.svg`} alt="" width="320" height="120"></div><div class="vcard__body"><span class="vcard__yr">{v.year}</span><span class="vcard__name">{v.make} {v.model}</span><span class="vcard__meta">Oil · Tires · Recalls</span></div></a>)}</div> : <p>Vehicle pages are being checked.</p>}
+{sorted.length ? <div class="vgrid">{sorted.map(v => <a href={vehicleUrl(v)} class="vcard"><div class="vcard__art"><Photo slug={v.slug} year={v.year} name={`${v.make} ${v.model}`} segment={SEGMENT[v.modelSlug] || 'sedan'} /></div><div class="vcard__body"><span class="vcard__yr">{v.year}</span><span class="vcard__name">{v.make} {v.model}</span><span class="vcard__meta">Oil · Tires · Recalls</span></div></a>)}</div> : <p>Vehicle pages are being checked.</p>}
 {liveHubs().length > 0 && <ul class="links">{liveHubs().map(h => <li><a href={`/specs/${h.makeSlug}/${h.modelSlug}/`}>{h.years[0].make} {h.years[0].model}: all years</a></li>)}</ul>}
 </section>
 <div class="split hsec">
