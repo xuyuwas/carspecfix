@@ -1,14 +1,14 @@
 ---
 // Signed photo from data/images.json, else the design-v3 silhouette placeholder (layout never collapses).
 import images from '../../data/images.json';
-const { slug, year, name, segment = 'sedan', hero = false } = Astro.props;
+const { slug, year, name, segment = 'sedan', hero = false, sizes: sizesProp } = Astro.props;
 const img = (images as any)[slug];
 const pageName = `${year} ${name}`.toLowerCase();
 const yearDiff = img?.photoYear && img.photoYear !== year;
 const variant = img?.shown && !yearDiff && img.shown.toLowerCase() !== pageName && img.shown.toLowerCase().startsWith(pageName);
 const shownLine = img ? img.shownOverride ?? (yearDiff ? `Shown: ${img.shown} (same generation)` : variant ? `Shown: ${img.shown}` : null) : null;
 const alt = img ? (img.shownOverride ? img.shownOverride.replace(/^Shown: /, '') : img.shown || `${year} ${name}`) : '';
-const sizes = '(min-width: 1024px) 360px, 100vw';
+const sizes = sizesProp ?? '(min-width: 1024px) 360px, 100vw';
 ---
 {img ? (
 <figure class="photo">

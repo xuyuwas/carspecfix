@@ -15,7 +15,7 @@ const jsonld = [{ '@type': 'Organization', name: 'CarSpecFix', url: SITE + '/', 
 </div></section>
 <div class="container">
 <section class="hsec"><div class="hsec__head"><h2 class="section__title">Vehicles</h2></div>
-{sorted.length ? <div class="vgrid">{sorted.map(v => <a href={vehicleUrl(v)} class="vcard"><div class="vcard__art"><Photo slug={v.slug} year={v.year} name={`${v.make} ${v.model}`} segment={SEGMENT[v.modelSlug] || 'sedan'} /></div><div class="vcard__body"><span class="vcard__yr">{v.year}</span><span class="vcard__name">{v.make} {v.model}</span><span class="vcard__meta">Oil · Tires · Recalls</span></div></a>)}</div> : <p>Vehicle pages are being checked.</p>}
+{sorted.length ? <div class="vgrid">{sorted.map(v => <div class="vcard"><div class="vcard__art"><Photo slug={v.slug} year={v.year} name={`${v.make} ${v.model}`} segment={SEGMENT[v.modelSlug] || 'sedan'} sizes="(min-width:1024px) 288px, (min-width:640px) 45vw, 92vw" /></div><div class="vcard__body"><span class="vcard__yr">{v.year}</span><span class="vcard__name">{v.make} {v.model}</span><span class="vcard__meta">Oil · Tires · Recalls</span></div><a class="vcard__hit" href={vehicleUrl(v)}><span class="sr-only">{v.year} {v.make} {v.model} specs</span></a></div>)}</div> : <p>Vehicle pages are being checked.</p>}
 {liveHubs().length > 0 && <ul class="links">{liveHubs().map(h => <li><a href={`/specs/${h.makeSlug}/${h.modelSlug}/`}>{h.years[0].make} {h.years[0].model}: all years</a></li>)}</ul>}
 </section>
 <div class="split hsec">

@@ -158,12 +158,18 @@ h1,h2,h3,p{margin:0}a{color:var(--link);text-decoration-thickness:1px;text-under
 .hsec{padding:var(--sp-10) 0 0}
 .hsec__head{display:flex;justify-content:space-between;align-items:flex-end;gap:var(--sp-3);margin-bottom:var(--sp-4)}
 .vgrid{display:grid;gap:var(--sp-3);grid-template-columns:repeat(2,minmax(0,1fr))}
-@media(min-width:1024px){.vgrid{grid-template-columns:repeat(4,1fr);gap:var(--sp-4)}}
-.vcard{display:flex;flex-direction:column;border:1px solid var(--border);border-radius:var(--r-md);overflow:hidden;text-decoration:none;color:var(--text);background:var(--surface)}
+@media(min-width:1024px){.vgrid{grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--sp-4)}}
+.vcard{position:relative;min-width:0;display:flex;flex-direction:column;border:1px solid var(--border);border-radius:var(--r-md);overflow:hidden;text-decoration:none;color:var(--text);background:var(--surface)}
 .vcard:hover{border-color:var(--primary)}
-.vcard__art{background:var(--surface-alt);aspect-ratio:16/9;display:grid;place-items:center;color:var(--navy-700);padding:var(--sp-3) var(--sp-4)}
-.vcard__art img{width:100%;height:auto;max-height:100%}
-.vcard__body{padding:var(--sp-3) var(--sp-4) var(--sp-4);display:flex;flex-direction:column;gap:4px}
+/* Stretched link: keeps the whole card clickable while the photo-credit links stay real <a> elements.
+   Wrapping the card in an <a> would nest <a> inside <a>, which the HTML parser breaks apart. */
+.vcard__hit{position:absolute;inset:0;z-index:1;border-radius:inherit}
+.vcard__art{background:var(--surface-alt);padding:0;display:block}
+.vcard__art figure.photo{margin:0}
+.vcard__art figure.photo img{width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;border-radius:0}
+.vcard__art .photo figcaption{padding:8px 12px 10px;font-size:11px;line-height:1.35;color:var(--text-3)}
+.vcard__art .photo figcaption a{position:relative;z-index:2;white-space:nowrap}
+.vcard__body{padding:var(--sp-3) var(--sp-4) var(--sp-4);display:flex;flex-direction:column;gap:4px;margin-top:auto}
 .vcard__yr{font-size:var(--fs-13);color:var(--text-3);font-weight:600}
 .vcard__name{font:800 var(--fs-18)/1.15 var(--font-display);letter-spacing:-.01em}
 .vcard__meta{font-size:var(--fs-13);color:var(--text-2);margin-top:4px}
