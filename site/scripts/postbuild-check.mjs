@@ -48,6 +48,16 @@ for (const [u, p] of Object.entries(pages)) {
       });
       if (els.at(-1).item !== SITE + u) errors.push(`R-D5 last crumb item (${els.at(-1).item}) != canonical (${SITE + u})`);
     }
+    // R-D6: image metadata — Search Console "Missing field copyrightNotice" (non-critical)
+    // fires when an ImageObject omits it. Google's image-metadata set is checked as a whole
+    // so a future edit cannot silently drop another field.
+    for (const node of [...(d['@graph'] || []), ...(Array.isArray(d) ? d : d['@graph'] ? [] : [d])]) {
+      if (!node || node['@type'] !== 'ImageObject') continue;
+      for (const f of ['contentUrl', 'creator', 'copyrightNotice', 'license', 'creditText', 'acquireLicensePage'])
+        if (!node[f]) errors.push(`R-D6 ImageObject missing "${f}" on ${u}`);
+      if (node.contentUrl && !node.contentUrl.startsWith(SITE + '/')) errors.push(`R-D6 ImageObject contentUrl not absolute on ${u}: ${node.contentUrl}`);
+      if (node.copyrightNotice && !/^©\s*\S/.test(node.copyrightNotice)) errors.push(`R-D6 copyrightNotice is not a copyright notice on ${u}: ${node.copyrightNotice}`);
+    }
   }
   if (!/<html lang="en-US">/.test(p.s)) errors.push(`R-M3 lang must be en-US: ${u}`);
   if (/hreflang/.test(p.s)) errors.push(`R-M3 hreflang present: ${u}`);
