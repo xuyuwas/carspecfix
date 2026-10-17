@@ -6,6 +6,7 @@ import { CONTACT_EMAIL } from '../../lib/site.mjs';
 <p>Email <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.</p>
 <h2 class="section__title" id="report-form">Report a data error</h2>
 <form class="feedback" data-report style="display:flex;flex-direction:column;gap:12px;max-width:560px">
+  <input class="hp-field" type="text" name="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
   <label class="field"><span>Page</span><input name="page" required placeholder="/specs/honda/civic/2022/"></label>
   <label class="field"><span>Which value? (e.g. oil capacity, front psi)</span><input name="field" required maxlength="200"></label>
   <label class="field"><span>What's wrong, and the source you're checking against (no personal info)</span><textarea name="details" required maxlength="2000"></textarea></label>

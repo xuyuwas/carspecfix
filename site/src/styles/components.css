@@ -215,6 +215,7 @@ a.make{color:var(--primary);border-color:var(--border-strong)}a.make:hover{borde
 .feedback__q{font:800 var(--fs-18)/1.2 var(--font-display);margin-right:auto}
 .feedback textarea{width:100%;min-height:72px;font:inherit;font-size:var(--fs-15);border:1px solid var(--border-strong);border-radius:var(--r-sm);padding:var(--sp-2)}
 .feedback__more[hidden]{display:none}
+.hp-field{position:absolute;left:-9999px;width:1px;height:1px;opacity:0;pointer-events:none}
 .feedback__msg{font-size:var(--fs-14);color:var(--sev-low);font-weight:600}
 .report{font-size:var(--fs-14);color:var(--text-2)}
 .status{font-size:var(--fs-13);font-weight:600}.status--ok{color:var(--sev-low)}.status--err{color:var(--sev-high)}

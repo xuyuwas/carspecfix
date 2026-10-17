@@ -3,6 +3,7 @@
 const { path } = Astro.props;
 ---
 <section id="feedback" class="feedback" aria-label="Feedback" data-page={path}>
+  <input class="hp-field" type="text" name="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
   <div class="feedback__row"><h2 class="feedback__q">Did this solve your problem?</h2>
     <button class="btn" type="button" data-feedback="yes" aria-pressed="false">Yes</button>
     <button class="btn" type="button" data-feedback="no" aria-pressed="false">No</button></div>
