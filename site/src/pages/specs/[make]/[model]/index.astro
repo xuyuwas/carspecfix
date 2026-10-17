@@ -11,7 +11,7 @@ const oil = y => hasVal(y.specs.oilCapacity) && y.specs.oilCapacity.sourceGrade 
 const tires = y => [...new Set(shownTireRows(y).map(t => t.tireSize).filter(Boolean))].join(', ') || null;
 const showDiff = h.years.filter(y => oil(y) || tires(y)).length >= 2;
 ---
-<Page narrow={true} title={fitTitle(`${name} Specs by Year`, ['Oil', 'Tires', 'Recalls'])} description={`${name} specs for ${h.years.map(y => y.year).join(', ')}: oil capacity, tire size and pressure, and NHTSA recalls, each from the owner's manual or NHTSA.`} path={path} nav="specs" crumbs={[{ name: 'Home', url: '/' }, { name: v0.make }, { name: v0.model, url: path }]} h1={`${name} specs by year`}>
+<Page narrow={true} title={fitTitle(`${name} Specs by Year`, ['Oil', 'Tires', 'Recalls'])} description={`${name} specs for ${h.years.map(y => y.year).join(', ')}: oil capacity, tire size and pressure, and NHTSA recalls, each from the owner's manual or NHTSA.`} path={path} nav="specs" crumbs={[{ name: 'Home', url: '/' }, { name: `${v0.make} ${v0.model}`, url: path }]} h1={`${name} specs by year`}>
 <ul class="links">{h.years.map(y => <li><a href={vehicleUrl(y)}>{y.year} {y.model} specs</a></li>)}</ul>
 {showDiff && <><h2 class="section__title" style="margin-top:24px">What changed between years</h2>
 <div class="tbl-wrap"><div class="tbl-scroll" role="region" tabindex="0" aria-label="Year comparison"><table class="tbl"><thead><tr><th>Year</th><th>Oil capacity (without filter)</th><th>Tire sizes</th><th class="num">Recalls</th></tr></thead>

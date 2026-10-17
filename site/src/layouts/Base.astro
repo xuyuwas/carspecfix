@@ -1,4 +1,6 @@
 ---
+import { createHash } from 'node:crypto';
+import { readFileSync } from 'node:fs';
 import fA800 from '@fontsource/archivo/files/archivo-latin-800-normal.woff2?url';
 import fS400 from '@fontsource/source-sans-3/files/source-sans-3-latin-400-normal.woff2?url';
 import fS700 from '@fontsource/source-sans-3/files/source-sans-3-latin-700-normal.woff2?url';
@@ -10,7 +12,7 @@ import '../styles/components.css';
 import '../styles/site.css';
 import Icon from '../components/Icon.astro';
 import { SITE, PREVIEW, liveIssues } from '../lib/gate.mjs';
-interface Props { title: string; description: string; path: string; jsonld?: any[]; noindex?: boolean; crumbs?: { name: string; url?: string }[]; nav?: string; preload?: string }
+interface Props { title: string; description: string; path: string; jsonld?: any[]; noindex?: boolean; crumbs?: { name: string; url: string }[]; nav?: string; preload?: string }
 const { title, description, path, jsonld = [], noindex = false, crumbs, nav, preload } = Astro.props;
 const canonical = SITE + path;
 const siteJsonLd: any[] = [
@@ -18,9 +20,21 @@ const siteJsonLd: any[] = [
   { '@type': 'WebSite', name: 'CarSpecFix', url: SITE + '/' }
 ];
 const graph: any[] = [...siteJsonLd, ...jsonld];
-if (crumbs) graph.push({ '@type': 'BreadcrumbList', itemListElement: crumbs.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, ...(c.url ? { item: SITE + c.url } : {}) })) });
+// Every ListItem needs `item` — Google reports "Missing field item (in itemListElement)"
+// and drops the rich result when it is absent. Fail the build instead of shipping a
+// partial breadcrumb (a crumb with no url also renders as a dead link in the HTML nav).
+if (crumbs) {
+  const noUrl = crumbs.filter(c => !c.url);
+  if (noUrl.length) throw new Error(`BreadcrumbList: crumb without url on ${path} -> ${noUrl.map(c => c.name).join(', ')}`);
+  graph.push({ '@type': 'BreadcrumbList', itemListElement: crumbs.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: SITE + c.url })) });
+}
 const robots = noindex || PREVIEW ? 'noindex,follow' : null;   // R-Q1 v2: no noindex anywhere except 404 / preview builds
 const liveCodes = liveIssues.filter(i => i.type === 'code').map(i => i.slug);
+// /feedback.js lives in public/ so Astro does not content-hash it. nginx marks it
+// max-age=7d, which Cloudflare's edge then caches — a stale copy keeps serving the old
+// stub (silent fake success) long after a deploy. Fingerprint it into the URL instead;
+// the HTML itself is served no-cache, so every visitor resolves the current hash.
+const feedbackVer = createHash('sha1').update(readFileSync(new URL('../../public/feedback.js', import.meta.url))).digest('hex').slice(0, 8);
 ---
 <!doctype html>
 <html lang="en-US">
@@ -40,6 +54,8 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-PZGWPZXGY5');
 </script>
+{/* Ahrefs Analytics — cookieless, key mounted 2026-10-17 */}
+<script is:inline async src="https://analytics.ahrefs.com/analytics.js" data-key="PEOYNGCTHDdSS2akpMeVGw"></script>
 </head>
 <body>
 {PREVIEW && <div class="preview-banner">PREVIEW BUILD — includes pages that have not passed the publish gate. Not for deployment.</div>}
@@ -61,7 +77,7 @@ gtag('config', 'G-PZGWPZXGY5');
 <nav><a href="/sources/">Data sources</a><a href="/about/">About</a><a href="/authors/editor/">Author</a><a href="/privacy/">Privacy</a><a href="/contact/">Contact</a></nav>
 </div></footer>
 <div class="sr-only" aria-live="polite" id="live"></div>
-<script is:inline src="/feedback.js"></script>
+<script is:inline src={`/feedback.js?v=${feedbackVer}`}></script>
 <script is:inline define:vars={{ liveCodes }}>
 (function(){
   function fallbackCopy(t){var ta=document.createElement('textarea');ta.value=t;ta.setAttribute('readonly','');ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();var ok=false;try{ok=document.execCommand('copy')}catch(e){ok=false}document.body.removeChild(ta);return ok}
@@ -75,14 +91,14 @@ gtag('config', 'G-PZGWPZXGY5');
     if(e.target.closest('[data-print]')){e.preventDefault();track('print');window.print()}
     var m=e.target.closest('[data-menu]');if(m){var n=document.getElementById('main-nav');var o=n.classList.toggle('is-open');m.setAttribute('aria-expanded',o?'true':'false')}
     var fb=e.target.closest('[data-feedback]');
-    if(fb){var box=fb.closest('.feedback'),v=fb.getAttribute('data-feedback');box.querySelectorAll('[data-feedback]').forEach(function(b){b.setAttribute('aria-pressed',b===fb)});box.querySelector('.feedback__more').hidden=(v!=='no');box.querySelector('.feedback__msg').textContent=v==='yes'?'Thanks, glad it helped.':'Thanks. Tell us what was missing (optional).';CSF.send({type:'feedback',page:box.dataset.page,value:v,text:''})}
+    if(fb){var box=fb.closest('.feedback'),v=fb.getAttribute('data-feedback');box.querySelectorAll('[data-feedback]').forEach(function(b){b.setAttribute('aria-pressed',b===fb)});box.querySelector('.feedback__more').hidden=(v!=='no');box.querySelector('.feedback__msg').textContent=v==='yes'?'Thanks, glad it helped.':'Thanks. Tell us what was missing (optional).';CSF.send({type:'feedback',page:box.dataset.page,value:v,text:''},box)}
     var sd=e.target.closest('[data-feedback-send]');
-    if(sd){var bx=sd.closest('.feedback'),ta=bx.querySelector('textarea');CSF.send({type:'feedback-detail',page:bx.dataset.page,value:'no',text:ta.value.slice(0,1000)}).then(function(ok){bx.querySelector('.feedback__msg').textContent=ok?'Sent. Thank you.':'Could not send. Please try again later.';if(ok){bx.querySelector('.feedback__more').hidden=true}})}
+    if(sd){var bx=sd.closest('.feedback'),ta=bx.querySelector('textarea');CSF.send({type:'feedback-detail',page:bx.dataset.page,value:'no',text:ta.value.slice(0,1000)},bx).then(function(ok){bx.querySelector('.feedback__msg').textContent=ok?'Sent. Thank you.':'Could not send. Please try again later.';if(ok){bx.querySelector('.feedback__more').hidden=true}})}
   });
   document.addEventListener('submit',function(e){var f=e.target;
     if(f.matches('[data-search],[data-code]')){e.preventDefault();goCode(f.q.value)}
     if(f.matches('[data-goto]')){e.preventDefault();if(f.u.value)location.href=f.u.value}
-    if(f.matches('[data-report]')){e.preventDefault();CSF.send({type:'report',page:f.page.value,field:f.field.value,text:f.details.value.slice(0,2000)}).then(function(ok){f.querySelector('[role=status]').textContent=ok?'Thanks. Your report is queued for review.':'Could not send. Please try again later.';track('report');if(ok)f.reset()})}
+    if(f.matches('[data-report]')){e.preventDefault();CSF.send({type:'report',page:f.page.value,field:f.field.value,text:f.details.value.slice(0,2000)},f).then(function(ok){f.querySelector('[role=status]').textContent=ok?'Thanks. Your report is queued for review.':'Could not send. Please try again later.';track('report');if(ok)f.reset()})}
   });
 })();
 </script>

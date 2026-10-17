@@ -77,7 +77,12 @@ const jsonld = [
   { '@type': 'Car', name, brand: { '@type': 'Brand', name: v.make }, model: v.model, vehicleModelDate: String(v.year), ...(img ? { image: img } : {}) },
   { '@type': 'Article', headline: `${name} Specs`, dateModified: updated, author: { '@type': 'Person', name: AUTHOR.name, url: `${SITE}/authors/${AUTHOR.slug}/` }, mainEntityOfPage: SITE + path },
 ];
-const crumbs = [{ name: 'Home', url: '/' }, { name: v.make }, ...(hub ? [{ name: v.model, url: `/specs/${v.makeSlug}/${v.modelSlug}/` }] : [{ name: v.model }]), { name: String(v.year), url: path }];
+// Every crumb MUST carry a url: a ListItem without `item` is a Search Console
+// "Missing field item" error. There is no make-level hub page, so make+model
+// are merged into one crumb (and the year page stands alone when no hub exists).
+const modelLabel = `${v.make} ${v.model}`;
+const modelPath = `/specs/${v.makeSlug}/${v.modelSlug}/`;
+const crumbs = [{ name: 'Home', url: '/' }, ...(hub ? [{ name: modelLabel, url: modelPath }] : []), { name: hub ? String(v.year) : `${v.year} ${modelLabel}`, url: path }];
 const tabs = [['#quick', 'Quick answer'], ...(v.recalls.length ? [['#recalls', 'Recalls']] : []), ...(tires.length ? [['#tires', 'Tires']] : []), ...(oilLines.length ? [['#oil', 'Oil']] : []), ...(other.length ? [['#parts', 'Parts']] : []), ...(feRef ? [['#mpg', 'Fuel economy']] : []), ...(related.length ? [['#problems', 'Problems']] : []), ['#sources', 'Sources']];
 const configs = [...new Set(v.fuelEconomy.map(c => c.drive.replace('Front-Wheel Drive', 'FWD').replace('All-Wheel Drive', 'AWD').replace(/4-Wheel.*|Part-time 4-Wheel Drive/, '4WD').replace('Rear-Wheel Drive', 'RWD')))];
 ---

@@ -33,6 +33,22 @@ for (const [u, p] of Object.entries(pages)) {
   { const dm = p.s.match(/<meta name="description" content="([^"]*)"/); const dd = dm ? dm[1].replace(/&amp;|&#38;/g, '&').replace(/&#39;/g, "'").replace(/&quot;/g, '"') : ''; descs[u] = dd; if (dd.length > 160) warns.push(`R-M1 description >160 chars (${dd.length}): ${u}`); }
   if (vis.length > 60) errors.push(`R-M2 title >60 chars (${vis.length}): ${u} "${vis}"`);
   if (/"@type":"(HowTo|Product|Offer|AggregateRating|Review|FAQPage)"/.test(p.s)) errors.push(`R-D3/D4 forbidden schema type on ${u}`);
+  // R-D5: BreadcrumbList integrity — guards the Search Console error
+  // "Missing field 'item' (in 'itemListElement')": every ListItem must carry an
+  // absolute item URL, positions must be sequential, last item = canonical.
+  for (const m of p.s.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {
+    let d; try { d = JSON.parse(m[1]); } catch { errors.push(`R-D5 unparsable JSON-LD on ${u}`); continue; }
+    for (const node of [...(d['@graph'] || []), ...(Array.isArray(d) ? d : d['@graph'] ? [] : [d])]) {
+      if (!node || node['@type'] !== 'BreadcrumbList') continue;
+      const els = node.itemListElement;
+      if (!Array.isArray(els) || els.length < 2) { errors.push(`R-D5 BreadcrumbList needs >=2 ListItems on ${u}`); continue; }
+      els.forEach((e, i) => {
+        if (!e.item || !/^https:\/\/[^ ]+$/.test(e.item)) errors.push(`R-D5 missing field "item" on crumb ${i + 1} ("${e.name}") of ${u}`);
+        if (e.position !== i + 1) errors.push(`R-D5 crumb position ${e.position} != ${i + 1} on ${u}`);
+      });
+      if (els.at(-1).item !== SITE + u) errors.push(`R-D5 last crumb item (${els.at(-1).item}) != canonical (${SITE + u})`);
+    }
+  }
   if (!/<html lang="en-US">/.test(p.s)) errors.push(`R-M3 lang must be en-US: ${u}`);
   if (/hreflang/.test(p.s)) errors.push(`R-M3 hreflang present: ${u}`);
   if (!PREVIEW && p.noindex) errors.push(`R-Q1 noindex on non-404 page: ${u}`);
