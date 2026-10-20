@@ -88,7 +88,17 @@ const autoTitle = placard && psiAllMissing
   : `${v.year} ${v.make} ${v.model} Specs: Oil, Tire Size & Pressure`;
 const title = seo.title || autoTitle;
 // description: drop detail progressively until it fits 160 chars (R-M1)
-const visc = A(s.oilViscosity) ? noRefs(s.oilViscosity.value).split(/[;(]/)[0].replace(/^[\d.]+L[^:]*:\s*/, '').trim() : '';
+// First variant only, engine label stripped, then cut at the first parenthesis or comma.
+// Splitting on "(" before removing the label used to leave the bare label behind
+// ("2.5L 4-cylinder (2AR-FE): SAE 5W-20" -> "2.5L 4-cylinder") and that leaked into the
+// meta description as "…with filter, 2.5L 4-cylinder".
+const visc = A(s.oilViscosity) ? (() => {
+  const firstSeg = noRefs(s.oilViscosity.value).split(/\s*;\s*|\s+\|\s+/)[0];
+  const noLabel = firstSeg.includes(':') ? firstSeg.slice(firstSeg.indexOf(':') + 1) : firstSeg;
+  // Prefer the bare code when the sentence qualifies it ("5W-20 or 0W-20"): the meta is 160 chars.
+  const code = noLabel.match(/(?:SAE\s*)?\d{1,2}W-\d{2}/i);
+  return (code ? code[0] : noLabel.split(/[(,]/)[0]).trim();
+})() : '';
 const oilPhrase = l => { const m = l.match(/^([^:]+):\s*(.*)$/); return m ? `${m[1]} oil: ${m[2]}` : `oil ${l}`; };
 const oilFull = oilLines.length ? `${oilPhrase(oilLines[0])}${visc ? ', ' + visc : ''}` : null;
 // verbatim from the source: first variant's first amount (up to the first comma), no recalculation or rewording
