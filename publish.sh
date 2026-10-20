@@ -84,6 +84,12 @@ server {
     charset utf-8;
     server_tokens off;
 
+    # Directory redirects must stay relative. Behind Cloudflare Flexible nginx sees
+    # $scheme=http, so an absolute Location ("http://carspecfix.com/about/") forced a
+    # second round trip back up to HTTPS on every slashless URL. Relative Location
+    # keeps the scheme the browser already used: one 301, straight to HTTPS.
+    absolute_redirect off;
+
     access_log /var/log/nginx/carspecfix.access.log;
     error_log /var/log/nginx/carspecfix.error.log warn;
 
@@ -105,6 +111,10 @@ server {
     add_header Referrer-Policy "strict-origin-when-cross-origin" always;
 
     error_page 404 /404.html;
+    # A directory that exists but has no index.html (e.g. /specs/honda/cr-v/, which
+    # only holds 2024/) made nginx answer 403. That is a missing page, not a
+    # forbidden one: crawlers retry 403 and users get a bare default page.
+    error_page 403 =404 /404.html;
     location = /404.html {
         internal;
     }
@@ -121,15 +131,36 @@ server {
         try_files $uri $uri/ =404;
     }
 
+    # Pages change only when publish.sh deploys, so an edge copy is worth keeping.
+    # max-age=0 keeps browsers revalidating; s-maxage=600 lets a shared cache hold
+    # the page for 10 minutes (Cloudflare only does that once a Cache Rule marks
+    # HTML eligible). publish.sh purges the zone right after a deploy when
+    # CF_PURGE_TOKEN is present, so a release never waits out the 10 minutes.
     location ~* \.html?$ {
-        expires -1;
-        add_header Cache-Control "no-cache";
+        add_header Cache-Control "public, max-age=0, s-maxage=600, stale-while-revalidate=60";
+        add_header X-Content-Type-Options "nosniff" always;
+        add_header Referrer-Policy "strict-origin-when-cross-origin" always;
         try_files $uri =404;
     }
 
+    # Astro build output carries a content hash in the filename, so a changed file
+    # arrives under a new name — these can be pinned for a year.
+    location ~* ^/_astro/.+\.(css|js|mjs|woff2?|ttf|eot|svg|png|webp|avif)$ {
+        add_header Cache-Control "public, max-age=31536000, immutable";
+        add_header X-Content-Type-Options "nosniff" always;
+        add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+        access_log off;
+        log_not_found off;
+        try_files $uri =404;
+    }
+
+    # Photos, PDFs and root-level scripts keep a short TTL: their filenames are
+    # stable, so a replaced image has to go live within a week.
     location ~* \.(css|js|mjs|jpg|jpeg|gif|png|svg|webp|avif|ico|woff|woff2|ttf|eot|pdf)$ {
         expires 7d;
         add_header Cache-Control "public";
+        add_header X-Content-Type-Options "nosniff" always;
+        add_header Referrer-Policy "strict-origin-when-cross-origin" always;
         access_log off;
         log_not_found off;
         try_files $uri =404;
@@ -202,4 +233,48 @@ if [ "$wwwcode" = "301" ]; then
   echo "    ✅ www.$DOMAIN 301 跳转 apex（${wwwloc}）"
 else
   echo "    ⚠️  www.$DOMAIN 未返回 301（实测: ${wwwloc:-无响应}）—— 检查 nginx vhost 或 CF 规则" >&2
+fi
+
+# 无斜杠 URL 必须一步 301 到 HTTPS 正式地址。
+# 过去是 https -> http -> https 两跳（Flexible 下 nginx 用 $scheme=http 拼绝对 Location）。
+for p in /about /privacy /specs/toyota/rav4/2024; do
+  hop=$(ssh -o BatchMode=yes "$REMOTE" \
+    "curl -s -m 20 -o /dev/null -w '%{http_code} %{redirect_url}' https://$DOMAIN$p" 2>/dev/null || true)
+  hop=$(printf '%s' "$hop" | head -1)
+  hcode=$(printf '%s' "$hop" | awk '{print $1}')
+  hloc=$(printf '%s' "$hop" | awk '{print $2}')
+  if [ "$hcode" = "301" ] || [ "$hcode" = "308" ]; then
+    case "$hloc" in
+      https://*) echo "    ✅ $p -> $hcode $hloc（单跳，HTTPS）" ;;
+      *)         echo "    ⚠️  $p -> $hcode 落到非 HTTPS：${hloc:-无 Location}" >&2 ;;
+    esac
+  else
+    echo "    ⚠️  $p 未返回 301（实测 ${hcode:-无响应}）" >&2
+  fi
+done
+
+# 单年份车系没有聚合页，但目录存在（只有 /2024/）：必须 404，不能 403。
+for p in /specs/honda/cr-v/ /specs/honda/civic/ /specs/honda/accord/ /specs/chevrolet/equinox/; do
+  sc=$(ssh -o BatchMode=yes "$REMOTE" \
+    "curl -s -m 20 -o /dev/null -w '%{http_code}' https://$DOMAIN$p" 2>/dev/null || true)
+  sc=$(printf '%s' "$sc" | head -1 | tr -cd '0-9')
+  if [ "$sc" = "404" ]; then
+    echo "    ✅ $p -> 404"
+  else
+    echo "    ⚠️  $p -> ${sc:-无响应}（期望 404）" >&2
+  fi
+done
+
+# HTML 现在带 s-maxage=600。只有 CF Cache Rule 把 HTML 标为可缓存才会生效；
+# 一旦生效，发布后必须立刻失效边缘副本，否则新页最长要等 10 分钟。
+if [ -n "${CF_PURGE_TOKEN:-}" ] && [ -n "${CF_ZONE_ID:-}" ]; then
+  purge=$(curl -s -m 30 -X POST "https://api.cloudflare.com/client/v4/zones/$CF_ZONE_ID/purge_cache" \
+    -H "Authorization: Bearer $CF_PURGE_TOKEN" -H "Content-Type: application/json" \
+    --data '{"purge_everything":true}' 2>/dev/null || true)
+  case "$purge" in
+    *'"success":true'*) echo "    ✅ Cloudflare 缓存已清理（purge_everything）" ;;
+    *) echo "    ⚠️  Cloudflare purge 失败 —— 若已开启 HTML 边缘缓存，旧页最长会驻留 10 分钟" >&2 ;;
+  esac
+else
+  echo "    · 未设置 CF_PURGE_TOKEN / CF_ZONE_ID，跳过 CF purge（HTML 边缘缓存未开启时无需清理）"
 fi

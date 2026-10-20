@@ -5,3 +5,21 @@
 @import '@fontsource/source-sans-3/latin-600.css';
 @import '@fontsource/source-sans-3/latin-700.css';
 @import '@fontsource/jetbrains-mono/latin-500.css';
+
+/* Metric-matched fallbacks.
+   The system sans renders the same string ~18% wider than Source Sans 3 (measured:
+   caption 441.2 px fallback vs 373.3 px webfont at 11px). Before swap a card caption
+   therefore wraps to three lines and collapses to two when the webfont lands — the home
+   grid shrinks 89px at ~3s, which is the whole desktop CLS (0.31). size-adjust scales
+   the fallback so both render the same width; the factor is webfont/fallback,
+   373.3/441.2 = 84.6%. Archivo is already metric-close (225.4 vs 221.4 = 101.8%). */
+@font-face{
+  font-family:"SS3 Fallback";
+  src:local("Helvetica Neue"),local("Arial"),local("Liberation Sans");
+  size-adjust:84.6%;
+}
+@font-face{
+  font-family:"Archivo Fallback";
+  src:local("Helvetica Neue"),local("Arial"),local("Liberation Sans");
+  size-adjust:101.8%;
+}

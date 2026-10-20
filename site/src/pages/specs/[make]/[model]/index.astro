@@ -35,6 +35,16 @@ const latest = checked[checked.length - 1], earliest = checked[0];
 const pending = years.filter(y => !byYear(y));
 const codes = liveIssues.filter(i => i.type === 'code');
 const span = `${years[0]}–${years[years.length - 1]}`;
+// Years whose manual states a real gap ("... not yet verified"). It is quoted once
+// here so a reader looking for the hybrid figure is told it is absent instead of
+// reading the gasoline number as if it covered both. A note that merely cites where
+// a figure came from does not qualify — that data is already in the table.
+// Which years have a hybrid/diesel figure actually read, and which manuals still
+// state a gap. Used to say plainly that a hybrid number is absent instead of letting
+// a reader take the gasoline figure as if it covered both powertrains.
+const hybridYears = checked.filter(v => /hybrid|diesel/i.test(v.specs?.oilCapacity?.value || '')).map(v => v.year);
+const gapNotes = checked.map(v => v.specs?.oilCapacity?.unverifiedNote).filter(n => n && /not (yet )?verified|not been checked|not checked yet/i.test(n));
+const gapText = gapNotes.length ? gapNotes.find(n => /hybrid|diesel/i.test(n))?.replace(/[\s.;]+$/, '.') ?? gapNotes[0].replace(/[\s.;]+$/, '.') : null;
 const title = fitTitle(`${name} Oil Capacity & Tire Size by Year (${span})`);
 const description = `${name} oil capacity, tire size and cold tire pressure by model year, one row per year with the owner's-manual page cited, plus NHTSA recall counts.`;
 const last = all.map(v => v.dataUpdated).sort().at(-1);
@@ -51,6 +61,7 @@ const manualSrc = y => { const v = byYear(y); const id = v?.manual?.sourceId; re
 </ul>
 
 <h2 class="section__title">{name} specs by year</h2>
+{liveYears.size > 0 && <div class="vmeta" style="margin:0 0 12px"><div class="chips"><span class="vmeta__label">Go to year</span>{years.filter(y => liveYears.has(y)).map(y => <a class="chip chip--muted" href={vehicleUrl(byYear(y))}>{y}</a>)}</div></div>}
 <p>One row per model year. Every figure comes from that year's owner's manual (page cited on the year page), NHTSA or fueleconomy.gov — nothing is estimated. A blank cell means we have not read that figure yet; it gets filled in as soon as the manual for that year is checked.</p>
 <div class="tbl-wrap"><div class="tbl-scroll" role="region" tabindex="0" aria-label="Specs by year"><table class="tbl"><thead><tr><th scope="col">Year</th><th scope="col">Oil (with filter)</th><th scope="col">Oil (without filter)</th><th scope="col">Tire sizes</th><th scope="col" class="num">Cold psi</th><th scope="col" class="num">Recalls</th></tr></thead>
 <tbody>{years.map(y => { const v = byYear(y); return <tr>
@@ -61,6 +72,9 @@ const manualSrc = y => { const v = byYear(y); const id = v?.manual?.sourceId; re
 <h2 class="section__title">Engine oil capacity by year</h2>
 <p>Across the years checked here, the 2.5 L gasoline engine takes {rng(mainW)} qt with a filter change and {rng(mainWo)} qt without one. The difference between the two numbers is the oil held in the filter, which is why the "with filter" figure is the one to buy against: at {Math.max(...mainW)} qt you need {bottles} one-quart bottles, and what is left over is what you use for top-ups between changes.</p>
 <p>The figure is not constant across the run. {earliest.year} and {latest.year} sit {latest.year - earliest.year} model years apart, and the engine, oil pan and filter are not the same parts throughout — {earliest.year} is listed at {cell(earliest, 'w')} qt with filter, {latest.year} at {cell(latest, 'w')} qt. That is why a capacity quoted for one year is not safe to use on another, even when the engine displacement looks identical.</p>
+{hybridYears.length > 0 && hybridYears.length < checked.length
+  ? <p><b>Powertrains:</b> hybrid capacity is read and listed for {hybridYears.join(', ')} only. Every other row is the gasoline engine. A hybrid figure is never filled in from the gasoline number, so those years need the hybrid manual — the gasoline capacity is not a substitute.</p>
+  : !hybridYears.length && gapText && <p><b>Powertrains not covered here:</b> {gapText} The figures above are the gasoline engine only. A hybrid or diesel variant is never filled in from the gasoline number — that would read as verified when it is not.</p>}
 {viscOf(earliest) && viscOf(latest) && viscOf(earliest) !== viscOf(latest) && <p>Recommended viscosity moved as well: the {earliest.year} manual calls for {viscOf(earliest)}, the {latest.year} manual for {viscOf(latest)}. Use the grade printed for your year — where a manual allows a substitute it also says to go back to the recommended grade at the next oil change.</p>}
 
 <h2 class="section__title">Tire size &amp; pressure by year</h2>

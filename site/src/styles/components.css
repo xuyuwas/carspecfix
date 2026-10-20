@@ -210,6 +210,21 @@ a.make{color:var(--primary);border-color:var(--border-strong)}a.make:hover{borde
 .qa__foot{padding:10px var(--sp-4);border-top:1px solid var(--border);background:var(--surface-alt);font-size:var(--fs-13);color:var(--text-3);display:flex;flex-wrap:wrap;gap:4px 16px;justify-content:space-between}
 @media(min-width:720px){.qa__grid{grid-template-columns:repeat(3,minmax(0,1fr))}.qa__item{border-bottom:0;border-right:1px solid var(--border)}.qa__item:last-child{border-right:0}}
 @media(min-width:1024px){.qa__a{font-size:40px}}
+/* Engine oil: with-filter and without-filter amounts sit side by side, each
+   labelled. A single big number used to merge every engine into one range and
+   silently answer the without-filter question — the reader must never have to
+   infer which figure applies to a filter change. */
+.oil{margin-top:6px}
+.oil__row+.oil__row{margin-top:10px;padding-top:10px;border-top:1px solid var(--border)}
+.oil__eng{font:700 var(--fs-13)/1.25 var(--font-body);color:var(--text-2);letter-spacing:.01em}
+.oil__eng+.oil__pairs{margin-top:3px}
+.oil__pairs{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 18px}
+.oil__fig{display:flex;flex-direction:column;gap:1px}
+.oil__fig b{font:800 28px/1.05 var(--font-display);letter-spacing:-.03em;font-variant-numeric:tabular-nums;display:flex;align-items:baseline;gap:3px}
+.oil__fig b small{font:700 var(--fs-14)/1 var(--font-body);letter-spacing:0;color:var(--text-2)}
+.oil__fig em{font:600 var(--fs-12)/1.2 var(--font-body);color:var(--text-3);font-style:normal}
+.oil__fig--nv{display:block}
+@media(min-width:1024px){.oil__fig b{font-size:32px}}
 .vhead--compact .vtitle{font-size:36px}@media(min-width:1024px){.vhead--compact .vtitle{font-size:56px}}
 /* feedback */
 .feedback{border:1px solid var(--border);border-radius:var(--r-md);padding:var(--sp-4);display:flex;flex-direction:column;gap:var(--sp-3);background:var(--surface-alt)}

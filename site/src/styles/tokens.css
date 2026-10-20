@@ -19,8 +19,8 @@
   /* radius */
   --r-sm:4px; --r-md:6px; --r-full:999px;
   /* type */
-  --font-display:"Archivo",system-ui,sans-serif;
-  --font-body:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-display:"Archivo","Archivo Fallback",system-ui,sans-serif;
+  --font-body:"Source Sans 3","SS3 Fallback",system-ui,-apple-system,"Segoe UI",sans-serif;
   --font-mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
   --fs-12:12px; --fs-13:13px; --fs-14:14px; --fs-15:15px; --fs-16:16px; --fs-18:18px; --fs-20:20px; --fs-24:24px; --fs-32:32px; --fs-40:40px; --fs-56:56px; --fs-72:72px;
   /* layout */

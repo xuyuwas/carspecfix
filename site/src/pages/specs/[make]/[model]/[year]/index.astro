@@ -33,11 +33,10 @@ const psis = tires.flatMap(t => [t.frontPsi, t.rearPsi]).filter(Boolean); const 
 // copy skipped that merge and rendered "null qt without" on the 2020/2024 RAV4.
 const noRefs = t => String(t || '').replace(/\s*\[[A-Z0-9]{6,}[^\]]*\]/g, '').trim();
 const oilEngines = A(s.oilCapacity) ? parseOilCapacity(s.oilCapacity.value) : [];
-const oilAllWo = oilEngines.length > 0 && oilEngines.every(o => o.wo != null);   // every engine states a without-filter amount
-const oilAllW = oilEngines.length > 0 && oilEngines.every(o => o.w != null);    // every engine states a with-filter amount
-const oilQts = oilAllWo ? oilEngines.map(o => o.wo) : oilAllW ? oilEngines.map(o => o.w) : [];
-const qMin = Math.min(...oilQts), qMax = Math.max(...oilQts);
-const oilUnit = oilAllWo ? 'qt without filter' : 'qt with filter';
+// The card shows every engine's with-filter and without-filter figures side by side.
+// There is deliberately no single "headline" number: a top-level figure has to pick
+// one condition, and whichever it picks is wrong for the reader who wanted the other.
+const qt = n => Number.isInteger(n) ? n.toFixed(1) : String(n);   // 6.0 qt stays 6.0, 7.75 stays 7.75
 const oilMissingWo = oilEngines.some(o => !o.unverified && o.w != null && o.wo == null);
 const oilMissingW = oilEngines.some(o => !o.unverified && o.wo != null && o.w == null);
 const sentence = t => (t || '').split(/\s*:\s*/).map(x => x.toLowerCase().replace(/\b(abs|nhtsa|tpms|led|esc|ecm|pcm|usb|hvac|egr|evap)\b/g, m => m.toUpperCase())).join(': ').replace(/^./, m => m.toUpperCase());
@@ -45,15 +44,19 @@ const esc = x => x.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&
 const P = t => esc(String(t || '')).replace(/\bpp?\.\s?[\d–-]+(?:[,\/]\s?[\d–-]+)*/g, m => `<span class="pref">${m}</span>`);
 const samePsi = tires.length > 0 && tires.every(t => t.frontPsi === tires[0].frontPsi && t.rearPsi === tires[0].rearPsi);
 const oilLines = oilEngines.map(o => o.raw);            // detail table: one line per engine, verbatim from the manual
-// Card lines: never invent the half the manual did not state — a missing
-// without-filter figure becomes a footnote, not a null in the string.
-const oilCardLines = oilEngines.flatMap(o => {
-  const lb = o.label ? o.label + ': ' : '';
-  if (o.unverified) return [o.raw];
-  if (o.w != null && o.wo != null) return [`${lb}${o.w} qt with filter, ${o.wo} qt without`];
-  if (o.w != null) return [`${lb}${o.w} qt with filter`];
-  if (o.wo != null) return [`${lb}${o.wo} qt without filter`];
-  return [o.raw];
+// Card rows: one per engine, both conditions shown when the manual prints both.
+// A condition the manual never states stays absent (a footnote explains it) —
+// it is never filled in from the other condition.
+const oilCard = oilEngines.map(o => {
+  // The label is rendered on its own line, so the verbatim string must not repeat it.
+  const raw = o.label && o.raw.startsWith(o.label) ? o.raw.slice(o.label.length).replace(/^:\s*/, '') : o.raw;
+  return {
+    label: o.label,
+    w: o.unverified ? null : o.w,
+    wo: o.unverified ? null : o.wo,
+    raw,
+    blank: o.unverified || (o.w == null && o.wo == null),
+  };
 });
 // EV pages carry no oilCapacity field at all — optional chaining keeps them renderable.
 const oilApplies = s.oilCapacity?.appliesTo ? `Applies to: ${s.oilCapacity.appliesTo}.` : '';
@@ -74,11 +77,16 @@ const tireRef = tires.length ? srcRef(tires[0].source) : null;
 const placardRef = placard ? srcRef(placard.source) : null;
 // Title/meta: only modules really on the page (R-M2 v2)
 const mods = [...(oilLines.length ? ['Oil Capacity'] : []), ...(tires.length ? ['Tire Size & Pressure'] : []), ...(v.recalls.length ? ['Recalls'] : [])];
+// A page may pin its own title/description/H1 (data: seo{}) when Search Console
+// shows it earns impressions on a phrase the generic formula does not carry. Every
+// other page keeps the formula, so the site never drifts title by title.
+const seo = v.seo || {};
 // Titles for pages that do print psi stay byte-identical to before; only the placard
 // case (no psi anywhere in the manual) needs a different wording.
-const title = placard && psiAllMissing
+const autoTitle = placard && psiAllMissing
   ? `${v.year} ${v.make} ${v.model} Specs: Oil, Tire Sizes${v.recalls.length ? ', Recalls' : ''}`
   : `${v.year} ${v.make} ${v.model} Specs: Oil, Tire Size & Pressure`;
+const title = seo.title || autoTitle;
 // description: drop detail progressively until it fits 160 chars (R-M1)
 const visc = A(s.oilViscosity) ? noRefs(s.oilViscosity.value).split(/[;(]/)[0].replace(/^[\d.]+L[^:]*:\s*/, '').trim() : '';
 const oilPhrase = l => { const m = l.match(/^([^:]+):\s*(.*)$/); return m ? `${m[1]} oil: ${m[2]}` : `oil ${l}`; };
@@ -90,7 +98,11 @@ const tireBit = tires.length ? (placard && psiAllMissing ? `tire sizes for ${tir
 const tireShort = tires.length ? (placard && psiAllMissing ? 'tire sizes by wheel' : 'tire size & pressure by wheel') : null;
 const recBit = v.recalls.length ? `${v.recalls.length} NHTSA recall${v.recalls.length > 1 ? 's' : ''}` : null;
 const mk = parts => `${name}: ${parts.filter(Boolean).join('; ')}. Manual page cited.`;
-const desc = [mk([oilFull, tireBit, recBit]), mk([oilShort, tireBit, recBit]), mk([oilShort, tireShort, recBit]), mk([oilShort, tireShort]), mk(['oil capacity & type', tireShort])].find(d => d.length <= 160) ?? mk(['oil capacity & type', tireShort]);
+const autoDesc = [mk([oilFull, tireBit, recBit]), mk([oilShort, tireBit, recBit]), mk([oilShort, tireShort, recBit]), mk([oilShort, tireShort]), mk(['oil capacity & type', tireShort])].find(d => d.length <= 160) ?? mk(['oil capacity & type', tireShort]);
+// A page may pin its own title/description/H1 (data: seo{}) when Search Console
+// shows it earns impressions on a phrase the generic formula does not carry. Every
+// other page keeps the formula, so the site never drifts title by title.
+const desc = seo.description || autoDesc;
 const other = [['Towing', s.towingCapacity], ['12V battery (group / type)', s.batteryGroup], ['TPMS reset', s.tpmsReset], ['12V battery', s.battery12v], ['Wiper blade sizes', s.wiperSizes]].filter(([, f]) => A(f));
 const segment = SEGMENT[v.modelSlug] || 'sedan';
 const img = imageObject(v.slug, SITE);
@@ -116,7 +128,7 @@ const pwLabel = p => p === 'hybrid' ? 'Hybrid' : p === 'gas' ? 'Gasoline' : p;
 <div class="vhead vhead--compact"><div class="container">
 <nav class="crumbs" aria-label="Breadcrumb">{crumbs.map((c, i) => <>{i > 0 && <span class="sep">/</span>}{c.url && i < crumbs.length - 1 ? <a href={c.url}>{c.name}</a> : <span aria-current={i === crumbs.length - 1 ? 'page' : undefined}>{c.name}</span>}</>)}</nav>
 <div class="vhead__grid" style="padding-bottom:0">
-  <div><div class="eyebrow">{v.make}{configs.length > 0 && ` · ${configs.join(' / ')}`}</div><h1 class="vtitle"><span class="yr">{v.year} {v.make}</span>{v.model} specs</h1></div>
+  <div><div class="eyebrow">{v.make}{configs.length > 0 && ` · ${configs.join(' / ')}`}</div><h1 class="vtitle"><span class="yr">{v.year} {v.make}</span>{seo.h1Tail ?? `${v.model} specs`}</h1></div>
   <div class="vart"><Photo slug={v.slug} year={v.year} name={`${v.make} ${v.model}`} segment={segment} hero={true} /></div>
 </div>
 <section class="qa" id="quick" data-copy-scope aria-label="Quick answer">
@@ -135,8 +147,15 @@ const pwLabel = p => p === 'hybrid' ? 'Hybrid' : p === 'gas' ? 'Gasoline' : p;
   {!ev && <div class="qa__item"><div class="qa__q">Engine oil</div>
     {oilScope && <div class="qa__src qa__applies">{oilScope}</div>}
     {oilLines.length ? <>
-      {oilQts.length ? <div class="qa__a">{qMin === qMax ? qMin : `${qMin}–${qMax}`}<small>{oilUnit}</small><sup class="ref"><a href={`#ref-${oilRef}`}>[{oilRef}]</a></sup></div> : null}
-      <div class="qa__more">{oilCardLines.map(l => <div>{l}{!oilQts.length && <sup class="ref"><a href={`#ref-${oilRef}`}>[{oilRef}]</a></sup>}</div>)}</div>
+      <div class="oil">{oilCard.map(r => <div class="oil__row">
+        {r.label && <div class="oil__eng">{r.label}</div>}
+        {r.blank ? <div class="oil__fig oil__fig--nv"><span class="nv">{r.raw}</span></div>
+         : <div class="oil__pairs">
+             {r.w != null && <div class="oil__fig"><b>{qt(r.w)}<small>qt</small></b><em>with filter</em></div>}
+             {r.wo != null && <div class="oil__fig"><b>{qt(r.wo)}<small>qt</small></b><em>without filter</em></div>}
+           </div>}
+      </div>)}</div>
+      <div class="qa__src"><a href="#oil">See the full table</a><sup class="ref"><a href={`#ref-${oilRef}`}>[{oilRef}]</a></sup></div>
       {(oilMissingWo || oilMissingW) && <div class="qa__src">{oilMissingWo ? 'Without-filter amount not stated in the manual for these engines.' : 'With-filter amount not stated in the manual for these engines.'}</div>}
       <div class="qa__more">{A(s.oilViscosity) ? <b>{noRefs(s.oilViscosity.value)}</b> : <span class="nv">Viscosity: Not yet verified</span>}</div>
       <div class="qa__src"><Fragment set:html={P([s.oilCapacity.page && `Manual ${s.oilCapacity.page} (capacity)`, A(s.oilViscosity) && s.oilViscosity.page && `${s.oilViscosity.page} (viscosity)`].filter(Boolean).join(', ') || `Source [${oilRef}]`)} /></div>
@@ -162,7 +181,7 @@ const pwLabel = p => p === 'hybrid' ? 'Hybrid' : p === 'gas' ? 'Gasoline' : p;
   <div class="swipe">Swipe for more columns</div></div>
 </section>}
 {tires.length > 0 && <section id="tires" data-copy-scope>
-  <div class="section__head"><div><h2 class="section__title">Tire size &amp; pressure by configuration</h2><p class="section__kicker">One row per wheel / configuration, as worded in the owner's manual.{psiAllMissing && placard ? ` ${v.make} prints no psi table: cold pressures are on the Tire and Loading Information label (manual ${placard.page}).` : ' Check the tire placard on your driver\'s door jamb for your exact trim.'}</p></div><Tools /></div>
+  <div class="section__head"><div><h2 class="section__title">Tire size &amp; pressure by configuration</h2><p class="section__kicker">One row per wheel / configuration, as worded in the owner's manual.{v.tires?.note ? ` ${v.tires.note}` : ''}{psiAllMissing && placard ? ` ${v.make} prints no psi table: cold pressures are on the Tire and Loading Information label (manual ${placard.page}).` : ' Check the tire placard on your driver\'s door jamb for your exact trim.'}</p></div><Tools /></div>
   <div class="tbl-wrap"><div class="tbl-scroll" role="region" tabindex="0" aria-label="Tire table"><table class="tbl tbl--wide"><thead><tr><th scope="col">Wheel</th><th scope="col">Trim / config</th><th scope="col">Tire size</th><th scope="col" class="num">Front psi</th><th scope="col" class="num">Rear psi</th><th scope="col">Source</th></tr></thead>
   <tbody>{tires.map(t => <tr><td class="nowrap strong">{t.wheel ? `${t.wheel}-in` : '—'}</td><td>{t.config ?? 'All'}</td><td class="big">{t.tireSize ?? <span class="nv">Not yet verified</span>}</td><td class="num">{t.frontPsi ?? (placard ? <span class="pg">see label</span> : <span class="nv">Not yet verified</span>)}</td><td class="num">{t.rearPsi ?? (placard ? <span class="pg">see label</span> : <span class="nv">Not yet verified</span>)}</td><td class="pg">{t.page ? <span class="pref">{pgShow(t.page)}</span> : '—'}</td></tr>)}</tbody></table></div>
   <div class="swipe">Swipe for more columns</div></div>
