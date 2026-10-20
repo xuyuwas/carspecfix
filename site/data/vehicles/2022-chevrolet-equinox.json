@@ -10,23 +10,23 @@
   "manual": {
     "sourceId": "manual-2022-chevrolet-equinox",
     "yearConfirmed": true,
-    "note": "GM TechLink 2022 oil capacity table, row Equinox. Tire size/pressure TODO (owner manual PDF blocked)"
+    "note": "GM TechLink 2022 oil table (row Equinox) for capacity + viscosity; GM spec sheet for wheel/tyre fitment and trailering; owner's manual p.294 for the placard statement. Tire psi is not printed in the manual."
   },
   "specs": {
     "oilCapacity": {
       "value": "1.5L LYX FWD: 4.2 qt (4.0 L); AWD: 5.3 qt (5.0 L), with filter",
       "source": "manual-2022-chevrolet-equinox",
-      "page": null,
+      "page": "p.1",
       "sourceGrade": "A",
-      "verified": false,
+      "verified": true,
       "note": null
     },
     "oilViscosity": {
       "value": "dexos1 0W-20",
       "source": "manual-2022-chevrolet-equinox",
-      "page": null,
+      "page": "p.1",
       "sourceGrade": "A",
-      "verified": false,
+      "verified": true,
       "note": null
     },
     "wiperSizes": {
@@ -45,9 +45,10 @@
     },
     "towingCapacity": {
       "value": "1,500 lb (680 kg)",
-      "source": "towing-2022-chevrolet-equinox",
+      "source": "spec-2022-chevrolet-equinox",
+      "page": "p.3",
       "sourceGrade": "A",
-      "verified": false,
+      "verified": true,
       "note": null
     },
     "tpmsReset": {
@@ -59,8 +60,44 @@
     }
   },
   "tires": {
-    "rows": [],
-    "note": "owner manual / door placard; owner manual"
+    "rows": [
+      {
+        "wheel": "17",
+        "config": "LS, LT (17-inch wheels)",
+        "tireSize": "P225/65R17",
+        "frontPsi": null,
+        "rearPsi": null,
+        "page": "p.2",
+        "source": "spec-2022-chevrolet-equinox",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "18",
+        "config": "Premier; LT with 18-inch wheels",
+        "tireSize": "P225/60R18",
+        "frontPsi": null,
+        "rearPsi": null,
+        "page": "p.2",
+        "source": "spec-2022-chevrolet-equinox",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "19",
+        "config": "RS; LT or Premier with 19-inch wheels",
+        "tireSize": "P235/50R19",
+        "frontPsi": null,
+        "rearPsi": null,
+        "page": "p.2",
+        "source": "spec-2022-chevrolet-equinox",
+        "sourceGrade": "A"
+      }
+    ],
+    "psiOnLabel": {
+      "source": "om-2022-chevrolet-equinox",
+      "page": "p.294",
+      "note": "No psi table: Chevrolet prints the recommended cold pressure on the Tire and Loading Information label on the driver's door jamb."
+    },
+    "note": "Sizes from the GM spec sheet; cold pressures only exist on the door-jamb label (manual p.294)."
   },
   "extraManuals": [],
   "fuelEconomy": [
@@ -146,6 +183,9 @@
     "issues": []
   },
   "publishDate": null,
-  "dataUpdated": "2026-10-15",
-  "signOff": null
+  "dataUpdated": "2026-10-20",
+  "signOff": {
+    "by": "队长",
+    "date": "2026-10-20"
+  }
 }

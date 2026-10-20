@@ -159,23 +159,16 @@
     "retrieved": "2026-10-15"
   },
   "manual-2022-chevrolet-equinox": {
-    "name": "2022 Chevrolet Equinox owner information",
+    "name": "GM TechLink 2022 engine oil capacities (with filter), U.S. and Canada",
     "url": "https://gm-techlink.com/wp-content/uploads/2024/11/TechLink-engine-oil-capacities-2022_C.pdf",
     "type": "oem",
     "grade": "A",
-    "retrieved": "2026-10-15",
-    "note": "GM TechLink 2022 oil capacity table, row Equinox. Tire size/pressure TODO (owner manual PDF blocked)",
+    "retrieved": "2026-10-20",
+    "note": "Chevrolet table, row Equinox: 1.5L L4 LYX, FWD 4.0 L / 4.2 qt, AWD 5.0 L / 5.3 qt, dexos1 0W-20. Oil capacity + viscosity on p.1.",
     "archived": {
       "file": "manuals/gm-2022-oil-capacities.pdf",
       "fetchedAt": "2026-10-15T12:15:16Z"
     }
-  },
-  "towing-2022-chevrolet-equinox": {
-    "name": "GM 2022 Equinox spec sheet (copy in NHTSA docket NHTSA-2023-0022-0035, attachment 4)",
-    "url": "https://downloads.regulations.gov/NHTSA-2023-0022-0035/attachment_4.pdf",
-    "type": "oem-spec-sheet",
-    "grade": "A",
-    "retrieved": "2026-10-15"
   },
   "manual-2022-toyota-corolla": {
     "name": "Toyota owner's manual OM02617U (2022 Corolla)",
@@ -422,5 +415,25 @@
       "file": "manuals/toyota-2012-rav4-OM42862U.pdf",
       "fetchedAt": "2026-10-19"
     }
+  },
+  "om-2022-chevrolet-equinox": {
+    "name": "Chevrolet Equinox Owner's Manual 84654602B (2022)",
+    "url": "https://contentdelivery.ext.gm.com/content/dam/cope/en_us/public/pdf_assets/active/owners_manuals_browse/2022/22_CHEV_Equinox_OM_en_US_U_84654602B_2021AUG16_2P.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-10-20",
+    "note": "GM's current download for the 2022 Equinox. Tire Pressure section (p.294) states the recommended cold pressure is the figure on the Tire and Loading Information label, and prints no psi table.",
+    "archived": {
+      "file": "manuals/chevrolet-2022-equinox-OM.pdf",
+      "fetchedAt": "2026-10-20T16:52:00+08:00"
+    }
+  },
+  "spec-2022-chevrolet-equinox": {
+    "name": "2022 Chevrolet Equinox specifications (GM spec sheet, copy in NHTSA docket NHTSA-2023-0022-0035, attachment 4)",
+    "url": "https://downloads.regulations.gov/NHTSA-2023-0022-0035/attachment_4.pdf",
+    "type": "oem-spec-sheet",
+    "grade": "A",
+    "retrieved": "2026-10-20",
+    "note": "Wheel/tyre fitment and trailering: wheel sizes and tyre sizes on p.2 (P225/65R17, P225/60R18, P235/50R19), trailering capacity 1,500 lb on p.3, EPA city/highway on p.1."
   }
 }

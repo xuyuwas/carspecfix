@@ -29,13 +29,21 @@ function common(o, reasons) {
   else if (day > RELEASE_DAY) reasons.push(`release day ${day} (building day ${RELEASE_DAY})`);
 }
 export const goodTireRows = v => (v.tires?.rows || []).filter(x => x.tireSize && x.frontPsi && x.rearPsi && x.source && x.sourceGrade === 'A');
+// GM/Ford-style manuals print no per-vehicle psi figure at all: they point to the
+// Tire and Loading Information label on the door jamb. A page can still ship when it
+// carries grade-A tire sizes AND a cited placard note proving the omission is the
+// OEM's, not ours (data field tires.psiOnLabel: { source, page, note }).
+export const tireSizeRows = v => (v.tires?.rows || []).filter(x => x.tireSize && x.source && x.sourceGrade === 'A');
+export const placardNote = v => { const p = v.tires?.psiOnLabel; return p && p.source && p.page ? p : null; };
 export const tireLabel = t => [t.config, t.wheel && !(t.config || '').includes(`${t.wheel}-inch`) ? `${t.wheel}-in` : null, t.tireSize].filter(Boolean).join(' · ');
 function tireCheck(v, r) {
   const good = goodTireRows(v);
-  if (!good.length) r.push('no tire row with size + front/rear psi from grade-A manual');
+  const placard = placardNote(v);
+  const sizes = tireSizeRows(v);
+  if (!good.length && !(placard && sizes.length)) r.push('no tire row with size + front/rear psi from grade-A manual');
   const labels = good.map(tireLabel); const dup = labels.filter((l, i) => labels.indexOf(l) !== i);
   const noPsi = (v.tires?.rows || []).filter(x => !(x.frontPsi && x.rearPsi));
-  if (noPsi.length) r.push(`${noPsi.length} of ${(v.tires?.rows || []).length} tire rows lack grade-A front/rear psi`);
+  if (noPsi.length && !placard) r.push(`${noPsi.length} of ${(v.tires?.rows || []).length} tire rows lack grade-A front/rear psi`);
   if (dup.length) r.push(`tire rows not distinguishable (duplicate label: ${[...new Set(dup)].join('; ')})`);
 }
 export function vehicleGate(v) {
