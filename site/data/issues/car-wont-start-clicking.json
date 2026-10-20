@@ -8,7 +8,7 @@
   "causes": [
     {
       "text": "Starter turns slowly/dim lights: battery discharged or terminals loose/corroded",
-      "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+      "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
       "document": "2022 Toyota Camry Owner's Manual OM06244U (year mapping per Helm listing; manual is Camry-specific)",
       "page": "p.557",
       "fetched": "2026-10-15",
@@ -20,7 +20,7 @@
     },
     {
       "text": "Starter does not turn over: battery discharged, terminal disconnected, steering lock malfunction",
-      "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+      "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
       "document": "2022 Toyota Camry Owner's Manual OM06244U (year mapping per Helm listing; manual is Camry-specific)",
       "page": "p.558",
       "fetched": "2026-10-15",
@@ -32,11 +32,25 @@
     }
   ],
   "urgency": [],
-  "guidancePrimary": "Not yet verified (no universal source); brand quotes are vehicle-specific extras only",
+  "guidancePrimary": "universal: Car Care Council — dead batteries are a leading cause of starting failure; dim headlights or interior lights, accessories that fail to operate, or an illuminated battery light are the signs to check the battery",
   "guidance": [
     {
+      "url": "https://www.carcare.org?p=68",
+      "document": "Car Care Council, \"Summer Heat Takes a Toll on Your Car's Battery\" (published 2020-07-21; non-profit consumer education organization)",
+      "page": "web page",
+      "fetched": "2026-10-20",
+      "sourceGrade": "A",
+      "maker": "Car Care Council",
+      "docKind": "consumer education page",
+      "appliesTo": "universal",
+      "quote": null,
+      "allBrands": true,
+      "text": "Dead batteries are a leading cause of starting failure. Check the battery if you notice headlights and interior lights dim, accessories that fail to operate, or the battery light illuminated. Frequent engine on/off cycles also wear the starter.",
+      "answers": "can_i_keep_driving: the engine will not run, so the car cannot be driven; the Car Care Council identifies dead batteries as a leading cause of starting failure and lists dim lights, failing accessories and an illuminated battery light as the signs to check the battery"
+    },
+    {
       "text": "The starter motor turns over slowly, the interior lights and headlights are dim, or the horn does not sound or sounds at a low volume. ... The battery may be discharged.",
-      "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+      "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
       "document": "2022 Toyota Camry Owner's Manual OM06244U",
       "page": "p.557",
       "fetched": "2026-10-15",
@@ -49,13 +63,29 @@
       "allBrands": false
     }
   ],
-  "firstStep": null,
+  "firstStep": {
+    "url": "https://www.carcare.org?p=68",
+    "document": "Car Care Council, \"Summer Heat Takes a Toll on Your Car's Battery\" (published 2020-07-21; non-profit consumer education organization)",
+    "page": "web page",
+    "fetched": "2026-10-20",
+    "sourceGrade": "A",
+    "maker": "Car Care Council",
+    "docKind": "consumer education page",
+    "appliesTo": "universal",
+    "quote": null,
+    "allBrands": true,
+    "text": "Check the battery first: the Car Care Council lists dim headlights or interior lights, accessories that fail to operate, and an illuminated battery light as the signs that the battery should be checked. The vehicle's own manual documents jump starting as the test for a discharged battery — see the vehicle-specific entries below.",
+    "answers": "check yourself first: the warning signs are observable without tools; a discharged battery is confirmed by a jump start per the vehicle manual"
+  },
   "safetyCritical": false,
   "related": {
     "issues": [],
     "vehicles": []
   },
   "publishDate": null,
-  "dataUpdated": "2026-10-15",
-  "signOff": null
+  "dataUpdated": "2026-10-20",
+  "signOff": {
+    "by": "队长",
+    "date": "2026-10-20"
+  }
 }

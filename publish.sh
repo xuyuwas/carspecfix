@@ -61,11 +61,22 @@ rsync -az --delete --human-readable --exclude '.DS_Store' \
 echo "==> [3/5] 确保 nginx vhost 存在（幂等）"
 VHOST=$(cat <<'VHOST_EOF'
 # carspecfix.com — static export (Astro)
+# www must 301 to apex: it used to share server_name with the apex and answered
+# 200 with duplicate content (two indexable hosts split signals). One hop, absolute.
 server {
     listen 80;
     listen [::]:80;
 
-    server_name carspecfix.com www.carspecfix.com;
+    server_name www.carspecfix.com;
+
+    return 301 https://carspecfix.com$request_uri;
+}
+
+server {
+    listen 80;
+    listen [::]:80;
+
+    server_name carspecfix.com;
 
     root /data/Htdocs/carspecfix;
     index index.html;
@@ -180,4 +191,15 @@ if [ "${fbcount:-0}" -ge 1 ]; then
   echo "    ✅ feedback.js 边缘副本含最新逻辑（CSF.endpoint 命中 ${fbcount} 次）"
 else
   echo "    ⚠️  feedback.js 边缘副本疑似过期 —— 检查 CF 缓存或强制刷新" >&2
+fi
+
+# www 必须 301 到 apex：历史上 www 与 apex 共享 server_name，直接返回 200 重复内容。
+# 从 VPS 侧实测（沙箱本机 DNS 会把域名解析成 198.18.x 合成地址，结果不可信）。
+wwwloc=$(ssh -o BatchMode=yes "$REMOTE" \
+  "curl -s -m 20 -o /dev/null -w '%{http_code} %{redirect_url}' https://www.$DOMAIN/" 2>/dev/null || true)
+wwwcode=$(printf '%s' "$wwwloc" | head -1 | awk '{print $1}')
+if [ "$wwwcode" = "301" ]; then
+  echo "    ✅ www.$DOMAIN 301 跳转 apex（$wwwloc）"
+else
+  echo "    ⚠️  www.$DOMAIN 未返回 301（实测: ${wwwloc:-无响应}）—— 检查 nginx vhost 或 CF 规则" >&2
 fi

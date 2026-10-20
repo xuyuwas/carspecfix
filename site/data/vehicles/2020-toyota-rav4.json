@@ -19,6 +19,8 @@
       "page": "p.666",
       "sourceGrade": "A",
       "verified": false,
+      "appliesTo": "2.5L gasoline (non-hybrid) engine",
+      "unverifiedNote": "RAV4 Hybrid figures: not yet verified (its manual has not been checked yet)",
       "note": null
     },
     "oilViscosity": {
@@ -283,7 +285,7 @@
     "issues": []
   },
   "publishDate": "2026-10-15",
-  "dataUpdated": "2026-10-15",
+  "dataUpdated": "2026-10-19",
   "signOff": {
     "by": "小数",
     "date": "2026-10-15"

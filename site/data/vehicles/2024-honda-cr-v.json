@@ -19,6 +19,8 @@
       "page": null,
       "sourceGrade": "A",
       "verified": false,
+      "appliesTo": "non-hybrid 1.5L turbo only",
+      "unverifiedNote": "CR-V Hybrid oil capacity: not yet verified (hybrid manual not checked yet)",
       "note": "some variants not yet sourced"
     },
     "oilViscosity": {
@@ -98,7 +100,8 @@
       "fuel": "Regular",
       "url": "https://www.fueleconomy.gov/ws/rest/vehicle/46715",
       "source": "fueleconomy",
-      "sourceGrade": "A"
+      "sourceGrade": "A",
+      "powertrain": "gas"
     },
     {
       "feId": "46716",
@@ -114,7 +117,8 @@
       "fuel": "Regular",
       "url": "https://www.fueleconomy.gov/ws/rest/vehicle/46716",
       "source": "fueleconomy",
-      "sourceGrade": "A"
+      "sourceGrade": "A",
+      "powertrain": "hybrid"
     },
     {
       "feId": "46693",
@@ -124,6 +128,7 @@
       "cyl": 4,
       "trans": "Automatic (variable gear ratios)",
       "drive": "Front-Wheel Drive",
+      "powertrain": "gas",
       "mpgCity": 28,
       "mpgHwy": 34,
       "mpgComb": 30,
@@ -146,7 +151,8 @@
       "fuel": "Regular",
       "url": "https://www.fueleconomy.gov/ws/rest/vehicle/46694",
       "source": "fueleconomy",
-      "sourceGrade": "A"
+      "sourceGrade": "A",
+      "powertrain": "hybrid"
     }
   ],
   "fuelEconomyFetched": "2026-10-15",
@@ -174,7 +180,7 @@
     "issues": []
   },
   "publishDate": "2026-10-15",
-  "dataUpdated": "2026-10-15",
+  "dataUpdated": "2026-10-19",
   "signOff": {
     "by": "小数",
     "date": "2026-10-15"

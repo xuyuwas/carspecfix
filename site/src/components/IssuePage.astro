@@ -13,7 +13,9 @@ const { list: refs, ref } = makeRefs();
 const r = it => ref(it.url, `${it.document}${it.page ? ', ' + it.page : ''}${it.fetched ? ', retrieved ' + it.fetched : ''}`, it.url);
 const def = i.definition && i.definition.sourceGrade === 'A' ? i.definition : null;
 const causes = sourcedCauses(i), top = allBrandDrive(i), brandLines = guidance(i).filter(g => !g.allBrands);
-const urgency = top;
+const urgency = sourcedUrgency(i);
+const stats = code && i.nhtsaStats ? i.nhtsaStats : null;   // NHTSA flat-file counts, code pages only
+const nf = n => n.toLocaleString('en-US');
 const scopeTag = g => (g.appliesTo || '').replace(/^vehicle-specific:\s*/i, '').replace(/^(\w+).*?(\d{4}).*$/, (m, a, y) => /Toyota/.test(m) ? 'Toyota only' : `${y} ${a} only`).trim();
 const label = code ? i.code : i.title;
 const title = code ? fitTitle(`${i.code} Code`, ['Meaning', 'Causes', 'Can You Keep Driving?'], { brand: true }).replace('Causes & Can', 'Causes & Can')
@@ -32,10 +34,10 @@ const related = liveIssues.filter(x => i.related?.issues?.includes(x.slug));
 const vehicles = liveVehicles.filter(v => i.related?.vehicles?.includes(v.slug));   // R-L2 v2: only data-declared vehicles
 const hubUrl = code ? '/codes/' : '/symptoms/';
 const crumbs = [{ name: 'Home', url: '/' }, { name: code ? 'Trouble codes' : 'Symptoms', url: hubUrl }, { name: label, url: path }];
-const jsonld = [{ '@type': 'Article', headline: h1, dateModified: i.dataUpdated, author: { '@type': 'Person', name: AUTHOR.name, url: `${SITE}/authors/${AUTHOR.slug}/` }, mainEntityOfPage: SITE + path }];
+const jsonld = [{ '@type': 'Article', headline: h1, datePublished: i.publishDate ?? i.dataUpdated, dateModified: i.dataUpdated, author: { '@type': 'Person', name: AUTHOR.name, url: `${SITE}/authors/${AUTHOR.slug}/` }, mainEntityOfPage: SITE + path }];
 // 'Seen on' only with concrete models; internal notes stripped; vague scopes ('models listed') hidden
 const seenOn = c => { const t = (c.appliesTo || '').replace(/\s*\([^()]*(verbatim|APPLICABILITY|SIB|TSB|Tech Tip|bulletin)[^()]*\)\s*$/i, '').split(/;\s*/).filter(x => !/by me|not re-?downloaded|TODO|verify|snippet|search result|not fetched|upgrade to|internal/i.test(x)).join('; ').trim(); return !t || /models listed|universal|all obd|wording of the generic/i.test(t) || !/\d{4}|\d{2}-\d{2}/.test(t) ? null : t; };
-const toc = [['#quick', 'Quick answer'], ...(causes.length ? [['#causes', 'Possible causes']] : []), ...(related.length ? [['#related', 'Related codes']] : []), ...(vehicles.length ? [['#vehicles', 'Vehicles']] : []), ['#sources', 'Sources']];
+const toc = [['#quick', 'Quick answer'], ...(causes.length ? [['#causes', 'Possible causes']] : []), ...(stats ? [['#nhtsa', 'NHTSA statistics']] : []), ...(related.length ? [['#related', 'Related codes']] : []), ...(vehicles.length ? [['#vehicles', 'Vehicles']] : []), ['#sources', 'Sources']];
 const docLine = c => `${c.maker ? c.maker + "'s " : ''}${c.docKind}`;
 ---
 <Base title={title} description={desc} path={path} jsonld={jsonld} crumbs={crumbs} nav={code ? 'codes' : 'symptoms'}>
@@ -49,14 +51,28 @@ const docLine = c => `${c.maker ? c.maker + "'s " : ''}${c.docKind}`;
     {def ? <><div class="qa__a qa__a--text">{def.value}<sup class="ref"><a href={`#ref-${r(def)}`}>[{r(def)}]</a></sup></div>{def.sourceText && def.sourceText.replace(/^P\d{4}:\s*/, '') !== def.value && <div class="qa__src qa__src--wording">Source wording: “{def.sourceText}”</div>}<div class="qa__src">Wording from {def.document}{def.page && <>, <span class="pref">{def.page}</span></>}</div></> : <div class="qa__a qa__a--text"><span class="nv">Not yet verified — source pending</span></div>}</div>}
   <div class="qa__grid">
     <div class="qa__item"><div class="qa__q">Can I keep driving?</div>
-      {top.length ? top.map(u => <><div class="qa__a qa__a--text qa__a--drive">{u.text}<sup class="ref"><a href={`#ref-${r(u)}`}>[{r(u)}]</a></sup></div><div class="qa__src">{u.document}{u.page && <>, <span class="pref">{u.page}</span></>} · applies to all OBD-II vehicles</div></>)
-       : <div class="qa__a qa__a--text"><span class="nv">Not yet verified</span></div>}
-      {brandLines.map(b => <div class="qa__brand" style="font-size:15px;color:var(--text-3);margin-top:8px"><span class="tag tag--na" style="font-size:12px">{scopeTag(b)}</span> {b.text}<sup class="ref"><a href={`#ref-${r(b)}`}>[{r(b)}]</a></sup></div>)}
+      {top.length ? top.map(u => <><div class="qa__a qa__a--text qa__a--drive">{u.text}<sup class="ref"><a href={`#ref-${r(u)}`}>[{r(u)}]</a></sup></div><div class="qa__src">{u.document}{u.page && <>, <span class="pref">{u.page}</span></>} · applies to all {i.type === 'code' ? 'OBD-II ' : ''}vehicles</div></>)
+       : <div class="qa__a qa__a--text"><span class="nv">Not yet verified — no all-vehicle source has been checked yet</span></div>}
       {i.safetyCritical && <div class="qa__more">Brake / ABS issue: have it inspected promptly.</div>}
+      {brandLines.length > 0 && <div class="qa__brands">
+        <div class="qa__src qa__brands-h">Only for the specific vehicles listed — not general advice:</div>
+        {brandLines.map(b => <div class="qa__brand"><span class="tag tag--na">{scopeTag(b)}</span> {b.text}<sup class="ref"><a href={`#ref-${r(b)}`}>[{r(b)}]</a></sup></div>)}
+      </div>}
     </div>
-    <div class="qa__item"><div class="qa__q">How urgent?</div><div class="qa__a qa__a--text"><span class="tag tag--na">Not rated</span></div><div class="qa__more">Severity is rated only when a source states it.</div></div>
-    <div class="qa__item"><div class="qa__q">Shop visit or check it yourself first?</div>
-      {i.firstStep?.text && i.firstStep?.url ? <div class="qa__a qa__a--text">{i.firstStep.text}<sup class="ref"><a href={`#ref-${r(i.firstStep)}`}>[{r(i.firstStep)}]</a></sup></div> : <div class="qa__a qa__a--text"><span class="nv">Not yet verified — source pending</span></div>}</div>
+    <div class="qa__item"><div class="qa__q">{code ? 'What this code alone can’t tell you' : 'What a symptom alone can’t tell you'}</div>
+      {urgency.length
+        ? urgency.map(u => <><div class="qa__a qa__a--text">{u.text}<sup class="ref"><a href={`#ref-${r(u)}`}>[{r(u)}]</a></sup></div><div class="qa__src">{u.document}{u.page && <>, <span class="pref">{u.page}</span></>}{u.allBrands && <> · applies to all vehicles</>}</div></>)
+        : <><div class="qa__a qa__a--text"><span class="tag tag--na">Not rated</span></div>
+      <div class="qa__more">Severity is rated only when a checked source states it — none of the documents for {label} does, so we do not guess.</div></>}
+      {i.firstStep?.text && i.firstStep?.url
+        ? <div class="qa__more">Check first: {i.firstStep.text}<sup class="ref"><a href={`#ref-${r(i.firstStep)}`}>[{r(i.firstStep)}]</a></sup></div>
+        : <div class="qa__more">What to check first: <span class="nv">Not yet verified — source pending</span></div>}
+      <div class="qa__more">What a repair will cost varies by vehicle, region and shop, and no official source publishes a price for a single fault — so this site does not estimate one. We publish only figures we can trace to an official document{stats && <>; for the federal statistics that do exist, see <a href="#nhtsa">NHTSA statistics</a></>}.</div>
+    </div>
+    {i.firstStep?.text && i.firstStep?.url && <div class="qa__item"><div class="qa__q">Shop visit or check it yourself first?</div>
+      <div class="qa__a qa__a--text">{i.firstStep.text}<sup class="ref"><a href={`#ref-${r(i.firstStep)}`}>[{r(i.firstStep)}]</a></sup></div>
+      <div class="qa__src">{i.firstStep.document}{i.firstStep.page && <>, <span class="pref">{i.firstStep.page}</span></>}</div>
+    </div>}
   </div>
   <div class="qa__foot"><span>Last verified <span class="tnum">{i.signOff?.date ?? i.dataUpdated}</span></span><a href="#report">Report a data error</a></div>
 </section></div>
@@ -68,6 +84,20 @@ const docLine = c => `${c.maker ? c.maker + "'s " : ''}${c.docKind}`;
     <div>{c.text}</div>
     {seenOn(c) && <div class="cause__seen"><span class="cause__seen-k">Seen on:</span> {seenOn(c)}</div>}
   </li>)}</ol>
+</section>}
+{stats && <section id="nhtsa">
+  <div class="section__head"><div><h2 class="section__title">NHTSA statistics</h2><p class="section__kicker">How often {i.code} shows up in the federal complaint and recall databases.</p></div><Tools /></div>
+  <div class="keyspecs" style="grid-template-columns:repeat(2,1fr)">
+    <div class="ks"><div class="ks__label">Complaints that mention {i.code}</div>
+      <div class="ks__val">{nf(stats.complaintsMentioning)}</div>
+      <div class="ks__src">out of {nf(stats.complaintsTotal)} complaints in NHTSA's database<sup class="ref"><a href={`#ref-${r({ url: stats.source, document: 'NHTSA ODI complaint flat file (FLAT_CMPL.zip)', fetched: stats.fetched })}`}>[{r({ url: stats.source, document: 'NHTSA ODI complaint flat file (FLAT_CMPL.zip)', fetched: stats.fetched })}]</a></sup></div>
+    </div>
+    <div class="ks"><div class="ks__label">Recall campaigns that cite {i.code}</div>
+      <div class="ks__val">{nf(stats.recallsMentioning)}</div>
+      <div class="ks__src">out of {nf(stats.recallsTotal)} campaigns since 1967 — recall summaries describe defects in consumer terms and do not list diagnostic codes<sup class="ref"><a href={`#ref-${r({ url: stats.sourceRecalls, document: 'NHTSA ODI recall flat file (FLAT_RCL_POST_2010.zip)', fetched: stats.fetched })}`}>[{r({ url: stats.sourceRecalls, document: 'NHTSA ODI recall flat file (FLAT_RCL_POST_2010.zip)', fetched: stats.fetched })}]</a></sup></div>
+    </div>
+  </div>
+  <p class="ks__src" style="margin-top:var(--sp-4)">How this is counted: {stats.method}. Complaints are voluntary and unverified — a mention is not proof that {i.code} caused the problem. Neither file contains repair-price data, which is why this site does not publish cost estimates.</p>
 </section>}
 {related.length > 0 && <section id="related"><div class="section__head"><div><h2 class="section__title">Related</h2></div></div><ul class="plist">{related.map(x => <li><a href={issueUrl(x)}>{x.type === 'code' ? `${x.code} code` : x.title}</a></li>)}</ul></section>}
 {vehicles.length > 0 && <div class="m-only"><section id="vehicles"><div class="section__head"><div><h2 class="section__title">Vehicles we have specs for</h2></div></div><ul class="plist">{vehicles.map(v => <li><a href={vehicleUrl(v)}>{v.year} {v.make} {v.model} specs</a></li>)}</ul></section></div>}

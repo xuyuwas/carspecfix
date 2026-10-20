@@ -56,7 +56,40 @@
       "quote": null
     }
   ],
-  "urgency": [],
+  "urgency": [
+    {
+      "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1009Z15.TXT",
+      "document": "U.S. EPA Fact Sheet EPA 420-F-97-003 (May 1997), Frequently Asked Questions About On-Board Diagnostics",
+      "page": "p.2",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "U.S. EPA",
+      "docKind": "fact sheet",
+      "quote": "Under certain conditions, the dashboard light will blink or flash. This indicates a rather severe level of engine misfire. When this occurs, the driver should reduce speed and seek service as soon as possible.",
+      "text": "Flashing light: reduce speed and get the car serviced as soon as possible — the source describes a flashing light as a severe level of engine misfire.",
+      "answers": "urgency: reduce speed and seek service immediately (flashing light)",
+      "allBrands": true,
+      "appliesTo": "universal",
+      "onlyCodes": [
+        "P0300",
+        "P0301"
+      ]
+    },
+    {
+      "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1009Z15.TXT",
+      "document": "U.S. EPA Fact Sheet EPA 420-F-97-003 (May 1997), Frequently Asked Questions About On-Board Diagnostics",
+      "page": "p.2",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "U.S. EPA",
+      "docKind": "fact sheet",
+      "quote": "It is important to note that an illuminated dashboard light, as described here, is intended to inform the driver of the need for service, NOT of the need to stop the vehicle. However, service should be sought as soon as possible.",
+      "text": "Steady light: get the car serviced as soon as possible, but this is not a reason to stop driving.",
+      "answers": "urgency: service as soon as possible (steady light)",
+      "allBrands": true,
+      "appliesTo": "universal"
+    }
+  ],
   "guidancePrimary": "universal: EPA 420-F-97-003 p.2 (steady: service ASAP, not need to stop; flashing: reduce speed, service ASAP)",
   "guidance": [
     {
@@ -71,7 +104,11 @@
       "appliesTo": "universal",
       "quote": "Under certain conditions, the dashboard light will blink or flash. This indicates a rather severe level of engine misfire. When this occurs, the driver should reduce speed and seek service as soon as possible.",
       "answers": "flashing light: reduce speed, seek service as soon as possible",
-      "allBrands": true
+      "allBrands": true,
+      "onlyCodes": [
+        "P0300",
+        "P0301"
+      ]
     },
     {
       "text": "If it flashes, engine misfire could be occurring. Increased exhaust gas temperatures could damage the catalytic converter or other vehicle components. Drive in a moderate fashion (avoid heavy acceleration and deceleration) and have your vehicle checked as soon as possible.",
@@ -103,7 +140,7 @@
     },
     {
       "text": "Malfunction indicator lamp ... Indicates a malfunction in: The electronic engine control system; The electronic throttle control system; or The electronic automatic transmission control system → Have the vehicle inspected by your Toyota dealer immediately.",
-      "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+      "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
       "document": "2022 Toyota Camry Owner's Manual OM06244U",
       "page": "p.528",
       "fetched": "2026-10-15",
@@ -130,7 +167,20 @@
       "allBrands": true
     }
   ],
-  "firstStep": null,
+  "firstStep": {
+    "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1009Z15.TXT",
+    "document": "U.S. EPA Fact Sheet EPA 420-F-97-003 (May 1997), Frequently Asked Questions About On-Board Diagnostics",
+    "page": "p.2",
+    "fetched": "2026-10-15",
+    "sourceGrade": "A",
+    "maker": "U.S. EPA",
+    "docKind": "fact sheet",
+    "quote": "Under certain conditions, the dashboard light will blink or flash. This indicates a rather severe level of engine misfire. When this occurs, the driver should reduce speed and seek service as soon as possible.",
+    "text": "Check whether the lamp is flashing or steady: a flashing lamp means you should reduce speed and get the car serviced as soon as possible.",
+    "answers": "check yourself first: flashing vs steady",
+    "allBrands": true,
+    "appliesTo": "universal"
+  },
   "safetyCritical": false,
   "related": {
     "issues": [
@@ -139,9 +189,19 @@
     "vehicles": []
   },
   "publishDate": "2026-10-16",
-  "dataUpdated": "2026-10-15",
+  "dataUpdated": "2026-10-20",
   "signOff": {
     "by": "小数",
     "date": "2026-10-15"
+  },
+  "nhtsaStats": {
+    "complaintsMentioning": 465,
+    "complaintsTotal": 1626788,
+    "recallsMentioning": 0,
+    "recallsTotal": 30378,
+    "fetched": "2026-10-20",
+    "source": "https://static.nhtsa.gov/odi/ffdd/cmpl/FLAT_CMPL.zip",
+    "sourceRecalls": "https://static.nhtsa.gov/odi/ffdd/rcl/FLAT_RCL_POST_2010.zip",
+    "method": "code counted when it appears in the complaint description (CDESCR) for complaints, or in the recall component/defect/consequence/corrective-action text for recalls; unique ODINO per complaint and unique CAMPNO per recall"
   }
 }

@@ -8,7 +8,9 @@ const A = Object.entries(sources).filter(([k, x]: any) => x.grade === 'A' && use
 const gov = A.filter((x: any) => x.type === 'government');
 const by = (arr: any[], key: (x: any) => string) => [...arr.reduce((m, x) => m.set(key(x), [...(m.get(key(x)) || []), x]), new Map()).entries()].sort((a, b) => a[0].localeCompare(b[0]));
 const brands = by(A.filter((x: any) => x.type !== 'government'), (x: any) => (x.name.match(/^\d{4} (\S+)/) || [])[1] || (/^GM /.test(x.name) ? 'Chevrolet' : 'Other'));
-const docsRaw = [...new Map(liveI.flatMap(i => [...(i.causes || []), ...(i.urgency || []), ...(i.definition ? [i.definition] : [])]).filter(c => c.sourceGrade === 'A' && c.url).map(c => [c.url, c])).values()];
+const docUrls = new Set(A.map((x: any) => x.url));
+const docRaw = [...new Map(liveI.flatMap(i => [...(i.causes || []), ...(i.urgency || []), ...(i.guidance || []), ...(i.firstStep ? [i.firstStep] : []), ...(i.definition ? [i.definition] : [])]).filter(c => c.sourceGrade === 'A' && c.url).map(c => [c.url, c])).values()];
+const docsRaw = docRaw.filter((d: any) => !docUrls.has(d.url));
 const docBrands = by(docsRaw, (d: any) => d.maker || 'Other');
 ---
 <Page title="Data Sources & Methodology | CarSpecFix" description="Where CarSpecFix data comes from, when it was retrieved, how it is checked and how corrections are handled." path="/sources/" nav="sources" crumbs={[{ name: 'Home', url: '/' }, { name: 'Data sources', url: '/sources/' }]} h1="Data sources & methodology">

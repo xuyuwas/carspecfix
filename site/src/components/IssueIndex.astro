@@ -10,4 +10,5 @@ const path = code ? '/codes/' : '/symptoms/';
   path={path} nav={code ? 'codes' : 'symptoms'} crumbs={[{ name: 'Home', url: '/' }, { name: code ? 'Trouble codes' : 'Symptoms', url: path }]} h1={code ? 'OBD-II trouble codes' : 'Car symptoms'}>
 {list.length ? <ul class="links">{list.map(i => <li><a href={issueUrl(i)}>{code ? `${i.code} code` : i.title}</a>{code && i.definition?.value && <span class="links__sub"> — {i.definition.value}</span>}</li>)}</ul>
   : <p>Pages appear here once their sources are checked and signed off.</p>}
+<p style="margin-top:16px">Wondering what the fix will cost? <a href="/repair-cost/">How to estimate it</a> — and why this site does not print per-repair estimates.</p>
 </Page>

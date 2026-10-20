@@ -26,7 +26,9 @@ const descs = {};
 // R-M1 / R-M2
 const titles = {};
 for (const [u, p] of Object.entries(pages)) {
-  if (p.canonical !== SITE + u) errors.push(`R-M1 canonical mismatch ${u}: ${p.canonical}`);
+  // Preview builds emit noindex on every page, and Base.astro intentionally omits
+  // <link rel="canonical"> for noindex pages — so R-M1 has nothing to compare against there.
+  if (!PREVIEW && p.canonical !== SITE + u) errors.push(`R-M1 canonical mismatch ${u}: ${p.canonical}`);
   if (p.h1 !== 1) errors.push(`R-M2 ${u} has ${p.h1} H1`);
   (titles[p.title] ||= []).push(u);
   const vis = p.title.replace(/&amp;/g, '&').replace(/&#39;/g, "'").replace(/&quot;/g, '"');
@@ -62,10 +64,30 @@ for (const [u, p] of Object.entries(pages)) {
   if (!/<html lang="en-US">/.test(p.s)) errors.push(`R-M3 lang must be en-US: ${u}`);
   if (/hreflang/.test(p.s)) errors.push(`R-M3 hreflang present: ${u}`);
   if (!PREVIEW && p.noindex) errors.push(`R-Q1 noindex on non-404 page: ${u}`);
-  if (/repairpal|repair cost|rough cost|\$\d/i.test(p.s.replace(/<script[\s\S]*?<\/script>/g, ''))) errors.push(`cost/RepairPal wording on ${u}`);
+  // P0-N: no leaked template nulls in rendered HTML. The 2020/2024 RAV4 pages
+  // shipped "null qt without" because two oil parsers disagreed; fail the build
+  // on any null/undefined/NaN that reaches the reader.
+  {
+    const noScript = p.s.replace(/<script[\s\S]*?<\/script>/g, '');
+    for (const bad of ['null qt', 'null ', 'undefined', 'NaN', '[object Object]'])
+      if (noScript.includes(bad)) errors.push(`P0-N leaked "${bad.trim()}" in rendered HTML: ${u}`);
+  }
+  // Cost wording: RepairPal (ToS-banned) and vague "rough cost" phrasing stay
+  // banned outright. Dollar figures are allowed ONLY inside marked, cited cost
+  // blocks — every published price must be wrapped in <span class="cost"
+  // data-src="...">, and those spans are stripped here before the scan, so an
+  // uncited dollar figure still fails the build.
+  {
+    const noCost = p.s.replace(/<span class="cost"[^>]*>[\s\S]*?<\/span>/g, '').replace(/<script[\s\S]*?<\/script>/g, '');
+    if (/repairpal|repair cost|rough cost/i.test(noCost)) errors.push(`cost/RepairPal wording on ${u}`);
+    if (/\$\d/.test(noCost)) errors.push(`uncited dollar figure on ${u}`);
+  }
   for (const im of p.s.matchAll(/<img [^>]*>/g)) if (!/width="\d+"/.test(im[0]) || !/height="\d+"/.test(im[0])) errors.push(`R-I1 img without width/height on ${u}`);
 }
 for (const [t, us] of Object.entries(titles)) if (us.length > 1) errors.push(`R-M2 duplicate title "${t}": ${us.join(', ')}`);
+// R-D7: the homepage must state its real coverage (pilot = 4 vehicles / 5 codes),
+// so a visitor is never promised a lookup the site cannot serve yet.
+if (pages['/'] && !/Live now: \d+ vehicles? and \d+ trouble codes?/.test(pages['/'].s)) errors.push('R-D7 homepage is missing the live-coverage statement');
 const linkCounts = {};
 // Links: broken internal links + orphans (R-L3) + link count (R-L4)
 const inbound = {};

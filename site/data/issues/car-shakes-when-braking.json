@@ -20,7 +20,7 @@
     },
     {
       "text": "Normal: ABS operation may cause vibration through body/steering and pedal pulsation",
-      "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+      "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
       "document": "2022 Toyota Camry Owner's Manual OM06244U (year mapping per Helm listing; manual is Camry-specific)",
       "page": "p.326",
       "fetched": "2026-10-15",
@@ -31,16 +31,76 @@
       "quote": null
     }
   ],
-  "urgency": [],
-  "guidancePrimary": "Not yet verified (no universal source); brand quotes are vehicle-specific extras only",
-  "guidance": [],
-  "firstStep": null,
+  "urgency": [
+    {
+      "text": "Listed brake warning sign: vibration — brakes should be inspected; do not postpone needed repair to the metal-to-metal point.",
+      "url": "https://www.carcare.org?p=65",
+      "document": "Car Care Council, \"Stop and Check Your Brakes\" (Brake Safety Awareness Month, published 2020-08-03; non-profit consumer education organization)",
+      "page": "web page",
+      "fetched": "2026-10-19",
+      "sourceGrade": "A",
+      "maker": "Car Care Council",
+      "docKind": "consumer education page",
+      "appliesTo": "universal",
+      "quote": null,
+      "answers": "urgency: prompt inspection (warning-sign level)",
+      "allBrands": true
+    }
+  ],
+  "guidancePrimary": "universal: Car Care Council — vibration when braking is a listed brake warning sign requiring inspection; Toyota notes ABS activation can normally cause pedal/body vibration (vehicle-specific)",
+  "guidance": [
+    {
+      "text": "Vibration is listed among the brake warning signs — along with noise, pulling, low or hard pedal feel, grabbing, and an illuminated brake warning light — that mean the brakes should be inspected.",
+      "url": "https://www.carcare.org?p=65",
+      "document": "Car Care Council, \"Stop and Check Your Brakes\" (Brake Safety Awareness Month, published 2020-08-03; non-profit consumer education organization)",
+      "page": "web page",
+      "fetched": "2026-10-19",
+      "sourceGrade": "A",
+      "maker": "Car Care Council",
+      "docKind": "consumer education page",
+      "appliesTo": "universal",
+      "quote": null,
+      "answers": "can_i_keep_driving: vibration when braking is a listed brake warning sign — have the brakes inspected promptly",
+      "allBrands": true
+    },
+    {
+      "text": "ABS activation can normally cause vibration through the body and steering wheel and pulsation in the brake pedal.",
+      "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+      "document": "2022 Toyota Camry Owner's Manual OM06244U (year mapping per Helm listing; manual is Camry-specific)",
+      "page": "p.326",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "Toyota",
+      "docKind": "owner's manual",
+      "appliesTo": "vehicle-specific: Toyota Camry 2022; ABS activation only",
+      "quote": null,
+      "answers": "vehicle-specific: Toyota notes ABS operation can normally cause pedal/body vibration — not every shake is a fault",
+      "allBrands": false
+    }
+  ],
+  "firstStep": {
+    "text": "Note when the shake happens: Toyota's manual says ABS activation (hard braking or slippery surfaces) can normally cause body/steering vibration and pedal pulsation. Shaking during ordinary braking is a listed warning sign — have the brakes inspected.",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+    "document": "2022 Toyota Camry Owner's Manual OM06244U (year mapping per Helm listing; manual is Camry-specific)",
+    "page": "p.326",
+    "fetched": "2026-10-15",
+    "sourceGrade": "A",
+    "maker": "Toyota",
+    "docKind": "owner's manual",
+    "appliesTo": "vehicle-specific: Toyota Camry 2022; ABS activation only",
+    "quote": null,
+    "answers": "check yourself first: compare with ABS activation conditions; ordinary-braking shake = inspect",
+    "allBrands": false
+  },
   "safetyCritical": true,
   "related": {
     "issues": [],
     "vehicles": []
   },
-  "publishDate": null,
-  "dataUpdated": "2026-10-15",
-  "signOff": null
+  "publishDate": "2026-10-19",
+  "dataUpdated": "2026-10-19",
+  "signOff": {
+    "by": "小数",
+    "date": "2026-10-19"
+  }
 }

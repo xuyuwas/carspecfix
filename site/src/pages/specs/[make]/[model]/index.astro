@@ -1,19 +1,86 @@
 ---
 import Page from '../../../../layouts/Page.astro';
-import { liveHubs, vehicleUrl, shownTireRows, hasVal } from '../../../../lib/gate.mjs';
-import { fitTitle } from '../../../../lib/title.mjs';
-import { oilHubShort } from '../../../../lib/oil.mjs';
-// R-U6: generated only with >=2 live years; links only to live years
+import { vehicles, liveVehicles, liveIssues, vehicleUrl, issueUrl, shownTireRows, hasVal, liveHubs, sources, SITE } from '../../../../lib/gate.mjs';
+import { fitTitle, usOnly } from '../../../../lib/title.mjs';
+import { parseOilCapacity, shortOilLabel } from '../../../../lib/oil.mjs';
+import { AUTHOR } from '../../../../lib/site.mjs';
+// Model hub (/specs/toyota/rav4/): one row per model year. Rows come from every data
+// file for the model; a year cell links only when that year page is live, so an
+// unsigned year can show its checked figures without linking a blocked page (R-L3).
 export function getStaticPaths() { return liveHubs().map(h => ({ params: { make: h.makeSlug, model: h.modelSlug }, props: { h } })); }
-const { h } = Astro.props; const v0 = h.years[0];
-const name = `${v0.make} ${v0.model}`, path = `/specs/${h.makeSlug}/${h.modelSlug}/`;
-const oil = y => hasVal(y.specs.oilCapacity) && y.specs.oilCapacity.sourceGrade === 'A' ? oilHubShort(y.specs.oilCapacity.value) : null;
-const tires = y => [...new Set(shownTireRows(y).map(t => t.tireSize).filter(Boolean))].join(', ') || null;
-const showDiff = h.years.filter(y => oil(y) || tires(y)).length >= 2;
+const { h } = Astro.props;
+const all = vehicles.filter(v => v.makeSlug === h.makeSlug && v.modelSlug === h.modelSlug).sort((a, b) => a.year - b.year);
+const v0 = all[0], name = `${v0.make} ${v0.model}`, path = `/specs/${h.makeSlug}/${h.modelSlug}/`;
+const liveYears = new Set(liveVehicles.filter(v => v.makeSlug === h.makeSlug && v.modelSlug === h.modelSlug).map(v => v.year));
+const years = []; for (let y = all[0].year; y <= all[all.length - 1].year; y++) years.push(y);
+const byYear = y => all.find(v => v.year === y) || null;
+// Main engine only: the V6 rows of the 2009/2011 RAV4 are real but a different engine,
+// so they never mix into the 2.5 L range quoted in the quick answer.
+const oilRows = v => (v && hasVal(v.specs?.oilCapacity) && v.specs.oilCapacity.sourceGrade === 'A') ? parseOilCapacity(v.specs.oilCapacity.value) : [];
+const isMain = o => !o.label || /2\.5\s?L/i.test(o.label);
+const num = x => Number.isInteger(x) ? x.toFixed(1) : String(x);   // 6.0 qt stays 6.0, never "6"
+const cell = (v, k) => oilRows(v).filter(o => o[k] != null).map(o => [shortOilLabel(o.label), num(o[k])].filter(Boolean).join(' ')).join(' · ');
+const sizeOf = t => String(t || '').replace(/\s+\d{2,3}[A-Z]$/, '').trim();
+const sizes = v => v ? [...new Set(shownTireRows(v).map(t => sizeOf(t.tireSize)).filter(Boolean))].join(', ') : '';
+const psiOf = v => { const p = v ? shownTireRows(v).flatMap(t => [t.frontPsi, t.rearPsi]).filter(Boolean) : []; return p.length ? (Math.min(...p) === Math.max(...p) ? String(Math.min(...p)) : `${Math.min(...p)}–${Math.max(...p)}`) : ''; };
+const viscOf = v => (v && hasVal(v.specs?.oilViscosity) && v.specs.oilViscosity.sourceGrade === 'A') ? usOnly(v.specs.oilViscosity.value) : '';
+const rng = a => a.length ? (Math.min(...a) === Math.max(...a) ? String(Math.min(...a)) : `${Math.min(...a)}–${Math.max(...a)}`) : '';
+const checked = all.filter(v => (v.tires?.rows || []).length || hasVal(v.specs?.oilCapacity));
+const mainW = checked.flatMap(v => oilRows(v).filter(isMain).map(o => o.w).filter(x => x != null));
+const mainWo = checked.flatMap(v => oilRows(v).filter(isMain).map(o => o.wo).filter(x => x != null));
+const allSizes = [...new Set(checked.flatMap(v => shownTireRows(v).map(t => sizeOf(t.tireSize)).filter(Boolean)))];
+const allPsi = checked.flatMap(v => shownTireRows(v).flatMap(t => [t.frontPsi, t.rearPsi])).filter(Boolean);
+const bottles = mainW.length ? Math.ceil(Math.max(...mainW)) : 0;
+const latest = checked[checked.length - 1], earliest = checked[0];
+const pending = years.filter(y => !byYear(y));
+const codes = liveIssues.filter(i => i.type === 'code');
+const span = `${years[0]}–${years[years.length - 1]}`;
+const title = fitTitle(`${name} Oil Capacity & Tire Size by Year (${span})`);
+const description = `${name} oil capacity, tire size and cold tire pressure by model year, one row per year with the owner's-manual page cited, plus NHTSA recall counts.`;
+const last = all.map(v => v.dataUpdated).sort().at(-1);
+const jsonld = [{ '@type': 'Article', headline: `${name} specs by year`, datePublished: '2026-10-15', dateModified: last, author: { '@type': 'Person', name: AUTHOR.name, url: `${SITE}/authors/${AUTHOR.slug}/` }, mainEntityOfPage: SITE + path }];
+const crumbs = [{ name: 'Home', url: '/' }, { name: 'Specs', url: '/specs/' }, { name: v0.make, url: `/specs/${h.makeSlug}/` }, { name: `${v0.make} ${v0.model}`, url: path }];
+const manualSrc = y => { const v = byYear(y); const id = v?.manual?.sourceId; return id && sources[id] ? sources[id] : null; };
 ---
-<Page narrow={true} title={fitTitle(`${name} Specs by Year`, ['Oil', 'Tires', 'Recalls'])} description={`${name} specs for ${h.years.map(y => y.year).join(', ')}: oil capacity, tire size and pressure, and NHTSA recalls, each from the owner's manual or NHTSA.`} path={path} nav="specs" crumbs={[{ name: 'Home', url: '/' }, { name: `${v0.make} ${v0.model}`, url: path }]} h1={`${name} specs by year`}>
-<ul class="links">{h.years.map(y => <li><a href={vehicleUrl(y)}>{y.year} {y.model} specs</a></li>)}</ul>
-{showDiff && <><h2 class="section__title" style="margin-top:24px">What changed between years</h2>
-<div class="tbl-wrap"><div class="tbl-scroll" role="region" tabindex="0" aria-label="Year comparison"><table class="tbl"><thead><tr><th>Year</th><th>Oil capacity (without filter)</th><th>Tire sizes</th><th class="num">Recalls</th></tr></thead>
-<tbody>{h.years.map(y => <tr><td class="strong">{y.year}</td><td>{oil(y) ?? <span class="nv">Not yet verified</span>}</td><td>{tires(y) ?? <span class="nv">Not yet verified</span>}</td><td class="num">{y.recalls.length}</td></tr>)}</tbody></table></div></div></>}
+<Page narrow={true} title={title} description={description} path={path} nav="specs" crumbs={crumbs} jsonld={jsonld} h1={`${name} specs by year (${span})`}>
+<h2 class="section__title">Quick answer</h2>
+<ul class="links">
+  <li><b>Engine oil (2.5 L gasoline):</b> {rng(mainW)} qt with filter, {rng(mainWo)} qt without filter{bottles ? ` — buy ${bottles} one-quart bottles for a filter change` : ''}</li>
+  <li><b>Tire sizes:</b> {allSizes.join(', ')}</li>
+  <li><b>Cold tire pressure:</b> {rng(allPsi)} psi across the years checked — your trim's exact figure is on the placard in the driver's door jamb</li>
+</ul>
+
+<h2 class="section__title">{name} specs by year</h2>
+<p>One row per model year. Every figure comes from that year's owner's manual (page cited on the year page), NHTSA or fueleconomy.gov — nothing is estimated. A blank cell means we have not read that figure yet; it gets filled in as soon as the manual for that year is checked.</p>
+<div class="tbl-wrap"><div class="tbl-scroll" role="region" tabindex="0" aria-label="Specs by year"><table class="tbl"><thead><tr><th scope="col">Year</th><th scope="col">Oil (with filter)</th><th scope="col">Oil (without filter)</th><th scope="col">Tire sizes</th><th scope="col" class="num">Cold psi</th><th scope="col" class="num">Recalls</th></tr></thead>
+<tbody>{years.map(y => { const v = byYear(y); return <tr>
+  <td class="strong">{v && liveYears.has(y) ? <a href={vehicleUrl(v)}>{y}</a> : y}</td>
+  <td>{cell(v, 'w')}</td><td>{cell(v, 'wo')}</td><td>{sizes(v)}</td><td class="num">{psiOf(v)}</td><td class="num">{v ? v.recalls.length : ''}</td>
+</tr>; })}</tbody></table></div><div class="swipe">Swipe for more columns</div></div>
+
+<h2 class="section__title">Engine oil capacity by year</h2>
+<p>Across the years checked here, the 2.5 L gasoline engine takes {rng(mainW)} qt with a filter change and {rng(mainWo)} qt without one. The difference between the two numbers is the oil held in the filter, which is why the "with filter" figure is the one to buy against: at {Math.max(...mainW)} qt you need {bottles} one-quart bottles, and what is left over is what you use for top-ups between changes.</p>
+<p>The figure is not constant across the run. {earliest.year} and {latest.year} sit {latest.year - earliest.year} model years apart, and the engine, oil pan and filter are not the same parts throughout — {earliest.year} is listed at {cell(earliest, 'w')} qt with filter, {latest.year} at {cell(latest, 'w')} qt. That is why a capacity quoted for one year is not safe to use on another, even when the engine displacement looks identical.</p>
+{viscOf(earliest) && viscOf(latest) && viscOf(earliest) !== viscOf(latest) && <p>Recommended viscosity moved as well: the {earliest.year} manual calls for {viscOf(earliest)}, the {latest.year} manual for {viscOf(latest)}. Use the grade printed for your year — where a manual allows a substitute it also says to go back to the recommended grade at the next oil change.</p>}
+
+<h2 class="section__title">Tire size &amp; pressure by year</h2>
+<p>The {name} has been offered on {allSizes.join(', ')} across the years checked here, and the size that fits your car is set by the wheel package it left the factory with, not by the model year. Pressure is what varies most: cold inflation pressure across these years runs {rng(allPsi)} psi, and in most years the same nominal tire size carries different pressures on different wheel packages.</p>
+<p>Check the tire placard on the driver's door jamb — the manual lists every configuration and your car has one of them. Set pressures cold, before the car has been driven. The spare, where fitted, is inflated much higher than the road wheels; that is correct, do not bleed it down to match.</p>
+
+<h2 class="section__title">Recalls by year</h2>
+<p>The recall count column is the number of NHTSA campaigns recorded against that model year, read from the NHTSA recalls database on {earliest.recallsFetched}. A campaign is not a prediction that your car is affected — coverage depends on build date, plant and options. Enter your own VIN at nhtsa.gov/recalls to see what is still open on your car; a recall stays open until the work is done, even after the car changes hands.</p>
+
+<h2 class="section__title">What changed between years</h2>
+<p>Comparing the oldest and newest years read so far: oil capacity with filter went from {cell(earliest, 'w')} qt ({earliest.year}) to {cell(latest, 'w')} qt ({latest.year}), tire sizes from {sizes(earliest)} to {sizes(latest)}, and cold pressure from {psiOf(earliest)} psi to {psiOf(latest)} psi. Where an engine or wheel option exists in one year and not another, the table shows it as a difference in that row instead of a single "typical" figure for the whole model.</p>
+{pending.length > 0 && <p>Still to check: {pending.join(', ')}. Those rows stay blank until the owner's manual for each year has been read and page-cited — an empty cell beats a number nobody can verify.</p>}
+
+{codes.length > 0 && <><h2 class="section__title">Trouble codes we cover</h2>
+<p>If the {v0.model} sets a check-engine light, these pages explain how each code is defined and what manufacturer documents say about it. A code tells you which system failed its self-test, not which part to replace — read it before buying parts.</p>
+<ul class="links">{codes.map(i => <li><a href={issueUrl(i)}>{i.code} code</a></li>)}</ul></>}
+
+<h2 class="section__title">Sources</h2>
+<ol class="refs">{checked.map(v => { const s = manualSrc(v.year); return <li>{s ? <a href={s.url} rel="nofollow noopener">{s.name}</a> : `${v.year} ${name} owner's manual`} — oil and tire tables</li>; })}
+<li><a href="https://www.nhtsa.gov/recalls" rel="nofollow noopener">NHTSA recalls database</a> — recall counts, fetched {earliest.recallsFetched}</li>
+<li><a href="https://www.fueleconomy.gov/" rel="nofollow noopener">fueleconomy.gov (U.S. EPA / DOE)</a> — fuel economy ratings</li></ol>
+<p class="ks__src">How we collect and check data: <a href="/sources/">Data sources</a>.</p>
 </Page>

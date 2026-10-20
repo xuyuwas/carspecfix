@@ -15,7 +15,7 @@
   },
   "manual-2020-toyota-rav4": {
     "name": "Toyota owner's manual OM0R024U (2020 RAV4)",
-    "url": "https://assets.sia.toyota.com/publications/en/om-s/OM0R024U/pdf/OM0R024U.pdf",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM0R024U/pdf/OM0R024U.pdf",
     "type": "oem",
     "grade": "A",
     "retrieved": "2026-10-15",
@@ -27,11 +27,11 @@
   },
   "manual-2024-toyota-rav4": {
     "name": "Toyota owner's manual OM0R147U (2024 RAV4)",
-    "url": "https://assets.sia.toyota.com/publications/en/om-s/OM0R147U/pdf/OM0R147U.pdf",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM0R147U/pdf/OM0R147U.pdf",
     "type": "oem",
     "grade": "A",
     "retrieved": "2026-10-15",
-    "note": "Three 2024 RAV4 owner manuals checked, oil + tire tables identical for shared configs: OM0R147U (Canada prod. through June 2024; https://assets.sia.toyota.com/publications/en/om-s/OM0R147U/pdf/OM0R147U.pdf; oil p.486, tires p.491-494), OM0R069U (Canada prod. from July 2024; https://assets.sia.toyota.com/publications/en/om-s/OM0R069U/pdf/OM0R069U.pdf; same pages), OM42L49U (Japan prod. from July 2024; https://assets.sia.toyota.com/publications/en/om-s/OM42L49U/pdf/OM42L49U.pdf; oil p.494, tires p.499-503; adds 17in type F/G and 19in type C no-spare configs). MY2024 confirmed via Helm SKU pages for all three. OM0R100U (2023) not used.",
+    "note": "Three 2024 RAV4 owner manuals checked, oil + tire tables identical for shared configs: OM0R147U (Canada prod. through June 2024; https://assets.sipb.toyota.com/publications/en/om-s/OM0R147U/pdf/OM0R147U.pdf; oil p.486, tires p.491-494), OM0R069U (Canada prod. from July 2024; https://assets.sipb.toyota.com/publications/en/om-s/OM0R069U/pdf/OM0R069U.pdf; same pages), OM42L49U (Japan prod. from July 2024; https://assets.sipb.toyota.com/publications/en/om-s/OM42L49U/pdf/OM42L49U.pdf; oil p.494, tires p.499-503; adds 17in type F/G and 19in type C no-spare configs). MY2024 confirmed via Helm SKU pages for all three. OM0R100U (2023) not used.",
     "archived": {
       "file": "manuals/toyota-2024-rav4-OM0R147U.pdf",
       "fetchedAt": "2026-10-15T20:25:25+08:00"
@@ -39,7 +39,7 @@
   },
   "doc-OM42L49U": {
     "name": "Toyota owner's manual OM42L49U (2024 RAV4)",
-    "url": "https://assets.sia.toyota.com/publications/en/om-s/OM42L49U/pdf/OM42L49U.pdf",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM42L49U/pdf/OM42L49U.pdf",
     "type": "oem",
     "grade": "A",
     "retrieved": "2026-10-15",
@@ -50,7 +50,7 @@
   },
   "manual-2022-toyota-camry": {
     "name": "Toyota owner's manual OM06244U (2022 Camry)",
-    "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
     "type": "oem",
     "grade": "A",
     "retrieved": "2026-10-15",
@@ -62,7 +62,7 @@
   },
   "doc-OM06246U": {
     "name": "Toyota owner's manual OM06246U (2022 Camry)",
-    "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06246U/pdf/OM06246U.pdf",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM06246U/pdf/OM06246U.pdf",
     "type": "oem",
     "grade": "A",
     "retrieved": "2026-10-15",
@@ -73,7 +73,7 @@
   },
   "manual-2024-toyota-camry": {
     "name": "Toyota owner's manual OM06291U (2024 Camry)",
-    "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06291U/pdf/OM06291U.pdf",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM06291U/pdf/OM06291U.pdf",
     "type": "oem",
     "grade": "A",
     "retrieved": "2026-10-15",
@@ -85,7 +85,7 @@
   },
   "doc-OM06293U": {
     "name": "Toyota owner's manual OM06293U (2024 Camry)",
-    "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06293U/pdf/OM06293U.pdf",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM06293U/pdf/OM06293U.pdf",
     "type": "oem",
     "grade": "A",
     "retrieved": "2026-10-15",
@@ -179,7 +179,7 @@
   },
   "manual-2022-toyota-corolla": {
     "name": "Toyota owner's manual OM02617U (2022 Corolla)",
-    "url": "https://assets.sia.toyota.com/publications/en/om-s/OM02617U/pdf/OM02617U.pdf",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM02617U/pdf/OM02617U.pdf",
     "type": "oem",
     "grade": "A",
     "retrieved": "2026-10-15",
@@ -191,7 +191,7 @@
   },
   "doc-OM12R27U": {
     "name": "Toyota owner's manual OM12R27U (2022 Corolla)",
-    "url": "https://assets.sia.toyota.com/publications/en/om-s/OM12R27U/pdf/OM12R27U.pdf",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM12R27U/pdf/OM12R27U.pdf",
     "type": "oem",
     "grade": "A",
     "retrieved": "2026-10-15",
@@ -202,7 +202,7 @@
   },
   "doc-OM12Q05U": {
     "name": "Toyota owner's manual OM12Q05U (2022 Corolla)",
-    "url": "https://assets.sia.toyota.com/publications/en/om-s/OM12Q05U/pdf/OM12Q05U.pdf",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM12Q05U/pdf/OM12Q05U.pdf",
     "type": "oem",
     "grade": "A",
     "retrieved": "2026-10-15",
@@ -213,7 +213,7 @@
   },
   "manual-2022-toyota-tacoma": {
     "name": "Toyota owner's manual OM04037U (2022 Tacoma)",
-    "url": "https://assets.sia.toyota.com/publications/en/om-s/OM04037U/pdf/OM04037U.pdf",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM04037U/pdf/OM04037U.pdf",
     "type": "oem",
     "grade": "A",
     "retrieved": "2026-10-15",
@@ -241,6 +241,186 @@
     "archived": {
       "file": "manuals/from-captain/honda-2022-accord-ATVA2222OM.pdf",
       "fetchedAt": "2026-10-15T20:52:00+08:00"
+    }
+  },
+  "manual-2009-toyota-rav4": {
+    "name": "Toyota owner's manual OM42759U (2009 RAV4)",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM42759U/pdf/OM42759U.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-10-19",
+    "note": "OM42759U listed as the 2009 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2009/. Oil capacity p.470, oil viscosity p.471, tires and wheels p.475 (printed page = PDF page index + 1). Two engines listed: 2.5L 4-cylinder (2AR-FE) and 3.5L V6 (2GR-FE).",
+    "archived": {
+      "file": "manuals/toyota-2009-rav4-OM42759U.pdf",
+      "fetchedAt": "2026-10-19"
+    }
+  },
+  "manual-2011-toyota-rav4": {
+    "name": "Toyota owner's manual OM42785U (2011 RAV4)",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM42785U/pdf/OM42785U.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-10-19",
+    "note": "OM42785U listed as the 2011 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2011/. Oil capacity p.478, oil viscosity p.479, tires and wheels p.484 (printed page = PDF page index + 1). Two engines: 2.5L 4-cylinder (2AR-FE) and 3.5L V6 (2GR-FE).",
+    "archived": {
+      "file": "manuals/toyota-2011-rav4-OM42785U.pdf",
+      "fetchedAt": "2026-10-19"
+    }
+  },
+  "manual-2014-toyota-rav4": {
+    "name": "Toyota owner's manual OM42869U (2014 RAV4)",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM42869U/pdf/OM42869U.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-10-19",
+    "note": "OM42869U listed as the 2014 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2014/ (the second manual on that page, OM42A04U, is the RAV4 EV). Oil capacity p.659, oil viscosity p.660, tires and wheels p.665 (printed page = PDF page index + 1). One engine: 2.5L 4-cylinder (2AR-FE).",
+    "archived": {
+      "file": "manuals/toyota-2014-rav4-OM42869U.pdf",
+      "fetchedAt": "2026-10-19"
+    }
+  },
+  "manual-2021-toyota-rav4": {
+    "name": "Toyota owner's manual OM0R028U (2021 RAV4)",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM0R028U/pdf/OM0R028U.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-10-19",
+    "note": "OM0R028U listed as the 2021 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2021/. Oil capacity p.678, oil viscosity p.679, tires and wheels pp.684-687 (printed page = PDF page index + 1). Gasoline 2.5L (A25A-FKS) only; RAV4 Hybrid / Prime are separate manuals not yet checked.",
+    "archived": {
+      "file": "manuals/toyota-2021-rav4-OM0R028U.pdf",
+      "fetchedAt": "2026-10-19"
+    }
+  },
+  "manual-2010-toyota-rav4": {
+    "name": "Toyota owner's manual OM42783U (2010 RAV4)",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM42783U/pdf/OM42783U.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-10-19",
+    "note": "OM42783U listed as the 2010 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2010/. Oil capacity p.467, oil viscosity p.468, tires and wheels p.473 (printed page = PDF page index + 1). Two engines listed: 2.5L 4-cylinder (2AR-FE) and 3.5L V6 (2GR-FE).",
+    "archived": {
+      "file": "manuals/toyota-2010-rav4-OM42783U.pdf",
+      "fetchedAt": "2026-10-19"
+    }
+  },
+  "manual-2012-toyota-rav4": {
+    "name": "Toyota owner's manual OM42836U (2012 RAV4)",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM42836U/pdf/OM42836U.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-10-19",
+    "note": "OM42836U listed as the 2012 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2012/. Oil capacity p.488, oil viscosity p.489-490, tires and wheels p.494. Two engines: 2.5L 4-cylinder (2AR-FE) and 3.5L V6 (2GR-FE).",
+    "archived": {
+      "file": "manuals/toyota-2012-rav4-OM42836U.pdf",
+      "fetchedAt": "2026-10-19"
+    }
+  },
+  "manual-2013-toyota-rav4": {
+    "name": "Toyota owner's manual OM42809U (2013 RAV4)",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM42809U/pdf/OM42809U.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-10-19",
+    "note": "OM42809U listed as the 2013 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2013/. Oil capacity p.555, oil viscosity p.556, tires and wheels p.561. One engine: 2.5L 4-cylinder (2AR-FE).",
+    "archived": {
+      "file": "manuals/toyota-2013-rav4-OM42809U.pdf",
+      "fetchedAt": "2026-10-19"
+    }
+  },
+  "manual-2015-toyota-rav4": {
+    "name": "Toyota owner's manual OM42A78U (2015 RAV4)",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM42A78U/pdf/OM42A78U.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-10-19",
+    "note": "OM42A78U listed as the 2015 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2015/. Oil capacity p.663, oil viscosity p.665, tires and wheels p.669. One engine: 2.5L 4-cylinder (2AR-FE).",
+    "archived": {
+      "file": "manuals/toyota-2015-rav4-OM42A78U.pdf",
+      "fetchedAt": "2026-10-19"
+    }
+  },
+  "manual-2016-toyota-rav4": {
+    "name": "Toyota owner's manual OM42A41U (2016 RAV4)",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM42A41U/pdf/OM42A41U.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-10-19",
+    "note": "OM42A41U listed as the 2016 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2016/. Oil capacity and oil viscosity p.674, tires and wheels p.678. One engine: 2.5L 4-cylinder (2AR-FE).",
+    "archived": {
+      "file": "manuals/toyota-2016-rav4-OM42A41U.pdf",
+      "fetchedAt": "2026-10-19"
+    }
+  },
+  "manual-2017-toyota-rav4": {
+    "name": "Toyota owner's manual OM42752U (2017 RAV4)",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM42752U/pdf/OM42752U.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-10-19",
+    "note": "OM42752U listed as the 2017 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2017/. Oil capacity and oil viscosity p.672, tires and wheels p.676. One engine: 2.5L 4-cylinder (2AR-FE).",
+    "archived": {
+      "file": "manuals/toyota-2017-rav4-OM42752U.pdf",
+      "fetchedAt": "2026-10-19"
+    }
+  },
+  "manual-2018-toyota-rav4": {
+    "name": "Toyota owner's manual OM0R012U (2018 RAV4)",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM0R012U/pdf/OM0R012U.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-10-19",
+    "note": "OM0R012U listed as the 2018 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2018/. Oil capacity and oil viscosity p.675, tires and wheels p.679. One engine: 2.5L 4-cylinder (2AR-FE).",
+    "archived": {
+      "file": "manuals/toyota-2018-rav4-OM0R012U.pdf",
+      "fetchedAt": "2026-10-19"
+    }
+  },
+  "manual-2019-toyota-rav4": {
+    "name": "Toyota owner's manual OM0R009U (2019 RAV4)",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM0R009U/pdf/OM0R009U.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-10-19",
+    "note": "OM0R009U listed as the 2019 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2019/. Oil capacity p.660, oil viscosity p.661, tires and wheels pp.664-667. Gasoline 2.5L (A25A-FKS) only; the RAV4 Hybrid manual has not been checked.",
+    "archived": {
+      "file": "manuals/toyota-2019-rav4-OM0R009U.pdf",
+      "fetchedAt": "2026-10-19"
+    }
+  },
+  "manual-2022-toyota-rav4": {
+    "name": "Toyota owner's manual OM0R059U (2022 RAV4)",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM0R059U/pdf/OM0R059U.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-10-19",
+    "note": "OM0R059U listed as the 2022 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2022/. Oil capacity p.662, oil viscosity p.663, tires and wheels pp.667-670. Gasoline 2.5L (A25A-FKS) only. A second 2022 manual on the Toyota page, OM0R056S, is Spanish-language and was not used.",
+    "archived": {
+      "file": "manuals/toyota-2022-rav4-OM0R059U.pdf",
+      "fetchedAt": "2026-10-19"
+    }
+  },
+  "manual-2023-toyota-rav4": {
+    "name": "Toyota owner's manual OM0R100U (2023 RAV4)",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM0R100U/pdf/OM0R100U.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-10-19",
+    "note": "OM0R100U listed as the 2023 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2023/. Oil capacity p.486, oil viscosity p.487, tires and wheels pp.490-494. Gasoline 2.5L (A25A-FKS) only; RAV4 Hybrid / Prime manuals have not been checked.",
+    "archived": {
+      "file": "manuals/toyota-2023-rav4-OM0R100U.pdf",
+      "fetchedAt": "2026-10-19"
+    }
+  },
+  "manual-2012-toyota-rav4-alt": {
+    "name": "Toyota owner's manual OM42862U (2012 RAV4, second manual listed)",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM42862U/pdf/OM42862U.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-10-19",
+    "note": "OM42862U is the second 2012 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2012/. Oil capacity p.506 gives 4.6 qt (4.4 L) with filter for the 2.5 L engine, 0.1 qt less than OM42836U p.488; V6 figures and the tire table (p.512) match. Cited on the 2012 page as a production-period difference.",
+    "archived": {
+      "file": "manuals/toyota-2012-rav4-OM42862U.pdf",
+      "fetchedAt": "2026-10-19"
     }
   }
 }

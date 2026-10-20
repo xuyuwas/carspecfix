@@ -45,3 +45,11 @@ Caveats: EPA sheet is dated 1997 and mentions repair costs — don't quote that 
 Every driving_guidance entry now has `scope`: `universal` or `vehicle-specific: <make model year>`.
 - Codes (7): primary = universal EPA 420-F-97-003 p.2. Toyota/Ford quotes = vehicle-specific extras.
 - abs-light-on, brakes-squeaking, grinding-noise-when-braking, car-shakes-when-braking, car-wont-start-clicking, car-cranks-but-wont-start: **primary = Not yet verified** — no NHTSA/EPA/FTC/US-gov source found that says whether to keep driving. Searched nhtsa.gov, consumer.ftc.gov; eCFR (FMVSS 135) blocked by captcha. Only shop blogs, OEM marketing pages and vehicle-specific TSBs exist. Camry/Chevrolet quotes kept as vehicle-specific extras.
+
+## Source-grade decision 2026-10-19: Car Care Council admitted as grade A (universal symptom source)
+
+- Page: https://www.carcare.org?p=65 — "Stop and Check Your Brakes" (Car Care Council, Brake Safety Awareness Month, published 2020-08-03; verified reachable 2026-10-19).
+- Decision (captain-approved): Car Care Council counts as grade A for **universal symptom guidance** (all-brand can-I-drive / warning-sign level). It is a non-profit consumer education organization, not a marketing blog, and its brake warning-sign list corroborates the Toyota and Chevrolet OEM pages already used for these pages.
+- Scope: admitted for brake-symptom pages only (brakes-squeaking, car-shakes-when-braking, grinding-noise-when-braking). NOT used for code definitions, repair costs, or anything the council does not state. Non-brake symptom pages (cranks/wont-start) still lack a universal source and remain unpublished.
+- Usable verbatim anchors: "If you hear odd noises when you apply the brakes, they should be inspected"; warning-sign list (noise, pulling, low/hard pedal, grabbing, vibration, light, squealing); "Never put off routine brake inspections ... metal-to-metal ... potentially dangerous"; "braking system should be checked at least once a year".
+- Note: NHTSA main site (nhtsa.gov) returns Access Denied to automated fetches (Akamai); static.nhtsa.gov only hosts TSBs (brand-specific). No federal consumer-facing brake-noise guidance was found — that is why CCC was needed.

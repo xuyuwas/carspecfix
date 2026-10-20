@@ -1,0 +1,30 @@
+---
+import Page from '../../../layouts/Page.astro';
+import { liveVehicles, vehicleUrl, liveHubs, SITE } from '../../../lib/gate.mjs';
+import { fitTitle } from '../../../lib/title.mjs';
+import { AUTHOR } from '../../../lib/site.mjs';
+// Make hub (/specs/toyota/): model -> year. Generated for every make that has at
+// least one live vehicle, so /specs/<make>/ stops 403-ing on nginx.
+export function getStaticPaths() {
+  const hubSet = new Set(liveHubs().map(h => `${h.makeSlug}/${h.modelSlug}`));
+  return [...new Set(liveVehicles.map(v => v.makeSlug))].map(mk => {
+    const vs = liveVehicles.filter(v => v.makeSlug === mk);
+    const models = [...new Set(vs.map(v => v.modelSlug))].sort().map(md => {
+      const yrs = vs.filter(v => v.modelSlug === md).sort((a, b) => b.year - a.year);
+      return { name: `${yrs[0].make} ${yrs[0].model}`, short: yrs[0].model, url: hubSet.has(`${mk}/${md}`) ? `/specs/${mk}/${md}/` : vehicleUrl(yrs[0]), years: yrs };
+    });
+    return { params: { make: mk }, props: { name: vs[0].make, models } };
+  });
+}
+const { name, models } = Astro.props;
+const path = `/specs/${Astro.params.make}/`;
+const title = fitTitle(`${name} specs by model`, models.map(m => m.short));
+const description = `${name} oil capacity, tire size and pressure, and NHTSA recalls by model and year, each figure cited from the owner's manual or NHTSA.`;
+const last = liveVehicles.filter(v => v.makeSlug === Astro.params.make).map(v => v.dataUpdated).sort().at(-1);
+const jsonld = [{ '@type': 'Article', headline: `${name} specs by model`, datePublished: '2026-10-15', dateModified: last, author: { '@type': 'Person', name: AUTHOR.name, url: `${SITE}/authors/${AUTHOR.slug}/` }, mainEntityOfPage: SITE + path }];
+const crumbs = [{ name: 'Home', url: '/' }, { name: 'Specs', url: '/specs/' }, { name, url: path }];
+---
+<Page narrow={true} title={title} description={description} path={path} nav="specs" crumbs={crumbs} jsonld={jsonld} h1={`${name} specs by model`}>
+<p class="ks__src">Every {name} page we have checked. Figures come from the owner's manual (page cited), NHTSA and fueleconomy.gov — nothing is estimated.</p>
+<ul class="links">{models.map(mo => <li><a href={mo.url}>{mo.name}</a> — {mo.years.map((y, i) => <>{i > 0 && ', '}<a href={vehicleUrl(y)}>{y.year}</a></>)}</li>)}</ul>
+</Page>

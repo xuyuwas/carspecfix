@@ -1,0 +1,269 @@
+{
+  "slug": "2022-toyota-rav4",
+  "year": 2022,
+  "make": "Toyota",
+  "model": "RAV4",
+  "makeSlug": "toyota",
+  "modelSlug": "rav4",
+  "powertrain": "ice",
+  "vpicConfirmed": true,
+  "manual": {
+    "sourceId": "manual-2022-toyota-rav4",
+    "yearConfirmed": true,
+    "note": "OMOM0R059U, listed as the 2022 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2022/. Oil capacity p.662, viscosity p.663, tires p.667 (printed page = PDF page index + 1)."
+  },
+  "specs": {
+    "oilCapacity": {
+      "value": "4.8 qt (4.5 L) with filter; 4.4 qt (4.2 L) without",
+      "source": "manual-2022-toyota-rav4",
+      "page": "p.662",
+      "sourceGrade": "A",
+      "verified": false,
+      "appliesTo": "2.5L gasoline (non-hybrid) engine",
+      "unverifiedNote": "RAV4 Hybrid / Prime figures: not yet verified (their manuals have not been checked yet)",
+      "note": null
+    },
+    "oilViscosity": {
+      "value": "SAE 0W-16 (0W-20 acceptable)",
+      "source": "manual-2022-toyota-rav4",
+      "page": "p.663",
+      "sourceGrade": "A",
+      "verified": false,
+      "note": null
+    },
+    "wiperSizes": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "no citable source yet"
+    },
+    "batteryGroup": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "no citable source yet"
+    },
+    "towingCapacity": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false
+    },
+    "tpmsReset": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": null
+    }
+  },
+  "tires": {
+    "rows": [
+      {
+        "wheel": "17",
+        "config": "Vehicles with 17-inch wheels type A",
+        "tireSize": "225/65R17 102H",
+        "frontPsi": 35,
+        "rearPsi": 35,
+        "page": "p.667",
+        "source": "manual-2022-toyota-rav4",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "17",
+        "config": "Vehicles with 17-inch wheels type B",
+        "tireSize": "225/65R17 102H",
+        "frontPsi": 36,
+        "rearPsi": 36,
+        "page": "p.667",
+        "source": "manual-2022-toyota-rav4",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "17",
+        "config": "Vehicles with 17-inch wheels type C",
+        "tireSize": "225/65R17 102H",
+        "frontPsi": 33,
+        "rearPsi": 33,
+        "page": "p.668",
+        "source": "manual-2022-toyota-rav4",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "17",
+        "config": "Vehicles with 17-inch wheels type D",
+        "tireSize": "225/65R17 102H",
+        "frontPsi": 35,
+        "rearPsi": 35,
+        "page": "p.668",
+        "source": "manual-2022-toyota-rav4",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "17",
+        "config": "Vehicles with 17-inch wheels type E",
+        "tireSize": "225/65R17 102H",
+        "frontPsi": 36,
+        "rearPsi": 36,
+        "page": "p.669",
+        "source": "manual-2022-toyota-rav4",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "18",
+        "config": "Vehicles with 18-inch wheels",
+        "tireSize": "225/60R18 100H",
+        "frontPsi": 33,
+        "rearPsi": 33,
+        "page": "p.669",
+        "source": "manual-2022-toyota-rav4",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "19",
+        "config": "Vehicles with 19-inch wheels type A",
+        "tireSize": "235/55R19 101V",
+        "frontPsi": 33,
+        "rearPsi": 33,
+        "page": "p.670",
+        "source": "manual-2022-toyota-rav4",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "19",
+        "config": "Vehicles with 19-inch wheels type B",
+        "tireSize": "235/55R19 101V",
+        "frontPsi": 35,
+        "rearPsi": 35,
+        "page": "p.670",
+        "source": "manual-2022-toyota-rav4",
+        "sourceGrade": "A"
+      }
+    ],
+    "origin": "manual",
+    "note": null
+  },
+  "extraManuals": [],
+  "fuelEconomy": [
+    {
+      "feId": "44991",
+      "model": "RAV4",
+      "option": "Auto (S8), 4 cyl, 2.5 L, SIDI & PFI",
+      "engineL": 2.5,
+      "cyl": 4,
+      "trans": "Automatic (S8)",
+      "drive": "Front-Wheel Drive",
+      "mpgCity": 27,
+      "mpgHwy": 35,
+      "mpgComb": 30,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/44991",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "44992",
+      "model": "RAV4",
+      "option": "Auto (S8), 4 cyl, 2.5 L, SIDI & PFI; Stop-Start",
+      "engineL": 2.5,
+      "cyl": 4,
+      "trans": "Automatic (S8)",
+      "drive": "Front-Wheel Drive",
+      "mpgCity": 27,
+      "mpgHwy": 35,
+      "mpgComb": 30,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/44992",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "45005",
+      "model": "RAV4 AWD",
+      "option": "Auto (S8), 4 cyl, 2.5 L, SIDI & PFI",
+      "engineL": 2.5,
+      "cyl": 4,
+      "trans": "Automatic (S8)",
+      "drive": "All-Wheel Drive",
+      "mpgCity": 25,
+      "mpgHwy": 33,
+      "mpgComb": 28,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/45005",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "45006",
+      "model": "RAV4 AWD",
+      "option": "Auto (S8), 4 cyl, 2.5 L, SIDI & PFI; Stop-Start",
+      "engineL": 2.5,
+      "cyl": 4,
+      "trans": "Automatic (S8)",
+      "drive": "All-Wheel Drive",
+      "mpgCity": 27,
+      "mpgHwy": 33,
+      "mpgComb": 29,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/45006",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "45008",
+      "model": "RAV4 AWD LE",
+      "option": "Auto (S8), 4 cyl, 2.5 L",
+      "engineL": 2.5,
+      "cyl": 4,
+      "trans": "Automatic (S8)",
+      "drive": "All-Wheel Drive",
+      "mpgCity": 27,
+      "mpgHwy": 34,
+      "mpgComb": 30,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/45008",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "45007",
+      "model": "RAV4 AWD TRD OFFROAD",
+      "option": "Auto (S8), 4 cyl, 2.5 L",
+      "engineL": 2.5,
+      "cyl": 4,
+      "trans": "Automatic (S8)",
+      "drive": "All-Wheel Drive",
+      "mpgCity": 25,
+      "mpgHwy": 32,
+      "mpgComb": 28,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/45007",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    }
+  ],
+  "fuelEconomyFetched": "2026-10-19",
+  "recalls": [
+    {
+      "campaign": "22V519000",
+      "component": "AIR BAGS:SENSOR:OCCUPANT CLASSIFICATION:FRONT PASSENGER",
+      "date": "2022-07-21",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2022 Rav4, Rav4 Hybrid, and Rav4 Prime vehicles.  The front passenger seat may have been assembled with interference between internal parts that may cause the Occupant Classification System (OCS) sensor to incorrectly detect the occupant.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Saf",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    }
+  ],
+  "recallsFetched": "2026-10-19",
+  "recallsUrl": "https://www.nhtsa.gov/recalls?nhtsaId=&make=Toyota&model=RAV4&year=2022",
+  "related": {
+    "issues": []
+  },
+  "publishDate": "2026-10-19",
+  "dataUpdated": "2026-10-19",
+  "signOff": {
+    "by": "队长",
+    "date": "2026-10-19"
+  }
+}

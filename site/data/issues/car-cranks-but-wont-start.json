@@ -8,7 +8,7 @@
   "causes": [
     {
       "text": "Insufficient fuel",
-      "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+      "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
       "document": "2022 Toyota Camry Owner's Manual OM06244U (year mapping per Helm listing; manual is Camry-specific)",
       "page": "p.557",
       "fetched": "2026-10-15",
@@ -20,7 +20,7 @@
     },
     {
       "text": "Engine flooded",
-      "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+      "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
       "document": "2022 Toyota Camry Owner's Manual OM06244U (year mapping per Helm listing; manual is Camry-specific)",
       "page": "p.557",
       "fetched": "2026-10-15",
@@ -32,7 +32,7 @@
     },
     {
       "text": "Engine immobilizer malfunction",
-      "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+      "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
       "document": "2022 Toyota Camry Owner's Manual OM06244U (year mapping per Helm listing; manual is Camry-specific)",
       "page": "p.557",
       "fetched": "2026-10-15",
@@ -44,11 +44,25 @@
     }
   ],
   "urgency": [],
-  "guidancePrimary": "Not yet verified (no universal source); brand quotes are vehicle-specific extras only",
+  "guidancePrimary": "universal: Car Care Council — dead batteries are a leading cause of starting failure; when the starter cranks normally the causes are the ones the vehicle's own manual lists (fuel, flooding, immobilizer)",
   "guidance": [
     {
+      "url": "https://www.carcare.org?p=68",
+      "document": "Car Care Council, \"Summer Heat Takes a Toll on Your Car's Battery\" (published 2020-07-21; non-profit consumer education organization)",
+      "page": "web page",
+      "fetched": "2026-10-20",
+      "sourceGrade": "A",
+      "maker": "Car Care Council",
+      "docKind": "consumer education page",
+      "appliesTo": "universal",
+      "quote": null,
+      "allBrands": true,
+      "text": "Dead batteries are a leading cause of starting failure. Check the battery if you notice headlights and interior lights dim, accessories that fail to operate, or the battery light illuminated. When the starter cranks normally, the vehicle's own manual lists the causes that apply (insufficient fuel, flooded engine, immobilizer malfunction) — see the vehicle-specific entries below.",
+      "answers": "can_i_keep_driving: the engine does not start, so the vehicle cannot be driven; the Car Care Council identifies dead batteries as a leading cause of starting failure, with dim lights, failing accessories or an illuminated battery light as the signs to check the battery"
+    },
+    {
       "text": "The engine will not start even though the starter motor operates normally. One of the following may be the cause of the problem: There may not be sufficient fuel in the vehicle's tank. Refuel the vehicle. The engine may be flooded. Try to restart the engine again following correct starting procedures.",
-      "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+      "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
       "document": "2022 Toyota Camry Owner's Manual OM06244U",
       "page": "p.557",
       "fetched": "2026-10-15",
@@ -62,7 +76,7 @@
     },
     {
       "text": "Contact your Toyota dealer if the problem cannot be repaired, or if repair procedures are unknown.",
-      "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+      "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
       "document": "2022 Toyota Camry Owner's Manual OM06244U",
       "page": "p.558",
       "fetched": "2026-10-15",
@@ -75,13 +89,29 @@
       "allBrands": false
     }
   ],
-  "firstStep": null,
+  "firstStep": {
+    "url": "https://www.carcare.org?p=68",
+    "document": "Car Care Council, \"Summer Heat Takes a Toll on Your Car's Battery\" (published 2020-07-21; non-profit consumer education organization)",
+    "page": "web page",
+    "fetched": "2026-10-20",
+    "sourceGrade": "A",
+    "maker": "Car Care Council",
+    "docKind": "consumer education page",
+    "appliesTo": "universal",
+    "quote": null,
+    "allBrands": true,
+    "text": "Confirm which of the two no-start patterns applies. If the starter cranks normally, the vehicle's manual lists the first checks: there may not be sufficient fuel in the tank (refuel), or the engine may be flooded (restart following correct starting procedures). If the starter turns slowly or the lights are dim, check the battery instead — dim lights, failing accessories or an illuminated battery light are the signs the Car Care Council lists.",
+    "answers": "check yourself first: fuel level and restart procedure are self-checks per the vehicle manual; the battery warning signs are observable without tools"
+  },
   "safetyCritical": false,
   "related": {
     "issues": [],
     "vehicles": []
   },
   "publishDate": null,
-  "dataUpdated": "2026-10-15",
-  "signOff": null
+  "dataUpdated": "2026-10-20",
+  "signOff": {
+    "by": "队长",
+    "date": "2026-10-20"
+  }
 }

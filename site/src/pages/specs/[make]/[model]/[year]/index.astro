@@ -7,6 +7,7 @@ import { liveVehicles, liveIssues, liveHubs, vehicleUrl, issueUrl, sources, hasV
 import { fitTitle, usOnly } from '../../../../../lib/title.mjs';
 import { makeRefs, SEGMENT } from '../../../../../lib/refs.mjs';
 import { imageObject } from '../../../../../lib/images.mjs';
+import { parseOilCapacity } from '../../../../../lib/oil.mjs';
 import { AUTHOR } from '../../../../../lib/site.mjs';
 export function getStaticPaths() {
   return liveVehicles.map(v => ({ params: { make: v.makeSlug, model: v.modelSlug, year: String(v.year) }, props: { v } }));
@@ -22,27 +23,37 @@ const siblings = liveVehicles.filter(x => x.modelSlug === v.modelSlug && x.makeS
 const related = liveIssues.filter(i => v.related?.issues?.includes(i.slug));       // R-L2: data-driven only
 const tires = shownTireRows(v);
 const psis = tires.flatMap(t => [t.frontPsi, t.rearPsi]).filter(Boolean); const pMin = Math.min(...psis), pMax = Math.max(...psis);
-// oil: strip bracketed manual refs ([OM06246U p.547]); variants split on ';' and ' | ' into one segment each
+// oil: single parser shared with the year hub page (lib/oil.mjs). It merges the
+// "with filter; without" pair of one engine into a single entry — the old inline
+// copy skipped that merge and rendered "null qt without" on the 2020/2024 RAV4.
 const noRefs = t => String(t || '').replace(/\s*\[[A-Z0-9]{6,}[^\]]*\]/g, '').trim();
-const oilSegs = A(s.oilCapacity) ? usOnly(noRefs(s.oilCapacity.value)).split(/\s*;\s*|\s+\|\s+/).map(x => x.trim()).filter(Boolean).reduce((a, x) => { if (/^with-filter not stated$/i.test(x) && a.length) a[a.length - 1] += '; with-filter not stated'; else a.push(x); return a; }, []) : [];
-const oilParsed = oilSegs.map(x => { const label = x.includes(':') ? x.slice(0, x.indexOf(':')).trim() : null;
-  const w = (x.match(/([\d.]+) (?:US )?qt\b(?:\s*\([^)]*\))?\s*(?:with|incl\.?|including) filter/i) || [])[1];
-  const wo = (x.match(/([\d.]+) (?:US )?qt\b(?:\s*\([^)]*\))?\s*(?:change\s+)?without/i) || [])[1];
-  return { raw: x, label, w: w ? +w : null, wo: wo ? +wo : null }; });
-const oilWoOnly = oilParsed.some(o => o.wo && !o.w);
-const oilQts = oilWoOnly ? oilParsed.map(o => o.wo).filter(Boolean) : oilParsed.map(o => o.w).filter(Boolean);
+const oilEngines = A(s.oilCapacity) ? parseOilCapacity(s.oilCapacity.value) : [];
+const oilAllWo = oilEngines.length > 0 && oilEngines.every(o => o.wo != null);   // every engine states a without-filter amount
+const oilAllW = oilEngines.length > 0 && oilEngines.every(o => o.w != null);    // every engine states a with-filter amount
+const oilQts = oilAllWo ? oilEngines.map(o => o.wo) : oilAllW ? oilEngines.map(o => o.w) : [];
 const qMin = Math.min(...oilQts), qMax = Math.max(...oilQts);
+const oilUnit = oilAllWo ? 'qt without filter' : 'qt with filter';
+const oilMissingWo = oilEngines.some(o => !o.unverified && o.w != null && o.wo == null);
+const oilMissingW = oilEngines.some(o => !o.unverified && o.wo != null && o.w == null);
 const sentence = t => (t || '').split(/\s*:\s*/).map(x => x.toLowerCase().replace(/\b(abs|nhtsa|tpms|led|esc|ecm|pcm|usb|hvac|egr|evap)\b/g, m => m.toUpperCase())).join(': ').replace(/^./, m => m.toUpperCase());
 const esc = x => x.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const P = t => esc(String(t || '')).replace(/\bpp?\.\s?[\d–-]+(?:[,\/]\s?[\d–-]+)*/g, m => `<span class="pref">${m}</span>`);
 const samePsi = tires.length > 0 && tires.every(t => t.frontPsi === tires[0].frontPsi && t.rearPsi === tires[0].rearPsi);
-const oilLines = oilSegs;
-// qa-build-3: big figure shows with-filter qt, so the card lists only the without-filter amount where one is given
-const WITH = /,?\s*[\d.]+ (?:US )?qt\b(?:\s*\([^)]*\))?\s*(?:with filter|incl\.? filter|including filter)\s*,?\s*/i;
-const hasWithout = l => /qt\b[^,;]*\bwithout/i.test(l);
-const oilCardLines = oilParsed.flatMap(o => { const lb = o.label ? o.label + ': ' : '';
-  if (oilWoOnly) return o.w ? [`${lb}${o.w} qt with filter, ${o.wo} qt without`] : o.wo ? [`${lb}${o.wo} qt without filter`, 'with-filter not stated'] : [o.raw];
-  return o.wo ? [`${lb}${o.wo} qt without`] : o.w ? [`${lb}${o.w} qt with filter`] : [o.raw]; });
+const oilLines = oilEngines.map(o => o.raw);            // detail table: one line per engine, verbatim from the manual
+// Card lines: never invent the half the manual did not state — a missing
+// without-filter figure becomes a footnote, not a null in the string.
+const oilCardLines = oilEngines.flatMap(o => {
+  const lb = o.label ? o.label + ': ' : '';
+  if (o.unverified) return [o.raw];
+  if (o.w != null && o.wo != null) return [`${lb}${o.w} qt with filter, ${o.wo} qt without`];
+  if (o.w != null) return [`${lb}${o.w} qt with filter`];
+  if (o.wo != null) return [`${lb}${o.wo} qt without filter`];
+  return [o.raw];
+});
+// EV pages carry no oilCapacity field at all — optional chaining keeps them renderable.
+const oilApplies = s.oilCapacity?.appliesTo ? `Applies to: ${s.oilCapacity.appliesTo}.` : '';
+const oilUnver = s.oilCapacity?.unverifiedNote || '';
+const oilScope = [oilApplies, oilUnver].filter(Boolean).join(' ');
 const recallsSorted = [...v.recalls].sort((a, b) => (b.date || '').localeCompare(a.date || ''));
 const nhtsaRef = ref('nhtsa', `NHTSA recalls database, ${name}, fetched ${v.recallsFetched}`, v.recallsUrl);
 const feRef = v.fuelEconomy.length ? ref('fe', `fueleconomy.gov (U.S. EPA / DOE), ${name}, fetched ${v.fuelEconomyFetched}`, `https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=${v.year}&year2=${v.year}&make=${encodeURIComponent(v.make)}`) : null;
@@ -75,7 +86,7 @@ const segment = SEGMENT[v.modelSlug] || 'sedan';
 const img = imageObject(v.slug, SITE);
 const jsonld = [
   { '@type': 'Car', name, brand: { '@type': 'Brand', name: v.make }, model: v.model, vehicleModelDate: String(v.year), ...(img ? { image: img } : {}) },
-  { '@type': 'Article', headline: `${name} Specs`, dateModified: updated, author: { '@type': 'Person', name: AUTHOR.name, url: `${SITE}/authors/${AUTHOR.slug}/` }, mainEntityOfPage: SITE + path },
+  { '@type': 'Article', headline: `${name} Specs`, datePublished: v.publishDate ?? updated, dateModified: updated, author: { '@type': 'Person', name: AUTHOR.name, url: `${SITE}/authors/${AUTHOR.slug}/` }, mainEntityOfPage: SITE + path },
 ];
 // Every crumb MUST carry a url: a ListItem without `item` is a Search Console
 // "Missing field item" error. There is no make-level hub page, so make+model
@@ -85,6 +96,11 @@ const modelPath = `/specs/${v.makeSlug}/${v.modelSlug}/`;
 const crumbs = [{ name: 'Home', url: '/' }, ...(hub ? [{ name: modelLabel, url: modelPath }] : []), { name: hub ? String(v.year) : `${v.year} ${modelLabel}`, url: path }];
 const tabs = [['#quick', 'Quick answer'], ...(v.recalls.length ? [['#recalls', 'Recalls']] : []), ...(tires.length ? [['#tires', 'Tires']] : []), ...(oilLines.length ? [['#oil', 'Oil']] : []), ...(other.length ? [['#parts', 'Parts']] : []), ...(feRef ? [['#mpg', 'Fuel economy']] : []), ...(related.length ? [['#problems', 'Problems']] : []), ['#sources', 'Sources']];
 const configs = [...new Set(v.fuelEconomy.map(c => c.drive.replace('Front-Wheel Drive', 'FWD').replace('All-Wheel Drive', 'AWD').replace(/4-Wheel.*|Part-time 4-Wheel Drive/, '4WD').replace('Rear-Wheel Drive', 'RWD')))];
+// Per-record EPA link (the human-readable page for this exact configuration),
+// so a reader can confirm the rating belongs to their engine/drive combination.
+const feUrl = c => `https://www.fueleconomy.gov/feg/noframes/${c.feId}.shtml`;
+const hasPowertrain = v.fuelEconomy.some(c => c.powertrain);   // gas vs hybrid split only when the data declares it
+const pwLabel = p => p === 'hybrid' ? 'Hybrid' : p === 'gas' ? 'Gasoline' : p;
 ---
 <Base title={title} description={desc} path={path} jsonld={jsonld} crumbs={crumbs} nav="specs">
 <div class="vhead vhead--compact"><div class="container">
@@ -103,11 +119,13 @@ const configs = [...new Set(v.fuelEconomy.map(c => c.drive.replace('Front-Wheel 
     {tires.length > 0 && <div class="qa__src">{[...new Set(tires.map(t => pgShow(t.page)).filter(Boolean))].length ? <>Manual <Fragment set:html={P(pgList(tires.map(t => pgShow(t.page))))} /> · </> : ''}Check the tire placard on your driver's door jamb for your exact trim.</div>}
   </div>
   {!ev && <div class="qa__item"><div class="qa__q">Engine oil</div>
+    {oilScope && <div class="qa__src qa__applies">{oilScope}</div>}
     {oilLines.length ? <>
-      {oilQts.length ? <div class="qa__a">{qMin === qMax ? qMin : `${qMin}–${qMax}`}<small>{oilWoOnly ? 'qt without filter' : 'qt with filter'}</small><sup class="ref"><a href={`#ref-${oilRef}`}>[{oilRef}]</a></sup></div> : null}
+      {oilQts.length ? <div class="qa__a">{qMin === qMax ? qMin : `${qMin}–${qMax}`}<small>{oilUnit}</small><sup class="ref"><a href={`#ref-${oilRef}`}>[{oilRef}]</a></sup></div> : null}
       <div class="qa__more">{oilCardLines.map(l => <div>{l}{!oilQts.length && <sup class="ref"><a href={`#ref-${oilRef}`}>[{oilRef}]</a></sup>}</div>)}</div>
+      {(oilMissingWo || oilMissingW) && <div class="qa__src">{oilMissingWo ? 'Without-filter amount not stated in the manual for these engines.' : 'With-filter amount not stated in the manual for these engines.'}</div>}
       <div class="qa__more">{A(s.oilViscosity) ? <b>{noRefs(s.oilViscosity.value)}</b> : <span class="nv">Viscosity: Not yet verified</span>}</div>
-      <div class="qa__src"><Fragment set:html={P([s.oilCapacity.page && `Manual ${s.oilCapacity.page} (capacity)`, A(s.oilViscosity) && s.oilViscosity.page && `${s.oilViscosity.page} (viscosity)`].filter(Boolean).join(', ') || `Source [${oilRef}]`)} />{/variants not yet sourced/.test(s.oilCapacity.note || '') && <> · other variants (e.g. hybrid): <span class="nv">Not yet verified</span></>}</div>
+      <div class="qa__src"><Fragment set:html={P([s.oilCapacity.page && `Manual ${s.oilCapacity.page} (capacity)`, A(s.oilViscosity) && s.oilViscosity.page && `${s.oilViscosity.page} (viscosity)`].filter(Boolean).join(', ') || `Source [${oilRef}]`)} /></div>
     </> : <div class="qa__a qa__a--text"><span class="nv">Not yet verified — check your owner's manual</span></div>}
   </div>}
   <div class="qa__item"><div class="qa__q">Recalls</div>
@@ -147,11 +165,11 @@ const configs = [...new Set(v.fuelEconomy.map(c => c.drive.replace('Front-Wheel 
   <div class="kv">{other.map(([k, f]) => <div class="kv__row"><div class="kv__k">{k}</div><div class="kv__v"><span class="kv__fig">{usOnly(noRefs(f.value))}<sup class="ref"><a href={`#ref-${srcRef(f.source)}`}>[{srcRef(f.source)}]</a></sup></span></div></div>)}</div>
 </section>}
 {feRef && <section id="mpg" data-copy-scope>
-  <div class="section__head"><div><h2 class="section__title">Fuel economy</h2><p class="section__kicker">EPA city / highway / combined, US mpg{ev && ' equivalent (MPGe)'}</p></div><Tools /></div>
-  <div class="tbl-wrap"><div class="tbl-scroll" role="region" tabindex="0" aria-label="Fuel economy table"><table class="tbl"><thead><tr><th scope="col">Model</th><th scope="col" class="wrap">Engine / transmission</th><th scope="col">Drive</th><th scope="col" class="num">City</th><th scope="col" class="num">Hwy</th><th scope="col" class="num">Combined</th></tr></thead>
-  <tbody>{v.fuelEconomy.map(c => <tr><td class="strong nowrap">{c.model}</td><td class="wrap">{c.option}</td><td class="nowrap">{c.drive}</td><td class="num">{c.mpgCity}</td><td class="num">{c.mpgHwy}</td><td class="num">{c.mpgComb}</td></tr>)}</tbody></table></div>
+  <div class="section__head"><div><h2 class="section__title">Fuel economy</h2><p class="section__kicker">EPA city / highway / combined, US mpg{ev && ' equivalent (MPGe)'}{hasPowertrain && ' — gasoline and hybrid configurations are listed separately; match the engine and drive of your car'}</p></div><Tools /></div>
+  <div class="tbl-wrap"><div class="tbl-scroll" role="region" tabindex="0" aria-label="Fuel economy table"><table class="tbl"><thead><tr><th scope="col">Model</th><th scope="col" class="wrap">Engine / transmission</th><th scope="col">Drive</th>{hasPowertrain && <th scope="col">Powertrain</th>}<th scope="col" class="num">City</th><th scope="col" class="num">Hwy</th><th scope="col" class="num">Combined</th></tr></thead>
+  <tbody>{v.fuelEconomy.map(c => <tr><td class="strong nowrap"><a href={feUrl(c)} rel="nofollow noopener">{c.model}</a></td><td class="wrap">{c.option}</td><td class="nowrap">{c.drive}</td>{hasPowertrain && <td class="nowrap">{pwLabel(c.powertrain)}</td>}<td class="num">{c.mpgCity}</td><td class="num">{c.mpgHwy}</td><td class="num">{c.mpgComb}</td></tr>)}</tbody></table></div>
   <div class="swipe">Swipe for more columns</div></div>
-  <p class="ks__src">Source [{feRef}]</p>
+  <p class="ks__src">Each model name links to its own fueleconomy.gov record. Source [{feRef}]</p>
 </section>}
 {related.length > 0 && <section id="problems"><div class="section__head"><div><h2 class="section__title">Common problems</h2></div></div><ul class="plist">{related.map(i => <li><a href={issueUrl(i)}>{i.type === 'code' ? `${i.code} code` : i.title}</a></li>)}</ul></section>}
 <Feedback path={path} />

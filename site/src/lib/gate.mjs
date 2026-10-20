@@ -58,10 +58,13 @@ export function vehicleGate(v) {
 }
 // Only grade-A cited items count toward the gate and are rendered
 export const sourcedCauses = i => (i.causes || []).filter(c => c.text && c.url && c.sourceGrade === 'A');
-export const sourcedUrgency = i => (i.urgency || []).filter(c => c.text && c.url && c.sourceGrade === 'A');
+export const sourcedUrgency = i => (i.urgency || []).filter(c => c.text && c.url && c.sourceGrade === 'A' && forThisCode(c, i));
 export const guidance = i => (i.guidance || []).filter(g => g.url && g.sourceGrade === 'A');
 const isDrive = g => /can_i_keep_driving|flashing|reduce speed|stop/i.test(g.answers);
-export const allBrandDrive = i => guidance(i).filter(g => g.allBrands && isDrive(g));
+// Entries tagged onlyCodes are quoted only where they apply (e.g. the flashing-light
+// misfire wording stays on misfire codes and is not printed on EVAP or catalyst pages).
+const forThisCode = (g, i) => !g.onlyCodes || (!!i.code && g.onlyCodes.includes(i.code));
+export const allBrandDrive = i => guidance(i).filter(g => g.allBrands && isDrive(g) && forThisCode(g, i));
 export function issueGate(i) {
   const r = [];
   // R-Q1 v2: can-I-drive or severity sourced + >=1 sourced cause; cost optional

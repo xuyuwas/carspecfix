@@ -1,0 +1,60 @@
+---
+// /repair-cost/ — methodology page. Publishes no per-repair estimates: no official
+// source prints per-job labor times or shop labor rates. The only figures shown are
+// BLS OES wages (cited), wrapped in <span class="cost" data-src="..."> so
+// postbuild-check can verify every dollar figure on the page is a cited one.
+import Page from '../../layouts/Page.astro';
+import { liveIssues, issueUrl, SITE } from '../../lib/gate.mjs';
+import { AUTHOR } from '../../lib/site.mjs';
+const BLS = 'https://www.bls.gov/oes/current/oes493023.htm';
+// Frontmatter is plain TS (no JSX) — build the marked cost spans as HTML strings.
+const cost = (v: string) => `<span class="cost" data-src="${BLS}">${v}</span>`;
+const wageRows: [string, string, string | null][] = [
+  ['10th percentile', '$16.66', '$34,660'],
+  ['25th percentile', '$18.70', '$38,900'],
+  ['Median', '$24.34', '$50,620'],
+  ['Mean', '$27.13', '$56,420'],
+  ['75th percentile', '$33.86', '$70,430'],
+  ['90th percentile', '$39.32', null],
+];
+const codes = liveIssues.filter(i => i.type === 'code');
+const title = 'Estimating What a Car Repair Will Cost | CarSpecFix';
+const description = 'How to estimate what a car repair will cost: the four numbers behind a repair bill, which ones you can verify yourself, and what technicians are paid (BLS).';
+const jsonld = [{ '@type': 'Article', headline: 'How to estimate what a car repair will cost', datePublished: '2026-10-20', dateModified: '2026-10-20', author: { '@type': 'Person', name: AUTHOR.name, url: `${SITE}/authors/${AUTHOR.slug}/` }, mainEntityOfPage: SITE + '/repair-cost/' }];
+---
+<Page title={title} description={description} path="/repair-cost/" crumbs={[{ name: 'Home', url: '/' }, { name: 'Estimating costs', url: '/repair-cost/' }]} h1="How to estimate what a car repair will cost" jsonld={jsonld}>
+
+<p><strong>This site does not publish per-repair price estimates.</strong> No manufacturer or government agency prints per-job labor times or shop labor rates, and a guessed number anchors your negotiation with the shop instead of informing it. What follows is the formula shops actually use, which inputs you can verify yourself, and the one official figure that gives useful context.</p>
+
+<h2 class="section__title">The four numbers behind every repair bill</h2>
+<p>Every quote — good or bad — adds up the same way:</p>
+<p class="formula">parts&nbsp;+&nbsp;(labor hours&nbsp;×&nbsp;labor rate)&nbsp;+&nbsp;shop supplies&nbsp;+&nbsp;tax</p>
+<ol>
+<li><strong>Parts — verifiable.</strong> Get the exact part number from the vehicle's own manual or service bulletin, then price that number at a dealer and at a parts store. Our <a href="/specs/">specs pages</a> carry the capacities, tire sizes and fluid grades manuals print; service bulletins name part numbers where they apply.</li>
+<li><strong>Labor hours — not publicly sourceable.</strong> The hour figures shops use come from commercial estimating databases (AllData, Mitchell1, Identifix). None of them is free to quote, so this site does not print hour figures.</li>
+<li><strong>Labor rate — ask the shop.</strong> The posted rate is the only authoritative number for your area, and it differs by shop and region. Shops charge more than the technician's wage because the rate also covers benefits, equipment, warranty work and margin — see the wage data below.</li>
+<li><strong>Shop supplies and tax — ask the shop.</strong> Both are percentages or flat fees that vary; neither is published anywhere official.</li>
+</ol>
+
+<h2 class="section__title">What automotive technicians are paid</h2>
+<p>Wages are not shop rates — but they are the one labor-related figure a U.S. government agency publishes, and they tell you what the labor line has to cover. The Bureau of Labor Statistics reports, for automotive service technicians and mechanics (occupation 49-3023, <span class="tnum">704,640</span> people employed, May 2025 estimates):</p>
+<table class="tbl"><thead><tr><th scope="col">Wage measure</th><th scope="col">Hourly</th><th scope="col">Annual</th></tr></thead><tbody>
+{wageRows.map(([label, h, a]) => <tr class:list={label === 'Median' ? ['is-median'] : []}><td>{label}</td><td set:html={cost(h)} /><td set:html={a ? cost(a) : '—'} /></tr>)}
+</tbody></table>
+<p class="ks__src">Source: U.S. Bureau of Labor Statistics, Occupational Employment and Wage Statistics, May 2025 national estimates, occupation 49-3023 — <a href={BLS} rel="nofollow noopener">bls.gov/oes/current/oes493023.htm</a>, retrieved 2026-10-20 via the BLS public data API (series OEUN0000000000000493023, datatypes 01/03/04/06–10/11–14). Wages are what technicians are paid; a shop's labor rate is higher by design.</p>
+
+<h2 class="section__title">Get a real number in one afternoon</h2>
+<ul>
+<li>Call two or three shops with the same description of the problem, and ask each for the same three numbers: the diagnostic fee, the labor rate, and whether the diagnostic fee is credited toward the repair.</li>
+<li>Ask for the estimate in writing, and ask what happens to the price if the diagnosis changes once the car is on the lift.</li>
+<li>If a warning light is on, have the code read first — many shops read stored OBD-II codes at no charge, and the code decides which of the four numbers above even applies. Our <a href="/codes/">trouble code pages</a> explain what each code means, whether you can keep driving, and how often the code appears in NHTSA complaint and recall records.</li>
+<li>For wear items, the vehicle's own maintenance schedule tells you the interval — that turns a surprise into a planned purchase you can price at two shops.</li>
+</ul>
+
+<h2 class="section__title">What this site publishes instead</h2>
+<p>Every figure on CarSpecFix traces to an official document — an owner's manual, a manufacturer service bulletin, NHTSA or fueleconomy.gov — and a person checks each page before it goes live. That rule is why there are no price estimates here, and it is also what the published pages are for:</p>
+<ul>
+{codes.map(c => <li><a href={issueUrl(c)}>{c.code} code</a> — meaning, causes and can-you-keep-driving from manufacturer documents, plus NHTSA complaint and recall counts.</li>)}
+<li><a href="/specs/">Vehicle specs</a> — oil capacity, viscosity, tire sizes and pressures straight from the owner's manual.</li>
+</ul>
+</Page>

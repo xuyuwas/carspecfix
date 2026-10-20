@@ -1,0 +1,203 @@
+{
+  "slug": "2018-toyota-rav4",
+  "year": 2018,
+  "make": "Toyota",
+  "model": "RAV4",
+  "makeSlug": "toyota",
+  "modelSlug": "rav4",
+  "powertrain": "ice",
+  "vpicConfirmed": true,
+  "manual": {
+    "sourceId": "manual-2018-toyota-rav4",
+    "yearConfirmed": true,
+    "note": "OMOM0R012U, listed as the 2018 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2018/. Oil capacity p.675, viscosity p.675, tires p.679 (printed page = PDF page index + 1)."
+  },
+  "specs": {
+    "oilCapacity": {
+      "value": "4.6 qt (4.4 L) with filter; 4.2 qt (4.0 L) without",
+      "source": "manual-2018-toyota-rav4",
+      "page": "p.675",
+      "sourceGrade": "A",
+      "verified": false,
+      "appliesTo": "2.5L 4-cylinder (2AR-FE) gasoline engine",
+      "unverifiedNote": "Only the engine listed in this manual is covered. Any other engine offered in this market: not yet verified.",
+      "note": null
+    },
+    "oilViscosity": {
+      "value": "SAE 0W-20 (5W-20 acceptable)",
+      "source": "manual-2018-toyota-rav4",
+      "page": "p.675",
+      "sourceGrade": "A",
+      "verified": false,
+      "note": null
+    },
+    "wiperSizes": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "no citable source yet"
+    },
+    "batteryGroup": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "no citable source yet"
+    },
+    "towingCapacity": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false
+    },
+    "tpmsReset": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": null
+    }
+  },
+  "tires": {
+    "rows": [
+      {
+        "wheel": "17",
+        "config": "Type A",
+        "tireSize": "225/65R17 102H",
+        "frontPsi": 33,
+        "rearPsi": 33,
+        "page": "p.679",
+        "source": "manual-2018-toyota-rav4",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "17",
+        "config": "Type B",
+        "tireSize": "225/65R17 102H",
+        "frontPsi": 33,
+        "rearPsi": 33,
+        "page": "p.679",
+        "source": "manual-2018-toyota-rav4",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "18",
+        "config": "Type C",
+        "tireSize": "235/55R18 100H",
+        "frontPsi": 32,
+        "rearPsi": 32,
+        "page": "p.679",
+        "source": "manual-2018-toyota-rav4",
+        "sourceGrade": "A"
+      }
+    ],
+    "origin": "manual",
+    "note": null
+  },
+  "extraManuals": [],
+  "fuelEconomy": [
+    {
+      "feId": "39365",
+      "model": "RAV4",
+      "option": "Auto (S6), 4 cyl, 2.5 L",
+      "engineL": 2.5,
+      "cyl": 4,
+      "trans": "Automatic (S6)",
+      "drive": "Front-Wheel Drive",
+      "mpgCity": 23,
+      "mpgHwy": 29,
+      "mpgComb": 25,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/39365",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "39371",
+      "model": "RAV4 AWD",
+      "option": "Auto (S6), 4 cyl, 2.5 L",
+      "engineL": 2.5,
+      "cyl": 4,
+      "trans": "Automatic (S6)",
+      "drive": "All-Wheel Drive",
+      "mpgCity": 22,
+      "mpgHwy": 28,
+      "mpgComb": 25,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/39371",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "39366",
+      "model": "RAV4 LE/XLE",
+      "option": "Auto (S6), 4 cyl, 2.5 L",
+      "engineL": 2.5,
+      "cyl": 4,
+      "trans": "Automatic (S6)",
+      "drive": "Front-Wheel Drive",
+      "mpgCity": 23,
+      "mpgHwy": 30,
+      "mpgComb": 26,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/39366",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "39372",
+      "model": "RAV4 Limited AWD/SE AWD",
+      "option": "Auto (S6), 4 cyl, 2.5 L",
+      "engineL": 2.5,
+      "cyl": 4,
+      "trans": "Automatic (S6)",
+      "drive": "All-Wheel Drive",
+      "mpgCity": 22,
+      "mpgHwy": 28,
+      "mpgComb": 24,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/39372",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    }
+  ],
+  "fuelEconomyFetched": "2026-10-19",
+  "recalls": [
+    {
+      "campaign": "23V734000",
+      "component": "ELECTRICAL SYSTEM:12V/24V/48V BATTERY",
+      "date": "2023-11-01",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2013-2018 RAV4 vehicles.  Certain replacement 12-volt batteries may not fit properly in the battery tray, allowing the battery to move and contact the hold-down bracket, possibly causing a short circuit.",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "19V503000",
+      "component": "EQUIPMENT:OTHER:LABELS",
+      "date": "2019-06-28",
+      "summary": "Southeast Toyota Distributors, LLC (SET) is recalling certain 2017-2019 Toyota Camry, Corolla, Rav4, Sienna, and Yaris iA vehicles equipped with factory-installed floor mats.  The load carrying capacity modification label may be incorrect.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) number 110, \"Tire Selection and Rims.\"",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "17V831000",
+      "component": "EQUIPMENT:OTHER:LABELS",
+      "date": "2017-12-20",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2017-2018 Toyota 4Runner and Tundra, 2018 Toyota Highlander, RAV4 and Lexus GX460 and 2017 Toyota Sienna and Tacoma vehicles.  These vehicles may have incorrect load carrying capacity modification labels.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) number 110, \"",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    }
+  ],
+  "recallsFetched": "2026-10-19",
+  "recallsUrl": "https://www.nhtsa.gov/recalls?nhtsaId=&make=Toyota&model=RAV4&year=2018",
+  "related": {
+    "issues": []
+  },
+  "publishDate": "2026-10-19",
+  "dataUpdated": "2026-10-19",
+  "signOff": {
+    "by": "队长",
+    "date": "2026-10-19"
+  }
+}

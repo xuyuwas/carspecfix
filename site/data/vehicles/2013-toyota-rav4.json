@@ -1,0 +1,169 @@
+{
+  "slug": "2013-toyota-rav4",
+  "year": 2013,
+  "make": "Toyota",
+  "model": "RAV4",
+  "makeSlug": "toyota",
+  "modelSlug": "rav4",
+  "powertrain": "ice",
+  "vpicConfirmed": true,
+  "manual": {
+    "sourceId": "manual-2013-toyota-rav4",
+    "yearConfirmed": true,
+    "note": "OMOM42809U, listed as the 2013 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2013/. Oil capacity p.555, viscosity p.556, tires p.561 (printed page = PDF page index + 1)."
+  },
+  "specs": {
+    "oilCapacity": {
+      "value": "4.6 qt (4.4 L) with filter; 4.2 qt (4.0 L) without",
+      "source": "manual-2013-toyota-rav4",
+      "page": "p.555",
+      "sourceGrade": "A",
+      "verified": false,
+      "appliesTo": "2.5L 4-cylinder (2AR-FE) gasoline engine",
+      "unverifiedNote": "RAV4 EV (electric): not covered by this manual, not yet verified.",
+      "note": null
+    },
+    "oilViscosity": {
+      "value": "SAE 0W-20 (5W-20 acceptable)",
+      "source": "manual-2013-toyota-rav4",
+      "page": "p.556",
+      "sourceGrade": "A",
+      "verified": false,
+      "note": null
+    },
+    "wiperSizes": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "no citable source yet"
+    },
+    "batteryGroup": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "no citable source yet"
+    },
+    "towingCapacity": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false
+    },
+    "tpmsReset": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": null
+    }
+  },
+  "tires": {
+    "rows": [
+      {
+        "wheel": "17",
+        "config": "Vehicles with 17-inch tires",
+        "tireSize": "225/65R17 102H",
+        "frontPsi": 33,
+        "rearPsi": 33,
+        "page": "p.561",
+        "source": "manual-2013-toyota-rav4",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "18",
+        "config": "Vehicles with 18-inch tires",
+        "tireSize": "235/55R18 99H",
+        "frontPsi": 32,
+        "rearPsi": 32,
+        "page": "p.561",
+        "source": "manual-2013-toyota-rav4",
+        "sourceGrade": "A"
+      }
+    ],
+    "origin": "manual",
+    "note": null
+  },
+  "extraManuals": [],
+  "fuelEconomy": [
+    {
+      "feId": "33425",
+      "model": "RAV4 2WD",
+      "option": "Auto (S6), 4 cyl, 2.5 L",
+      "engineL": 2.5,
+      "cyl": 4,
+      "trans": "Automatic (S6)",
+      "drive": "Front-Wheel Drive",
+      "mpgCity": 23,
+      "mpgHwy": 30,
+      "mpgComb": 26,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/33425",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "33428",
+      "model": "RAV4 AWD",
+      "option": "Auto (S6), 4 cyl, 2.5 L",
+      "engineL": 2.5,
+      "cyl": 4,
+      "trans": "Automatic (S6)",
+      "drive": "All-Wheel Drive",
+      "mpgCity": 22,
+      "mpgHwy": 28,
+      "mpgComb": 25,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/33428",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "33429",
+      "model": "RAV4 Limited AWD",
+      "option": "Auto (S6), 4 cyl, 2.5 L",
+      "engineL": 2.5,
+      "cyl": 4,
+      "trans": "Automatic (S6)",
+      "drive": "All-Wheel Drive",
+      "mpgCity": 22,
+      "mpgHwy": 29,
+      "mpgComb": 25,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/33429",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    }
+  ],
+  "fuelEconomyFetched": "2026-10-19",
+  "recalls": [
+    {
+      "campaign": "23V734000",
+      "component": "ELECTRICAL SYSTEM:12V/24V/48V BATTERY",
+      "date": "2023-11-01",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2013-2018 RAV4 vehicles.  Certain replacement 12-volt batteries may not fit properly in the battery tray, allowing the battery to move and contact the hold-down bracket, possibly causing a short circuit.",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "15V011000",
+      "component": "TRAILER HITCHES",
+      "date": "2015-01-16",
+      "summary": "Southeast Toyota Distributors, LLC (SET) is recalling certain model year 2013-2015 Toyota Rav4 vehicles manufactured June 1, 2013, to December 29, 2014, and equipped with an accessory trailer light module.  The software within the module may incorrectly detect an electrical short and preventively turn off the electrical current and the trailer lights.",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    }
+  ],
+  "recallsFetched": "2026-10-19",
+  "recallsUrl": "https://www.nhtsa.gov/recalls?nhtsaId=&make=Toyota&model=RAV4&year=2013",
+  "related": {
+    "issues": []
+  },
+  "publishDate": "2026-10-19",
+  "dataUpdated": "2026-10-19",
+  "signOff": {
+    "by": "队长",
+    "date": "2026-10-19"
+  }
+}

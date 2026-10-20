@@ -1,0 +1,32 @@
+---
+import Page from '../../layouts/Page.astro';
+import { liveVehicles, vehicleUrl, liveHubs, SITE } from '../../lib/gate.mjs';
+import { fitTitle } from '../../lib/title.mjs';
+import { AUTHOR } from '../../lib/site.mjs';
+// R-L3 / R-U6: /specs/ is the make -> model -> year entry point. Without an index
+// file here nginx returned 403 on /specs/ (the directory only existed as a parent
+// of year pages), so the whole specs tree had no crawlable root.
+const hubSet = new Set(liveHubs().map(h => `${h.makeSlug}/${h.modelSlug}`));
+const byMake = [...new Set(liveVehicles.map(v => v.makeSlug))].sort().map(mk => {
+  const vs = liveVehicles.filter(v => v.makeSlug === mk);
+  const models = [...new Set(vs.map(v => v.modelSlug))].sort().map(md => {
+    const yrs = vs.filter(v => v.modelSlug === md).sort((a, b) => b.year - a.year);
+    const v0 = yrs[0];
+    return { name: `${v0.make} ${v0.model}`, url: hubSet.has(`${mk}/${md}`) ? `/specs/${mk}/${md}/` : vehicleUrl(v0), years: yrs };
+  });
+  return { slug: mk, name: vs[0].make, models };
+});
+const title = fitTitle('Car specs by make & model', ['Oil', 'Tires', 'Recalls']);
+const description = `Every vehicle we have checked, grouped by make: oil capacity, tire size and pressure, and NHTSA recalls, each figure cited from the owner's manual.`;
+const path = '/specs/';
+const last = liveVehicles.map(v => v.dataUpdated).sort().at(-1);
+const jsonld = [{ '@type': 'Article', headline: 'Car specs by make and model', datePublished: '2026-10-15', dateModified: last, author: { '@type': 'Person', name: AUTHOR.name, url: `${SITE}/authors/${AUTHOR.slug}/` }, mainEntityOfPage: SITE + path }];
+const crumbs = [{ name: 'Home', url: '/' }, { name: 'Specs', url: path }];
+---
+<Page narrow={true} title={title} description={description} path={path} nav="specs" crumbs={crumbs} jsonld={jsonld} h1="Vehicle specs by make and model">
+<p class="ks__src">Live now: {liveVehicles.length} vehicles. A page goes live only after every figure is checked against the owner's manual, NHTSA or fueleconomy.gov.</p>
+{byMake.map(m => <section class="hsec">
+  <h2 class="section__title"><a href={`/specs/${m.slug}/`}>{m.name}</a></h2>
+  <ul class="links">{m.models.map(mo => <li><a href={mo.url}>{mo.name}</a> — {mo.years.map((y, i) => <>{i > 0 && ', '}<a href={vehicleUrl(y)}>{y.year}</a></>)}</li>)}</ul>
+</section>)}
+</Page>

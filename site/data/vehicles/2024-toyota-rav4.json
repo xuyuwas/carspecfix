@@ -10,7 +10,7 @@
   "manual": {
     "sourceId": "manual-2024-toyota-rav4",
     "yearConfirmed": true,
-    "note": "Three 2024 RAV4 owner manuals checked, oil + tire tables identical for shared configs: OM0R147U (Canada prod. through June 2024; https://assets.sia.toyota.com/publications/en/om-s/OM0R147U/pdf/OM0R147U.pdf; oil p.486, tires p.491-494), OM0R069U (Canada prod. from July 2024; https://assets.sia.toyota.com/publications/en/om-s/OM0R069U/pdf/OM0R069U.pdf; same pages), OM42L49U (Japan prod. from July 2024; https://assets.sia.toyota.com/publications/en/om-s/OM42L49U/pdf/OM42L49U.pdf; oil p.494, tires p.499-503; adds 17in type F/G and 19in type C no-spare configs). MY2024 confirmed via Helm SKU pages for all three. OM0R100U (2023) not used."
+    "note": "Three 2024 RAV4 owner manuals checked, oil + tire tables identical for shared configs: OM0R147U (Canada prod. through June 2024; https://assets.sipb.toyota.com/publications/en/om-s/OM0R147U/pdf/OM0R147U.pdf; oil p.486, tires p.491-494), OM0R069U (Canada prod. from July 2024; https://assets.sipb.toyota.com/publications/en/om-s/OM0R069U/pdf/OM0R069U.pdf; same pages), OM42L49U (Japan prod. from July 2024; https://assets.sipb.toyota.com/publications/en/om-s/OM42L49U/pdf/OM42L49U.pdf; oil p.494, tires p.499-503; adds 17in type F/G and 19in type C no-spare configs). MY2024 confirmed via Helm SKU pages for all three. OM0R100U (2023) not used."
   },
   "specs": {
     "oilCapacity": {
@@ -19,6 +19,8 @@
       "page": "p.486",
       "sourceGrade": "A",
       "verified": false,
+      "appliesTo": "2.5L gasoline (non-hybrid) engine",
+      "unverifiedNote": "RAV4 Hybrid / Prime figures: not yet verified (their manuals have not been checked yet)",
       "note": null
     },
     "oilViscosity": {
@@ -174,8 +176,8 @@
     "note": null
   },
   "extraManuals": [
-    "https://assets.sia.toyota.com/publications/en/om-s/OM0R069U/pdf/OM0R069U.pdf",
-    "https://assets.sia.toyota.com/publications/en/om-s/OM42L49U/pdf/OM42L49U.pdf"
+    "https://assets.sipb.toyota.com/publications/en/om-s/OM0R069U/pdf/OM0R069U.pdf",
+    "https://assets.sipb.toyota.com/publications/en/om-s/OM42L49U/pdf/OM42L49U.pdf"
   ],
   "fuelEconomy": [
     {
@@ -276,7 +278,7 @@
     "issues": []
   },
   "publishDate": "2026-10-15",
-  "dataUpdated": "2026-10-15",
+  "dataUpdated": "2026-10-19",
   "signOff": {
     "by": "小数",
     "date": "2026-10-15"

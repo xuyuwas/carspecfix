@@ -8,7 +8,7 @@
   "causes": [
     {
       "text": "Scraping noise = brake pad wear limit indicator",
-      "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+      "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
       "document": "2022 Toyota Camry Owner's Manual OM06244U (year mapping per Helm listing; manual is Camry-specific)",
       "page": "p.199",
       "fetched": "2026-10-15",
@@ -34,7 +34,7 @@
   "urgency": [
     {
       "text": "Dangerous to drive when pad/disc wear limits exceeded; rotor damage may result",
-      "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+      "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
       "document": "2022 Toyota Camry Owner's Manual OM06244U (year mapping per Helm listing; manual is Camry-specific)",
       "page": "p.199",
       "fetched": "2026-10-15",
@@ -45,15 +45,60 @@
       "quote": null
     }
   ],
-  "guidancePrimary": "Not yet verified (no universal source); brand quotes are vehicle-specific extras only",
-  "guidance": [],
-  "firstStep": null,
+  "guidancePrimary": "universal: Car Care Council — do not postpone brake repair to the metal-to-metal point (potentially dangerous); Toyota: scraping wear-indicator noise = check/replace pads as soon as possible",
+  "guidance": [
+    {
+      "text": "Never put off routine brake inspections or any needed repair, such as letting the brakes get to the \"metal-to-metal\" point, which can be potentially dangerous and lead to a more costly repair bill. Grinding is the noise brakes make at that stage.",
+      "url": "https://www.carcare.org?p=65",
+      "document": "Car Care Council, \"Stop and Check Your Brakes\" (Brake Safety Awareness Month, published 2020-08-03; non-profit consumer education organization)",
+      "page": "web page",
+      "fetched": "2026-10-19",
+      "sourceGrade": "A",
+      "maker": "Car Care Council",
+      "docKind": "consumer education page",
+      "appliesTo": "universal",
+      "quote": null,
+      "answers": "can_i_keep_driving: grinding = do not keep postponing; metal-to-metal is potentially dangerous — have the brakes inspected as soon as possible",
+      "allBrands": true
+    },
+    {
+      "text": "Scraping noise (brake pad wear limit indicator): have the brake pads checked and replaced as soon as possible.",
+      "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+      "document": "2022 Toyota Camry Owner's Manual OM06244U (year mapping per Helm listing; manual is Camry-specific)",
+      "page": "p.199",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "Toyota",
+      "docKind": "owner's manual",
+      "appliesTo": "vehicle-specific: Toyota Camry 2022",
+      "quote": null,
+      "answers": "vehicle-specific: Toyota says inspect/replace as soon as possible",
+      "allBrands": false
+    }
+  ],
+  "firstStep": {
+    "text": "Grinding is not a self-check symptom: the pad or wear-limit condition behind it can only be confirmed by inspecting the brakes. Have the vehicle inspected as soon as possible, and avoid letting it reach metal-to-metal.",
+    "url": "https://www.carcare.org?p=65",
+    "document": "Car Care Council, \"Stop and Check Your Brakes\" (Brake Safety Awareness Month, published 2020-08-03; non-profit consumer education organization)",
+    "page": "web page",
+    "fetched": "2026-10-19",
+    "sourceGrade": "A",
+    "maker": "Car Care Council",
+    "docKind": "consumer education page",
+    "appliesTo": "universal",
+    "quote": null,
+    "answers": "shop vs self: shop inspection as soon as possible — no reliable self-check for grinding",
+    "allBrands": true
+  },
   "safetyCritical": true,
   "related": {
     "issues": [],
     "vehicles": []
   },
-  "publishDate": null,
-  "dataUpdated": "2026-10-15",
-  "signOff": null
+  "publishDate": "2026-10-19",
+  "dataUpdated": "2026-10-19",
+  "signOff": {
+    "by": "小数",
+    "date": "2026-10-19"
+  }
 }

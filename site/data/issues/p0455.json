@@ -92,7 +92,22 @@
       "quote": "The fuel main flap unit may have stuck open, causing a DTC to set."
     }
   ],
-  "urgency": [],
+  "urgency": [
+    {
+      "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1009Z15.TXT",
+      "document": "U.S. EPA Fact Sheet EPA 420-F-97-003 (May 1997), Frequently Asked Questions About On-Board Diagnostics",
+      "page": "p.2",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "U.S. EPA",
+      "docKind": "fact sheet",
+      "quote": "It is important to note that an illuminated dashboard light, as described here, is intended to inform the driver of the need for service, NOT of the need to stop the vehicle. However, service should be sought as soon as possible.",
+      "text": "Steady light: get the car serviced as soon as possible, but this is not a reason to stop driving.",
+      "answers": "urgency: service as soon as possible (steady light)",
+      "allBrands": true,
+      "appliesTo": "universal"
+    }
+  ],
   "guidancePrimary": "universal: EPA 420-F-97-003 p.2 (steady: service ASAP, not need to stop; flashing: reduce speed, service ASAP)",
   "guidance": [
     {
@@ -121,7 +136,11 @@
       "appliesTo": "universal",
       "quote": "Under certain conditions, the dashboard light will blink or flash. This indicates a rather severe level of engine misfire. When this occurs, the driver should reduce speed and seek service as soon as possible.",
       "answers": "flashing light: reduce speed, seek service as soon as possible",
-      "allBrands": true
+      "allBrands": true,
+      "onlyCodes": [
+        "P0300",
+        "P0301"
+      ]
     },
     {
       "text": "For example, if the gas cap is not properly tightened after refueling, the OBD system can detect the vapor leak that exists from the cap not being completely tightened. If the gas cap is subsequently tightened, the dashboard light should be extinguished within a few days.",
@@ -139,7 +158,7 @@
     },
     {
       "text": "If the malfunction indicator lamp comes on while driving First check the following: Is the fuel tank empty? If it is, fill the fuel tank immediately. Is the fuel tank cap loose? If it is, tighten it securely. The light will go off after several driving trips. If the light does not go off even after several trips, contact your Toyota dealer as soon as possible.",
-      "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+      "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
       "document": "2022 Toyota Camry Owner's Manual OM06244U",
       "page": "p.533",
       "fetched": "2026-10-15",
@@ -153,7 +172,7 @@
     },
     {
       "text": "When \"Check Fuel Cap\" is displayed on the multi-information display: The fuel tank cap may be unfastened or loose. Turn the engine switch off, check the cap and tighten it securely.",
-      "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+      "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
       "document": "2022 Toyota Camry Owner's Manual OM06244U",
       "page": "p.247",
       "fetched": "2026-10-15",
@@ -167,7 +186,7 @@
     },
     {
       "text": "Malfunction indicator lamp ... Indicates a malfunction in: The electronic engine control system; The electronic throttle control system; or The electronic automatic transmission control system → Have the vehicle inspected by your Toyota dealer immediately.",
-      "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+      "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
       "document": "2022 Toyota Camry Owner's Manual OM06244U",
       "page": "p.528",
       "fetched": "2026-10-15",
@@ -194,7 +213,20 @@
       "allBrands": true
     }
   ],
-  "firstStep": null,
+  "firstStep": {
+    "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1009Z15.TXT",
+    "document": "U.S. EPA Fact Sheet EPA 420-F-97-003 (May 1997), Frequently Asked Questions About On-Board Diagnostics",
+    "page": "p.3",
+    "fetched": "2026-10-15",
+    "sourceGrade": "A",
+    "maker": "U.S. EPA",
+    "docKind": "fact sheet",
+    "quote": "For example, if the gas cap is not properly tightened after refueling, the OBD system can detect the vapor leak that exists from the cap not being completely tightened. If the gas cap is subsequently tightened, the dashboard light should be extinguished within a few days.",
+    "text": "Tighten the fuel cap until it clicks, then drive a few trips and see whether the light goes out on its own.",
+    "answers": "check yourself first: fuel cap",
+    "allBrands": true,
+    "appliesTo": "universal"
+  },
   "safetyCritical": false,
   "related": {
     "issues": [
@@ -204,9 +236,19 @@
     "vehicles": []
   },
   "publishDate": "2026-10-16",
-  "dataUpdated": "2026-10-15",
+  "dataUpdated": "2026-10-20",
   "signOff": {
     "by": "小数",
     "date": "2026-10-15"
+  },
+  "nhtsaStats": {
+    "complaintsMentioning": 75,
+    "complaintsTotal": 1626788,
+    "recallsMentioning": 0,
+    "recallsTotal": 30378,
+    "fetched": "2026-10-20",
+    "source": "https://static.nhtsa.gov/odi/ffdd/cmpl/FLAT_CMPL.zip",
+    "sourceRecalls": "https://static.nhtsa.gov/odi/ffdd/rcl/FLAT_RCL_POST_2010.zip",
+    "method": "code counted when it appears in the complaint description (CDESCR) for complaints, or in the recall component/defect/consequence/corrective-action text for recalls; unique ODINO per complaint and unique CAMPNO per recall"
   }
 }

@@ -9,7 +9,10 @@ export function GET() {
     const v = liveVehicles.filter(isIndexable), i = liveIssues.filter(isIndexable);
     const all = [...v.map(x => x.dataUpdated), ...i.map(x => x.dataUpdated), STATIC_DATE].sort().at(-1)!;
     urls.push(['/', all]); if (liveIssueHub('code')) urls.push(['/codes/', all]); if (liveIssueHub('symptom')) urls.push(['/symptoms/', all]);
-    for (const p of ['/about/', '/sources/', '/authors/editor/', '/contact/', '/privacy/']) urls.push([p, STATIC_DATE]);
+    for (const p of ['/about/', '/sources/', '/authors/editor/', '/contact/', '/privacy/', '/repair-cost/']) urls.push([p, STATIC_DATE]);
+    // /specs/ + /specs/<make>/ are real pages now (they 403'd before: no index file).
+    urls.push(['/specs/', all]);
+    for (const mk of [...new Set(v.map(x => x.makeSlug))].sort()) urls.push([`/specs/${mk}/`, all]);
     for (const h of liveHubs()) urls.push([`/specs/${h.makeSlug}/${h.modelSlug}/`, h.years.map(y => y.dataUpdated).sort().at(-1)]);
     v.forEach(x => urls.push([vehicleUrl(x), x.dataUpdated, x.slug])); i.forEach(x => urls.push([issueUrl(x), x.dataUpdated]));
   }

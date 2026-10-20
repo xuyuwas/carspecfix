@@ -1,0 +1,231 @@
+{
+  "slug": "2012-toyota-rav4",
+  "year": 2012,
+  "make": "Toyota",
+  "model": "RAV4",
+  "makeSlug": "toyota",
+  "modelSlug": "rav4",
+  "powertrain": "ice",
+  "vpicConfirmed": true,
+  "manual": {
+    "sourceId": "manual-2012-toyota-rav4",
+    "yearConfirmed": true,
+    "note": "OMOM42836U, listed as the 2012 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2012/. Oil capacity p.488, viscosity p.489, tires p.494 (printed page = PDF page index + 1). Toyota lists a second 2012 RAV4 owner manual, OM42862U (https://assets.sipb.toyota.com/publications/en/om-s/OM42862U/pdf/OM42862U.pdf). Its oil table gives 4.6 qt (4.4 L) with filter for the 2.5 L engine instead of the 4.7 qt (4.4 L) shown here (OM42862U p.506); the V6 figures and the tire table (OM42862U p.512) are identical. Figures on this page follow OM42836U, the first manual listed for 2012."
+  },
+  "specs": {
+    "oilCapacity": {
+      "value": "2.5L 4-cylinder (2AR-FE): 4.7 qt (4.4 L) with filter, 4.2 qt (4.0 L) without; 3.5L V6 (2GR-FE): 6.4 qt (6.1 L) with filter, 6.0 qt (5.7 L) without",
+      "source": "manual-2012-toyota-rav4",
+      "page": "p.488",
+      "sourceGrade": "A",
+      "verified": false,
+      "appliesTo": "2.5L 4-cylinder (2AR-FE) and 3.5L V6 (2GR-FE) gasoline engines",
+      "unverifiedNote": "Only the two engines listed in this manual are covered. Any other engine offered in this market: not yet verified.",
+      "note": null
+    },
+    "oilViscosity": {
+      "value": "2.5L 4-cylinder (2AR-FE): SAE 5W-20 or 0W-20 (0W-20 is the best choice for fuel economy and cold starting); 3.5L V6 (2GR-FE): SAE 5W-30 (SAE 10W-30 may be used, but replace it with 5W-30 at the next oil change)",
+      "source": "manual-2012-toyota-rav4",
+      "page": "p.489",
+      "sourceGrade": "A",
+      "verified": false,
+      "note": null
+    },
+    "wiperSizes": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "no citable source yet"
+    },
+    "batteryGroup": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "no citable source yet"
+    },
+    "towingCapacity": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false
+    },
+    "tpmsReset": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": null
+    }
+  },
+  "tires": {
+    "rows": [
+      {
+        "wheel": "16",
+        "config": "Type A",
+        "tireSize": "215/70R16 99H",
+        "frontPsi": 32,
+        "rearPsi": 32,
+        "page": "p.494",
+        "source": "manual-2012-toyota-rav4",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "17",
+        "config": "Type A",
+        "tireSize": "225/65R17 101H",
+        "frontPsi": 32,
+        "rearPsi": 32,
+        "page": "p.494",
+        "source": "manual-2012-toyota-rav4",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "18",
+        "config": "Type A",
+        "tireSize": "235/55R18 99H",
+        "frontPsi": 32,
+        "rearPsi": 32,
+        "page": "p.494",
+        "source": "manual-2012-toyota-rav4",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "18",
+        "config": "Type B",
+        "tireSize": "P235/55R18 99H",
+        "frontPsi": 32,
+        "rearPsi": 32,
+        "page": "p.494",
+        "source": "manual-2012-toyota-rav4",
+        "sourceGrade": "A"
+      }
+    ],
+    "origin": "manual",
+    "note": null
+  },
+  "extraManuals": [
+    "https://assets.sipb.toyota.com/publications/en/om-s/OM42862U/pdf/OM42862U.pdf"
+  ],
+  "fuelEconomy": [
+    {
+      "feId": "32196",
+      "model": "RAV4 2WD",
+      "option": "Auto 4-spd, 4 cyl, 2.5 L",
+      "engineL": 2.5,
+      "cyl": 4,
+      "trans": "Automatic 4-spd",
+      "drive": "Front-Wheel Drive",
+      "mpgCity": 21,
+      "mpgHwy": 28,
+      "mpgComb": 24,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/32196",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "32197",
+      "model": "RAV4 2WD",
+      "option": "Auto 5-spd, 6 cyl, 3.5 L",
+      "engineL": 3.5,
+      "cyl": 6,
+      "trans": "Automatic 5-spd",
+      "drive": "Front-Wheel Drive",
+      "mpgCity": 19,
+      "mpgHwy": 26,
+      "mpgComb": 22,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/32197",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "32200",
+      "model": "RAV4 4WD",
+      "option": "Auto 4-spd, 4 cyl, 2.5 L",
+      "engineL": 2.5,
+      "cyl": 4,
+      "trans": "Automatic 4-spd",
+      "drive": "All-Wheel Drive",
+      "mpgCity": 21,
+      "mpgHwy": 27,
+      "mpgComb": 23,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/32200",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "32201",
+      "model": "RAV4 4WD",
+      "option": "Auto 5-spd, 6 cyl, 3.5 L",
+      "engineL": 3.5,
+      "cyl": 6,
+      "trans": "Automatic 5-spd",
+      "drive": "All-Wheel Drive",
+      "mpgCity": 19,
+      "mpgHwy": 26,
+      "mpgComb": 22,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/32201",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    }
+  ],
+  "fuelEconomyFetched": "2026-10-19",
+  "recalls": [
+    {
+      "campaign": "16V096000",
+      "component": "SEAT BELTS:REAR/OTHER",
+      "date": "2016-02-19",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain model year 2006-2012 RAV4 vehicles manufactured July 28, 2005, to December 19, 2012, and 2012-2014 RAV4 EV vehicles manufactured July 24, 2012, to August 29, 2014.  In the event of a frontal collision, the rear seat belts for the outboard seats may be cut by the seat cushion frame.",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "15V577000",
+      "component": "VISIBILITY/WIPER",
+      "date": "2015-09-18",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain model year 2009-2012 RAV4 vehicles manufactured October 27, 2008, to December 19, 2012 and 2012-2014 RAV4 EV vehicles manufactured July 24, 2012, to August 29, 2014.  In the affected vehicles, water may drip onto the joint that connects the wiper linkage to the wiper motor.",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "14V054000",
+      "component": "SERVICE BRAKES, HYDRAULIC:ANTILOCK/TRACTION CONTROL/ELECTRONIC LIMITED SLIP:CONTROL UNIT/MODULE",
+      "date": "2014-02-12",
+      "summary": "Toyota is recalling certain model year 2012 and 2013 Toyota Tacoma and Lexus RX350 vehicles and certain model year 2012 Toyota Rav4 vehicles.  In the affected vehicles, the brake system contains a brake actuator that adjusts the fluid pressure of each wheel cylinder.  An electrical component within the actuator may experience an increased resistance resulting in the illumination of various warning",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "13V123000",
+      "component": "EQUIPMENT:OTHER:LABELS",
+      "date": "2013-04-09",
+      "summary": "Southeast Toyota is recalling certain model year 2008 and 2010-2013 Toyota Tundra, 2010-2012 Rav4, 2012 Toyota Sequoia, 2010-2011 Toyota Corolla, 2010-2011 Toyota Camry and Camry Hybrid, 2010-2013 Toyota Highlander and Highlander Hybrid, 2010-2013 Toyota FJ Cruiser, 2011 Toyota Land Cruiser, 2010-2013 Toyota Venza, 2010-2011 Toyota 4Runner, 2010-2013 Toyota Tacoma, 2011-2012 Toyota Sienna, 2012 To",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "13V014000",
+      "component": "AIR BAGS:FRONTAL:SENSOR/CONTROL MODULE-INACTIVE",
+      "date": "2013-01-16",
+      "summary": "Southeast Toyota Distributors, LLC (SET) is recalling certain models interspersed through model years 2009 through 2013 as follows: model year 2009-2012 Tacoma, 4Runner, Camry, Camry Hybrid, Prius, and RAV4; model year 2009-2010 Avalon, FJ Cruiser, and Highlander Hybrid; model year 2010-2013 model year Corolla, Sienna and Tundra; model year 2009-2013 Highlander and Venza; model year 2012 Prius V; ",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    }
+  ],
+  "recallsFetched": "2026-10-19",
+  "recallsUrl": "https://www.nhtsa.gov/recalls?nhtsaId=&make=Toyota&model=RAV4&year=2012",
+  "related": {
+    "issues": []
+  },
+  "publishDate": "2026-10-19",
+  "dataUpdated": "2026-10-19",
+  "signOff": {
+    "by": "队长",
+    "date": "2026-10-19"
+  }
+}

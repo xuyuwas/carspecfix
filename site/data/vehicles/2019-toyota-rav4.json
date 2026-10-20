@@ -1,0 +1,259 @@
+{
+  "slug": "2019-toyota-rav4",
+  "year": 2019,
+  "make": "Toyota",
+  "model": "RAV4",
+  "makeSlug": "toyota",
+  "modelSlug": "rav4",
+  "powertrain": "ice",
+  "vpicConfirmed": true,
+  "manual": {
+    "sourceId": "manual-2019-toyota-rav4",
+    "yearConfirmed": true,
+    "note": "OMOM0R009U, listed as the 2019 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2019/. Oil capacity p.660, viscosity p.661, tires p.664 (printed page = PDF page index + 1)."
+  },
+  "specs": {
+    "oilCapacity": {
+      "value": "4.8 qt (4.5 L) with filter; 4.4 qt (4.2 L) without",
+      "source": "manual-2019-toyota-rav4",
+      "page": "p.660",
+      "sourceGrade": "A",
+      "verified": false,
+      "appliesTo": "2.5L gasoline (non-hybrid) engine",
+      "unverifiedNote": "RAV4 Hybrid figures: not yet verified (the hybrid manual has not been checked yet)",
+      "note": null
+    },
+    "oilViscosity": {
+      "value": "SAE 0W-16 (0W-20 acceptable)",
+      "source": "manual-2019-toyota-rav4",
+      "page": "p.661",
+      "sourceGrade": "A",
+      "verified": false,
+      "note": null
+    },
+    "wiperSizes": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "no citable source yet"
+    },
+    "batteryGroup": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "no citable source yet"
+    },
+    "towingCapacity": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false
+    },
+    "tpmsReset": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": null
+    }
+  },
+  "tires": {
+    "rows": [
+      {
+        "wheel": "17",
+        "config": "Vehicles with 17-inch wheels type A",
+        "tireSize": "225/65R17 102H",
+        "frontPsi": 35,
+        "rearPsi": 35,
+        "page": "p.664",
+        "source": "manual-2019-toyota-rav4",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "17",
+        "config": "Vehicles with 17-inch wheels type B",
+        "tireSize": "225/65R17 102H",
+        "frontPsi": 36,
+        "rearPsi": 36,
+        "page": "p.665",
+        "source": "manual-2019-toyota-rav4",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "17",
+        "config": "Vehicles with 17-inch wheels type C",
+        "tireSize": "225/65R17 102H",
+        "frontPsi": 33,
+        "rearPsi": 33,
+        "page": "p.665",
+        "source": "manual-2019-toyota-rav4",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "17",
+        "config": "Vehicles with 17-inch wheels type D",
+        "tireSize": "225/65R17 102H",
+        "frontPsi": 35,
+        "rearPsi": 35,
+        "page": "p.666",
+        "source": "manual-2019-toyota-rav4",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "17",
+        "config": "Vehicles with 17-inch wheels type E",
+        "tireSize": "225/65R17 102H",
+        "frontPsi": 36,
+        "rearPsi": 36,
+        "page": "p.666",
+        "source": "manual-2019-toyota-rav4",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "19",
+        "config": "Vehicles with 19-inch wheels type A",
+        "tireSize": "235/55R19 101V",
+        "frontPsi": 33,
+        "rearPsi": 33,
+        "page": "p.667",
+        "source": "manual-2019-toyota-rav4",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "19",
+        "config": "Vehicles with 19-inch wheels type B",
+        "tireSize": "235/55R19 101V",
+        "frontPsi": 35,
+        "rearPsi": 35,
+        "page": "p.667",
+        "source": "manual-2019-toyota-rav4",
+        "sourceGrade": "A"
+      }
+    ],
+    "origin": "manual",
+    "note": null
+  },
+  "extraManuals": [],
+  "fuelEconomy": [
+    {
+      "feId": "41122",
+      "model": "RAV4",
+      "option": "Auto (S8), 4 cyl, 2.5 L",
+      "engineL": 2.5,
+      "cyl": 4,
+      "trans": "Automatic (S8)",
+      "drive": "Front-Wheel Drive",
+      "mpgCity": 26,
+      "mpgHwy": 35,
+      "mpgComb": 30,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/41122",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "41126",
+      "model": "RAV4 AWD",
+      "option": "Auto (S8), 4 cyl, 2.5 L, SIDI & PFI",
+      "engineL": 2.5,
+      "cyl": 4,
+      "trans": "Automatic (S8)",
+      "drive": "All-Wheel Drive",
+      "mpgCity": 25,
+      "mpgHwy": 33,
+      "mpgComb": 28,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/41126",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "41127",
+      "model": "RAV4 AWD",
+      "option": "Auto (S8), 4 cyl, 2.5 L, SIDI & PFI; Stop-Start",
+      "engineL": 2.5,
+      "cyl": 4,
+      "trans": "Automatic (S8)",
+      "drive": "All-Wheel Drive",
+      "mpgCity": 27,
+      "mpgHwy": 34,
+      "mpgComb": 30,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/41127",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    }
+  ],
+  "fuelEconomyFetched": "2026-10-19",
+  "recalls": [
+    {
+      "campaign": "20V682000",
+      "component": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+      "date": "2020-11-04",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2018-2019 4Runner, 2019-2020 Avalon, 2019 Corolla Hatchback, 2017-2019 Highlander, 2018-2020 Camry, 2020 Corolla, 2018-2019 Land Cruiser, 2017-2020 Tacoma, 2019-2020 RAV4, 2019-2020 Sequoia, 2017-2020 Sienna, 2019-2020 Tundra, 2018-2020 Lexus ES350, 2017 Lexus GS200t, 2017-2019 Lexus GS350, 2019 Lexus GS300, 2018-2020 Lexus LC5",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "20V373000",
+      "component": "STEERING:ELECTRIC POWER ASSIST SYSTEM",
+      "date": "2020-06-24",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2019-2020 RAV4 and 2020 RAV4 Hybrid vehicles equipped with electric power steering (EPS).  Water may enter through the steering gear box cover and cause a loss of electric power steering assist.",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "20V286000",
+      "component": "SUSPENSION:FRONT:CONTROL ARM:LOWER ARM",
+      "date": "2020-05-20",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2019-2020 RAV4 and RAV4 Hybrid vehicles.  The front lower suspension arms may have cracks, which may result in the suspension arm separating from the front wheel assembly.",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "20V064000",
+      "component": "ENGINE AND ENGINE COOLING",
+      "date": "2020-02-06",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2020 Toyota Avalon Hybrid, Camry, Camry Hybrid and  Lexus ES300h and 2019-2020 RAV4 and RAV4 Hybrid vehicles equipped with 2.5L 4-Cylinder engines.  Porosity in the engine castings may result in cracks than can allow coolant to leak internally and/or externally.",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "19V576000",
+      "component": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+      "date": "2019-08-06",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2019 RAV4 and RAV4 Hybrid vehicles.  Due to a damaged electrical connector, the back-up camera may not activate when the vehicle is in reverse.  As such, these vehicles fail to comply to Federal Motor Safety Standard (FMVSS) number 111, \"Rearview Mirrors.\"",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "19V503000",
+      "component": "EQUIPMENT:OTHER:LABELS",
+      "date": "2019-06-28",
+      "summary": "Southeast Toyota Distributors, LLC (SET) is recalling certain 2017-2019 Toyota Camry, Corolla, Rav4, Sienna, and Yaris iA vehicles equipped with factory-installed floor mats.  The load carrying capacity modification label may be incorrect.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) number 110, \"Tire Selection and Rims.\"",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "19V244000",
+      "component": "EQUIPMENT:OTHER:LABELS",
+      "date": "2019-03-27",
+      "summary": "Gulf States Toyota (GST) is recalling certain 2019 C-HR, 4Runner, Avalon, Avalon Hybrid, Camry, Camry Hybrid, Highlander, Land Cruiser, Prius, RAV4, Sequoia, Tacoma, Sienna, Tundra and Yaris vehicles.  The text on the load capacity label may become illegible.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) number 110, \"Tire Selection a",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    }
+  ],
+  "recallsFetched": "2026-10-19",
+  "recallsUrl": "https://www.nhtsa.gov/recalls?nhtsaId=&make=Toyota&model=RAV4&year=2019",
+  "related": {
+    "issues": []
+  },
+  "publishDate": "2026-10-19",
+  "dataUpdated": "2026-10-19",
+  "signOff": {
+    "by": "队长",
+    "date": "2026-10-19"
+  }
+}

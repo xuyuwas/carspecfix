@@ -1,0 +1,201 @@
+{
+  "slug": "2015-toyota-rav4",
+  "year": 2015,
+  "make": "Toyota",
+  "model": "RAV4",
+  "makeSlug": "toyota",
+  "modelSlug": "rav4",
+  "powertrain": "ice",
+  "vpicConfirmed": true,
+  "manual": {
+    "sourceId": "manual-2015-toyota-rav4",
+    "yearConfirmed": true,
+    "note": "OMOM42A78U, listed as the 2015 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2015/. Oil capacity p.663, viscosity p.665, tires p.669 (printed page = PDF page index + 1)."
+  },
+  "specs": {
+    "oilCapacity": {
+      "value": "4.6 qt (4.4 L) with filter; 4.2 qt (4.0 L) without",
+      "source": "manual-2015-toyota-rav4",
+      "page": "p.663",
+      "sourceGrade": "A",
+      "verified": false,
+      "appliesTo": "2.5L 4-cylinder (2AR-FE) gasoline engine",
+      "unverifiedNote": "Only the engine listed in this manual is covered. Any other engine offered in this market: not yet verified.",
+      "note": null
+    },
+    "oilViscosity": {
+      "value": "SAE 0W-20 (5W-20 acceptable)",
+      "source": "manual-2015-toyota-rav4",
+      "page": "p.665",
+      "sourceGrade": "A",
+      "verified": false,
+      "note": null
+    },
+    "wiperSizes": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "no citable source yet"
+    },
+    "batteryGroup": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "no citable source yet"
+    },
+    "towingCapacity": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false
+    },
+    "tpmsReset": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": null
+    }
+  },
+  "tires": {
+    "rows": [
+      {
+        "wheel": "17",
+        "config": "Vehicles with 17-inch tires",
+        "tireSize": "225/65R17 102H",
+        "frontPsi": 33,
+        "rearPsi": 33,
+        "page": "p.669",
+        "source": "manual-2015-toyota-rav4",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "18",
+        "config": "Vehicles with 18-inch tires",
+        "tireSize": "235/55R18 100H",
+        "frontPsi": 32,
+        "rearPsi": 32,
+        "page": "p.669",
+        "source": "manual-2015-toyota-rav4",
+        "sourceGrade": "A"
+      }
+    ],
+    "origin": "manual",
+    "note": null
+  },
+  "extraManuals": [],
+  "fuelEconomy": [
+    {
+      "feId": "35577",
+      "model": "RAV4",
+      "option": "Auto (S6), 4 cyl, 2.5 L",
+      "engineL": 2.5,
+      "cyl": 4,
+      "trans": "Automatic (S6)",
+      "drive": "Front-Wheel Drive",
+      "mpgCity": 23,
+      "mpgHwy": 30,
+      "mpgComb": 26,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/35577",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "35578",
+      "model": "RAV4 AWD",
+      "option": "Auto (S6), 4 cyl, 2.5 L",
+      "engineL": 2.5,
+      "cyl": 4,
+      "trans": "Automatic (S6)",
+      "drive": "All-Wheel Drive",
+      "mpgCity": 22,
+      "mpgHwy": 28,
+      "mpgComb": 25,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/35578",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "35786",
+      "model": "RAV4 LE/XLE",
+      "option": "Auto (S6), 4 cyl, 2.5 L",
+      "engineL": 2.5,
+      "cyl": 4,
+      "trans": "Automatic (S6)",
+      "drive": "Front-Wheel Drive",
+      "mpgCity": 23,
+      "mpgHwy": 30,
+      "mpgComb": 26,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/35786",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "35579",
+      "model": "RAV4 Limited AWD",
+      "option": "Auto (S6), 4 cyl, 2.5 L",
+      "engineL": 2.5,
+      "cyl": 4,
+      "trans": "Automatic (S6)",
+      "drive": "All-Wheel Drive",
+      "mpgCity": 22,
+      "mpgHwy": 28,
+      "mpgComb": 24,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/35579",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    }
+  ],
+  "fuelEconomyFetched": "2026-10-19",
+  "recalls": [
+    {
+      "campaign": "23V734000",
+      "component": "ELECTRICAL SYSTEM:12V/24V/48V BATTERY",
+      "date": "2023-11-01",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2013-2018 RAV4 vehicles.  Certain replacement 12-volt batteries may not fit properly in the battery tray, allowing the battery to move and contact the hold-down bracket, possibly causing a short circuit.",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "15V144000",
+      "component": "STEERING:ELECTRIC POWER ASSIST SYSTEM",
+      "date": "2015-03-13",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain model year 2015 Camry, Camry Hybrid, Highlander, and Highlander Hybrid, and 2014-2015 Rav4 vehicles.  A component of the electric power steering (EPS) electronic control unit (ECU) may have been damaged during the manufacturing process.  Over time, this damage may result in failure of the electric power steering system.",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "15V011000",
+      "component": "TRAILER HITCHES",
+      "date": "2015-01-16",
+      "summary": "Southeast Toyota Distributors, LLC (SET) is recalling certain model year 2013-2015 Toyota Rav4 vehicles manufactured June 1, 2013, to December 29, 2014, and equipped with an accessory trailer light module.  The software within the module may incorrectly detect an electrical short and preventively turn off the electrical current and the trailer lights.",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "14V828000",
+      "component": "EQUIPMENT",
+      "date": "2014-12-30",
+      "summary": "Southeast Toyota Distributors, LLC (SET) is recalling certain model year 2014-2015 Toyota 4Runner, Tacoma, FJ Cruiser, Land Cruiser, RAV4, Scion FRS, and XB vehicles.  The affected vehicles may have accessories installed by SET, such as running boards or other items, that were incorrectly installed.  The accessory attaching fasteners were not tightened with the proper torque, possibly causing the ",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    }
+  ],
+  "recallsFetched": "2026-10-19",
+  "recallsUrl": "https://www.nhtsa.gov/recalls?nhtsaId=&make=Toyota&model=RAV4&year=2015",
+  "related": {
+    "issues": []
+  },
+  "publishDate": "2026-10-19",
+  "dataUpdated": "2026-10-19",
+  "signOff": {
+    "by": "队长",
+    "date": "2026-10-19"
+  }
+}

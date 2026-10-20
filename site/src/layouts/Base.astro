@@ -46,23 +46,24 @@ const feedbackVer = createHash('sha1').update(readFileSync(new URL('../../public
 <meta property="og:type" content="website"><meta property="og:title" content={title}><meta property="og:description" content={description}><meta property="og:url" content={canonical}><meta property="og:image" content={SITE + '/logo.svg'}><meta name="twitter:card" content="summary">
 <link rel="icon" href="/logo.svg" type="image/svg+xml">
 {graph.length > 0 && <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@graph': graph })} />}
-{/* Google Analytics */}
-<script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-PZGWPZXGY5"></script>
+{/* Google Analytics + Ahrefs Analytics — loaded only when the browser does NOT
+    send Do Not Track. The privacy page promises DNT blocks analytics; this is
+    where that promise is kept (the scripts themselves do not honor DNT). */}
 <script is:inline>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-PZGWPZXGY5');
+(function(){var dnt=navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack;var no=dnt==='1'||dnt==='yes';
+if(!no){
+  var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-PZGWPZXGY5';document.head.appendChild(s);
+  window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-PZGWPZXGY5');
+  var a=document.createElement('script');a.async=true;a.src='https://analytics.ahrefs.com/analytics.js';a.setAttribute('data-key','PEOYNGCTHDdSS2akpMeVGw');document.head.appendChild(a);
+}})();
 </script>
-{/* Ahrefs Analytics — cookieless, key mounted 2026-10-17 */}
-<script is:inline async src="https://analytics.ahrefs.com/analytics.js" data-key="PEOYNGCTHDdSS2akpMeVGw"></script>
 </head>
 <body>
 {PREVIEW && <div class="preview-banner">PREVIEW BUILD — includes pages that have not passed the publish gate. Not for deployment.</div>}
 <header class="hdr"><div class="container hdr__in">
 <a class="brand" href="/"><img src="/logo.svg" width="28" height="28" alt=""><span>CarSpec<b>Fix</b></span></a>
 <nav class="nav" id="main-nav" aria-label="Main">
-  <a href="/" aria-current={nav === 'specs' ? 'page' : undefined}>Specs</a>
+  <a href="/specs/" aria-current={nav === 'specs' ? 'page' : undefined}>Specs</a>
   {hasSym && <a href="/symptoms/" aria-current={nav === 'symptoms' ? 'page' : undefined}>Symptoms</a>}
   {hasCode && <a href="/codes/" aria-current={nav === 'codes' ? 'page' : undefined}>Trouble codes</a>}
   <a href="/sources/" aria-current={nav === 'sources' ? 'page' : undefined}>Data sources</a>
@@ -74,7 +75,7 @@ gtag('config', 'G-PZGWPZXGY5');
 <footer class="ftr"><div class="container ftr__in">
 <a class="brand" href="/"><img src="/logo.svg" width="24" height="24" alt=""><span>CarSpec<b>Fix</b></span></a>
 <span>Data from owner's manuals, manufacturer service bulletins, NHTSA and fueleconomy.gov. Every figure cites its source. General information, not professional mechanical advice.</span>
-<nav><a href="/sources/">Data sources</a><a href="/about/">About</a><a href="/authors/editor/">Author</a><a href="/privacy/">Privacy</a><a href="/contact/">Contact</a></nav>
+<nav><a href="/repair-cost/">Estimating costs</a><a href="/sources/">Data sources</a><a href="/about/">About</a><a href="/authors/editor/">Author</a><a href="/privacy/">Privacy</a><a href="/contact/">Contact</a></nav>
 </div></footer>
 <div class="sr-only" aria-live="polite" id="live"></div>
 <script is:inline src={`/feedback.js?v=${feedbackVer}`}></script>
@@ -84,7 +85,11 @@ gtag('config', 'G-PZGWPZXGY5');
   function copyText(t){if(navigator.clipboard&&window.isSecureContext){return navigator.clipboard.writeText(t).then(function(){return true},function(){return fallbackCopy(t)})}return Promise.resolve(fallbackCopy(t))}
   function flash(btn,ok){var l=btn.querySelector('.lbl'),live=document.getElementById('live'),msg=ok?'Copied':'Copy failed';if(l){var old=l.dataset.orig||l.textContent;l.dataset.orig=old;l.textContent=msg;btn.classList.toggle('is-err',!ok);setTimeout(function(){l.textContent=old;btn.classList.remove('is-err')},1600)}else{btn.title=msg}if(live)live.textContent=msg}
   function track(name){/* R-A2 event analytics: tool TBD by 队长 */ if(window.CSF_TRACK)window.CSF_TRACK(name)}
-  function goCode(v){var c=(v||'').trim().toLowerCase().replace(/[^a-z0-9]/g,'');if(liveCodes.indexOf(c)>=0)location.href='/codes/'+c+'/';else alert('That code page is not published yet.')}
+  function goCode(v,form){var c=(v||'').trim().toLowerCase().replace(/[^a-z0-9]/g,'');if(!c)return;if(liveCodes.indexOf(c)>=0)location.href='/codes/'+c+'/';else{
+    var box=form?form.querySelector('.code-miss'):null;
+    if(!box&&form){box=document.createElement('p');box.className='code-miss';box.setAttribute('role','status');form.parentNode.insertBefore(box,form.nextSibling)}
+    if(box)box.innerHTML='No page for <b>'+c.toUpperCase()+'</b> yet. Live codes: '+liveCodes.map(function(x){return x.toUpperCase()}).join(', ')+'. <a href="/contact/">Request a code or report a data error</a>.';
+    var inp=form&&form.querySelector('input');if(inp)inp.focus()}}
   document.addEventListener('click',function(e){
     var c=e.target.closest('[data-copy]');
     if(c){var t=c.getAttribute('data-copy');if(!t){var scope=c.closest('[data-copy-scope],section');t=scope?scope.innerText.replace(/\s*(Copy|Print|Print page|Copied|Copy failed)\s*/g,' ').trim():document.title}copyText(t).then(function(ok){flash(c,ok);track('copy')})}
@@ -96,7 +101,7 @@ gtag('config', 'G-PZGWPZXGY5');
     if(sd){var bx=sd.closest('.feedback'),ta=bx.querySelector('textarea');CSF.send({type:'feedback-detail',page:bx.dataset.page,value:'no',text:ta.value.slice(0,1000)},bx).then(function(ok){bx.querySelector('.feedback__msg').textContent=ok?'Sent. Thank you.':'Could not send. Please try again later.';if(ok){bx.querySelector('.feedback__more').hidden=true}})}
   });
   document.addEventListener('submit',function(e){var f=e.target;
-    if(f.matches('[data-search],[data-code]')){e.preventDefault();goCode(f.q.value)}
+    if(f.matches('[data-search],[data-code]')){e.preventDefault();goCode(f.q.value,f)}
     if(f.matches('[data-goto]')){e.preventDefault();if(f.u.value)location.href=f.u.value}
     if(f.matches('[data-report]')){e.preventDefault();CSF.send({type:'report',page:f.page.value,field:f.field.value,text:f.details.value.slice(0,2000)},f).then(function(ok){f.querySelector('[role=status]').textContent=ok?'Thanks. Your report is queued for review.':'Could not send. Please try again later.';track('report');if(ok)f.reset()})}
   });

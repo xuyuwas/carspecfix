@@ -8,7 +8,7 @@
   "causes": [
     {
       "text": "Brake pad wear limit indicator squealing",
-      "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+      "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
       "document": "2022 Toyota Camry Owner's Manual OM06244U (year mapping per Helm listing; manual is Camry-specific)",
       "page": "p.199",
       "fetched": "2026-10-15",
@@ -34,7 +34,7 @@
   "urgency": [
     {
       "text": "'As soon as possible'; dangerous to drive past pad/disc wear limits",
-      "url": "https://assets.sia.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+      "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
       "document": "2022 Toyota Camry Owner's Manual OM06244U (year mapping per Helm listing; manual is Camry-specific)",
       "page": "p.199",
       "fetched": "2026-10-15",
@@ -45,15 +45,74 @@
       "quote": null
     }
   ],
-  "guidancePrimary": "Not yet verified (no universal source); brand quotes are vehicle-specific extras only",
-  "guidance": [],
-  "firstStep": null,
+  "guidancePrimary": "universal: Car Care Council — odd noises/squealing when braking are listed brake warning signs and the brakes should be inspected; needed repair should not be postponed to the metal-to-metal point",
+  "guidance": [
+    {
+      "text": "If you hear odd noises when you apply the brakes, they should be inspected. Squealing is listed among the brake warning signs, along with pulling to one side, low or hard pedal feel, grabbing, vibration, and an illuminated brake warning light.",
+      "url": "https://www.carcare.org?p=65",
+      "document": "Car Care Council, \"Stop and Check Your Brakes\" (Brake Safety Awareness Month, published 2020-08-03; non-profit consumer education organization)",
+      "page": "web page",
+      "fetched": "2026-10-19",
+      "sourceGrade": "A",
+      "maker": "Car Care Council",
+      "docKind": "consumer education page",
+      "appliesTo": "universal",
+      "quote": null,
+      "answers": "can_i_keep_driving: squealing is a listed brake warning sign — brakes should be inspected promptly; do not postpone needed repair to the metal-to-metal point",
+      "allBrands": true
+    },
+    {
+      "text": "Brake pad wear limit indicator squealing: have the brake pads checked and replaced as soon as possible.",
+      "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+      "document": "2022 Toyota Camry Owner's Manual OM06244U (year mapping per Helm listing; manual is Camry-specific)",
+      "page": "p.199",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "Toyota",
+      "docKind": "owner's manual",
+      "appliesTo": "vehicle-specific: Toyota Camry 2022",
+      "quote": null,
+      "answers": "vehicle-specific: Toyota says replace pads as soon as possible when the wear indicator squeals",
+      "allBrands": false
+    },
+    {
+      "text": "Brake wear indicator tabs rubbing the rotor cause chirping, squealing or whistling — a sign the pads need service.",
+      "url": "https://www.chevrolet.com/support/vehicle/driving-safety/brakes/brakes-system",
+      "document": "Chevrolet Support: The Brake System",
+      "page": "web page",
+      "fetched": "2026-10-15",
+      "sourceGrade": "A",
+      "maker": "Chevrolet",
+      "docKind": "support page",
+      "appliesTo": "GM vehicles",
+      "quote": null,
+      "answers": "vehicle-specific (GM): wear-indicator squeal means pads need service",
+      "allBrands": false
+    }
+  ],
+  "firstStep": {
+    "text": "Note which brake warning signs apply (noise, pulling, low or hard pedal, grabbing, vibration, warning light). Squealing on its own means the pads should be inspected — pad thickness cannot be judged from outside the wheel, so this is a shop check, not a self-check.",
+    "url": "https://www.carcare.org?p=65",
+    "document": "Car Care Council, \"Stop and Check Your Brakes\" (Brake Safety Awareness Month, published 2020-08-03; non-profit consumer education organization)",
+    "page": "web page",
+    "fetched": "2026-10-19",
+    "sourceGrade": "A",
+    "maker": "Car Care Council",
+    "docKind": "consumer education page",
+    "appliesTo": "universal",
+    "quote": null,
+    "answers": "shop vs self: inspection is a shop check; the warning-sign list is the self-check",
+    "allBrands": true
+  },
   "safetyCritical": true,
   "related": {
     "issues": [],
     "vehicles": []
   },
-  "publishDate": null,
-  "dataUpdated": "2026-10-15",
-  "signOff": null
+  "publishDate": "2026-10-19",
+  "dataUpdated": "2026-10-19",
+  "signOff": {
+    "by": "小数",
+    "date": "2026-10-19"
+  }
 }

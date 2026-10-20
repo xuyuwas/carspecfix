@@ -1,0 +1,285 @@
+{
+  "slug": "2023-toyota-rav4",
+  "year": 2023,
+  "make": "Toyota",
+  "model": "RAV4",
+  "makeSlug": "toyota",
+  "modelSlug": "rav4",
+  "powertrain": "ice",
+  "vpicConfirmed": true,
+  "manual": {
+    "sourceId": "manual-2023-toyota-rav4",
+    "yearConfirmed": true,
+    "note": "OMOM0R100U, listed as the 2023 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2023/. Oil capacity p.486, viscosity p.487, tires p.490 (printed page = PDF page index + 1)."
+  },
+  "specs": {
+    "oilCapacity": {
+      "value": "4.8 qt (4.5 L) with filter; 4.4 qt (4.2 L) without",
+      "source": "manual-2023-toyota-rav4",
+      "page": "p.486",
+      "sourceGrade": "A",
+      "verified": false,
+      "appliesTo": "2.5L gasoline (non-hybrid) engine",
+      "unverifiedNote": "RAV4 Hybrid / Prime figures: not yet verified (their manuals have not been checked yet)",
+      "note": null
+    },
+    "oilViscosity": {
+      "value": "SAE 0W-16 (0W-20 acceptable)",
+      "source": "manual-2023-toyota-rav4",
+      "page": "p.487",
+      "sourceGrade": "A",
+      "verified": false,
+      "note": null
+    },
+    "wiperSizes": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "no citable source yet"
+    },
+    "batteryGroup": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "no citable source yet"
+    },
+    "towingCapacity": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false
+    },
+    "tpmsReset": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": null
+    }
+  },
+  "tires": {
+    "rows": [
+      {
+        "wheel": "17",
+        "config": "Vehicles with 17-inch wheels type A",
+        "tireSize": "225/65R17 102H",
+        "frontPsi": 35,
+        "rearPsi": 35,
+        "page": "p.490",
+        "source": "manual-2023-toyota-rav4",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "17",
+        "config": "Vehicles with 17-inch wheels type B",
+        "tireSize": "225/65R17 102H",
+        "frontPsi": 36,
+        "rearPsi": 36,
+        "page": "p.491",
+        "source": "manual-2023-toyota-rav4",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "17",
+        "config": "Vehicles with 17-inch wheels type C",
+        "tireSize": "225/65R17 102H",
+        "frontPsi": 33,
+        "rearPsi": 33,
+        "page": "p.491",
+        "source": "manual-2023-toyota-rav4",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "17",
+        "config": "Vehicles with 17-inch wheels type D",
+        "tireSize": "225/65R17 102H",
+        "frontPsi": 35,
+        "rearPsi": 35,
+        "page": "p.492",
+        "source": "manual-2023-toyota-rav4",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "17",
+        "config": "Vehicles with 17-inch wheels type E",
+        "tireSize": "225/65R17 102H",
+        "frontPsi": 36,
+        "rearPsi": 36,
+        "page": "p.492",
+        "source": "manual-2023-toyota-rav4",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "18",
+        "config": "Vehicles with 18-inch wheels",
+        "tireSize": "225/60R18 100H",
+        "frontPsi": 33,
+        "rearPsi": 33,
+        "page": "p.493",
+        "source": "manual-2023-toyota-rav4",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "19",
+        "config": "Vehicles with 19-inch wheels type A",
+        "tireSize": "235/55R19 101V",
+        "frontPsi": 33,
+        "rearPsi": 33,
+        "page": "p.493",
+        "source": "manual-2023-toyota-rav4",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "19",
+        "config": "Vehicles with 19-inch wheels type B",
+        "tireSize": "235/55R19 101V",
+        "frontPsi": 35,
+        "rearPsi": 35,
+        "page": "p.494",
+        "source": "manual-2023-toyota-rav4",
+        "sourceGrade": "A"
+      }
+    ],
+    "origin": "manual",
+    "note": null
+  },
+  "extraManuals": [],
+  "fuelEconomy": [
+    {
+      "feId": "46067",
+      "model": "RAV4",
+      "option": "Auto (S8), 4 cyl, 2.5 L, SIDI & PFI",
+      "engineL": 2.5,
+      "cyl": 4,
+      "trans": "Automatic (S8)",
+      "drive": "Front-Wheel Drive",
+      "mpgCity": 27,
+      "mpgHwy": 35,
+      "mpgComb": 30,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/46067",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "46068",
+      "model": "RAV4",
+      "option": "Auto (S8), 4 cyl, 2.5 L, SIDI & PFI; Stop-Start",
+      "engineL": 2.5,
+      "cyl": 4,
+      "trans": "Automatic (S8)",
+      "drive": "Front-Wheel Drive",
+      "mpgCity": 27,
+      "mpgHwy": 34,
+      "mpgComb": 30,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/46068",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "46074",
+      "model": "RAV4 AWD",
+      "option": "Auto (S8), 4 cyl, 2.5 L, SIDI & PFI",
+      "engineL": 2.5,
+      "cyl": 4,
+      "trans": "Automatic (S8)",
+      "drive": "All-Wheel Drive",
+      "mpgCity": 25,
+      "mpgHwy": 33,
+      "mpgComb": 28,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/46074",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "46075",
+      "model": "RAV4 AWD",
+      "option": "Auto (S8), 4 cyl, 2.5 L, SIDI & PFI; Stop-Start",
+      "engineL": 2.5,
+      "cyl": 4,
+      "trans": "Automatic (S8)",
+      "drive": "All-Wheel Drive",
+      "mpgCity": 27,
+      "mpgHwy": 33,
+      "mpgComb": 29,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/46075",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "46077",
+      "model": "RAV4 AWD LE",
+      "option": "Auto (S8), 4 cyl, 2.5 L",
+      "engineL": 2.5,
+      "cyl": 4,
+      "trans": "Automatic (S8)",
+      "drive": "All-Wheel Drive",
+      "mpgCity": 27,
+      "mpgHwy": 34,
+      "mpgComb": 30,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/46077",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "46076",
+      "model": "RAV4 AWD TRD OFFROAD",
+      "option": "Auto (S8), 4 cyl, 2.5 L",
+      "engineL": 2.5,
+      "cyl": 4,
+      "trans": "Automatic (S8)",
+      "drive": "All-Wheel Drive",
+      "mpgCity": 25,
+      "mpgHwy": 32,
+      "mpgComb": 28,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/46076",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    }
+  ],
+  "fuelEconomyFetched": "2026-10-19",
+  "recalls": [
+    {
+      "campaign": "25V744000",
+      "component": "BACK OVER PREVENTION:DISPLAY FUNCTION",
+      "date": "2025-10-30",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2022-2026 Toyota, Lexus, and Subaru Solterra vehicles equipped with a Panoramic View Monitor (PVM) system. Please see the recall report for a complete list of models. A software error may cause the rearview camera to freeze or display a blank screen when the vehicle is in reverse. As such, these vehicles fail to comply with the",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "25V595000",
+      "component": "ELECTRICAL SYSTEM: INSTRUMENT CLUSTER/PANEL",
+      "date": "2025-09-11",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2023-2024 Toyota Venza, 2023-2025 RAV4 Prime, RAV4, Highlander, GR Corolla, Crown, 2024-2025 Lexus TX, LS, Toyota Tacoma, Grand Highlander, and 2025 Lexus RX, Toyota Crown Signia, Camry, RAV 4 Plug-in Hybrid (PHEV), and 4 Runner vehicles. Due to an error in the instrument panel software at vehicle startup, the instrument panel ",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "23V485000",
+      "component": "TIRES:VALVE",
+      "date": "2023-07-11",
+      "summary": "Gulf States Toyota, Inc. (GST) is recalling certain 2023 Toyota RAV4 vehicles equipped with 17\" black alloy accessory wheels.  During installation of the alloy wheels, the tire valve stem may have been improperly installed or damaged.  In addition, the load carrying capacity label may state the incorrect weight.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    }
+  ],
+  "recallsFetched": "2026-10-19",
+  "recallsUrl": "https://www.nhtsa.gov/recalls?nhtsaId=&make=Toyota&model=RAV4&year=2023",
+  "related": {
+    "issues": []
+  },
+  "publishDate": "2026-10-19",
+  "dataUpdated": "2026-10-19",
+  "signOff": {
+    "by": "队长",
+    "date": "2026-10-19"
+  }
+}

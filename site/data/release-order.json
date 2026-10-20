@@ -10,7 +10,10 @@
       "p0171",
       "p0300",
       "p0456",
-      "p0455"
+      "p0455",
+      "brakes-squeaking",
+      "car-shakes-when-braking",
+      "grinding-noise-when-braking"
     ],
     "2": [
       "p0301",
@@ -18,10 +21,32 @@
       "2022-toyota-camry",
       "2024-toyota-camry",
       "2022-toyota-corolla",
-      "2022-toyota-tacoma"
+      "2022-toyota-tacoma",
+      "2021-toyota-rav4",
+      "2014-toyota-rav4"
     ],
     "3": [
-      "2022-honda-accord"
+      "2022-honda-accord",
+      "2011-toyota-rav4",
+      "2009-toyota-rav4"
+    ],
+    "4": [
+      "2019-toyota-rav4",
+      "2022-toyota-rav4",
+      "2023-toyota-rav4"
+    ],
+    "5": [
+      "2018-toyota-rav4",
+      "2017-toyota-rav4",
+      "2016-toyota-rav4",
+      "2015-toyota-rav4",
+      "2013-toyota-rav4",
+      "2012-toyota-rav4",
+      "2010-toyota-rav4"
+    ],
+    "6": [
+      "car-wont-start-clicking",
+      "car-cranks-but-wont-start"
     ]
   },
   "relatedIssues": [
