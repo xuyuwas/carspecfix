@@ -199,7 +199,7 @@ wwwloc=$(ssh -o BatchMode=yes "$REMOTE" \
   "curl -s -m 20 -o /dev/null -w '%{http_code} %{redirect_url}' https://www.$DOMAIN/" 2>/dev/null || true)
 wwwcode=$(printf '%s' "$wwwloc" | head -1 | awk '{print $1}')
 if [ "$wwwcode" = "301" ]; then
-  echo "    ✅ www.$DOMAIN 301 跳转 apex（$wwwloc）"
+  echo "    ✅ www.$DOMAIN 301 跳转 apex（${wwwloc}）"
 else
   echo "    ⚠️  www.$DOMAIN 未返回 301（实测: ${wwwloc:-无响应}）—— 检查 nginx vhost 或 CF 规则" >&2
 fi
