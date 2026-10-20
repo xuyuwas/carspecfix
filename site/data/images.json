@@ -460,5 +460,467 @@
     "title": "2023 Tesla Model Y, front 11.11.23",
     "signedBy": "小数",
     "signedAt": "2026-10-15"
+  },
+  "2009-toyota-rav4": {
+    "cropped": false,
+    "shownOverride": null,
+    "set": [
+      {
+        "url": "/img/2009-toyota-rav4/2009_Toyota_RAV4_Limited-480.webp",
+        "w": 480,
+        "h": 348
+      },
+      {
+        "url": "/img/2009-toyota-rav4/2009_Toyota_RAV4_Limited-800.webp",
+        "w": 800,
+        "h": 579
+      },
+      {
+        "url": "/img/2009-toyota-rav4/2009_Toyota_RAV4_Limited-1200.webp",
+        "w": 1200,
+        "h": 869
+      }
+    ],
+    "width": 1200,
+    "height": 869,
+    "author": "IFCAR",
+    "license": "Public domain",
+    "licenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-self",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2009_Toyota_RAV4_Limited.jpg",
+    "credit": "Photo: \"2009 Toyota RAV4 Limited\" by IFCAR, via Wikimedia Commons, Public domain (https://commons.wikimedia.org/wiki/Template:PD-self) — resized",
+    "photoYear": 2009,
+    "shown": "2009 Toyota RAV4 Limited",
+    "title": "2009 Toyota RAV4 Limited",
+    "signedBy": "阿简",
+    "signedAt": "2026-10-20"
+  },
+  "2010-toyota-rav4": {
+    "cropped": false,
+    "shownOverride": "Shown: 2010 RAV4 Limited",
+    "set": [
+      {
+        "url": "/img/2010-toyota-rav4/2010_Toyota_RAV4_Limited_12-12-2010_1-480.webp",
+        "w": 480,
+        "h": 289
+      },
+      {
+        "url": "/img/2010-toyota-rav4/2010_Toyota_RAV4_Limited_12-12-2010_1-800.webp",
+        "w": 800,
+        "h": 482
+      },
+      {
+        "url": "/img/2010-toyota-rav4/2010_Toyota_RAV4_Limited_12-12-2010_1-1200.webp",
+        "w": 1200,
+        "h": 723
+      }
+    ],
+    "width": 1200,
+    "height": 723,
+    "author": "IFCAR",
+    "license": "Public domain",
+    "licenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-self",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2010_Toyota_RAV4_Limited_--_12-12-2010_1.jpg",
+    "credit": "Photo: \"2010 Toyota RAV4 Limited -- 12-12-2010 1\" by IFCAR, via Wikimedia Commons, Public domain (https://commons.wikimedia.org/wiki/Template:PD-self) — resized",
+    "photoYear": 2010,
+    "shown": "2010 Toyota RAV4 Limited -- 12-12-2010 1",
+    "title": "2010 Toyota RAV4 Limited -- 12-12-2010 1",
+    "signedBy": "阿简",
+    "signedAt": "2026-10-20"
+  },
+  "2011-toyota-rav4": {
+    "cropped": false,
+    "shownOverride": null,
+    "set": [
+      {
+        "url": "/img/2011-toyota-rav4/2011_Toyota_RAV4_4WD_front_right_07-09-2023-480.webp",
+        "w": 480,
+        "h": 306
+      },
+      {
+        "url": "/img/2011-toyota-rav4/2011_Toyota_RAV4_4WD_front_right_07-09-2023-800.webp",
+        "w": 800,
+        "h": 509
+      },
+      {
+        "url": "/img/2011-toyota-rav4/2011_Toyota_RAV4_4WD_front_right_07-09-2023-1200.webp",
+        "w": 1200,
+        "h": 764
+      }
+    ],
+    "width": 1200,
+    "height": 764,
+    "author": "MercurySable99",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2011_Toyota_RAV4_4WD,_front_right,_07-09-2023.jpg",
+    "credit": "Photo: \"2011 Toyota RAV4 4WD, front right, 07-09-2023\" by MercurySable99, via Wikimedia Commons, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0) — resized",
+    "photoYear": 2011,
+    "shown": "2011 Toyota RAV4 4WD",
+    "title": "2011 Toyota RAV4 4WD, front right, 07-09-2023",
+    "signedBy": "阿简",
+    "signedAt": "2026-10-20"
+  },
+  "2012-toyota-rav4": {
+    "cropped": false,
+    "shownOverride": "Shown: 2011 RAV4 Sport (same generation)",
+    "set": [
+      {
+        "url": "/img/2012-toyota-rav4/2009-2011_Toyota_RAV4_Sport_06-16-2011-480.webp",
+        "w": 480,
+        "h": 251
+      },
+      {
+        "url": "/img/2012-toyota-rav4/2009-2011_Toyota_RAV4_Sport_06-16-2011-800.webp",
+        "w": 800,
+        "h": 419
+      },
+      {
+        "url": "/img/2012-toyota-rav4/2009-2011_Toyota_RAV4_Sport_06-16-2011-1200.webp",
+        "w": 1200,
+        "h": 629
+      }
+    ],
+    "width": 1200,
+    "height": 629,
+    "author": "IFCAR",
+    "license": "Public domain",
+    "licenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-self",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2009-2011_Toyota_RAV4_Sport_--_06-16-2011.jpg",
+    "credit": "Photo: \"2009-2011 Toyota RAV4 Sport -- 06-16-2011\" by IFCAR, via Wikimedia Commons, Public domain (https://commons.wikimedia.org/wiki/Template:PD-self) — resized",
+    "photoYear": null,
+    "shown": "2009-2011 Toyota RAV4 Sport -- 06-16-2011",
+    "title": "2009-2011 Toyota RAV4 Sport -- 06-16-2011",
+    "signedBy": "阿简",
+    "signedAt": "2026-10-20"
+  },
+  "2013-toyota-rav4": {
+    "cropped": false,
+    "shownOverride": "Shown: 2013 RAV4 XLE AWD",
+    "set": [
+      {
+        "url": "/img/2013-toyota-rav4/2013_Toyota_RAV4_XLE_AWD_front_left-480.webp",
+        "w": 480,
+        "h": 275
+      },
+      {
+        "url": "/img/2013-toyota-rav4/2013_Toyota_RAV4_XLE_AWD_front_left-800.webp",
+        "w": 800,
+        "h": 458
+      },
+      {
+        "url": "/img/2013-toyota-rav4/2013_Toyota_RAV4_XLE_AWD_front_left-1200.webp",
+        "w": 1200,
+        "h": 686
+      }
+    ],
+    "width": 1200,
+    "height": 686,
+    "author": "Mr.choppers",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2013_Toyota_RAV4_XLE_AWD_front_left.jpg",
+    "credit": "Photo: \"2013 Toyota RAV4 XLE AWD front left\" by Mr.choppers, via Wikimedia Commons, CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0) — resized",
+    "photoYear": 2013,
+    "shown": "2013 Toyota RAV4 XLE AWD front left",
+    "title": "2013 Toyota RAV4 XLE AWD front left",
+    "signedBy": "阿简",
+    "signedAt": "2026-10-20"
+  },
+  "2014-toyota-rav4": {
+    "cropped": false,
+    "shownOverride": "Shown: 2014 RAV4 Cruiser",
+    "set": [
+      {
+        "url": "/img/2014-toyota-rav4/2014_Toyota_RAV4_ALA49R_MY14_Cruiser_wagon_2015-06-18_01-480.webp",
+        "w": 480,
+        "h": 321
+      },
+      {
+        "url": "/img/2014-toyota-rav4/2014_Toyota_RAV4_ALA49R_MY14_Cruiser_wagon_2015-06-18_01-800.webp",
+        "w": 800,
+        "h": 535
+      },
+      {
+        "url": "/img/2014-toyota-rav4/2014_Toyota_RAV4_ALA49R_MY14_Cruiser_wagon_2015-06-18_01-1200.webp",
+        "w": 1200,
+        "h": 803
+      }
+    ],
+    "width": 1200,
+    "height": 803,
+    "author": "OSX",
+    "license": "Public domain",
+    "licenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-user",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2014_Toyota_RAV4_(ALA49R_MY14)_Cruiser_wagon_(2015-06-18)_01.jpg",
+    "credit": "Photo: \"2014 Toyota RAV4 (ALA49R MY14) Cruiser wagon (2015-06-18) 01\" by OSX, via Wikimedia Commons, Public domain (https://commons.wikimedia.org/wiki/Template:PD-user) — resized",
+    "photoYear": 2014,
+    "shown": "2014 Toyota RAV4 (ALA49R MY14) Cruiser wagon (2015-06-18) 01",
+    "title": "2014 Toyota RAV4 (ALA49R MY14) Cruiser wagon (2015-06-18) 01",
+    "signedBy": "阿简",
+    "signedAt": "2026-10-20"
+  },
+  "2015-toyota-rav4": {
+    "cropped": false,
+    "shownOverride": null,
+    "set": [
+      {
+        "url": "/img/2015-toyota-rav4/2015_Toyota_Rav4_LE_in_Barcelona_Red_Metallic_Front_Left_10-08-2022-480.webp",
+        "w": 480,
+        "h": 285
+      },
+      {
+        "url": "/img/2015-toyota-rav4/2015_Toyota_Rav4_LE_in_Barcelona_Red_Metallic_Front_Left_10-08-2022-800.webp",
+        "w": 800,
+        "h": 475
+      },
+      {
+        "url": "/img/2015-toyota-rav4/2015_Toyota_Rav4_LE_in_Barcelona_Red_Metallic_Front_Left_10-08-2022-1200.webp",
+        "w": 1200,
+        "h": 713
+      }
+    ],
+    "width": 1200,
+    "height": 713,
+    "author": "Elise240SX",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2015_Toyota_Rav4_LE_in_Barcelona_Red_Metallic,_Front_Left,_10-08-2022.jpg",
+    "credit": "Photo: \"2015 Toyota Rav4 LE in Barcelona Red Metallic, Front Left, 10-08-2022\" by Elise240SX, via Wikimedia Commons, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0) — resized",
+    "photoYear": 2015,
+    "shown": "2015 Toyota RAV4 LE",
+    "title": "2015 Toyota Rav4 LE in Barcelona Red Metallic, Front Left, 10-08-2022",
+    "signedBy": "阿简",
+    "signedAt": "2026-10-20"
+  },
+  "2016-toyota-rav4": {
+    "cropped": false,
+    "shownOverride": null,
+    "set": [
+      {
+        "url": "/img/2016-toyota-rav4/2016_Toyota_RAV4_XLE_AWD_front_left_11-15-2022-480.webp",
+        "w": 480,
+        "h": 301
+      },
+      {
+        "url": "/img/2016-toyota-rav4/2016_Toyota_RAV4_XLE_AWD_front_left_11-15-2022-800.webp",
+        "w": 800,
+        "h": 502
+      },
+      {
+        "url": "/img/2016-toyota-rav4/2016_Toyota_RAV4_XLE_AWD_front_left_11-15-2022-1200.webp",
+        "w": 1200,
+        "h": 753
+      }
+    ],
+    "width": 1200,
+    "height": 753,
+    "author": "MercurySable99",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2016_Toyota_RAV4_XLE_AWD,_front_left,_11-15-2022.jpg",
+    "credit": "Photo: \"2016 Toyota RAV4 XLE AWD, front left, 11-15-2022\" by MercurySable99, via Wikimedia Commons, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0) — resized",
+    "photoYear": 2016,
+    "shown": "2016 Toyota RAV4 XLE AWD",
+    "title": "2016 Toyota RAV4 XLE AWD, front left, 11-15-2022",
+    "signedBy": "阿简",
+    "signedAt": "2026-10-20"
+  },
+  "2017-toyota-rav4": {
+    "cropped": false,
+    "shownOverride": null,
+    "set": [
+      {
+        "url": "/img/2017-toyota-rav4/2017_Toyota_Rav4_XLE_in_Black_Front_Right_08-30-2022-480.webp",
+        "w": 480,
+        "h": 277
+      },
+      {
+        "url": "/img/2017-toyota-rav4/2017_Toyota_Rav4_XLE_in_Black_Front_Right_08-30-2022-800.webp",
+        "w": 800,
+        "h": 462
+      },
+      {
+        "url": "/img/2017-toyota-rav4/2017_Toyota_Rav4_XLE_in_Black_Front_Right_08-30-2022-1200.webp",
+        "w": 1200,
+        "h": 693
+      }
+    ],
+    "width": 1200,
+    "height": 693,
+    "author": "Elise240SX",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2017_Toyota_Rav4_XLE_in_Black,_Front_Right,_08-30-2022.jpg",
+    "credit": "Photo: \"2017 Toyota Rav4 XLE in Black, Front Right, 08-30-2022\" by Elise240SX, via Wikimedia Commons, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0) — resized",
+    "photoYear": 2017,
+    "shown": "2017 Toyota RAV4 XLE",
+    "title": "2017 Toyota Rav4 XLE in Black, Front Right, 08-30-2022",
+    "signedBy": "阿简",
+    "signedAt": "2026-10-20"
+  },
+  "2018-toyota-rav4": {
+    "cropped": false,
+    "shownOverride": "Shown: 2018 RAV4 2.0 SL",
+    "set": [
+      {
+        "url": "/img/2018-toyota-rav4/Toyota_Rav4_2_0_SL_2018_49753245628-480.webp",
+        "w": 480,
+        "h": 270
+      },
+      {
+        "url": "/img/2018-toyota-rav4/Toyota_Rav4_2_0_SL_2018_49753245628-800.webp",
+        "w": 800,
+        "h": 450
+      },
+      {
+        "url": "/img/2018-toyota-rav4/Toyota_Rav4_2_0_SL_2018_49753245628-1200.webp",
+        "w": 1200,
+        "h": 675
+      }
+    ],
+    "width": 1200,
+    "height": 675,
+    "author": "RL GNZLZ",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Toyota_Rav4_2.0_SL_2018_(49753245628).jpg",
+    "credit": "Photo: \"Toyota Rav4 2.0 SL 2018 (49753245628)\" by RL GNZLZ, via Wikimedia Commons, CC BY-SA 2.0 (https://creativecommons.org/licenses/by-sa/2.0) — resized",
+    "photoYear": null,
+    "shown": "Toyota Rav4 2.0 SL 2018 (49753245628)",
+    "title": "Toyota Rav4 2.0 SL 2018 (49753245628)",
+    "signedBy": "阿简",
+    "signedAt": "2026-10-20"
+  },
+  "2019-toyota-rav4": {
+    "cropped": false,
+    "shownOverride": null,
+    "set": [
+      {
+        "url": "/img/2019-toyota-rav4/2019_Toyota_RAV4_Adventure_front_5_15_22-480.webp",
+        "w": 480,
+        "h": 257
+      },
+      {
+        "url": "/img/2019-toyota-rav4/2019_Toyota_RAV4_Adventure_front_5_15_22-800.webp",
+        "w": 800,
+        "h": 428
+      },
+      {
+        "url": "/img/2019-toyota-rav4/2019_Toyota_RAV4_Adventure_front_5_15_22-1200.webp",
+        "w": 1200,
+        "h": 641
+      }
+    ],
+    "width": 1200,
+    "height": 641,
+    "author": "Kevauto",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2019_Toyota_RAV4_Adventure,_front_5.15.22.jpg",
+    "credit": "Photo: \"2019 Toyota RAV4 Adventure, front 5.15.22\" by Kevauto, via Wikimedia Commons, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0) — resized",
+    "photoYear": 2019,
+    "shown": "2019 Toyota RAV4 Adventure",
+    "title": "2019 Toyota RAV4 Adventure, front 5.15.22",
+    "signedBy": "阿简",
+    "signedAt": "2026-10-20"
+  },
+  "2021-toyota-rav4": {
+    "cropped": false,
+    "shownOverride": null,
+    "set": [
+      {
+        "url": "/img/2021-toyota-rav4/2021_Toyota_RAV4_XLE_AWD_front_right_05-24-2026-480.webp",
+        "w": 480,
+        "h": 321
+      },
+      {
+        "url": "/img/2021-toyota-rav4/2021_Toyota_RAV4_XLE_AWD_front_right_05-24-2026-800.webp",
+        "w": 800,
+        "h": 535
+      },
+      {
+        "url": "/img/2021-toyota-rav4/2021_Toyota_RAV4_XLE_AWD_front_right_05-24-2026-1200.webp",
+        "w": 1200,
+        "h": 802
+      }
+    ],
+    "width": 1200,
+    "height": 802,
+    "author": "MercurySable99",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2021_Toyota_RAV4_XLE_AWD,_front_right,_05-24-2026.jpg",
+    "credit": "Photo: \"2021 Toyota RAV4 XLE AWD, front right, 05-24-2026\" by MercurySable99, via Wikimedia Commons, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0) — resized",
+    "photoYear": 2021,
+    "shown": "2021 Toyota RAV4 XLE AWD",
+    "title": "2021 Toyota RAV4 XLE AWD, front right, 05-24-2026",
+    "signedBy": "阿简",
+    "signedAt": "2026-10-20"
+  },
+  "2022-toyota-rav4": {
+    "cropped": false,
+    "shownOverride": "Shown: 2022 RAV4 Hybrid LE",
+    "set": [
+      {
+        "url": "/img/2022-toyota-rav4/2022_Toyota_RAV4_Hybrid_LE_in_Midnight_Black_Metallic_front_left-480.webp",
+        "w": 480,
+        "h": 295
+      },
+      {
+        "url": "/img/2022-toyota-rav4/2022_Toyota_RAV4_Hybrid_LE_in_Midnight_Black_Metallic_front_left-800.webp",
+        "w": 800,
+        "h": 491
+      },
+      {
+        "url": "/img/2022-toyota-rav4/2022_Toyota_RAV4_Hybrid_LE_in_Midnight_Black_Metallic_front_left-1200.webp",
+        "w": 1200,
+        "h": 736
+      }
+    ],
+    "width": 1200,
+    "height": 736,
+    "author": "Mr.choppers",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2022_Toyota_RAV4_Hybrid_LE_in_Midnight_Black_Metallic,_front_left.jpg",
+    "credit": "Photo: \"2022 Toyota RAV4 Hybrid LE in Midnight Black Metallic, front left\" by Mr.choppers, via Wikimedia Commons, CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0) — resized",
+    "photoYear": 2022,
+    "shown": "2022 Toyota RAV4 Hybrid LE",
+    "title": "2022 Toyota RAV4 Hybrid LE in Midnight Black Metallic, front left",
+    "signedBy": "阿简",
+    "signedAt": "2026-10-20"
+  },
+  "2023-toyota-rav4": {
+    "cropped": false,
+    "shownOverride": "Shown: 2022 RAV4 Hybrid (same generation)",
+    "set": [
+      {
+        "url": "/img/2023-toyota-rav4/2022_MY_Toyota_RAV4_Hybrid_facelift_XA50-480.webp",
+        "w": 480,
+        "h": 275
+      },
+      {
+        "url": "/img/2023-toyota-rav4/2022_MY_Toyota_RAV4_Hybrid_facelift_XA50-800.webp",
+        "w": 800,
+        "h": 458
+      },
+      {
+        "url": "/img/2023-toyota-rav4/2022_MY_Toyota_RAV4_Hybrid_facelift_XA50-1200.webp",
+        "w": 1200,
+        "h": 686
+      }
+    ],
+    "width": 1200,
+    "height": 686,
+    "author": "Volardiculous",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2022_MY_Toyota_RAV4_Hybrid_facelift_XA50.jpg",
+    "credit": "Photo: \"2022 MY Toyota RAV4 Hybrid facelift XA50\" by Volardiculous, via Wikimedia Commons, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0) — resized",
+    "photoYear": 2022,
+    "shown": "2022 MY Toyota RAV4 Hybrid facelift XA50",
+    "title": "2022 MY Toyota RAV4 Hybrid facelift XA50",
+    "signedBy": "阿简",
+    "signedAt": "2026-10-20"
   }
 }
