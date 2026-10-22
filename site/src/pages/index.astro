@@ -14,7 +14,7 @@ const inReview = vehicles.filter(v => !vehicleGate(v).dataReady).length;
 <section class="finder"><div class="container"><h1>Car Specs by Year, Make &amp; Model: Oil, Tires, Recalls</h1><p>Oil capacity, tire pressure and recalls, with a source for every number.</p>
 <div class="finder__tabs"><a href="#" aria-current="true">By vehicle</a>{liveIssues.some(x => x.type === "code") && <a href="/codes/">By trouble code</a>}</div>
 {sorted.length > 0 && <form class="finder__form" data-goto><label class="field"><span>Vehicle</span><select name="u">{sorted.map(v => <option value={vehicleUrl(v)}>{v.year} {v.make} {v.model}</option>)}</select></label><button class="btn btn--accent btn--lg" type="submit">Show specs</button></form>}
-<p class="finder__note">Live now: {sorted.length} vehicles and {codes.length} trouble codes{syms.length ? `, plus ${syms.length} symptom pages` : ''}.{inReview > 0 && <> {inReview} more are in source review — <a href="/specs/#in-review">see what is being checked</a>.</>} A page goes live only after every figure is source-checked — don't see yours? <a href="/contact/">Tell us what to add</a>.</p>
+<p class="finder__note">Live now: {sorted.length} vehicles and {codes.length} trouble codes{syms.length ? `, plus ${syms.length} symptom pages` : ''}.{' '}{inReview > 0 && <>{inReview} more are in source review — <a href="/specs/#in-review">see what is being checked</a>.</>}{' '}A page goes live only after every figure is source-checked — don't see yours? <a href="/contact/">Tell us what to add</a>.</p>
 </div></section>
 <div class="container">
 <section class="hsec"><div class="hsec__head"><h2 class="section__title">Vehicles</h2></div>
