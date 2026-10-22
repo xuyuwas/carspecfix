@@ -57,6 +57,12 @@ if(!no){
   var a=document.createElement('script');a.async=true;a.src='https://analytics.ahrefs.com/analytics.js';a.setAttribute('data-key','PEOYNGCTHDdSS2akpMeVGw');document.head.appendChild(a);
 }})();
 </script>
+{/* Google AdSense. Loaded statically (not injected) so AdSense's own crawler
+    finds the snippet in the served HTML during site review. DNT deliberately
+    does not gate this: if the tag were injected conditionally, review would
+    fail on a clean fetch. The privacy page states this explicitly and points
+    DNT visitors at Google's ad opt-out instead. */}
+<script is:inline async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4994924685307974" crossorigin="anonymous"></script>
 </head>
 <body>
 {PREVIEW && <div class="preview-banner">PREVIEW BUILD — includes pages that have not passed the publish gate. Not for deployment.</div>}
@@ -75,7 +81,8 @@ if(!no){
 <footer class="ftr"><div class="container ftr__in">
 <a class="brand" href="/"><img src="/logo.svg" width="24" height="24" alt=""><span>CarSpec<b>Fix</b></span></a>
 <span>Data from owner's manuals, manufacturer service bulletins, NHTSA and fueleconomy.gov. Every figure cites its source. General information, not professional mechanical advice.</span>
-<nav><a href="/repair-cost/">Estimating costs</a><a href="/sources/">Data sources</a><a href="/about/">About</a><a href="/authors/editor/">Author</a><a href="/privacy/">Privacy</a><a href="/contact/">Contact</a></nav>
+<nav aria-label="Site"><a href="/repair-cost/">Estimating costs</a><a href="/sources/">Data sources</a><a href="/changelog/">Changelog</a><a href="/about/">About</a><a href="/authors/editor/">Author</a><a href="/contact/">Contact</a></nav>
+<nav class="ftr__legal" aria-label="Legal"><a href="/privacy/">Privacy</a><a href="/cookie-policy/">Cookies</a><a href="/terms/">Terms</a><a href="/disclaimer/">Disclaimer</a><a href="/copyright/">Copyright</a><a href="/do-not-sell/">Do not sell</a></nav>
 </div></footer>
 <div class="sr-only" aria-live="polite" id="live"></div>
 <script is:inline src={`/feedback.js?v=${feedbackVer}`}></script>
@@ -84,7 +91,7 @@ if(!no){
   function fallbackCopy(t){var ta=document.createElement('textarea');ta.value=t;ta.setAttribute('readonly','');ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();var ok=false;try{ok=document.execCommand('copy')}catch(e){ok=false}document.body.removeChild(ta);return ok}
   function copyText(t){if(navigator.clipboard&&window.isSecureContext){return navigator.clipboard.writeText(t).then(function(){return true},function(){return fallbackCopy(t)})}return Promise.resolve(fallbackCopy(t))}
   function flash(btn,ok){var l=btn.querySelector('.lbl'),live=document.getElementById('live'),msg=ok?'Copied':'Copy failed';if(l){var old=l.dataset.orig||l.textContent;l.dataset.orig=old;l.textContent=msg;btn.classList.toggle('is-err',!ok);setTimeout(function(){l.textContent=old;btn.classList.remove('is-err')},1600)}else{btn.title=msg}if(live)live.textContent=msg}
-  function track(name){/* R-A2 event analytics: tool TBD by 队长 */ if(window.CSF_TRACK)window.CSF_TRACK(name)}
+  function track(name){/* R-A2 event analytics: tool TBD by the site owner */ if(window.CSF_TRACK)window.CSF_TRACK(name)}
   function goCode(v,form){var c=(v||'').trim().toLowerCase().replace(/[^a-z0-9]/g,'');if(!c)return;if(liveCodes.indexOf(c)>=0)location.href='/codes/'+c+'/';else{
     var box=form?form.querySelector('.code-miss'):null;
     if(!box&&form){box=document.createElement('p');box.className='code-miss';box.setAttribute('role','status');form.parentNode.insertBefore(box,form.nextSibling)}

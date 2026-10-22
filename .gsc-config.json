@@ -1,0 +1,6 @@
+{
+  "site": "sc-domain:carspecfix.com",
+  "dataDir": ".workbuddy/gsc-data",
+  "key": ".secrets/gsc-sa.json",
+  "comment": "GSC 取数配置。site 形如 sc-domain:example.com 或 https://example.com/"
+}

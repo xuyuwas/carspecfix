@@ -9,6 +9,14 @@
 .photo figcaption a{color:var(--primary)}
 .photo--placeholder img{object-fit:contain;padding:12px;color:#C5CCD4}
 .prose p,.prose li{font-size:var(--fs-16,16px);line-height:1.6;max-width:72ch}
+/* Vertical rhythm inside .prose only. The global reset sets h1,h2,h3,p{margin:0},
+   which is right for the card/list pages but made long policy pages a wall of
+   text (headings touching the paragraph above them). Scoped here so specs hubs
+   that share the Page layout keep their own list/card spacing. */
+.prose>:first-child{margin-top:0}
+.prose p,.prose ul,.prose ol{margin-top:var(--sp-3)}
+.prose h2,.prose h3{margin-top:var(--sp-6)}
+.prose li+li{margin-top:4px}
 /* hero photo keeps v3 hero aspect (360x135) without cropping the vehicle */
 .vart .photo img{aspect-ratio:8/3;object-fit:contain}
 .pref{font:500 13px/1.4 "JetBrains Mono",var(--font-mono);color:#5B6570;letter-spacing:0}
@@ -32,3 +40,19 @@
 .prose .links,.prose .links li{max-width:none;width:100%}
 .prose .links{display:block;columns:auto}
 .cause__seen-k{font-weight:700;color:var(--text-3)}
+
+/* Hub entries (/codes/, /symptoms/) carry a two-sentence summary + a verdict, so
+   they cannot use .links: that list is space-between flex and squeezes the right-hand
+   cell into a narrow column (the summary wrapped one word per line). Block layout,
+   full-width text, one card per entry. */
+.ilst{list-style:none;margin:0;padding:0;border:1px solid var(--border);border-radius:var(--r-md)}
+.prose .ilst{margin-top:var(--sp-3)}
+.ilst>li{padding:14px var(--sp-4);border-top:1px solid var(--border)}
+.ilst>li:first-child{border-top:0}
+.ilst .ilst__h{display:block;font-weight:600;font-size:16px;line-height:1.35;color:var(--text);text-decoration:none}
+.ilst .ilst__h:hover{color:var(--link)}
+.ilst p{margin:6px 0 0;font-size:14px;line-height:1.55;color:var(--text-2);max-width:72ch}
+.ilst .ilst__v{margin-top:8px;font-size:14px;line-height:1.5;color:var(--text)}
+.ilst .ilst__v b{font-weight:700}
+.ilst .ilst__v--stop b{color:var(--red-700)}
+

@@ -9,7 +9,7 @@ const { path } = Astro.props;
     <button class="btn" type="button" data-feedback="no" aria-pressed="false">No</button></div>
   <p class="feedback__msg" role="status"></p>
   <div class="feedback__more" hidden>
-    <label class="qa__q" for="fb-text">What was missing? (optional, no personal info)</label>
+    <label class="qa__q" for="fb-text">What was missing? (optional, no personal info — replies are private and never published)</label>
     <textarea id="fb-text" maxlength="1000"></textarea>
     <div><button class="btn btn--primary" type="button" data-feedback-send>Send</button></div>
   </div>

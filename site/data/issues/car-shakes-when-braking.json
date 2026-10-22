@@ -34,7 +34,7 @@
   "urgency": [
     {
       "text": "Listed brake warning sign: vibration — brakes should be inspected; do not postpone needed repair to the metal-to-metal point.",
-      "url": "https://www.carcare.org?p=65",
+      "url": "https://www.carcare.org/2020/08/stop-and-check-your-brakes/",
       "document": "Car Care Council, \"Stop and Check Your Brakes\" (Brake Safety Awareness Month, published 2020-08-03; non-profit consumer education organization)",
       "page": "web page",
       "fetched": "2026-10-19",
@@ -51,7 +51,7 @@
   "guidance": [
     {
       "text": "Vibration is listed among the brake warning signs — along with noise, pulling, low or hard pedal feel, grabbing, and an illuminated brake warning light — that mean the brakes should be inspected.",
-      "url": "https://www.carcare.org?p=65",
+      "url": "https://www.carcare.org/2020/08/stop-and-check-your-brakes/",
       "document": "Car Care Council, \"Stop and Check Your Brakes\" (Brake Safety Awareness Month, published 2020-08-03; non-profit consumer education organization)",
       "page": "web page",
       "fetched": "2026-10-19",
@@ -61,7 +61,13 @@
       "appliesTo": "universal",
       "quote": null,
       "answers": "can_i_keep_driving: vibration when braking is a listed brake warning sign — have the brakes inspected promptly",
-      "allBrands": true
+      "allBrands": true,
+      "verdict": {
+        "condition": "Vibration or shaking when braking",
+        "level": "soon",
+        "action": "Book a brake inspection",
+        "detail": "Listed as a brake warning sign — warped rotor or uneven pad wear are the usual causes."
+      }
     },
     {
       "text": "ABS activation can normally cause vibration through the body and steering wheel and pulsation in the brake pedal.",
@@ -76,6 +82,26 @@
       "quote": null,
       "answers": "vehicle-specific: Toyota notes ABS operation can normally cause pedal/body vibration — not every shake is a fault",
       "allBrands": false
+    },
+    {
+      "text": "Brake system warning light (red): the brake fluid level is low, or the brake system is malfunctioning. Toyota's instruction is to stop the vehicle in a safe place immediately and contact a dealer, because continuing to drive may be dangerous.",
+      "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+      "document": "2022 Toyota Camry Owner's Manual OM06244U (year mapping per Helm listing; manual is Camry-specific)",
+      "page": "p.528",
+      "fetched": "2026-10-22",
+      "sourceGrade": "A",
+      "maker": "Toyota",
+      "docKind": "owner's manual",
+      "appliesTo": "vehicle-specific: Toyota Camry 2022",
+      "quote": "Brake system warning light ... Immediately stop the vehicle in a safe place and contact your Toyota dealer. Continuing to drive the vehicle may be dangerous.",
+      "answers": "stop driving: red brake system warning light means stop in a safe place",
+      "allBrands": false,
+      "verdict": {
+        "condition": "Red brake-system warning light on, or the pedal suddenly sinks or goes hard",
+        "level": "stop",
+        "action": "Stop in a safe place; do not drive on to the shop",
+        "detail": "Toyota is the only manufacturer manual we have checked for this page. The row is tagged Toyota because the wording is Toyota's; the instruction itself is about the condition, not the brand."
+      }
     }
   ],
   "firstStep": {
@@ -98,9 +124,13 @@
     "vehicles": []
   },
   "publishDate": "2026-10-19",
-  "dataUpdated": "2026-10-19",
+  "dataUpdated": "2026-10-22",
   "signOff": {
-    "by": "小数",
+    "by": "Marlowe Sheets",
     "date": "2026-10-19"
+  },
+  "hub": {
+    "note": "Vibration through the pedal or the steering wheel under braking usually tracks back to rotor thickness variation or uneven pad deposits. ABS also vibrates the pedal by design, so the diagnosis separates a fault from normal operation before any part is changed.",
+    "verdict": "Yes, unless a brake or ABS warning light is on at the same time."
   }
 }

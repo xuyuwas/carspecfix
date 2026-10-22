@@ -35,7 +35,7 @@
   "guidancePrimary": "universal: Car Care Council — dead batteries are a leading cause of starting failure; dim headlights or interior lights, accessories that fail to operate, or an illuminated battery light are the signs to check the battery",
   "guidance": [
     {
-      "url": "https://www.carcare.org?p=68",
+      "url": "https://www.carcare.org/2020/07/summer-heat-takes-a-toll-on-your-cars-battery/",
       "document": "Car Care Council, \"Summer Heat Takes a Toll on Your Car's Battery\" (published 2020-07-21; non-profit consumer education organization)",
       "page": "web page",
       "fetched": "2026-10-20",
@@ -64,7 +64,7 @@
     }
   ],
   "firstStep": {
-    "url": "https://www.carcare.org?p=68",
+    "url": "https://www.carcare.org/2020/07/summer-heat-takes-a-toll-on-your-cars-battery/",
     "document": "Car Care Council, \"Summer Heat Takes a Toll on Your Car's Battery\" (published 2020-07-21; non-profit consumer education organization)",
     "page": "web page",
     "fetched": "2026-10-20",
@@ -85,7 +85,11 @@
   "publishDate": null,
   "dataUpdated": "2026-10-20",
   "signOff": {
-    "by": "队长",
+    "by": "Marlowe Sheets",
     "date": "2026-10-20"
+  },
+  "hub": {
+    "note": "Rapid clicking with dimming lights points at the battery, its terminals or the ground strap rather than the starter: there is enough current to pull the solenoid in, not enough to turn the engine. A single heavy clunk is the opposite case — current reaches the starter and it does not spin.",
+    "verdict": "Not a safety issue — the car is stationary until it starts."
   }
 }

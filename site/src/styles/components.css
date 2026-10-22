@@ -180,6 +180,9 @@ h1,h2,h3,p{margin:0}a{color:var(--link);text-decoration-thickness:1px;text-under
 @media(min-width:1024px){.split{grid-template-columns:1fr 1fr;gap:var(--sp-8)}}
 .code-form{display:flex;gap:var(--sp-2)}.code-form .field{flex:1}
 .links{list-style:none;margin:0;padding:0;border:1px solid var(--border);border-radius:var(--r-md)}
+/* .links li is space-between flex, so the years used to fall apart into separate
+   columns ("2024 | , | 2020"). Grouping them in one span keeps name left / years right. */
+.links__meta{color:var(--text-2);text-align:right}
 .links li{display:flex;justify-content:space-between;align-items:center;gap:var(--sp-3);padding:12px var(--sp-4);border-top:1px solid var(--border)}.links li:first-child{border-top:0}
 .links a{font-weight:600;color:var(--text);text-decoration:none}.links a:hover{color:var(--link)}
 .makes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--sp-2)}
@@ -190,7 +193,8 @@ a.make{color:var(--primary);border-color:var(--border-strong)}a.make:hover{borde
 .ftr{margin-top:var(--sp-12);background:var(--navy-950);color:#B9C7D9;font-size:var(--fs-14)}
 .ftr__in{padding:var(--sp-8) 0;display:flex;flex-direction:column;gap:var(--sp-4)}
 .ftr .brand{color:#fff}.ftr a{color:#fff;text-decoration:none}.ftr nav{display:flex;flex-wrap:wrap;gap:var(--sp-4) var(--sp-6)}
-@media(min-width:1024px){.ftr__in{flex-direction:row;justify-content:space-between;align-items:center}}
+.ftr__legal{padding-top:var(--sp-3);border-top:1px solid rgba(255,255,255,.14);font-size:var(--fs-14)}
+@media(min-width:1024px){.ftr__in{flex-direction:row;flex-wrap:wrap;justify-content:space-between;align-items:center}.ftr__legal{flex-basis:100%}}
 @media print{.hdr,.subnav,.ftr,.ad,.side,.tools,.btn,.copy-sm,.swipe,.actions{display:none!important}.tbl{min-width:0!important}.tbl-scroll{overflow:visible}}
 
 /* quick answer */
@@ -257,3 +261,108 @@ a.make{color:var(--primary);border-color:var(--border-strong)}a.make:hover{borde
 .code-miss a{font-weight:700}
 .finder__note{color:#B9C7D9;font-size:var(--fs-14);margin-top:var(--sp-3)}
 .finder__note a{color:#fff;text-decoration:underline}
+
+/* ── config selector (vehicle page) ─────────────────────────────────────────
+   The manual does not publish one figure per model year: it publishes one per
+   engine and one per wheel/tyre package. This panel asks the three questions the
+   reader can answer from their own car, and prints a range — not a number — where
+   the document leaves the build type unnamed. */
+.cfg{margin:var(--sp-5) 0 0;border:1px solid var(--border-strong);border-radius:var(--r-md);background:var(--surface);overflow:hidden}
+.cfg__head{padding:var(--sp-4);border-bottom:1px solid var(--border);background:var(--surface-alt)}
+.cfg__title{font:800 var(--fs-18)/1.2 var(--font-display);letter-spacing:-.01em;color:var(--primary)}
+.cfg__lede{font-size:var(--fs-14);color:var(--text-2);margin-top:6px;max-width:74ch}
+.cfg__steps{display:grid;gap:var(--sp-2);padding:var(--sp-4);grid-template-columns:minmax(0,1fr)}
+@media(min-width:720px){.cfg__steps{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.cfg__field{display:flex;flex-direction:column;gap:4px;border:1px solid var(--border-strong);border-radius:var(--r-sm);padding:6px 12px 6px;background:var(--surface)}
+.cfg__k{font:700 11px/1.2 var(--font-body);text-transform:uppercase;letter-spacing:.06em;color:var(--text-3)}
+.cfg__field select{border:0;background:none;font:600 var(--fs-15)/1.4 var(--font-body);color:var(--text);width:100%;appearance:none;padding:0;outline:none;cursor:pointer}
+.cfg__field select:focus-visible{outline:2px solid var(--link);outline-offset:2px}
+.cfg__out{display:grid;grid-template-columns:minmax(0,1fr);border-top:1px solid var(--border)}
+@media(min-width:720px){.cfg__out{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.cfg__cell{padding:var(--sp-4);border-bottom:1px solid var(--border);min-width:0}
+.cfg__cell:last-child{border-bottom:0}
+@media(min-width:720px){.cfg__cell{border-bottom:0;border-right:1px solid var(--border)}.cfg__cell:last-child{border-right:0}}
+.cfg__q{font:700 var(--fs-12)/1.2 var(--font-body);text-transform:uppercase;letter-spacing:.05em;color:var(--text-3)}
+.cfg__scope{font-size:var(--fs-12);font-weight:700;color:var(--text-2);margin-top:4px}
+.cfg__a{margin-top:6px;display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px;font-variant-numeric:tabular-nums}
+.cfg__pair{display:flex;flex-direction:column;gap:1px}
+.cfg__pair b{font:800 26px/1.05 var(--font-display);letter-spacing:-.03em;display:flex;align-items:baseline;gap:3px}
+.cfg__pair b small{font:700 var(--fs-13)/1 var(--font-body);letter-spacing:0;color:var(--text-2)}
+.cfg__pair em{font:600 var(--fs-12)/1.2 var(--font-body);color:var(--text-3);font-style:normal}
+.cfg__range{font:800 var(--fs-20)/1.2 var(--font-display);letter-spacing:-.02em}
+.cfg__nv{font:700 var(--fs-15)/1.3 var(--font-body);color:var(--accent-strong)}
+.cfg__s{font-size:var(--fs-12);color:var(--text-3);margin-top:8px;line-height:1.4}
+.cfg__s a{color:var(--text-2)}
+.cfg__note{margin:0;padding:10px var(--sp-4) var(--sp-4);font-size:var(--fs-12);color:var(--text-3);background:var(--surface)}
+.qa__more--split{margin-top:var(--sp-3);padding:8px 10px;border-radius:var(--r-sm);background:var(--accent-tint);color:#7A2E05;font-size:var(--fs-13)}
+
+/* ── action plan ("what to do now") ────────────────────────────────────────
+   Conditions and next steps come first; the documents they came from are cited
+   per row, and the evidence sections follow below. A reader in a car park needs
+   their row, not a paragraph that covers four different situations. */
+.act{margin-top:var(--sp-4);border:1px solid var(--border-strong);border-radius:var(--r-md);overflow:hidden;background:var(--surface)}
+.act__head{padding:var(--sp-4);border-bottom:1px solid var(--border);background:var(--surface-alt)}
+.act__title{font:800 var(--fs-18)/1.2 var(--font-display);letter-spacing:-.01em;color:var(--primary)}
+.act__lede{font-size:var(--fs-14);color:var(--text-2);margin-top:6px;max-width:76ch}
+.act__list{list-style:none;margin:0;padding:0}
+.act__row{display:grid;grid-template-columns:minmax(0,1fr);gap:6px;padding:var(--sp-4);border-top:1px solid var(--border);border-left:4px solid var(--border-strong)}
+.act__row:first-child{border-top:0}
+@media(min-width:720px){.act__row{grid-template-columns:132px minmax(0,1fr);gap:var(--sp-4)}}
+.act__lvl span{display:inline-flex;align-items:center;height:24px;padding:0 8px;border-radius:var(--r-sm);font:700 var(--fs-12)/1 var(--font-body);letter-spacing:.02em;white-space:nowrap}
+.act__when{font:700 var(--fs-15)/1.3 var(--font-body)}
+.act__scope{font-weight:600;font-size:var(--fs-12);color:var(--text-3);margin-left:8px;text-transform:uppercase;letter-spacing:.04em}
+.act__do{font-size:var(--fs-15);color:var(--text);margin-top:4px;display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.act__detail{font-size:var(--fs-13);color:var(--text-2);margin-top:4px}
+.act__src{font-size:var(--fs-12);color:var(--text-3);margin-top:6px}
+.act__foot{margin:0;padding:10px var(--sp-4) var(--sp-4);font-size:var(--fs-13);color:var(--text-2);border-top:1px solid var(--border);background:var(--surface-alt)}
+.act__row--stop{border-left-color:var(--sev-high)}
+.act__row--stop .act__lvl span{color:#fff;background:var(--sev-high)}
+.act__row--now{border-left-color:var(--sev-med)}
+.act__row--now .act__lvl span{color:#fff;background:var(--yellow-700)}
+.act__row--soon{border-left-color:var(--accent)}
+.act__row--soon .act__lvl span{color:#fff;background:var(--accent-btn)}
+.act__row--ok{border-left-color:var(--sev-low)}
+.act__row--ok .act__lvl span{color:#fff;background:var(--sev-low)}
+
+/* ── evidence tier badges ───────────────────────────────────────────────── */
+.ev{display:inline-flex;align-items:center;height:18px;padding:0 6px;border-radius:3px;font:700 10px/1 var(--font-body);letter-spacing:.03em;text-transform:uppercase;vertical-align:1px;white-space:nowrap}
+.ev--oem{color:var(--primary);background:var(--primary-tint)}
+.ev--gov{color:#1A4E8A;background:#E7EFFA}
+.ev--guidance{color:var(--text-2);background:var(--surface-alt);box-shadow:inset 0 0 0 1px var(--border-strong)}
+.evlegend{display:inline-flex;flex-wrap:wrap;gap:4px;align-items:center;margin-top:6px}
+
+/* ── review & update record (three dates) ───────────────────────────────── */
+.dates{margin:var(--sp-4) 0 0;padding:0;border:1px solid var(--border);border-radius:var(--r-md);background:var(--surface-alt);display:grid;grid-template-columns:minmax(0,1fr)}
+@media(min-width:720px){.dates{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.dates__row{padding:var(--sp-3) var(--sp-4);border-bottom:1px solid var(--border);min-width:0}
+.dates__row:last-child{border-bottom:0}
+@media(min-width:720px){.dates__row{border-bottom:0;border-right:1px solid var(--border)}.dates__row:last-child{border-right:0}}
+.dates dt{font:700 var(--fs-11,11px)/1.2 var(--font-body);text-transform:uppercase;letter-spacing:.06em;color:var(--text-3)}
+.dates dd{margin:4px 0 0;font:700 var(--fs-15)/1.3 var(--font-body);color:var(--text)}
+.dates__hint{display:block;font:400 var(--fs-12)/1.35 var(--font-body);color:var(--text-3);margin-top:2px}
+.dates__by{font-weight:600;color:var(--text-2)}
+
+/* ── evidence-tier table (sources page) ─────────────────────────────────── */
+.tiers{border:1px solid var(--border);border-radius:var(--r-md);overflow:hidden;margin:var(--sp-3) 0 var(--sp-4)}
+.tiers__row{display:grid;grid-template-columns:minmax(0,1fr);gap:8px;padding:var(--sp-3) var(--sp-4);border-top:1px solid var(--border)}
+.tiers__row:first-child{border-top:0}
+@media(min-width:720px){.tiers__row{grid-template-columns:150px minmax(0,1fr);gap:var(--sp-4)}}
+.tiers__v{font-size:var(--fs-15);color:var(--text-2)}
+.tiers__v b{color:var(--text)}
+/* ── corrections log ────────────────────────────────────────────────────── */
+.corr{list-style:none;margin:var(--sp-3) 0 0;padding:0;border:1px solid var(--border);border-radius:var(--r-md);counter-reset:corr}
+.corr li{counter-increment:corr;padding:var(--sp-3) var(--sp-4);border-top:1px solid var(--border)}
+.corr li:first-child{border-top:0}
+.corr__head{font:700 var(--fs-13)/1.3 var(--font-body);color:var(--text-2);text-transform:uppercase;letter-spacing:.03em}
+.corr__what{font-size:var(--fs-15);margin-top:4px}
+.corr__pages,.corr__keep{font-size:var(--fs-13);color:var(--text-2);margin-top:4px}
+.corr__keep b{color:var(--sev-low)}
+/* three-date table (changelog) */
+.dtbl{width:100%;border-collapse:collapse;font-size:var(--fs-13)}
+.dtbl th,.dtbl td{padding:8px 10px;border-bottom:1px solid var(--border);text-align:left;vertical-align:top}
+.dtbl th{background:var(--surface-alt);font:700 11px/1.2 var(--font-body);text-transform:uppercase;letter-spacing:.04em;color:var(--text-2);white-space:nowrap}
+.dtbl td.tnum{white-space:nowrap;font-variant-numeric:tabular-nums}
+
+/* group divider inside the action plan: "applies to your car" vs "if you drive one" */
+.act__group{list-style:none;padding:8px var(--sp-4);font:700 11px/1.3 var(--font-body);text-transform:uppercase;letter-spacing:.06em;color:var(--text-3);background:var(--surface-alt);border-top:1px solid var(--border)}
+.act__group:first-child{border-top:0}

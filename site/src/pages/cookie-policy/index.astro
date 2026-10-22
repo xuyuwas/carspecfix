@@ -1,0 +1,36 @@
+---
+import Page from '../../layouts/Page.astro';
+import { CONTACT_EMAIL } from '../../lib/site.mjs';
+---
+<Page title="Cookie Policy | CarSpecFix" description="Every cookie this site can set, who sets it, what it does and how long it lasts — plus how to block or delete them." path="/cookie-policy/" crumbs={[{ name: 'Home', url: '/' }, { name: 'Cookie policy', url: '/cookie-policy/' }]} h1="Cookie policy">
+<p class="meta">Effective October 21, 2026</p>
+<p>A cookie is a small file a site stores in your browser. This page lists the cookies that can appear when you use CarSpecFix, who sets them, and how to get rid of them. We do not run a first-party cookie of our own: nothing here is set to recognise you as a returning reader.</p>
+
+<h2 class="section__title">Cookies you may receive</h2>
+<ul>
+<li><strong>_ga, _ga_&lt;id&gt;</strong> — set by Google Analytics. Counts visits and tells us which pages are read, in aggregate. Lasts up to 2 years. <em>Not loaded at all when your browser sends Do Not Track.</em></li>
+<li><strong>__gads, __gpi, IDE</strong> — set by Google for advertising served through AdSense. Used to limit how often you see the same ad, measure ad performance, and — unless you opt out — personalise ads. Lasts up to 13 months. Set from <code>carspecfix.com</code> and <code>doubleclick.net</code>.</li>
+<li><strong>Google ad cookies in general</strong> — Google may set additional cookies from <code>google.com</code> and <code>doubleclick.net</code>; names change as their systems evolve. Google documents the current list at <a href="https://policies.google.com/technologies/types" rel="nofollow noopener" target="_blank">policies.google.com/technologies/types</a>.</li>
+<li><strong>Analytics without cookies</strong> — Cloudflare Web Analytics and Ahrefs Analytics both count visits without storing anything in your browser.</li>
+</ul>
+
+<h2 class="section__title">Categories</h2>
+<ul>
+<li><strong>Strictly necessary</strong> — none. The site is static and works without cookies.</li>
+<li><strong>Analytics</strong> — Google Analytics, only when you do not send Do Not Track.</li>
+<li><strong>Advertising</strong> — Google AdSense. These are the only cookies that can follow you to other sites.</li>
+</ul>
+
+<h2 class="section__title">Blocking and removing cookies</h2>
+<p>You can delete or block cookies in your browser at any time; the site keeps working. Instructions per browser:</p>
+<ul>
+<li><a href="https://support.google.com/chrome/answer/95647" rel="nofollow noopener" target="_blank">Google Chrome</a></li>
+<li><a href="https://support.mozilla.org/en-US/kb/clear-cookies-and-site-data-firefox" rel="nofollow noopener" target="_blank">Mozilla Firefox</a></li>
+<li><a href="https://support.apple.com/guide/safari/manage-cookies-sfri11471/mac" rel="nofollow noopener" target="_blank">Safari</a></li>
+<li><a href="https://support.microsoft.com/microsoft-edge/delete-cookies-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09" rel="nofollow noopener" target="_blank">Microsoft Edge</a></li>
+</ul>
+<p>To stop personalised advertising specifically, use <a href="https://adssettings.google.com/" rel="nofollow noopener" target="_blank">Google Ads Settings</a> or <a href="https://www.aboutads.info/choices/" rel="nofollow noopener" target="_blank">www.aboutads.info</a>. Blocking ad cookies does not remove ads; it makes them less relevant.</p>
+
+<h2 class="section__title">Withdrawing consent</h2>
+<p>Withdrawal is the same as blocking: delete the cookies and, where your browser supports it, block third-party cookies for this site. If you have already opted out through Google Ads Settings, that choice is stored by Google, not by us. Questions: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. See also our <a href="/privacy/">privacy policy</a>.</p>
+</Page>

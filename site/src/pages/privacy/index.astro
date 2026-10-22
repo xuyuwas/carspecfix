@@ -2,14 +2,34 @@
 import Page from '../../layouts/Page.astro';
 import { CONTACT_EMAIL } from '../../lib/site.mjs';
 ---
-<Page title="Privacy Policy | CarSpecFix" description="How CarSpecFix handles your data: what we collect, cookies, and how to contact us." path="/privacy/" crumbs={[{ name: 'Home', url: '/' }, { name: 'Privacy', url: '/privacy/' }]} h1={`Privacy Policy`}>
-<p class="meta">Effective October 17, 2026</p>
+<Page title="Privacy Policy | CarSpecFix" description="How CarSpecFix handles your data: what we collect, cookies, advertising consent, retention, and how to contact us." path="/privacy/" crumbs={[{ name: 'Home', url: '/' }, { name: 'Privacy', url: '/privacy/' }]} h1={`Privacy Policy`}>
+<p class="meta">Effective October 17, 2026 · Advertising and consent sections updated October 21, 2026</p>
 <h2 class="section__title">What we collect</h2>
 <p>We do not require accounts and do not sell personal data. We use Cloudflare Web Analytics and Ahrefs Analytics, neither of which uses cookies, to count visits and see which pages are read in aggregate. We also use Google Analytics (which sets cookies) to understand overall traffic; if your browser sends a Do Not Track signal, we do not load Google Analytics or Ahrefs Analytics at all, and you can also opt out with Google's opt-out browser add-on. Our host (Cloudflare) processes standard request logs — including your IP address and user-agent — to deliver and secure the site. These logs are retained by Cloudflare for a limited period and are not used to identify you personally.</p>
+<h2 class="section__title">Advertising and cookies</h2>
+<p>This site is supported by advertising served through Google AdSense. Third-party vendors, including Google, use cookies to serve ads based on your prior visits to this website or other websites.</p>
+<p>Google's use of advertising cookies enables it and its partners to serve ads to you based on your visit to this site and/or other sites on the internet.</p>
+<p>You may opt out of personalised advertising by visiting <a href="https://adssettings.google.com/" rel="nofollow noopener" target="_blank">Google Ads Settings</a>, or opt out of a third-party vendor's use of cookies for personalised advertising at <a href="https://www.aboutads.info/choices/" rel="nofollow noopener" target="_blank">www.aboutads.info</a>. Google describes how it uses data from sites that use its services at <a href="https://policies.google.com/technologies/partner-sites" rel="nofollow noopener" target="_blank">policies.google.com/technologies/partner-sites</a>.</p>
+<p>Ad selection happens on Google's side: we do not receive, store, or sell the data Google collects to deliver or measure ads, and we do not choose which advertisers appear. Ads do not influence the specifications, figures, or rankings on this site.</p>
+<p>Because ad delivery runs on Google's infrastructure, a Do Not Track signal stops our own analytics (above) but does not by itself stop ad serving — use the opt-out links in this section for that.</p>
+<p>The <a href="/cookie-policy/">cookie policy</a> lists every cookie this site can set, who sets it, and how long it lasts.</p>
+<h2 class="section__title">Consent in the EEA, the UK and Switzerland</h2>
+<p>If you visit from the European Economic Area, the United Kingdom or Switzerland, we ask for your consent before advertising cookies are used to personalise ads, through a consent message provided by Google's certified consent management platform. The message states which vendors are asking for consent and what they would use your data for, and it is shown before any personalised advertising cookie is set.</p>
+<p>You can refuse, or consent to some purposes only. If you refuse, ads are still shown but they are not personalised on the basis of your prior browsing, and Google is instructed accordingly through the consent signal attached to each ad request.</p>
+<p>To change or withdraw a choice you have already made, clear this site's cookies in your browser and reload the page: the consent message appears again on your next visit. You can also use the opt-out links above, which are independent of this site.</p>
 <h2 class="section__title">Correction reports</h2>
 <p>If you report a data error through our contact form, we store the page URL, the field you flagged, and your description so we can review and fix it. We do not ask for or store payment, location, or other sensitive personal information.</p>
+<h2 class="section__title">What we do not collect</h2>
+<p>No accounts, no passwords, no payment details, no precise location data, and no advertising identifiers of our own. The site does not request your device location and does not run a first-party tracking cookie. If you email us, we hold that message and your address only for as long as it takes to answer it.</p>
+<h2 class="section__title">Retention</h2>
+<p>Correction reports are kept until the reported page has been reviewed and corrected, then retained in a log so that a repeat report on the same field can be recognised. Aggregate analytics are kept for the periods stated by the providers. Server logs are retained by Cloudflare for a limited period under their own policy. Email correspondence is retained while the thread is active and for a reasonable period afterwards.</p>
+<h2 class="section__title">Children</h2>
+<p>This site is written for adult car owners and is not directed at children. We do not knowingly collect personal information from children, and there is nothing on the site that requires a visitor to submit personal details in order to read it.</p>
+<h2 class="section__title">Where data is processed</h2>
+<p>Our hosting, analytics and advertising providers process data in the United States and other countries where they operate, under their own contractual safeguards for international transfers. We do not operate our own servers or databases of visitor data.</p>
 <h2 class="section__title">Your data rights</h2>
-<p>Depending on where you live, you may have the right to access, correct, or delete the personal data we hold about you. To exercise these rights, email <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> with the subject “Data request.” We respond within 30 days.</p>
+<p>Depending on where you live, you may have the right to access, correct, or delete the personal data we hold about you, and to object to certain processing. To exercise these rights, email <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> with the subject “Data request.” We respond within 30 days. For advertising data held by Google, use the opt-out links above or Google's own privacy controls.</p>
 <h2 class="section__title">Changes</h2>
-<p>If we add advertising in the future, this policy will be updated before ads appear. Questions: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.</p>
+<p>We will update this policy before changing what we collect or who we share it with, and the effective date at the top of this page changes when we do. Questions: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.</p>
+<p>Related: <a href="/cookie-policy/">cookie policy</a> · <a href="/terms/">terms of use</a> · <a href="/do-not-sell/">do not sell or share</a> · <a href="/copyright/">copyright</a>.</p>
 </Page>

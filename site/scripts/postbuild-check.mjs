@@ -83,6 +83,12 @@ for (const [u, p] of Object.entries(pages)) {
     if (/\$\d/.test(noCost)) errors.push(`uncited dollar figure on ${u}`);
   }
   for (const im of p.s.matchAll(/<img [^>]*>/g)) if (!/width="\d+"/.test(im[0]) || !/height="\d+"/.test(im[0])) errors.push(`R-I1 img without width/height on ${u}`);
+  // R-I2: every vehicle page must carry a licensed, credited real photograph.
+  // Photo.astro silently degrades to /car-{segment}.svg (class "photo--placeholder")
+  // when data/images.json has no signed entry, so without this gate a new vehicle
+  // can ship with a drawn silhouette instead of a photo.
+  if (!PREVIEW && /^\/specs\/[^/]+\/[^/]+\/\d{4}\/$/.test(u) && /<figure class="photo photo--placeholder"/.test(p.s))
+    errors.push(`R-I2 vehicle page falls back to the silhouette placeholder (no signed photo): ${u}`);
 }
 for (const [t, us] of Object.entries(titles)) if (us.length > 1) errors.push(`R-M2 duplicate title "${t}": ${us.join(', ')}`);
 // R-D7: the homepage must state its real coverage (pilot = 4 vehicles / 5 codes),

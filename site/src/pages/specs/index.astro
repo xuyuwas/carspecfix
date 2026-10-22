@@ -1,6 +1,6 @@
 ---
 import Page from '../../layouts/Page.astro';
-import { liveVehicles, vehicleUrl, liveHubs, SITE } from '../../lib/gate.mjs';
+import { liveVehicles, vehicleUrl, liveHubs, vehicles, vehicleGate, SITE } from '../../lib/gate.mjs';
 import { fitTitle } from '../../lib/title.mjs';
 import { AUTHOR } from '../../lib/site.mjs';
 // R-L3 / R-U6: /specs/ is the make -> model -> year entry point. Without an index
@@ -16,6 +16,26 @@ const byMake = [...new Set(liveVehicles.map(v => v.makeSlug))].sort().map(mk => 
   });
   return { slug: mk, name: vs[0].make, models };
 });
+// Pages we are actively checking but have not published. They are listed with the
+// exact reason they are held back, derived from the publish gate rather than written
+// by hand — so the list cannot drift from the real state of the data set.
+const PLAIN = [
+  [/oilCapacity/i, 'oil capacity'],
+  [/oilViscosity/i, 'oil viscosity'],
+  [/tire|psi/i, 'tire size and pressure'],
+  [/fuel economy/i, 'EPA fuel economy'],
+  [/recalls/i, 'NHTSA recalls'],
+  [/model year/i, 'model-year confirmation'],
+];
+const inReview = vehicles.map(v => {
+  const g = vehicleGate(v);
+  if (g.dataReady) return null;
+  const missing = [...new Set(g.reasons.flatMap(r => PLAIN.filter(([re]) => re.test(r)).map(([, label]) => label)))];
+  return { label: `${v.year} ${v.make} ${v.model}`, missing, n: missing.length };
+}).filter(Boolean)
+  // Closest to publishing first: the reader can see what is nearly finished rather
+  // than an alphabetical list that hides which entry is one figure away.
+  .sort((a, b) => a.n - b.n || a.label.localeCompare(b.label, 'en', { numeric: true }));
 const title = fitTitle('Car specs by make & model', ['Oil', 'Tires', 'Recalls']);
 const description = `Every vehicle we have checked, grouped by make: oil capacity, tire size and pressure, and NHTSA recalls, each figure cited from the owner's manual.`;
 const path = '/specs/';
@@ -24,9 +44,21 @@ const jsonld = [{ '@type': 'Article', headline: 'Car specs by make and model', d
 const crumbs = [{ name: 'Home', url: '/' }, { name: 'Specs', url: path }];
 ---
 <Page narrow={true} title={title} description={description} path={path} nav="specs" crumbs={crumbs} jsonld={jsonld} h1="Vehicle specs by make and model">
-<p class="ks__src">Live now: {liveVehicles.length} vehicles. A page goes live only after every figure is checked against the owner's manual, NHTSA or fueleconomy.gov.</p>
+<p class="ks__src">Live now: {liveVehicles.length} vehicles{inReview.length ? `, with ${inReview.length} more in source review` : ''}. A page goes live only after every figure is checked against the owner's manual, NHTSA or fueleconomy.gov.</p>
+<p>This is the entry point to every vehicle page on the site, grouped by make and then by model. Pick a year and the page opens with the four things most lookups are actually after: how much oil the engine takes, which oil grade the manufacturer specifies, what tyre size and cold pressure apply to that wheel package, and whether NHTSA lists any recalls for that exact model year.</p>
+<h2 class="section__title">Why each year is a separate page</h2>
+<p>A model year is not a sticker on last year's car. Engines are added and dropped, tyre packages change with trim, and an oil capacity that is correct for a 2019 model can be wrong for the 2020 of the same name — sometimes by half a litre. Copying a figure across years is the most common way a specification lookup goes wrong, so every year here is checked on its own, against that year's own manual. That is also why coverage grows one model year at a time: publishing a hundred unchecked pages would be faster and worth less.</p>
+<p>Where the manufacturer did not publish a figure — a manual that prints no tyre pressure and points to the door-jamb label instead, for example — the page says so and quotes the instruction. It does not fill the gap with a typical value. That is also why some pages carry fewer numbers than a retailer's fitment tool: this site only prints what a document says.</p>
+<h2 class="section__title">What is not here</h2>
+<p>No per-job repair prices, no shop recommendations, and no specifications for vehicles that have not been checked yet. The <a href="/repair-cost/">pricing page</a> explains why a labour figure without a source would be a guess, and the <a href="/changelog/">changelog</a> lists every page with the date its figures were last verified.</p>
+{inReview.length > 0 && <section id="in-review">
+  <h2 class="section__title">In source review ({inReview.length})</h2>
+  <p class="ks__src">Drafts held back by the publish gate, closest to publishing first. The figures named are the ones still being read from a document — nothing here is published with a guessed value. Reader requests decide what gets read next.</p>
+  <ul class="links">{inReview.map(v => <li><span>{v.label}</span><span class="links__meta">{v.n === 1 ? 'almost ready — ' : 'waiting on '}{v.missing.length ? v.missing.join(', ') : 'final checks'}</span></li>)}</ul>
+</section>}
+<p class="ks__src">Want a specific year, make and model? <a href="/contact/">Tell us which one</a>.</p>
 {byMake.map(m => <section class="hsec">
   <h2 class="section__title"><a href={`/specs/${m.slug}/`}>{m.name}</a></h2>
-  <ul class="links">{m.models.map(mo => <li><a href={mo.url}>{mo.name}</a> — {mo.years.map((y, i) => <>{i > 0 && ', '}<a href={vehicleUrl(y)}>{y.year}</a></>)}</li>)}</ul>
+  <ul class="links">{m.models.map(mo => <li><a href={mo.url}>{mo.name}</a><span class="links__meta">— {mo.years.map((y, i) => <>{i > 0 && ', '}<a href={vehicleUrl(y)}>{y.year}</a></>)}</span></li>)}</ul>
 </section>)}
 </Page>

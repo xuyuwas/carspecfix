@@ -1,12 +1,39 @@
 ---
 import Page from '../../../layouts/Page.astro';
-import { AUTHOR } from '../../../lib/site.mjs';
-import { SITE } from '../../../lib/gate.mjs';
+import { AUTHOR, CONTACT_EMAIL } from '../../../lib/site.mjs';
+import { SITE, liveVehicles, liveIssues } from '../../../lib/gate.mjs';
 export function getStaticPaths() { return [{ params: { slug: AUTHOR.slug } }]; }
 const path = `/authors/${AUTHOR.slug}/`;
-const jsonld = [{ '@type': 'ProfilePage', mainEntity: { '@type': 'Person', name: AUTHOR.name, url: SITE + path, description: AUTHOR.bio } }];
+const jsonld = [{ '@type': 'ProfilePage', mainEntity: { '@type': 'Person', name: AUTHOR.name, url: SITE + path, description: AUTHOR.bio, knowsAbout: ['OBD-II diagnostic trouble codes', 'owner manual specifications', 'NHTSA recall data', 'EPA fuel economy data'], worksFor: { '@type': 'Organization', name: 'CarSpecFix', url: SITE + '/' } } }];
+const vCount = liveVehicles.length, iCount = liveIssues.length;
 ---
-<Page title={`${AUTHOR.name} – Editor | CarSpecFix`} description={`${AUTHOR.name} compiles and checks the data on CarSpecFix.`} path={path} jsonld={jsonld} crumbs={[{ name: 'Home', url: '/' }, { name: AUTHOR.name, url: path }]} h1={AUTHOR.name}>
+<Page title={`${AUTHOR.name} – Editor | CarSpecFix`} description={`${AUTHOR.name} compiles and checks the data on CarSpecFix: which documents are used, how each figure is verified, and how corrections are handled.`} path={path} jsonld={jsonld} crumbs={[{ name: 'Home', url: '/' }, { name: AUTHOR.name, url: path }]} h1={AUTHOR.name}>
+<p class="eyebrow">Editor, CarSpecFix</p>
 <p>{AUTHOR.bio}</p>
-<h2 class="section__title">Editorial process</h2><p>Each page is compiled from cited sources and checked by a person before publishing. Brake, ABS and airbag topics use conservative safety advice.</p>
+<p>CarSpecFix started from a small annoyance: looking up an oil capacity usually means opening a 600-page PDF, finding the specifications chapter, and working out whether the number on the page is for the engine you actually have. The answer is in the manual — it is just badly indexed. This site is the index.</p>
+<p>Today it covers {vCount} vehicle model years and {iCount} symptom and trouble-code pages. Coverage is deliberately narrow: a page that cannot be sourced does not ship, so the library grows one verified vehicle at a time rather than one template at a time.</p>
+
+<h2 class="section__title">What I actually do on a page</h2>
+<ol>
+<li><strong>Find the right document.</strong> For specifications that means the U.S. owner's manual for the exact model year — not the previous generation, not a different market's edition, and not the Spanish-language version of the same manual, which has been the source of more than one wrong capacity.</li>
+<li><strong>Read the value out of the page.</strong> The printed page number is recorded next to the figure, so any later dispute starts from the same page rather than from memory.</li>
+<li><strong>Reconcile the variants.</strong> Engines with and without a filter, tyre pressures that differ by wheel size, drivetrains with different EPA results. Where a manual gives two figures, the page gives two figures.</li>
+<li><strong>Check it against the rest of the vehicle.</strong> A capacity that does not match the engine in the title, or a tyre size that belongs to another trim, is an error until proven otherwise.</li>
+<li><strong>Sign the page and date it.</strong> The verification date shown on each page is the date of that check. There is no page on this site without one.</li>
+</ol>
+
+<h2 class="section__title">How sourcing decisions are made</h2>
+<p>Documents are graded. A manufacturer document — manual, service bulletin, technical tip — is a primary source for a specification. Government datasets (NHTSA recalls and complaints, EPA fuel economy) are primary for their own fields. Forum posts, retailer listings and other car-specification sites are not sources for a number, however plausible they look; they are sometimes useful for knowing where to look in the manual.</p>
+<p>Where a manufacturer states something unusual — a model year that shares a previous generation's body, an EV with no oil capacity, a manual that prints no tyre pressure at all — the page says so in the manufacturer's own terms rather than smoothing it into a template.</p>
+
+<h2 class="section__title">Tools and disclosure</h2>
+<p>Extracting text from long PDFs is assisted by software: searching a 600-page manual for the specifications chapter by hand is slow and error-prone in exactly the way that produces wrong numbers. What ships is the figure read against the cited page, with the page reference attached — the tool finds the page, the check is done on the page. Pages that could not be checked against a primary document are not published, and the publishing step is gated in code so that an unchecked page cannot slip through.</p>
+<p>No vehicle here has been road-tested. Nothing on this site comes from hands-on mechanical work, and it should not be read as if it did.</p>
+
+<h2 class="section__title">Safety topics</h2>
+<p>Brake, ABS and airbag symptoms are treated conservatively. Where a manufacturer document describes a stop-driving condition, the page says so in the first paragraph rather than after a list of causes, and the cause list is ordered so that the cheapest check is not mistaken for the most likely one.</p>
+
+<h2 class="section__title">Corrections</h2>
+<p>If a figure is wrong, the fastest path is the "report a data error" link on the page itself, or the <a href="/contact/">contact form</a>. Include the vehicle, the field and — if you have it — the page of the manual you are reading. Corrections are reviewed against the source, the page is re-dated when a figure changes, and the change appears on the <a href="/changelog/">changelog</a>.</p>
+<p>Read next: <a href="/about/">how the site works</a> · <a href="/sources/">the document families we use</a> · <a href="/disclaimer/">the disclaimer</a>. Contact: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.</p>
 </Page>

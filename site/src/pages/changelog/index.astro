@@ -1,0 +1,74 @@
+---
+import Page from '../../layouts/Page.astro';
+import { liveVehicles, liveIssues, vehicleUrl, issueUrl, sources, TODAY } from '../../lib/gate.mjs';
+import corrections from '../../../data/corrections.json';
+const path = '/changelog/';
+const RANK = { 'Vehicle specs': 0, 'Trouble code': 1, 'Symptom': 2 };
+// The retrieval date of the documents a page cites — the newest one, because that is
+// the last day anything on the page was read from a primary document. Using the
+// page's change date here instead would have claimed a re-read that never happened.
+const srcRead = (o: any) => {
+  const dates = 'powertrain' in o
+    ? [sources[o.specs?.oilCapacity?.source]?.retrieved, o.recallsFetched, o.fuelEconomyFetched]
+    : [...(o.causes || []), ...(o.urgency || []), ...(o.guidance || []), ...(o.firstStep ? [o.firstStep] : []), ...(o.definition ? [o.definition] : [])].map((x: any) => x?.fetched);
+  return dates.filter(Boolean).sort().at(-1) || null;
+};
+// A verification log, not a diff log: every live page carries the date its figures
+// were last read against the cited source, so the log is derived from the data rather
+// than hand-written (a hand-written log goes stale the first time someone forgets it).
+// Four dates, because one date cannot answer four different questions: when the page
+// appeared, when its sources were retrieved, when a person reviewed it, and when the
+// page itself last changed.
+const rows = [
+  ...liveVehicles.map(v => ({ label: `${v.year} ${v.make} ${v.model}`, url: vehicleUrl(v), kind: 'Vehicle specs', changed: v.dataUpdated, verified: v.signOff?.date, added: v.publishDate, reviewed: v.signOff?.by, source: srcRead(v), date: v.dataUpdated })),
+  ...liveIssues.map(i => ({ label: i.type === 'code' ? `${i.code} code` : i.title, url: issueUrl(i), kind: i.type === 'code' ? 'Trouble code' : 'Symptom', changed: i.dataUpdated, verified: i.signOff?.date, added: i.publishDate, reviewed: i.signOff?.by, source: srcRead(i), date: i.dataUpdated })),
+].map(r => ({ ...r, when: [r.verified, r.changed].filter(Boolean).sort().at(-1) }))
+ .sort((a, b) => b.when.localeCompare(a.when) || RANK[a.kind] - RANK[b.kind] || b.label.localeCompare(a.label, 'en', { numeric: true }));
+// Only the newest date group is linked. Linking the whole library would put ~45
+// internal links on one URL today and cross the 50-link build ceiling as soon as the
+// library grows; older rows keep their dates so the log still reads as a log. Pages
+// stay one click away through the specs / codes / symptoms indexes.
+const LINK_CAP = 12;
+const linked = new Set(rows.slice(0, LINK_CAP).map(r => r.url));
+const fmt = d => d ? new Date(d + 'T12:00:00Z').toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' }) : '—';
+const first = rows.map(r => r.added).filter(Boolean).sort()[0];
+const entries = (corrections as any).entries || [];
+const title = 'Changelog: Page Verification Dates | CarSpecFix';
+const description = `Every page on CarSpecFix listed with four dates: added, source documents read, human review, and last change. Plus the corrections log.`;
+---
+<Page narrow={true} title={title} description={description} path={path} crumbs={[{ name: 'Home', url: '/' }, { name: 'Changelog', url: path }]} h1="Changelog, verification dates and corrections">
+<p class="meta">Coverage started {first ? fmt(first) : '2026'} · {rows.length} pages published · {entries.length} correction{entries.length === 1 ? '' : 's'} recorded · last updated {fmt(TODAY)}</p>
+<p>Every page on this site carries three dates, and this page collects them. They are deliberately separate numbers, because "last verified" hides the difference between a page whose text was edited and a page whose figures were actually re-read against the document.</p>
+<ul>
+<li><b>Added</b> — when the page first went live.</li>
+<li><b>Source read</b> — when the manual page, NHTSA record or EPA entry it cites was retrieved.</li>
+<li><b>Human review</b> — when a person read the figures against that document and signed the page off.</li>
+<li><b>Changed</b> — any later edit to the text or data.</li>
+</ul>
+<p>A date in the review column means "a person opened the cited page and confirmed this value on or after that day", not "the text was re-uploaded". The process behind it is described on <a href="/sources/#review">Data sources &amp; methodology</a>.</p>
+
+<h2 class="section__title" id="corrections">Corrections log</h2>
+{entries.length
+  ? <><p>Corrections are listed with the pages affected, what changed and — importantly — what did not. A display bug that printed the wrong label does not mean the underlying figure was wrong, and the log says so instead of quietly re-dating the page.</p>
+    <ol class="corr">{entries.map((c: any) => <li>
+      <div class="corr__head"><span class="tnum">{fmt(c.date)}</span> · <b>{c.kind}</b></div>
+      <div class="corr__what">{c.what}</div>
+      <div class="corr__pages">Pages: {c.pages.length} affected</div>
+      {c.unchanged && <div class="corr__keep"><b>Unchanged:</b> {c.unchanged}</div>}
+    </li>)}</ol>
+    <p class="ks__src">Each entry is also linked to its pages from the <a href="/sources/#corrections">data sources page</a>.</p></>
+  : <p>No corrections recorded yet. When one happens it appears here with the pages affected and what changed.</p>}
+
+<h2 class="section__title">The log</h2>
+<div class="tbl-wrap"><div class="tbl-scroll" role="region" tabindex="0" aria-label="Page verification dates">
+<table class="dtbl"><thead><tr><th scope="col">Page</th><th scope="col">Kind</th><th scope="col">Added</th><th scope="col">Source read</th><th scope="col">Reviewed</th><th scope="col">Changed</th></tr></thead>
+<tbody>{rows.map(r => <tr>
+  <td>{linked.has(r.url) ? <a href={r.url}>{r.label}</a> : r.label}</td>
+  <td>{r.kind}</td>
+  <td class="tnum">{fmt(r.added)}</td>
+  <td class="tnum">{fmt(r.source)}</td>
+  <td class="tnum">{r.verified ? `${fmt(r.verified)}${r.reviewed ? ` · ${r.reviewed}` : ''}` : '—'}</td>
+  <td class="tnum">{fmt(r.changed)}</td>
+</tr>)}</tbody></table></div></div>
+<p class="ks__src" style="margin-top:12px">The first {LINK_CAP} rows link to their pages; the rest are listed so the log stays complete without turning this page into a link farm. Every page is reachable from <a href="/specs/">specs</a>, <a href="/codes/">codes</a> or <a href="/symptoms/">symptoms</a>.</p>
+</Page>

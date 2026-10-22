@@ -43,7 +43,11 @@ done
 echo "==> [1/5] 干净构建 (Astro @ site/)"
 cd "$SITE_DIR"
 rm -rf dist .astro
-npm run build
+# RELEASE_DAY 必须在这里透传：site/lib/gate.mjs 默认取 1，漏传就会把整站构建成
+# day1（4 台车），已签的 day2-7 页面全部被 gate 挡在 dist 之外 —— 线上长期停在
+# 4 台车就是这个原因。调用方式：RELEASE_DAY=7 ./publish.sh
+RELEASE_DAY="${RELEASE_DAY:-1}" npm run build
+echo "    RELEASE_DAY=${RELEASE_DAY:-1}"
 [ -f "$DIST_DIR/index.html" ] || { echo "构建失败：dist/index.html 未生成" >&2; exit 1; }
 echo "    构建完成：$(find "$DIST_DIR" -name '*.html' | wc -l | tr -d ' ') 个 HTML"
 

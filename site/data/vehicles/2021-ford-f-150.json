@@ -10,7 +10,7 @@
  "manual": {
   "sourceId": "manual-2021-ford-f-150",
   "yearConfirmed": true,
-  "note": "Ford official online owner manual 2021 F-150 > Capacities and Specifications > Engine Oil Capacity and Specification (per engine). Page is JS-rendered; values not yet read directly. Also Ford tech spec PDF media.ford.com (403 from box) | OIL A-grade: waiting on 队长 download: https://www.ford.com/support/owner-manuals-details/f150/2021/ (Owner's Manual PDF; fordservicecontent.com returns 403 from box)"
+  "note": "Ford official online owner manual 2021 F-150 > Capacities and Specifications > Engine Oil Capacity and Specification (per engine). Page is JS-rendered; values not yet read directly. Also Ford tech spec PDF media.ford.com (403 from box) | OIL A-grade: waiting on Marlowe Sheets download: https://www.ford.com/support/owner-manuals-details/f150/2021/ (Owner's Manual PDF; fordservicecontent.com returns 403 from box)"
  },
  "specs": {
   "oilCapacity": {

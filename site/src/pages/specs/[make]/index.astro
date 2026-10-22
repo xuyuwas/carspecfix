@@ -18,6 +18,10 @@ export function getStaticPaths() {
 }
 const { name, models } = Astro.props;
 const path = `/specs/${Astro.params.make}/`;
+const mine = liveVehicles.filter(v => v.makeSlug === Astro.params.make);
+const yearList = mine.map(v => v.year).sort((a, b) => a - b);
+const span = yearList.length ? (yearList[0] === yearList.at(-1) ? `${yearList[0]}` : `${yearList[0]}–${yearList.at(-1)}`) : '';
+const modelCount = models.length, pageCount = mine.length;
 const title = fitTitle(`${name} specs by model`, models.map(m => m.short));
 const description = `${name} oil capacity, tire size and pressure, and NHTSA recalls by model and year, each figure cited from the owner's manual or NHTSA.`;
 const last = liveVehicles.filter(v => v.makeSlug === Astro.params.make).map(v => v.dataUpdated).sort().at(-1);
@@ -26,5 +30,15 @@ const crumbs = [{ name: 'Home', url: '/' }, { name: 'Specs', url: '/specs/' }, {
 ---
 <Page narrow={true} title={title} description={description} path={path} nav="specs" crumbs={crumbs} jsonld={jsonld} h1={`${name} specs by model`}>
 <p class="ks__src">Every {name} page we have checked. Figures come from the owner's manual (page cited), NHTSA and fueleconomy.gov — nothing is estimated.</p>
-<ul class="links">{models.map(mo => <li><a href={mo.url}>{mo.name}</a> — {mo.years.map((y, i) => <>{i > 0 && ', '}<a href={vehicleUrl(y)}>{y.year}</a></>)}</li>)}</ul>
+<p>{pageCount} {name} {pageCount === 1 ? 'page' : 'pages'} across {modelCount} {modelCount === 1 ? 'model' : 'models'}, covering model years {span}. Each year is a separate page because the answers change with the engine, the trim and the wheel package — a 2019 figure copied onto a 2024 car is the most common way a specification lookup goes wrong.</p>
+<h2 class="section__title">What a {name} page contains</h2>
+<ul>
+<li><strong>Oil capacity, with and without a filter.</strong> Both numbers are printed where the manual gives both, because the difference is usually 0.2–0.5 qt and choosing one for the reader means being wrong for half of them.</li>
+<li><strong>Oil viscosity and specification.</strong> The grade the manufacturer lists for that engine, not a generic recommendation.</li>
+<li><strong>Tyre size and cold pressure, per wheel configuration.</strong> Where the manual prints no pressure figure and points to the door-jamb label instead, the page shows the size and quotes that instruction rather than inventing a number.</li>
+<li><strong>NHTSA recalls for that exact model year</strong>, with the campaign number so the record can be checked at the source.</li>
+<li><strong>EPA fuel economy</strong> for the matching drivetrain and transmission.</li>
+</ul>
+<p>Specifications differ from what a tyre shop or a parts counter may tell you, and that is expected: their lookup is built for the parts they stock, while these pages reproduce what the manufacturer published for that model year. Where the two disagree, the manual page cited on the vehicle page is the tie-breaker. The document families are listed on the <a href="/sources/">data sources page</a>; every page also carries the date its figures were last checked.</p>
+<ul class="links">{models.map(mo => <li><a href={mo.url}>{mo.name}</a><span class="links__meta">— {mo.years.map((y, i) => <>{i > 0 && ', '}<a href={vehicleUrl(y)}>{y.year}</a></>)}</span></li>)}</ul>
 </Page>

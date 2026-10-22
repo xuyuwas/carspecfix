@@ -1,9 +1,51 @@
 ---
 import Page from '../../layouts/Page.astro';
+import { liveVehicles, liveIssues } from '../../lib/gate.mjs';
+import { CONTACT_EMAIL, AUTHOR } from '../../lib/site.mjs';
+const vCount = liveVehicles.length, iCount = liveIssues.length;
 ---
-<Page title="About CarSpecFix" description="Who runs CarSpecFix, how we collect car specs and how we keep every number cited." path="/about/" crumbs={[{ name: 'Home', url: '/' }, { name: 'About', url: '/about/' }]} h1={`About CarSpecFix`}>
+<Page title="About CarSpecFix" description="Who runs CarSpecFix, which documents every figure comes from, how a page is checked before it goes live, and what this site deliberately does not publish." path="/about/" crumbs={[{ name: 'Home', url: '/' }, { name: 'About', url: '/about/' }]} h1={`About CarSpecFix`}>
 
-<p>CarSpecFix is a small, independent reference for U.S. car owners. We publish specs (oil, tires, MPG, recalls) and plain-English explanations of common symptoms and trouble codes.</p>
-<p>Our rule: no number without a source. Values come from owner's manuals, NHTSA and fueleconomy.gov. If we can't cite a value, we say "Not yet verified" instead of guessing. Every page is checked by a person before it goes live.</p>
-<p>We are data compilers, not certified mechanics. See <a href="/sources/">data sources</a> and <a href="/authors/editor/">our editor</a>.</p>
+<p>CarSpecFix is an independent reference for U.S. car owners. It answers a narrow set of questions with figures that can be traced to a document: how much oil an engine takes, what tyre pressure the manufacturer specifies, which recalls apply to a model year, what a trouble code actually means, and whether a noise or a warning light means stop or drive on.</p>
+<p>The site currently publishes {vCount} vehicle pages and {iCount} symptom and trouble-code pages. That number is small on purpose. A page goes live only when every figure on it has been read out of a cited source and signed off by a person — not when a template has been filled in.</p>
+
+<h2 class="section__title">What a vehicle page contains, and where each figure comes from</h2>
+<ul>
+<li><strong>Oil capacity and viscosity.</strong> Taken from the owner's manual's own specifications chapter, with the printed page number recorded. Where the manual gives a "with filter" and a "without filter" figure, both are printed side by side — a single headline number would be wrong for half the readers.</li>
+<li><strong>Tyre size and pressure.</strong> From the same chapter, per wheel configuration. Some manufacturers (GM and Ford among them) print no pressure figure in the manual at all and point to the door-jamb label instead; those pages show the tyre size and quote the manufacturer's instruction rather than inventing a number.</li>
+<li><strong>Recalls.</strong> Pulled from NHTSA's recall data for that exact model year, with the campaign number so a reader can check it against NHTSA's own record.</li>
+<li><strong>Fuel economy.</strong> From the EPA / fueleconomy.gov test data for the matching drivetrain, not from a brochure claim.</li>
+<li><strong>Service bulletins and known causes.</strong> Where a manufacturer document names a specific cause for a code or a symptom — a split intake duct, a software calibration, a valve — that document is cited at the point the cause is stated.</li>
+</ul>
+<p>Those documents are not interchangeable, so every citation carries one of three labels: <span class="ev ev--oem">Manufacturer</span> for an owner's manual or bulletin, <span class="ev ev--gov">Government</span> for NHTSA, EPA or BLS records, and <span class="ev ev--guidance">Safety guidance</span> for consumer-safety education. Only the first two can establish a number. A brake-noise page that quotes the Car Care Council for "what this noise means" is labelled as guidance at that citation — it is not presented as an official specification. The <a href="/sources/#tiers">sources page</a> sets out what each tier may and may not support.</p>
+
+<h2 class="section__title">How a page is produced</h2>
+<ol>
+<li><strong>Collect the primary documents.</strong> Owner's manual PDFs from the manufacturer, NHTSA recall and complaint data, EPA test data, and published service bulletins. Secondary write-ups are not used as a source for a number.</li>
+<li><strong>Extract with the page reference attached.</strong> Every value is stored with the document, the printed page and the retrieval date, so a later check starts from the page rather than from a search.</li>
+<li><strong>Cross-check the value against the vehicle.</strong> A capacity or a tyre size that contradicts the rest of the page — the wrong engine, the wrong trim, a figure from the Spanish-language edition of a manual — is treated as an error, not as a variant.</li>
+<li><strong>Sign off.</strong> Each page records the date it was last checked, and that date is shown on the page itself. A page without a sign-off does not get published, even when the data is complete.</li>
+<li><strong>Publish behind a gate.</strong> The build refuses to ship a page whose figures are missing, whose source grade is below the threshold, or whose publication has not been scheduled. This is enforced in code, not by memory.</li>
+</ol>
+<p>Every page carries its sources in a list at the bottom, with the document name, page and retrieval date. The <a href="/sources/">data sources page</a> describes the document families we work from; the <a href="/changelog/">changelog</a> lists every page with the date its figures were last verified.</p>
+
+<h2 class="section__title">What this site deliberately does not do</h2>
+<ul>
+<li><strong>It does not guess.</strong> Where no citable figure exists, the page says "not yet verified" and stops. An empty field is more useful than a plausible one.</li>
+<li><strong>It does not print repair prices per job.</strong> Labour time is not published as open data, so any per-job number would be an estimate dressed up as a fact. The <a href="/repair-cost/">pricing page</a> explains the method a reader can apply instead.</li>
+<li><strong>It does not promise a fix.</strong> A code's cause list is not a diagnosis; it is the order in which a technician would check things on that engine.</li>
+<li><strong>It does not do hands-on testing.</strong> We are data compilers, not a workshop. Nothing here replaces the owner's manual for your exact vehicle or a mechanic's inspection.</li>
+<li><strong>It does not yet have a technician on the review.</strong> The safety wording — brake and ABS symptoms, "can I keep driving" answers — is compiled from manufacturer and government text by an editor, not signed off by a qualified technician. That gap is stated on the <a href="/sources/#review">sources page</a> rather than covered by a claim of "expert reviewed". When a technician review is recorded, the name, credentials and pages will be published there.</li>
+</ul>
+
+<h2 class="section__title">Advertising and editorial independence</h2>
+<p>The site is supported by display advertising served through Google AdSense. Advertisers have no involvement in what is published: no manufacturer, parts seller or repair chain has ever reviewed a page, supplied a figure, or been consulted about which vehicles are covered. Ad placement never changes a specification, a cause list, or the order in which causes are printed.</p>
+<p>Advertising is also the reason the site is free to read and has no account system. There is no newsletter wall, no paywalled page, and no data is sold.</p>
+
+<h2 class="section__title">Corrections</h2>
+<p>Errors are the one thing a reference site can be certain to produce. If a figure on a page is wrong, the <a href="/contact/">contact form</a> and the "report a data error" link on each page both reach the same place: the page URL, the field, and your description. A corrected page gets a new verification date and reappears on the changelog. The policy is in the <a href="/disclaimer/">disclaimer</a>.</p>
+<p>The <a href="/sources/#corrections">corrections log</a> is public and not a promise about the future: each entry names the date, the pages affected, what changed, and — separately — what was checked and left unchanged. It is short, because a log with entries invented to look diligent would defeat its purpose.</p>
+
+<h2 class="section__title">Who writes it</h2>
+<p>CarSpecFix is compiled and checked by <a href={`/authors/${AUTHOR.slug}/`}>{AUTHOR.name}</a>. Questions, corrections and coverage requests: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.</p>
 </Page>

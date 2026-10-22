@@ -10,7 +10,7 @@
   "manual": {
     "sourceId": null,
     "yearConfirmed": true,
-    "note": "TODO: US 2022 CR-V (1.5T) manual not reached; a mirror snippet (4.0 qt incl. filter, 0W-20; 235/65R17 32/30, 235/60R18 35/32, 235/55R19 33/33) comes from the CR-V HEV book — NOT used for gas model | OIL A-grade: waiting on 队长 download: https://techinfo.honda.com/ (2022 CR-V owner's manual; exact pub ID not confirmed; techinfo times out from box)"
+    "note": "TODO: US 2022 CR-V (1.5T) manual not reached; a mirror snippet (4.0 qt incl. filter, 0W-20; 235/65R17 32/30, 235/60R18 35/32, 235/55R19 33/33) comes from the CR-V HEV book — NOT used for gas model | OIL A-grade: waiting on Marlowe Sheets download: https://techinfo.honda.com/ (2022 CR-V owner's manual; exact pub ID not confirmed; techinfo times out from box)"
   },
   "specs": {
     "oilCapacity": {

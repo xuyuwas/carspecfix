@@ -1,0 +1,38 @@
+---
+import Page from '../../layouts/Page.astro';
+import { CONTACT_EMAIL } from '../../lib/site.mjs';
+---
+<Page title="Copyright & DMCA | CarSpecFix" description="What is ours, what is licensed, how to report infringing material and how a counter-notice works." path="/copyright/" crumbs={[{ name: 'Home', url: '/' }, { name: 'Copyright', url: '/copyright/' }]} h1="Copyright and DMCA">
+<p class="meta">Effective October 21, 2026</p>
+
+<h2 class="section__title">What we own</h2>
+<p>The page text, page structure and the compiled dataset on this site are © 2026 CarSpecFix. You may quote a short passage with attribution and a link. You may not republish whole pages, mirror the site, or redistribute the compiled dataset. See <a href="/terms/">terms of use</a>.</p>
+
+<h2 class="section__title">Third-party material</h2>
+<ul>
+<li><strong>Photographs</strong> — licensed from their authors, credited in the caption of the page where they appear, with a link to the licence (typically Creative Commons, e.g. CC BY-SA 4.0) and to the source file. If a photo is cropped, the caption says so. We do not claim ownership of these images.</li>
+<li><strong>Specifications and recall data</strong> — facts transcribed from manufacturer owner's manuals, manufacturer service bulletins, NHTSA and fueleconomy.gov. Facts are not copyrightable; the documents they come from are, and we cite rather than reproduce them. Short quotations appear only where the exact wording matters, with the document and page cited.</li>
+<li><strong>Trademarks</strong> — manufacturer and model names belong to their owners and are used descriptively to identify a vehicle. Their appearance here does not imply endorsement.</li>
+</ul>
+
+<h2 class="section__title">Reporting infringing material (DMCA)</h2>
+<p>We are not a U.S.-registered service provider, but we apply the notice-and-takedown process of 17 U.S.C. §512 voluntarily. If you believe material on this site infringes your copyright, email <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> with the subject line "DMCA notice" and include all six elements below. A notice missing any of them may be invalid.</p>
+<ol>
+<li>A physical or electronic signature of the copyright owner or a person authorised to act on their behalf.</li>
+<li>Identification of the copyrighted work claimed to be infringed, or, if several works are covered by one notice, a representative list of them.</li>
+<li>Identification of the material claimed to be infringing, with enough information for us to locate it — the full URL of each page concerned.</li>
+<li>Your name, address, telephone number and email address, so we can contact you.</li>
+<li>A statement that you have a good-faith belief that the disputed use is not authorised by the copyright owner, its agent or the law.</li>
+<li>A statement that the information in the notice is accurate, and, under penalty of perjury, that you are the copyright owner or authorised to act on the owner's behalf.</li>
+</ol>
+<p>We acknowledge valid notices within 2 business days and remove or disable access to the material while we review. We will tell the person who posted it, and we keep a record of every notice actioned.</p>
+
+<h2 class="section__title">Counter-notice</h2>
+<p>If your material was removed and you believe that was a mistake or a misidentification, send a counter-notice to the same address including: your signature; identification of the removed material and its former URL; a statement under penalty of perjury that you have a good-faith belief the material was removed as a result of mistake or misidentification; and your name, address and telephone number, together with consent to the jurisdiction of a court for the district where you live (or, if outside the United States, any judicial district in which we may be found). We may restore the material 10 to 14 business days after forwarding a valid counter-notice, unless the original complainant tells us they have filed a court action.</p>
+
+<h2 class="section__title">Repeat infringement and misuse</h2>
+<p>We do not knowingly host infringing material, and we will not restore material for a party who has been the subject of repeated valid notices. Knowingly filing a materially false notice or counter-notice can create liability for damages, including costs and attorney's fees, under 17 U.S.C. §512(f) — so please check the licence before sending one.</p>
+
+<h2 class="section__title">Our own content being copied</h2>
+<p>If you find this site's pages republished elsewhere, tell us at <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. We keep dated snapshots of every published page so provenance can be shown.</p>
+</Page>

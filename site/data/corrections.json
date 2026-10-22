@@ -1,0 +1,48 @@
+{
+  "_comment": "Real corrections, newest first. Every entry must name the pages, the date the fix shipped, and what changed vs what did not. This file is the only source for the corrections log on /sources/ and /changelog/; do not hand-write a 'no corrections yet' claim anywhere.",
+  "entries": [
+    {
+      "date": "2026-10-22",
+      "kind": "Scope and photo",
+      "pages": [
+        "2024-toyota-rav4"
+      ],
+      "what": "The page illustrated a 2024 RAV4 Hybrid Woodland Edition while its oil capacity applies to the 2.5L gasoline engine only. The caption now names the powertrain difference in the same sentence as the photo credit, and the oil figure is stated only after an engine is chosen.",
+      "unchanged": "Oil capacity (4.5 qt with filter / 4.2 qt without) and every tire row: figures were correct and are unchanged."
+    },
+    {
+      "date": "2026-10-22",
+      "kind": "Source link",
+      "pages": [
+        "brakes-squeaking",
+        "car-shakes-when-braking",
+        "car-cranks-but-wont-start",
+        "car-wont-start-clicking"
+      ],
+      "what": "Four citations pointed at a query-string address on carcare.org (?p=65 and ?p=68) that no longer returns the article. They now point at the articles' own permalinks.",
+      "unchanged": "The quoted wording from those pages is unchanged; only the link resolves differently."
+    },
+    {
+      "date": "2026-10-20",
+      "kind": "Display",
+      "pages": [
+        "2020-toyota-rav4",
+        "2024-toyota-rav4"
+      ],
+      "what": "The oil quick answer printed an empty placeholder instead of the without-filter figure for the 2020 and 2024 RAV4. Two copies of the capacity parser disagreed about the unlabelled \"with / without\" pair in the manual. The page now uses one parser that merges the pair.",
+      "unchanged": "The figures themselves were already correct in the source and on the full table."
+    },
+    {
+      "date": "2026-10-20",
+      "kind": "Text",
+      "pages": [
+        "2020-toyota-rav4",
+        "2024-toyota-rav4",
+        "2022-toyota-rav4",
+        "2021-toyota-rav4"
+      ],
+      "what": "Meta descriptions kept a bare engine label after the viscosity grade was stripped, reading '… with filter, 2.5L 4-cylinder'. The label is now removed with the grade.",
+      "unchanged": "Visible page text and every published figure."
+    }
+  ]
+}

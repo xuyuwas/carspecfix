@@ -1,6 +1,7 @@
 ---
 import Page from '../../layouts/Page.astro';
 import { sources, vehicles, issues, vehicleGate, issueGate } from '../../lib/gate.mjs';
+import corrections from '../../../data/corrections.json';
 // only sources used by currently published (gate-passing) pages
 const liveV = vehicles.filter(v => vehicleGate(v).pass), liveI = issues.filter(i => issueGate(i).pass);
 const used = new Set(liveV.flatMap(v => [...Object.values(v.specs).filter((f: any) => f?.source && f.sourceGrade === 'A' && f.value).map((f: any) => f.source), ...(v.tires?.rows || []).filter((t: any) => t.sourceGrade === 'A').map((t: any) => t.source), ...(v.recalls.length || v.recallsFetched ? ['nhtsa-recalls'] : []), ...(v.fuelEconomy.length ? ['fueleconomy'] : [])]));
@@ -11,20 +12,77 @@ const brands = by(A.filter((x: any) => x.type !== 'government'), (x: any) => (x.
 const docUrls = new Set(A.map((x: any) => x.url));
 const docRaw = [...new Map(liveI.flatMap(i => [...(i.causes || []), ...(i.urgency || []), ...(i.guidance || []), ...(i.firstStep ? [i.firstStep] : []), ...(i.definition ? [i.definition] : [])]).filter(c => c.sourceGrade === 'A' && c.url).map(c => [c.url, c])).values()];
 const docsRaw = docRaw.filter((d: any) => !docUrls.has(d.url));
-const docBrands = by(docsRaw, (d: any) => d.maker || 'Other');
+// Tier grouping: manufacturer originals, government records, and general safety
+// education are listed apart, because they are not interchangeable. A consumer
+// article may explain what a noise means; it may not be the source of a number.
+const isGov = (d: any) => /^\s*(u\.?s\.?\s*)?(epa|nhtsa|doe|bls|bureau of labor)/i.test(d.maker || '') || /\b(nhtsa|epa\.gov|fueleconomy|bls\.gov)\b/i.test(d.url || '');
+const isGuidance = (d: any) => /car care council|aaa|consumer reports|advocacy|education/i.test(`${d.maker || ''} ${d.docKind || ''}`);
+const guidanceDocs = docsRaw.filter(isGuidance);
+const oemDocs = docsRaw.filter((d: any) => !isGuidance(d) && !isGov(d));
+const govDocs = docsRaw.filter(isGov);
+const docBrands = by(oemDocs, (d: any) => d.maker || 'Other');
+const entries = (corrections as any).entries || [];
+const fmt = (s: string) => new Date(s + 'T12:00:00Z').toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' });
+// A correction names page slugs ("2024-toyota-rav4", "p0455", "brakes-squeaking").
+// Resolve them to the real URL and a human label, and never render a dead link for
+// a page that is not published yet.
+const vBy = new Map(vehicles.map(v => [v.slug, v]));
+const iBy = new Map(issues.map(i => [i.slug, i]));
+const pageOf = (slug: string) => {
+  const v: any = vBy.get(slug);
+  if (v) return { url: `/specs/${v.makeSlug}/${v.modelSlug}/${v.year}/`, label: `${v.year} ${v.make} ${v.model}` };
+  const i: any = iBy.get(slug);
+  if (i) return { url: `/${i.type === 'code' ? 'codes' : 'symptoms'}/${i.slug}/`, label: i.type === 'code' ? `${i.code} code` : i.title };
+  return null;
+};
 ---
-<Page title="Data Sources & Methodology | CarSpecFix" description="Where CarSpecFix data comes from, when it was retrieved, how it is checked and how corrections are handled." path="/sources/" nav="sources" crumbs={[{ name: 'Home', url: '/' }, { name: 'Data sources', url: '/sources/' }]} h1="Data sources & methodology">
+<Page title="Data Sources & Methodology | CarSpecFix" description="Where CarSpecFix data comes from, how the three evidence tiers are labelled, when documents were retrieved and reviewed, and how corrections are handled." path="/sources/" nav="sources" crumbs={[{ name: 'Home', url: '/' }, { name: 'Data sources', url: '/sources/' }]} h1="Data sources & methodology">
 <h2 class="section__title">How we work</h2>
-<ul><li>Only U.S.-market sources: manufacturer owner's manuals and service bulletins, NHTSA and fueleconomy.gov (U.S. EPA / DOE).</li>
-<li>Every number links to its source document and page. Values are published only from grade-A sources (manufacturer or government originals); anything else shows "Not yet verified".</li>
-<li>A person checks every page against its sources and signs it off before it goes live.</li>
+<ul><li>Only U.S.-market sources: manufacturer owner's manuals and service bulletins, NHTSA and fueleconomy.gov (U.S. EPA / DOE), plus recognised consumer-safety bodies for general safety wording.</li>
+<li>Every number links to its source document and page. Numbers are published only from manufacturer or government originals; anything else shows "Not yet verified".</li>
+<li>Every citation carries one of the three evidence labels below, wherever it appears, so a reader can see what kind of document is speaking.</li>
+<li>A person checks every page against its sources and signs it off before it goes live. Source retrieval, human review and the last page change are dated separately on each page.</li>
 <li>Units are U.S.: quarts, psi, mpg. Recalls and fuel economy are refreshed from public APIs; retrieval dates are shown on each page.</li>
 <li>Safety-related corrections (brakes, tire pressure, oil) are switched to "Not yet verified" within 24 hours of a report, then checked within 3 business days.</li></ul>
+
+<h2 class="section__title" id="tiers">Three evidence tiers — and what each may support</h2>
+<p>The site previously described every citation as an "official source", which blurred a manufacturer's printed specification with a consumer-education article about brake noise. Those are not the same kind of evidence, so they are now labelled separately on every page.</p>
+<div class="tiers">
+  <div class="tiers__row"><div class="tiers__k"><span class="ev ev--oem">Manufacturer</span></div><div class="tiers__v"><b>Manufacturer document</b> — owner's manual, service bulletin, manufacturer support page. This is the only tier that can establish a specification number: oil capacity, viscosity, tyre size, cold pressure, torque. The printed page is cited.</div></div>
+  <div class="tiers__row"><div class="tiers__k"><span class="ev ev--gov">Government</span></div><div class="tiers__v"><b>Government record</b> — NHTSA recall campaigns and complaint counts, EPA/DOE fuel-economy test records, BLS wage data. Used for federal records and statistics, never as a substitute for what the manufacturer specifies for your car.</div></div>
+  <div class="tiers__row"><div class="tiers__k"><span class="ev ev--guidance">Safety guidance</span></div><div class="tiers__v"><b>General safety guidance</b> — consumer-safety education from a recognised non-profit (for example the Car Care Council, which runs the "Be Car Care Aware" campaign). It can support what a noise means and when to book an inspection. It is never used for a specification value, and a page that relies on it says so at the citation.</div></div>
+</div>
+<p class="ks__src">Where a single page uses more than one tier — a brake symptom page cites both a manufacturer manual and a consumer article — the tiers appear as labels next to each citation rather than as a blanket "official sources" claim.</p>
+
+<h2 class="section__title" id="review">Who checks a page, and when</h2>
+<p>Each page carries three separate dates, because they answer three different questions:</p>
+<ul>
+<li><b>Source documents read</b> — the day the manual page, NHTSA record or EPA entry was retrieved. A figure cannot be older than this without the page being re-dated.</li>
+<li><b>Human review</b> — the day a person read the figures against the document and signed the page off. The reviewer's name is shown.</li>
+<li><b>Page last changed</b> — any edit to text or data, logged in the <a href="/changelog/#corrections">corrections log</a>.</li>
+</ul>
+<p>What this is: an editorial check, document by document, by someone who reads the cited page and confirms the figure. What this is not: a hands-on inspection of any vehicle, and not — yet — a review by a qualified technician. Safety wording is where that gap matters most, so it is stated plainly rather than implied away:</p>
+<div class="notice"><span class="ev ev--guidance">Open item</span>&nbsp; A qualified-technician review of the brake, ABS and "can I keep driving" wording is not in place. Until it is, those pages rest on manufacturer and government text alone, and the site does not present itself as a second opinion on a specific car. When a technician review is recorded, the reviewer's name and credentials will be published here with the date and the pages covered.</div>
+<p class="ks__src">If you are a qualified technician and want to review the safety pages, <a href="/contact/">get in touch</a> — the reviewing scope is small, specific and named on the page.</p>
+
+<h2 class="section__title" id="corrections">Corrections log</h2>
+<p>{entries.length ? `Every correction is listed below with the pages affected, what changed, and what did not. ${entries.length} corrections recorded so far.` : 'No corrections recorded yet. When one happens it appears here with the pages affected and what changed.'}</p>
+{entries.length > 0 && <ol class="corr">{entries.map((c: any) => <li>
+  <div class="corr__head"><span class="tnum">{fmt(c.date)}</span> · <b>{c.kind}</b></div>
+  <div class="corr__what">{c.what}</div>
+  <div class="corr__pages">Pages: {c.pages.map((slug: string, n: number) => { const pg = pageOf(slug); return <>{n > 0 && ', '}{pg ? <a href={pg.url}>{pg.label}</a> : slug}</>; })}</div>
+  {c.unchanged && <div class="corr__keep"><b>Unchanged:</b> {c.unchanged}</div>}
+</li>)}</ol>}
+<p class="ks__src">Found a wrong value? Each page has a "report a data error" link that reaches the same inbox as the <a href="/contact/">contact form</a>. Reports are checked against the source before anything is edited.</p>
+
 {gov.length > 0 && <h2 class="section__title">Government data (U.S.)</h2>}
 <ul>{gov.map((x: any) => <li><a href={x.url}>{x.name}</a> — retrieved {x.retrieved}</li>)}</ul>
 {brands.length > 0 && <h2 class="section__title">Owner's manuals &amp; spec sheets, by brand</h2>}
 {brands.map(([b, list]) => <><h3>{b}</h3><ul>{list.map((x: any) => <li><a href={x.url}>{x.name}</a> — retrieved {x.retrieved}</li>)}</ul></>)}
+{guidanceDocs.length > 0 && <><h2 class="section__title">General safety guidance (not used for specification values)</h2>
+<ul>{guidanceDocs.map((d: any) => <li><a href={d.url}>{d.document}</a>{d.fetched && ` — retrieved ${d.fetched}`}</li>)}</ul></>}
 {docBrands.length > 0 && <><h2 class="section__title">Service bulletins &amp; manuals used for symptoms and trouble codes</h2>
 {docBrands.map(([b, list]) => <><h3>{b}</h3><ul>{list.map((d: any) => <li><a href={d.url}>{d.document}</a>{d.fetched && ` — retrieved ${d.fetched}`}</li>)}</ul></>)}</>}
-<h2 class="section__title">Corrections log</h2><p>No corrections yet. Found a wrong value? <a href="/contact/#report-form">Report it</a>.</p>
+{govDocs.length > 0 && <><h2 class="section__title">Government documents cited on symptom and code pages</h2>
+<ul>{govDocs.map((d: any) => <li><a href={d.url}>{d.document}</a>{d.fetched && ` — retrieved ${d.fetched}`}</li>)}</ul></>}
 </Page>

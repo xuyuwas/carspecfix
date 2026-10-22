@@ -1,0 +1,38 @@
+---
+// "What to do now" — conditions and next steps above the evidence.
+import { actionPlan, LEVEL_LABEL } from '../lib/verdicts.mjs';
+import { tierOf, TIER_SHORT } from '../lib/tiers.mjs';
+import { liveIssues, issueUrl } from '../lib/gate.mjs';
+const { i, ref /* label+number lookup from the page's reference list */ } = Astro.props;
+const plan = actionPlan(i);
+const isCode = i.type === 'code';
+// Two groups, not one mixed list: "applies to your car" and "applies if you drive
+// one of these". The second is never the page's headline instruction.
+const groups = [
+  { label: null, rows: plan.filter(p => p.general) },
+  { label: 'Manufacturer-specific — only the vehicles named', rows: plan.filter(p => !p.general) },
+].filter(g => g.rows.length);
+// A steady light and a blinking light carry different instructions. Where this
+// page's own documents say nothing about blinking, say that plainly and point at
+// the page that does — instead of letting the reader assume the row above covers it.
+const coversFlash = plan.some(p => /flash|blink/i.test(p.condition));
+const flashPage = liveIssues.find(x => x.type === 'code' && x.code === 'P0300');
+---
+{plan.length > 0 && <section class="act" id="what-to-do" aria-labelledby="act-h">
+  <div class="act__head">
+    <h2 class="act__title" id="act-h">What to do now</h2>
+    <p class="act__lede">Find the row that matches what you are seeing. Each row is one instruction from one document{plan.some(p => p.scope) ? '; rows that apply to every vehicle come first, and manufacturer-specific instructions follow separately' : ''}. The documents themselves are listed under <a href="#sources">Sources</a>; causes and statistics follow further down.</p>
+  </div>
+  <ol class="act__list">
+    {groups.map(g => <>{g.label && <li class="act__group">{g.label}</li>}{g.rows.map(p => <li class={`act__row act__row--${p.level}`}>
+      <div class="act__lvl"><span>{LEVEL_LABEL[p.level]}</span></div>
+      <div class="act__body">
+        <div class="act__when">{p.condition}{p.scope ? <span class="tag tag--na">{p.scope}</span> : <span class="act__scope">all vehicles</span>}</div>
+        <div class="act__do">{p.action}</div>
+        {p.detail && <div class="act__detail">{p.detail}</div>}
+        <div class="act__src"><span class={`ev ev--${tierOf(p.item)}`}>{TIER_SHORT[tierOf(p.item)]}</span> {p.item.document}{p.item.page && <>, <span class="pref">{p.item.page}</span></>}<sup class="ref"><a href={`#ref-${ref(p.item)}`}>[{ref(p.item)}]</a></sup></div>
+      </div>
+    </li>)}</>)}
+  </ol>
+  {isCode && !coversFlash && <p class="act__foot">A blinking check-engine light is a different instruction from a steady one. None of the documents checked for this code describes blinking, so this table does not cover it — {flashPage ? <a href={issueUrl(flashPage)}>P0300</a> : 'P0300'} carries the wording for the severe-misfire case.</p>}
+</section>}

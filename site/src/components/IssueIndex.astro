@@ -4,11 +4,76 @@ import { liveIssues, issueUrl } from '../lib/gate.mjs';
 const { type } = Astro.props; const code = type === 'code';
 const list = liveIssues.filter(i => i.type === type);
 const path = code ? '/codes/' : '/symptoms/';
+const byslug = new Map(list.map(i => [i.slug, i]));
+// Codes are grouped by the system that sets them. The lists are explicit so the
+// order matches how a diagnostic workflow actually runs (air metering -> misfire ->
+// catalyst -> EVAP); anything that ships without a group lands in "More codes"
+// rather than silently falling out of the index.
+const GROUPS = [
+  { name: 'Fuel trim and air metering', slugs: ['p0171'] },
+  { name: 'Misfire', slugs: ['p0300', 'p0301'] },
+  { name: 'Catalyst efficiency', slugs: ['p0420'] },
+  { name: 'EVAP — evaporative emissions', slugs: ['p0442', 'p0455', 'p0456'] },
+];
+const grouped = new Set(GROUPS.flatMap(g => g.slugs));
+const groups = GROUPS.map(g => ({ name: g.name, items: g.slugs.map(s => byslug.get(s)).filter(Boolean) })).filter(g => g.items.length);
+const rest = list.filter(i => !grouped.has(i.slug));
+if (rest.length) groups.push({ name: 'More codes', items: rest });
+// Symptoms are ordered by how urgent the answer is, not alphabetically: a reader
+// scanning this page is usually deciding whether the car is safe to move.
+const rank = i => (/^No /.test(i.hub?.verdict || '') ? 0 : /^Service soon/.test(i.hub?.verdict || '') ? 1 : 2);
+const symptomList = [...list].sort((a, b) => rank(a) - rank(b));
+const title = code ? 'OBD-II Codes: Meaning & Can You Still Drive? | CarSpecFix' : 'Car Symptoms: Causes & Is It Safe to Drive? | CarSpecFix';
+const description = code
+  ? 'OBD-II trouble codes explained: what each code means, the manufacturer-listed causes, and whether it is safe to keep driving with the light on.'
+  : 'Common car symptoms explained: whether it is safe to keep driving, what the noise or vibration usually means, and causes taken from manufacturer documents.';
 ---
-<Page narrow={true} title={code ? 'OBD-II Codes: Meaning & Can You Still Drive? | CarSpecFix' : 'Car Symptoms: Causes & Is It Safe to Drive? | CarSpecFix'}
-  description={code ? 'OBD-II trouble codes: what each code means, whether you can keep driving, and causes from manufacturer service bulletins.' : 'Common car symptoms: whether it is safe to keep driving and causes from manufacturer documents.'}
-  path={path} nav={code ? 'codes' : 'symptoms'} crumbs={[{ name: 'Home', url: '/' }, { name: code ? 'Trouble codes' : 'Symptoms', url: path }]} h1={code ? 'OBD-II trouble codes' : 'Car symptoms'}>
-{list.length ? <ul class="links">{list.map(i => <li><a href={issueUrl(i)}>{code ? `${i.code} code` : i.title}</a>{code && i.definition?.value && <span class="links__sub"> — {i.definition.value}</span>}</li>)}</ul>
-  : <p>Pages appear here once their sources are checked and signed off.</p>}
-<p style="margin-top:16px">Wondering what the fix will cost? <a href="/repair-cost/">How to estimate it</a> — and why this site does not print per-repair estimates.</p>
+<Page narrow={true} title={title} description={description} path={path} nav={code ? 'codes' : 'symptoms'} crumbs={[{ name: 'Home', url: '/' }, { name: code ? 'Trouble codes' : 'Symptoms', url: path }]} h1={code ? 'OBD-II trouble codes' : 'Car symptoms'}>
+{code ? <>
+<p class="meta">Every code below is a full page: what it means, the causes named in manufacturer documents, the source for each one, and a separate answer for a steady light and a flashing one.</p>
+<p>An OBD-II code is not a diagnosis. It is a monitor result: the engine computer ran a test, the test failed, and the code records which test failed. That is why two cars with the same code can need completely different work, and why the useful question is not "what part does P0171 mean" but "which of the listed causes is present on this engine".</p>
+<p>A code reader gives you the number in seconds. What it cannot tell you is whether the fault is active, stored from months ago, or pending because the monitor has not finished running — and that difference decides whether the next step is a repair or a clear-and-recheck.</p>
+
+<h2 class="section__title">How to read a code page here</h2>
+<ol>
+<li><strong>Start with the quick answer.</strong> Each page opens with the meaning of the code and the driving advice the cited source supports — not a generic "drive carefully".</li>
+<li><strong>Check the cause order before the parts list.</strong> Causes are printed in the order the documents present them, with the document and page cited. The cheapest checks come first because that is how a technician would work.</li>
+<li><strong>Look at what is not published.</strong> This site does not print a repair estimate for a code. If a figure has no source, the page says so instead of filling the gap.</li>
+</ol>
+
+<h2 class="section__title">Codes covered, by system</h2>
+{groups.map(g => <section>
+  <h3>{g.name}</h3>
+  <ul class="ilst">{g.items.map(i => <li>
+    <a class="ilst__h" href={issueUrl(i)}>{i.code} · {i.definition?.value || 'meaning'}</a>
+    {i.hub && <><p>{i.hub.note}</p>{i.hub.verdict && <p class={`ilst__v${/^No /.test(i.hub.verdict) ? ' ilst__v--stop' : ''}`}><b>Can you keep driving:</b> {i.hub.verdict}</p>}</>}
+  </li>)}</ul>
+</section>)}
+
+<h2 class="section__title">Steady light or flashing light?</h2>
+<p>The distinction is in the manufacturer documents, and it matters more than the code itself. A steady check-engine light means the fault is stored and the car can generally be driven to a shop. A flashing light means the fault is actively damaging something — most often the catalytic converter — and the documented instruction is to reduce speed and stop driving.</p>
+<p>If a second light appears at the same time, or the car loses power, the code becomes secondary: treat it as a breakdown rather than a service item.</p>
+<p>Wondering what work a code leads to? <a href="/repair-cost/">How this site handles repair pricing</a> explains what we will and will not publish, and why.</p>
+</> : <>
+<p class="meta">Each symptom page answers the same first question — is this safe to drive on — before it explains the cause. Where the source material draws a stop-driving line, the page says so plainly.</p>
+<p>A noise or a vibration is not a fault code. Two cars can make the same sound for unrelated reasons, so these pages start from the manufacturer's own description of the symptom and work back to the parts it names, instead of guessing from the noise alone.</p>
+
+<h2 class="section__title">Symptoms covered</h2>
+<ul class="ilst">{symptomList.map(i => <li>
+  <a class="ilst__h" href={issueUrl(i)}>{i.title}</a>
+  {i.hub && <><p>{i.hub.note}</p>{i.hub.verdict && <p class={`ilst__v${/^No /.test(i.hub.verdict) ? ' ilst__v--stop' : ''}`}><b>Safe to drive:</b> {i.hub.verdict}</p>}</>}
+</li>)}</ul>
+
+<h2 class="section__title">How to describe a symptom so it can be diagnosed</h2>
+<ol>
+<li><strong>When it happens.</strong> Cold start, light braking, turning, accelerating: the same noise means different things in each case, and the page's cause list is ordered by that condition.</li>
+<li><strong>What you feel through the car.</strong> Pedal pulsation, steering-wheel shake and a noise with no vibration are three separate fault paths.</li>
+<li><strong>What changed recently.</strong> New pads, a recent service, a flat tyre or a battery replacement reorders the list — and a symptom that appears right after work was done usually points at that work.</li>
+</ol>
+
+<h2 class="section__title">When the answer is "stop driving"</h2>
+<p>Brake and steering symptoms are treated differently from an engine light: there is no limp-home mode for a brake pedal that has changed feel. If the car pulls to one side, the pedal travels further than usual, or a grinding noise appears, the documented advice is to stop rather than to drive to a shop at low speed.</p>
+<p>Engine and emission symptoms — a check-engine light, a rough idle, a fuel-smell concern — are usually a service item, not a roadside stop, unless the light is flashing or the engine is losing power.</p>
+<p>Related: <a href="/codes/">trouble codes by system</a> · <a href="/repair-cost/">how repair pricing is handled here</a>.</p>
+</>}
 </Page>

@@ -3,3 +3,6 @@
 
 # WorkBuddy 本地记忆（含隐私，绝不入库）
 .workbuddy/
+.secrets/
+*.sa.json
+.workbuddy/gsc-data/

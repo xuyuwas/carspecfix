@@ -49,7 +49,7 @@
   "guidance": [
     {
       "text": "If you hear odd noises when you apply the brakes, they should be inspected. Squealing is listed among the brake warning signs, along with pulling to one side, low or hard pedal feel, grabbing, vibration, and an illuminated brake warning light.",
-      "url": "https://www.carcare.org?p=65",
+      "url": "https://www.carcare.org/2020/08/stop-and-check-your-brakes/",
       "document": "Car Care Council, \"Stop and Check Your Brakes\" (Brake Safety Awareness Month, published 2020-08-03; non-profit consumer education organization)",
       "page": "web page",
       "fetched": "2026-10-19",
@@ -59,7 +59,13 @@
       "appliesTo": "universal",
       "quote": null,
       "answers": "can_i_keep_driving: squealing is a listed brake warning sign — brakes should be inspected promptly; do not postpone needed repair to the metal-to-metal point",
-      "allBrands": true
+      "allBrands": true,
+      "verdict": {
+        "condition": "Squealing or odd noise when braking, brakes otherwise normal",
+        "level": "soon",
+        "action": "Book a brake inspection; the source does not say to stop driving",
+        "detail": "A wear indicator squeal is the manufacturer's own warning that the pads are near their limit."
+      }
     },
     {
       "text": "Brake pad wear limit indicator squealing: have the brake pads checked and replaced as soon as possible.",
@@ -88,11 +94,31 @@
       "quote": null,
       "answers": "vehicle-specific (GM): wear-indicator squeal means pads need service",
       "allBrands": false
+    },
+    {
+      "text": "Brake system warning light (red): the brake fluid level is low, or the brake system is malfunctioning. Toyota's instruction is to stop the vehicle in a safe place immediately and contact a dealer, because continuing to drive may be dangerous.",
+      "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+      "document": "2022 Toyota Camry Owner's Manual OM06244U (year mapping per Helm listing; manual is Camry-specific)",
+      "page": "p.528",
+      "fetched": "2026-10-22",
+      "sourceGrade": "A",
+      "maker": "Toyota",
+      "docKind": "owner's manual",
+      "appliesTo": "vehicle-specific: Toyota Camry 2022",
+      "quote": "Brake system warning light ... Immediately stop the vehicle in a safe place and contact your Toyota dealer. Continuing to drive the vehicle may be dangerous.",
+      "answers": "stop driving: red brake system warning light means stop in a safe place",
+      "allBrands": false,
+      "verdict": {
+        "condition": "Red brake-system warning light on, or the pedal suddenly sinks or goes hard",
+        "level": "stop",
+        "action": "Stop in a safe place; do not drive on to the shop",
+        "detail": "Toyota is the only manufacturer manual we have checked for this page. The row is tagged Toyota because the wording is Toyota's; the instruction itself is about the condition, not the brand."
+      }
     }
   ],
   "firstStep": {
     "text": "Note which brake warning signs apply (noise, pulling, low or hard pedal, grabbing, vibration, warning light). Squealing on its own means the pads should be inspected — pad thickness cannot be judged from outside the wheel, so this is a shop check, not a self-check.",
-    "url": "https://www.carcare.org?p=65",
+    "url": "https://www.carcare.org/2020/08/stop-and-check-your-brakes/",
     "document": "Car Care Council, \"Stop and Check Your Brakes\" (Brake Safety Awareness Month, published 2020-08-03; non-profit consumer education organization)",
     "page": "web page",
     "fetched": "2026-10-19",
@@ -110,9 +136,13 @@
     "vehicles": []
   },
   "publishDate": "2026-10-19",
-  "dataUpdated": "2026-10-19",
+  "dataUpdated": "2026-10-22",
   "signOff": {
-    "by": "小数",
+    "by": "Marlowe Sheets",
     "date": "2026-10-19"
+  },
+  "hub": {
+    "note": "Squealing that starts in normal driving is often the pad wear indicator touching the rotor — the warning the manufacturer built in. Squealing only under light braking can also be glazing or a bedding-in issue, so when it happens is the first thing to record.",
+    "verdict": "Service soon; stop if it turns into grinding or the pedal changes."
   }
 }

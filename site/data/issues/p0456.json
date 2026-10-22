@@ -98,7 +98,13 @@
       "appliesTo": "universal",
       "quote": "It is important to note that an illuminated dashboard light, as described here, is intended to inform the driver of the need for service, NOT of the need to stop the vehicle. However, service should be sought as soon as possible.",
       "answers": "can_i_keep_driving (steady light): yes; urgency: service as soon as possible",
-      "allBrands": true
+      "allBrands": true,
+      "verdict": {
+        "condition": "Steady check-engine light",
+        "level": "soon",
+        "action": "Keep driving; book service and get the fault read",
+        "detail": "A steady light means a service item, not a stop-driving condition."
+      }
     },
     {
       "text": "Under certain conditions, the dashboard light will blink or flash. This indicates a rather severe level of engine misfire. When this occurs, the driver should reduce speed and seek service as soon as possible.",
@@ -116,7 +122,13 @@
       "onlyCodes": [
         "P0300",
         "P0301"
-      ]
+      ],
+      "verdict": {
+        "condition": "Flashing check-engine light",
+        "level": "now",
+        "action": "Reduce speed and have it serviced as soon as possible",
+        "detail": "A flashing light is the severe-misfire case, not the steady-light case below it."
+      }
     },
     {
       "text": "For example, if the gas cap is not properly tightened after refueling, the OBD system can detect the vapor leak that exists from the cap not being completely tightened. If the gas cap is subsequently tightened, the dashboard light should be extinguished within a few days.",
@@ -212,9 +224,9 @@
     "vehicles": []
   },
   "publishDate": "2026-10-16",
-  "dataUpdated": "2026-10-20",
+  "dataUpdated": "2026-10-22",
   "signOff": {
-    "by": "小数",
+    "by": "Marlowe Sheets",
     "date": "2026-10-15"
   },
   "nhtsaStats": {
@@ -226,5 +238,12 @@
     "source": "https://static.nhtsa.gov/odi/ffdd/cmpl/FLAT_CMPL.zip",
     "sourceRecalls": "https://static.nhtsa.gov/odi/ffdd/rcl/FLAT_RCL_POST_2010.zip",
     "method": "code counted when it appears in the complaint description (CDESCR) for complaints, or in the recall component/defect/consequence/corrective-action text for recalls; unique ODINO per complaint and unique CAMPNO per recall"
+  },
+  "hub": {
+    "note": "The smallest leak threshold in the EVAP family — a pinhole, an O-ring, or a cap that was closed but not sealed. Several manufacturers correct P0456 with a powertrain software update, which is why the service-bulletin list matters as much as the parts list.",
+    "verdict": "Yes — no driveability risk. Small leaks are the slowest to find."
+  },
+  "seo": {
+    "title": "P0456: Very Small EVAP Leak — Cap, O-Ring or Software"
   }
 }

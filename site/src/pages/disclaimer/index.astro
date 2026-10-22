@@ -1,0 +1,31 @@
+---
+import Page from '../../layouts/Page.astro';
+import { CONTACT_EMAIL } from '../../lib/site.mjs';
+---
+<Page title="Disclaimer | CarSpecFix" description="CarSpecFix is an independent data reference, not a mechanic: what our figures cover, where they can differ from your vehicle, and what to verify first." path="/disclaimer/" crumbs={[{ name: 'Home', url: '/' }, { name: 'Disclaimer', url: '/disclaimer/' }]} h1="Disclaimer">
+<p class="meta">Effective October 21, 2026</p>
+
+<h2 class="section__title">Independent reference</h2>
+<p>CarSpecFix is not affiliated with, endorsed by or sponsored by any vehicle manufacturer, dealer, parts supplier or government agency. Names such as Toyota, Honda, Ford, Chevrolet, Tesla and RAV4 are trademarks of their owners and are used here only to identify the vehicle a page describes.</p>
+
+<h2 class="section__title">How accurate the figures are</h2>
+<p>Every published value is transcribed from a grade-A source — a manufacturer owner's manual, a manufacturer service bulletin, NHTSA or fueleconomy.gov — and the page cites the document and page number. That makes our numbers traceable, not universal. Specifications vary by:</p>
+<ul>
+<li><strong>Engine and drivetrain</strong> — the same model year can carry two engines with different oil capacities. Where that is true, each engine gets its own row.</li>
+<li><strong>Trim, wheel size and market</strong> — tire pressure depends on the wheel fitted; U.S. figures may not match a vehicle sold elsewhere.</li>
+<li><strong>Manual edition</strong> — manufacturers revise manuals mid-year. We record which edition we read.</li>
+</ul>
+<p>If a value is not confirmed from a grade-A source, the page shows "Not yet verified" instead of a number. Treat that as an instruction to check your own manual, not as a zero.</p>
+
+<h2 class="section__title">Not professional advice</h2>
+<p>Nothing here is mechanical, safety, legal or financial advice. Oil capacity, tire pressure and torque values are starting points for a job you do yourself or hand to a qualified technician; they are not a procedure. Recalls listed on a page are a snapshot of NHTSA data at the retrieval date shown — a recall can be issued after we last refreshed, and only NHTSA or the manufacturer can confirm whether your specific VIN is covered.</p>
+
+<h2 class="section__title">Fuel economy and cost figures</h2>
+<p>MPG values come from the U.S. EPA / DOE test programme. Real-world economy depends on driving style, load, temperature and tire pressure, and will usually be lower than the label. Where this site mentions labour rates or cost ranges on the <a href="/repair-cost/">estimating costs</a> page, they are published reference statistics, not quotes: no two shops charge the same, and parts prices change.</p>
+
+<h2 class="section__title">External links</h2>
+<p>Pages link to manufacturers, NHTSA, fueleconomy.gov and image licences so you can check our work. We do not control those sites and are not responsible for their content, availability or privacy practices.</p>
+
+<h2 class="section__title">Reporting a wrong value</h2>
+<p>If a figure is wrong, tell us the page, the field and the source you are checking against through the <a href="/contact/#report-form">report form</a>. Safety-related corrections (brakes, tire pressure, oil) are switched to "Not yet verified" within 24 hours and re-checked within 3 business days. See also <a href="/terms/">terms of use</a>. Questions: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.</p>
+</Page>

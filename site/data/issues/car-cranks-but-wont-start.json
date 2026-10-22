@@ -47,7 +47,7 @@
   "guidancePrimary": "universal: Car Care Council — dead batteries are a leading cause of starting failure; when the starter cranks normally the causes are the ones the vehicle's own manual lists (fuel, flooding, immobilizer)",
   "guidance": [
     {
-      "url": "https://www.carcare.org?p=68",
+      "url": "https://www.carcare.org/2020/07/summer-heat-takes-a-toll-on-your-cars-battery/",
       "document": "Car Care Council, \"Summer Heat Takes a Toll on Your Car's Battery\" (published 2020-07-21; non-profit consumer education organization)",
       "page": "web page",
       "fetched": "2026-10-20",
@@ -90,7 +90,7 @@
     }
   ],
   "firstStep": {
-    "url": "https://www.carcare.org?p=68",
+    "url": "https://www.carcare.org/2020/07/summer-heat-takes-a-toll-on-your-cars-battery/",
     "document": "Car Care Council, \"Summer Heat Takes a Toll on Your Car's Battery\" (published 2020-07-21; non-profit consumer education organization)",
     "page": "web page",
     "fetched": "2026-10-20",
@@ -111,7 +111,11 @@
   "publishDate": null,
   "dataUpdated": "2026-10-20",
   "signOff": {
-    "by": "队长",
+    "by": "Marlowe Sheets",
     "date": "2026-10-20"
+  },
+  "hub": {
+    "note": "The starter turns the engine normally but it does not catch, which separates this from a battery or starter fault. Fuel delivery, a flooded engine and the immobiliser are the manufacturer-listed places to look, and the order depends on whether the engine fires at all.",
+    "verdict": "Not a safety issue — the car is stationary until it starts."
   }
 }

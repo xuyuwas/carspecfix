@@ -1,14 +1,27 @@
 ---
 // Signed photo from data/images.json, else the design-v3 silhouette placeholder (layout never collapses).
 import images from '../../data/images.json';
-const { slug, year, name, segment = 'sedan', hero = false, sizes: sizesProp } = Astro.props;
+const { slug, year, name, segment = 'sedan', hero = false, sizes: sizesProp, powertrain = null } = Astro.props;
 const img = (images as any)[slug];
 const pageName = `${year} ${name}`.toLowerCase();
 const yearDiff = img?.photoYear && img.photoYear !== year;
 const variant = img?.shown && !yearDiff && img.shown.toLowerCase() !== pageName && img.shown.toLowerCase().startsWith(pageName);
-const shownLine = img ? img.shownOverride ?? (yearDiff ? `Shown: ${img.shown} (same generation)` : variant ? `Shown: ${img.shown}` : null) : null;
-const alt = img ? (img.shownOverride ? img.shownOverride.replace(/^Shown: /, '') : img.shown || `${year} ${name}`) : '';
+// A stand-in photo of another model year must say so in plain words. Data files keep the
+// short marker "(same generation)"; it is expanded here so the wording changes in one place
+// and old overrides do not have to be rewritten.
+const SAME_GEN_NOTE = 'same generation, not this exact model year';
+const shownRaw = img ? img.shownOverride ?? (yearDiff ? `Shown: ${img.shown} (same generation)` : variant ? `Shown: ${img.shown}` : null) : null;
+const shownLine = shownRaw ? shownRaw.replace(/\(same generation\)/gi, `(${SAME_GEN_NOTE})`) : null;
+const alt = img ? (shownLine ? shownLine.replace(/^Shown: /, '') : img.shown || `${year} ${name}`) : '';
 const sizes = sizesProp ?? '(min-width: 1024px) 360px, 100vw';
+// A photo of a different powertrain next to this page's figures is the exact trap a
+// skimming reader falls into: the 2024 RAV4 page showed a Hybrid Woodland Edition
+// while its oil capacity applies to the 2.5L gasoline engine. The caption says so in
+// the same breath as the photo, instead of relying on a note further down the page.
+const shownHybrid = !!img?.shown && /hybrid|prime|plug-in|phev/i.test(img.shown);
+const ptNote = powertrain && shownHybrid && powertrain !== 'hybrid'
+  ? 'Photo shows a hybrid; the specifications on this page are for the gasoline engine.'
+  : null;
 ---
 {img ? (
 <figure class="photo">
@@ -17,6 +30,7 @@ const sizes = sizesProp ?? '(min-width: 1024px) 360px, 100vw';
        loading={hero ? 'eager' : 'lazy'} fetchpriority={hero ? 'high' : 'auto'} decoding="async" />
   <figcaption>
     {shownLine && <>{shownLine}<br /></>}
+    {ptNote && <>{ptNote}<br /></>}
     Photo: {img.author} / <a href={img.licenseUrl} rel="license nofollow noopener">{img.license}</a> / <a href={img.sourceUrl} rel="nofollow noopener">Source</a>{img.cropped && ', cropped'}
   </figcaption>
 </figure>) : (

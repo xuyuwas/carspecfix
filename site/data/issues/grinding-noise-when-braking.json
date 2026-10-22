@@ -49,7 +49,7 @@
   "guidance": [
     {
       "text": "Never put off routine brake inspections or any needed repair, such as letting the brakes get to the \"metal-to-metal\" point, which can be potentially dangerous and lead to a more costly repair bill. Grinding is the noise brakes make at that stage.",
-      "url": "https://www.carcare.org?p=65",
+      "url": "https://www.carcare.org/2020/08/stop-and-check-your-brakes/",
       "document": "Car Care Council, \"Stop and Check Your Brakes\" (Brake Safety Awareness Month, published 2020-08-03; non-profit consumer education organization)",
       "page": "web page",
       "fetched": "2026-10-19",
@@ -59,7 +59,13 @@
       "appliesTo": "universal",
       "quote": null,
       "answers": "can_i_keep_driving: grinding = do not keep postponing; metal-to-metal is potentially dangerous — have the brakes inspected as soon as possible",
-      "allBrands": true
+      "allBrands": true,
+      "verdict": {
+        "condition": "Grinding when braking",
+        "level": "now",
+        "action": "Book the car in now; do not keep driving on it",
+        "detail": "Grinding is the metal-to-metal stage, which the source calls potentially dangerous and more expensive to repair."
+      }
     },
     {
       "text": "Scraping noise (brake pad wear limit indicator): have the brake pads checked and replaced as soon as possible.",
@@ -74,11 +80,31 @@
       "quote": null,
       "answers": "vehicle-specific: Toyota says inspect/replace as soon as possible",
       "allBrands": false
+    },
+    {
+      "text": "Brake system warning light (red): the brake fluid level is low, or the brake system is malfunctioning. Toyota's instruction is to stop the vehicle in a safe place immediately and contact a dealer, because continuing to drive may be dangerous.",
+      "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+      "document": "2022 Toyota Camry Owner's Manual OM06244U (year mapping per Helm listing; manual is Camry-specific)",
+      "page": "p.528",
+      "fetched": "2026-10-22",
+      "sourceGrade": "A",
+      "maker": "Toyota",
+      "docKind": "owner's manual",
+      "appliesTo": "vehicle-specific: Toyota Camry 2022",
+      "quote": "Brake system warning light ... Immediately stop the vehicle in a safe place and contact your Toyota dealer. Continuing to drive the vehicle may be dangerous.",
+      "answers": "stop driving: red brake system warning light means stop in a safe place",
+      "allBrands": false,
+      "verdict": {
+        "condition": "Red brake-system warning light on, or the pedal suddenly sinks or goes hard",
+        "level": "stop",
+        "action": "Stop in a safe place; do not drive on to the shop",
+        "detail": "Toyota is the only manufacturer manual we have checked for this page. The row is tagged Toyota because the wording is Toyota's; the instruction itself is about the condition, not the brand."
+      }
     }
   ],
   "firstStep": {
     "text": "Grinding is not a self-check symptom: the pad or wear-limit condition behind it can only be confirmed by inspecting the brakes. Have the vehicle inspected as soon as possible, and avoid letting it reach metal-to-metal.",
-    "url": "https://www.carcare.org?p=65",
+    "url": "https://www.carcare.org/2020/08/stop-and-check-your-brakes/",
     "document": "Car Care Council, \"Stop and Check Your Brakes\" (Brake Safety Awareness Month, published 2020-08-03; non-profit consumer education organization)",
     "page": "web page",
     "fetched": "2026-10-19",
@@ -96,9 +122,13 @@
     "vehicles": []
   },
   "publishDate": "2026-10-19",
-  "dataUpdated": "2026-10-19",
+  "dataUpdated": "2026-10-22",
   "signOff": {
-    "by": "小数",
+    "by": "Marlowe Sheets",
     "date": "2026-10-19"
+  },
+  "hub": {
+    "note": "Grinding is metal against metal: the friction material is gone and the backing plate is cutting the rotor. This is the point where a pad-and-rotor job becomes a caliper and hardware job, which is why the source material treats it as a stop-driving condition rather than a noise to live with.",
+    "verdict": "No — have it inspected before driving further."
   }
 }

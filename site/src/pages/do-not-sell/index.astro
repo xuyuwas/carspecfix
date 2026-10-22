@@ -1,0 +1,30 @@
+---
+import Page from '../../layouts/Page.astro';
+import { CONTACT_EMAIL } from '../../lib/site.mjs';
+---
+<Page title="Do Not Sell or Share My Info | CarSpecFix" description="CarSpecFix does not sell personal information. How California and other U.S. state privacy rights apply here, and how to opt out of ad personalisation." path="/do-not-sell/" crumbs={[{ name: 'Home', url: '/' }, { name: 'Do not sell', url: '/do-not-sell/' }]} h1="Do not sell or share my personal information">
+<p class="meta">Effective October 21, 2026</p>
+
+<h2 class="section__title" id="do-not-sell">Our position in one line</h2>
+<p><strong>We do not sell personal information for money, and we never have.</strong> There are no accounts, no email list and no payment data on this site. The only data that leaves your browser goes to Google, for analytics and for advertising.</p>
+
+<h2 class="section__title">What advertising changes</h2>
+<p>Under the CPRA, "selling" also covers exchanging personal information for value, and "sharing" covers disclosing it for cross-context behavioural advertising. Ad cookies set by Google — the ones that let an ad follow you to another site — can fall into that second category. We do not receive the data Google collects, but the disclosure happens on pages we publish, so we treat it as a sharing activity you are entitled to opt out of.</p>
+
+<h2 class="section__title">How to opt out</h2>
+<ol>
+<li><strong>Google Ads Settings</strong> — <a href="https://adssettings.google.com/" rel="nofollow noopener" target="_blank">adssettings.google.com</a> turns off personalised advertising across Google's network, including this site.</li>
+<li><strong>Industry opt-out</strong> — <a href="https://www.aboutads.info/choices/" rel="nofollow noopener" target="_blank">www.aboutads.info</a> and <a href="https://optout.networkadvertising.org/" rel="nofollow noopener" target="_blank">optout.networkadvertising.org</a> cover participating ad vendors.</li>
+<li><strong>Browser level</strong> — block third-party cookies, or send Do Not Track. DNT already stops our own analytics entirely (see the <a href="/privacy/">privacy policy</a>). Blocking third-party cookies also removes the cookies that carry ad personalisation.</li>
+</ol>
+<p>You can also email <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> with the subject "Do not sell or share" and we will record your request and answer within 15 business days. Because we hold no account records, there is usually nothing on our side to delete — the choice has to be made with Google or in your browser, which is why the links above are the effective route.</p>
+
+<h2 class="section__title">Global Privacy Control</h2>
+<p>If your browser or extension sends a Global Privacy Control signal, we do not currently use it to change ad behaviour: ad delivery is handled by Google's script, which we load as supplied. Use the opt-out links above to make the choice explicit. We will update this page if that changes.</p>
+
+<h2 class="section__title">Other state rights</h2>
+<p>Residents of California, Colorado, Connecticut, Virginia, Utah and other states with comprehensive privacy laws may also request access to, correction of, or deletion of personal information. Our <a href="/privacy/">privacy policy</a> explains what little we hold (correction reports you send us) and how to ask about it. We respond within 30 days, or 45 days where the law allows an extension.</p>
+
+<h2 class="section__title">No discrimination</h2>
+<p>Exercising any right on this page will not change what you can access. The site is free, has no account tiers, and does not degrade content for readers who opt out of ad personalisation.</p>
+</Page>

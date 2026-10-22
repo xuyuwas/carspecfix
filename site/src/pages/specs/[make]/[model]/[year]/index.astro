@@ -3,11 +3,14 @@ import Base from '../../../../../layouts/Base.astro';
 import Tools from '../../../../../components/Tools.astro';
 import Feedback from '../../../../../components/Feedback.astro';
 import Photo from '../../../../../components/Photo.astro';
+import ConfigPicker from '../../../../../components/ConfigPicker.astro';
+import ReviewDates from '../../../../../components/ReviewDates.astro';
 import { liveVehicles, liveIssues, liveHubs, vehicleUrl, issueUrl, sources, hasVal, shownTireRows, placardNote, SITE } from '../../../../../lib/gate.mjs';
 import { fitTitle, usOnly } from '../../../../../lib/title.mjs';
 import { makeRefs, SEGMENT } from '../../../../../lib/refs.mjs';
 import { imageObject } from '../../../../../lib/images.mjs';
 import { parseOilCapacity } from '../../../../../lib/oil.mjs';
+import { configModel } from '../../../../../lib/config.mjs';
 import { AUTHOR } from '../../../../../lib/site.mjs';
 export function getStaticPaths() {
   return liveVehicles.map(v => ({ params: { make: v.makeSlug, model: v.modelSlug, year: String(v.year) }, props: { v } }));
@@ -133,28 +136,41 @@ const configs = [...new Set(v.fuelEconomy.map(c => c.drive.replace('Front-Wheel 
 const feUrl = c => `https://www.fueleconomy.gov/feg/noframes/${c.feId}.shtml`;
 const hasPowertrain = v.fuelEconomy.some(c => c.powertrain);   // gas vs hybrid split only when the data declares it
 const pwLabel = p => p === 'hybrid' ? 'Hybrid' : p === 'gas' ? 'Gasoline' : p;
+// "Source documents read" is the retrieval date of every document this page cites —
+// not the site's newest fetch. When they differ, the range is shown, because a single
+// date would imply all three were read on the same day.
+const readDates = [...new Set([sources[s.oilCapacity?.source]?.retrieved, sources[s.oilViscosity?.source]?.retrieved, v.recallsFetched, v.fuelEconomyFetched].filter(Boolean))].sort();
+// When the manual prints more than one oil figure or more than one tyre package, the
+// selector above answers the question and the quick answer must NOT restate a range as
+// if it were the answer. The cells are replaced by one that says why, and the numbers
+// live in the selector and the tables below.
+const cfgm = configModel(v);
+const cfgUsable = (cfgm.sizes.some(x => x.psi.length) || cfgm.engines.some(e => e.oil)) && (cfgm.sizes.length > 1 || cfgm.engines.length > 1);
+const sourceDate = readDates.length ? (readDates.length === 1 ? readDates[0] : `${readDates[0]} – ${readDates.at(-1)}`) : null;
 ---
 <Base title={title} description={desc} path={path} jsonld={jsonld} crumbs={crumbs} nav="specs">
 <div class="vhead vhead--compact"><div class="container">
 <nav class="crumbs" aria-label="Breadcrumb">{crumbs.map((c, i) => <>{i > 0 && <span class="sep">/</span>}{c.url && i < crumbs.length - 1 ? <a href={c.url}>{c.name}</a> : <span aria-current={i === crumbs.length - 1 ? 'page' : undefined}>{c.name}</span>}</>)}</nav>
 <div class="vhead__grid" style="padding-bottom:0">
   <div><div class="eyebrow">{v.make}{configs.length > 0 && ` · ${configs.join(' / ')}`}</div><h1 class="vtitle"><span class="yr">{v.year} {v.make}</span>{seo.h1Tail ?? `${v.model} specs`}</h1></div>
-  <div class="vart"><Photo slug={v.slug} year={v.year} name={`${v.make} ${v.model}`} segment={segment} hero={true} /></div>
+  <div class="vart"><Photo slug={v.slug} year={v.year} name={`${v.make} ${v.model}`} segment={segment} hero={true} powertrain={v.powertrain} /></div>
 </div>
+<ConfigPicker v={v} />
 <section class="qa" id="quick" data-copy-scope aria-label="Quick answer">
   <div class="qa__head"><h2 class="qa__title">Quick answer</h2><Tools /></div>
   <div class="qa__grid">
-  <div class="qa__item"><div class="qa__q">Tire pressure (cold)</div>
+  {!cfgUsable && <div class="qa__item"><div class="qa__q">Tire pressure (cold)</div>
     {psiAllMissing && placard ? <>
       <div class="qa__a qa__a--text">On the door-jamb label<sup class="ref"><a href={`#ref-${placardRef}`}>[{placardRef}]</a></sup></div>
       <div class="qa__more">{placard.note ?? `${v.make} publishes recommended cold pressures only on the Tire and Loading Information label, not in a psi table.`}</div>
       <div class="qa__src"><Fragment set:html={P(`Manual ${placard.page}`)} /> · check the label on your driver's door jamb for your exact trim.</div>
     </> : psiMissing ? <div class="qa__a qa__a--text"><span class="nv">Not yet verified — check your owner's manual</span></div>
-     : <><div class="qa__a">{pMin === pMax ? pMin : `${pMin}–${pMax}`}<small>psi{samePsi && tires[0].frontPsi !== tires[0].rearPsi ? ' front/rear' : ''}</small><sup class="ref"><a href={`#ref-${tireRef}`}>[{tireRef}]</a></sup></div>
-        <div class="qa__more">{tires.slice(0, 3).map(t => <div>{t.config ?? `${t.wheel}-in`} ({t.tireSize}): <b>{t.frontPsi === t.rearPsi ? t.frontPsi : `${t.frontPsi}/${t.rearPsi}`} psi</b></div>)}{tires.length > 3 && <a href="#tires">See all {tires.length} →</a>}</div></>}
+     : <><div class="qa__a">{pMin === pMax ? pMin : `${pMin}–${pMax}`}<small>psi{samePsi && tires[0].frontPsi !== tires[0].rearPsi ? ' front/rear' : ''}{!samePsi ? ', by wheel package' : ''}</small><sup class="ref"><a href={`#ref-${tireRef}`}>[{tireRef}]</a></sup></div>
+        <div class="qa__more">{tires.slice(0, 3).map(t => <div>{t.config ?? `${t.wheel}-in`} ({t.tireSize}): <b>{t.frontPsi === t.rearPsi ? t.frontPsi : `${t.frontPsi}/${t.rearPsi}`} psi</b></div>)}{tires.length > 3 && <a href="#tires">See all {tires.length} →</a>}</div>
+        {!samePsi && <div class="qa__more qa__more--split"><b>Not one number.</b> This manual prints a pressure per wheel/tyre package and never maps a package to a trim, so the figure above is a range, not necessarily your answer. Pick your tyre size in the selector above to narrow it — and read the label on your driver's door jamb, which is the only place your exact build is named.</div>}</>}
     {!psiAllMissing && tires.length > 0 && <div class="qa__src">{[...new Set(tires.map(t => pgShow(t.page)).filter(Boolean))].length ? <>Manual <Fragment set:html={P(pgList(tires.map(t => pgShow(t.page))))} /> · </> : ''}Check the tire placard on your driver's door jamb for your exact trim.</div>}
-  </div>
-  {!ev && <div class="qa__item"><div class="qa__q">Engine oil</div>
+  </div>}
+  {!ev && !cfgUsable && <div class="qa__item"><div class="qa__q">Engine oil</div>
     {oilScope && <div class="qa__src qa__applies">{oilScope}</div>}
     {oilLines.length ? <>
       <div class="oil">{oilCard.map(r => <div class="oil__row">
@@ -171,15 +187,26 @@ const pwLabel = p => p === 'hybrid' ? 'Hybrid' : p === 'gas' ? 'Gasoline' : p;
       <div class="qa__src"><Fragment set:html={P([s.oilCapacity.page && `Manual ${s.oilCapacity.page} (capacity)`, A(s.oilViscosity) && s.oilViscosity.page && `${s.oilViscosity.page} (viscosity)`].filter(Boolean).join(', ') || `Source [${oilRef}]`)} /></div>
     </> : <div class="qa__a qa__a--text"><span class="nv">Not yet verified — check your owner's manual</span></div>}
   </div>}
+  {cfgUsable && <div class="qa__item"><div class="qa__q">What the manual leaves open</div>
+    <div class="qa__a qa__a--text">Which build gets which figure</div>
+    <div class="qa__more">{tires.length > 1 ? <>It prints {tires.length} pressure rows across {[...new Set(tires.map(t => t.wheel).filter(Boolean))].length || tires.length} wheel sizes but never says which trim gets which, so {pMin === pMax ? `${pMin} psi` : `${pMin}–${pMax} psi`} is the whole range for this year, not your figure.</> : <>It prints one pressure row, so the figure is the same for every build on this page.</>} The tyre-size column on the driver's door jamb is the only place your exact build is named.</div>
+    <div class="qa__src">{oilEngines.length ? `Oil is printed per engine: ${oilEngines.map(o => o.raw).join('; ')}.` : ''}</div>
+  </div>}
   <div class="qa__item"><div class="qa__q">Recalls</div>
     <div class="qa__a">{v.recalls.length}<small>NHTSA campaigns</small><sup class="ref"><a href={`#ref-${nhtsaRef}`}>[{nhtsaRef}]</a></sup></div>
     <div class="qa__more">{v.recalls.length > 0 && <><a href="#recalls">See campaign list</a> · </>}check your own car by VIN at <a href="https://www.nhtsa.gov/recalls" rel="nofollow noopener">nhtsa.gov/recalls</a></div>
     <div class="qa__src">Fetched {v.recallsFetched}</div>
   </div>
+  {cfgUsable && <div class="qa__item"><div class="qa__q">Where the figures come from</div>
+    <div class="qa__a qa__a--text">Your owner's manual</div>
+    <div class="qa__more">{oilLines.length ? <>Oil: manual {s.oilCapacity.page}<br /></> : null}{tires.length ? <>Tires: manual {pgList(tires.map(t => pgShow(t.page)))}<br /></> : null}<a href="#sources">Full source list</a></div>
+    <div class="qa__src">One printed page per configuration — no value on this page is calculated, averaged or carried over from another year.</div>
+  </div>}
   </div>
-  <div class="qa__foot"><span>Last verified <span class="tnum">{v.signOff?.date ?? updated}</span></span><a href="#report">Report a data error</a></div>
+  <div class="qa__foot"><span>Review record: <a href="#review">3 dates</a> — source read, human review, last change</span><a href="#report">Report a data error</a></div>
 </section>
-<div class="vart-m"><Photo slug={v.slug} year={v.year} name={`${v.make} ${v.model}`} segment={segment} hero={false} /></div>
+<div id="review"><ReviewDates source={sourceDate} reviewed={v.signOff?.date} by={v.signOff?.by} changed={updated} path={path} /></div>
+<div class="vart-m"><Photo slug={v.slug} year={v.year} name={`${v.make} ${v.model}`} segment={segment} hero={false} powertrain={v.powertrain} /></div>
 {siblings.length > 0 && <div class="vmeta" style="margin:16px 0 0"><div class="chips"><span class="vmeta__label">Year</span>{[...siblings, v].sort((a, b) => a.year - b.year).map(x => x.slug === v.slug ? <span class="chip" aria-current="page">{x.year}</span> : <a class="chip chip--muted" href={vehicleUrl(x)}>{x.year}</a>)}</div></div>}
 </div></div>
 <nav class="subnav" aria-label="On this page"><div class="container subnav__in">{tabs.map(([h, t], i) => <a href={h} aria-current={i === 0 ? 'true' : undefined}>{t}</a>)}</div></nav>

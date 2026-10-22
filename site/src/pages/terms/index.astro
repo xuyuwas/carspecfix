@@ -1,0 +1,42 @@
+---
+import Page from '../../layouts/Page.astro';
+import { CONTACT_EMAIL } from '../../lib/site.mjs';
+---
+<Page title="Terms of Use | CarSpecFix" description="The terms that apply when you use CarSpecFix: what the site is, what it is not, acceptable use and liability." path="/terms/" crumbs={[{ name: 'Home', url: '/' }, { name: 'Terms', url: '/terms/' }]} h1="Terms of use">
+<p class="meta">Effective October 21, 2026</p>
+<p>These terms apply when you read or use CarSpecFix. If you do not accept them, please stop using the site.</p>
+
+<h2 class="section__title">What this site is</h2>
+<p>CarSpecFix is a free reference that compiles U.S.-market vehicle specifications (engine oil, tire size and pressure, fuel economy, safety recalls) and plain-English explanations of common trouble codes and symptoms. Every figure is cited to an owner's manual, NHTSA or fueleconomy.gov. The site is supported by advertising.</p>
+<p>You do not need an account, and there is nothing to buy. <strong>There is no download function and no software to install</strong> — everything is a web page you read in a browser.</p>
+
+<h2 class="section__title">What it is not</h2>
+<p>We are data compilers, not mechanics, dealers or lawyers. The site is not professional mechanical, safety or legal advice, and it is not a substitute for the owner's manual that came with your vehicle. Manufacturer procedures and specifications change by year, engine and market; always confirm a figure against your own manual before you act on it. See the <a href="/disclaimer/">disclaimer</a> for detail.</p>
+
+<h2 class="section__title">Acceptable use</h2>
+<ul>
+<li>You may read, link to and quote short passages from the site with attribution and a link.</li>
+<li>You may not scrape or bulk-download the site with automated tools, mirror it, or republish whole pages or the compiled dataset.</li>
+<li>You may not attempt to disrupt the site, probe it for vulnerabilities without written permission, or use it to send spam through our contact form.</li>
+<li>You may not present the site's content as your own data, or remove source citations from a copied figure.</li>
+</ul>
+
+<h2 class="section__title">Availability</h2>
+<p>The site is provided as-is and may be changed, interrupted or discontinued at any time. We do not promise uninterrupted access, and we do not promise that every page is complete: some values are deliberately marked "Not yet verified" rather than guessed.</p>
+
+<h2 class="section__title">Intellectual property</h2>
+<p>The text, page structure and compiled data are ours. Photographs are licensed from their authors and credited on the page where they appear. Manufacturer names, model names and trademarks belong to their owners and are used for identification only. See <a href="/copyright/">copyright and DMCA</a>.</p>
+
+<h2 class="section__title">No affiliation</h2>
+<p>CarSpecFix is independent. We are not affiliated with, endorsed by, or sponsored by Toyota, Honda, General Motors, Ford, Tesla, Stellantis, NHTSA or any other manufacturer or agency named on this site.</p>
+
+<h2 class="section__title">Limitation of liability</h2>
+<p>To the extent permitted by law, we are not liable for indirect or consequential loss arising from use of the site, including damage to a vehicle, a missed repair, or a decision made on the basis of a figure that was out of date or transcribed incorrectly. Where liability cannot be excluded, it is limited to the amount you paid to use the site, which is zero.</p>
+<p>Nothing in these terms excludes liability that the law does not allow us to exclude, including your mandatory consumer rights in your country of residence.</p>
+
+<h2 class="section__title">Governing law</h2>
+<p>These terms are governed by the laws of the People's Republic of China. Disputes will be handled by the competent court at the operator's place of business, without prejudice to any right you have to bring a claim in your own jurisdiction under mandatory consumer-protection rules.</p>
+
+<h2 class="section__title">Changes</h2>
+<p>We may update these terms; the effective date above will change when we do. Continued use after a change means you accept the updated terms. Questions: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.</p>
+</Page>
