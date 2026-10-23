@@ -20,11 +20,11 @@
  "aiRecheck": {
   "by": "AI-assisted review (automated evidence-consistency audit; not a human technician)",
   "date": "2026-10-23",
-  "method": "Each action-plan row traced to its Grade-A source; level validity (stop/now/soon/ok); no conflicting levels for the same condition; hub.verdict cross-checked against rendered rows; render-side spot-checked in the build output.",
-  "scope": ["brakes-squeaking", "car-shakes-when-braking", "grinding-noise-when-braking", "p0171", "p0300", "p0301", "p0420", "p0442", "p0455", "p0456"],
-  "result": "consistent — 10/10 pages: every row grounded in a Grade-A source, levels valid, no internal contradictions, hub.verdict matches the action plan.",
-  "limitations": "The stop-driving instruction is grounded only in the Toyota owner's manual we verified; other makes are not asserted to stop. This is a document-consistency check, not a hands-on mechanical judgment, and does not replace a licensed technician's opinion on a specific vehicle.",
-  "note": "An AI re-check raises confidence in the wording but is explicitly not a substitute for a qualified technician's review."
+  "method": "Every published page was checked: vehicle-spec pages for source attribution (each oil / tyre / pressure value must come from a Grade-A source) and numeric integrity (no null, Infinity or NaN); issue pages for action-plan rows traced to Grade-A sources, level validity (stop/now/soon/ok), no conflicting levels for the same condition, and hub.verdict cross-checked against rendered rows. Render-side spot-checks in the build output.",
+  "scope": "All published pages passing the release gate at RELEASE_DAY=7: 24 vehicle-spec pages and 12 issue pages (10 of which carry a 'can I keep driving' action plan). The live count is rendered on /sources/#review from the data, so it cannot drift.",
+  "result": "consistent — 36/36 published pages: 24 vehicle-spec pages (every spec value sourced Grade-A, no non-finite numbers) and 12 issue pages (all 10 action-plan rows grounded in Grade-A sources, levels valid, no internal contradictions).",
+  "limitations": "The stop-driving instruction remains grounded only in the Toyota owner's manual we verified; other makes are not asserted to stop. This is a document-consistency and data-integrity check, not a hands-on mechanical judgment, and does not replace a licensed technician's opinion on a specific vehicle.",
+  "note": "An AI re-check raises confidence in the wording and the figures but is explicitly not a substitute for a qualified technician's review; it is shown on every page as 'AI consistency recheck', not as a technician's sign-off."
  },
  "criteria": [
   "A current, verifiable automotive credential (ASE certification or equivalent), named and dated.",

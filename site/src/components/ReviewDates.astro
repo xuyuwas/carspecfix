@@ -3,11 +3,14 @@
 // fact that a page can be edited (text fixed) without its figures being re-read, and
 // that its source documents were retrieved on yet another day. Splitting them is what
 // makes the review process checkable rather than a claim.
+import reviewers from '../../data/reviewers.json';
 const { source, reviewed, by, changed, path } = Astro.props;
 const fmt = d => d || '—';
+const ai = (reviewers as any).aiRecheck;
 ---
 <dl class="dates" aria-label="Review and update record">
   <div class="dates__row"><dt>Source documents read</dt><dd><span class="tnum">{fmt(source)}</span><span class="dates__hint">the day the manual page, NHTSA record or EPA entry was retrieved</span></dd></div>
   <div class="dates__row"><dt>Human review</dt><dd><span class="tnum">{fmt(reviewed)}{by && <span class="dates__by"> · {by}</span>}</span><span class="dates__hint">a person read the figures against the document and signed the page off</span></dd></div>
   <div class="dates__row"><dt>Page last changed</dt><dd><span class="tnum">{fmt(changed)}</span><span class="dates__hint">any edit to the text or data on this page, <a href="/changelog/#corrections">logged on the changelog</a></span></dd></div>
+  {ai && <div class="dates__row"><dt>AI consistency recheck</dt><dd><span class="tnum">{fmt(ai.date)}</span><span class="dates__hint">automated evidence-consistency audit by an AI agent — <b>not a technician's opinion</b></span></dd></div>}
 </dl>
