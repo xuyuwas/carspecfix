@@ -17,6 +17,17 @@ const inReview = vehicles.filter(v => !vehicleGate(v).dataReady).length;
 <p class="finder__note">Live now: {sorted.length} vehicles and {codes.length} trouble codes{syms.length ? `, plus ${syms.length} symptom pages` : ''}.{' '}{inReview > 0 && <>{inReview} more are in source review — <a href="/specs/#in-review">see what is being checked</a>.</>}{' '}A page goes live only after every figure is source-checked — don't see yours? <a href="/contact/">Tell us what to add</a>.</p>
 </div></section>
 <div class="container">
+<section class="hsec">
+  <div class="hsec__head"><h2 class="section__title">What can CarSpecFix help you with?</h2></div>
+  <ul class="usecases">
+    <li><a href="/specs/honda/civic/2022/"><q>“How much oil does my 2022 Civic take — and what grade?”</q><p>Oil capacity and viscosity by engine, with the owner's-manual page cited for every figure.</p></a></li>
+    <li><a href="/specs/toyota/rav4/2020/"><q>“What tires fit, and what's the cold pressure?”</q><p>Tire size by configuration; if the manual gives no pressure for your setup, it points you to the door-jamb label.</p></a></li>
+    <li><a href="/specs/honda/civic/2022/"><q>“Any recalls on my car?”</q><p>Recall records for that year, make and model — then check your own VIN at NHTSA.</p></a></li>
+    <li><a href="/codes/"><q>“What does P0300 / P0455 mean — can I still drive?”</q><p>What each code means, likely causes, and the difference between a solid and a flashing light. A code is not a diagnosis.</p></a></li>
+    <li><a href="/symptoms/brakes-squeaking/"><q>“Squeaking or grinding when I brake?”</q><p>Source-backed next steps and the warning signs that mean stop driving — not a substitute for an inspection.</p></a></li>
+    <li><a href="/repair-cost/"><q>“What should I expect to pay for the repair?”</q><p>No unverified estimates here, but how a bill breaks down and how to get comparable written quotes.</p></a></li>
+  </ul>
+</section>
 <section class="hsec"><div class="hsec__head"><h2 class="section__title">Vehicles</h2></div>
 {sorted.length ? <div class="vgrid">{sorted.map(v => <div class="vcard"><div class="vcard__art"><Photo slug={v.slug} year={v.year} name={`${v.make} ${v.model}`} segment={SEGMENT[v.modelSlug] || 'sedan'} sizes="(min-width:1024px) 288px, (min-width:640px) 45vw, 92vw" /></div><div class="vcard__body"><span class="vcard__yr">{v.year}</span><span class="vcard__name">{v.make} {v.model}</span><span class="vcard__meta">Oil · Tires · Recalls</span></div><a class="vcard__hit" href={vehicleUrl(v)}><span class="sr-only">{v.year} {v.make} {v.model} specs</span></a></div>)}</div> : <p>Vehicle pages are being checked.</p>}
 {liveHubs().length > 0 && <ul class="links">{liveHubs().map(h => <li><a href={`/specs/${h.makeSlug}/${h.modelSlug}/`}>{h.years[0].make} {h.years[0].model}: all years</a></li>)}</ul>}
