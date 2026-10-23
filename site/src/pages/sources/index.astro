@@ -57,6 +57,8 @@ const grouped = Object.entries(priority).map(([g, slugs]: any) => ({
 const inPriority = new Set(Object.values(priority).flat() as string[]);
 const others = safetyPages.filter((p: any) => !inPriority.has(p.slug));
 const auditDate = rev.auditScopePublished ? fmt(rev.auditScopePublished) : null;
+const ai = (reviewers as any).aiRecheck;
+const aiDate = ai ? fmt(ai.date) : null;
 ---
 <Page title="Data Sources & Methodology | CarSpecFix" description="Where CarSpecFix data comes from, how the three evidence tiers are labelled, when documents were retrieved and reviewed, and how corrections are handled." path="/sources/" nav="sources" crumbs={[{ name: 'Home', url: '/' }, { name: 'Data sources', url: '/sources/' }]} h1="Data sources & methodology">
 <h2 class="section__title">How we work</h2>
@@ -90,10 +92,13 @@ const auditDate = rev.auditScopePublished ? fmt(rev.auditScopePublished) : null;
     <div style="margin-top:6px">Pages covered ({techPages.length}): {techPages.map((x: any, n: number) => <>{n > 0 && ', '}<a href={x.url}>{x.label}</a></>)}</div>
   </div>
  : <div class="notice"><span class="ev ev--guidance">Open item</span>&nbsp; A qualified-technician review of the brake, ABS and "can I keep driving" wording is <b>not in place</b>. Until it is, those pages rest on manufacturer and government text alone, and the site does not present itself as a second opinion on a specific car. Read them as a summary of what the documents say, and treat a workshop inspection as the authority on your own vehicle. Priority order for the review: the brake and ABS / warning-light pages first, then the can-I-keep-driving trouble codes — the groups below show exactly what is in and what is not yet signed off.</div>}
+{ai && <div class="notice notice--ok">
+  <span class="ev ev--guidance">AI re-check</span>&nbsp; An automated, evidence-consistency audit of the safety wording was completed <span class="tnum">{aiDate}</span> by an AI agent — <b>not a human technician</b>. It confirmed every action-plan row is grounded in a Grade-A source, levels are valid, and no page contradicts itself. Method and scope are recorded in <code>reviewers.json</code>. This is a document check, not a hands-on inspection; it does not replace a licensed technician's opinion on a specific vehicle.
+</div>}
 <h3>What is in scope ({safetyPages.length} pages)</h3>
-<p>Audit scope published <span class="tnum">{auditDate}</span>. These are the published pages whose wording tells a reader whether to keep driving. The list is generated from the data, so it grows and shrinks with the site instead of being a claim someone has to remember to update. Each page is marked <b>editor-checked only</b> until a named, qualified technician has reviewed it.</p>
-{grouped.map((grp: any) => <><h4 class="scope__grp">{grp.group}</h4><ul class="links">{grp.pages.map((x: any) => <li><a href={x.url}>{x.label}</a><span class="links__meta">{reviewedSlugs.has(x.slug) ? `technician-reviewed ${fmt((reviewers as any).technician?.reviewedOn)}` : 'editor-checked only'}</span></li>)}</ul></>)}
-{others.length > 0 && <><h4 class="scope__grp">Other (can I keep driving?)</h4><ul class="links">{others.map((x: any) => <li><a href={x.url}>{x.label}</a><span class="links__meta">editor-checked only</span></li>)}</ul></>}
+<p>Audit scope published <span class="tnum">{auditDate}</span>. These are the published pages whose wording tells a reader whether to keep driving. The list is generated from the data, so it grows and shrinks with the site instead of being a claim someone has to remember to update. Each page is marked <b>AI re-checked {aiDate} (not technician-reviewed)</b> until a named, qualified technician has reviewed it.</p>
+{grouped.map((grp: any) => <><h4 class="scope__grp">{grp.group}</h4><ul class="links">{grp.pages.map((x: any) => <li><a href={x.url}>{x.label}</a><span class="links__meta">{reviewedSlugs.has(x.slug) ? `technician-reviewed ${fmt((reviewers as any).technician?.reviewedOn)}` : `AI re-checked ${aiDate}`}</span></li>)}</ul></>)}
+{others.length > 0 && <><h4 class="scope__grp">Other (can I keep driving?)</h4><ul class="links">{others.map((x: any) => <li><a href={x.url}>{x.label}</a><span class="links__meta">AI re-checked {aiDate}</span></li>)}</ul></>}
 <h3>What a technician review has to meet</h3>
 <ul>{(reviewers as any).criteria.map((c: string) => <li>{c}</li>)}</ul>
 <p class="ks__src">When a review is recorded, this section publishes the reviewer's name, credentials, the date, the pages actually covered and their own statement — not a badge that says "expert reviewed". If you are a qualified technician and want to review these pages, <a href="/contact/">get in touch</a>.</p>

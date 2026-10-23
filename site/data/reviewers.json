@@ -17,6 +17,15 @@
    "Trouble codes (can I keep driving?)": ["p0171", "p0300", "p0301", "p0420", "p0442", "p0455", "p0456"]
  },
  "auditScopePublished": "2026-10-23",
+ "aiRecheck": {
+  "by": "AI-assisted review (automated evidence-consistency audit; not a human technician)",
+  "date": "2026-10-23",
+  "method": "Each action-plan row traced to its Grade-A source; level validity (stop/now/soon/ok); no conflicting levels for the same condition; hub.verdict cross-checked against rendered rows; render-side spot-checked in the build output.",
+  "scope": ["brakes-squeaking", "car-shakes-when-braking", "grinding-noise-when-braking", "p0171", "p0300", "p0301", "p0420", "p0442", "p0455", "p0456"],
+  "result": "consistent — 10/10 pages: every row grounded in a Grade-A source, levels valid, no internal contradictions, hub.verdict matches the action plan.",
+  "limitations": "The stop-driving instruction is grounded only in the Toyota owner's manual we verified; other makes are not asserted to stop. This is a document-consistency check, not a hands-on mechanical judgment, and does not replace a licensed technician's opinion on a specific vehicle.",
+  "note": "An AI re-check raises confidence in the wording but is explicitly not a substitute for a qualified technician's review."
+ },
  "criteria": [
   "A current, verifiable automotive credential (ASE certification or equivalent), named and dated.",
   "Review of the condition -> action rows, not of the specification figures: the question is whether the instruction is right for the condition, not whether a number was transcribed correctly.",
