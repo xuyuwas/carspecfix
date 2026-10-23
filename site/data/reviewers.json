@@ -1,0 +1,21 @@
+{
+ "_comment": "Technician review of the safety wording. `technician` stays null until a real, named, qualified person has reviewed the pages listed in `scope`; nothing here may be filled in to look diligent. When it is filled in, /sources/#review publishes the name, credentials, date and pages covered, and every safety page changes its notice from 'no technician review yet' to the reviewer's name and date. `scope` is a fallback only: the page list rendered on the site is derived from the data (every published page that carries an action plan), so it cannot drift from what is actually live.",
+ "technician": null,
+ "technicianWhenPresent": {
+  "name": "Full name as the reviewer wants it published",
+  "credentials": "e.g. ASE Master Automobile Technician, 12 years at an independent shop",
+  "credentialId": "Certification number, if the reviewer agrees to publish it",
+  "reviewedOn": "YYYY-MM-DD",
+  "pages": ["page slugs actually reviewed - a review covers pages, not the whole site"],
+  "statement": "One or two sentences in the reviewer's own words: what they checked, and what they did not.",
+  "nextReviewDue": "YYYY-MM-DD"
+ },
+ "scope": "Every published page that renders a 'What to do now' action plan - currently the seven trouble codes and the brake symptom pages.",
+ "criteria": [
+  "A current, verifiable automotive credential (ASE certification or equivalent), named and dated.",
+  "Review of the condition -> action rows, not of the specification figures: the question is whether the instruction is right for the condition, not whether a number was transcribed correctly.",
+  "Disagreement is published, not smoothed over: where the reviewer would word a row differently, the page says so.",
+  "The reviewer is named. An anonymous review is not published as a review."
+ ],
+ "updated": "2026-10-23"
+}

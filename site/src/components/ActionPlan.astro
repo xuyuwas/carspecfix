@@ -3,6 +3,7 @@
 import { actionPlan, LEVEL_LABEL } from '../lib/verdicts.mjs';
 import { tierOf, TIER_SHORT } from '../lib/tiers.mjs';
 import { liveIssues, issueUrl } from '../lib/gate.mjs';
+import reviewers from '../../data/reviewers.json';
 const { i, ref /* label+number lookup from the page's reference list */ } = Astro.props;
 const plan = actionPlan(i);
 const isCode = i.type === 'code';
@@ -34,5 +35,12 @@ const flashPage = liveIssues.find(x => x.type === 'code' && x.code === 'P0300');
       </div>
     </li>)}</>)}
   </ol>
+  {/* The rows above are compiled from documents, not written by a technician. That has
+      to be said where the decision is made, not only on /sources/: a reader standing next
+      to a car needs to know this table is a reading aid and not an inspection. */}
+  <div class="act__foot act__foot--review">
+    <p><b>{reviewers.technician ? `Technician-reviewed: ${reviewers.technician.name}, ${reviewers.technician.credentials}, ${reviewers.technician.reviewedOn}.` : 'Reference, not a technician\u2019s opinion.'}</b>{' '}{reviewers.technician ? reviewers.technician.statement : <>Every row above is quoted or paraphrased from the document cited beside it and checked by an editor. No qualified technician has reviewed this wording yet, and nothing here is an inspection of your car. Use it to work out what to ask a workshop about — not as a second opinion on whether this particular vehicle is safe to drive.</>}</p>
+    <p class="act__review-link"><a href="/sources/#review">{reviewers.technician ? 'How the review works' : 'What a technician review would add'}</a></p>
+  </div>
   {isCode && !coversFlash && <p class="act__foot">A blinking check-engine light is a different instruction from a steady one. None of the documents checked for this code describes blinking, so this table does not cover it — {flashPage ? <a href={issueUrl(flashPage)}>P0300</a> : 'P0300'} carries the wording for the severe-misfire case.</p>}
 </section>}

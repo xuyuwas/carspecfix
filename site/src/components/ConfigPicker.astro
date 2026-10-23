@@ -8,16 +8,40 @@
 // Hybrid photo next to a gasoline-only oil figure. This panel asks three questions
 // the reader can answer by looking at their own car, and when the document leaves
 // the answer open it says so instead of picking one.
-import { configModel } from '../lib/config.mjs';
+import { configModel, configNarrows } from '../lib/config.mjs';
 const { v } = Astro.props;
 const m = configModel(v);
-const usable = (m.sizes.some(s => s.psi.length) || m.engines.some(e => e.oil)) && (m.sizes.length > 1 || m.engines.length > 1);
+const nr = configNarrows(m);
+const usable = nr.any;
+// The lede has to describe what is actually ambiguous on this page. Telling a reader
+// that the manual prints no tyre-pressure table and then showing them a tyre-pressure
+// selector is the kind of contradiction that made the Equinox page untrustworthy.
+const lede = [
+  nr.oil ? `the oil capacity is printed per ${m.engines.some(e => (e.oilList || []).some(o => o.drive)) ? 'engine and drive' : 'engine'}` : null,
+  nr.psi ? 'the cold tyre pressure is printed per wheel package' : null,
+  m.placard ? 'no tyre-pressure table is printed at all \u2014 the cold pressure lives on the Tire and Loading Information label on the driver\u2019s door jamb' : null,
+].filter(Boolean).join('; ');
+// Default state: every printed oil figure, tagged with the engine (and the drive, when
+// the manual splits by drive). Nothing is picked, so nothing is highlighted as "the"
+// answer - the panel lists them and waits.
+const oilRowsDefault = m.engines.flatMap(e => (e.oilList || (e.oil ? [e.oil] : []))
+  .filter(o => !o.unverified && (o.w != null || o.wo != null))
+  .map(o => ({ ...o, engine: e.label })));
+const oilTag = (o: any) => [o.drive, o.engine].filter(Boolean).join(' \u00b7 ');
+const hasOilFig = oilRowsDefault.length > 0;
+// Only name the places the reader has to look for the questions this page asks. A
+// selector that says "the tyre size is on the sidewall" and then offers no tyre-size
+// field is the same class of error as printing a number with no source.
+const readHint = [
+  nr.oil ? `${m.engines.some(e => (e.oilList || []).some(o => o.drive)) ? 'the drive (AWD badge or VIN) and ' : ''}the engine (bootlid badge or emissions sticker)` : null,
+  nr.psiOptions > 1 ? 'the tyre size (on the sidewall)' : null,
+].filter(Boolean).join(', then ');
 const payload = JSON.stringify(m).replace(/</g, '\\u003c');
 ---
 {usable && <section class="cfg" data-cfg aria-labelledby="cfg-h">
   <div class="cfg__head">
     <h2 class="cfg__title" id="cfg-h">Find the numbers for your build</h2>
-    <p class="cfg__lede">This model year does not have one oil figure or one tyre pressure. The owner's manual prints a value per engine and per wheel/tyre package, so the answer depends on the car in front of you. Pick what you can read off the car: the tyre size is on the sidewall, the engine is on the bootlid badge or the emissions sticker under the bonnet.</p>
+    <p class="cfg__lede">For this model year {lede}. The answer therefore depends on the car in front of you, not on the model year alone. Pick what you can read off the car itself: {readHint}.</p>
   </div>
   <div class="cfg__steps">
     <label class="cfg__field"><span class="cfg__k">1 · Engine</span>
@@ -29,18 +53,18 @@ const payload = JSON.stringify(m).replace(/</g, '\\u003c');
       <select data-cfg-drive aria-label="Drive">
         <option value="">Not sure — show both</option>
       </select></label>
-    <label class="cfg__field"><span class="cfg__k">3 · Tyre size on the sidewall</span>
+    {nr.psiOptions > 1 && <label class="cfg__field"><span class="cfg__k">3 · Tyre size on the sidewall</span>
       <select data-cfg-size aria-label="Tyre size">
         <option value="">Not sure — show every size</option>
         {m.sizes.map(s => <option value={s.id}>{s.id}{s.wheel ? ` (${s.wheel}-inch)` : ''}</option>)}
-      </select></label>
+      </select></label>}
   </div>
-  <div class="cfg__out" data-cfg-out aria-live="polite">{/* Server-rendered "everything" state: without JS the panel still answers, it just cannot narrow. JS replaces this on load. */}
-    <div class="cfg__cell"><div class="cfg__q">Engine oil</div>{m.oilScope && <div class="cfg__scope">Applies to: {m.oilScope}.</div>}<div class="cfg__a">{m.engines.filter(e => e.oil && (e.oil.w != null || e.oil.wo != null)).map(e => <>
-      {e.oil.w != null && <span class="cfg__pair"><b>{e.oil.w}<small>qt</small></b><em>{e.label} · with filter</em></span>}
-      {e.oil.wo != null && <span class="cfg__pair"><b>{e.oil.wo}<small>qt</small></b><em>{e.label} · without</em></span>}
-    </>)}{!m.engines.some(e => e.oil && e.oil.w != null) && <span class="cfg__nv">Not published</span>}</div></div>
-    <div class="cfg__cell"><div class="cfg__q">Tyre pressure (cold)</div><div class="cfg__a">{m.singlePsi ? <span class="cfg__pair"><b>{m.singlePsi}<small>psi</small></b><em>front &amp; rear</em></span> : m.psiRange ? <span class="cfg__range">{m.psiRange[0]}–{m.psiRange[1]} psi</span> : <span class="cfg__nv">On the door-jamb label</span>}</div><div class="cfg__s">{m.singlePsi ? 'Same figure in every configuration on this page.' : m.psiRange ? `Across ${m.sizes.length} tyre sizes. Your build is one of these — the door-jamb label settles which.` : ''}</div></div>
+  <div class="cfg__out" data-cfg-out aria-live="polite">{/* Server-rendered "nothing selected" state: without JS the panel still answers, it just cannot narrow. Every printed figure is listed, because a single highlighted number is the one thing this panel must never do unprompted. JS replaces this on load. */}
+    <div class="cfg__cell"><div class="cfg__q">Engine oil</div>{m.oilScope && <div class="cfg__scope">Applies to: {m.oilScope}.</div>}<div class="cfg__a">{oilRowsDefault.map(o => <>
+      {o.w != null && <span class="cfg__pair"><b>{o.w}<small>qt</small></b><em>{oilTag(o)} · with filter</em></span>}
+      {o.wo != null && <span class="cfg__pair"><b>{o.wo}<small>qt</small></b><em>{oilTag(o)} · without</em></span>}
+    </>)}{!hasOilFig && <span class="cfg__nv">Not published</span>}</div><div class="cfg__s">{nr.oil ? `One figure per line. Pick the ${m.engines.some(e => (e.oilList || []).some(o => o.drive)) ? 'engine and drive' : 'engine'} above \u2014 the page does not guess which one is yours.` : ''}</div></div>
+    <div class="cfg__cell"><div class="cfg__q">Tyre pressure (cold)</div><div class="cfg__a">{m.singlePsi ? <span class="cfg__pair"><b>{m.singlePsi}<small>psi</small></b><em>front &amp; rear</em></span> : m.psiRange ? <span class="cfg__range">{m.psiRange[0]}–{m.psiRange[1]} psi</span> : <span class="cfg__nv">On the door-jamb label</span>}</div><div class="cfg__s">{m.singlePsi ? 'Same figure in every configuration on this page.' : m.psiRange ? `Across ${m.sizes.length} tyre sizes. Your build is one of these \u2014 the door-jamb label settles which.` : m.placard ? 'This manual prints no psi table. The label on your driver\u2019s door jamb is the figure for your exact car.' : ''}</div></div>
     <div class="cfg__cell"><div class="cfg__q">Fuel economy</div><div class="cfg__a">{(() => { const n = m.engines.flatMap(e => e.mpg.map(r => r.comb)); return n.length ? <span class="cfg__pair"><b>{Math.min(...n) === Math.max(...n) ? n[0] : `${Math.min(...n)}–${Math.max(...n)}`}<small>mpg comb.</small></b><em>by engine &amp; drive</em></span> : <span class="cfg__nv">Not listed</span>; })()}</div></div>
   </div>
   <p class="cfg__note">Nothing here is filled in from another configuration. A figure the manual does not print stays <b>not published</b>; a figure that depends on an unmarked build type shows the range and points at the door-jamb label.</p>
@@ -51,7 +75,11 @@ const payload = JSON.stringify(m).replace(/</g, '\\u003c');
   var root=document.querySelector('[data-cfg]'); if(!root) return;
   var dataEl=document.querySelector('[data-cfg-data]'); if(!dataEl) return;
   var M; try{ M=JSON.parse(dataEl.textContent); }catch(e){ return; }
+  // The tyre-size field is only rendered when more than one printed pressure exists, so
+  // every use of szSel must tolerate its absence - a null here used to throw on the first
+  // addEventListener and kill the whole panel, leaving the drive list empty.
   var engSel=root.querySelector('[data-cfg-engine]'), drSel=root.querySelector('[data-cfg-drive]'), szSel=root.querySelector('[data-cfg-size]'), out=root.querySelector('[data-cfg-out]');
+  if(!engSel||!drSel||!out) return;
   function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]}); }
   function q(n){ return Number.isInteger(n)?n.toFixed(1):String(n); }
   function engine(){ var v=engSel.value; return v?M.engines.filter(function(e){return e.id===v})[0]||null:null; }
@@ -63,25 +91,38 @@ const payload = JSON.stringify(m).replace(/</g, '\\u003c');
     drSel.innerHTML='<option value="">Not sure — show both</option>'+list.map(function(d){return '<option value="'+esc(d.id)+'">'+esc(d.label)+'</option>'}).join('');
     drSel.value=list.some(function(d){return d.id===cur})?cur:'';
   }
+  // Every oil row the current engine can show. A manual that splits capacity by
+  // drivetrain (2022 Equinox: 4.2 qt FWD, 5.3 qt AWD) produces one row per drive, and
+  // the drive the reader picked filters them - otherwise one of the two figures is
+  // unreachable and the page silently answers for half the cars.
+  function oilRows(e){
+    if(!e) return [];
+    var list=e.oilList||(e.oil?[e.oil]:[]);
+    return list.filter(function(o){return !o.unverified&&(o.w!=null||o.wo!=null)});
+  }
+  function pairHtml(o,tag){
+    var h='';
+    if(o.w!=null) h+='<span class="cfg__pair"><b>'+q(o.w)+'<small>qt</small></b><em>'+esc(tag)+' \u00b7 with filter</em></span>';
+    if(o.wo!=null) h+='<span class="cfg__pair"><b>'+q(o.wo)+'<small>qt</small></b><em>'+esc(tag)+' \u00b7 without</em></span>';
+    return h;
+  }
   function oilCell(e){
     var scope=M.oilScope?'Applies to: '+esc(M.oilScope)+'.':'';
-    if(!e){
-      var oils=M.engines.filter(function(x){return x.oil&&!x.oil.unverified&&(x.oil.w!=null||x.oil.wo!=null)});
-      if(!oils.length) return {v:'<span class="cfg__nv">Not published</span>',s:'No engine checked for this page carries an oil figure.',scope:''};
-      if(oils.length===1) return oilCell(oils[0]);
-      return {v:oils.map(function(x){return '<span class="cfg__pair"><b>'+(x.oil.w!=null?q(x.oil.w)+'<small>qt</small>':'—')+'</b><em>'+esc(x.label)+'</em></span>'}).join(''),s:'With filter. One figure per engine — pick yours above.',scope:''};
-    }
-    if(!e.oil) return {v:'<span class="cfg__nv">Not published</span>',s:'The owner\u2019s manual for the '+esc(e.label)+' has not been checked yet, so this page states no figure for it.',scope:''};
-    if(e.oil.unverified||(e.oil.w==null&&e.oil.wo==null)) return {v:'<span class="cfg__nv">Not published</span>',s:'The source for this engine has not been checked yet.',scope:''};
-    var h='';
-    if(e.oil.w!=null) h+='<span class="cfg__pair"><b>'+q(e.oil.w)+'<small>qt</small></b><em>with filter</em></span>';
-    if(e.oil.wo!=null) h+='<span class="cfg__pair"><b>'+q(e.oil.wo)+'<small>qt</small></b><em>without</em></span>';
-    return {v:h,s:(e.oil.wo==null?'The manual prints only a with-filter figure for this engine.':''),scope:scope};
+    var dLab=drSel.value?(/Front/i.test(drSel.value)?'FWD':/All|4-Wheel|AWD/i.test(drSel.value)?'AWD':drSel.value):'';
+    var pool=[];
+    if(e) pool=oilRows(e); else M.engines.forEach(function(x){ pool=pool.concat(oilRows(x)); });
+    if(!pool.length) return {v:'<span class="cfg__nv">Not published</span>',s:e?'The manual for the '+esc(e.label)+' has not been checked yet, so this page states no figure for it.':'No configuration checked for this page carries an oil figure.',scope:''};
+    var byDrive=pool.filter(function(o){return o.drive&&o.drive===dLab});
+    var rows=byDrive.length?byDrive:pool, many=rows.length>1;
+    return {v:rows.map(function(o){return pairHtml(o,o.drive||(e?e.label:''))}).join(''),
+      s:many?('One figure per '+((rows[0]||{}).drive?'drive':'engine')+'. Pick yours above \u2014 the page does not guess which one your car is.')
+           :(rows[0].wo==null?'The manual prints only a with-filter figure here.':''),
+      scope:many?'':scope};
   }
   function psiCell(){
-    var size=szSel.value?M.sizes.filter(function(s){return s.id===szSel.value})[0]:null;
+    var size=szSel&&szSel.value?M.sizes.filter(function(s){return s.id===szSel.value})[0]:null;
     var pool=size?[size]:M.sizes.filter(function(s){return s.psi.length});
-    if(!pool.length) return {v:'<span class="cfg__nv">On the door-jamb label</span>',s:'This manual prints no psi table.',scope:''};
+    if(!pool.length) return {v:'<span class="cfg__nv">On the door-jamb label</span>',s:M.placard?'This manual prints no psi table at all. The recommended cold pressure is on the Tire and Loading Information label on your driver\u2019s door jamb \u2014 that label, not this page, is built for your exact car.':'No psi figure has been checked for this page yet.',scope:''};
     var all=[]; pool.forEach(function(s){ s.psi.forEach(function(p){ if(!all.some(function(x){return x.k===p.k})) all.push(p); }); });
     if(all.length===1){ var p=all[0]; return {v:'<span class="cfg__pair"><b>'+p.front+(p.front!==p.rear?'/'+p.rear:'')+'<small>psi</small></b><em>'+(p.front===p.rear?'front &amp; rear':'front / rear')+'</em></span>',s:'Same figure for every configuration on this page.',scope:size?esc(size.id):''}; }
     var ex=all.slice(0,4).map(function(x){return x.front+(x.front!==x.rear?'/'+x.rear:'')}).join(' · ')+' psi';
@@ -97,7 +138,8 @@ const payload = JSON.stringify(m).replace(/</g, '\\u003c');
     if(!e) M.engines.forEach(function(x){ rows=rows.concat(x.mpg); });
     rows=rows.filter(function(r){return !drSel.value||r.drive===drSel.value});
     if(!rows.length) return {v:'<span class="cfg__nv">Not listed</span>',s:'',scope:''};
-    var n=rows.map(function(r){return r.comb}), lo=Math.min.apply(null,n), hi=Math.max.apply(null,n), seen=[];
+    var n=rows.map(function(r){return r.comb}); if(!n.length) return {v:'<span class="cfg__nv">Not listed</span>',s:'',scope:''};
+    var lo=Math.min.apply(null,n), hi=Math.max.apply(null,n), seen=[];
     rows.forEach(function(r){ var l=driveLabel(r.drive); if(seen.indexOf(l)<0) seen.push(l); });
     return {v:'<span class="cfg__pair"><b>'+(lo===hi?lo:lo+'–'+hi)+'<small>mpg comb.</small></b><em>'+esc(seen.join(' / '))+'</em></span>',
       s:rows.map(function(r){return '<a href="https://www.fueleconomy.gov/feg/noframes/'+r.feId+'.shtml" rel="nofollow noopener">'+esc(r.model)+'</a> — '+esc(r.option)+': '+r.city+'/'+r.hwy+'/'+r.comb}).join('<br>'),scope:''};
@@ -109,7 +151,7 @@ const payload = JSON.stringify(m).replace(/</g, '\\u003c');
     out.innerHTML=cell('Engine oil',oilCell(e))+cell('Tyre pressure (cold)',psiCell())+cell('Fuel economy',mpgCell());
     var live=document.getElementById('live'); if(live) live.textContent='Configuration updated.';
   }
-  engSel.addEventListener('change',render); drSel.addEventListener('change',function(){render()}); szSel.addEventListener('change',render);
+  engSel.addEventListener('change',render); drSel.addEventListener('change',render); if(szSel) szSel.addEventListener('change',render);
   render();
 })();
 </script>

@@ -1,7 +1,8 @@
 // Post-build SEO/quality checks (seo-dev-requirements R-Q1/Q3, R-M1/M2, R-S1, R-D4, R-L3/L4, R-U1).
 // Writes reports/build-report.md and exits 1 on any P0 failure.
 import fs from 'node:fs'; import path from 'node:path';
-import { vehicles, issues, vehicleGate, issueGate, vehicleUrl, issueUrl, pilotUrls, PREVIEW, TODAY } from '../src/lib/gate.mjs';
+import { vehicles, issues, vehicleGate, issueGate, vehicleUrl, issueUrl, pilotUrls, shownTireRows, placardNote, PREVIEW, TODAY } from '../src/lib/gate.mjs';
+import { configModel, configNarrows } from '../src/lib/config.mjs';
 const DIST = 'dist', SITE = 'https://carspecfix.com';
 const errors = [], warns = [], out = [];
 const files = []; (function walk(d) { for (const f of fs.readdirSync(d)) { const p = path.join(d, f); fs.statSync(p).isDirectory() ? walk(p) : files.push(p); } })(DIST);
@@ -68,8 +69,13 @@ for (const [u, p] of Object.entries(pages)) {
   // shipped "null qt without" because two oil parsers disagreed; fail the build
   // on any null/undefined/NaN that reaches the reader.
   {
-    const noScript = p.s.replace(/<script[\s\S]*?<\/script>/g, '');
-    for (const bad of ['null qt', 'null ', 'undefined', 'NaN', '[object Object]'])
+    // The corrections log quotes the exact text of past bugs - including the string
+    // "Infinity" from the 2022 Equinox - so it is stripped before the scan. Failing the
+    // build for a correction that names the error it fixed would stop anyone from
+    // logging one.
+    const noScript = p.s.replace(/<script[\s\S]*?<\/script>/g, '')
+      .replace(/<div class="corr__(what|keep)">[\s\S]*?<\/div>/g, '');
+    for (const bad of ['null qt', 'null ', 'undefined', 'NaN', 'Infinity', '[object Object]'])
       if (noScript.includes(bad)) errors.push(`P0-N leaked "${bad.trim()}" in rendered HTML: ${u}`);
   }
   // Cost wording: RepairPal (ToS-banned) and vague "rough cost" phrasing stay
@@ -91,6 +97,60 @@ for (const [u, p] of Object.entries(pages)) {
     errors.push(`R-I2 vehicle page falls back to the silhouette placeholder (no signed photo): ${u}`);
 }
 for (const [t, us] of Object.entries(titles)) if (us.length > 1) errors.push(`R-M2 duplicate title "${t}": ${us.join(', ')}`);
+// P0-V data: the same defects, caught before they are rendered and for every vehicle in
+// the library, published or not. A half-filled tyre row (front psi, no rear) is what
+// produced the empty list the first time; it must never reach a page at all.
+for (const v of vehicles) {
+  const rows = v.tires?.rows || [];
+  const half = rows.filter(t => (t.frontPsi && !t.rearPsi) || (!t.frontPsi && t.rearPsi));
+  if (half.length) errors.push(`P0-V data ${v.slug}: ${half.length} tyre row(s) carry one pressure but not the other`);
+  const weird = rows.filter(t => [t.frontPsi, t.rearPsi].some(x => x != null && !Number.isFinite(Number(x))));
+  if (weird.length) errors.push(`P0-V data ${v.slug}: tyre pressure is not a finite number`);
+  // A draft with this gap is already named on /specs/#in-review, so it warns; a published
+  // page with it fails, because that is the state that reaches a reader.
+  if (rows.length && rows.every(t => !t.frontPsi) && !vacard(v)) {
+    const msg = `P0-V data ${v.slug}: lists tyre sizes, prints no pressure, and cites no door-jamb label`;
+    (pages[vehicleUrl(v)] ? errors : warns).push(msg);
+  }
+}
+function vacard(v) { const p = v.tires?.psiOnLabel; return !!(p && p.source && p.page); }
+// P0-V: a vehicle page's quick answer must agree with the tables below it and with the
+// data. Three failures shipped on one page in October 2026 and none of them was caught,
+// because the build only checked for leaked `null`s: (a) an empty psi list rendered as
+// "Infinity–-Infinity psi", (b) the same page claimed the manual printed three pressure
+// rows and, one section later, that it printed none, (c) the "see the door-jamb label"
+// answer was switched off by an unrelated selector. Each rule below is derived from the
+// data, so it cannot drift from what the page actually says.
+for (const v of vehicles) {
+  const u = vehicleUrl(v), p = pages[u];
+  if (!p) continue;                                   // unpublished pages have nothing to render
+  const rows = shownTireRows(v);
+  const hasPsi = rows.some(t => t.frontPsi && t.rearPsi);
+  const placard = placardNote(v);
+  const nr = configNarrows(configModel(v));
+  const qa = (p.s.match(/<section class="qa"[\s\S]*?<\/section>/) || [''])[0].replace(/<script[\s\S]*?<\/script>/g, '');
+  const qaText = qa.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
+  const psiFig = /\d+\s*[–-]?\s*\d*\s*psi\b/i;
+  // (a) a page with no printed pressure has exactly one honest answer
+  if (!hasPsi && !/door-jamb label/.test(qaText))
+    errors.push(`P0-V ${u}: no psi figure in the source, but the quick answer never points at the door-jamb label`);
+  // (b) never print a pressure that no document states
+  if (!hasPsi && psiFig.test(qaText))
+    errors.push(`P0-V ${u}: quick answer prints a psi figure although no row in the source carries one`);
+  // (c) contradictory statements on one screen
+  if (/prints? no psi table|no psi table/i.test(qaText) && psiFig.test(qaText))
+    errors.push(`P0-V ${u}: quick answer says the manual prints no psi table and prints a psi figure in the same breath`);
+  // (d) an unambiguous figure must actually appear; an ambiguous one must go to the selector
+  if (hasPsi && !nr.psi && !psiFig.test(qaText))
+    errors.push(`P0-V ${u}: one published pressure, but the quick answer hides it behind the selector`);
+  if (hasPsi && nr.psi && psiFig.test(qaText) && !/range for this model year|whole range/.test(qaText))
+    errors.push(`P0-V ${u}: quick answer prints a psi range without saying it is a range, not the reader's figure`);
+  // (e) the placard note is a real answer and must survive next to the selector
+  if (!hasPsi && placard && !/see label|On the door-jamb label|door-jamb label/i.test(qaText))
+    errors.push(`P0-V ${u}: placard-only page lost its door-jamb answer`);
+  // (f) "Added" on /changelog/ must be a real date, not an em dash
+  if (!v.publishDate) errors.push(`P0-V ${u}: no publishDate, so the changelog shows a blank "Added" date`);
+}
 // R-D7: the homepage must state its real coverage (pilot = 4 vehicles / 5 codes),
 // so a visitor is never promised a lookup the site cannot serve yet.
 if (pages['/'] && !/Live now: \d+ vehicles? and \d+ trouble codes?/.test(pages['/'].s)) errors.push('R-D7 homepage is missing the live-coverage statement');

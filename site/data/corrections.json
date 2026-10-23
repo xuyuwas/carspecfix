@@ -2,6 +2,44 @@
   "_comment": "Real corrections, newest first. Every entry must name the pages, the date the fix shipped, and what changed vs what did not. This file is the only source for the corrections log on /sources/ and /changelog/; do not hand-write a 'no corrections yet' claim anywhere.",
   "entries": [
     {
+      "date": "2026-10-23",
+      "kind": "Display",
+      "pages": [
+        "2022-chevrolet-equinox"
+      ],
+      "what": "The tyre-pressure quick answer printed “Infinity–-Infinity psi”. The range was computed from an empty list: this model year prints no tyre-pressure table at all, so all three tyre rows carried a size and no pressure, and the minimum of nothing is Infinity. The same page also said in one panel that the manual lists three pressure rows and, in the next, that it prints no pressure table. The quick answer now reads “On the door-jamb label”, and the sentence about pressure rows only appears on pages that actually have pressures. Separately, the configuration selector now offers both oil figures (4.2 qt FWD, 5.3 qt AWD) — it was collapsing two drivetrain-specific capacities into one engine and only the FWD figure was reachable.",
+      "unchanged": "The three tyre sizes, both oil capacities, the viscosity, the towing figure and all five recalls. No underlying value was wrong: the page was printing a computed artefact and two contradictory sentences."
+    },
+    {
+      "date": "2026-10-23",
+      "kind": "Display",
+      "pages": [
+        "2024-honda-cr-v",
+        "2020-toyota-rav4"
+      ],
+      "what": "The oil capacity was missing from the “find the numbers for your build” selector on both pages. A capacity row reading “1.5L turbo (non-hybrid)” was classified as a hybrid figure because the text contains the word hybrid, and a page-level note naming both “gasoline and hybrid engines” was being read as if it applied to each row individually. Neither figure then matched any engine, so the selector showed nothing. The hybrid test now excludes “non-hybrid” and each row is classified on its own wording.",
+      "unchanged": "Both capacities were correct on the pages themselves and in the oil table; only the selector's pairing was wrong."
+    },
+    {
+      "date": "2026-10-23",
+      "kind": "Display",
+      "pages": [
+        "2022-chevrolet-equinox"
+      ],
+      "what": "The tyre-pressure quick answer printed “Infinity–-Infinity psi”. The range was computed from an empty list: this model year prints no tyre-pressure table at all, so all three tyre rows carried a size and no pressure, and the minimum of nothing is Infinity. The same page also said in one panel that the manual lists three pressure rows and, in the next, that it prints no pressure table. The quick answer now reads “On the door-jamb label”, and the sentence about pressure rows only appears on pages that actually have pressures. Separately, the configuration selector now offers both oil figures (4.2 qt FWD, 5.3 qt AWD) — it was collapsing two drivetrain-specific capacities into one engine and only the FWD figure was reachable.",
+      "unchanged": "The three tyre sizes, both oil capacities, the viscosity, the towing figure and all five recalls. No underlying value was wrong: the page was printing a computed artefact and two contradictory sentences."
+    },
+    {
+      "date": "2026-10-23",
+      "kind": "Display",
+      "pages": [
+        "2024-honda-cr-v",
+        "2020-toyota-rav4"
+      ],
+      "what": "The oil capacity was missing from the “find the numbers for your build” selector on both pages. A capacity row reading “1.5L turbo (non-hybrid)” was classified as a hybrid figure because the text contains the word hybrid, and a page-level note naming both “gasoline and hybrid engines” was being read as if it applied to each row individually. Neither figure then matched any engine, so the selector showed nothing. The hybrid test now excludes “non-hybrid” and each row is classified on its own wording.",
+      "unchanged": "Both capacities were correct on the pages themselves and in the oil table; only the selector's pairing was wrong."
+    },
+    {
       "date": "2026-10-22",
       "kind": "Scope and photo",
       "pages": [

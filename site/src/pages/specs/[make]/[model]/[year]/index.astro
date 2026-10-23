@@ -10,7 +10,7 @@ import { fitTitle, usOnly } from '../../../../../lib/title.mjs';
 import { makeRefs, SEGMENT } from '../../../../../lib/refs.mjs';
 import { imageObject } from '../../../../../lib/images.mjs';
 import { parseOilCapacity } from '../../../../../lib/oil.mjs';
-import { configModel } from '../../../../../lib/config.mjs';
+import { configModel, configNarrows } from '../../../../../lib/config.mjs';
 import { AUTHOR } from '../../../../../lib/site.mjs';
 export function getStaticPaths() {
   return liveVehicles.map(v => ({ params: { make: v.makeSlug, model: v.modelSlug, year: String(v.year) }, props: { v } }));
@@ -30,7 +30,14 @@ const tires = shownTireRows(v);
 const placard = placardNote(v);
 const psiMissing = tires.length === 0 || tires.some(t => !(t.frontPsi && t.rearPsi));
 const psiAllMissing = tires.length > 0 && tires.every(t => !(t.frontPsi && t.rearPsi));
-const psis = tires.flatMap(t => [t.frontPsi, t.rearPsi]).filter(Boolean); const pMin = Math.min(...psis), pMax = Math.max(...psis);
+// Math.min() of an empty array is Infinity and Math.max() is -Infinity. That is
+// exactly how the 2022 Equinox shipped "Infinity–-Infinity psi": every one of its tyre
+// rows carries a size and no pressure, because Chevrolet prints the pressure on the
+// door-jamb label only. A page with no printed figure has to say so, not print a range.
+const psis = tires.flatMap(t => [t.frontPsi, t.rearPsi]).filter(Boolean);
+const pMin = psis.length ? Math.min(...psis) : null, pMax = psis.length ? Math.max(...psis) : null;
+const psiText = pMin == null ? null : pMin === pMax ? `${pMin}` : `${pMin}–${pMax}`;
+const hasPsiFigures = pMin != null;
 // oil: single parser shared with the year hub page (lib/oil.mjs). It merges the
 // "with filter; without" pair of one engine into a single entry — the old inline
 // copy skipped that merge and rendered "null qt without" on the 2020/2024 RAV4.
@@ -145,7 +152,21 @@ const readDates = [...new Set([sources[s.oilCapacity?.source]?.retrieved, source
 // if it were the answer. The cells are replaced by one that says why, and the numbers
 // live in the selector and the tables below.
 const cfgm = configModel(v);
-const cfgUsable = (cfgm.sizes.some(x => x.psi.length) || cfgm.engines.some(e => e.oil)) && (cfgm.sizes.length > 1 || cfgm.engines.length > 1);
+const nr = configNarrows(cfgm);
+const cfgUsable = nr.any, cfgOil = nr.oil, cfgPsi = nr.psi;
+// Four states, and only one of them is a number. `label` is not a gap to be hidden: a
+// manual that prints no psi table has a real answer ("read the door-jamb label"), and
+// the 2022 Equinox lost it because the oil selector switched the whole cell off.
+const psiAnswer = !hasPsiFigures ? (placard ? 'label' : 'unverified') : cfgPsi ? 'selector' : 'figure';
+const wheelCount = [...new Set(tires.map(t => t.wheel).filter(Boolean))].length || tires.length;
+const oilByDrive = cfgm.engines.some(e => (e.oilList || []).some(o => o.drive));
+const psiDistinct = new Set(tires.filter(x => x.frontPsi && x.rearPsi).map(x => `${x.frontPsi}/${x.rearPsi}`)).size;
+const psiOpen = !hasPsiFigures ? null
+  : `It lists ${psiDistinct} different cold pressure${psiDistinct === 1 ? '' : 's'} across ${wheelCount} wheel size${wheelCount === 1 ? '' : 's'} and never says which trim gets which, so ${psiText} psi is the range for this model year, not your figure.`;
+const oilOpen = cfgOil ? `Oil is printed per ${oilByDrive ? 'engine and drive' : 'engine'}: ${oilEngines.map(o => o.raw).join('; ')}.` : null;
+const openLine = [psiOpen, oilOpen].filter(Boolean).join(' ');
+const oilDocName = sources[s.oilCapacity?.source]?.name;
+const tireDocName = tires.length ? sources[tires[0].source]?.name : null;
 const sourceDate = readDates.length ? (readDates.length === 1 ? readDates[0] : `${readDates[0]} – ${readDates.at(-1)}`) : null;
 ---
 <Base title={title} description={desc} path={path} jsonld={jsonld} crumbs={crumbs} nav="specs">
@@ -159,18 +180,18 @@ const sourceDate = readDates.length ? (readDates.length === 1 ? readDates[0] : `
 <section class="qa" id="quick" data-copy-scope aria-label="Quick answer">
   <div class="qa__head"><h2 class="qa__title">Quick answer</h2><Tools /></div>
   <div class="qa__grid">
-  {!cfgUsable && <div class="qa__item"><div class="qa__q">Tire pressure (cold)</div>
-    {psiAllMissing && placard ? <>
+  {psiAnswer !== 'selector' && <div class="qa__item"><div class="qa__q">Tire pressure (cold)</div>
+    {psiAnswer === 'label' ? <>
       <div class="qa__a qa__a--text">On the door-jamb label<sup class="ref"><a href={`#ref-${placardRef}`}>[{placardRef}]</a></sup></div>
       <div class="qa__more">{placard.note ?? `${v.make} publishes recommended cold pressures only on the Tire and Loading Information label, not in a psi table.`}</div>
       <div class="qa__src"><Fragment set:html={P(`Manual ${placard.page}`)} /> · check the label on your driver's door jamb for your exact trim.</div>
-    </> : psiMissing ? <div class="qa__a qa__a--text"><span class="nv">Not yet verified — check your owner's manual</span></div>
-     : <><div class="qa__a">{pMin === pMax ? pMin : `${pMin}–${pMax}`}<small>psi{samePsi && tires[0].frontPsi !== tires[0].rearPsi ? ' front/rear' : ''}{!samePsi ? ', by wheel package' : ''}</small><sup class="ref"><a href={`#ref-${tireRef}`}>[{tireRef}]</a></sup></div>
+    </> : psiAnswer === 'unverified' ? <div class="qa__a qa__a--text"><span class="nv">Not yet verified — check your owner's manual</span></div>
+     : <><div class="qa__a">{psiText}<small>psi{samePsi && tires[0].frontPsi !== tires[0].rearPsi ? ' front/rear' : ''}{!samePsi ? ', by wheel package' : ''}</small><sup class="ref"><a href={`#ref-${tireRef}`}>[{tireRef}]</a></sup></div>
         <div class="qa__more">{tires.slice(0, 3).map(t => <div>{t.config ?? `${t.wheel}-in`} ({t.tireSize}): <b>{t.frontPsi === t.rearPsi ? t.frontPsi : `${t.frontPsi}/${t.rearPsi}`} psi</b></div>)}{tires.length > 3 && <a href="#tires">See all {tires.length} →</a>}</div>
         {!samePsi && <div class="qa__more qa__more--split"><b>Not one number.</b> This manual prints a pressure per wheel/tyre package and never maps a package to a trim, so the figure above is a range, not necessarily your answer. Pick your tyre size in the selector above to narrow it — and read the label on your driver's door jamb, which is the only place your exact build is named.</div>}</>}
     {!psiAllMissing && tires.length > 0 && <div class="qa__src">{[...new Set(tires.map(t => pgShow(t.page)).filter(Boolean))].length ? <>Manual <Fragment set:html={P(pgList(tires.map(t => pgShow(t.page))))} /> · </> : ''}Check the tire placard on your driver's door jamb for your exact trim.</div>}
   </div>}
-  {!ev && !cfgUsable && <div class="qa__item"><div class="qa__q">Engine oil</div>
+  {!ev && !cfgOil && <div class="qa__item"><div class="qa__q">Engine oil</div>
     {oilScope && <div class="qa__src qa__applies">{oilScope}</div>}
     {oilLines.length ? <>
       <div class="oil">{oilCard.map(r => <div class="oil__row">
@@ -189,8 +210,8 @@ const sourceDate = readDates.length ? (readDates.length === 1 ? readDates[0] : `
   </div>}
   {cfgUsable && <div class="qa__item"><div class="qa__q">What the manual leaves open</div>
     <div class="qa__a qa__a--text">Which build gets which figure</div>
-    <div class="qa__more">{tires.length > 1 ? <>It prints {tires.length} pressure rows across {[...new Set(tires.map(t => t.wheel).filter(Boolean))].length || tires.length} wheel sizes but never says which trim gets which, so {pMin === pMax ? `${pMin} psi` : `${pMin}–${pMax} psi`} is the whole range for this year, not your figure.</> : <>It prints one pressure row, so the figure is the same for every build on this page.</>} The tyre-size column on the driver's door jamb is the only place your exact build is named.</div>
-    <div class="qa__src">{oilEngines.length ? `Oil is printed per engine: ${oilEngines.map(o => o.raw).join('; ')}.` : ''}</div>
+    <div class="qa__more">{openLine}{!hasPsiFigures && placard ? <>{' '}{v.make} prints no psi table for this model year at all — the cold pressure is on the Tire and Loading Information label on the driver's door jamb.</> : null} The tyre size on the sidewall and the label on the driver's door jamb are the only places your exact build is named.</div>
+    <div class="qa__src">Pick {[cfgOil ? (oilByDrive ? 'the engine and drive' : 'the engine') : null, cfgPsi ? 'the tyre size' : null].filter(Boolean).join(' and ')} in the selector above to narrow it. Nothing here is averaged or carried over from another year.</div>
   </div>}
   <div class="qa__item"><div class="qa__q">Recalls</div>
     <div class="qa__a">{v.recalls.length}<small>NHTSA campaigns</small><sup class="ref"><a href={`#ref-${nhtsaRef}`}>[{nhtsaRef}]</a></sup></div>
@@ -198,9 +219,9 @@ const sourceDate = readDates.length ? (readDates.length === 1 ? readDates[0] : `
     <div class="qa__src">Fetched {v.recallsFetched}</div>
   </div>
   {cfgUsable && <div class="qa__item"><div class="qa__q">Where the figures come from</div>
-    <div class="qa__a qa__a--text">Your owner's manual</div>
-    <div class="qa__more">{oilLines.length ? <>Oil: manual {s.oilCapacity.page}<br /></> : null}{tires.length ? <>Tires: manual {pgList(tires.map(t => pgShow(t.page)))}<br /></> : null}<a href="#sources">Full source list</a></div>
-    <div class="qa__src">One printed page per configuration — no value on this page is calculated, averaged or carried over from another year.</div>
+    <div class="qa__a qa__a--text">Cited page by page</div>
+    <div class="qa__more">{oilLines.length ? <>Oil: {oilDocName ?? "owner's manual"}{' '}{s.oilCapacity.page}<br /></> : null}{tires.length ? <>Tires: {tireDocName ?? "owner's manual"}{' '}{pgList(tires.map(t => pgShow(t.page)))}<br /></> : null}<a href="#sources">Full source list</a></div>
+    <div class="qa__src">One printed row per configuration — no value on this page is calculated, averaged or carried over from another year.</div>
   </div>}
   </div>
   <div class="qa__foot"><span>Review record: <a href="#review">3 dates</a> — source read, human review, last change</span><a href="#report">Report a data error</a></div>

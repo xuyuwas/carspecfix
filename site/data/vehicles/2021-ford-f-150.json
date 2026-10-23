@@ -1,390 +1,390 @@
 {
- "slug": "2021-ford-f-150",
- "year": 2021,
- "make": "Ford",
- "model": "F-150",
- "makeSlug": "ford",
- "modelSlug": "f-150",
- "powertrain": "ice",
- "vpicConfirmed": true,
- "manual": {
-  "sourceId": "manual-2021-ford-f-150",
-  "yearConfirmed": true,
-  "note": "Ford official online owner manual 2021 F-150 > Capacities and Specifications > Engine Oil Capacity and Specification (per engine). Page is JS-rendered; values not yet read directly. Also Ford tech spec PDF media.ford.com (403 from box) | OIL A-grade: waiting on Marlowe Sheets download: https://www.ford.com/support/owner-manuals-details/f150/2021/ (Owner's Manual PDF; fordservicecontent.com returns 403 from box)"
- },
- "specs": {
-  "oilCapacity": {
-   "value": "2.7L EcoBoost: 6.0 qt (5.7 L) with filter; 3.5L EcoBoost: 6.0 qt (5.7 L) with filter; 5.0L V8: 7.75 qt (7.3 L) with filter",
-   "source": "manual-2021-ford-f-150",
-   "page": null,
-   "sourceGrade": "C",
-   "verified": false,
-   "note": "[search summary of Ford sources, page text not yet read]; some variants not yet sourced"
+  "slug": "2021-ford-f-150",
+  "year": 2021,
+  "make": "Ford",
+  "model": "F-150",
+  "makeSlug": "ford",
+  "modelSlug": "f-150",
+  "powertrain": "ice",
+  "vpicConfirmed": true,
+  "manual": {
+    "sourceId": "manual-2021-ford-f-150",
+    "yearConfirmed": true,
+    "note": "Ford official online owner manual 2021 F-150 > Capacities and Specifications > Engine Oil Capacity and Specification (per engine). Page is JS-rendered; values not yet read directly. Also Ford tech spec PDF media.ford.com (403 from box) | OIL A-grade: waiting on Marlowe Sheets download: https://www.ford.com/support/owner-manuals-details/f150/2021/ (Owner's Manual PDF; fordservicecontent.com returns 403 from box)"
   },
-  "oilViscosity": {
-   "value": "5W-30 (2.7/3.5 EB, 5.0)",
-   "source": "manual-2021-ford-f-150",
-   "page": null,
-   "sourceGrade": "C",
-   "verified": false,
-   "note": "[verify]"
+  "specs": {
+    "oilCapacity": {
+      "value": "2.7L EcoBoost: 6.0 qt (5.7 L) with filter; 3.5L EcoBoost: 6.0 qt (5.7 L) with filter; 5.0L V8: 7.75 qt (7.3 L) with filter",
+      "source": "manual-2021-ford-f-150",
+      "page": null,
+      "sourceGrade": "C",
+      "verified": false,
+      "note": "[search summary of Ford sources, page text not yet read]; some variants not yet sourced"
+    },
+    "oilViscosity": {
+      "value": "5W-30 (2.7/3.5 EB, 5.0)",
+      "source": "manual-2021-ford-f-150",
+      "page": null,
+      "sourceGrade": "C",
+      "verified": false,
+      "note": "[verify]"
+    },
+    "wiperSizes": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "no citable source yet"
+    },
+    "batteryGroup": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "no citable source yet"
+    },
+    "towingCapacity": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false
+    },
+    "tpmsReset": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": null
+    }
   },
-  "wiperSizes": {
-   "value": null,
-   "source": null,
-   "sourceGrade": null,
-   "verified": false,
-   "note": "no citable source yet"
+  "tires": {
+    "rows": [],
+    "note": "owner manual / door placard; owner manual"
   },
-  "batteryGroup": {
-   "value": null,
-   "source": null,
-   "sourceGrade": null,
-   "verified": false,
-   "note": "no citable source yet"
+  "extraManuals": [],
+  "fuelEconomy": [
+    {
+      "feId": "43457",
+      "model": "F150 Pickup 2WD",
+      "option": "Auto (S10), 6 cyl, 3.5 L, Turbo, SIDI & PFI",
+      "engineL": 3.5,
+      "cyl": 6,
+      "trans": "Automatic (S10)",
+      "drive": "Rear-Wheel Drive",
+      "mpgCity": 18,
+      "mpgHwy": 24,
+      "mpgComb": 20,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/43457",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "43458",
+      "model": "F150 Pickup 2WD",
+      "option": "Auto (S10), 6 cyl, 2.7 L, Turbo, SIDI & PFI",
+      "engineL": 2.7,
+      "cyl": 6,
+      "trans": "Automatic (S10)",
+      "drive": "Rear-Wheel Drive",
+      "mpgCity": 20,
+      "mpgHwy": 26,
+      "mpgComb": 22,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/43458",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "43459",
+      "model": "F150 Pickup 2WD FFV",
+      "option": "Auto (S10), 6 cyl, 3.3 L, SIDI & PFI; FFV",
+      "engineL": 3.3,
+      "cyl": 6,
+      "trans": "Automatic (S10)",
+      "drive": "Rear-Wheel Drive",
+      "mpgCity": 20,
+      "mpgHwy": 24,
+      "mpgComb": 21,
+      "fuel": "Gasoline or E85",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/43459",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "43460",
+      "model": "F150 Pickup 2WD FFV",
+      "option": "Auto (S10), 8 cyl, 5.0 L, SIDI & PFI; FFV",
+      "engineL": 5,
+      "cyl": 8,
+      "trans": "Automatic (S10)",
+      "drive": "Rear-Wheel Drive",
+      "mpgCity": 17,
+      "mpgHwy": 24,
+      "mpgComb": 20,
+      "fuel": "Gasoline or E85",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/43460",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "43614",
+      "model": "F150 Pickup 2WD HEV",
+      "option": "Auto (S10), 6 cyl, 3.5 L, Turbo",
+      "engineL": 3.5,
+      "cyl": 6,
+      "trans": "Automatic (S10)",
+      "drive": "Rear-Wheel Drive",
+      "mpgCity": 25,
+      "mpgHwy": 26,
+      "mpgComb": 25,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/43614",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    }
+  ],
+  "fuelEconomyFetched": "2026-10-15",
+  "recalls": [
+    {
+      "campaign": "21V986000",
+      "component": "POWER TRAIN:DRIVELINE:DRIVESHAFT",
+      "date": "2021-12-16",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2021-2022 F-150 vehicles.  Underbody heat and noise insulators may loosen and contact the aluminum driveshaft, which could damage the driveshaft and cause it to fracture.",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "21V090000",
+      "component": "VISIBILITY:WINDSHIELD:CRITICAL FASTENERS",
+      "date": "2021-02-18",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2021 F-150 and 2020-2021 F-250, F-350, F-450, and F-550 Super Duty vehicles.  During manufacturing, the windshield may not have been properly bonded to the vehicle, allowing it to detach in a crash.  As such, these vehicles fail to comply with the requi",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "21V805000",
+      "component": "AIR BAGS:SENSOR:SIDE IMPACT",
+      "date": "2021-10-15",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2022 Super Duty F-250, F-350, 2021 F-150, Expedition, and Lincoln Navigator vehicles.  The front-door side impact pressure sensor modules may have been damaged during supplier assembly, which can cause the side impact air bags to not deploy properly in ",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "21V533000",
+      "component": "SERVICE BRAKES, HYDRAULIC",
+      "date": "2021-07-15",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2021 F-150 vehicles.  The electronic brake booster may leak brake fluid into the electronic control unit, which could result in reduced braking performance.",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "21V653000",
+      "component": "SEAT BELTS:FRONT:WEBBING",
+      "date": "2021-08-23",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2021 F-150 Super Cab vehicles.  The front seatbelt webbing may be incorrectly routed.",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "21V381000",
+      "component": "POWER TRAIN:DRIVELINE:DRIVESHAFT",
+      "date": "2021-05-24",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2021 F-150 vehicles.  The two-piece driveshafts may have been improperly assembled, which could result in driveshaft separation.",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "21V407000",
+      "component": "STEERING:GEAR BOX (OTHER THAN RACK AND PINION)",
+      "date": "2021-05-29",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2021 F-150 vehicles.  The steering gear may have internal damage, which could result in difficulty steering, or the inability to rotate the steering wheel while driving.",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "22V142000",
+      "component": "VISIBILITY:WINDSHIELD WIPER/WASHER:MOTOR",
+      "date": "2022-03-11",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2021 F-150 vehicles.  The front windshield wiper motor may become inoperative, causing the wipers to fail.",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "22V193000",
+      "component": "ELECTRICAL SYSTEM: INTEGRATED TRAILER BRAKE CONTROL",
+      "date": "2022-03-25",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2021-2022 F-150, 2022 Maverick, Expedition, Lincoln Navigator, F-250, F-350, F-450, and F-550 vehicles.  Due to a software error, a towed trailer equipped with an electric or electric-over hydraulic brake system may not brake.",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "22V188000",
+      "component": "POWER TRAIN:AUTOMATIC TRANSMISSION:CONTROL MODULE (TCM/PCM/TECM)",
+      "date": "2022-03-25",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2021 F-150 vehicles.  The Diagnostic Trouble Code (DTC) for low transmission fluid pressure may falsely activate and cause the transmission to unexpectedly shift into neutral.",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "22V250000",
+      "component": "VISIBILITY:WINDSHIELD WIPER/WASHER:LINKAGES",
+      "date": "2022-04-14",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2020-2021 F-150, Expedition, 2020-2022 Super Duty F-250, F-350, F-450, F-550, and 2020-2021 Lincoln Navigator vehicles.  The windshield wiper arms may break, causing the windshield wipers to fail.",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "22V414000",
+      "component": "FUEL SYSTEM, GASOLINE:STORAGE",
+      "date": "2022-06-10",
+      "summary": "Ford Motor Company (Ford) is recalling one 2021 F-150 vehicle.  A single vehicle may have been assembled without a fuel tank front attachment resulting in an unsecured fuel tank attachment strap.",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "22V623000",
+      "component": "POWER TRAIN:DRIVELINE:DRIVESHAFT",
+      "date": "2022-08-12",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2021-2022 F-150 vehicles.  Underbody heat and noise insulators may loosen and contact the aluminum driveshaft, which could damage the driveshaft and cause it to fracture.",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "22V842000",
+      "component": "VISIBILITY:WINDSHIELD WIPER/WASHER:MOTOR",
+      "date": "2022-11-15",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2021-2022 F-150 vehicles.  The front windshield wiper motor may become inoperative, causing the wipers to fail.",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "23V163000",
+      "component": "VISIBILITY:WINDSHIELD WIPER/WASHER:LINKAGES",
+      "date": "2023-03-10",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2021 F-150 vehicles.  The windshield wiper arms may break, causing the windshield wipers to fail.",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "23V509000",
+      "component": "PARKING BRAKE:ELECTRICAL",
+      "date": "2023-07-21",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2021-2023 F-150 vehicles equipped with a single exhaust system.  Contact with the rear axle housing may damage the wiring harness, causing the electric parking brake to activate unexpectedly.",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "23V896000",
+      "component": "POWER TRAIN:AXLE HUBS",
+      "date": "2023-12-22",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2021-2023 F-150 vehicles equipped with the Trailer Tow Max Duty package and a 9.75-inch heavy duty axle with a 3/4 float axle design.  The rear axle hub bolt may fatigue and break, which can result in damage to the axle hub splines.",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "24V443000",
+      "component": "ELECTRICAL SYSTEM:BODY CONTROL MODULE:SOFTWARE",
+      "date": "2024-06-14",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2021 F-150 vehicles equipped with the Onboard Scales feature.  An over-the-air software update to the body control module (BCM) may have disabled both reverse lights.",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "24V635000",
+      "component": "ENGINE AND ENGINE COOLING:ENGINE:HARD PARTS INTERNAL/MECHANICAL",
+      "date": "2024-08-23",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2021-2022 Bronco, F-150, Edge, Explorer, Lincoln Nautilus, and Lincoln Aviator vehicles equipped with either a 2.7L or 3.0L Nano EcoBoost engine.  The engine intake valves may break while driving, which can result in engine failure and a loss of drive p",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "24V852000",
+      "component": "EQUIPMENT:OTHER:LABELS",
+      "date": "2024-11-08",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2020-2025 Explorer, Lincoln Aviator, 2020-2024 Escape, Lincoln Corsair, 2018-2024 F-150, Expedition and Lincoln Navigator vehicles.  The air bag warning label may be missing from the dashboard.  As such, these vehicles fail to comply with the requiremen",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "25V132000",
+      "component": "ELECTRICAL SYSTEM: INTEGRATED TRAILER BRAKE CONTROL",
+      "date": "2025-02-28",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2021-2022 F-150, 2022 Maverick, Expedition, Lincoln Navigator, F-250, F-350, F-450, and F-550 vehicles previously repaired incorrectly under recall number 22V-193.  Due to a software error, a towed trailer equipped with an electric or electric-over hydr",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "25V169000",
+      "component": "POWER TRAIN:AUTOMATIC TRANSMISSION:CONTROL MODULE (TCM/PCM/TECM)",
+      "date": "2025-03-14",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2021 F-150 vehicles previously repaired incorrectly under recall number 22V-188.  The Diagnostic Trouble Code (DTC) for low transmission fluid pressure may falsely activate and cause the transmission to unexpectedly shift into neutral.",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "25V315000",
+      "component": "BACK OVER PREVENTION:SOFTWARE",
+      "date": "2025-05-09",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2021-2024 Bronco, F-150, 2021-2024 Edge, 2022-2025 Escape, F-250, F-350, F-450, F-550, F-600, 2022-2024 Expedition, 2022-2025 Transit, 2021-2023 Mach-E, 2024 Ranger, Mustang, 2021-2023 Lincoln Nautilus, 2022-2024 Navigator, and 2023-2024 Corsair vehicle",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "25V348000",
+      "component": "EXTERIOR LIGHTING:BACK UP LIGHTS",
+      "date": "2025-05-23",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2021 F-150 vehicles equipped with the Onboard Scales feature that were repaired incorrectly under recall 24V443. An over-the-air software update to the body control module (BCM) may have disabled both reverse lights.",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "25V455000",
+      "component": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+      "date": "2025-07-07",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2021-2023 Bronco, Explorer, Lincoln Aviator, F-250 SD, F-350 SD, F-450 SD,  F-550 SD, 2021-2022 Lincoln Navigator, Mustang, F-150, and 2022 Expedition vehicles. The low-pressure fuel pump may fail, which can result in an engine stall while driving.",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "25V729000",
+      "component": "VISIBILITY:SUN/MOON ROOF ASSEMBLY",
+      "date": "2025-10-24",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2021-2022 Expedition, Lincoln Navigator, 2021-2023 F-150, 2022 F-250 SD, F-350 SD, and F-450 SD vehicles. The moonroof wind deflector clips may be inadequately attached to the moonroof frame, which can result in the wind deflector detaching from the veh",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "26V104000",
+      "component": "ELECTRICAL SYSTEM: INTEGRATED TRAILER BRAKE CONTROL",
+      "date": "2026-02-20",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2021-2026 F-150, 2022-2026 F-250 SD, F-350 SD, F-450 SD, F-550 SD, Maverick, 2024-2026 Ranger, 2023-2026 F-600 SD, 2022-2027 Lincoln Navigator, Expedition, and 2026 E-Transit vehicles. When towing a trailer, the integrated trailer module (ITRM) may lose",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "26V402000",
+      "component": "POWER TRAIN:AUTOMATIC TRANSMISSION",
+      "date": "2026-06-24",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2018-2021 Navigator, Expedition, 2020-2021 Explorer, Lincoln Aviator, and 2021 F-150 vehicles. The transmission park pawl may engage while the vehicle is in motion, resulting in park system damage.",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "26V489000",
+      "component": "BACK OVER PREVENTION:DISPLAY FUNCTION",
+      "date": "2026-07-28",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2021-2023 F-150 and 2023-2026 F-250 SD vehicles equipped with 8-inch SYNC infotainment screens. A software error may cause the rearview camera image to be obstructed by the infotainment home screen menu when the vehicle is placed in reverse. As such, th",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    }
+  ],
+  "recallsFetched": "2026-10-15",
+  "recallsUrl": "https://www.nhtsa.gov/recalls?nhtsaId=&make=Ford&model=F-150&year=2021",
+  "related": {
+    "issues": []
   },
-  "towingCapacity": {
-   "value": null,
-   "source": null,
-   "sourceGrade": null,
-   "verified": false
-  },
-  "tpmsReset": {
-   "value": null,
-   "source": null,
-   "sourceGrade": null,
-   "verified": false,
-   "note": null
-  }
- },
- "tires": {
-  "rows": [],
-  "note": "owner manual / door placard; owner manual"
- },
- "extraManuals": [],
- "fuelEconomy": [
-  {
-   "feId": "43457",
-   "model": "F150 Pickup 2WD",
-   "option": "Auto (S10), 6 cyl, 3.5 L, Turbo, SIDI & PFI",
-   "engineL": 3.5,
-   "cyl": 6,
-   "trans": "Automatic (S10)",
-   "drive": "Rear-Wheel Drive",
-   "mpgCity": 18,
-   "mpgHwy": 24,
-   "mpgComb": 20,
-   "fuel": "Regular",
-   "url": "https://www.fueleconomy.gov/ws/rest/vehicle/43457",
-   "source": "fueleconomy",
-   "sourceGrade": "A"
-  },
-  {
-   "feId": "43458",
-   "model": "F150 Pickup 2WD",
-   "option": "Auto (S10), 6 cyl, 2.7 L, Turbo, SIDI & PFI",
-   "engineL": 2.7,
-   "cyl": 6,
-   "trans": "Automatic (S10)",
-   "drive": "Rear-Wheel Drive",
-   "mpgCity": 20,
-   "mpgHwy": 26,
-   "mpgComb": 22,
-   "fuel": "Regular",
-   "url": "https://www.fueleconomy.gov/ws/rest/vehicle/43458",
-   "source": "fueleconomy",
-   "sourceGrade": "A"
-  },
-  {
-   "feId": "43459",
-   "model": "F150 Pickup 2WD FFV",
-   "option": "Auto (S10), 6 cyl, 3.3 L, SIDI & PFI; FFV",
-   "engineL": 3.3,
-   "cyl": 6,
-   "trans": "Automatic (S10)",
-   "drive": "Rear-Wheel Drive",
-   "mpgCity": 20,
-   "mpgHwy": 24,
-   "mpgComb": 21,
-   "fuel": "Gasoline or E85",
-   "url": "https://www.fueleconomy.gov/ws/rest/vehicle/43459",
-   "source": "fueleconomy",
-   "sourceGrade": "A"
-  },
-  {
-   "feId": "43460",
-   "model": "F150 Pickup 2WD FFV",
-   "option": "Auto (S10), 8 cyl, 5.0 L, SIDI & PFI; FFV",
-   "engineL": 5,
-   "cyl": 8,
-   "trans": "Automatic (S10)",
-   "drive": "Rear-Wheel Drive",
-   "mpgCity": 17,
-   "mpgHwy": 24,
-   "mpgComb": 20,
-   "fuel": "Gasoline or E85",
-   "url": "https://www.fueleconomy.gov/ws/rest/vehicle/43460",
-   "source": "fueleconomy",
-   "sourceGrade": "A"
-  },
-  {
-   "feId": "43614",
-   "model": "F150 Pickup 2WD HEV",
-   "option": "Auto (S10), 6 cyl, 3.5 L, Turbo",
-   "engineL": 3.5,
-   "cyl": 6,
-   "trans": "Automatic (S10)",
-   "drive": "Rear-Wheel Drive",
-   "mpgCity": 25,
-   "mpgHwy": 26,
-   "mpgComb": 25,
-   "fuel": "Regular",
-   "url": "https://www.fueleconomy.gov/ws/rest/vehicle/43614",
-   "source": "fueleconomy",
-   "sourceGrade": "A"
-  }
- ],
- "fuelEconomyFetched": "2026-10-15",
- "recalls": [
-  {
-   "campaign": "21V986000",
-   "component": "POWER TRAIN:DRIVELINE:DRIVESHAFT",
-   "date": "2021-12-16",
-   "summary": "Ford Motor Company (Ford) is recalling certain 2021-2022 F-150 vehicles.  Underbody heat and noise insulators may loosen and contact the aluminum driveshaft, which could damage the driveshaft and cause it to fracture.",
-   "source": "nhtsa-recalls",
-   "sourceGrade": "A"
-  },
-  {
-   "campaign": "21V090000",
-   "component": "VISIBILITY:WINDSHIELD:CRITICAL FASTENERS",
-   "date": "2021-02-18",
-   "summary": "Ford Motor Company (Ford) is recalling certain 2021 F-150 and 2020-2021 F-250, F-350, F-450, and F-550 Super Duty vehicles.  During manufacturing, the windshield may not have been properly bonded to the vehicle, allowing it to detach in a crash.  As such, these vehicles fail to comply with the requi",
-   "source": "nhtsa-recalls",
-   "sourceGrade": "A"
-  },
-  {
-   "campaign": "21V805000",
-   "component": "AIR BAGS:SENSOR:SIDE IMPACT",
-   "date": "2021-10-15",
-   "summary": "Ford Motor Company (Ford) is recalling certain 2022 Super Duty F-250, F-350, 2021 F-150, Expedition, and Lincoln Navigator vehicles.  The front-door side impact pressure sensor modules may have been damaged during supplier assembly, which can cause the side impact air bags to not deploy properly in ",
-   "source": "nhtsa-recalls",
-   "sourceGrade": "A"
-  },
-  {
-   "campaign": "21V533000",
-   "component": "SERVICE BRAKES, HYDRAULIC",
-   "date": "2021-07-15",
-   "summary": "Ford Motor Company (Ford) is recalling certain 2021 F-150 vehicles.  The electronic brake booster may leak brake fluid into the electronic control unit, which could result in reduced braking performance.",
-   "source": "nhtsa-recalls",
-   "sourceGrade": "A"
-  },
-  {
-   "campaign": "21V653000",
-   "component": "SEAT BELTS:FRONT:WEBBING",
-   "date": "2021-08-23",
-   "summary": "Ford Motor Company (Ford) is recalling certain 2021 F-150 Super Cab vehicles.  The front seatbelt webbing may be incorrectly routed.",
-   "source": "nhtsa-recalls",
-   "sourceGrade": "A"
-  },
-  {
-   "campaign": "21V381000",
-   "component": "POWER TRAIN:DRIVELINE:DRIVESHAFT",
-   "date": "2021-05-24",
-   "summary": "Ford Motor Company (Ford) is recalling certain 2021 F-150 vehicles.  The two-piece driveshafts may have been improperly assembled, which could result in driveshaft separation.",
-   "source": "nhtsa-recalls",
-   "sourceGrade": "A"
-  },
-  {
-   "campaign": "21V407000",
-   "component": "STEERING:GEAR BOX (OTHER THAN RACK AND PINION)",
-   "date": "2021-05-29",
-   "summary": "Ford Motor Company (Ford) is recalling certain 2021 F-150 vehicles.  The steering gear may have internal damage, which could result in difficulty steering, or the inability to rotate the steering wheel while driving.",
-   "source": "nhtsa-recalls",
-   "sourceGrade": "A"
-  },
-  {
-   "campaign": "22V142000",
-   "component": "VISIBILITY:WINDSHIELD WIPER/WASHER:MOTOR",
-   "date": "2022-03-11",
-   "summary": "Ford Motor Company (Ford) is recalling certain 2021 F-150 vehicles.  The front windshield wiper motor may become inoperative, causing the wipers to fail.",
-   "source": "nhtsa-recalls",
-   "sourceGrade": "A"
-  },
-  {
-   "campaign": "22V193000",
-   "component": "ELECTRICAL SYSTEM: INTEGRATED TRAILER BRAKE CONTROL",
-   "date": "2022-03-25",
-   "summary": "Ford Motor Company (Ford) is recalling certain 2021-2022 F-150, 2022 Maverick, Expedition, Lincoln Navigator, F-250, F-350, F-450, and F-550 vehicles.  Due to a software error, a towed trailer equipped with an electric or electric-over hydraulic brake system may not brake.",
-   "source": "nhtsa-recalls",
-   "sourceGrade": "A"
-  },
-  {
-   "campaign": "22V188000",
-   "component": "POWER TRAIN:AUTOMATIC TRANSMISSION:CONTROL MODULE (TCM/PCM/TECM)",
-   "date": "2022-03-25",
-   "summary": "Ford Motor Company (Ford) is recalling certain 2021 F-150 vehicles.  The Diagnostic Trouble Code (DTC) for low transmission fluid pressure may falsely activate and cause the transmission to unexpectedly shift into neutral.",
-   "source": "nhtsa-recalls",
-   "sourceGrade": "A"
-  },
-  {
-   "campaign": "22V250000",
-   "component": "VISIBILITY:WINDSHIELD WIPER/WASHER:LINKAGES",
-   "date": "2022-04-14",
-   "summary": "Ford Motor Company (Ford) is recalling certain 2020-2021 F-150, Expedition, 2020-2022 Super Duty F-250, F-350, F-450, F-550, and 2020-2021 Lincoln Navigator vehicles.  The windshield wiper arms may break, causing the windshield wipers to fail.",
-   "source": "nhtsa-recalls",
-   "sourceGrade": "A"
-  },
-  {
-   "campaign": "22V414000",
-   "component": "FUEL SYSTEM, GASOLINE:STORAGE",
-   "date": "2022-06-10",
-   "summary": "Ford Motor Company (Ford) is recalling one 2021 F-150 vehicle.  A single vehicle may have been assembled without a fuel tank front attachment resulting in an unsecured fuel tank attachment strap.",
-   "source": "nhtsa-recalls",
-   "sourceGrade": "A"
-  },
-  {
-   "campaign": "22V623000",
-   "component": "POWER TRAIN:DRIVELINE:DRIVESHAFT",
-   "date": "2022-08-12",
-   "summary": "Ford Motor Company (Ford) is recalling certain 2021-2022 F-150 vehicles.  Underbody heat and noise insulators may loosen and contact the aluminum driveshaft, which could damage the driveshaft and cause it to fracture.",
-   "source": "nhtsa-recalls",
-   "sourceGrade": "A"
-  },
-  {
-   "campaign": "22V842000",
-   "component": "VISIBILITY:WINDSHIELD WIPER/WASHER:MOTOR",
-   "date": "2022-11-15",
-   "summary": "Ford Motor Company (Ford) is recalling certain 2021-2022 F-150 vehicles.  The front windshield wiper motor may become inoperative, causing the wipers to fail.",
-   "source": "nhtsa-recalls",
-   "sourceGrade": "A"
-  },
-  {
-   "campaign": "23V163000",
-   "component": "VISIBILITY:WINDSHIELD WIPER/WASHER:LINKAGES",
-   "date": "2023-03-10",
-   "summary": "Ford Motor Company (Ford) is recalling certain 2021 F-150 vehicles.  The windshield wiper arms may break, causing the windshield wipers to fail.",
-   "source": "nhtsa-recalls",
-   "sourceGrade": "A"
-  },
-  {
-   "campaign": "23V509000",
-   "component": "PARKING BRAKE:ELECTRICAL",
-   "date": "2023-07-21",
-   "summary": "Ford Motor Company (Ford) is recalling certain 2021-2023 F-150 vehicles equipped with a single exhaust system.  Contact with the rear axle housing may damage the wiring harness, causing the electric parking brake to activate unexpectedly.",
-   "source": "nhtsa-recalls",
-   "sourceGrade": "A"
-  },
-  {
-   "campaign": "23V896000",
-   "component": "POWER TRAIN:AXLE HUBS",
-   "date": "2023-12-22",
-   "summary": "Ford Motor Company (Ford) is recalling certain 2021-2023 F-150 vehicles equipped with the Trailer Tow Max Duty package and a 9.75-inch heavy duty axle with a 3/4 float axle design.  The rear axle hub bolt may fatigue and break, which can result in damage to the axle hub splines.",
-   "source": "nhtsa-recalls",
-   "sourceGrade": "A"
-  },
-  {
-   "campaign": "24V443000",
-   "component": "ELECTRICAL SYSTEM:BODY CONTROL MODULE:SOFTWARE",
-   "date": "2024-06-14",
-   "summary": "Ford Motor Company (Ford) is recalling certain 2021 F-150 vehicles equipped with the Onboard Scales feature.  An over-the-air software update to the body control module (BCM) may have disabled both reverse lights.",
-   "source": "nhtsa-recalls",
-   "sourceGrade": "A"
-  },
-  {
-   "campaign": "24V635000",
-   "component": "ENGINE AND ENGINE COOLING:ENGINE:HARD PARTS INTERNAL/MECHANICAL",
-   "date": "2024-08-23",
-   "summary": "Ford Motor Company (Ford) is recalling certain 2021-2022 Bronco, F-150, Edge, Explorer, Lincoln Nautilus, and Lincoln Aviator vehicles equipped with either a 2.7L or 3.0L Nano EcoBoost engine.  The engine intake valves may break while driving, which can result in engine failure and a loss of drive p",
-   "source": "nhtsa-recalls",
-   "sourceGrade": "A"
-  },
-  {
-   "campaign": "24V852000",
-   "component": "EQUIPMENT:OTHER:LABELS",
-   "date": "2024-11-08",
-   "summary": "Ford Motor Company (Ford) is recalling certain 2020-2025 Explorer, Lincoln Aviator, 2020-2024 Escape, Lincoln Corsair, 2018-2024 F-150, Expedition and Lincoln Navigator vehicles.  The air bag warning label may be missing from the dashboard.  As such, these vehicles fail to comply with the requiremen",
-   "source": "nhtsa-recalls",
-   "sourceGrade": "A"
-  },
-  {
-   "campaign": "25V132000",
-   "component": "ELECTRICAL SYSTEM: INTEGRATED TRAILER BRAKE CONTROL",
-   "date": "2025-02-28",
-   "summary": "Ford Motor Company (Ford) is recalling certain 2021-2022 F-150, 2022 Maverick, Expedition, Lincoln Navigator, F-250, F-350, F-450, and F-550 vehicles previously repaired incorrectly under recall number 22V-193.  Due to a software error, a towed trailer equipped with an electric or electric-over hydr",
-   "source": "nhtsa-recalls",
-   "sourceGrade": "A"
-  },
-  {
-   "campaign": "25V169000",
-   "component": "POWER TRAIN:AUTOMATIC TRANSMISSION:CONTROL MODULE (TCM/PCM/TECM)",
-   "date": "2025-03-14",
-   "summary": "Ford Motor Company (Ford) is recalling certain 2021 F-150 vehicles previously repaired incorrectly under recall number 22V-188.  The Diagnostic Trouble Code (DTC) for low transmission fluid pressure may falsely activate and cause the transmission to unexpectedly shift into neutral.",
-   "source": "nhtsa-recalls",
-   "sourceGrade": "A"
-  },
-  {
-   "campaign": "25V315000",
-   "component": "BACK OVER PREVENTION:SOFTWARE",
-   "date": "2025-05-09",
-   "summary": "Ford Motor Company (Ford) is recalling certain 2021-2024 Bronco, F-150, 2021-2024 Edge, 2022-2025 Escape, F-250, F-350, F-450, F-550, F-600, 2022-2024 Expedition, 2022-2025 Transit, 2021-2023 Mach-E, 2024 Ranger, Mustang, 2021-2023 Lincoln Nautilus, 2022-2024 Navigator, and 2023-2024 Corsair vehicle",
-   "source": "nhtsa-recalls",
-   "sourceGrade": "A"
-  },
-  {
-   "campaign": "25V348000",
-   "component": "EXTERIOR LIGHTING:BACK UP LIGHTS",
-   "date": "2025-05-23",
-   "summary": "Ford Motor Company (Ford) is recalling certain 2021 F-150 vehicles equipped with the Onboard Scales feature that were repaired incorrectly under recall 24V443. An over-the-air software update to the body control module (BCM) may have disabled both reverse lights.",
-   "source": "nhtsa-recalls",
-   "sourceGrade": "A"
-  },
-  {
-   "campaign": "25V455000",
-   "component": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
-   "date": "2025-07-07",
-   "summary": "Ford Motor Company (Ford) is recalling certain 2021-2023 Bronco, Explorer, Lincoln Aviator, F-250 SD, F-350 SD, F-450 SD,  F-550 SD, 2021-2022 Lincoln Navigator, Mustang, F-150, and 2022 Expedition vehicles. The low-pressure fuel pump may fail, which can result in an engine stall while driving.",
-   "source": "nhtsa-recalls",
-   "sourceGrade": "A"
-  },
-  {
-   "campaign": "25V729000",
-   "component": "VISIBILITY:SUN/MOON ROOF ASSEMBLY",
-   "date": "2025-10-24",
-   "summary": "Ford Motor Company (Ford) is recalling certain 2021-2022 Expedition, Lincoln Navigator, 2021-2023 F-150, 2022 F-250 SD, F-350 SD, and F-450 SD vehicles. The moonroof wind deflector clips may be inadequately attached to the moonroof frame, which can result in the wind deflector detaching from the veh",
-   "source": "nhtsa-recalls",
-   "sourceGrade": "A"
-  },
-  {
-   "campaign": "26V104000",
-   "component": "ELECTRICAL SYSTEM: INTEGRATED TRAILER BRAKE CONTROL",
-   "date": "2026-02-20",
-   "summary": "Ford Motor Company (Ford) is recalling certain 2021-2026 F-150, 2022-2026 F-250 SD, F-350 SD, F-450 SD, F-550 SD, Maverick, 2024-2026 Ranger, 2023-2026 F-600 SD, 2022-2027 Lincoln Navigator, Expedition, and 2026 E-Transit vehicles. When towing a trailer, the integrated trailer module (ITRM) may lose",
-   "source": "nhtsa-recalls",
-   "sourceGrade": "A"
-  },
-  {
-   "campaign": "26V402000",
-   "component": "POWER TRAIN:AUTOMATIC TRANSMISSION",
-   "date": "2026-06-24",
-   "summary": "Ford Motor Company (Ford) is recalling certain 2018-2021 Navigator, Expedition, 2020-2021 Explorer, Lincoln Aviator, and 2021 F-150 vehicles. The transmission park pawl may engage while the vehicle is in motion, resulting in park system damage.",
-   "source": "nhtsa-recalls",
-   "sourceGrade": "A"
-  },
-  {
-   "campaign": "26V489000",
-   "component": "BACK OVER PREVENTION:DISPLAY FUNCTION",
-   "date": "2026-07-28",
-   "summary": "Ford Motor Company (Ford) is recalling certain 2021-2023 F-150 and 2023-2026 F-250 SD vehicles equipped with 8-inch SYNC infotainment screens. A software error may cause the rearview camera image to be obstructed by the infotainment home screen menu when the vehicle is placed in reverse. As such, th",
-   "source": "nhtsa-recalls",
-   "sourceGrade": "A"
-  }
- ],
- "recallsFetched": "2026-10-15",
- "recallsUrl": "https://www.nhtsa.gov/recalls?nhtsaId=&make=Ford&model=F-150&year=2021",
- "related": {
-  "issues": []
- },
- "publishDate": null,
- "dataUpdated": "2026-10-15",
- "signOff": null
+  "publishDate": "2026-10-15",
+  "dataUpdated": "2026-10-15",
+  "signOff": null
 }

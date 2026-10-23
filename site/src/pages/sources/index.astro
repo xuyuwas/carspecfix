@@ -2,6 +2,8 @@
 import Page from '../../layouts/Page.astro';
 import { sources, vehicles, issues, vehicleGate, issueGate } from '../../lib/gate.mjs';
 import corrections from '../../../data/corrections.json';
+import reviewers from '../../../data/reviewers.json';
+import { actionPlan } from '../../lib/verdicts.mjs';
 // only sources used by currently published (gate-passing) pages
 const liveV = vehicles.filter(v => vehicleGate(v).pass), liveI = issues.filter(i => issueGate(i).pass);
 const used = new Set(liveV.flatMap(v => [...Object.values(v.specs).filter((f: any) => f?.source && f.sourceGrade === 'A' && f.value).map((f: any) => f.source), ...(v.tires?.rows || []).filter((t: any) => t.sourceGrade === 'A').map((t: any) => t.source), ...(v.recalls.length || v.recallsFetched ? ['nhtsa-recalls'] : []), ...(v.fuelEconomy.length ? ['fueleconomy'] : [])]));
@@ -35,6 +37,14 @@ const pageOf = (slug: string) => {
   if (i) return { url: `/${i.type === 'code' ? 'codes' : 'symptoms'}/${i.slug}/`, label: i.type === 'code' ? `${i.code} code` : i.title };
   return null;
 };
+// The technician review covers the pages that tell a reader what to do, and the list is
+// derived from the data rather than typed into a page: a review cannot be claimed for a
+// page that does not carry safety wording, and it cannot be forgotten for one that does.
+const tech = (reviewers as any).technician;
+const safetyPages = liveI.filter((i: any) => i.safetyCritical || actionPlan(i).length > 0)
+  .map((i: any) => ({ ...pageOf(i.slug), slug: i.slug })).filter((x: any) => x.url);
+const reviewedSlugs = new Set(((reviewers as any).technician?.pages) || []);
+const techPages = safetyPages.filter((x: any) => reviewedSlugs.has(x.slug));
 ---
 <Page title="Data Sources & Methodology | CarSpecFix" description="Where CarSpecFix data comes from, how the three evidence tiers are labelled, when documents were retrieved and reviewed, and how corrections are handled." path="/sources/" nav="sources" crumbs={[{ name: 'Home', url: '/' }, { name: 'Data sources', url: '/sources/' }]} h1="Data sources & methodology">
 <h2 class="section__title">How we work</h2>
@@ -62,8 +72,18 @@ const pageOf = (slug: string) => {
 <li><b>Page last changed</b> — any edit to text or data, logged in the <a href="/changelog/#corrections">corrections log</a>.</li>
 </ul>
 <p>What this is: an editorial check, document by document, by someone who reads the cited page and confirms the figure. What this is not: a hands-on inspection of any vehicle, and not — yet — a review by a qualified technician. Safety wording is where that gap matters most, so it is stated plainly rather than implied away:</p>
-<div class="notice"><span class="ev ev--guidance">Open item</span>&nbsp; A qualified-technician review of the brake, ABS and "can I keep driving" wording is not in place. Until it is, those pages rest on manufacturer and government text alone, and the site does not present itself as a second opinion on a specific car. When a technician review is recorded, the reviewer's name and credentials will be published here with the date and the pages covered.</div>
-<p class="ks__src">If you are a qualified technician and want to review the safety pages, <a href="/contact/">get in touch</a> — the reviewing scope is small, specific and named on the page.</p>
+{tech ? <div class="notice notice--ok">
+    <span class="ev ev--oem">Technician reviewed</span>&nbsp; <b>{tech.name}</b> — {tech.credentials}{tech.credentialId && <> (certification {tech.credentialId})</>}. Reviewed <span class="tnum">{fmt(tech.reviewedOn)}</span>, next review due <span class="tnum">{fmt(tech.nextReviewDue)}</span>.
+    <div style="margin-top:6px">{tech.statement}</div>
+    <div style="margin-top:6px">Pages covered ({techPages.length}): {techPages.map((x: any, n: number) => <>{n > 0 && ', '}<a href={x.url}>{x.label}</a></>)}</div>
+  </div>
+ : <div class="notice"><span class="ev ev--guidance">Open item</span>&nbsp; A qualified-technician review of the brake, ABS and "can I keep driving" wording is <b>not in place</b>. Until it is, those pages rest on manufacturer and government text alone, and the site does not present itself as a second opinion on a specific car. Read them as a summary of what the documents say, and treat a workshop inspection as the authority on your own vehicle.</div>}
+<h3>What is in scope ({safetyPages.length} pages)</h3>
+<p>These are the published pages whose wording tells a reader whether to keep driving. The list is generated from the data, so it grows and shrinks with the site instead of being a claim someone has to remember to update.</p>
+<ul class="links">{safetyPages.map((x: any) => <li><a href={x.url}>{x.label}</a><span class="links__meta">{reviewedSlugs.has(x.slug) ? `technician-reviewed ${fmt((reviewers as any).technician.reviewedOn)}` : 'editor-checked only'}</span></li>)}</ul>
+<h3>What a technician review has to meet</h3>
+<ul>{(reviewers as any).criteria.map((c: string) => <li>{c}</li>)}</ul>
+<p class="ks__src">When a review is recorded, this section publishes the reviewer's name, credentials, the date, the pages actually covered and their own statement — not a badge that says "expert reviewed". If you are a qualified technician and want to review these pages, <a href="/contact/">get in touch</a>.</p>
 
 <h2 class="section__title" id="corrections">Corrections log</h2>
 <p>{entries.length ? `Every correction is listed below with the pages affected, what changed, and what did not. ${entries.length} corrections recorded so far.` : 'No corrections recorded yet. When one happens it appears here with the pages affected and what changed.'}</p>

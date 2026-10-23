@@ -1,206 +1,206 @@
 {
- "slug": "2022-chevrolet-silverado-1500",
- "year": 2022,
- "make": "Chevrolet",
- "model": "Silverado 1500",
- "makeSlug": "chevrolet",
- "modelSlug": "silverado-1500",
- "powertrain": "ice",
- "vpicConfirmed": true,
- "manual": {
-  "sourceId": "manual-2022-chevrolet-silverado-1500",
-  "yearConfirmed": true,
-  "note": "GM TechLink 2022 Engine Oil Capacities (with filter) U.S./Canada, Chevrolet table, rows Silverado 1500 (also lists Silverado 1500 LTD). Tires: owner manual PDF on chevrolet.com returned 404 — TODO"
- },
- "specs": {
-  "oilCapacity": {
-   "value": "2.7L L3B (plastic pan): 6.0 qt with filter; 2.7L L3B (aluminum pan): 5.5 qt with filter; 3.0L Duramax LM2: 7.0 qt with filter; 5.3L L82/L84: 8.0 qt with filter; 6.2L L87: 8.0 qt with filter",
-   "source": "manual-2022-chevrolet-silverado-1500",
-   "page": null,
-   "sourceGrade": "A",
-   "verified": false,
-   "note": null
+  "slug": "2022-chevrolet-silverado-1500",
+  "year": 2022,
+  "make": "Chevrolet",
+  "model": "Silverado 1500",
+  "makeSlug": "chevrolet",
+  "modelSlug": "silverado-1500",
+  "powertrain": "ice",
+  "vpicConfirmed": true,
+  "manual": {
+    "sourceId": "manual-2022-chevrolet-silverado-1500",
+    "yearConfirmed": true,
+    "note": "GM TechLink 2022 Engine Oil Capacities (with filter) U.S./Canada, Chevrolet table, rows Silverado 1500 (also lists Silverado 1500 LTD). Tires: owner manual PDF on chevrolet.com returned 404 — TODO"
   },
-  "oilViscosity": {
-   "value": "2.7L: dexos1 5W-30; 3.0L diesel: dexosD 0W-20; 5.3L/6.2L: dexos1 0W-20",
-   "source": "manual-2022-chevrolet-silverado-1500",
-   "page": null,
-   "sourceGrade": "A",
-   "verified": false,
-   "note": null
+  "specs": {
+    "oilCapacity": {
+      "value": "2.7L L3B (plastic pan): 6.0 qt with filter; 2.7L L3B (aluminum pan): 5.5 qt with filter; 3.0L Duramax LM2: 7.0 qt with filter; 5.3L L82/L84: 8.0 qt with filter; 6.2L L87: 8.0 qt with filter",
+      "source": "manual-2022-chevrolet-silverado-1500",
+      "page": null,
+      "sourceGrade": "A",
+      "verified": false,
+      "note": null
+    },
+    "oilViscosity": {
+      "value": "2.7L: dexos1 5W-30; 3.0L diesel: dexosD 0W-20; 5.3L/6.2L: dexos1 0W-20",
+      "source": "manual-2022-chevrolet-silverado-1500",
+      "page": null,
+      "sourceGrade": "A",
+      "verified": false,
+      "note": null
+    },
+    "wiperSizes": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "no citable source yet"
+    },
+    "batteryGroup": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "no citable source yet"
+    },
+    "towingCapacity": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false
+    },
+    "tpmsReset": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": null
+    }
   },
-  "wiperSizes": {
-   "value": null,
-   "source": null,
-   "sourceGrade": null,
-   "verified": false,
-   "note": "no citable source yet"
+  "tires": {
+    "rows": [],
+    "note": "owner manual / door placard; owner manual"
   },
-  "batteryGroup": {
-   "value": null,
-   "source": null,
-   "sourceGrade": null,
-   "verified": false,
-   "note": "no citable source yet"
+  "extraManuals": [],
+  "fuelEconomy": [
+    {
+      "feId": "44580",
+      "model": "Silverado 2WD",
+      "option": "Auto 10-spd, 6 cyl, 3.0 L, Diesel, Turbo",
+      "engineL": 3,
+      "cyl": 6,
+      "trans": "Automatic 10-spd",
+      "drive": "Rear-Wheel Drive",
+      "mpgCity": 23,
+      "mpgHwy": 31,
+      "mpgComb": 26,
+      "fuel": "Diesel",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/44580",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "45159",
+      "model": "Silverado 2WD",
+      "option": "Auto 10-spd, 8 cyl, 5.3 L, SIDI; Stop-Start",
+      "engineL": 5.3,
+      "cyl": 8,
+      "trans": "Automatic 10-spd",
+      "drive": "Rear-Wheel Drive",
+      "mpgCity": 16,
+      "mpgHwy": 21,
+      "mpgComb": 18,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/45159",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "44582",
+      "model": "Silverado 4WD",
+      "option": "Auto 10-spd, 6 cyl, 3.0 L, Diesel, Turbo, Stop-Start; Transmission with Sport Mode",
+      "engineL": 3,
+      "cyl": 6,
+      "trans": "Automatic 10-spd",
+      "drive": "4-Wheel Drive",
+      "mpgCity": 22,
+      "mpgHwy": 26,
+      "mpgComb": 24,
+      "fuel": "Diesel",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/44582",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "44634",
+      "model": "Silverado 4WD",
+      "option": "Auto 10-spd, 8 cyl, 5.3 L, SIDI",
+      "engineL": 5.3,
+      "cyl": 8,
+      "trans": "Automatic 10-spd",
+      "drive": "4-Wheel Drive",
+      "mpgCity": 15,
+      "mpgHwy": 19,
+      "mpgComb": 16,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/44634",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "45129",
+      "model": "Silverado 4WD ZR2",
+      "option": "Auto 10-spd, 8 cyl, 6.2 L",
+      "engineL": 6.2,
+      "cyl": 8,
+      "trans": "Automatic 10-spd",
+      "drive": "4-Wheel Drive",
+      "mpgCity": 14,
+      "mpgHwy": 17,
+      "mpgComb": 15,
+      "fuel": "Premium",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/45129",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    }
+  ],
+  "fuelEconomyFetched": "2026-10-15",
+  "recalls": [
+    {
+      "campaign": "22V463000",
+      "component": "EXTERIOR LIGHTING:BRAKE LIGHTS",
+      "date": "2022-06-30",
+      "summary": "General Motors (GM) has decided that certain 2022 model year Chevrolet Silverado, and GMC Sierra vehicles equipped with an accessory sport bar.  The accessory sport bar contains a high-mounted brake light that may not function.  In addition, it may block the vehicle's existing high-mounted brake lig",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "22V873000",
+      "component": "AIR BAGS: AIR BAG/RESTRAINT CONTROL MODULE",
+      "date": "2022-11-23",
+      "summary": "General Motors, LLC (GM) is recalling certain 2022 Chevrolet Silverado 1500 vehicles.  The sensing diagnostic module (SDM) was left in manufacturing mode and not activated at the assembly plant prior to shipment.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle ",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "22V903000",
+      "component": "EXTERIOR LIGHTING:LIGHTING CONTROL MODULE:SOFTWARE",
+      "date": "2022-12-08",
+      "summary": "General Motors, LLC (GM) is recalling certain 2020-2023 Cadillac CT4 and CT5; 2021-2023 Buick Envision; and 2022-2023 Cadillac Escalade and Escalade ESV, Chevrolet Silverado 1500, Suburban, Tahoe, GMC Sierra 1500, Yukon, and Yukon XL vehicles.  The daytime running lights (DRLs) may not deactivate wh",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "24V797000",
+      "component": "POWER TRAIN:AUTOMATIC TRANSMISSION:CONTROL MODULE:SOFTWARE",
+      "date": "2024-10-24",
+      "summary": "General Motors, LLC (GM) is recalling certain 2020-2022 Chevrolet Silverado 1500, 2500, 3500, GMC Sierra 1500, 2500, 3500, 2021 Cadillac Escalade, Escalade ESV, Chevrolet Tahoe, Suburban, GMC Yukon, and Yukon XL vehicles equipped with diesel engines.  The transmission control valve may fail and caus",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "25V274000",
+      "component": "ENGINE AND ENGINE COOLING:ENGINE:HARD PARTS INTERNAL/MECHANICAL",
+      "date": "2025-04-24",
+      "summary": "General Motors LLC (GM) is recalling certain 2021-2024 Cadillac Escalade and Escalade ESV, Chevrolet Silverado 1500, Suburban, and Tahoe, GMC Sierra 1500, Yukon, and Yukon XL vehicles equipped with a 6.2L V8 gas engine.  The connecting rod and/or crankshaft engine components may have manufacturing d",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "26V083000",
+      "component": "POWER TRAIN:AUTOMATIC TRANSMISSION:CONTROL MODULE:SOFTWARE",
+      "date": "2026-02-12",
+      "summary": "General Motors, LLC is recalling certain 2020 Chevrolet Silverado 2500, 3500, GMC Sierra 2500, 3500, and 2020-2022 Chevrolet Silverado 1500 and GMC Sierra 1500 vehicles that may have been repaired incorrectly under recall 24V797. The transmission control valve may fail and cause the rear wheels to l",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    }
+  ],
+  "recallsFetched": "2026-10-15",
+  "recallsUrl": "https://www.nhtsa.gov/recalls?make=Chevrolet&model=Silverado 1500&year=2022",
+  "related": {
+    "issues": []
   },
-  "towingCapacity": {
-   "value": null,
-   "source": null,
-   "sourceGrade": null,
-   "verified": false
-  },
-  "tpmsReset": {
-   "value": null,
-   "source": null,
-   "sourceGrade": null,
-   "verified": false,
-   "note": null
-  }
- },
- "tires": {
-  "rows": [],
-  "note": "owner manual / door placard; owner manual"
- },
- "extraManuals": [],
- "fuelEconomy": [
-  {
-   "feId": "44580",
-   "model": "Silverado 2WD",
-   "option": "Auto 10-spd, 6 cyl, 3.0 L, Diesel, Turbo",
-   "engineL": 3,
-   "cyl": 6,
-   "trans": "Automatic 10-spd",
-   "drive": "Rear-Wheel Drive",
-   "mpgCity": 23,
-   "mpgHwy": 31,
-   "mpgComb": 26,
-   "fuel": "Diesel",
-   "url": "https://www.fueleconomy.gov/ws/rest/vehicle/44580",
-   "source": "fueleconomy",
-   "sourceGrade": "A"
-  },
-  {
-   "feId": "45159",
-   "model": "Silverado 2WD",
-   "option": "Auto 10-spd, 8 cyl, 5.3 L, SIDI; Stop-Start",
-   "engineL": 5.3,
-   "cyl": 8,
-   "trans": "Automatic 10-spd",
-   "drive": "Rear-Wheel Drive",
-   "mpgCity": 16,
-   "mpgHwy": 21,
-   "mpgComb": 18,
-   "fuel": "Regular",
-   "url": "https://www.fueleconomy.gov/ws/rest/vehicle/45159",
-   "source": "fueleconomy",
-   "sourceGrade": "A"
-  },
-  {
-   "feId": "44582",
-   "model": "Silverado 4WD",
-   "option": "Auto 10-spd, 6 cyl, 3.0 L, Diesel, Turbo, Stop-Start; Transmission with Sport Mode",
-   "engineL": 3,
-   "cyl": 6,
-   "trans": "Automatic 10-spd",
-   "drive": "4-Wheel Drive",
-   "mpgCity": 22,
-   "mpgHwy": 26,
-   "mpgComb": 24,
-   "fuel": "Diesel",
-   "url": "https://www.fueleconomy.gov/ws/rest/vehicle/44582",
-   "source": "fueleconomy",
-   "sourceGrade": "A"
-  },
-  {
-   "feId": "44634",
-   "model": "Silverado 4WD",
-   "option": "Auto 10-spd, 8 cyl, 5.3 L, SIDI",
-   "engineL": 5.3,
-   "cyl": 8,
-   "trans": "Automatic 10-spd",
-   "drive": "4-Wheel Drive",
-   "mpgCity": 15,
-   "mpgHwy": 19,
-   "mpgComb": 16,
-   "fuel": "Regular",
-   "url": "https://www.fueleconomy.gov/ws/rest/vehicle/44634",
-   "source": "fueleconomy",
-   "sourceGrade": "A"
-  },
-  {
-   "feId": "45129",
-   "model": "Silverado 4WD ZR2",
-   "option": "Auto 10-spd, 8 cyl, 6.2 L",
-   "engineL": 6.2,
-   "cyl": 8,
-   "trans": "Automatic 10-spd",
-   "drive": "4-Wheel Drive",
-   "mpgCity": 14,
-   "mpgHwy": 17,
-   "mpgComb": 15,
-   "fuel": "Premium",
-   "url": "https://www.fueleconomy.gov/ws/rest/vehicle/45129",
-   "source": "fueleconomy",
-   "sourceGrade": "A"
-  }
- ],
- "fuelEconomyFetched": "2026-10-15",
- "recalls": [
-  {
-   "campaign": "22V463000",
-   "component": "EXTERIOR LIGHTING:BRAKE LIGHTS",
-   "date": "2022-06-30",
-   "summary": "General Motors (GM) has decided that certain 2022 model year Chevrolet Silverado, and GMC Sierra vehicles equipped with an accessory sport bar.  The accessory sport bar contains a high-mounted brake light that may not function.  In addition, it may block the vehicle's existing high-mounted brake lig",
-   "source": "nhtsa-recalls",
-   "sourceGrade": "A"
-  },
-  {
-   "campaign": "22V873000",
-   "component": "AIR BAGS: AIR BAG/RESTRAINT CONTROL MODULE",
-   "date": "2022-11-23",
-   "summary": "General Motors, LLC (GM) is recalling certain 2022 Chevrolet Silverado 1500 vehicles.  The sensing diagnostic module (SDM) was left in manufacturing mode and not activated at the assembly plant prior to shipment.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle ",
-   "source": "nhtsa-recalls",
-   "sourceGrade": "A"
-  },
-  {
-   "campaign": "22V903000",
-   "component": "EXTERIOR LIGHTING:LIGHTING CONTROL MODULE:SOFTWARE",
-   "date": "2022-12-08",
-   "summary": "General Motors, LLC (GM) is recalling certain 2020-2023 Cadillac CT4 and CT5; 2021-2023 Buick Envision; and 2022-2023 Cadillac Escalade and Escalade ESV, Chevrolet Silverado 1500, Suburban, Tahoe, GMC Sierra 1500, Yukon, and Yukon XL vehicles.  The daytime running lights (DRLs) may not deactivate wh",
-   "source": "nhtsa-recalls",
-   "sourceGrade": "A"
-  },
-  {
-   "campaign": "24V797000",
-   "component": "POWER TRAIN:AUTOMATIC TRANSMISSION:CONTROL MODULE:SOFTWARE",
-   "date": "2024-10-24",
-   "summary": "General Motors, LLC (GM) is recalling certain 2020-2022 Chevrolet Silverado 1500, 2500, 3500, GMC Sierra 1500, 2500, 3500, 2021 Cadillac Escalade, Escalade ESV, Chevrolet Tahoe, Suburban, GMC Yukon, and Yukon XL vehicles equipped with diesel engines.  The transmission control valve may fail and caus",
-   "source": "nhtsa-recalls",
-   "sourceGrade": "A"
-  },
-  {
-   "campaign": "25V274000",
-   "component": "ENGINE AND ENGINE COOLING:ENGINE:HARD PARTS INTERNAL/MECHANICAL",
-   "date": "2025-04-24",
-   "summary": "General Motors LLC (GM) is recalling certain 2021-2024 Cadillac Escalade and Escalade ESV, Chevrolet Silverado 1500, Suburban, and Tahoe, GMC Sierra 1500, Yukon, and Yukon XL vehicles equipped with a 6.2L V8 gas engine.  The connecting rod and/or crankshaft engine components may have manufacturing d",
-   "source": "nhtsa-recalls",
-   "sourceGrade": "A"
-  },
-  {
-   "campaign": "26V083000",
-   "component": "POWER TRAIN:AUTOMATIC TRANSMISSION:CONTROL MODULE:SOFTWARE",
-   "date": "2026-02-12",
-   "summary": "General Motors, LLC is recalling certain 2020 Chevrolet Silverado 2500, 3500, GMC Sierra 2500, 3500, and 2020-2022 Chevrolet Silverado 1500 and GMC Sierra 1500 vehicles that may have been repaired incorrectly under recall 24V797. The transmission control valve may fail and cause the rear wheels to l",
-   "source": "nhtsa-recalls",
-   "sourceGrade": "A"
-  }
- ],
- "recallsFetched": "2026-10-15",
- "recallsUrl": "https://www.nhtsa.gov/recalls?make=Chevrolet&model=Silverado 1500&year=2022",
- "related": {
-  "issues": []
- },
- "publishDate": null,
- "dataUpdated": "2026-10-15",
- "signOff": null
+  "publishDate": "2026-10-15",
+  "dataUpdated": "2026-10-15",
+  "signOff": null
 }

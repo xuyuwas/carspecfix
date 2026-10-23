@@ -6,7 +6,8 @@
     "import": "node scripts/import-legacy.mjs",
     "build": "node scripts/images.mjs && astro build && node scripts/postbuild-check.mjs",
     "dev": "astro dev",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "test:selector": "RELEASE_DAY=7 npm run build && node scripts/selector-smoke.mjs"
   },
   "dependencies": {
     "@fontsource/archivo": "^5.3.0",

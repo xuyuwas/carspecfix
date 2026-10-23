@@ -272,7 +272,8 @@ a.make{color:var(--primary);border-color:var(--border-strong)}a.make:hover{borde
 .cfg__title{font:800 var(--fs-18)/1.2 var(--font-display);letter-spacing:-.01em;color:var(--primary)}
 .cfg__lede{font-size:var(--fs-14);color:var(--text-2);margin-top:6px;max-width:74ch}
 .cfg__steps{display:grid;gap:var(--sp-2);padding:var(--sp-4);grid-template-columns:minmax(0,1fr)}
-@media(min-width:720px){.cfg__steps{grid-template-columns:repeat(3,minmax(0,1fr))}}
+/* 2 or 3 questions depending on what this page can actually narrow */
+@media(min-width:720px){.cfg__steps{grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}}
 .cfg__field{display:flex;flex-direction:column;gap:4px;border:1px solid var(--border-strong);border-radius:var(--r-sm);padding:6px 12px 6px;background:var(--surface)}
 .cfg__k{font:700 11px/1.2 var(--font-body);text-transform:uppercase;letter-spacing:.06em;color:var(--text-3)}
 .cfg__field select{border:0;background:none;font:600 var(--fs-15)/1.4 var(--font-body);color:var(--text);width:100%;appearance:none;padding:0;outline:none;cursor:pointer}
@@ -366,3 +367,27 @@ a.make{color:var(--primary);border-color:var(--border-strong)}a.make:hover{borde
 /* group divider inside the action plan: "applies to your car" vs "if you drive one" */
 .act__group{list-style:none;padding:8px var(--sp-4);font:700 11px/1.3 var(--font-body);text-transform:uppercase;letter-spacing:.06em;color:var(--text-3);background:var(--surface-alt);border-top:1px solid var(--border)}
 .act__group:first-child{border-top:0}
+
+/* technician-review state on /sources/#review: green when a named reviewer exists,
+   amber while it does not. Both states are text, never a bare "expert reviewed" badge. */
+.notice--ok{background:var(--sev-low-bg, #E8F5E9);border-color:#B7DFBC;color:#145A1E}
+.links li .links__meta{white-space:nowrap}
+h3{font:700 var(--fs-16)/1.3 var(--font-display);margin:var(--sp-4) 0 6px;color:var(--text)}
+
+/* technician-review state on /sources/#review: green when a named reviewer exists,
+   amber while it does not. Both states are text, never a bare "expert reviewed" badge. */
+.notice--ok{background:var(--sev-low-bg, #E8F5E9);border-color:#B7DFBC;color:#145A1E}
+.links li .links__meta{white-space:nowrap}
+h3{font:700 var(--fs-16)/1.3 var(--font-display);margin:var(--sp-4) 0 6px;color:var(--text)}
+
+/* The technician-review notice sits inside the action plan, where the reader is about to
+   decide something. It is a statement about the page, not another instruction, so it does
+   not get a severity colour - grey strip, clear label. */
+.act__foot--review{background:var(--surface-alt);border-top:1px solid var(--border);color:var(--text-2);font-size:var(--fs-13);line-height:1.5}
+.act__foot--review b{color:var(--text)}
+.act__foot--review p{margin:0}
+.act__foot--review p+p{margin-top:4px}
+.act__review-link a{font-weight:600}
+.act__foot--review p{margin:0}
+.act__foot--review p+p{margin-top:4px}
+.act__review-link a{font-weight:600}
