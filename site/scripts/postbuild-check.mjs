@@ -150,6 +150,20 @@ for (const v of vehicles) {
     errors.push(`P0-V ${u}: placard-only page lost its door-jamb answer`);
   // (f) "Added" on /changelog/ must be a real date, not an em dash
   if (!v.publishDate) errors.push(`P0-V ${u}: no publishDate, so the changelog shows a blank "Added" date`);
+  // (g) oil: a unique capacity must only appear when configuration narrows to one;
+  // otherwise the quick answer must send the reader to the selector, never print one
+  // capacity as if it were theirs. This is the regression class behind the CR-V / RAV4
+  // selector showing no oil (a "non-hybrid" row mis-classified as hybrid) and the Equinox
+  // collapse that hid the AWD figure.
+  const oilFig = /\d(?:\.\d+)?\s*qt\b/i;
+  if (!nr.oil && !oilFig.test(qaText))
+    errors.push(`P0-V ${u}: one oil capacity applies to every build, but the quick answer hides it`);
+  if (nr.oil && oilFig.test(qaText) && !/engine|drivetrain|select|depending|your build|configuration|range/i.test(qaText))
+    errors.push(`P0-V ${u}: quick answer prints a single oil capacity although configuration does not narrow to one`);
+  // (h) tyre pressure: same rule — a single figure only when every build shares it.
+  const psiSingle = psiFig.test(qaText) && !/[–-]/.test((qaText.match(psiFig) || [])[0] || '');
+  if (nr.psi && psiSingle && !/range|depending|your build|configuration/i.test(qaText))
+    errors.push(`P0-V ${u}: quick answer prints a single psi although configuration does not narrow to one`);
 }
 // R-D7: the homepage must state its real coverage (pilot = 4 vehicles / 5 codes),
 // so a visitor is never promised a lookup the site cannot serve yet.

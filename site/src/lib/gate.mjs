@@ -14,6 +14,16 @@ export const sources = rd(path.join(DATA, 'sources.json'));
 export const vehicles = fs.readdirSync(path.join(DATA, 'vehicles')).sort().map(f => rd(path.join(DATA, 'vehicles', f)));
 export const issues = fs.readdirSync(path.join(DATA, 'issues')).sort().map(f => rd(path.join(DATA, 'issues', f)));
 export const pilotUrls = rd(path.join(DATA, 'pilot-urls.json'));
+// The corrections log is the single source of truth for "when did this page last change".
+// A page's verified `dataUpdated` can be older than the day a display fix shipped, so the
+// per-page "last changed" date and the changelog's "last updated" both derive from it.
+export const correctionsData = rd(path.join(DATA, 'corrections.json'));
+const _corrDates = (correctionsData.entries || []).map(e => e.date).sort();
+export const lastCorrection = _corrDates.at(-1) || TODAY;
+export function pageChanged(o) {
+  const cd = (correctionsData.entries || []).filter(e => (e.pages || []).includes(o.slug)).map(e => e.date).sort().at(-1);
+  return [o.dataUpdated, cd].filter(Boolean).sort().at(-1) || o.dataUpdated;
+}
 export const HUB_MODELS = [['toyota', 'rav4'], ['ford', 'f-150'], ['toyota', 'camry'], ['honda', 'cr-v']];
 
 export const hasVal = f => !!f && f.value != null && f.value !== '' && !/todo/i.test(String(f.value));

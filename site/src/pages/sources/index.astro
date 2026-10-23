@@ -45,6 +45,18 @@ const safetyPages = liveI.filter((i: any) => i.safetyCritical || actionPlan(i).l
   .map((i: any) => ({ ...pageOf(i.slug), slug: i.slug })).filter((x: any) => x.url);
 const reviewedSlugs = new Set(((reviewers as any).technician?.pages) || []);
 const techPages = safetyPages.filter((x: any) => reviewedSlugs.has(x.slug));
+// The review is prioritised: brake and ABS / warning-light pages are the ones a reader
+// acts on first, so they are named as the first group rather than buried in an alphabetical
+// list. The grouping is data-driven from reviewers.json so it cannot drift from the rest.
+const rev = reviewers as any;
+const priority = rev.priority || {};
+const grouped = Object.entries(priority).map(([g, slugs]: any) => ({
+  group: g,
+  pages: (slugs as string[]).map((s: string) => safetyPages.find((p: any) => p.slug === s)).filter(Boolean),
+})).filter((x: any) => x.pages.length);
+const inPriority = new Set(Object.values(priority).flat() as string[]);
+const others = safetyPages.filter((p: any) => !inPriority.has(p.slug));
+const auditDate = rev.auditScopePublished ? fmt(rev.auditScopePublished) : null;
 ---
 <Page title="Data Sources & Methodology | CarSpecFix" description="Where CarSpecFix data comes from, how the three evidence tiers are labelled, when documents were retrieved and reviewed, and how corrections are handled." path="/sources/" nav="sources" crumbs={[{ name: 'Home', url: '/' }, { name: 'Data sources', url: '/sources/' }]} h1="Data sources & methodology">
 <h2 class="section__title">How we work</h2>
@@ -77,10 +89,11 @@ const techPages = safetyPages.filter((x: any) => reviewedSlugs.has(x.slug));
     <div style="margin-top:6px">{tech.statement}</div>
     <div style="margin-top:6px">Pages covered ({techPages.length}): {techPages.map((x: any, n: number) => <>{n > 0 && ', '}<a href={x.url}>{x.label}</a></>)}</div>
   </div>
- : <div class="notice"><span class="ev ev--guidance">Open item</span>&nbsp; A qualified-technician review of the brake, ABS and "can I keep driving" wording is <b>not in place</b>. Until it is, those pages rest on manufacturer and government text alone, and the site does not present itself as a second opinion on a specific car. Read them as a summary of what the documents say, and treat a workshop inspection as the authority on your own vehicle.</div>}
+ : <div class="notice"><span class="ev ev--guidance">Open item</span>&nbsp; A qualified-technician review of the brake, ABS and "can I keep driving" wording is <b>not in place</b>. Until it is, those pages rest on manufacturer and government text alone, and the site does not present itself as a second opinion on a specific car. Read them as a summary of what the documents say, and treat a workshop inspection as the authority on your own vehicle. Priority order for the review: the brake and ABS / warning-light pages first, then the can-I-keep-driving trouble codes — the groups below show exactly what is in and what is not yet signed off.</div>}
 <h3>What is in scope ({safetyPages.length} pages)</h3>
-<p>These are the published pages whose wording tells a reader whether to keep driving. The list is generated from the data, so it grows and shrinks with the site instead of being a claim someone has to remember to update.</p>
-<ul class="links">{safetyPages.map((x: any) => <li><a href={x.url}>{x.label}</a><span class="links__meta">{reviewedSlugs.has(x.slug) ? `technician-reviewed ${fmt((reviewers as any).technician.reviewedOn)}` : 'editor-checked only'}</span></li>)}</ul>
+<p>Audit scope published <span class="tnum">{auditDate}</span>. These are the published pages whose wording tells a reader whether to keep driving. The list is generated from the data, so it grows and shrinks with the site instead of being a claim someone has to remember to update. Each page is marked <b>editor-checked only</b> until a named, qualified technician has reviewed it.</p>
+{grouped.map((grp: any) => <><h4 class="scope__grp">{grp.group}</h4><ul class="links">{grp.pages.map((x: any) => <li><a href={x.url}>{x.label}</a><span class="links__meta">{reviewedSlugs.has(x.slug) ? `technician-reviewed ${fmt((reviewers as any).technician?.reviewedOn)}` : 'editor-checked only'}</span></li>)}</ul></>)}
+{others.length > 0 && <><h4 class="scope__grp">Other (can I keep driving?)</h4><ul class="links">{others.map((x: any) => <li><a href={x.url}>{x.label}</a><span class="links__meta">editor-checked only</span></li>)}</ul></>}
 <h3>What a technician review has to meet</h3>
 <ul>{(reviewers as any).criteria.map((c: string) => <li>{c}</li>)}</ul>
 <p class="ks__src">When a review is recorded, this section publishes the reviewer's name, credentials, the date, the pages actually covered and their own statement — not a badge that says "expert reviewed". If you are a qualified technician and want to review these pages, <a href="/contact/">get in touch</a>.</p>

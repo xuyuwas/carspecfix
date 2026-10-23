@@ -5,7 +5,7 @@ import Feedback from '../../../../../components/Feedback.astro';
 import Photo from '../../../../../components/Photo.astro';
 import ConfigPicker from '../../../../../components/ConfigPicker.astro';
 import ReviewDates from '../../../../../components/ReviewDates.astro';
-import { liveVehicles, liveIssues, liveHubs, vehicleUrl, issueUrl, sources, hasVal, shownTireRows, placardNote, SITE } from '../../../../../lib/gate.mjs';
+import { liveVehicles, liveIssues, liveHubs, vehicleUrl, issueUrl, sources, hasVal, shownTireRows, placardNote, SITE, pageChanged } from '../../../../../lib/gate.mjs';
 import { fitTitle, usOnly } from '../../../../../lib/title.mjs';
 import { makeRefs, SEGMENT } from '../../../../../lib/refs.mjs';
 import { imageObject } from '../../../../../lib/images.mjs';
@@ -17,7 +17,7 @@ export function getStaticPaths() {
 }
 const { v } = Astro.props;
 const s = v.specs, ev = v.powertrain === 'ev';
-const name = `${v.year} ${v.make} ${v.model}`, path = vehicleUrl(v), updated = v.dataUpdated;
+const name = `${v.year} ${v.make} ${v.model}`, path = vehicleUrl(v), updated = pageChanged(v);
 const A = f => hasVal(f) && f.source && f.sourceGrade === 'A';      // only grade A values are shown
 const { list: refs, ref } = makeRefs();
 const srcRef = id => ref(id, sources[id]?.name + (sources[id]?.retrieved ? `, retrieved ${sources[id].retrieved}` : ''), sources[id]?.url);

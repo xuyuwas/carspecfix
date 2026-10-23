@@ -1,0 +1,25 @@
+{
+  "_comment": "Coverage expansion backlog, derived from GSC reader queries and the diversification principle: add more BRANDS and YEARS before adding more RAV4 years. Every target needs real OEM manual data before it is signed off and published — the site's sourcing standard is not relaxed for coverage. Status values: pending-sourcing (no data yet), partial (some data, not sign-off ready), ready (data complete, awaiting sign-off), live (published).",
+  "principle": "Diversify brands and years per reader demand; do not pile further years onto RAV4.",
+  "readerSignals": [
+    "honda crv 2024 tire size — 6 impressions @ pos 16.6 (highest-leverage reader query; CR-V hub is 404 so the page gets no internal link equity)",
+    "2026 honda civic sport 2.0l oil capacity — @83 (content gap: no 2026 page exists)",
+    "2020 toyota rav4 oil capacity / 2.5 oil capacity — pos 8-10 (RAV4 hub catches the year queries)",
+    "2009 rav4 oil capacity, 2021 rav4 oil capacity — hub catch (years pre-2022 had no page at crawl time)",
+    "Generic 'X oil capacity' / 'X tire size' patterns across many makes — demand is broad, not RAV4-specific"
+  ],
+  "currentSnapshot": { "modelYears": 29, "models": 11, "rav4Share": "16 of 29 (55%)" },
+  "targets": [
+    { "make": "honda", "model": "cr-v", "years": [2021, 2023], "why": "Hub is 404 (only 2024 published; 2022 file exists but is an empty shell with no signOff). Highest-value reader query. Needs 2021/2023 data; 2022 must be completed, not just added.", "status": "pending-sourcing" },
+    { "make": "honda", "model": "civic", "years": [2021, 2023, 2026], "why": "Hub 404 (only 2022 published). Explicit 2026 request from a reader (@83). 2026 needs current-model-year manual.", "status": "pending-sourcing" },
+    { "make": "honda", "model": "accord", "years": [2021, 2023], "why": "Hub 404 (only 2022 published). Common sedan; broad oil/tire demand.", "status": "pending-sourcing" },
+    { "make": "toyota", "model": "corolla", "years": [2021, 2023], "why": "Hub 404 (only 2022 published). High-volume compact; strong generic 'oil capacity' demand.", "status": "pending-sourcing" },
+    { "make": "toyota", "model": "tacoma", "years": [2021, 2023], "why": "Hub 404 (only 2022 published). Pickup; tire-pressure + towing queries.", "status": "pending-sourcing" },
+    { "make": "toyota", "model": "camry", "years": [2021, 2023], "why": "Already 2022/2024; fill the gaps so the hub has a contiguous run and earns internal links.", "status": "pending-sourcing" },
+    { "make": "ford", "model": "f-150", "years": [2020, 2022, 2024], "why": "Already 2021/2023; fill the gaps. Pickup with heavy towing/oil demand.", "status": "pending-sourcing" },
+    { "make": "chevrolet", "model": "equinox", "years": [2021, 2023], "why": "Only 2022 published; adjacent years share the 1.5L FWD/AWD oil split that the selector must handle per drive.", "status": "pending-sourcing" },
+    { "make": "chevrolet", "model": "silverado-1500", "years": [2020, 2021, 2023], "why": "Only 2022 published; GM prints no psi table (door-jamb label only) — good coverage of the placard-only render path.", "status": "pending-sourcing" },
+    { "make": "tesla", "model": "model-y", "years": [2021, 2022, 2024], "why": "Only 2023 published; Tesla HTML manual needs per-page page-number verification. EV: no oil, tire pressure is the key figure.", "status": "pending-sourcing" },
+    { "make": "toyota", "model": "rav4", "years": [], "why": "Already 2009-2024 complete (16 pages). Do NOT add more RAV4 years until other models catch up — this is the diversification rule.", "status": "complete" }
+  ]
+}

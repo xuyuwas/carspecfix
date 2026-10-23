@@ -138,6 +138,28 @@ for (const file of withPanel) {
       if (a === b) fails.push(`${url}: drive split exists (${[...oilValues].join(' / ')} qt) but the oil cell does not change with drive`);
     }
   }
+  // (5) the selector must surface an oil figure for every engine that has one in the
+  //     source. The CR-V 2024 / RAV4 2020 regression was exactly this: a "1.5L turbo
+  //     (non-hybrid)" row was mis-classified as hybrid, matched no engine, and the
+  //     selector rendered no oil at all — invisible on the server-rendered fallback.
+  const oilNums = (t) => [...t.matchAll(/(\d(?:\.\d+)?)\s*qt\b/gi)].map(m => m[1]);
+  const engHasOil = i => model.engines[i] && (model.engines[i].oil || (model.engines[i].oilList || []).some(x => x));
+  if (model.engines.some(engHasOil)) {
+    for (let i = 0; i < engineOpts; i++) {
+      await page.selectOption('[data-cfg-engine]', { index: i });
+      const dn = await page.$$eval('[data-cfg-drive] option', o => o.length);
+      const driveCount = dn > 1 ? dn : 1;
+      for (let d = 0; d < driveCount; d++) {
+        if (dn > 1) { try { await page.selectOption('[data-cfg-drive]', { index: d }, { timeout: 2000 }); } catch { continue; } }
+        const t = await out();
+        const shown = oilNums(t);
+        // Every oil number the selector prints must come from the source set.
+        for (const o of shown) if (!allowed.has(o)) fails.push(`${url}: oil figure ${o} qt is not in the source set, at engine#${i} drive#${d}`);
+        // If the engine has oil data, the selector must show at least one figure.
+        if (engHasOil(i) && !shown.length) fails.push(`${url}: engine#${i} has oil in the source but the selector shows none`);
+      }
+    }
+  }
   console.log(`${url}  states=${seen.size}  ${errors.length ? 'ERRORS' : 'ok'}`);
   await page.close();
 }

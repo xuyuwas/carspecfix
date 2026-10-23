@@ -10,7 +10,13 @@
   "statement": "One or two sentences in the reviewer's own words: what they checked, and what they did not.",
   "nextReviewDue": "YYYY-MM-DD"
  },
- "scope": "Every published page that renders a 'What to do now' action plan - currently the seven trouble codes and the brake symptom pages.",
+ "scope": "Every published page that renders a 'What to do now' action plan - the brake and ABS / warning-light symptom pages, plus the can-I-keep-driving trouble codes.",
+ "priority": {
+   "Brake": ["brakes-squeaking", "car-shakes-when-braking", "grinding-noise-when-braking"],
+   "ABS and warning light": ["abs-light-on"],
+   "Trouble codes (can I keep driving?)": ["p0171", "p0300", "p0301", "p0420", "p0442", "p0455", "p0456"]
+ },
+ "auditScopePublished": "2026-10-23",
  "criteria": [
   "A current, verifiable automotive credential (ASE certification or equivalent), named and dated.",
   "Review of the condition -> action rows, not of the specification figures: the question is whether the instruction is right for the condition, not whether a number was transcribed correctly.",
