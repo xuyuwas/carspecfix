@@ -131,6 +131,20 @@ server {
         try_files $uri =404;
     }
 
+    # The .html form of every page answers 200 with a canonical pointing at the
+    # directory URL: /specs/toyota/rav4/2020/index.html duplicates
+    # /specs/toyota/rav4/2020/. Nothing on the site links it and the sitemap never
+    # listed it, yet Google crawls it and files one copy per published URL under
+    # "备用网页 / Alternate page (proper canonical tag)". Pure signal split — 301 it.
+    # Must test $request_uri, NOT a location regex. nginx internally rewrites a
+    # directory request ("/") to "/index.html", so a `location ~ ...index\.html$`
+    # also catches the directory index itself and turns every page into a 301 loop.
+    # That took the whole site down for ~10 min on 2026-10-27. $request_uri is the
+    # original external URI, so only genuine .html requests are redirected.
+    if ($request_uri ~ ^(/|/.*/)index\.html$) {
+        return 301 https://carspecfix.com$1;
+    }
+
     location / {
         try_files $uri $uri/ =404;
     }
@@ -254,6 +268,21 @@ for p in /about /privacy /specs/toyota/rav4/2024; do
     esac
   else
     echo "    ⚠️  $p 未返回 301（实测 ${hcode:-无响应}）" >&2
+  fi
+done
+
+# /x/index.html 必须 301 到 /x/：它返回 200 且 canonical 指向干净地址，Google 会为每个
+# 已发布 URL 收一份「备用网页」副本。规则已加在 vhost；这里实测确认生效。
+for p in /index.html /specs/toyota/rav4/2020/index.html; do
+  ihop=$(ssh -o BatchMode=yes "$REMOTE" \
+    "curl -s -m 20 -o /dev/null -w '%{http_code} %{redirect_url}' https://$DOMAIN$p" 2>/dev/null || true)
+  ihop=$(printf '%s' "$ihop" | head -1)
+  icode=$(printf '%s' "$ihop" | awk '{print $1}')
+  iloc=$(printf '%s' "$ihop" | awk '{print $2}')
+  if [ "$icode" = "301" ] || [ "$icode" = "308" ]; then
+    echo "    ✅ $p -> $icode ${iloc:-（无 Location）}"
+  else
+    echo "    ⚠️  $p 未返回 301（实测 ${icode:-无响应}）—— 备用网页副本不会被清掉" >&2
   fi
 done
 

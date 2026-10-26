@@ -42,7 +42,12 @@ const h1 = code ? `${i.code}: ${def ? def.value : 'meaning'}, causes & can you k
 // deliberately does not carry the flashing wording (it is a misfire instruction).
 // Build it from the action plan instead, so the description can only say what the
 // page actually shows.
-const meaning = code && def ? `${i.code} means ${def.value.replace(/\.+$/, '')}. ` : '';
+// Code pages are often searched with the letter O typed for the zero (PO456 for P0456).
+// The variant goes into the description so the snippet a reader sees on that spelling
+// already says it is the same code — and only when the data declares it, never guessed
+// from the digits.
+const altSuffix = code && Array.isArray(i.altSpellings) && i.altSpellings.length ? ` (also typed ${i.altSpellings.join(', ')})` : '';
+const meaning = code && def ? `${i.code}${altSuffix} means ${def.value.replace(/\.+$/, '')}. ` : '';
 // A brand-scoped row must not become the page's summary line: the brake pages would
 // otherwise describe themselves with a Toyota-only stop instruction. Prefer the row
 // that applies to every vehicle.
@@ -76,6 +81,7 @@ const docLine = c => `${c.maker ? c.maker + "'s " : ''}${c.docKind}`;
 <nav class="crumbs" aria-label="Breadcrumb">{crumbs.map((c, n) => <>{n > 0 && <span class="sep">/</span>}{n < crumbs.length - 1 ? <a href={c.url}>{c.name}</a> : <span aria-current="page">{c.name}</span>}</>)}</nav>
 <div class="eyebrow" style="margin-top:8px">{code ? 'OBD-II trouble code' : 'Symptom'}</div>
 <h1 class="ptitle">{h1}</h1>
+{code && altSuffix && <p class="section__kicker" style="margin-top:8px">Also written <b>{i.altSpellings.join(', ')}</b> — the second character is a zero (0), not the letter O. It is the same code with the same definition.</p>}
 <ActionPlan i={i} ref={r} />
 <section class="qa" id="quick" data-copy-scope aria-label="Quick answer">
   <div class="qa__head"><h2 class="qa__title">Quick answer</h2><Tools /></div>

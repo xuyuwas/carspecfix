@@ -27,6 +27,15 @@ const mainName = mainLabel ? mainLabel.replace(/\(non-hybrid\)/i, '').replace(/\
 const isMain = o => mainLabel ? o.label === mainLabel : (!o.label || /2\.5\s?L/i.test(o.label));
 const num = x => Number.isInteger(x) ? x.toFixed(1) : String(x);   // 6.0 qt stays 6.0, never "6"
 const cell = (v, k) => oilRows(v).filter(o => o[k] != null).map(o => [shortOilLabel(o.label), num(o[k])].filter(Boolean).join(' ')).join(' · ');
+// Same cell with the manual page appended per engine. A year whose figures come from two
+// manuals (RAV4 2020: gasoline OM0R024U p.666, hybrid OM0R025U p.678) has to show that in
+// the cell — otherwise identical numbers for the two powertrains read as one copied from
+// the other. Only years that declare `labelPages` get the page; every other row is untouched.
+const cellCited = (v, k) => oilRows(v).filter(o => o[k] != null).map(o => {
+  const lb = shortOilLabel(o.label);
+  const pg = lb && v?.specs?.oilCapacity?.labelPages?.[lb];
+  return [lb, num(o[k]), pg ? `(${pg})` : null].filter(Boolean).join(' ');
+}).join(' · ');
 const sizeOf = t => String(t || '').replace(/\s+\d{2,3}[A-Z]$/, '').trim();
 const sizes = v => v ? [...new Set(shownTireRows(v).map(t => sizeOf(t.tireSize)).filter(Boolean))].join(', ') : '';
 const psiOf = v => { const p = v ? shownTireRows(v).flatMap(t => [t.frontPsi, t.rearPsi]).filter(Boolean) : []; return p.length ? (Math.min(...p) === Math.max(...p) ? String(Math.min(...p)) : `${Math.min(...p)}–${Math.max(...p)}`) : ''; };
@@ -73,7 +82,7 @@ const manualSrc = y => { const v = byYear(y); const id = v?.manual?.sourceId; re
 <div class="tbl-wrap"><div class="tbl-scroll" role="region" tabindex="0" aria-label="Specs by year"><table class="tbl"><thead><tr><th scope="col">Year</th><th scope="col">Oil (with filter)</th><th scope="col">Oil (without filter)</th><th scope="col">Tire sizes</th><th scope="col" class="num">Cold psi</th><th scope="col" class="num">Recalls</th></tr></thead>
 <tbody>{years.map(y => { const v = byYear(y); return <tr>
   <td class="strong">{v && liveYears.has(y) ? <a href={vehicleUrl(v)}>{y}</a> : y}</td>
-  <td>{cell(v, 'w')}</td><td>{cell(v, 'wo')}</td><td>{sizes(v)}</td><td class="num">{psiOf(v)}</td><td class="num">{v ? v.recalls.length : ''}</td>
+  <td>{cellCited(v, 'w')}</td><td>{cellCited(v, 'wo')}</td><td>{sizes(v)}</td><td class="num">{psiOf(v)}</td><td class="num">{v ? v.recalls.length : ''}</td>
 </tr>; })}</tbody></table></div><div class="swipe">Swipe for more columns</div></div>
 
 <h2 class="section__title">Engine oil capacity by year</h2>
@@ -100,7 +109,7 @@ const manualSrc = y => { const v = byYear(y); const id = v?.manual?.sourceId; re
 <ul class="links">{codes.map(i => <li><a href={issueUrl(i)}>{i.code} code</a></li>)}</ul></>}
 
 <h2 class="section__title">Sources</h2>
-<ol class="refs">{checked.map(v => { const s = manualSrc(v.year); return <li>{s ? <a href={s.url} rel="nofollow noopener">{s.name}</a> : `${v.year} ${name} owner's manual`} — oil and tire tables</li>; })}
+<ol class="refs">{checked.flatMap(v => [manualSrc(v.year), ...(v.extraSourceIds || []).map(id => sources[id]).filter(Boolean)].map(s => <li>{s ? <a href={s.url} rel="nofollow noopener">{s.name}</a> : `${v.year} ${name} owner's manual`} — oil and tire tables</li>))}
 <li><a href="https://www.nhtsa.gov/recalls" rel="nofollow noopener">NHTSA recalls database</a> — recall counts, fetched {earliest.recallsFetched}</li>
 <li><a href="https://www.fueleconomy.gov/" rel="nofollow noopener">fueleconomy.gov (U.S. EPA / DOE)</a> — fuel economy ratings</li></ol>
 <p class="ks__src">How we collect and check data: <a href="/sources/">Data sources</a>.</p>

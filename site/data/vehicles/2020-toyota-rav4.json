@@ -21,7 +21,11 @@
    "verified": false,
    "appliesTo": "2.5L gasoline and 2.5L hybrid engines",
    "unverifiedNote": "Hybrid capacity read from the RAV4 Hybrid manual OM0R025U p.678; both figures are identical to the gasoline engine.",
-   "note": null
+   "note": null,
+   "labelPages": {
+    "2.5L": "p.666",
+    "Hybrid": "p.678"
+   }
   },
   "oilViscosity": {
    "value": "SAE 0W-16 (0W-20 acceptable)",
@@ -282,17 +286,22 @@
  "recallsFetched": "2026-10-15",
  "recallsUrl": "https://www.nhtsa.gov/recalls?nhtsaId=&make=Toyota&model=RAV4&year=2020",
  "related": {
-  "issues": ["p0456"]
+  "issues": [
+   "p0456"
+  ]
  },
  "publishDate": "2026-10-15",
  "dataUpdated": "2026-10-19",
-  "signOff": {
-   "by": "Marlowe Sheets",
-   "date": "2026-10-15"
-  },
-  "seo": {
-   "title": "2020 Toyota RAV4 Oil Capacity, Tire Size & Specs",
-   "description": "2020 Toyota RAV4 2.5L: 4.8 qt oil with filter, SAE 0W-16. Tires 225/65R17, 225/60R18, 235/55R19, 33-36 psi. 6 NHTSA recalls, manual cited.",
-   "h1Tail": "RAV4 oil capacity, tire sizes & specs"
-  }
+ "signOff": {
+  "by": "Marlowe Sheets",
+  "date": "2026-10-15"
+ },
+ "seo": {
+  "title": "2020 Toyota RAV4 Oil Capacity, Tire Size & Specs",
+  "description": "2020 Toyota RAV4 2.5L: 4.8 qt oil with filter, SAE 0W-16. Tires 225/65R17, 225/60R18, 235/55R19, 33-36 psi. 6 NHTSA recalls, manual cited.",
+  "h1Tail": "RAV4 oil capacity, tire sizes & specs"
+ },
+ "extraSourceIds": [
+  "manual-2020-toyota-rav4-hybrid"
+ ]
 }
