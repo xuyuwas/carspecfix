@@ -92,9 +92,14 @@ const placardRef = placard ? srcRef(placard.source) : null;
 const seo = v.seo || {};
 // Titles for pages that do print psi stay byte-identical to before; only the placard
 // case (no psi anywhere in the manual) needs a different wording.
-const autoTitle = placard && psiAllMissing
-  ? `${v.year} ${v.make} ${v.model} Specs: Oil, Tire Sizes${v.recalls.length ? ', Recalls' : ''}`
-  : `${v.year} ${v.make} ${v.model} Specs: Oil, Tire Size & Pressure`;
+// An EV has no engine oil at all, so the shared formula would put "Oil" in the title of
+// a page that has no oil section to answer it. Title each kind of page with what it
+// actually covers; everything else keeps the one formula, so titles never drift.
+const autoTitle = ev
+  ? `${v.year} ${v.make} ${v.model} Specs: Tire Sizes, Pressure${v.recalls.length ? ' & Recalls' : ''}`
+  : placard && psiAllMissing
+    ? `${v.year} ${v.make} ${v.model} Specs: Oil, Tire Sizes${v.recalls.length ? ', Recalls' : ''}`
+    : `${v.year} ${v.make} ${v.model} Specs: Oil, Tire Size & Pressure`;
 const title = seo.title || autoTitle;
 // description: drop detail progressively until it fits 160 chars (R-M1)
 // First variant only, engine label stripped, then cut at the first parenthesis or comma.
@@ -117,7 +122,10 @@ const tireBit = tires.length ? (placard && psiAllMissing ? `tire sizes for ${tir
 const tireShort = tires.length ? (placard && psiAllMissing ? 'tire sizes by wheel' : 'tire size & pressure by wheel') : null;
 const recBit = v.recalls.length ? `${v.recalls.length} NHTSA recall${v.recalls.length > 1 ? 's' : ''}` : null;
 const mk = parts => `${name}: ${parts.filter(Boolean).join('; ')}. Manual page cited.`;
-const autoDesc = [mk([oilFull, tireBit, recBit]), mk([oilShort, tireBit, recBit]), mk([oilShort, tireShort, recBit]), mk([oilShort, tireShort]), mk(['oil capacity & type', tireShort])].find(d => d.length <= 160) ?? mk(['oil capacity & type', tireShort]);
+// Last resort, when even the shortest oil-first variant runs past 160 chars: an EV has
+// no oil row to promise, so it falls back to the tire line alone.
+const descLast = ev ? mk([tireShort ?? 'factory tire sizes']) : mk(['oil capacity & type', tireShort]);
+const autoDesc = [mk([oilFull, tireBit, recBit]), mk([oilShort, tireBit, recBit]), mk([oilShort, tireShort, recBit]), mk([oilShort, tireShort]), descLast].find(d => d.length <= 160) ?? descLast;
 // A page may pin its own title/description/H1 (data: seo{}) when Search Console
 // shows it earns impressions on a phrase the generic formula does not carry. Every
 // other page keeps the formula, so the site never drifts title by title.

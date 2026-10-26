@@ -257,15 +257,29 @@ for p in /about /privacy /specs/toyota/rav4/2024; do
   fi
 done
 
-# 单年份车系没有聚合页，但目录存在（只有 /2024/）：必须 404，不能 403。
-for p in /specs/honda/cr-v/ /specs/honda/civic/ /specs/honda/accord/ /specs/chevrolet/equinox/; do
-  sc=$(ssh -o BatchMode=yes "$REMOTE" \
-    "curl -s -m 20 -o /dev/null -w '%{http_code}' https://$DOMAIN$p" 2>/dev/null || true)
-  sc=$(printf '%s' "$sc" | head -1 | tr -cd '0-9')
-  if [ "$sc" = "404" ]; then
-    echo "    ✅ $p -> 404"
+# 车系聚合页 /specs/{make}/{model}/ 只在同车系有 ≥2 个上线年份时才生成，其余是 404 而不是
+# 403。期望值必须从 dist 现推，不能写死：cr-v 补齐到 2022+2024 之后，写死的「期望 404」
+# 会在每次发布时报一次假警（2026-10-26 实测），真故障反而被淹没。
+hub_expect=""
+for d in "$DIST_DIR"/specs/*/*/; do
+  [ -d "$d" ] || continue
+  rel="/${d#"$DIST_DIR"/}"
+  if [ -f "$d/index.html" ]; then hub_expect="$hub_expect $rel=200"; else hub_expect="$hub_expect $rel=404"; fi
+done
+hub_paths=$(printf '%s\n' $hub_expect | cut -d= -f1 | tr '\n' ' ')
+hub_live=$(ssh -o BatchMode=yes "$REMOTE" \
+  "for p in $hub_paths; do printf '%s %s\n' \"\$p\" \$(curl -s -m 20 -o /dev/null -w '%{http_code}' https://$DOMAIN\$p); done" 2>/dev/null || true)
+for pair in $hub_expect; do
+  hp=${pair%=*}; want=${pair#*=}
+  got=$(printf '%s\n' "$hub_live" | awk -v p="$hp" '$1==p{print $2}' | head -1)
+  if [ "$got" = "$want" ]; then
+    if [ "$want" = "404" ]; then
+      echo "    ✅ $hp -> 404（单年份，未生成聚合页）"
+    else
+      echo "    ✅ $hp -> 200（聚合页）"
+    fi
   else
-    echo "    ⚠️  $p -> ${sc:-无响应}（期望 404）" >&2
+    echo "    ⚠️  $hp -> ${got:-无响应}（期望 $want）" >&2
   fi
 done
 
