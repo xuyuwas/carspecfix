@@ -7,7 +7,9 @@ import { actionPlan } from '../../lib/verdicts.mjs';
 // only sources used by currently published (gate-passing) pages
 const liveV = vehicles.filter(v => vehicleGate(v).pass), liveI = issues.filter(i => issueGate(i).pass);
 const used = new Set(liveV.flatMap(v => [...Object.values(v.specs).filter((f: any) => f?.source && f.sourceGrade === 'A' && f.value).map((f: any) => f.source), ...(v.tires?.rows || []).filter((t: any) => t.sourceGrade === 'A').map((t: any) => t.source), ...(v.recalls.length || v.recallsFetched ? ['nhtsa-recalls'] : []), ...(v.fuelEconomy.length ? ['fueleconomy'] : [])]));
-const A = Object.entries(sources).filter(([k, x]: any) => x.grade === 'A' && used.has(k)).map(([, x]) => x);
+const Araw = Object.entries(sources).filter(([k, x]: any) => x.grade === 'A' && used.has(k)).map(([, x]) => x);
+// One PDF cited by several pages is still one source: dedupe by URL (R-L5)
+const A = [...new Map(Araw.map((x: any) => [x.url, x])).values()];
 const gov = A.filter((x: any) => x.type === 'government');
 const by = (arr: any[], key: (x: any) => string) => [...arr.reduce((m, x) => m.set(key(x), [...(m.get(key(x)) || []), x]), new Map()).entries()].sort((a, b) => a[0].localeCompare(b[0]));
 const brands = by(A.filter((x: any) => x.type !== 'government'), (x: any) => (x.name.match(/^\d{4} (\S+)/) || [])[1] || (/^GM /.test(x.name) ? 'Chevrolet' : 'Other'));

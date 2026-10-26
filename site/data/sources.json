@@ -104,13 +104,12 @@
   "archived": null
  },
  "manual-2021-ford-f-150": {
-  "name": "2021 Ford F-150 owner information",
-  "url": "https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Index?VIN=&Variantid=8579&buildtype=web&countryCode=USA&div=f&languageCode=EN&userMarket=USA",
+  "name": "Ford F-150 Owner's Manual, 2021 (version 2, EN-US, October 2021)",
+  "url": "https://www.fordservicecontent.com/Ford_Content/Catalog/owner_information/2021-Ford-F-150-Owners-Manual-version-2_om_EN-US_10_2021.pdf",
   "type": "oem",
   "grade": "A",
-  "retrieved": "2026-10-15",
-  "note": "Ford official online owner manual 2021 F-150 > Capacities and Specifications > Engine Oil Capacity and Specification (per engine). Page is JS-rendered; values not yet read directly. Also Ford tech spec PDF media.ford.com (403 from box) | OIL A-grade: waiting on 队长 download: https://www.ford.com/support/owner-manuals-details/f150/2021/ (Owner's Manual PDF; fordservicecontent.com returns 403 from box)",
-  "archived": null
+  "retrieved": "2026-10-26",
+  "note": "PDF, 796 pp. Read directly: Capacities and Specifications (pp. 591-601) gives engine oil capacity and viscosity per engine; Wheels and Tires directs the reader to the Tire Label on the driver door pillar for cold pressures. Ford's host refuses this network, so the copy actually read was the Internet Archive snapshot of the same official file: https://web.archive.org/web/20240125170754/https://www.fordservicecontent.com/Ford_Content/Catalog/owner_information/2021-Ford-F-150-Owners-Manual-version-2_om_EN-US_10_2021.pdf"
  },
  "manual-2023-ford-f-150": {
   "name": "2023 Ford F-150 owner information",
@@ -143,13 +142,12 @@
   }
  },
  "manual-2023-tesla-model-y": {
-  "name": "2023 Tesla Model Y owner information",
-  "url": "https://www.tesla.com/ownersmanual/2020_2024_modely/en_us/GUID-FDDB10EF-FFA9-46EB-B8CC-03614AE92B6B.html",
+  "name": "Tesla Model Y Owner's Manual (EN-US, 2023 edition)",
+  "url": "https://www.tesla.com/ownersmanual/modely/en_us/Owners_Manual.pdf",
   "type": "oem",
   "grade": "A",
-  "retrieved": "2026-10-15",
-  "note": "Tesla Model Y Owner's Manual, 2020-2024 edition (web), Specifications > Wheels and Tires (no page numbers; HTML section). Fetched 2026-10-15. PDF URLs return 403 from box.",
-  "archived": null
+  "retrieved": "2026-10-26",
+  "note": "PDF, 298 pp. Tire Specifications (Factory), p. 216, lists the factory sizes for 19/20/21-inch wheels and states that pressures vary by tire and are printed on the Tire and Loading Information label on the centre door pillar. The only psi figure in the manual is the towing table, p. 84: 42 psi (290 kPa) for all three sizes, overriding the label while towing. Snapshot read: https://web.archive.org/web/20230312000949/https://www.tesla.com/ownersmanual/modely/en_us/Owners_Manual.pdf"
  },
  "fe-ev-2023-tesla-model-y": {
   "name": "fueleconomy.gov (U.S. EPA / DOE), 2023 Tesla Model Y (vehicle ids 46211, 46212, 46213)",
@@ -443,5 +441,13 @@
   "grade": "A",
   "retrieved": "2026-10-20",
   "note": "OM0R025U, 744 pp, PDF created 2019-07-22 (same batch as the 2020 RAV4 gasoline manual OM0R024U). Oil capacity, lubrication system: with filter 4.8 qt (4.5 L), without filter 4.4 qt (4.2 L), p.678 printed."
+ },
+ "manual-2022-honda-cr-v": {
+  "name": "Honda CR-V Owner's Manual, 2022 (ATLA2222OM)",
+  "url": "https://techinfo.honda.com/rjanisis/pubs/OM/AH/ATLA2222OM/enu/ATLA2222OM.PDF",
+  "type": "oem",
+  "grade": "A",
+  "retrieved": "2026-10-26",
+  "note": "PDF, 672 pp, publication 31TLA6510 (22 CR-V PET HCM ELP) - the petrol 1.5L turbo edition. Specifications, p. 649, gives oil capacity and viscosity and the 17/18/19-inch tire sizes with front and rear cold pressures. Saved to manuals/honda-2022-cr-v-OM.pdf."
  }
 }

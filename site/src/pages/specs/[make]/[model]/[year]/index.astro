@@ -86,7 +86,6 @@ const pgDocs = [...new Set(tires.map(t => t.page).filter(pg => pg && pg.includes
 const tireRef = tires.length ? srcRef(tires[0].source) : null;
 const placardRef = placard ? srcRef(placard.source) : null;
 // Title/meta: only modules really on the page (R-M2 v2)
-const mods = [...(oilLines.length ? ['Oil Capacity'] : []), ...(tires.length ? ['Tire Size & Pressure'] : []), ...(v.recalls.length ? ['Recalls'] : [])];
 // A page may pin its own title/description/H1 (data: seo{}) when Search Console
 // shows it earns impressions on a phrase the generic formula does not carry. Every
 // other page keeps the formula, so the site never drifts title by title.

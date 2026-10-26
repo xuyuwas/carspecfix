@@ -1,148 +1,185 @@
 {
-  "slug": "2022-honda-cr-v",
-  "year": 2022,
-  "make": "Honda",
-  "model": "CR-V",
-  "makeSlug": "honda",
-  "modelSlug": "cr-v",
-  "powertrain": "ice",
-  "vpicConfirmed": true,
-  "manual": {
-    "sourceId": null,
-    "yearConfirmed": true,
-    "note": "TODO: US 2022 CR-V (1.5T) manual not reached; a mirror snippet (4.0 qt incl. filter, 0W-20; 235/65R17 32/30, 235/60R18 35/32, 235/55R19 33/33) comes from the CR-V HEV book — NOT used for gas model | OIL A-grade: waiting on Marlowe Sheets download: https://techinfo.honda.com/ (2022 CR-V owner's manual; exact pub ID not confirmed; techinfo times out from box)"
+ "slug": "2022-honda-cr-v",
+ "year": 2022,
+ "make": "Honda",
+ "model": "CR-V",
+ "makeSlug": "honda",
+ "modelSlug": "cr-v",
+ "powertrain": "ice",
+ "vpicConfirmed": true,
+ "manual": {
+  "sourceId": null,
+  "yearConfirmed": true,
+  "note": "TODO: US 2022 CR-V (1.5T) manual not reached; a mirror snippet (4.0 qt incl. filter, 0W-20; 235/65R17 32/30, 235/60R18 35/32, 235/55R19 33/33) comes from the CR-V HEV book — NOT used for gas model | OIL A-grade: waiting on Marlowe Sheets download: https://techinfo.honda.com/ (2022 CR-V owner's manual; exact pub ID not confirmed; techinfo times out from box)"
+ },
+ "specs": {
+  "oilCapacity": {
+   "value": "1.5L turbo (non-hybrid): 3.7 US qt (3.5 L) with filter; 3.4 US qt (3.2 L) without filter",
+   "source": "manual-2022-honda-cr-v",
+   "page": "Specifications (p. 649)",
+   "sourceGrade": "A",
+   "verified": true,
+   "appliesTo": "non-hybrid 1.5L turbo only",
+   "unverifiedNote": null
   },
-  "specs": {
-    "oilCapacity": {
-      "value": null,
-      "source": null,
-      "sourceGrade": null,
-      "verified": false,
-      "note": "owner manual"
-    },
-    "oilViscosity": {
-      "value": null,
-      "source": null,
-      "sourceGrade": null,
-      "verified": false,
-      "note": "owner manual"
-    },
-    "wiperSizes": {
-      "value": null,
-      "source": null,
-      "sourceGrade": null,
-      "verified": false,
-      "note": "no citable source yet"
-    },
-    "batteryGroup": {
-      "value": null,
-      "source": null,
-      "sourceGrade": null,
-      "verified": false,
-      "note": "no citable source yet"
-    },
-    "towingCapacity": {
-      "value": null,
-      "source": null,
-      "sourceGrade": null,
-      "verified": false
-    },
-    "tpmsReset": {
-      "value": null,
-      "source": null,
-      "sourceGrade": null,
-      "verified": false,
-      "note": null
-    }
+  "oilViscosity": {
+   "value": "Honda Genuine Motor Oil 0W-20 or API Premium-grade 0W-20 detergent oil",
+   "source": "manual-2022-honda-cr-v",
+   "page": "Specifications (p. 649)",
+   "sourceGrade": "A",
+   "verified": true,
+   "note": null
   },
-  "tires": {
-    "rows": [],
-    "note": "owner manual / door placard; owner manual"
+  "wiperSizes": {
+   "value": null,
+   "source": null,
+   "sourceGrade": null,
+   "verified": false,
+   "note": "no citable source yet"
   },
-  "extraManuals": [],
-  "fuelEconomy": [
-    {
-      "feId": "44434",
-      "model": "CR-V AWD",
-      "option": "Auto (variable gear ratios), 4 cyl, 1.5 L, Turbo",
-      "engineL": 1.5,
-      "cyl": 4,
-      "trans": "Automatic (variable gear ratios)",
-      "drive": "All-Wheel Drive",
-      "mpgCity": 27,
-      "mpgHwy": 32,
-      "mpgComb": 29,
-      "fuel": "Regular",
-      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/44434",
-      "source": "fueleconomy",
-      "sourceGrade": "A"
-    },
-    {
-      "feId": "44432",
-      "model": "CR-V FWD",
-      "option": "Auto (variable gear ratios), 4 cyl, 1.5 L, Turbo",
-      "engineL": 1.5,
-      "cyl": 4,
-      "trans": "Automatic (variable gear ratios)",
-      "drive": "Front-Wheel Drive",
-      "mpgCity": 28,
-      "mpgHwy": 34,
-      "mpgComb": 30,
-      "fuel": "Regular",
-      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/44432",
-      "source": "fueleconomy",
-      "sourceGrade": "A"
-    },
-    {
-      "feId": "44435",
-      "model": "CR-V Hybrid AWD",
-      "option": "Auto (variable gear ratios), 4 cyl, 2.0 L",
-      "engineL": 2,
-      "cyl": 4,
-      "trans": "Automatic (variable gear ratios)",
-      "drive": "All-Wheel Drive",
-      "mpgCity": 40,
-      "mpgHwy": 35,
-      "mpgComb": 38,
-      "fuel": "Regular",
-      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/44435",
-      "source": "fueleconomy",
-      "sourceGrade": "A"
-    }
+  "batteryGroup": {
+   "value": null,
+   "source": null,
+   "sourceGrade": null,
+   "verified": false,
+   "note": "no citable source yet"
+  },
+  "towingCapacity": {
+   "value": null,
+   "source": null,
+   "sourceGrade": null,
+   "verified": false
+  },
+  "tpmsReset": {
+   "value": null,
+   "source": null,
+   "sourceGrade": null,
+   "verified": false,
+   "note": null
+  }
+ },
+ "tires": {
+  "rows": [
+   {
+    "wheel": "17",
+    "config": "Non-hybrid",
+    "tireSize": "235/65R17 104H",
+    "frontPsi": 32,
+    "rearPsi": 30,
+    "page": "Specifications (p. 649)",
+    "source": "manual-2022-honda-cr-v",
+    "sourceGrade": "A"
+   },
+   {
+    "wheel": "18",
+    "config": "Non-hybrid",
+    "tireSize": "235/60R18 103H",
+    "frontPsi": 33,
+    "rearPsi": 30,
+    "page": "Specifications (p. 649)",
+    "source": "manual-2022-honda-cr-v",
+    "sourceGrade": "A"
+   },
+   {
+    "wheel": "19",
+    "config": "Non-hybrid",
+    "tireSize": "235/55R19 101H",
+    "frontPsi": 33,
+    "rearPsi": 33,
+    "page": "Specifications (p. 649)",
+    "source": "manual-2022-honda-cr-v",
+    "sourceGrade": "A"
+   }
   ],
-  "fuelEconomyFetched": "2026-10-15",
-  "recalls": [
-    {
-      "campaign": "23V524000",
-      "component": "EQUIPMENT:OTHER:LABELS",
-      "date": "2023-07-27",
-      "summary": "Honda (American Honda Motor Co.) is recalling certain 2017, 2020, and 2022 CR-V vehicles.  The certification label on the driver's side door states incorrect Gross Vehicle Weight Rating (GVWR), Gross Axle Weight Rating (GAWR), and tire size information.  As such, these vehicles fail to comply with t",
-      "source": "nhtsa-recalls",
-      "sourceGrade": "A"
-    },
-    {
-      "campaign": "23V858000",
-      "component": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
-      "date": "2023-12-18",
-      "summary": "Honda (American Honda Motor Co.) is recalling certain 2013-2023 Honda Accord, Civic Coupe, Civic Sedan, Civic Hatchback, Civic Type R, CR-V, HR-V, Ridgeline, Odyssey, Acura ILX, MDX, MDX Hybrid, RDX, RLX, TLX, 2019-2022 Honda Insight, Passport, 2020 Honda CR-V Hybrid, 2018-2019 Honda Clarity PHEV, F",
-      "source": "nhtsa-recalls",
-      "sourceGrade": "A"
-    },
-    {
-      "campaign": "26V332000",
-      "component": "AIR BAGS:SENSOR:OCCUPANT CLASSIFICATION:FRONT PASSENGER",
-      "date": "2026-05-21",
-      "summary": "Honda (American Honda Motor Co.) is recalling certain 2018-2021, 2023 Acura TLX, 2019-2024 RDX, 2017-2020, 2022-2026 MDX, 2017-2021, 2023, 2025 Honda Ridgeline, 2017-2022 Pilot, 2019-2021 Passport, 2018-2026 Odyssey, 2019-2022 Insight, 2019-2021 HR-V, 2018-2020 Fit, 2020-2022 CR-V Hybrid, 2017-2022 ",
-      "source": "nhtsa-recalls",
-      "sourceGrade": "A"
-    }
-  ],
-  "recallsFetched": "2026-10-15",
-  "recallsUrl": "https://www.nhtsa.gov/recalls?nhtsaId=&make=Honda&model=CR-V&year=2022",
-  "related": {
-    "issues": []
+  "note": "Figures are for the petrol 1.5L turbo (17, 18 and 19-inch wheels). The 2022 CR-V Hybrid has a separate owner manual and is not covered by these rows."
+ },
+ "extraManuals": [],
+ "fuelEconomy": [
+  {
+   "feId": "44434",
+   "model": "CR-V AWD",
+   "option": "Auto (variable gear ratios), 4 cyl, 1.5 L, Turbo",
+   "engineL": 1.5,
+   "cyl": 4,
+   "trans": "Automatic (variable gear ratios)",
+   "drive": "All-Wheel Drive",
+   "mpgCity": 27,
+   "mpgHwy": 32,
+   "mpgComb": 29,
+   "fuel": "Regular",
+   "url": "https://www.fueleconomy.gov/ws/rest/vehicle/44434",
+   "source": "fueleconomy",
+   "sourceGrade": "A"
   },
-  "publishDate": "2026-10-15",
-  "dataUpdated": "2026-10-15",
-  "signOff": null
+  {
+   "feId": "44432",
+   "model": "CR-V FWD",
+   "option": "Auto (variable gear ratios), 4 cyl, 1.5 L, Turbo",
+   "engineL": 1.5,
+   "cyl": 4,
+   "trans": "Automatic (variable gear ratios)",
+   "drive": "Front-Wheel Drive",
+   "mpgCity": 28,
+   "mpgHwy": 34,
+   "mpgComb": 30,
+   "fuel": "Regular",
+   "url": "https://www.fueleconomy.gov/ws/rest/vehicle/44432",
+   "source": "fueleconomy",
+   "sourceGrade": "A"
+  },
+  {
+   "feId": "44435",
+   "model": "CR-V Hybrid AWD",
+   "option": "Auto (variable gear ratios), 4 cyl, 2.0 L",
+   "engineL": 2,
+   "cyl": 4,
+   "trans": "Automatic (variable gear ratios)",
+   "drive": "All-Wheel Drive",
+   "mpgCity": 40,
+   "mpgHwy": 35,
+   "mpgComb": 38,
+   "fuel": "Regular",
+   "url": "https://www.fueleconomy.gov/ws/rest/vehicle/44435",
+   "source": "fueleconomy",
+   "sourceGrade": "A"
+  }
+ ],
+ "fuelEconomyFetched": "2026-10-15",
+ "recalls": [
+  {
+   "campaign": "23V524000",
+   "component": "EQUIPMENT:OTHER:LABELS",
+   "date": "2023-07-27",
+   "summary": "Honda (American Honda Motor Co.) is recalling certain 2017, 2020, and 2022 CR-V vehicles.  The certification label on the driver's side door states incorrect Gross Vehicle Weight Rating (GVWR), Gross Axle Weight Rating (GAWR), and tire size information.  As such, these vehicles fail to comply with t",
+   "source": "nhtsa-recalls",
+   "sourceGrade": "A"
+  },
+  {
+   "campaign": "23V858000",
+   "component": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+   "date": "2023-12-18",
+   "summary": "Honda (American Honda Motor Co.) is recalling certain 2013-2023 Honda Accord, Civic Coupe, Civic Sedan, Civic Hatchback, Civic Type R, CR-V, HR-V, Ridgeline, Odyssey, Acura ILX, MDX, MDX Hybrid, RDX, RLX, TLX, 2019-2022 Honda Insight, Passport, 2020 Honda CR-V Hybrid, 2018-2019 Honda Clarity PHEV, F",
+   "source": "nhtsa-recalls",
+   "sourceGrade": "A"
+  },
+  {
+   "campaign": "26V332000",
+   "component": "AIR BAGS:SENSOR:OCCUPANT CLASSIFICATION:FRONT PASSENGER",
+   "date": "2026-05-21",
+   "summary": "Honda (American Honda Motor Co.) is recalling certain 2018-2021, 2023 Acura TLX, 2019-2024 RDX, 2017-2020, 2022-2026 MDX, 2017-2021, 2023, 2025 Honda Ridgeline, 2017-2022 Pilot, 2019-2021 Passport, 2018-2026 Odyssey, 2019-2022 Insight, 2019-2021 HR-V, 2018-2020 Fit, 2020-2022 CR-V Hybrid, 2017-2022 ",
+   "source": "nhtsa-recalls",
+   "sourceGrade": "A"
+  }
+ ],
+ "recallsFetched": "2026-10-15",
+ "recallsUrl": "https://www.nhtsa.gov/recalls?nhtsaId=&make=Honda&model=CR-V&year=2022",
+ "related": {
+  "issues": []
+ },
+ "publishDate": "2026-10-15",
+ "dataUpdated": "2026-10-26",
+ "signOff": {
+  "by": "Marlowe Sheets",
+  "date": "2026-10-26"
+ }
 }

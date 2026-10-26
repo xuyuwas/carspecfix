@@ -155,11 +155,15 @@ for (const v of vehicles) {
   // capacity as if it were theirs. This is the regression class behind the CR-V / RAV4
   // selector showing no oil (a "non-hybrid" row mis-classified as hybrid) and the Equinox
   // collapse that hid the AWD figure.
+  // An EV has no engine oil at all, so both oil rules are vacuous there. Skipping them
+  // is not a loophole: the field is absent from the data by design, and the page says so.
   const oilFig = /\d(?:\.\d+)?\s*qt\b/i;
-  if (!nr.oil && !oilFig.test(qaText))
-    errors.push(`P0-V ${u}: one oil capacity applies to every build, but the quick answer hides it`);
-  if (nr.oil && oilFig.test(qaText) && !/engine|drivetrain|select|depending|your build|configuration|range/i.test(qaText))
-    errors.push(`P0-V ${u}: quick answer prints a single oil capacity although configuration does not narrow to one`);
+  if (v.powertrain !== 'ev') {
+    if (!nr.oil && !oilFig.test(qaText))
+      errors.push(`P0-V ${u}: one oil capacity applies to every build, but the quick answer hides it`);
+    if (nr.oil && oilFig.test(qaText) && !/engine|drivetrain|select|depending|your build|configuration|range/i.test(qaText))
+      errors.push(`P0-V ${u}: quick answer prints a single oil capacity although configuration does not narrow to one`);
+  }
   // (h) tyre pressure: same rule — a single figure only when every build shares it.
   const psiSingle = psiFig.test(qaText) && !/[–-]/.test((qaText.match(psiFig) || [])[0] || '');
   if (nr.psi && psiSingle && !/range|depending|your build|configuration/i.test(qaText))

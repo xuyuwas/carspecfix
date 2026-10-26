@@ -17,7 +17,14 @@ const byYear = y => all.find(v => v.year === y) || null;
 // Main engine only: the V6 rows of the 2009/2011 RAV4 are real but a different engine,
 // so they never mix into the 2.5 L range quoted in the quick answer.
 const oilRows = v => (v && hasVal(v.specs?.oilCapacity) && v.specs.oilCapacity.sourceGrade === 'A') ? parseOilCapacity(v.specs.oilCapacity.value) : [];
-const isMain = o => !o.label || /2\.5\s?L/i.test(o.label);
+// A hub is a whole model family, not one engine. When every year states the same
+// engine, that engine is the "main" one; when labels differ (RAV4: 2.5 L / V6 /
+// hybrid) fall back to the 2.5 L gasoline row. Hard-coding 2.5 L gave the CR-V hub an
+// empty main list, which is how "at -Infinity qt you need 0 bottles" reached a page.
+const famLabels = [...new Set(all.flatMap(v => oilRows(v).map(o => o.label).filter(Boolean)))];
+const mainLabel = famLabels.length === 1 ? famLabels[0] : null;
+const mainName = mainLabel ? mainLabel.replace(/\(non-hybrid\)/i, '').replace(/\s+/g, ' ').trim() : '2.5 L gasoline';
+const isMain = o => mainLabel ? o.label === mainLabel : (!o.label || /2\.5\s?L/i.test(o.label));
 const num = x => Number.isInteger(x) ? x.toFixed(1) : String(x);   // 6.0 qt stays 6.0, never "6"
 const cell = (v, k) => oilRows(v).filter(o => o[k] != null).map(o => [shortOilLabel(o.label), num(o[k])].filter(Boolean).join(' ')).join(' · ');
 const sizeOf = t => String(t || '').replace(/\s+\d{2,3}[A-Z]$/, '').trim();
@@ -55,7 +62,7 @@ const manualSrc = y => { const v = byYear(y); const id = v?.manual?.sourceId; re
 <Page narrow={true} title={title} description={description} path={path} nav="specs" crumbs={crumbs} jsonld={jsonld} h1={`${name} specs by year (${span})`}>
 <h2 class="section__title">Quick answer</h2>
 <ul class="links">
-  <li><b>Engine oil (2.5 L gasoline):</b> {rng(mainW)} qt with filter, {rng(mainWo)} qt without filter{bottles ? ` — buy ${bottles} one-quart bottles for a filter change` : ''}</li>
+  <li><b>Engine oil ({mainName}):</b> {mainW.length ? rng(mainW) : 'not yet read'} qt with filter{rng(mainWo) ? `, ${rng(mainWo)} qt without filter` : ''}{bottles && mainW.length ? ` — buy ${bottles} one-quart bottles for a filter change` : ''}</li>
   <li><b>Tire sizes:</b> {allSizes.join(', ')}</li>
   <li><b>Cold tire pressure:</b> {rng(allPsi)} psi across the years checked — your trim's exact figure is on the placard in the driver's door jamb</li>
 </ul>
@@ -70,7 +77,7 @@ const manualSrc = y => { const v = byYear(y); const id = v?.manual?.sourceId; re
 </tr>; })}</tbody></table></div><div class="swipe">Swipe for more columns</div></div>
 
 <h2 class="section__title">Engine oil capacity by year</h2>
-<p>Across the years checked here, the 2.5 L gasoline engine takes {rng(mainW)} qt with a filter change and {rng(mainWo)} qt without one. The difference between the two numbers is the oil held in the filter, which is why the "with filter" figure is the one to buy against: at {Math.max(...mainW)} qt you need {bottles} one-quart bottles, and what is left over is what you use for top-ups between changes.</p>
+{mainW.length > 0 && <p>Across the years checked here, the {mainName} engine takes {rng(mainW)} qt with a filter change{mainWo.length ? ` and ${rng(mainWo)} qt without one` : ''}. {mainWo.length ? 'The difference between the two numbers is the oil held in the filter, which is why the "with filter" figure is the one to buy against' : 'The filter holds a fraction of a quart, so the with-filter figure is the one to buy against'}: at {Math.max(...mainW)} qt you need {bottles} one-quart bottles, and what is left over is what you use for top-ups between changes.</p>}
 <p>The figure is not constant across the run. {earliest.year} and {latest.year} sit {latest.year - earliest.year} model years apart, and the engine, oil pan and filter are not the same parts throughout — {earliest.year} is listed at {cell(earliest, 'w')} qt with filter, {latest.year} at {cell(latest, 'w')} qt. That is why a capacity quoted for one year is not safe to use on another, even when the engine displacement looks identical.</p>
 {hybridYears.length > 0 && hybridYears.length < checked.length
   ? <p><b>Powertrains:</b> hybrid capacity is read and listed for {hybridYears.join(', ')} only. Every other row is the gasoline engine. A hybrid figure is never filled in from the gasoline number, so those years need the hybrid manual — the gasoline capacity is not a substitute.</p>
@@ -85,7 +92,7 @@ const manualSrc = y => { const v = byYear(y); const id = v?.manual?.sourceId; re
 <p>The recall count column is the number of NHTSA campaigns recorded against that model year, read from the NHTSA recalls database on {earliest.recallsFetched}. A campaign is not a prediction that your car is affected — coverage depends on build date, plant and options. Enter your own VIN at nhtsa.gov/recalls to see what is still open on your car; a recall stays open until the work is done, even after the car changes hands.</p>
 
 <h2 class="section__title">What changed between years</h2>
-<p>Comparing the oldest and newest years read so far: oil capacity with filter went from {cell(earliest, 'w')} qt ({earliest.year}) to {cell(latest, 'w')} qt ({latest.year}), tire sizes from {sizes(earliest)} to {sizes(latest)}, and cold pressure from {psiOf(earliest)} psi to {psiOf(latest)} psi. Where an engine or wheel option exists in one year and not another, the table shows it as a difference in that row instead of a single "typical" figure for the whole model.</p>
+<p>Comparing the oldest and newest years read so far: oil capacity with filter went from {cell(earliest, 'w')} qt ({earliest.year}) to {cell(latest, 'w')} qt ({latest.year}), tire sizes from {sizes(earliest)} to {sizes(latest)}{psiOf(earliest) && psiOf(latest) ? `, and cold pressure from ${psiOf(earliest)} psi to ${psiOf(latest)} psi` : ''}. Where an engine or wheel option exists in one year and not another, the table shows it as a difference in that row instead of a single "typical" figure for the whole model.</p>
 {pending.length > 0 && <p>Still to check: {pending.join(', ')}. Those rows stay blank until the owner's manual for each year has been read and page-cited — an empty cell beats a number nobody can verify.</p>}
 
 {codes.length > 0 && <><h2 class="section__title">Trouble codes we cover</h2>

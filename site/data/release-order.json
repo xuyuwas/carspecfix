@@ -50,6 +50,13 @@
     ],
     "7": [
       "2022-chevrolet-equinox"
+    ],
+    "8": [
+      "2021-ford-f-150",
+      "2023-ford-f-150",
+      "2022-chevrolet-silverado-1500",
+      "2023-tesla-model-y",
+      "2022-honda-cr-v"
     ]
   },
   "relatedIssues": [

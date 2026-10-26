@@ -6,6 +6,10 @@ import { liveVehicles, liveIssues, liveHubs, vehicles, vehicleGate, vehicleUrl, 
 import { SEGMENT } from '../lib/refs.mjs';
 const codes = liveIssues.filter(i => i.type === 'code'), syms = liveIssues.filter(i => i.type === 'symptom');
 const sorted = [...liveVehicles].sort((a, b) => a.make.localeCompare(b.make) || a.model.localeCompare(b.model) || b.year - a.year);
+// The homepage is a directory, not a link farm: every vehicle card is one body link and
+// R-L4 fails the page above 50. Show the newest 20 and send the rest to /specs/, so
+// publishing a vehicle no longer pushes this page over the limit.
+const shownV = [...sorted].sort((a, b) => b.year - a.year || a.make.localeCompare(b.make) || a.model.localeCompare(b.model)).slice(0, 20);
 // Published counts are honest by construction: the gap between draft and live is
 // shown, so a small library reads as "still being checked" rather than "thin".
 const inReview = vehicles.filter(v => !vehicleGate(v).dataReady).length;
@@ -29,7 +33,8 @@ const inReview = vehicles.filter(v => !vehicleGate(v).dataReady).length;
   </ul>
 </section>
 <section class="hsec"><div class="hsec__head"><h2 class="section__title">Vehicles</h2></div>
-{sorted.length ? <div class="vgrid">{sorted.map(v => <div class="vcard"><div class="vcard__art"><Photo slug={v.slug} year={v.year} name={`${v.make} ${v.model}`} segment={SEGMENT[v.modelSlug] || 'sedan'} sizes="(min-width:1024px) 288px, (min-width:640px) 45vw, 92vw" /></div><div class="vcard__body"><span class="vcard__yr">{v.year}</span><span class="vcard__name">{v.make} {v.model}</span><span class="vcard__meta">Oil · Tires · Recalls</span></div><a class="vcard__hit" href={vehicleUrl(v)}><span class="sr-only">{v.year} {v.make} {v.model} specs</span></a></div>)}</div> : <p>Vehicle pages are being checked.</p>}
+{sorted.length ? <div class="vgrid">{shownV.map(v => <div class="vcard"><div class="vcard__art"><Photo slug={v.slug} year={v.year} name={`${v.make} ${v.model}`} segment={SEGMENT[v.modelSlug] || 'sedan'} sizes="(min-width:1024px) 288px, (min-width:640px) 45vw, 92vw" /></div><div class="vcard__body"><span class="vcard__yr">{v.year}</span><span class="vcard__name">{v.make} {v.model}</span><span class="vcard__meta">Oil · Tires · Recalls</span></div><a class="vcard__hit" href={vehicleUrl(v)}><span class="sr-only">{v.year} {v.make} {v.model} specs</span></a></div>)}</div> : <p>Vehicle pages are being checked.</p>}
+{sorted.length > shownV.length && <p class="ks__src"><a href="/specs/">All {sorted.length} vehicle pages, newest first</a></p>}
 {liveHubs().length > 0 && <ul class="links">{liveHubs().map(h => <li><a href={`/specs/${h.makeSlug}/${h.modelSlug}/`}>{h.years[0].make} {h.years[0].model}: all years</a></li>)}</ul>}
 </section>
 {syms.length > 0 ? <div class="split hsec">
