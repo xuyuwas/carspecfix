@@ -1,18 +1,25 @@
 {
   // carspecfix feedback relay — declarative source of truth for the bindings.
-  // Live deployments in this repo were made through the Cloudflare MCP `execute`
-  // tool (same metadata shape); this file documents it and allows `wrangler deploy`.
+  // Deploy with: npx wrangler deploy   (from this directory)
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "carspecfix-feedback",
   "main": "src/worker.js",
   "compatibility_date": "2026-09-01",
   "workers_dev": false,
+  "account_id": "927de7e28ba2276f10fc911ef280515f",
   "send_email": [
     {
       "name": "EMAIL",
-      // Verified Cloudflare Email Routing destination. Sends to verified
-      // destinations are free on any plan and need no sending-domain onboarding.
-      "destination_address": "xuyu8813@gmail.com"
+      // Two allowed recipients, both free on any plan:
+      //   hello@carspecfix.com  — the address the site publishes. Email Routing
+      //                           forwards it to the verified destination below.
+      //   xuyu8813@gmail.com    — verified destination; the worker falls back to it
+      //                           if a send to hello@ is ever refused, so a form
+      //                           submission is never dropped.
+      "allowed_destination_addresses": [
+        "hello@carspecfix.com",
+        "xuyu8813@gmail.com"
+      ]
     }
   ],
   "routes": [

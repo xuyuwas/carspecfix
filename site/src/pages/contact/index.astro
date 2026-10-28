@@ -3,7 +3,8 @@ import Page from '../../layouts/Page.astro';
 import { CONTACT_EMAIL, AUTHOR } from '../../lib/site.mjs';
 ---
 <Page title="Contact & Report a Data Error | CarSpecFix" description="Contact CarSpecFix, report a wrong figure on any page, or ask for a vehicle to be added — what to include and how long a reply takes." path="/contact/" crumbs={[{ name: 'Home', url: '/' }, { name: 'Contact', url: '/contact/' }]} h1="Contact">
-<p>Email <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>, or use the form below for a wrong figure. Both reach the same inbox, which is read by <a href={`/authors/${AUTHOR.slug}/`}>{AUTHOR.name}</a>.</p>
+<p>Every page on this site ends with a box you can write in, and it reaches the same inbox as <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. Both are read by <a href={`/authors/${AUTHOR.slug}/`}>{AUTHOR.name}</a>. Use whichever is closer to hand.</p>
+<p>The form below is the one to use for a <em>wrong figure</em>: it asks for the page, the value and the source you are checking against, which is exactly what a correction needs. A general question — a car we do not cover yet, a code that has no page — belongs in the box at the bottom of any page.</p>
 <p>There is no support desk and no ticket number: replies come from one person, usually within a few working days. A report with the page and the source you are checking against gets fixed fastest — a report that says only "this is wrong" usually needs a second email before anything can change.</p>
 
 <h2 class="section__title" id="report-form">Report a data error</h2>

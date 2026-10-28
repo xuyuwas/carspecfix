@@ -1,17 +1,29 @@
 ---
-// R-A1 / R-A3: UI + client logic; storage backend is a pluggable stub (public/feedback.js). No cookies, no personal data.
+// Closes every page: one form that reaches the site owner's inbox, plus the link to
+// the structured data-error report on /contact/. Backend is /api/feedback
+// (worker/src/worker.js) — the message is relayed to hello@carspecfix.com and
+// nothing is stored. No cookies, no hidden analytics.
 const { path } = Astro.props;
+// /contact/ already carries the structured report form, so it does not need a
+// second link pointing at itself — and its box is about the site, not a page.
+const isContact = path === '/contact/';
+const heading = isContact ? 'Still have a question?' : 'Question about this page?';
 ---
-<section id="feedback" class="feedback" aria-label="Feedback" data-page={path}>
+<section id="feedback" class="feedback" aria-labelledby="feedback-q" data-page={path}>
   <input class="hp-field" type="text" name="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-  <div class="feedback__row"><h2 class="feedback__q">Did this solve your problem?</h2>
-    <button class="btn" type="button" data-feedback="yes" aria-pressed="false">Yes</button>
-    <button class="btn" type="button" data-feedback="no" aria-pressed="false">No</button></div>
-  <p class="feedback__msg" role="status"></p>
-  <div class="feedback__more" hidden>
-    <label class="qa__q" for="fb-text">What was missing? (optional, no personal info — replies are private and never published)</label>
-    <textarea id="fb-text" maxlength="1000"></textarea>
-    <div><button class="btn btn--primary" type="button" data-feedback-send>Send</button></div>
-  </div>
-  <p class="report" id="report">Spotted a wrong number? <a href={`/contact/?report=${encodeURIComponent(path)}#report-form`}>Report a data error</a>. Corrections are reviewed and logged.</p>
+  <h2 class="feedback__q" id="feedback-q">{heading}</h2>
+  <p class="feedback__lead">Ask the site owner directly — one person reads every message and replies, usually within a few working days. No account needed.</p>
+  <form class="feedback__form" data-ask>
+    <label class="feedback__f"><span class="feedback__lbl">Your question</span>
+      <textarea name="message" rows="3" maxlength="2000" required placeholder="The year, model and the figure you are after get the fastest answer."></textarea>
+    </label>
+    <label class="feedback__f"><span class="feedback__lbl">Your email <em>optional — only used to reply</em></span>
+      <input type="email" name="email" maxlength="254" autocomplete="email" placeholder="you@example.com">
+    </label>
+    <div class="feedback__actions">
+      <button class="btn btn--accent" type="submit">Send question</button>
+      <p class="feedback__msg" role="status"></p>
+    </div>
+  </form>
+  {!isContact && <p class="report">Spotted a wrong number? <a href={`/contact/?report=${encodeURIComponent(path)}#report-form`}>Report a data error</a> — corrections are checked against the source and logged.</p>}
 </section>

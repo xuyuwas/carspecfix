@@ -102,15 +102,23 @@ if(!no){
     if(c){var t=c.getAttribute('data-copy');if(!t){var scope=c.closest('[data-copy-scope],section');t=scope?scope.innerText.replace(/\s*(Copy|Print|Print page|Copied|Copy failed)\s*/g,' ').trim():document.title}copyText(t).then(function(ok){flash(c,ok);track('copy')})}
     if(e.target.closest('[data-print]')){e.preventDefault();track('print');window.print()}
     var m=e.target.closest('[data-menu]');if(m){var n=document.getElementById('main-nav');var o=n.classList.toggle('is-open');m.setAttribute('aria-expanded',o?'true':'false')}
-    var fb=e.target.closest('[data-feedback]');
-    if(fb){var box=fb.closest('.feedback'),v=fb.getAttribute('data-feedback');box.querySelectorAll('[data-feedback]').forEach(function(b){b.setAttribute('aria-pressed',b===fb)});box.querySelector('.feedback__more').hidden=(v!=='no');box.querySelector('.feedback__msg').textContent=v==='yes'?'Thanks, glad it helped.':'Thanks. Tell us what was missing (optional).';CSF.send({type:'feedback',page:box.dataset.page,value:v,text:''},box)}
-    var sd=e.target.closest('[data-feedback-send]');
-    if(sd){var bx=sd.closest('.feedback'),ta=bx.querySelector('textarea');CSF.send({type:'feedback-detail',page:bx.dataset.page,value:'no',text:ta.value.slice(0,1000)},bx).then(function(ok){bx.querySelector('.feedback__msg').textContent=ok?'Sent. Thank you.':'Could not send. Please try again later.';if(ok){bx.querySelector('.feedback__more').hidden=true}})}
   });
   document.addEventListener('submit',function(e){var f=e.target;
     if(f.matches('[data-search],[data-code]')){e.preventDefault();goCode(f.q.value,f)}
     if(f.matches('[data-goto]')){e.preventDefault();if(f.u.value)location.href=f.u.value}
-    if(f.matches('[data-report]')){e.preventDefault();CSF.send({type:'report',page:f.page.value,field:f.field.value,text:f.details.value.slice(0,2000)},f).then(function(ok){f.querySelector('[role=status]').textContent=ok?'Thanks. Your report is queued for review.':'Could not send. Please try again later.';track('report');if(ok)f.reset()})}
+    if(f.matches('[data-report]')){e.preventDefault();CSF.send({type:'report',page:f.page.value,field:f.field.value,text:f.details.value.slice(0,2000)},f).then(function(ok){var st=f.querySelector('[role=status]');st.className='feedback__msg '+(ok?'is-ok':'is-err');st.textContent=ok?'Thanks. Your report is queued for review.':'Could not send. Please try again later.';track('report');if(ok)f.reset()})}
+    if(f.matches('[data-ask]')){e.preventDefault();
+      var box=f.closest('.feedback'),msg=box.querySelector('.feedback__msg'),ta=f.querySelector('[name=message]'),em=f.querySelector('[name=email]'),btn=f.querySelector('[type=submit]');
+      var text=(ta.value||'').trim();
+      if(!text){msg.className='feedback__msg is-err';msg.textContent='Write your question first — an empty message cannot be sent.';ta.focus();return}
+      var addr=(em.value||'').trim();
+      btn.disabled=true;msg.className='feedback__msg';msg.textContent='Sending…';
+      CSF.send({type:'contact',page:box.dataset.page,text:text.slice(0,2000),email:addr.slice(0,254)},box).then(function(ok){
+        btn.disabled=false;
+        if(ok){msg.className='feedback__msg is-ok';msg.textContent=addr?('Sent. A reply goes to '+addr+'.'):'Sent. Thank you — every message is read.';f.reset()}
+        else{msg.className='feedback__msg is-err';msg.textContent='Could not send. Please try again, or email hello@carspecfix.com.'}
+      });
+    }
   });
 })();
 </script>
