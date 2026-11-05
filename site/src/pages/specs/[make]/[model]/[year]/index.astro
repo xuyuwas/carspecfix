@@ -68,6 +68,28 @@ const oilCard = oilEngines.map(o => {
     blank: o.unverified || (o.w == null && o.wo == null),
   };
 });
+// P1-1: the year page used to carry data cards only, so every "how much oil does a
+// YYYY X take" query was answered by the model hub's prose at position 8-11. One
+// answer paragraph gives this page its own text for that question. Every figure is
+// read from the same parsed oilCapacity field as the card — nothing is recalculated
+// or carried over from another year — and a year with no verified capacity renders
+// no section at all (rather than turning "Not yet verified" into a number).
+const oilAnswerEngines = oilEngines.filter(o => !o.unverified && (o.w != null || o.wo != null));
+const oilAnswer = oilAnswerEngines.length ? (() => {
+  const one = o => {
+    const w = o.w != null ? `${qt(o.w)} qt` : null;
+    const wo = o.wo != null ? `${qt(o.wo)} qt` : null;
+    const figs = w && wo ? `${w} with a filter change (${wo} without)` : w ? `${w} with a filter change` : `${wo} without a filter change`;
+    return o.label ? `${figs} on the ${o.label}` : figs;
+  };
+  const parts = oilAnswerEngines.map(one);
+  const list = parts.length === 1 ? parts[0] : `${parts.slice(0, -1).join(', ')}, or ${parts.at(-1)}`;
+  return {
+    q: `How much oil does a ${name} take?`,
+    a: `The ${name} takes ${list}.`,
+    grade: A(s.oilViscosity) ? `The manual specifies ${noRefs(s.oilViscosity.value)}.` : null,
+  };
+})() : null;
 // EV pages carry no oilCapacity field at all — optional chaining keeps them renderable.
 const oilApplies = s.oilCapacity?.appliesTo ? `Applies to: ${s.oilCapacity.appliesTo}.` : '';
 const oilUnver = s.oilCapacity?.unverifiedNote || '';
@@ -180,7 +202,7 @@ const sourceDate = readDates.length ? (readDates.length === 1 ? readDates[0] : `
 <div class="vhead vhead--compact"><div class="container">
 <nav class="crumbs" aria-label="Breadcrumb">{crumbs.map((c, i) => <>{i > 0 && <span class="sep">/</span>}{c.url && i < crumbs.length - 1 ? <a href={c.url}>{c.name}</a> : <span aria-current={i === crumbs.length - 1 ? 'page' : undefined}>{c.name}</span>}</>)}</nav>
 <div class="vhead__grid" style="padding-bottom:0">
-  <div><div class="eyebrow">{v.make}{configs.length > 0 && ` · ${configs.join(' / ')}`}</div><h1 class="vtitle"><span class="yr">{v.year} {v.make}</span>{seo.h1Tail ?? `${v.model} specs`}</h1></div>
+  <div><div class="eyebrow">{v.make}{configs.length > 0 && ` · ${configs.join(' / ')}`}</div><h1 class="vtitle"><span class="yr">{v.year} {v.make}</span>{' '}{seo.h1Tail ?? `${v.model} specs`}</h1></div>
   <div class="vart"><Photo slug={v.slug} year={v.year} name={`${v.make} ${v.model}`} segment={segment} hero={true} powertrain={v.powertrain} /></div>
 </div>
 <ConfigPicker v={v} />
@@ -233,6 +255,14 @@ const sourceDate = readDates.length ? (readDates.length === 1 ? readDates[0] : `
   </div>
   <div class="qa__foot"><span>Review record: <a href="#review">3 dates</a> — source read, human review, last change</span><a href="#report">Report a data error</a></div>
 </section>
+{oilAnswer && <section id="oil-answer" data-copy-scope style="margin-top:var(--sp-8)">
+  <div class="section__head"><div><h2 class="section__title">{oilAnswer.q}</h2><p class="section__kicker">One line per engine, from this year's owner's manual</p></div><Tools /></div>
+  <div class="prose">
+    <p>{oilAnswer.a}</p>
+    {oilAnswer.grade && <p>{oilAnswer.grade}</p>}
+    <p class="ks__src">{v.make} {v.year} {v.model} owner's manual{s.oilCapacity.page ? `, ${s.oilCapacity.page} (capacity)` : ''}{A(s.oilViscosity) && s.oilViscosity.page ? `, ${s.oilViscosity.page} (viscosity)` : ''}.</p>
+  </div>
+</section>}
 <div id="review"><ReviewDates source={sourceDate} reviewed={v.signOff?.date} by={v.signOff?.by} changed={updated} path={path} /></div>
 <div class="vart-m"><Photo slug={v.slug} year={v.year} name={`${v.make} ${v.model}`} segment={segment} hero={false} powertrain={v.powertrain} /></div>
 {siblings.length > 0 && <div class="vmeta" style="margin:16px 0 0"><div class="chips"><span class="vmeta__label">Year</span>{[...siblings, v].sort((a, b) => a.year - b.year).map(x => x.slug === v.slug ? <span class="chip" aria-current="page">{x.year}</span> : <a class="chip chip--muted" href={vehicleUrl(x)}>{x.year}</a>)}</div></div>}

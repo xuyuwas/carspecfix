@@ -77,11 +77,11 @@ const manualSrc = y => { const v = byYear(y); const id = v?.manual?.sourceId; re
 </ul>
 
 <h2 class="section__title">{name} specs by year</h2>
-{liveYears.size > 0 && <div class="vmeta" style="margin:0 0 12px"><div class="chips"><span class="vmeta__label">Go to year</span>{years.filter(y => liveYears.has(y)).map(y => <a class="chip chip--muted" href={vehicleUrl(byYear(y))}>{y}</a>)}</div></div>}
+{liveYears.size > 0 && <div class="vmeta" style="margin:0 0 12px"><div class="chips"><span class="vmeta__label">Go to year</span>{years.filter(y => liveYears.has(y)).map(y => <a class="chip chip--muted" href={vehicleUrl(byYear(y))}>{y} {v0.model}</a>)}</div></div>}
 <p>One row per model year. Every figure comes from that year's owner's manual (page cited on the year page), NHTSA or fueleconomy.gov — nothing is estimated. A blank cell means we have not read that figure yet; it gets filled in as soon as the manual for that year is checked.</p>
 <div class="tbl-wrap"><div class="tbl-scroll" role="region" tabindex="0" aria-label="Specs by year"><table class="tbl"><thead><tr><th scope="col">Year</th><th scope="col">Oil (with filter)</th><th scope="col">Oil (without filter)</th><th scope="col">Tire sizes</th><th scope="col" class="num">Cold psi</th><th scope="col" class="num">Recalls</th></tr></thead>
 <tbody>{years.map(y => { const v = byYear(y); return <tr>
-  <td class="strong">{v && liveYears.has(y) ? <a href={vehicleUrl(v)}>{y}</a> : y}</td>
+  <td class="strong nowrap">{v && liveYears.has(y) ? <a href={vehicleUrl(v)}>{y} {v0.model}</a> : y}</td>
   <td>{cellCited(v, 'w')}</td><td>{cellCited(v, 'wo')}</td><td>{sizes(v)}</td><td class="num">{psiOf(v)}</td><td class="num">{v ? v.recalls.length : ''}</td>
 </tr>; })}</tbody></table></div><div class="swipe">Swipe for more columns</div></div>
 
