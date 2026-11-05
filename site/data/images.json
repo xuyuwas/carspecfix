@@ -922,5 +922,665 @@
     "title": "2022 MY Toyota RAV4 Hybrid facelift XA50",
     "signedBy": "阿简",
     "signedAt": "2026-10-20"
+  },
+  "2009-toyota-camry": {
+    "cropped": false,
+    "shownOverride": "Shown: 2007-2009 Camry XLE (same generation)",
+    "set": [
+      {
+        "url": "/img/2009-toyota-camry/07-09_Toyota_Camry_XLE-480.webp",
+        "w": 480,
+        "h": 210
+      },
+      {
+        "url": "/img/2009-toyota-camry/07-09_Toyota_Camry_XLE-800.webp",
+        "w": 800,
+        "h": 349
+      },
+      {
+        "url": "/img/2009-toyota-camry/07-09_Toyota_Camry_XLE-1200.webp",
+        "w": 1200,
+        "h": 524
+      }
+    ],
+    "width": 1200,
+    "height": 524,
+    "author": "MercurySable99",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:07-09_Toyota_Camry_XLE.jpg",
+    "credit": "Photo: \"07-09 Toyota Camry XLE\" by MercurySable99, via Wikimedia Commons, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0) — resized",
+    "photoYear": null,
+    "shown": "07-09 Toyota Camry XLE",
+    "title": "07-09 Toyota Camry XLE",
+    "signedBy": "阿简",
+    "signedAt": "2026-11-02"
+  },
+  "2010-toyota-camry": {
+    "cropped": false,
+    "shownOverride": "Shown: 2010-11 Camry XLE (same generation)",
+    "set": [
+      {
+        "url": "/img/2010-toyota-camry/Toyota_Camry_XLE_--_05-03-2010-480.webp",
+        "w": 480,
+        "h": 254
+      },
+      {
+        "url": "/img/2010-toyota-camry/Toyota_Camry_XLE_--_05-03-2010-800.webp",
+        "w": 800,
+        "h": 424
+      },
+      {
+        "url": "/img/2010-toyota-camry/Toyota_Camry_XLE_--_05-03-2010-1200.webp",
+        "w": 1200,
+        "h": 636
+      }
+    ],
+    "width": 1200,
+    "height": 636,
+    "author": "IFCAR",
+    "license": "Public domain",
+    "licenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-self",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Toyota_Camry_XLE_--_05-03-2010.jpg",
+    "credit": "Photo: \"Toyota Camry XLE -- 05-03-2010\" by IFCAR, via Wikimedia Commons, Public domain (https://commons.wikimedia.org/wiki/Template:PD-self) — resized",
+    "photoYear": null,
+    "shown": "Toyota Camry XLE -- 05-03-2010",
+    "title": "Toyota Camry XLE -- 05-03-2010",
+    "signedBy": "阿简",
+    "signedAt": "2026-11-02"
+  },
+  "2011-toyota-camry": {
+    "cropped": false,
+    "shownOverride": "Shown: 2010-11 Camry XLE (same generation)",
+    "set": [
+      {
+        "url": "/img/2011-toyota-camry/Toyota_Camry_XLE_--_05-03-2010-480.webp",
+        "w": 480,
+        "h": 254
+      },
+      {
+        "url": "/img/2011-toyota-camry/Toyota_Camry_XLE_--_05-03-2010-800.webp",
+        "w": 800,
+        "h": 424
+      },
+      {
+        "url": "/img/2011-toyota-camry/Toyota_Camry_XLE_--_05-03-2010-1200.webp",
+        "w": 1200,
+        "h": 636
+      }
+    ],
+    "width": 1200,
+    "height": 636,
+    "author": "IFCAR",
+    "license": "Public domain",
+    "licenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-self",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Toyota_Camry_XLE_--_05-03-2010.jpg",
+    "credit": "Photo: \"Toyota Camry XLE -- 05-03-2010\" by IFCAR, via Wikimedia Commons, Public domain (https://commons.wikimedia.org/wiki/Template:PD-self) — resized",
+    "photoYear": null,
+    "shown": "Toyota Camry XLE -- 05-03-2010",
+    "title": "Toyota Camry XLE -- 05-03-2010",
+    "signedBy": "阿简",
+    "signedAt": "2026-11-02"
+  },
+  "2012-toyota-camry": {
+    "cropped": false,
+    "shownOverride": "Shown: 2012 Camry SE",
+    "set": [
+      {
+        "url": "/img/2012-toyota-camry/2012_Toyota_Camry_SE_--_10-19-2011-480.webp",
+        "w": 480,
+        "h": 277
+      },
+      {
+        "url": "/img/2012-toyota-camry/2012_Toyota_Camry_SE_--_10-19-2011-800.webp",
+        "w": 800,
+        "h": 461
+      },
+      {
+        "url": "/img/2012-toyota-camry/2012_Toyota_Camry_SE_--_10-19-2011-1200.webp",
+        "w": 1200,
+        "h": 692
+      }
+    ],
+    "width": 1200,
+    "height": 692,
+    "author": "IFCAR",
+    "license": "Public domain",
+    "licenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-self",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2012_Toyota_Camry_SE_--_10-19-2011.jpg",
+    "credit": "Photo: \"2012 Toyota Camry SE -- 10-19-2011\" by IFCAR, via Wikimedia Commons, Public domain (https://commons.wikimedia.org/wiki/Template:PD-self) — resized",
+    "photoYear": 2012,
+    "shown": "2012 Toyota Camry SE -- 10-19-2011",
+    "title": "2012 Toyota Camry SE -- 10-19-2011",
+    "signedBy": "阿简",
+    "signedAt": "2026-11-02"
+  },
+  "2009-honda-cr-v": {
+    "cropped": false,
+    "shownOverride": "Shown: 2007-2009 CR-V EX (same generation)",
+    "set": [
+      {
+        "url": "/img/2009-honda-cr-v/3rd_Honda_CR-V_EX-480.webp",
+        "w": 480,
+        "h": 287
+      },
+      {
+        "url": "/img/2009-honda-cr-v/3rd_Honda_CR-V_EX-800.webp",
+        "w": 800,
+        "h": 478
+      },
+      {
+        "url": "/img/2009-honda-cr-v/3rd_Honda_CR-V_EX-1200.webp",
+        "w": 1200,
+        "h": 717
+      }
+    ],
+    "width": 1200,
+    "height": 717,
+    "author": "IFCAR",
+    "license": "Public domain",
+    "licenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-self",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:3rd_Honda_CR-V_EX.jpg",
+    "credit": "Photo: \"3rd Honda CR-V EX\" by IFCAR, via Wikimedia Commons, Public domain (https://commons.wikimedia.org/wiki/Template:PD-self) — resized",
+    "photoYear": null,
+    "shown": "3rd Honda CR-V EX",
+    "title": "3rd Honda CR-V EX",
+    "signedBy": "阿简",
+    "signedAt": "2026-11-02"
+  },
+  "2010-honda-cr-v": {
+    "cropped": false,
+    "shownOverride": "Shown: 2010-11 CR-V EX (same generation)",
+    "set": [
+      {
+        "url": "/img/2010-honda-cr-v/2010-2011_Honda_CR-V_EX-480.webp",
+        "w": 480,
+        "h": 247
+      },
+      {
+        "url": "/img/2010-honda-cr-v/2010-2011_Honda_CR-V_EX-800.webp",
+        "w": 800,
+        "h": 411
+      },
+      {
+        "url": "/img/2010-honda-cr-v/2010-2011_Honda_CR-V_EX-1200.webp",
+        "w": 1200,
+        "h": 617
+      }
+    ],
+    "width": 1200,
+    "height": 617,
+    "author": "IFCAR",
+    "license": "Public domain",
+    "licenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-self",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2010-2011_Honda_CR-V_EX.jpg",
+    "credit": "Photo: \"2010-2011 Honda CR-V EX\" by IFCAR, via Wikimedia Commons, Public domain (https://commons.wikimedia.org/wiki/Template:PD-self) — resized",
+    "photoYear": null,
+    "shown": "2010-2011 Honda CR-V EX",
+    "title": "2010-2011 Honda CR-V EX",
+    "signedBy": "阿简",
+    "signedAt": "2026-11-02"
+  },
+  "2011-honda-cr-v": {
+    "cropped": false,
+    "shownOverride": "Shown: 2010-11 CR-V EX (same generation)",
+    "set": [
+      {
+        "url": "/img/2011-honda-cr-v/2010-2011_Honda_CR-V_EX-480.webp",
+        "w": 480,
+        "h": 247
+      },
+      {
+        "url": "/img/2011-honda-cr-v/2010-2011_Honda_CR-V_EX-800.webp",
+        "w": 800,
+        "h": 411
+      },
+      {
+        "url": "/img/2011-honda-cr-v/2010-2011_Honda_CR-V_EX-1200.webp",
+        "w": 1200,
+        "h": 617
+      }
+    ],
+    "width": 1200,
+    "height": 617,
+    "author": "IFCAR",
+    "license": "Public domain",
+    "licenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-self",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2010-2011_Honda_CR-V_EX.jpg",
+    "credit": "Photo: \"2010-2011 Honda CR-V EX\" by IFCAR, via Wikimedia Commons, Public domain (https://commons.wikimedia.org/wiki/Template:PD-self) — resized",
+    "photoYear": null,
+    "shown": "2010-2011 Honda CR-V EX",
+    "title": "2010-2011 Honda CR-V EX",
+    "signedBy": "阿简",
+    "signedAt": "2026-11-02"
+  },
+  "2012-honda-cr-v": {
+    "cropped": false,
+    "shownOverride": "Shown: 2012 CR-V",
+    "set": [
+      {
+        "url": "/img/2012-honda-cr-v/2012_Honda_CR-V_--_01-07-2012-480.webp",
+        "w": 480,
+        "h": 260
+      },
+      {
+        "url": "/img/2012-honda-cr-v/2012_Honda_CR-V_--_01-07-2012-800.webp",
+        "w": 800,
+        "h": 434
+      },
+      {
+        "url": "/img/2012-honda-cr-v/2012_Honda_CR-V_--_01-07-2012-1200.webp",
+        "w": 1200,
+        "h": 650
+      }
+    ],
+    "width": 1200,
+    "height": 650,
+    "author": "IFCAR",
+    "license": "Public domain",
+    "licenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-self",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2012_Honda_CR-V_--_01-07-2012.jpg",
+    "credit": "Photo: \"2012 Honda CR-V -- 01-07-2012\" by IFCAR, via Wikimedia Commons, Public domain (https://commons.wikimedia.org/wiki/Template:PD-self) — resized",
+    "photoYear": 2012,
+    "shown": "2012 Honda CR-V -- 01-07-2012",
+    "title": "2012 Honda CR-V -- 01-07-2012",
+    "signedBy": "阿简",
+    "signedAt": "2026-11-02"
+  },
+  "2007-honda-cr-v": {
+    "cropped": false,
+    "shownOverride": "Shown: 2007-2009 CR-V EX (same generation)",
+    "set": [
+      {
+        "url": "/img/2007-honda-cr-v/3rd_Honda_CR-V_EX-480.webp",
+        "w": 480,
+        "h": 287
+      },
+      {
+        "url": "/img/2007-honda-cr-v/3rd_Honda_CR-V_EX-800.webp",
+        "w": 800,
+        "h": 478
+      },
+      {
+        "url": "/img/2007-honda-cr-v/3rd_Honda_CR-V_EX-1200.webp",
+        "w": 1200,
+        "h": 717
+      }
+    ],
+    "width": 1200,
+    "height": 717,
+    "author": "IFCAR",
+    "license": "Public domain",
+    "licenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-self",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:3rd_Honda_CR-V_EX.jpg",
+    "credit": "Photo: \"3rd Honda CR-V EX\" by IFCAR, via Wikimedia Commons, Public domain (https://commons.wikimedia.org/wiki/Template:PD-self) — resized",
+    "photoYear": null,
+    "shown": "3rd Honda CR-V EX",
+    "title": "3rd Honda CR-V EX",
+    "signedBy": "阿简",
+    "signedAt": "2026-11-02"
+  },
+  "2008-honda-cr-v": {
+    "cropped": false,
+    "shownOverride": "Shown: 2007-2009 CR-V EX (same generation)",
+    "set": [
+      {
+        "url": "/img/2008-honda-cr-v/3rd_Honda_CR-V_EX-480.webp",
+        "w": 480,
+        "h": 287
+      },
+      {
+        "url": "/img/2008-honda-cr-v/3rd_Honda_CR-V_EX-800.webp",
+        "w": 800,
+        "h": 478
+      },
+      {
+        "url": "/img/2008-honda-cr-v/3rd_Honda_CR-V_EX-1200.webp",
+        "w": 1200,
+        "h": 717
+      }
+    ],
+    "width": 1200,
+    "height": 717,
+    "author": "IFCAR",
+    "license": "Public domain",
+    "licenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-self",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:3rd_Honda_CR-V_EX.jpg",
+    "credit": "Photo: \"3rd Honda CR-V EX\" by IFCAR, via Wikimedia Commons, Public domain (https://commons.wikimedia.org/wiki/Template:PD-self) — resized",
+    "photoYear": null,
+    "shown": "3rd Honda CR-V EX",
+    "title": "3rd Honda CR-V EX",
+    "signedBy": "阿简",
+    "signedAt": "2026-11-02"
+  },
+  "2015-honda-cr-v": {
+    "cropped": false,
+    "shownOverride": "Shown: 2015 CR-V EX-L",
+    "set": [
+      {
+        "url": "/img/2015-honda-cr-v/2015_Honda_CR-V_EX-L_Front_Right-480.webp",
+        "w": 480,
+        "h": 373
+      },
+      {
+        "url": "/img/2015-honda-cr-v/2015_Honda_CR-V_EX-L_Front_Right-800.webp",
+        "w": 800,
+        "h": 621
+      },
+      {
+        "url": "/img/2015-honda-cr-v/2015_Honda_CR-V_EX-L_Front_Right-1200.webp",
+        "w": 1200,
+        "h": 931
+      }
+    ],
+    "width": 1200,
+    "height": 931,
+    "author": "Elise240SX",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2015_Honda_CR-V_EX-L_in_Modern_Steel_Metallic,_Front_Right,_09-04-2022.jpg",
+    "credit": "Photo: \"2015 Honda CR-V EX-L in Modern Steel Metallic, Front Right, 09-04-2022\" by Elise240SX, via Wikimedia Commons, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0) — resized",
+    "photoYear": 2015,
+    "shown": "2015 Honda CR-V EX-L",
+    "title": "2015 Honda CR-V EX-L in Modern Steel Metallic, Front Right, 09-04-2022",
+    "signedBy": "阿简",
+    "signedAt": "2026-11-02"
+  },
+  "2017-honda-cr-v": {
+    "cropped": false,
+    "shownOverride": "Shown: 2017 CR-V (same generation)",
+    "set": [
+      {
+        "url": "/img/2017-honda-cr-v/2017_Honda_CR-V_front-480.webp",
+        "w": 480,
+        "h": 278
+      },
+      {
+        "url": "/img/2017-honda-cr-v/2017_Honda_CR-V_front-800.webp",
+        "w": 800,
+        "h": 463
+      },
+      {
+        "url": "/img/2017-honda-cr-v/2017_Honda_CR-V_front-1200.webp",
+        "w": 1200,
+        "h": 695
+      }
+    ],
+    "width": 1200,
+    "height": 695,
+    "author": "Kevauto",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2017_Honda_CR-V_front_4.11.18.jpg",
+    "credit": "Photo: \"2017 Honda CR-V front 4.11.18\" by Kevauto, via Wikimedia Commons, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0) — resized",
+    "photoYear": 2017,
+    "shown": "2017 Honda CR-V front 4.11.18",
+    "title": "2017 Honda CR-V front 4.11.18",
+    "signedBy": "阿简",
+    "signedAt": "2026-11-02"
+  },
+  "2018-honda-cr-v": {
+    "cropped": false,
+    "shownOverride": "Shown: 2017-2019 CR-V (same generation)",
+    "set": [
+      {
+        "url": "/img/2018-honda-cr-v/2017_Honda_CR-V_front-480.webp",
+        "w": 480,
+        "h": 278
+      },
+      {
+        "url": "/img/2018-honda-cr-v/2017_Honda_CR-V_front-800.webp",
+        "w": 800,
+        "h": 463
+      },
+      {
+        "url": "/img/2018-honda-cr-v/2017_Honda_CR-V_front-1200.webp",
+        "w": 1200,
+        "h": 695
+      }
+    ],
+    "width": 1200,
+    "height": 695,
+    "author": "Kevauto",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2017_Honda_CR-V_front_4.11.18.jpg",
+    "credit": "Photo: \"2017 Honda CR-V front 4.11.18\" by Kevauto, via Wikimedia Commons, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0) — resized",
+    "photoYear": 2017,
+    "shown": "2017 Honda CR-V front 4.11.18",
+    "title": "2017 Honda CR-V front 4.11.18",
+    "signedBy": "阿简",
+    "signedAt": "2026-11-02"
+  },
+  "2019-honda-cr-v": {
+    "cropped": false,
+    "shownOverride": "Shown: 2017-2019 CR-V (same generation)",
+    "set": [
+      {
+        "url": "/img/2019-honda-cr-v/2017_Honda_CR-V_front-480.webp",
+        "w": 480,
+        "h": 278
+      },
+      {
+        "url": "/img/2019-honda-cr-v/2017_Honda_CR-V_front-800.webp",
+        "w": 800,
+        "h": 463
+      },
+      {
+        "url": "/img/2019-honda-cr-v/2017_Honda_CR-V_front-1200.webp",
+        "w": 1200,
+        "h": 695
+      }
+    ],
+    "width": 1200,
+    "height": 695,
+    "author": "Kevauto",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2017_Honda_CR-V_front_4.11.18.jpg",
+    "credit": "Photo: \"2017 Honda CR-V front 4.11.18\" by Kevauto, via Wikimedia Commons, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0) — resized",
+    "photoYear": 2017,
+    "shown": "2017 Honda CR-V front 4.11.18",
+    "title": "2017 Honda CR-V front 4.11.18",
+    "signedBy": "阿简",
+    "signedAt": "2026-11-02"
+  },
+  "2020-honda-cr-v": {
+    "cropped": false,
+    "shownOverride": "Shown: 2020 CR-V EX-L (facelift)",
+    "set": [
+      {
+        "url": "/img/2020-honda-cr-v/2020_Honda_CR-V_EX-L_front-480.webp",
+        "w": 480,
+        "h": 320
+      },
+      {
+        "url": "/img/2020-honda-cr-v/2020_Honda_CR-V_EX-L_front-800.webp",
+        "w": 800,
+        "h": 533
+      },
+      {
+        "url": "/img/2020-honda-cr-v/2020_Honda_CR-V_EX-L_front-1200.webp",
+        "w": 1200,
+        "h": 800
+      }
+    ],
+    "width": 1200,
+    "height": 800,
+    "author": "Kevauto",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2020_Honda_CR-V_EX-L_(facelift),_front_11.30.21.jpg",
+    "credit": "Photo: \"2020 Honda CR-V EX-L (facelift), front 11.30.21\" by Kevauto, via Wikimedia Commons, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0) — resized",
+    "photoYear": 2020,
+    "shown": "2020 Honda CR-V EX-L (facelift)",
+    "title": "2020 Honda CR-V EX-L (facelift), front 11.30.21",
+    "signedBy": "阿简",
+    "signedAt": "2026-11-02"
+  },
+  "2021-honda-cr-v": {
+    "cropped": false,
+    "shownOverride": "Shown: 2020-2021 CR-V (same generation)",
+    "set": [
+      {
+        "url": "/img/2021-honda-cr-v/2020_Honda_CR-V_EX-L_front-480.webp",
+        "w": 480,
+        "h": 320
+      },
+      {
+        "url": "/img/2021-honda-cr-v/2020_Honda_CR-V_EX-L_front-800.webp",
+        "w": 800,
+        "h": 533
+      },
+      {
+        "url": "/img/2021-honda-cr-v/2020_Honda_CR-V_EX-L_front-1200.webp",
+        "w": 1200,
+        "h": 800
+      }
+    ],
+    "width": 1200,
+    "height": 800,
+    "author": "Kevauto",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2020_Honda_CR-V_EX-L_(facelift),_front_11.30.21.jpg",
+    "credit": "Photo: \"2020 Honda CR-V EX-L (facelift), front 11.30.21\" by Kevauto, via Wikimedia Commons, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0) — resized",
+    "photoYear": 2020,
+    "shown": "2020 Honda CR-V EX-L (facelift)",
+    "title": "2020 Honda CR-V EX-L (facelift), front 11.30.21",
+    "signedBy": "阿简",
+    "signedAt": "2026-11-02"
+  },
+  "2013-honda-cr-v": {
+    "cropped": false,
+    "shownOverride": "Shown: 2012-2014 CR-V (same generation)",
+    "set": [
+      {
+        "url": "/img/2013-honda-cr-v/2012_Honda_CR-V_EX-L-480.webp",
+        "w": 480,
+        "h": 377
+      },
+      {
+        "url": "/img/2013-honda-cr-v/2012_Honda_CR-V_EX-L-800.webp",
+        "w": 800,
+        "h": 628
+      },
+      {
+        "url": "/img/2013-honda-cr-v/2012_Honda_CR-V_EX-L-1200.webp",
+        "w": 1200,
+        "h": 942
+      }
+    ],
+    "width": 1200,
+    "height": 942,
+    "author": "IFCAR",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2012_Honda_CR-V_EX-L_--_01-20-2012_1.jpg",
+    "credit": "Photo: \"2012 Honda CR-V EX-L\" by IFCAR, via Wikimedia Commons, public domain",
+    "photoYear": 2012,
+    "shown": "2012 Honda CR-V EX-L",
+    "title": "2012 Honda CR-V EX-L",
+    "signedBy": "阿简",
+    "signedAt": "2026-11-02"
+  },
+  "2014-honda-cr-v": {
+    "cropped": false,
+    "shownOverride": "Shown: 2012-2014 CR-V (same generation)",
+    "set": [
+      {
+        "url": "/img/2014-honda-cr-v/2012_Honda_CR-V_EX-L-480.webp",
+        "w": 480,
+        "h": 377
+      },
+      {
+        "url": "/img/2014-honda-cr-v/2012_Honda_CR-V_EX-L-800.webp",
+        "w": 800,
+        "h": 628
+      },
+      {
+        "url": "/img/2014-honda-cr-v/2012_Honda_CR-V_EX-L-1200.webp",
+        "w": 1200,
+        "h": 942
+      }
+    ],
+    "width": 1200,
+    "height": 942,
+    "author": "IFCAR",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2012_Honda_CR-V_EX-L_--_01-20-2012_1.jpg",
+    "credit": "Photo: \"2012 Honda CR-V EX-L\" by IFCAR, via Wikimedia Commons, public domain",
+    "photoYear": 2012,
+    "shown": "2012 Honda CR-V EX-L",
+    "title": "2012 Honda CR-V EX-L",
+    "signedBy": "阿简",
+    "signedAt": "2026-11-02"
+  },
+  "2016-honda-cr-v": {
+    "cropped": false,
+    "shownOverride": "Shown: 2015-2016 CR-V (same generation)",
+    "set": [
+      {
+        "url": "/img/2016-honda-cr-v/2015_Honda_CR-V_EX-L_Front_Right-480.webp",
+        "w": 480,
+        "h": 373
+      },
+      {
+        "url": "/img/2016-honda-cr-v/2015_Honda_CR-V_EX-L_Front_Right-800.webp",
+        "w": 800,
+        "h": 621
+      },
+      {
+        "url": "/img/2016-honda-cr-v/2015_Honda_CR-V_EX-L_Front_Right-1200.webp",
+        "w": 1200,
+        "h": 931
+      }
+    ],
+    "width": 1200,
+    "height": 931,
+    "author": "Elise240SX",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2015_Honda_CR-V_EX-L_in_Modern_Steel_Metallic,_Front_Right,_09-04-2022.jpg",
+    "credit": "Photo: \"2015 Honda CR-V EX-L in Modern Steel Metallic, Front Right, 09-04-2022\" by Elise240SX, via Wikimedia Commons, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0) — resized",
+    "photoYear": 2015,
+    "shown": "2015 Honda CR-V EX-L",
+    "title": "2015 Honda CR-V EX-L in Modern Steel Metallic, Front Right, 09-04-2022",
+    "signedBy": "阿简",
+    "signedAt": "2026-11-02"
+  },
+  "2023-honda-cr-v": {
+    "cropped": false,
+    "shownOverride": "Shown: 2023 CR-V EX-L AWD",
+    "set": [
+      {
+        "url": "/img/2023-honda-cr-v/2023_Honda_CR-V_EX-L_AWD_front_right-480.webp",
+        "w": 480,
+        "h": 312
+      },
+      {
+        "url": "/img/2023-honda-cr-v/2023_Honda_CR-V_EX-L_AWD_front_right-800.webp",
+        "w": 800,
+        "h": 520
+      },
+      {
+        "url": "/img/2023-honda-cr-v/2023_Honda_CR-V_EX-L_AWD_front_right-1200.webp",
+        "w": 1200,
+        "h": 780
+      }
+    ],
+    "width": 1200,
+    "height": 780,
+    "author": "MercurySable99",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2023_Honda_CR-V_EX-L_AWD,_front_right,_11-13-2022.jpg",
+    "credit": "Photo: \"2023 Honda CR-V EX-L AWD, front right, 11-13-2022\" by MercurySable99, via Wikimedia Commons, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0) — resized",
+    "photoYear": 2023,
+    "shown": "2023 Honda CR-V EX-L AWD",
+    "title": "2023 Honda CR-V EX-L AWD, front right, 11-13-2022",
+    "signedBy": "阿简",
+    "signedAt": "2026-11-03"
   }
 }

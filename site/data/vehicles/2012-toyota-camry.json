@@ -1,0 +1,169 @@
+{
+  "slug": "2012-toyota-camry",
+  "year": 2012,
+  "make": "Toyota",
+  "model": "Camry",
+  "makeSlug": "toyota",
+  "modelSlug": "camry",
+  "powertrain": "ice",
+  "vpicConfirmed": true,
+  "manual": {
+    "sourceId": "manual-2012-toyota-camry",
+    "yearConfirmed": true,
+    "note": "OM33856U (2012 Camry gas; ownersman TOC listing confirms OM33856U = 2012). Oil p.469, viscosity pp.469-470, tires pp.474-476 (printed page = PDF page)."
+  },
+  "specs": {
+    "oilCapacity": {
+      "value": "2.5L 4-cylinder (2AR-FE): 4.7 qt (4.4 L) with filter, 4.2 qt (4.0 L) without; 3.5L V6 (2GR-FE): 6.4 qt (6.1 L) with filter, 6.0 qt (5.7 L) without",
+      "source": "manual-2012-toyota-camry",
+      "page": "p.469",
+      "sourceGrade": "A",
+      "verified": false,
+      "appliesTo": "2.5L 4-cylinder (2AR-FE) and 3.5L V6 (2GR-FE) gasoline engines",
+      "unverifiedNote": "Only the two gasoline engines listed in this manual are covered. Camry Hybrid and any other engine offered in this market: not yet verified.",
+      "note": null
+    },
+    "oilViscosity": {
+      "value": "2.5L 4-cylinder (2AR-FE): SAE 0W-20 (SAE 5W-20 may be used, but replace it with 0W-20 at the next oil change); 3.5L V6 (2GR-FE): SAE 5W-30 (SAE 10W-30 may be used, but replace it with 5W-30 at the next oil change)",
+      "source": "manual-2012-toyota-camry",
+      "page": "pp.469-470",
+      "sourceGrade": "A",
+      "verified": false,
+      "note": null
+    },
+    "wiperSizes": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "no citable source yet"
+    },
+    "batteryGroup": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "no citable source yet"
+    },
+    "towingCapacity": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "not listed in this owner's manual"
+    },
+    "tpmsReset": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "no citable source yet"
+    }
+  },
+  "tires": {
+    "rows": [
+      {
+        "wheel": "16",
+        "config": "2.5L 4-cyl (base)",
+        "tireSize": "P205/65R16 94S, T155/70D17 110M (spare)",
+        "frontPsi": 35,
+        "rearPsi": 35,
+        "page": "p.474",
+        "source": "manual-2012-toyota-camry",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "17",
+        "config": "2.5L 4-cyl or V6",
+        "tireSize": "P215/55R17 93V, T155/70D17 110M (spare)",
+        "frontPsi": 35,
+        "rearPsi": 35,
+        "page": "p.475",
+        "source": "manual-2012-toyota-camry",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "18",
+        "config": "SE",
+        "tireSize": "P225/45R18 91V, T155/70D17 110M (spare)",
+        "frontPsi": 33,
+        "rearPsi": 33,
+        "page": "p.476",
+        "source": "manual-2012-toyota-camry",
+        "sourceGrade": "A"
+      }
+    ],
+    "origin": "manual",
+    "note": null
+  },
+  "extraManuals": [],
+  "fuelEconomy": [
+    {
+      "feId": "31765",
+      "model": "Camry",
+      "option": "Auto (S6), 4 cyl, 2.5 L",
+      "engineL": 2.5,
+      "cyl": 4,
+      "trans": "Automatic (S6)",
+      "drive": "Front-Wheel Drive",
+      "mpgCity": 24,
+      "mpgHwy": 34,
+      "mpgComb": 28,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/31765",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "31766",
+      "model": "Camry",
+      "option": "Auto (S6), 6 cyl, 3.5 L",
+      "engineL": 3.5,
+      "cyl": 6,
+      "trans": "Automatic (S6)",
+      "drive": "Front-Wheel Drive",
+      "mpgCity": 21,
+      "mpgHwy": 30,
+      "mpgComb": 24,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/31766",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    }
+  ],
+  "fuelEconomyFetched": "2026-11-02",
+  "recalls": [
+    {
+      "campaign": "13V014000",
+      "component": "AIR BAGS:FRONTAL:SENSOR/CONTROL MODULE-INACTIVE",
+      "date": "2013-01-16",
+      "summary": "Southeast Toyota Distributors, LLC (SET) is recalling certain models interspersed through model years 2009 through 2013 as follows: model year 2009-2012 Tacoma, 4Runner, Camry, Camry Hybrid, Prius, and RAV4; model year 2",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "13V442000",
+      "component": "ELECTRICAL SYSTEM",
+      "date": "2013-10-17",
+      "summary": "Toyota is recalling certain model year 2012-2013 Avalon, Avalon HV, Venza, Camry, and Camry HV vehicles.  In the affected vehicles, the drain hose for the air conditioning condenser may become clogged causing water to ac",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    }
+  ],
+  "recallsFetched": "2026-11-02",
+  "recallsUrl": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=toyota&model=camry&modelYear=2012",
+  "related": {
+    "issues": []
+  },
+  "publishDate": "2026-11-02",
+  "dataUpdated": "2026-11-02",
+  "signOff": {
+    "by": "Marlowe Sheets",
+    "date": "2026-11-02"
+  },
+  "seo": {
+    "title": "2012 Camry Oil Capacity: 4.7 qt (2.5L) / 6.4 qt (V6)",
+    "description": "2012 Toyota Camry: 4.7 qt with filter for the 2.5L four, 6.4 qt for the 3.5L V6. Tires 16-18 inch, 33-35 psi cold. Manual cited.",
+    "h1Tail": "Camry oil capacity (2.5L & 3.5L V6) & tire pressures"
+  }
+}

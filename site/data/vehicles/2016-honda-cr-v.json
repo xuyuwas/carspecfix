@@ -1,0 +1,179 @@
+{
+  "slug": "2016-honda-cr-v",
+  "year": 2016,
+  "make": "Honda",
+  "model": "CR-V",
+  "makeSlug": "honda",
+  "modelSlug": "cr-v",
+  "powertrain": "ice",
+  "vpicConfirmed": true,
+  "manual": {
+    "sourceId": "manual-2016-honda-cr-v",
+    "yearConfirmed": true,
+    "note": "Honda 2016 CR-V Owner's Manual (PDF, 541 pp; footer 16 CR-V-31T0A6400). Oil p.520, tires p.521, viscosity p.452, towing p.357, TPMS p.408-409. No battery capacity is printed. Printed page = PDF page - 1."
+  },
+  "specs": {
+    "oilCapacity": {
+      "value": "2.4L 4-cylinder (K24W): 4.6 US qt (4.4 L) with filter, 4.4 US qt (4.2 L) without",
+      "source": "manual-2016-honda-cr-v",
+      "page": "p.520",
+      "sourceGrade": "A",
+      "verified": true,
+      "appliesTo": "2.4L 4-cylinder (K24W) only in this market; 2WD and AWD share the same fill.",
+      "unverifiedNote": null,
+      "note": null
+    },
+    "oilViscosity": {
+      "value": "Genuine Honda Motor Oil 0W-20 or API Premium-grade 0W-20 detergent oil",
+      "source": "manual-2016-honda-cr-v",
+      "page": "p.452",
+      "sourceGrade": "A",
+      "verified": true,
+      "note": null
+    },
+    "wiperSizes": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "no citable source yet"
+    },
+    "batteryGroup": {
+      "value": null,
+      "source": null,
+      "page": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "this edition prints no battery reserve-capacity or BCI group number"
+    },
+    "towingCapacity": {
+      "value": "1,500 lb (680 kg) total trailer weight",
+      "source": "manual-2016-honda-cr-v",
+      "page": "p.357",
+      "sourceGrade": "A",
+      "verified": true
+    },
+    "tpmsReset": {
+      "value": "Press and hold the TPMS button until the low tire pressure/TPMS indicator blinks twice to start calibration; it then finishes automatically after about 30 minutes of cumulative driving at 30-60 mph.",
+      "source": "manual-2016-honda-cr-v",
+      "page": "p.408-409",
+      "sourceGrade": "A",
+      "verified": true,
+      "note": null
+    }
+  },
+  "tires": {
+    "rows": [
+      {
+        "wheel": "16",
+        "config": "Models with 16-inch wheels",
+        "tireSize": "215/70R16 100S",
+        "frontPsi": 32,
+        "rearPsi": 32,
+        "page": "p.521",
+        "source": "manual-2016-honda-cr-v",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "17",
+        "config": "Models with 17-inch wheels",
+        "tireSize": "225/65R17 102T",
+        "frontPsi": 33,
+        "rearPsi": 33,
+        "page": "p.521",
+        "source": "manual-2016-honda-cr-v",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "18",
+        "config": "Models with 18-inch wheels",
+        "tireSize": "P225/60R18 99H",
+        "frontPsi": 32,
+        "rearPsi": 32,
+        "page": "p.521",
+        "source": "manual-2016-honda-cr-v",
+        "sourceGrade": "A"
+      }
+    ],
+    "origin": "manual",
+    "note": "Compact spare: T155/90D17 101M at 60 psi. Pressures are cold inflation pressures."
+  },
+  "extraManuals": [],
+  "fuelEconomy": [
+    {
+      "feId": "36992",
+      "model": "CR-V 2WD",
+      "option": "Auto (variable gear ratios), 4 cyl, 2.4 L",
+      "engineL": 2.4,
+      "cyl": 4,
+      "trans": "Automatic (variable gear ratios)",
+      "drive": "Front-Wheel Drive",
+      "mpgCity": 26,
+      "mpgHwy": 32,
+      "mpgComb": 29,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/36992",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "37024",
+      "model": "CR-V 4WD",
+      "option": "Auto (variable gear ratios), 4 cyl, 2.4 L",
+      "engineL": 2.4,
+      "cyl": 4,
+      "trans": "Automatic (variable gear ratios)",
+      "drive": "All-Wheel Drive",
+      "mpgCity": 25,
+      "mpgHwy": 31,
+      "mpgComb": 27,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/37024",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    }
+  ],
+  "fuelEconomyFetched": "2026-11-02",
+  "recalls": [
+    {
+      "campaign": "17V305000",
+      "component": "ENGINE",
+      "date": "2017-05-04",
+      "summary": "Honda (American Honda Motor Co.) is recalling certain 2015-2016 Honda CR-V vehicles that recently received a replacement engine.  The replacement engine may have been built with the wrong pistons, pot",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "15V714000",
+      "component": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+      "date": "2015-10-29",
+      "summary": "American Honda Motor Company, Inc. (Honda) is recalling certain model year 2016 CR-V vehicles manufactured October 12, 2015, to October 19, 2015.  The metal housing surrounding the driver's air bag in",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "23V858000",
+      "component": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+      "date": "2023-12-19",
+      "summary": "Honda (American Honda Motor Co.) is recalling certain 2013-2023 Honda Accord, Civic Coupe, Civic Sedan, Civic Hatchback, Civic Type R, CR-V, HR-V, Ridgeline, Odyssey, Acura ILX, MDX, MDX Hybrid, RDX, ",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    }
+  ],
+  "recallsFetched": "2026-11-02",
+  "recallsUrl": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=honda&model=cr-v&modelYear=2016",
+  "related": {
+    "issues": []
+  },
+  "publishDate": "2026-11-02",
+  "dataUpdated": "2026-11-02",
+  "signOff": {
+    "by": "Marlowe Sheets",
+    "date": "2026-11-02"
+  },
+  "seo": {
+    "title": "2016 CR-V Oil Capacity: 4.6 qt (2.4L), 32-33 psi Tires",
+    "description": "2016 Honda CR-V: 4.6 qt with filter for the 2.4L four, 0W-20 oil. Tires 215/70R16 at 32 psi, 225/65R17 at 33 psi, P225/60R18 at 32 psi. Owner's manual cited.",
+    "h1Tail": "CR-V oil capacity (2.4L) & tire pressure by wheel size"
+  }
+}

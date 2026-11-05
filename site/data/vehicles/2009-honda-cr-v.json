@@ -1,0 +1,230 @@
+{
+  "slug": "2009-honda-cr-v",
+  "year": 2009,
+  "make": "Honda",
+  "model": "CR-V",
+  "makeSlug": "honda",
+  "modelSlug": "cr-v",
+  "powertrain": "ice",
+  "vpicConfirmed": true,
+  "manual": {
+    "sourceId": "manual-2009-honda-cr-v",
+    "yearConfirmed": true,
+    "note": "Honda 2009 CR-V Owner's Manual (unlinked PDF, 373 pp; footer 31SWA630). Oil p.336, viscosity p.281, tires p.303, battery p.337, towing p.261. Printed page = PDF page - 4."
+  },
+  "specs": {
+    "oilCapacity": {
+      "value": "2.4L 4-cylinder (K24Z): 4.4 US qt (4.2 L) with filter, 4.2 US qt (4.0 L) without",
+      "source": "manual-2009-honda-cr-v",
+      "page": "p.336",
+      "sourceGrade": "A",
+      "verified": true,
+      "appliesTo": "2.4L 4-cylinder (K24Z) gasoline engine only",
+      "unverifiedNote": "2WD and 4WD use the same engine and the same fill. No other engine was offered in this market.",
+      "note": null
+    },
+    "oilViscosity": {
+      "value": "API Premium-grade 5W-20 detergent oil (Honda Genuine Motor Oil 5W-20 preferred)",
+      "source": "manual-2009-honda-cr-v",
+      "page": "p.281",
+      "sourceGrade": "A",
+      "verified": true,
+      "note": null
+    },
+    "wiperSizes": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "no citable source yet"
+    },
+    "batteryGroup": {
+      "value": "12 V; the manual lists 36 AH/5 HR, 38 AH/5 HR, 45 AH/20 HR or 47 AH/20 HR depending on trim (no BCI group number printed)",
+      "source": "manual-2009-honda-cr-v",
+      "page": "p.337",
+      "sourceGrade": "A",
+      "verified": true,
+      "note": "Honda prints reserve-capacity AH figures, not a BCI group size."
+    },
+    "towingCapacity": {
+      "value": "1,500 lb (680 kg) total trailer weight",
+      "source": "manual-2009-honda-cr-v",
+      "page": "p.261",
+      "sourceGrade": "A",
+      "verified": true
+    },
+    "tpmsReset": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "this edition prints no calibrate/reset procedure; the system is checked by the low-pressure indicator only"
+    }
+  },
+  "tires": {
+    "rows": [
+      {
+        "wheel": "17",
+        "config": "All US trims",
+        "tireSize": "225/65R17 102T, T155/90D17 101M (spare)",
+        "frontPsi": 30,
+        "rearPsi": 30,
+        "page": "p.303",
+        "source": "manual-2009-honda-cr-v",
+        "sourceGrade": "A"
+      }
+    ],
+    "origin": "manual",
+    "note": null
+  },
+  "extraManuals": [],
+  "fuelEconomy": [
+    {
+      "feId": "26132",
+      "model": "CR-V 2WD",
+      "option": "Automatic 5-spd, 4 cyl, 2.4 L",
+      "engineL": 2.4,
+      "cyl": 4,
+      "trans": "Automatic 5-spd",
+      "drive": "Front-Wheel Drive",
+      "mpgCity": 20,
+      "mpgHwy": 27,
+      "mpgComb": 23,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/26132",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "26176",
+      "model": "CR-V 4WD",
+      "option": "Automatic 5-spd, 4 cyl, 2.4 L",
+      "engineL": 2.4,
+      "cyl": 4,
+      "trans": "Automatic 5-spd",
+      "drive": "4-Wheel or All-Wheel Drive",
+      "mpgCity": 20,
+      "mpgHwy": 26,
+      "mpgComb": 22,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/26176",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    }
+  ],
+  "fuelEconomyFetched": "2026-11-02",
+  "recalls": [
+    {
+      "campaign": "18V268000",
+      "component": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+      "date": "2018-04-26",
+      "summary": "Honda (American Honda Motor Co.) is recalling certain 2003-2012 Honda Accord and Pilot, 2010 Accord Crosstour, 2001-2011 Civic, 2002-2011 CR-V, 2003-2004, 2006-2008 and 2011 Element, 2007 and 2009-201",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "19V500000",
+      "component": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+      "date": "2019-06-27",
+      "summary": "Honda (American Honda Motor Co.) is recalling certain 2013 Acura ILX, 2015 RDX, 2005-2010 and 2012 RL, 2009-2014 TL, 2010 and 2012 ZDX, 2007-2011 CR-V, 2011-2013 and 2015 CR-Z, 2009-2013 Fit, 2013 Fit",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "19V502000",
+      "component": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+      "date": "2019-06-27",
+      "summary": "Honda (American Honda Motor Co.) is recalling certain 2009-2014 Acura TSX, 2011-2014 TSX Sport Wagon, 2010-2013 ZDX, 2008-2012 Honda Accord, 2010-2011 Accord Crosstour, 2006-2011 Civic and Civic Hybri",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "19V378000",
+      "component": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+      "date": "2019-05-16",
+      "summary": "Honda (American Honda Motor Co.) is recalling certain 2009-2014 Acura TSX, 2011-2013 TSX Sport Wagon, and 2010-2012 ZDX and 2008-2012 Honda Accord, 2010-2011 Accord Crosstour, 2006-2011 Civic, Civic H",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "17V545000",
+      "component": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+      "date": "2017-08-31",
+      "summary": "Honda (American Honda Motor Co.) is recalling certain 2008-2012 Accord, 2010-2012 Accord Crosstour, 2006-2011 Civic, 2007-2011 CR-V, 2009-2012 Fit and Pilot, 2010-2012 Insight, and 2009-2012 Acura TSX",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "17V417000",
+      "component": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+      "date": "2017-06-29",
+      "summary": "Honda (American Honda Motor Co.) is recalling certain 2007-2011 Honda CR-V vehicles which have had the passenger frontal air bag replaced.  The air bag inflator repair kit may have been assembled by t",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "18V042000",
+      "component": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+      "date": "2018-01-09",
+      "summary": "Honda (American Honda Motor Co.) is recalling certain 2010-2013 Acura TSX, ZDX, Honda Accord Crosstour, Fit, Insight and Pilot vehicles, 2011-13 Acura TSX Sportswagon, 2010-2012 Honda Accord,, 2010-20",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "17V030000",
+      "component": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+      "date": "2017-01-10",
+      "summary": "Honda (American Honda Motor Co.) is recalling certain 2009-2012 Acura TSX, 2011-2012 Acura TSX Wagon, 2010-2012 Acura ZDX, 2008-2012 Honda Accord, 2010-2012 Honda Accord Crosstour and Honda Insight, 2",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "16V061000",
+      "component": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+      "date": "2016-02-03",
+      "summary": "Honda (American Honda Motor Co.) is recalling certain model year 2007-2011 Honda CR-V, 2011-2015 CR-Z, 2010-2014 FCX, and Insight, 2009-2013 Fit, 2013-2014 Fit EV, 2007-2014 Ridgeline, 2013-2016 Acura",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "16V346000",
+      "component": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+      "date": "2016-05-24",
+      "summary": "Honda (American Honda Motor Co.) is recalling certain model year 2009-2011 Acura TSX, 2011 TSX Wagon, 2010-2011 Acura ZDX, 2008-2011 Honda Accord, 2010-2011 Accord Crosstour, 2006-2011 Civic, Civic Hy",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "11V395000",
+      "component": "POWER TRAIN:AUTOMATIC TRANSMISSION:CONTROL MODULE (TCM/PCM/TECM)",
+      "date": "2011-08-04",
+      "summary": "HONDA IS RECALLING CERTAIN MODEL YEAR 2005-2010 ACCORD, 2007-2010 CR-V, AND 2005-2008 ELEMENT PASSENGER CARS MANUFACTURED FROM JULY 1, 2004, THROUGH SEPTEMBER 3, 2010.  THE OUTER RACE OF THE SECONDARY",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "23V228000",
+      "component": "STRUCTURE:FRAME AND MEMBERS",
+      "date": "2023-03-30",
+      "summary": "Honda (American Honda Motor Co.) is recalling certain 2007-2011 CR-V vehicles that were sold, or ever registered in Connecticut, Delaware, Illinois, Indiana, Iowa, Kentucky, Maine, Maryland, Massachus",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    }
+  ],
+  "recallsFetched": "2026-11-02",
+  "recallsUrl": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=honda&model=cr-v&modelYear=2009",
+  "related": {
+    "issues": []
+  },
+  "publishDate": "2026-11-02",
+  "dataUpdated": "2026-11-02",
+  "signOff": {
+    "by": "Marlowe Sheets",
+    "date": "2026-11-02"
+  },
+  "seo": {
+    "title": "2009 CR-V Oil Capacity: 4.4 qt (2.4L), 30 psi Tires",
+    "description": "2009 Honda CR-V: 4.4 qt with filter for the 2.4L four, 5W-20 oil. Tires 225/65R17, 30 psi cold. Owner's manual cited.",
+    "h1Tail": "CR-V oil capacity (2.4L) & 30 psi tire pressure"
+  }
+}

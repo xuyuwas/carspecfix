@@ -1,0 +1,241 @@
+{
+  "slug": "2010-toyota-camry",
+  "year": 2010,
+  "make": "Toyota",
+  "model": "Camry",
+  "makeSlug": "toyota",
+  "modelSlug": "camry",
+  "powertrain": "ice",
+  "vpicConfirmed": true,
+  "manual": {
+    "sourceId": "manual-2010-toyota-camry",
+    "yearConfirmed": true,
+    "note": "OM33840U (2010 Camry gas; ownersman TOC listing confirms OM33840U = 2010). Oil p.485, viscosity pp.485-486, tires pp.491-493 (printed page = PDF page - 2)."
+  },
+  "specs": {
+    "oilCapacity": {
+      "value": "2.5L 4-cylinder (2AR-FE): 4.7 qt (4.4 L) with filter, 4.2 qt (4.0 L) without; 3.5L V6 (2GR-FE): 6.4 qt (6.1 L) with filter, 6.0 qt (5.7 L) without",
+      "source": "manual-2010-toyota-camry",
+      "page": "p.485",
+      "sourceGrade": "A",
+      "verified": false,
+      "appliesTo": "2.5L 4-cylinder (2AR-FE) and 3.5L V6 (2GR-FE) gasoline engines",
+      "unverifiedNote": "Only the two gasoline engines listed in this manual are covered. Camry Hybrid and any other engine offered in this market: not yet verified.",
+      "note": null
+    },
+    "oilViscosity": {
+      "value": "2.5L 4-cylinder (2AR-FE): SAE 0W-20 (SAE 5W-20 may be used, but replace it with 0W-20 at the next oil change); 3.5L V6 (2GR-FE): SAE 5W-30 (SAE 10W-30 may be used, but replace it with 5W-30 at the next oil change)",
+      "source": "manual-2010-toyota-camry",
+      "page": "pp.485-486",
+      "sourceGrade": "A",
+      "verified": false,
+      "note": null
+    },
+    "wiperSizes": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "no citable source yet"
+    },
+    "batteryGroup": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "no citable source yet"
+    },
+    "towingCapacity": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "not listed in this owner's manual"
+    },
+    "tpmsReset": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "no citable source yet"
+    }
+  },
+  "tires": {
+    "rows": [
+      {
+        "wheel": "16",
+        "config": "3.5L V6 (2GR-FE)",
+        "tireSize": "P215/60R16 94V, T155/70D17 110M (spare)",
+        "frontPsi": 30,
+        "rearPsi": 30,
+        "page": "p.491",
+        "source": "manual-2010-toyota-camry",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "16",
+        "config": "2.5L 4-cyl (2AR-FE)",
+        "tireSize": "P215/60R16 94V, T155/70D17 110M (spare)",
+        "frontPsi": 34,
+        "rearPsi": 34,
+        "page": "p.492",
+        "source": "manual-2010-toyota-camry",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "17",
+        "config": "2.5L 4-cyl or V6",
+        "tireSize": "P215/55R17 93V, T155/70D17 110M (spare)",
+        "frontPsi": 32,
+        "rearPsi": 32,
+        "page": "p.493",
+        "source": "manual-2010-toyota-camry",
+        "sourceGrade": "A"
+      }
+    ],
+    "origin": "manual",
+    "note": null
+  },
+  "extraManuals": [],
+  "fuelEconomy": [
+    {
+      "feId": "26422",
+      "model": "Camry",
+      "option": "Auto (S6), 4 cyl, 2.5 L",
+      "engineL": 2.5,
+      "cyl": 4,
+      "trans": "Automatic (S6)",
+      "drive": "Front-Wheel Drive",
+      "mpgCity": 22,
+      "mpgHwy": 32,
+      "mpgComb": 26,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/26422",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "26423",
+      "model": "Camry",
+      "option": "Auto (S6), 6 cyl, 3.5 L",
+      "engineL": 3.5,
+      "cyl": 6,
+      "trans": "Automatic (S6)",
+      "drive": "Front-Wheel Drive",
+      "mpgCity": 19,
+      "mpgHwy": 28,
+      "mpgComb": 23,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/26423",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "26421",
+      "model": "Camry",
+      "option": "Man 6-spd, 4 cyl, 2.5 L",
+      "engineL": 2.5,
+      "cyl": 4,
+      "trans": "Manual 6-spd",
+      "drive": "Front-Wheel Drive",
+      "mpgCity": 22,
+      "mpgHwy": 33,
+      "mpgComb": 26,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/26421",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    }
+  ],
+  "fuelEconomyFetched": "2026-11-02",
+  "recalls": [
+    {
+      "campaign": "14V743000",
+      "component": "SEATS:FRONT ASSEMBLY:SEAT HEATER/COOLER",
+      "date": "2014-11-19",
+      "summary": "Southeast Toyota Distributors, LLC (SET) is recalling certain model year 2010-2011 Prius and Corolla, 2009-2011 Venza, 2006-2010 Avalon, 2007-2010 FJ Cruiser, 2005-2011 Sienna and Sequoia, 2006-2011 Tacoma 4x2 and 4x4, C",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "16V396000",
+      "component": "SEATS:FRONT ASSEMBLY:SEAT HEATER/COOLER",
+      "date": "2016-06-02",
+      "summary": "Southeast Toyota Distributors, LLC (SET) is recalling certain 2005-2011 4Runner, Highlander, Sequoia, and Sienna, 2005-2010 Avalon and Tundra, 2006-2008 Camry Solara, 2006-2010 Highlander hybrid, 2006-2011 Rav4 and Tacom",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "13V123000",
+      "component": "EQUIPMENT:OTHER:LABELS",
+      "date": "2013-04-09",
+      "summary": "Southeast Toyota is recalling certain model year 2008 and 2010-2013 Toyota Tundra, 2010-2012 Rav4, 2012 Toyota Sequoia, 2010-2011 Toyota Corolla, 2010-2011 Toyota Camry and Camry Hybrid, 2010-2013 Toyota Highlander and H",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "13V014000",
+      "component": "AIR BAGS:FRONTAL:SENSOR/CONTROL MODULE-INACTIVE",
+      "date": "2013-01-16",
+      "summary": "Southeast Toyota Distributors, LLC (SET) is recalling certain models interspersed through model years 2009 through 2013 as follows: model year 2009-2012 Tacoma, 4Runner, Camry, Camry Hybrid, Prius, and RAV4; model year 2",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "09V388000",
+      "component": "VEHICLE SPEED CONTROL:ACCELERATOR PEDAL",
+      "date": "2009-10-05",
+      "summary": "TOYOTA IS RECALLING CERTAIN MODEL YEAR 2004-2010 PASSENGER VEHICLES.  THE ACCELERATOR PEDAL CAN GET STUCK IN THE WIDE OPEN POSITION DUE TO ITS BEING TRAPPED BY AN UNSECURED OR INCOMPATIBLE DRIVER'S FLOOR MAT.",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "10V035000",
+      "component": "EQUIPMENT:OTHER:LABELS",
+      "date": "2010-02-03",
+      "summary": "GULF STATES TOYOTA IS RECALLING CERTAIN MODEL YEAR 2005-2010 VEHICLES FOR FAILING TO COMPLY WITH THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 110, \"TIRE SELECTION AND RIMS.\"  THESE VEHICLES WERE SOLD BET",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "10V036000",
+      "component": "EQUIPMENT:OTHER:LABELS",
+      "date": "2010-02-03",
+      "summary": "SOUTHEAST TOYOTA IS RECALLING CERTAIN MODEL YEAR 2005-2011 PASSENGER VEHICLES FOR FAILING TO COMPLY WITH THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 110, \"TIRE SELECTION AND RIMS.\"  THESE VEHICLES WERE ",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "10V017000",
+      "component": "VEHICLE SPEED CONTROL:ACCELERATOR PEDAL",
+      "date": "2010-01-21",
+      "summary": "TOYOTA IS RECALLING CERTAIN MODEL YEAR 2005-2010 AVALON, MODEL YEAR 2007-2010 CAMRY, MODEL YEAR 2009-2010 COROLLA, COROLLA MATRIX, RAV4, MODEL YEAR 2010 HIGHLANDER, MODEL YEAR 2008-2010 SEQUOIA, AND MODEL YEAR 2007-2010 ",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "10V040000",
+      "component": "SERVICE BRAKES, HYDRAULIC",
+      "date": "2010-02-09",
+      "summary": "TOYOTA IS RECALLING CERTAIN MODEL YEAR 2010 CAMRYS.  THE LENGTH OF THE POWER STEERING PRESSURE HOSE ON VEHICLES EQUIPPED WITH THE 4-CYLINDER (2AR-FE) ENGINE MAY BE INSUFFICIENT, SUCH THAT THE GAP BETWEEN THE CRIMP ON THE",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    }
+  ],
+  "recallsFetched": "2026-11-02",
+  "recallsUrl": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=toyota&model=camry&modelYear=2010",
+  "related": {
+    "issues": []
+  },
+  "publishDate": "2026-11-02",
+  "dataUpdated": "2026-11-02",
+  "signOff": {
+    "by": "Marlowe Sheets",
+    "date": "2026-11-02"
+  },
+  "seo": {
+    "title": "2010 Camry Oil Capacity: 4.7 qt (2.5L) / 6.4 qt (V6)",
+    "description": "2010 Toyota Camry: 4.7 qt with filter for the 2.5L four, 6.4 qt for the 3.5L V6. Tires 16-17 inch, 30-34 psi cold. Manual cited.",
+    "h1Tail": "Camry oil capacity (2.5L & 3.5L V6) & tire pressures"
+  }
+}

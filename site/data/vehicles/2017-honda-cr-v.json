@@ -1,0 +1,233 @@
+{
+  "slug": "2017-honda-cr-v",
+  "year": 2017,
+  "make": "Honda",
+  "model": "CR-V",
+  "makeSlug": "honda",
+  "modelSlug": "cr-v",
+  "powertrain": "ice",
+  "vpicConfirmed": true,
+  "manual": {
+    "sourceId": "manual-2017-honda-cr-v",
+    "yearConfirmed": true,
+    "note": "Honda 2017 CR-V Owner's Manual (PDF, 663 pp; footer 17 CR-V-31TLA6000). Oil and tires p.637, viscosity p.556, towing p.439, TPMS p.503-505. No battery capacity is printed. Printed page = PDF page - 2."
+  },
+  "specs": {
+    "oilCapacity": {
+      "value": "1.5L turbo (L15B): 3.7 US qt (3.5 L) with filter, 3.4 US qt (3.2 L) without; 2.4L (K24W): 4.7 US qt (4.4 L) with filter, 4.4 US qt (4.2 L) without",
+      "source": "manual-2017-honda-cr-v",
+      "page": "p.637",
+      "sourceGrade": "A",
+      "verified": true,
+      "appliesTo": "Two engines were offered: 1.5L turbo on most trims and 2.4L on the LX. 2WD and AWD share the same fill.",
+      "unverifiedNote": null,
+      "note": null
+    },
+    "oilViscosity": {
+      "value": "Genuine Honda Motor Oil 0W-20 or API Premium-grade 0W-20 detergent oil",
+      "source": "manual-2017-honda-cr-v",
+      "page": "p.556",
+      "sourceGrade": "A",
+      "verified": true,
+      "note": null
+    },
+    "wiperSizes": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "no citable source yet"
+    },
+    "batteryGroup": {
+      "value": null,
+      "source": null,
+      "page": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "this edition prints no battery reserve-capacity or BCI group number"
+    },
+    "towingCapacity": {
+      "value": "1,500 lb (680 kg) total trailer weight",
+      "source": "manual-2017-honda-cr-v",
+      "page": "p.439",
+      "sourceGrade": "A",
+      "verified": true
+    },
+    "tpmsReset": {
+      "value": "Press and hold the TPMS button until the low tire pressure/TPMS indicator blinks twice; calibration then finishes automatically after about 30 minutes of cumulative driving at 30-65 mph. With the driver information interface or Display Audio, use Vehicle Settings > TPMS Calibration > Calibrate.",
+      "source": "manual-2017-honda-cr-v",
+      "page": "p.503-505",
+      "sourceGrade": "A",
+      "verified": true,
+      "note": null
+    }
+  },
+  "tires": {
+    "rows": [
+      {
+        "wheel": "17",
+        "config": "Models with 17-inch wheels",
+        "tireSize": "235/65R17 104H",
+        "frontPsi": 32,
+        "rearPsi": 30,
+        "page": "p.637",
+        "source": "manual-2017-honda-cr-v",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "18",
+        "config": "Models with 18-inch wheels",
+        "tireSize": "235/60R18 103H",
+        "frontPsi": 33,
+        "rearPsi": 30,
+        "page": "p.637",
+        "source": "manual-2017-honda-cr-v",
+        "sourceGrade": "A"
+      }
+    ],
+    "origin": "manual",
+    "note": "Compact spare: T155/90D17 112M at 60 psi. Cold pressures differ front/rear."
+  },
+  "extraManuals": [],
+  "fuelEconomy": [
+    {
+      "feId": "38448",
+      "model": "CR-V FWD",
+      "option": "Auto (variable gear ratios), 4 cyl, 2.4 L",
+      "engineL": 2.4,
+      "cyl": 4,
+      "trans": "Automatic (variable gear ratios)",
+      "drive": "Front-Wheel Drive",
+      "mpgCity": 26,
+      "mpgHwy": 32,
+      "mpgComb": 28,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/38448",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "38449",
+      "model": "CR-V FWD",
+      "option": "Auto (variable gear ratios), 4 cyl, 1.5 L, Turbo",
+      "engineL": 1.5,
+      "cyl": 4,
+      "trans": "Automatic (variable gear ratios)",
+      "drive": "Front-Wheel Drive",
+      "mpgCity": 28,
+      "mpgHwy": 34,
+      "mpgComb": 30,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/38449",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "38452",
+      "model": "CR-V AWD",
+      "option": "Auto (variable gear ratios), 4 cyl, 2.4 L",
+      "engineL": 2.4,
+      "cyl": 4,
+      "trans": "Automatic (variable gear ratios)",
+      "drive": "All-Wheel Drive",
+      "mpgCity": 25,
+      "mpgHwy": 31,
+      "mpgComb": 27,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/38452",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "38453",
+      "model": "CR-V AWD",
+      "option": "Auto (variable gear ratios), 4 cyl, 1.5 L, Turbo",
+      "engineL": 1.5,
+      "cyl": 4,
+      "trans": "Automatic (variable gear ratios)",
+      "drive": "All-Wheel Drive",
+      "mpgCity": 27,
+      "mpgHwy": 33,
+      "mpgComb": 29,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/38453",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    }
+  ],
+  "fuelEconomyFetched": "2026-11-02",
+  "recalls": [
+    {
+      "campaign": "18V663000",
+      "component": "STEERING:ELECTRIC POWER ASSIST SYSTEM",
+      "date": "2018-09-27",
+      "summary": "Honda (American Honda Motor Co.) is recalling certain 2017-2018 Honda Civic and CR-V vehicles.  The magnet that controls the\r\ntorque sensor output signal for the electronic power steering system may n",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "17V442000",
+      "component": "FUEL SYSTEM, GASOLINE:DELIVERY:HOSES, LINES/PIPING, AND FITTINGS",
+      "date": "2017-07-13",
+      "summary": "Honda (American Honda Motor Co.) is recalling certain 2017 Honda CR-V 2WD and AWD vehicles.  The affected vehicles have a fuel supply pipe that may have been improperly manufactured, possibly resultin",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "17V256000",
+      "component": "EQUIPMENT:OTHER:LABELS",
+      "date": "2017-04-18",
+      "summary": "Honda (American Honda Motor Co.) is recalling certain 2017 CR-V and Acura RDX vehicles.  The Certification Labels on the affected vehicles were printed with ink that may be inadvertently wiped away wi",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "23V158000",
+      "component": "SEAT BELTS:FRONT:BUCKLE ASSEMBLY",
+      "date": "2023-03-09",
+      "summary": "Honda (American Honda Motor Co.) is recalling certain 2017-2020 CR-V, 2018-2019 Accord and Accord Hybrid, 2018-2020 Odyssey, 2019 Insight, and 2019-2020 Acura RDX vehicles.  A manufacturing issue with",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "23V524000",
+      "component": "EQUIPMENT:OTHER:LABELS",
+      "date": "2023-07-27",
+      "summary": "Honda (American Honda Motor Co.) is recalling certain 2017, 2020, and 2022 CR-V vehicles.  The certification label on the driver's side door states incorrect Gross Vehicle Weight Rating (GVWR), Gross ",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "23V858000",
+      "component": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+      "date": "2023-12-19",
+      "summary": "Honda (American Honda Motor Co.) is recalling certain 2013-2023 Honda Accord, Civic Coupe, Civic Sedan, Civic Hatchback, Civic Type R, CR-V, HR-V, Ridgeline, Odyssey, Acura ILX, MDX, MDX Hybrid, RDX, ",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "26V332000",
+      "component": "AIR BAGS:SENSOR:OCCUPANT CLASSIFICATION:FRONT PASSENGER",
+      "date": "2026-05-22",
+      "summary": "Honda (American Honda Motor Co.) is recalling certain 2018-2021, 2023 Acura TLX, 2019-2024 RDX, 2017-2020, 2022-2026 MDX, 2017-2021, 2023, 2025 Honda Ridgeline, 2017-2022 Pilot, 2019-2021 Passport, 20",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    }
+  ],
+  "recallsFetched": "2026-11-02",
+  "recallsUrl": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=honda&model=cr-v&modelYear=2017",
+  "related": {
+    "issues": []
+  },
+  "publishDate": "2026-11-02",
+  "dataUpdated": "2026-11-02",
+  "signOff": {
+    "by": "Marlowe Sheets",
+    "date": "2026-11-02"
+  },
+  "seo": {
+    "title": "2017 CR-V Oil Capacity: 3.7 qt (1.5T), 4.7 qt (2.4L)",
+    "description": "2017 Honda CR-V: 3.7 qt with filter for the 1.5L turbo, 4.7 qt for the 2.4L. 0W-20 oil; 17/18-inch tires at 32-33 psi front, 30 psi rear. Owner's manual cited.",
+    "h1Tail": "CR-V oil capacity (1.5T and 2.4L) & tire pressure"
+  }
+}

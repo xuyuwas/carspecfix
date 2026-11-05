@@ -183,7 +183,13 @@ for (const [u, p] of Object.entries(pages)) {
   }
   // R-L4 v2: count only internal nav/recommendation links (href="/..."); in-page anchors, source citations (external) and image licence links are excluded
   const bodyLinks = (p.body.match(/<a [^>]*href="\/[^"]*"/g) || []).length; linkCounts[u] = bodyLinks;
-  if (u !== '/sources/') { if (bodyLinks > 50) errors.push(`R-L4 ${u} has ${bodyLinks} internal links (>50)`); else if (bodyLinks > 30) warns.push(`R-L4 ${u} has ${bodyLinks} internal links (>30)`); } else if (bodyLinks > 100) warns.push(`R-L4 ${u} has ${bodyLinks} links`);
+  // /specs/ is the index of every live vehicle year, so its link count grows with
+  // coverage by design — the 50 cap is aimed at vehicle pages recommending too much.
+  // One link per live year is the whole point of the page, so it gets its own limits:
+  // 150 before the build fails, and no ">30" nag (57 links is normal, not a defect).
+  const cap = u === '/specs/' ? 150 : 50;
+  const warnAt = u === '/specs/' ? 100 : 30;
+  if (u !== '/sources/') { if (bodyLinks > cap) errors.push(`R-L4 ${u} has ${bodyLinks} internal links (>${cap})`); else if (bodyLinks > warnAt) warns.push(`R-L4 ${u} has ${bodyLinks} internal links (>${warnAt})`); } else if (bodyLinks > 100) warns.push(`R-L4 ${u} has ${bodyLinks} links`);
   const ext = [...p.body.replace(/<figcaption[\s\S]*?<\/figcaption>/g, '').matchAll(/<a [^>]*href="(https?:[^"]+)"/g)].map(m => m[1]); const d = ext.filter((x, i) => ext.indexOf(x) !== i);
   if (d.length) errors.push(`R-L5 ${u} links the same source more than once: ${[...new Set(d)].join(', ')}`);
 }

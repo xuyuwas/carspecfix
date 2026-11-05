@@ -1,0 +1,227 @@
+{
+  "slug": "2020-honda-cr-v",
+  "year": 2020,
+  "make": "Honda",
+  "model": "CR-V",
+  "makeSlug": "honda",
+  "modelSlug": "cr-v",
+  "powertrain": "ice",
+  "vpicConfirmed": true,
+  "manual": {
+    "sourceId": "manual-2020-honda-cr-v",
+    "yearConfirmed": true,
+    "note": "Honda 2020 CR-V Owner's Manual (PDF, 671 pp; footer 20 CR-V PET ELP_MAP_HMIN_HCM_J-31TLA6310). Oil and tires p.645, viscosity p.571, towing p.457, TPMS p.523. No battery capacity is printed. Printed page = PDF page - 2."
+  },
+  "specs": {
+    "oilCapacity": {
+      "value": "1.5L turbo (L15B): 3.7 US qt (3.5 L) with filter, 3.4 US qt (3.2 L) without",
+      "source": "manual-2020-honda-cr-v",
+      "page": "p.645",
+      "sourceGrade": "A",
+      "verified": true,
+      "appliesTo": "Gas models use the 1.5L turbo only; the hybrid is covered separately by Honda and is not part of this page.",
+      "unverifiedNote": null,
+      "note": null
+    },
+    "oilViscosity": {
+      "value": "Honda Genuine Motor Oil 0W-20 or API Premium-grade 0W-20 detergent oil",
+      "source": "manual-2020-honda-cr-v",
+      "page": "p.571",
+      "sourceGrade": "A",
+      "verified": true,
+      "note": null
+    },
+    "wiperSizes": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "no citable source yet"
+    },
+    "batteryGroup": {
+      "value": null,
+      "source": null,
+      "page": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "this edition prints no battery reserve-capacity or BCI group number"
+    },
+    "towingCapacity": {
+      "value": "1,500 lb (680 kg) total trailer weight",
+      "source": "manual-2020-honda-cr-v",
+      "page": "p.457",
+      "sourceGrade": "A",
+      "verified": true
+    },
+    "tpmsReset": {
+      "value": "Press and hold the TPMS button until the low tire pressure/TPMS indicator blinks twice; calibration then finishes automatically after about 30 minutes of cumulative driving at 30-65 mph. With the driver information interface or Display Audio, use Vehicle Settings > TPMS Calibration > Calibrate.",
+      "source": "manual-2020-honda-cr-v",
+      "page": "p.523",
+      "sourceGrade": "A",
+      "verified": true,
+      "note": null
+    }
+  },
+  "tires": {
+    "rows": [
+      {
+        "wheel": "17",
+        "config": "Models with 17-inch wheels",
+        "tireSize": "235/65R17 104H",
+        "frontPsi": 32,
+        "rearPsi": 30,
+        "page": "p.645",
+        "source": "manual-2020-honda-cr-v",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "18",
+        "config": "Models with 18-inch wheels",
+        "tireSize": "235/60R18 103H",
+        "frontPsi": 33,
+        "rearPsi": 30,
+        "page": "p.645",
+        "source": "manual-2020-honda-cr-v",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "19",
+        "config": "Models with 19-inch wheels",
+        "tireSize": "235/55R19 101H",
+        "frontPsi": 33,
+        "rearPsi": 33,
+        "page": "p.645",
+        "source": "manual-2020-honda-cr-v",
+        "sourceGrade": "A"
+      }
+    ],
+    "origin": "manual",
+    "note": "Compact spare: T155/90D17 112M at 60 psi. The 19-inch fitment uses equal front/rear pressure."
+  },
+  "extraManuals": [],
+  "fuelEconomy": [
+    {
+      "feId": "42298",
+      "model": "CR-V FWD",
+      "option": "Auto (variable gear ratios), 4 cyl, 1.5 L, Turbo",
+      "engineL": 1.5,
+      "cyl": 4,
+      "trans": "Automatic (variable gear ratios)",
+      "drive": "Front-Wheel Drive",
+      "mpgCity": 28,
+      "mpgHwy": 34,
+      "mpgComb": 30,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/42298",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "42299",
+      "model": "CR-V AWD",
+      "option": "Auto (variable gear ratios), 4 cyl, 1.5 L, Turbo",
+      "engineL": 1.5,
+      "cyl": 4,
+      "trans": "Automatic (variable gear ratios)",
+      "drive": "All-Wheel Drive",
+      "mpgCity": 27,
+      "mpgHwy": 32,
+      "mpgComb": 29,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/42299",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "42502",
+      "model": "CR-V Hybrid AWD",
+      "option": "Auto (variable gear ratios), 4 cyl, 2.0 L",
+      "engineL": 2.0,
+      "cyl": 4,
+      "trans": "Automatic (variable gear ratios)",
+      "drive": "All-Wheel Drive",
+      "mpgCity": 40,
+      "mpgHwy": 35,
+      "mpgComb": 38,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/42502",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    }
+  ],
+  "fuelEconomyFetched": "2026-11-02",
+  "recalls": [
+    {
+      "campaign": "19V865000",
+      "component": "STRUCTURE:FRAME AND MEMBERS",
+      "date": "2019-12-05",
+      "summary": "Honda (American Honda Motor Co.) is recalling certain 2019-2020 CR-V vehicles.  The rear subframe bolts were improperly\r\nmanufactured and may loosen, allowing the rear subframe to separate.",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "22V380000",
+      "component": "FUEL SYSTEM, GASOLINE:STORAGE:TANK ASSEMBLY",
+      "date": "2022-05-26",
+      "summary": "Honda (American Honda Motor Co.) is recalling certain 2020 CR-V vehicles.  The clip for the absorber inside the fuel tank was not secured properly and may detach, which can cause an inaccurate fuel ga",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "23V158000",
+      "component": "SEAT BELTS:FRONT:BUCKLE ASSEMBLY",
+      "date": "2023-03-09",
+      "summary": "Honda (American Honda Motor Co.) is recalling certain 2017-2020 CR-V, 2018-2019 Accord and Accord Hybrid, 2018-2020 Odyssey, 2019 Insight, and 2019-2020 Acura RDX vehicles.  A manufacturing issue with",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "23V524000",
+      "component": "EQUIPMENT:OTHER:LABELS",
+      "date": "2023-07-27",
+      "summary": "Honda (American Honda Motor Co.) is recalling certain 2017, 2020, and 2022 CR-V vehicles.  The certification label on the driver's side door states incorrect Gross Vehicle Weight Rating (GVWR), Gross ",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "23V858000",
+      "component": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+      "date": "2023-12-19",
+      "summary": "Honda (American Honda Motor Co.) is recalling certain 2013-2023 Honda Accord, Civic Coupe, Civic Sedan, Civic Hatchback, Civic Type R, CR-V, HR-V, Ridgeline, Odyssey, Acura ILX, MDX, MDX Hybrid, RDX, ",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "24V064000",
+      "component": "AIR BAGS:SENSOR:OCCUPANT CLASSIFICATION:FRONT PASSENGER",
+      "date": "2024-02-01",
+      "summary": "Honda (American Honda Motor Co.) is recalling certain 2020-2022 Pilot, Accord, Civic sedan, HR-V, Odyssey, 2020 Civic coupe, Fit, 2021-2022 Civic hatchback, 2021 Civic Type R, Insight, 2020-2021 CR-V,",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "26V332000",
+      "component": "AIR BAGS:SENSOR:OCCUPANT CLASSIFICATION:FRONT PASSENGER",
+      "date": "2026-05-22",
+      "summary": "Honda (American Honda Motor Co.) is recalling certain 2018-2021, 2023 Acura TLX, 2019-2024 RDX, 2017-2020, 2022-2026 MDX, 2017-2021, 2023, 2025 Honda Ridgeline, 2017-2022 Pilot, 2019-2021 Passport, 20",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    }
+  ],
+  "recallsFetched": "2026-11-02",
+  "recallsUrl": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=honda&model=cr-v&modelYear=2020",
+  "related": {
+    "issues": []
+  },
+  "publishDate": "2026-11-02",
+  "dataUpdated": "2026-11-02",
+  "signOff": {
+    "by": "Marlowe Sheets",
+    "date": "2026-11-02"
+  },
+  "seo": {
+    "title": "2020 CR-V Oil Capacity: 3.7 qt (1.5T), 32-33 psi Tires",
+    "description": "2020 Honda CR-V: 3.7 qt with filter for the 1.5L turbo, 0W-20 oil. Tires 17/18/19-inch at 32-33 psi front, 30-33 psi rear. Owner's manual cited.",
+    "h1Tail": "CR-V oil capacity (1.5T) & tire pressure by wheel size"
+  }
+}

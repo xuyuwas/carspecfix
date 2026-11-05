@@ -1,0 +1,168 @@
+{
+  "slug": "2012-honda-cr-v",
+  "year": 2012,
+  "make": "Honda",
+  "model": "CR-V",
+  "makeSlug": "honda",
+  "modelSlug": "cr-v",
+  "powertrain": "ice",
+  "vpicConfirmed": true,
+  "manual": {
+    "sourceId": "manual-2012-honda-cr-v",
+    "yearConfirmed": true,
+    "note": "Honda 2012 CR-V Owner's Manual (unlinked PDF, 384 pp; footer 31T0A600). Oil p.303 and p.365, viscosity p.299, tires p.365, battery p.364, towing p.251. Printed page = PDF page - 2."
+  },
+  "specs": {
+    "oilCapacity": {
+      "value": "2.4L 4-cylinder (K24Z): 4.2 US qt (4.0 L) with filter, 4.0 US qt (3.8 L) without",
+      "source": "manual-2012-honda-cr-v",
+      "page": "p.303, p.365",
+      "sourceGrade": "A",
+      "verified": true,
+      "appliesTo": "2.4L 4-cylinder (K24Z) gasoline engine only",
+      "unverifiedNote": "2WD and 4WD use the same engine and the same fill. No other engine was offered in this market.",
+      "note": null
+    },
+    "oilViscosity": {
+      "value": "Honda Genuine Motor Oil 0W-20 or API Premium-grade 0W-20 detergent oil",
+      "source": "manual-2012-honda-cr-v",
+      "page": "p.299",
+      "sourceGrade": "A",
+      "verified": true,
+      "note": null
+    },
+    "wiperSizes": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "no citable source yet"
+    },
+    "batteryGroup": {
+      "value": "12 V; the manual lists 36 AH/5 HR and 45/47 AH/20 HR depending on trim (no BCI group number printed)",
+      "source": "manual-2012-honda-cr-v",
+      "page": "p.364",
+      "sourceGrade": "A",
+      "verified": true,
+      "note": "Honda prints reserve-capacity AH figures, not a BCI group size."
+    },
+    "towingCapacity": {
+      "value": "1,500 lb (680 kg) total trailer weight",
+      "source": "manual-2012-honda-cr-v",
+      "page": "p.251",
+      "sourceGrade": "A",
+      "verified": true
+    },
+    "tpmsReset": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "this edition prints no calibrate/reset procedure; the system is checked by the low-pressure indicator only"
+    }
+  },
+  "tires": {
+    "rows": [
+      {
+        "wheel": "16",
+        "config": "LX",
+        "tireSize": "215/70R16 100S, T155/90D17 101M (spare)",
+        "frontPsi": 32,
+        "rearPsi": 32,
+        "page": "p.365",
+        "source": "manual-2012-honda-cr-v",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "17",
+        "config": "EX / EX-L",
+        "tireSize": "225/65R17 102T, T165/80D17 104M (spare)",
+        "frontPsi": 31,
+        "rearPsi": 31,
+        "page": "p.365",
+        "source": "manual-2012-honda-cr-v",
+        "sourceGrade": "A"
+      }
+    ],
+    "origin": "manual",
+    "note": null
+  },
+  "extraManuals": [],
+  "fuelEconomy": [
+    {
+      "feId": "32128",
+      "model": "CR-V 2WD",
+      "option": "Automatic 5-spd, 4 cyl, 2.4 L",
+      "engineL": 2.4,
+      "cyl": 4,
+      "trans": "Automatic 5-spd",
+      "drive": "Front-Wheel Drive",
+      "mpgCity": 23,
+      "mpgHwy": 30,
+      "mpgComb": 26,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/32128",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "32138",
+      "model": "CR-V 4WD",
+      "option": "Automatic 5-spd, 4 cyl, 2.4 L",
+      "engineL": 2.4,
+      "cyl": 4,
+      "trans": "Automatic 5-spd",
+      "drive": "All-Wheel Drive",
+      "mpgCity": 22,
+      "mpgHwy": 29,
+      "mpgComb": 25,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/32138",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    }
+  ],
+  "fuelEconomyFetched": "2026-11-02",
+  "recalls": [
+    {
+      "campaign": "12V501000",
+      "component": "EQUIPMENT:OTHER:LABELS",
+      "date": "2012-10-16",
+      "summary": "Honda is recalling certain model year 2012 CR-V, equipped with the LX trim level and manufactured from August 30, 2012, to August 31, 2012.  These vehicles fail to comply with the requirements of 49 C",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "13V143000",
+      "component": "POWER TRAIN:AUTOMATIC TRANSMISSION",
+      "date": "2013-04-15",
+      "summary": "Honda is recalling certain model year 2012-2013 CR-V, Odyssey, and model year 2013 Acura RDX vehicles.  During sub-freezing temperatures, the brake-shift interlock blocking mechanism may become slow a",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "12V338000",
+      "component": "LATCHES/LOCKS/LINKAGES:DOORS:LATCH",
+      "date": "2012-07-19",
+      "summary": "Honda is recalling certain model year 2012 Honda CR-V and model year 2013 Acura ILX vehicles.  If the manual or power door lock is activated while an interior front door handle is being operated by an",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    }
+  ],
+  "recallsFetched": "2026-11-02",
+  "recallsUrl": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=honda&model=cr-v&modelYear=2012",
+  "related": {
+    "issues": []
+  },
+  "publishDate": "2026-11-02",
+  "dataUpdated": "2026-11-02",
+  "signOff": {
+    "by": "Marlowe Sheets",
+    "date": "2026-11-02"
+  },
+  "seo": {
+    "title": "2012 CR-V Oil Capacity: 4.2 qt (2.4L), 31-32 psi Tires",
+    "description": "2012 Honda CR-V: 4.2 qt with filter for the 2.4L four, 0W-20 oil. Tires 215/70R16 at 32 psi, 225/65R17 at 31 psi. Manual cited.",
+    "h1Tail": "CR-V oil capacity (2.4L) & 31-32 psi tire pressures"
+  }
+}

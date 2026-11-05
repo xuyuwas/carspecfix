@@ -1,0 +1,249 @@
+{
+  "slug": "2009-toyota-camry",
+  "year": 2009,
+  "make": "Toyota",
+  "model": "Camry",
+  "makeSlug": "toyota",
+  "modelSlug": "camry",
+  "powertrain": "ice",
+  "vpicConfirmed": true,
+  "manual": {
+    "sourceId": "manual-2009-toyota-camry",
+    "yearConfirmed": true,
+    "note": "2009 Camry Owner's Manual (OEM PDF, 480-page manual plus 17-page Quick Reference Guide; publication ID is not printed in extractable text). Oil capacity p.431, viscosity pp.431-432, tires pp.436-437 (printed page = PDF page - 20). 6.44 MB edition, cross-checked against the ownersman.com 2009 listing."
+  },
+  "specs": {
+    "oilCapacity": {
+      "value": "2.4L 4-cylinder (2AZ-FE): 4.5 qt (4.3 L) with filter, 4.3 qt (4.1 L) without; 3.5L V6 (2GR-FE): 6.4 qt (6.1 L) with filter, 6.0 qt (5.7 L) without",
+      "source": "manual-2009-toyota-camry",
+      "page": "p.431",
+      "sourceGrade": "A",
+      "verified": false,
+      "appliesTo": "2.4L 4-cylinder (2AZ-FE) and 3.5L V6 (2GR-FE) gasoline engines",
+      "unverifiedNote": "Only the two gasoline engines listed in this manual are covered. Camry Hybrid and any other engine offered in this market: not yet verified.",
+      "note": null
+    },
+    "oilViscosity": {
+      "value": "2.4L 4-cylinder (2AZ-FE): SAE 0W-20; 3.5L V6 (2GR-FE): SAE 5W-30",
+      "source": "manual-2009-toyota-camry",
+      "page": "pp.431-432",
+      "sourceGrade": "A",
+      "verified": false,
+      "note": null
+    },
+    "wiperSizes": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "no citable source yet"
+    },
+    "batteryGroup": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "no citable source yet"
+    },
+    "towingCapacity": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "not listed in this owner's manual"
+    },
+    "tpmsReset": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "no citable source yet"
+    }
+  },
+  "tires": {
+    "rows": [
+      {
+        "wheel": "16",
+        "config": "3.5L V6 (2GR-FE)",
+        "tireSize": "P215/60R16 94V, T155/70D17 110M (spare)",
+        "frontPsi": 30,
+        "rearPsi": 30,
+        "page": "p.436",
+        "source": "manual-2009-toyota-camry",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "16",
+        "config": "2.4L 4-cyl (2AZ-FE)",
+        "tireSize": "P215/60R16 94V, T155/70D17 110M (spare)",
+        "frontPsi": 32,
+        "rearPsi": 32,
+        "page": "p.437",
+        "source": "manual-2009-toyota-camry",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "17",
+        "config": "2.4L 4-cyl or V6",
+        "tireSize": "P215/55R17 93V, T155/70D17 110M (spare)",
+        "frontPsi": 32,
+        "rearPsi": 32,
+        "page": "p.437",
+        "source": "manual-2009-toyota-camry",
+        "sourceGrade": "A"
+      }
+    ],
+    "origin": "manual",
+    "note": null
+  },
+  "extraManuals": [],
+  "fuelEconomy": [
+    {
+      "feId": "25275",
+      "model": "Camry",
+      "option": "Auto (S6), 6 cyl, 3.5 L",
+      "engineL": 3.5,
+      "cyl": 6,
+      "trans": "Automatic (S6)",
+      "drive": "Front-Wheel Drive",
+      "mpgCity": 19,
+      "mpgHwy": 28,
+      "mpgComb": 23,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/25275",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "25276",
+      "model": "Camry",
+      "option": "Auto 5-spd, 4 cyl, 2.4 L",
+      "engineL": 2.4,
+      "cyl": 4,
+      "trans": "Automatic 5-spd",
+      "drive": "Front-Wheel Drive",
+      "mpgCity": 21,
+      "mpgHwy": 31,
+      "mpgComb": 25,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/25276",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "25277",
+      "model": "Camry",
+      "option": "Man 5-spd, 4 cyl, 2.4 L",
+      "engineL": 2.4,
+      "cyl": 4,
+      "trans": "Manual 5-spd",
+      "drive": "Front-Wheel Drive",
+      "mpgCity": 21,
+      "mpgHwy": 31,
+      "mpgComb": 25,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/25277",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    }
+  ],
+  "fuelEconomyFetched": "2026-11-02",
+  "recalls": [
+    {
+      "campaign": "16V396000",
+      "component": "SEATS:FRONT ASSEMBLY:SEAT HEATER/COOLER",
+      "date": "2016-06-02",
+      "summary": "Southeast Toyota Distributors, LLC (SET) is recalling certain 2005-2011 4Runner, Highlander, Sequoia, and Sienna, 2005-2010 Avalon and Tundra, 2006-2008 Camry Solara, 2006-2010 Highlander hybrid, 2006-2011 Rav4 and Tacom",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "15V689000",
+      "component": "VISIBILITY:POWER WINDOW DEVICES AND CONTROLS",
+      "date": "2015-10-22",
+      "summary": "Toyota Motor Company (Toyota) is recalling certain model year 2009-2011 Tundra, Sequoia, Corolla, Corolla Matrix and Scion xB, 2008-2011 Highlander and Highlander Hybrid, 2007 Camry and Camry Hybrid, 2009 Camry and Camry",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "14V743000",
+      "component": "SEATS:FRONT ASSEMBLY:SEAT HEATER/COOLER",
+      "date": "2014-11-19",
+      "summary": "Southeast Toyota Distributors, LLC (SET) is recalling certain model year 2010-2011 Prius and Corolla, 2009-2011 Venza, 2006-2010 Avalon, 2007-2010 FJ Cruiser, 2005-2011 Sienna and Sequoia, 2006-2011 Tacoma 4x2 and 4x4, C",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "12V091000",
+      "component": "EXTERIOR LIGHTING:BRAKE LIGHTS:SWITCH",
+      "date": "2012-03-07",
+      "summary": "TOYOTA IS RECALLING CERTAIN MODEL YEAR 2009 CAMRY VEHICLES MANUFACTURED FROM JULY 1, 2008, THROUGH FEBRUARY 28, 2009, AND MODEL YEAR 2009-2011 VENZA VEHICLES MANUFACTURED FROM OCTOBER 20, 2008, THROUGH JANUARY 4, 2011.  ",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "12V491000",
+      "component": "VISIBILITY:POWER WINDOW DEVICES AND CONTROLS",
+      "date": "2012-10-10",
+      "summary": "Toyota is recalling certain model year 2007-2009 Camry, Camry Hybrid, RAV4, Corolla, Corolla Matrix, Tundra, Sequoia, Highlander, Highlander Hybrid, Yaris, Scion xB, Scion xD and Pontiac Vibe vehicles.  The power window ",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "13V014000",
+      "component": "AIR BAGS:FRONTAL:SENSOR/CONTROL MODULE-INACTIVE",
+      "date": "2013-01-16",
+      "summary": "Southeast Toyota Distributors, LLC (SET) is recalling certain models interspersed through model years 2009 through 2013 as follows: model year 2009-2012 Tacoma, 4Runner, Camry, Camry Hybrid, Prius, and RAV4; model year 2",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "09V388000",
+      "component": "VEHICLE SPEED CONTROL:ACCELERATOR PEDAL",
+      "date": "2009-10-05",
+      "summary": "TOYOTA IS RECALLING CERTAIN MODEL YEAR 2004-2010 PASSENGER VEHICLES.  THE ACCELERATOR PEDAL CAN GET STUCK IN THE WIDE OPEN POSITION DUE TO ITS BEING TRAPPED BY AN UNSECURED OR INCOMPATIBLE DRIVER'S FLOOR MAT.",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "10V035000",
+      "component": "EQUIPMENT:OTHER:LABELS",
+      "date": "2010-02-03",
+      "summary": "GULF STATES TOYOTA IS RECALLING CERTAIN MODEL YEAR 2005-2010 VEHICLES FOR FAILING TO COMPLY WITH THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 110, \"TIRE SELECTION AND RIMS.\"  THESE VEHICLES WERE SOLD BET",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "10V036000",
+      "component": "EQUIPMENT:OTHER:LABELS",
+      "date": "2010-02-03",
+      "summary": "SOUTHEAST TOYOTA IS RECALLING CERTAIN MODEL YEAR 2005-2011 PASSENGER VEHICLES FOR FAILING TO COMPLY WITH THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 110, \"TIRE SELECTION AND RIMS.\"  THESE VEHICLES WERE ",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "10V017000",
+      "component": "VEHICLE SPEED CONTROL:ACCELERATOR PEDAL",
+      "date": "2010-01-21",
+      "summary": "TOYOTA IS RECALLING CERTAIN MODEL YEAR 2005-2010 AVALON, MODEL YEAR 2007-2010 CAMRY, MODEL YEAR 2009-2010 COROLLA, COROLLA MATRIX, RAV4, MODEL YEAR 2010 HIGHLANDER, MODEL YEAR 2008-2010 SEQUOIA, AND MODEL YEAR 2007-2010 ",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    }
+  ],
+  "recallsFetched": "2026-11-02",
+  "recallsUrl": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=toyota&model=camry&modelYear=2009",
+  "related": {
+    "issues": []
+  },
+  "publishDate": "2026-11-02",
+  "dataUpdated": "2026-11-02",
+  "signOff": {
+    "by": "Marlowe Sheets",
+    "date": "2026-11-02"
+  },
+  "seo": {
+    "title": "2009 Camry Oil Capacity: 4.5 qt (2.4L) / 6.4 qt (V6)",
+    "description": "2009 Toyota Camry: 4.5 qt with filter for the 2.4L four, 6.4 qt for the 3.5L V6. Tires 16-17 inch, 30-32 psi cold. Manual cited.",
+    "h1Tail": "Camry oil capacity (2.4L & 3.5L V6) & tire pressures"
+  }
+}

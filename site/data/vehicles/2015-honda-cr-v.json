@@ -1,0 +1,179 @@
+{
+  "slug": "2015-honda-cr-v",
+  "year": 2015,
+  "make": "Honda",
+  "model": "CR-V",
+  "makeSlug": "honda",
+  "modelSlug": "cr-v",
+  "powertrain": "ice",
+  "vpicConfirmed": true,
+  "manual": {
+    "sourceId": "manual-2015-honda-cr-v",
+    "yearConfirmed": true,
+    "note": "Honda 2015 CR-V Owner's Manual (PDF, 533 pp; footer 15 CR-V-31T0A6300). Oil and tires p.511, viscosity p.442, towing p.353, TPMS p.401-402. No battery capacity is printed. Printed page = PDF page - 2."
+  },
+  "specs": {
+    "oilCapacity": {
+      "value": "2.4L 4-cylinder (K24W): 4.6 US qt (4.4 L) with filter, 4.4 US qt (4.2 L) without",
+      "source": "manual-2015-honda-cr-v",
+      "page": "p.511",
+      "sourceGrade": "A",
+      "verified": true,
+      "appliesTo": "2.4L 4-cylinder (K24W) only in this market; 2WD and AWD share the same fill.",
+      "unverifiedNote": null,
+      "note": null
+    },
+    "oilViscosity": {
+      "value": "Genuine Honda Motor Oil 0W-20 or API Premium-grade 0W-20 detergent oil",
+      "source": "manual-2015-honda-cr-v",
+      "page": "p.442",
+      "sourceGrade": "A",
+      "verified": true,
+      "note": null
+    },
+    "wiperSizes": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "no citable source yet"
+    },
+    "batteryGroup": {
+      "value": null,
+      "source": null,
+      "page": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "this edition prints no battery reserve-capacity or BCI group number"
+    },
+    "towingCapacity": {
+      "value": "1,500 lb (680 kg) total trailer weight",
+      "source": "manual-2015-honda-cr-v",
+      "page": "p.353",
+      "sourceGrade": "A",
+      "verified": true
+    },
+    "tpmsReset": {
+      "value": "Press and hold the TPMS button until the low tire pressure/TPMS indicator blinks a few times; the calibration then finishes automatically after about 30 minutes of cumulative driving at 30-60 mph. Models with the multi-information display can instead select TPMS CALIBRATION > Calibrate.",
+      "source": "manual-2015-honda-cr-v",
+      "page": "p.401-402",
+      "sourceGrade": "A",
+      "verified": true,
+      "note": null
+    }
+  },
+  "tires": {
+    "rows": [
+      {
+        "wheel": "16",
+        "config": "Models with 16-inch wheels",
+        "tireSize": "215/70R16 100S",
+        "frontPsi": 32,
+        "rearPsi": 32,
+        "page": "p.511",
+        "source": "manual-2015-honda-cr-v",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "17",
+        "config": "Models with 17-inch wheels",
+        "tireSize": "225/65R17 102T",
+        "frontPsi": 33,
+        "rearPsi": 33,
+        "page": "p.511",
+        "source": "manual-2015-honda-cr-v",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "18",
+        "config": "Models with 18-inch wheels",
+        "tireSize": "P225/60R18 99H",
+        "frontPsi": 30,
+        "rearPsi": 30,
+        "page": "p.511",
+        "source": "manual-2015-honda-cr-v",
+        "sourceGrade": "A"
+      }
+    ],
+    "origin": "manual",
+    "note": "Compact spare: T165/80D17 104M at 60 psi. Pressures are cold inflation pressures printed in the Specifications table."
+  },
+  "extraManuals": [],
+  "fuelEconomy": [
+    {
+      "feId": "35784",
+      "model": "CR-V 2WD",
+      "option": "Auto (variable gear ratios), 4 cyl, 2.4 L",
+      "engineL": 2.4,
+      "cyl": 4,
+      "trans": "Automatic (variable gear ratios)",
+      "drive": "Front-Wheel Drive",
+      "mpgCity": 27,
+      "mpgHwy": 33,
+      "mpgComb": 29,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/35784",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "35787",
+      "model": "CR-V 4WD",
+      "option": "Auto (variable gear ratios), 4 cyl, 2.4 L",
+      "engineL": 2.4,
+      "cyl": 4,
+      "trans": "Automatic (variable gear ratios)",
+      "drive": "All-Wheel Drive",
+      "mpgCity": 26,
+      "mpgHwy": 32,
+      "mpgComb": 28,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/35787",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    }
+  ],
+  "fuelEconomyFetched": "2026-11-02",
+  "recalls": [
+    {
+      "campaign": "17V305000",
+      "component": "ENGINE",
+      "date": "2017-05-04",
+      "summary": "Honda (American Honda Motor Co.) is recalling certain 2015-2016 Honda CR-V vehicles that recently received a replacement engine.  The replacement engine may have been built with the wrong pistons, pot",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "15V121000",
+      "component": "ENGINE AND ENGINE COOLING:ENGINE",
+      "date": "2015-03-02",
+      "summary": "American Honda Motor Co. (Honda) is recalling certain model year 2014 Accord L4 vehicles manufactured July 29, 2014, to July 31, 2014, 2015 Accord L4 vehicles manufactured August 14, 2014, to January ",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "23V858000",
+      "component": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+      "date": "2023-12-19",
+      "summary": "Honda (American Honda Motor Co.) is recalling certain 2013-2023 Honda Accord, Civic Coupe, Civic Sedan, Civic Hatchback, Civic Type R, CR-V, HR-V, Ridgeline, Odyssey, Acura ILX, MDX, MDX Hybrid, RDX, ",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    }
+  ],
+  "recallsFetched": "2026-11-02",
+  "recallsUrl": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=honda&model=cr-v&modelYear=2015",
+  "related": {
+    "issues": []
+  },
+  "publishDate": "2026-11-02",
+  "dataUpdated": "2026-11-02",
+  "signOff": {
+    "by": "Marlowe Sheets",
+    "date": "2026-11-02"
+  },
+  "seo": {
+    "title": "2015 CR-V Oil Capacity: 4.6 qt (2.4L), 32-33 psi Tires",
+    "description": "2015 Honda CR-V: 4.6 qt with filter for the 2.4L four, 0W-20 oil. Tires 215/70R16 or 225/65R17 at 32-33 psi cold. Owner's manual cited.",
+    "h1Tail": "CR-V oil capacity (2.4L) & tire pressure by wheel size"
+  }
+}

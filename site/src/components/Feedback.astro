@@ -25,5 +25,5 @@ const heading = isContact ? 'Still have a question?' : 'Question about this page
       <p class="feedback__msg" role="status"></p>
     </div>
   </form>
-  {!isContact && <p class="report">Spotted a wrong number? <a href={`/contact/?report=${encodeURIComponent(path)}#report-form`}>Report a data error</a> — corrections are checked against the source and logged.</p>}
+  {!isContact && <p class="report">Spotted a wrong number? <a href={`/contact/#report=${encodeURIComponent(path)}`}>Report a data error</a> — corrections are checked against the source and logged.</p>}
 </section>

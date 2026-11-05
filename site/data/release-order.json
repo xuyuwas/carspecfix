@@ -57,6 +57,38 @@
       "2022-chevrolet-silverado-1500",
       "2023-tesla-model-y",
       "2022-honda-cr-v"
+    ],
+    "9": [
+      "2009-toyota-camry",
+      "2010-toyota-camry",
+      "2011-toyota-camry",
+      "2012-toyota-camry"
+    ],
+    "10": [
+      "2009-honda-cr-v",
+      "2010-honda-cr-v",
+      "2011-honda-cr-v",
+      "2012-honda-cr-v"
+    ],
+    "11": [
+      "2007-honda-cr-v",
+      "2008-honda-cr-v"
+    ],
+    "12": [
+      "2015-honda-cr-v",
+      "2017-honda-cr-v",
+      "2018-honda-cr-v",
+      "2019-honda-cr-v",
+      "2020-honda-cr-v",
+      "2021-honda-cr-v"
+    ],
+    "13": [
+      "2013-honda-cr-v",
+      "2014-honda-cr-v",
+      "2016-honda-cr-v"
+    ],
+    "14": [
+      "2023-honda-cr-v"
     ]
   },
   "relatedIssues": [

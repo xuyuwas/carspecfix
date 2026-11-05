@@ -1,0 +1,169 @@
+{
+  "slug": "2023-honda-cr-v",
+  "year": 2023,
+  "make": "Honda",
+  "model": "CR-V",
+  "makeSlug": "honda",
+  "modelSlug": "cr-v",
+  "powertrain": "ice",
+  "vpicConfirmed": true,
+  "manual": {
+    "sourceId": "manual-2023-honda-cr-v",
+    "yearConfirmed": true,
+    "note": "Honda 2023 CR-V Owner's Manual, gas model (PDF, 700 pp). Specifications p.677, oil recommendation p.599, towing p.431, TPMS p.465-466. No battery capacity is printed. Printed page = PDF page - 1. Hybrid manual not read; this page covers the 1.5L turbo only."
+  },
+  "specs": {
+    "oilCapacity": {
+      "value": "1.5L turbo (gas): 3.7 US qt (3.5 L) with filter, 3.4 US qt (3.2 L) without",
+      "source": "manual-2023-honda-cr-v",
+      "page": "p.677",
+      "sourceGrade": "A",
+      "verified": true,
+      "appliesTo": "1.5L turbo gas model only; the 2.0L hybrid uses a different fill",
+      "unverifiedNote": "CR-V Hybrid oil capacity not covered on this page",
+      "note": null
+    },
+    "oilViscosity": {
+      "value": "Honda Genuine Motor Oil 0W-20 or API service SN or higher grade 0W-20",
+      "source": "manual-2023-honda-cr-v",
+      "page": "p.599, p.677",
+      "sourceGrade": "A",
+      "verified": true,
+      "note": null
+    },
+    "wiperSizes": {
+      "value": null,
+      "source": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "no citable source yet"
+    },
+    "batteryGroup": {
+      "value": null,
+      "source": null,
+      "page": null,
+      "sourceGrade": null,
+      "verified": false,
+      "note": "this edition prints no battery reserve-capacity or BCI group number"
+    },
+    "towingCapacity": {
+      "value": "1,500 lb (680 kg) total trailer weight",
+      "source": "manual-2023-honda-cr-v",
+      "page": "p.431",
+      "sourceGrade": "A",
+      "verified": true
+    },
+    "tpmsReset": {
+      "value": "Use the TPMS Calibration item in the vehicle settings menu: select Calibrate, then drive at 30-65 mph for about 30 minutes of cumulative driving. A TPMS calibration is required after tire inflation changes or wheel replacement.",
+      "source": "manual-2023-honda-cr-v",
+      "page": "p.465-466",
+      "sourceGrade": "A",
+      "verified": true,
+      "note": null
+    }
+  },
+  "tires": {
+    "rows": [
+      {
+        "wheel": "17",
+        "config": "Models with 17-inch wheels",
+        "tireSize": "235/65R17 104H",
+        "frontPsi": 33,
+        "rearPsi": 32,
+        "page": "p.677",
+        "source": "manual-2023-honda-cr-v",
+        "sourceGrade": "A"
+      },
+      {
+        "wheel": "18",
+        "config": "Models with 18-inch wheels",
+        "tireSize": "235/60R18 103H",
+        "frontPsi": 35,
+        "rearPsi": 32,
+        "page": "p.677",
+        "source": "manual-2023-honda-cr-v",
+        "sourceGrade": "A"
+      }
+    ],
+    "origin": "manual",
+    "note": "Compact spare: T155/90D17 112M at 60 psi. Cold pressures differ front/rear. Gas model only; hybrid wheel sizes are not covered here."
+  },
+  "extraManuals": [],
+  "fuelEconomy": [
+    {
+      "feId": "45952",
+      "model": "CR-V AWD",
+      "option": "Auto (variable gear ratios), 4 cyl, 1.5 L, Turbo",
+      "engineL": 1.5,
+      "cyl": 4,
+      "trans": "Automatic (variable gear ratios)",
+      "drive": "All-Wheel Drive",
+      "mpgCity": 27,
+      "mpgHwy": 32,
+      "mpgComb": 29,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/45952",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    },
+    {
+      "feId": "45950",
+      "model": "CR-V FWD",
+      "option": "Auto (variable gear ratios), 4 cyl, 1.5 L, Turbo",
+      "engineL": 1.5,
+      "cyl": 4,
+      "trans": "Automatic (variable gear ratios)",
+      "drive": "Front-Wheel Drive",
+      "mpgCity": 28,
+      "mpgHwy": 34,
+      "mpgComb": 30,
+      "fuel": "Regular",
+      "url": "https://www.fueleconomy.gov/ws/rest/vehicle/45950",
+      "source": "fueleconomy",
+      "sourceGrade": "A"
+    }
+  ],
+  "fuelEconomyFetched": "2026-11-03",
+  "recalls": [
+    {
+      "campaign": "23V092000",
+      "component": "SEATS:FRONT ASSEMBLY:RECLINER",
+      "date": "2023-02-16",
+      "summary": "Honda (American Honda Motor Co.) is recalling certain 2023 CR-V vehicles.  The front passenger seat back frame may not have been welded properly, which can cause the seat back position to fail in the ",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "23V858000",
+      "component": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+      "date": "2023-12-19",
+      "summary": "Honda (American Honda Motor Co.) is recalling certain 2013-2023 Honda Accord, Civic Coupe, Civic Sedan, Civic Hatchback, Civic Type R, CR-V, HR-V, Ridgeline, Odyssey, Acura ILX, MDX, MDX Hybrid, RDX, ",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    },
+    {
+      "campaign": "24V744000",
+      "component": "STEERING",
+      "date": "2024-10-04",
+      "summary": "Honda (American Honda Motor Co.) is recalling certain 2023-2025 Acura Integra, Civic Type R, CR-V Hybrid, CR-V, HR-V, 2022-2025 Civic, Civic Hatchback, 2024-2025 Acura Integra Type S, 2025 CR-V Fuel C",
+      "source": "nhtsa-recalls",
+      "sourceGrade": "A"
+    }
+  ],
+  "recallsFetched": "2026-11-03",
+  "recallsUrl": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=honda&model=cr-v&modelYear=2023",
+  "related": {
+    "issues": []
+  },
+  "publishDate": "2026-11-03",
+  "dataUpdated": "2026-11-03",
+  "signOff": {
+    "by": "Marlowe Sheets",
+    "date": "2026-11-03"
+  },
+  "seo": {
+    "title": "2023 CR-V Oil Capacity: 3.7 qt (1.5T), 33/35 psi Tires",
+    "description": "2023 Honda CR-V gas model: 3.7 qt with filter for the 1.5L turbo, 0W-20 oil. Tires 235/65R17 at 33/32 psi or 235/60R18 at 35/32 psi cold. Owner's manual cited.",
+    "h1Tail": "CR-V oil capacity (1.5T) & tire pressure by wheel size"
+  }
+}

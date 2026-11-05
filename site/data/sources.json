@@ -1,453 +1,629 @@
 {
- "nhtsa-recalls": {
-  "name": "NHTSA Recalls API",
-  "url": "https://www.nhtsa.gov/recalls",
-  "type": "government",
-  "grade": "A",
-  "retrieved": "2026-10-15"
- },
- "fueleconomy": {
-  "name": "fueleconomy.gov (U.S. EPA / DOE)",
-  "url": "https://www.fueleconomy.gov/",
-  "type": "government",
-  "grade": "A",
-  "retrieved": "2026-10-15"
- },
- "manual-2020-toyota-rav4": {
-  "name": "Toyota owner's manual OM0R024U (2020 RAV4)",
-  "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM0R024U/pdf/OM0R024U.pdf",
-  "type": "oem",
-  "grade": "A",
-  "retrieved": "2026-10-15",
-  "note": "OM0R024U, PDF created 2019-07-22; text has no model-year statement (only \"RAV4_OM_OM0R024U_(U)\"). Creation date fits MY2020, but MY confirmation via toyota.com owners portal still TODO (portal is JS-rendered)",
-  "archived": {
-   "file": "manuals/toyota-2020-rav4-OM0R024U.pdf",
-   "fetchedAt": "2026-10-15T12:15:16Z"
+  "nhtsa-recalls": {
+    "name": "NHTSA Recalls API",
+    "url": "https://www.nhtsa.gov/recalls",
+    "type": "government",
+    "grade": "A",
+    "retrieved": "2026-10-15"
+  },
+  "fueleconomy": {
+    "name": "fueleconomy.gov (U.S. EPA / DOE)",
+    "url": "https://www.fueleconomy.gov/",
+    "type": "government",
+    "grade": "A",
+    "retrieved": "2026-10-15"
+  },
+  "manual-2020-toyota-rav4": {
+    "name": "Toyota owner's manual OM0R024U (2020 RAV4)",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM0R024U/pdf/OM0R024U.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-10-15",
+    "note": "OM0R024U, PDF created 2019-07-22; text has no model-year statement (only \"RAV4_OM_OM0R024U_(U)\"). Creation date fits MY2020, but MY confirmation via toyota.com owners portal still TODO (portal is JS-rendered)",
+    "archived": {
+      "file": "manuals/toyota-2020-rav4-OM0R024U.pdf",
+      "fetchedAt": "2026-10-15T12:15:16Z"
+    }
+  },
+  "manual-2024-toyota-rav4": {
+    "name": "Toyota owner's manual OM0R147U (2024 RAV4)",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM0R147U/pdf/OM0R147U.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-10-15",
+    "note": "Three 2024 RAV4 owner manuals checked, oil + tire tables identical for shared configs: OM0R147U (Canada prod. through June 2024; https://assets.sipb.toyota.com/publications/en/om-s/OM0R147U/pdf/OM0R147U.pdf; oil p.486, tires p.491-494), OM0R069U (Canada prod. from July 2024; https://assets.sipb.toyota.com/publications/en/om-s/OM0R069U/pdf/OM0R069U.pdf; same pages), OM42L49U (Japan prod. from July 2024; https://assets.sipb.toyota.com/publications/en/om-s/OM42L49U/pdf/OM42L49U.pdf; oil p.494, tires p.499-503; adds 17in type F/G and 19in type C no-spare configs). MY2024 confirmed via Helm SKU pages for all three. OM0R100U (2023) not used.",
+    "archived": {
+      "file": "manuals/toyota-2024-rav4-OM0R147U.pdf",
+      "fetchedAt": "2026-10-15T20:25:25+08:00"
+    }
+  },
+  "doc-OM42L49U": {
+    "name": "Toyota owner's manual OM42L49U (2024 RAV4)",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM42L49U/pdf/OM42L49U.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-10-15",
+    "archived": {
+      "file": "manuals/toyota-2024-rav4-OM42L49U.pdf",
+      "fetchedAt": "2026-10-15T20:25:25+08:00"
+    }
+  },
+  "manual-2022-toyota-camry": {
+    "name": "Toyota owner's manual OM06244U (2022 Camry)",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-10-15",
+    "note": "OM06244U (gas Camry; MY2022 per Helm https://www.helminc.com/helm/product2.asp?Sku=OM06244U&class_2=TOY&itemtype=N). Oil p.578, viscosity p.578-579, tires 2WD pp.584-586, AWD pp.587-588 (printed page = PDF page -1). Hybrid: OM06246U added. Old OM06248U refs void.",
+    "archived": {
+      "file": "manuals/toyota-2022-camry-OM06244U.pdf",
+      "fetchedAt": "2026-10-15T12:17:33Z"
+    }
+  },
+  "doc-OM06246U": {
+    "name": "Toyota owner's manual OM06246U (2022 Camry)",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM06246U/pdf/OM06246U.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-10-15",
+    "archived": {
+      "file": "manuals/toyota-2022-camry-hybrid-OM06246U.pdf",
+      "fetchedAt": "2026-10-15T20:40:45+08:00"
+    }
+  },
+  "manual-2024-toyota-camry": {
+    "name": "Toyota owner's manual OM06291U (2024 Camry)",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM06291U/pdf/OM06291U.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-10-15",
+    "note": "OM06291U (gas Camry; MY2024 per Helm https://www.helminc.com/helm/product2.asp?Sku=OM06291U&class_2=TOY&itemtype=N). Oil p.578, viscosity pp.578-579, tires pp.584-588 (printed = PDF-1). Hybrid: OM06293U added.",
+    "archived": {
+      "file": "manuals/toyota-2024-camry-OM06291U.pdf",
+      "fetchedAt": "2026-10-15T12:17:33Z"
+    }
+  },
+  "doc-OM06293U": {
+    "name": "Toyota owner's manual OM06293U (2024 Camry)",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM06293U/pdf/OM06293U.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-10-15",
+    "archived": {
+      "file": "manuals/toyota-2024-camry-hybrid-OM06293U.pdf",
+      "fetchedAt": "2026-10-15T20:40:45+08:00"
+    }
+  },
+  "manual-2024-honda-cr-v": {
+    "name": "Honda owner's manual A3A02424IOM (2024 CR-V)",
+    "url": "https://techinfo.honda.com/rjanisis/pubs/OM/AH/A3A02424IOM/enu/details/131240047-16992.html",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-10-15",
+    "note": "Honda TechInfo official owner manual CR-V 2024 non-hybrid (A3A02424IOM) > Specifications. Hybrid manual A3D42424IOM not yet read | Signoff scope: non-hybrid only; hybrid fields display Not yet verified",
+    "archived": null
+  },
+  "manual-2021-ford-f-150": {
+    "name": "Ford F-150 Owner's Manual, 2021 (version 2, EN-US, October 2021)",
+    "url": "https://www.fordservicecontent.com/Ford_Content/Catalog/owner_information/2021-Ford-F-150-Owners-Manual-version-2_om_EN-US_10_2021.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-10-26",
+    "note": "PDF, 796 pp. Read directly: Capacities and Specifications (pp. 591-601) gives engine oil capacity and viscosity per engine; Wheels and Tires directs the reader to the Tire Label on the driver door pillar for cold pressures. Ford's host refuses this network, so the copy actually read was the Internet Archive snapshot of the same official file: https://web.archive.org/web/20240125170754/https://www.fordservicecontent.com/Ford_Content/Catalog/owner_information/2021-Ford-F-150-Owners-Manual-version-2_om_EN-US_10_2021.pdf"
+  },
+  "manual-2023-ford-f-150": {
+    "name": "2023 Ford F-150 owner information",
+    "url": "https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?ProcUid=G2095740&Uid=G2095732&buildtype=web&countryCode=USA&div=f&languageCode=en&userMarket=USA&vFilteringEnabled=False&variantid=9043",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-10-15",
+    "note": "Values from autoguidegalaxy mirror of 2023 owner manual (p.76 Capacities); verify in Ford official online manual | OIL A-grade: waiting on 队长 download: https://www.ford.com/support/owner-manuals-details/f150/2023/ (Owner's Manual PDF; fordservicecontent.com returns 403 from box)",
+    "archived": null
+  },
+  "manual-2022-honda-civic": {
+    "name": "Honda owner's manual AT202222IOM (2022 Civic)",
+    "url": "https://techinfo.honda.com/rjanisis/pubs/om/ah/at202222iom/enu/details/131229047-16992.html",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-10-15",
+    "note": "Honda TechInfo official online owner manual, Civic Sedan 2022 (AT202222IOM), section Information > Specifications",
+    "archived": null
+  },
+  "manual-2022-chevrolet-silverado-1500": {
+    "name": "2022 Chevrolet Silverado 1500 owner information",
+    "url": "https://gm-techlink.com/wp-content/uploads/2024/11/TechLink-engine-oil-capacities-2022_C.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-10-15",
+    "note": "GM TechLink 2022 Engine Oil Capacities (with filter) U.S./Canada, Chevrolet table, rows Silverado 1500 (also lists Silverado 1500 LTD). Tires: owner manual PDF on chevrolet.com returned 404 — TODO",
+    "archived": {
+      "file": "manuals/gm-2022-oil-capacities.pdf",
+      "fetchedAt": "2026-10-15T12:15:16Z"
+    }
+  },
+  "manual-2023-tesla-model-y": {
+    "name": "Tesla Model Y Owner's Manual (EN-US, 2023 edition)",
+    "url": "https://www.tesla.com/ownersmanual/modely/en_us/Owners_Manual.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-10-26",
+    "note": "PDF, 298 pp. Tire Specifications (Factory), p. 216, lists the factory sizes for 19/20/21-inch wheels and states that pressures vary by tire and are printed on the Tire and Loading Information label on the centre door pillar. The only psi figure in the manual is the towing table, p. 84: 42 psi (290 kPa) for all three sizes, overriding the label while towing. Snapshot read: https://web.archive.org/web/20230312000949/https://www.tesla.com/ownersmanual/modely/en_us/Owners_Manual.pdf"
+  },
+  "fe-ev-2023-tesla-model-y": {
+    "name": "fueleconomy.gov (U.S. EPA / DOE), 2023 Tesla Model Y (vehicle ids 46211, 46212, 46213)",
+    "url": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2023&year2=2023&make=Tesla&baseModel=Model%20Y",
+    "type": "government",
+    "grade": "A",
+    "retrieved": "2026-10-15"
+  },
+  "manual-2022-chevrolet-equinox": {
+    "name": "GM TechLink 2022 engine oil capacities (with filter), U.S. and Canada",
+    "url": "https://gm-techlink.com/wp-content/uploads/2024/11/TechLink-engine-oil-capacities-2022_C.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-10-20",
+    "note": "Chevrolet table, row Equinox: 1.5L L4 LYX, FWD 4.0 L / 4.2 qt, AWD 5.0 L / 5.3 qt, dexos1 0W-20. Oil capacity + viscosity on p.1.",
+    "archived": {
+      "file": "manuals/gm-2022-oil-capacities.pdf",
+      "fetchedAt": "2026-10-15T12:15:16Z"
+    }
+  },
+  "manual-2022-toyota-corolla": {
+    "name": "Toyota owner's manual OM02617U (2022 Corolla)",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM02617U/pdf/OM02617U.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-10-15",
+    "note": "OM02617U (Corolla sedan gas; MY2022 per Helm https://www.helminc.com/helm/product2.asp?Sku=OM02617U&class_2=TOY&itemtype=N). Oil pp.552-554, tires pp.558-560 (printed = PDF page). Hybrid OM12R27U and hatchback OM12Q05U added.",
+    "archived": {
+      "file": "manuals/toyota-2022-corolla-OM02617U.pdf",
+      "fetchedAt": "2026-10-15T12:17:33Z"
+    }
+  },
+  "doc-OM12R27U": {
+    "name": "Toyota owner's manual OM12R27U (2022 Corolla)",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM12R27U/pdf/OM12R27U.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-10-15",
+    "archived": {
+      "file": "manuals/toyota-2022-corolla-hybrid-OM12R27U.pdf",
+      "fetchedAt": "2026-10-15T20:40:45+08:00"
+    }
+  },
+  "doc-OM12Q05U": {
+    "name": "Toyota owner's manual OM12Q05U (2022 Corolla)",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM12Q05U/pdf/OM12Q05U.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-10-15",
+    "archived": {
+      "file": "manuals/toyota-2022-corolla-hatchback-OM12Q05U.pdf",
+      "fetchedAt": "2026-10-15T20:40:45+08:00"
+    }
+  },
+  "manual-2022-toyota-tacoma": {
+    "name": "Toyota owner's manual OM04037U (2022 Tacoma)",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM04037U/pdf/OM04037U.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-10-15",
+    "note": "OM04037U (MY2022 per Helm https://www.helminc.com/helm/product2.asp?Sku=OM04037U&class_2=TOY&itemtype=N). Oil p.545, tires pp.551-552 (printed = PDF page). Note Helm also lists OM04039U as 2022 Tacoma; that PDF returns 403.",
+    "archived": {
+      "file": "manuals/toyota-2022-tacoma-OM04037U.pdf",
+      "fetchedAt": "2026-10-15T20:38:31+08:00"
+    }
+  },
+  "manual-2022-honda-accord": {
+    "name": "Honda owner's manual ATVA2222OM (2022 Accord)",
+    "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/ATVA2222OM/enu/ATVA2222OM.PDF",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-10-15",
+    "note": "ATVA2222OM PDF downloaded 2026-10-15 to manuals/from-captain/; printed page = PDF page - 2",
+    "archived": null
+  },
+  "doc-2022-honda-accord-23": {
+    "name": "Honda owner's manual (2022 Accord)",
+    "url": "https://techinfo.honda.com/rjanisis/pubs/OM/AH/ATVA2222OM/enu/ATVA2222OM.PDF",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-10-15",
+    "archived": {
+      "file": "manuals/from-captain/honda-2022-accord-ATVA2222OM.pdf",
+      "fetchedAt": "2026-10-15T20:52:00+08:00"
+    }
+  },
+  "manual-2009-toyota-rav4": {
+    "name": "Toyota owner's manual OM42759U (2009 RAV4)",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM42759U/pdf/OM42759U.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-10-19",
+    "note": "OM42759U listed as the 2009 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2009/. Oil capacity p.470, oil viscosity p.471, tires and wheels p.475 (printed page = PDF page index + 1). Two engines listed: 2.5L 4-cylinder (2AR-FE) and 3.5L V6 (2GR-FE).",
+    "archived": {
+      "file": "manuals/toyota-2009-rav4-OM42759U.pdf",
+      "fetchedAt": "2026-10-19"
+    }
+  },
+  "manual-2011-toyota-rav4": {
+    "name": "Toyota owner's manual OM42785U (2011 RAV4)",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM42785U/pdf/OM42785U.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-10-19",
+    "note": "OM42785U listed as the 2011 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2011/. Oil capacity p.478, oil viscosity p.479, tires and wheels p.484 (printed page = PDF page index + 1). Two engines: 2.5L 4-cylinder (2AR-FE) and 3.5L V6 (2GR-FE).",
+    "archived": {
+      "file": "manuals/toyota-2011-rav4-OM42785U.pdf",
+      "fetchedAt": "2026-10-19"
+    }
+  },
+  "manual-2014-toyota-rav4": {
+    "name": "Toyota owner's manual OM42869U (2014 RAV4)",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM42869U/pdf/OM42869U.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-10-19",
+    "note": "OM42869U listed as the 2014 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2014/ (the second manual on that page, OM42A04U, is the RAV4 EV). Oil capacity p.659, oil viscosity p.660, tires and wheels p.665 (printed page = PDF page index + 1). One engine: 2.5L 4-cylinder (2AR-FE).",
+    "archived": {
+      "file": "manuals/toyota-2014-rav4-OM42869U.pdf",
+      "fetchedAt": "2026-10-19"
+    }
+  },
+  "manual-2021-toyota-rav4": {
+    "name": "Toyota owner's manual OM0R028U (2021 RAV4)",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM0R028U/pdf/OM0R028U.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-10-19",
+    "note": "OM0R028U listed as the 2021 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2021/. Oil capacity p.678, oil viscosity p.679, tires and wheels pp.684-687 (printed page = PDF page index + 1). Gasoline 2.5L (A25A-FKS) only; RAV4 Hybrid / Prime are separate manuals not yet checked.",
+    "archived": {
+      "file": "manuals/toyota-2021-rav4-OM0R028U.pdf",
+      "fetchedAt": "2026-10-19"
+    }
+  },
+  "manual-2010-toyota-rav4": {
+    "name": "Toyota owner's manual OM42783U (2010 RAV4)",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM42783U/pdf/OM42783U.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-10-19",
+    "note": "OM42783U listed as the 2010 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2010/. Oil capacity p.467, oil viscosity p.468, tires and wheels p.473 (printed page = PDF page index + 1). Two engines listed: 2.5L 4-cylinder (2AR-FE) and 3.5L V6 (2GR-FE).",
+    "archived": {
+      "file": "manuals/toyota-2010-rav4-OM42783U.pdf",
+      "fetchedAt": "2026-10-19"
+    }
+  },
+  "manual-2012-toyota-rav4": {
+    "name": "Toyota owner's manual OM42836U (2012 RAV4)",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM42836U/pdf/OM42836U.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-10-19",
+    "note": "OM42836U listed as the 2012 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2012/. Oil capacity p.488, oil viscosity p.489-490, tires and wheels p.494. Two engines: 2.5L 4-cylinder (2AR-FE) and 3.5L V6 (2GR-FE).",
+    "archived": {
+      "file": "manuals/toyota-2012-rav4-OM42836U.pdf",
+      "fetchedAt": "2026-10-19"
+    }
+  },
+  "manual-2013-toyota-rav4": {
+    "name": "Toyota owner's manual OM42809U (2013 RAV4)",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM42809U/pdf/OM42809U.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-10-19",
+    "note": "OM42809U listed as the 2013 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2013/. Oil capacity p.555, oil viscosity p.556, tires and wheels p.561. One engine: 2.5L 4-cylinder (2AR-FE).",
+    "archived": {
+      "file": "manuals/toyota-2013-rav4-OM42809U.pdf",
+      "fetchedAt": "2026-10-19"
+    }
+  },
+  "manual-2015-toyota-rav4": {
+    "name": "Toyota owner's manual OM42A78U (2015 RAV4)",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM42A78U/pdf/OM42A78U.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-10-19",
+    "note": "OM42A78U listed as the 2015 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2015/. Oil capacity p.663, oil viscosity p.665, tires and wheels p.669. One engine: 2.5L 4-cylinder (2AR-FE).",
+    "archived": {
+      "file": "manuals/toyota-2015-rav4-OM42A78U.pdf",
+      "fetchedAt": "2026-10-19"
+    }
+  },
+  "manual-2016-toyota-rav4": {
+    "name": "Toyota owner's manual OM42A41U (2016 RAV4)",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM42A41U/pdf/OM42A41U.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-10-19",
+    "note": "OM42A41U listed as the 2016 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2016/. Oil capacity and oil viscosity p.674, tires and wheels p.678. One engine: 2.5L 4-cylinder (2AR-FE).",
+    "archived": {
+      "file": "manuals/toyota-2016-rav4-OM42A41U.pdf",
+      "fetchedAt": "2026-10-19"
+    }
+  },
+  "manual-2017-toyota-rav4": {
+    "name": "Toyota owner's manual OM42752U (2017 RAV4)",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM42752U/pdf/OM42752U.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-10-19",
+    "note": "OM42752U listed as the 2017 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2017/. Oil capacity and oil viscosity p.672, tires and wheels p.676. One engine: 2.5L 4-cylinder (2AR-FE).",
+    "archived": {
+      "file": "manuals/toyota-2017-rav4-OM42752U.pdf",
+      "fetchedAt": "2026-10-19"
+    }
+  },
+  "manual-2018-toyota-rav4": {
+    "name": "Toyota owner's manual OM0R012U (2018 RAV4)",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM0R012U/pdf/OM0R012U.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-10-19",
+    "note": "OM0R012U listed as the 2018 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2018/. Oil capacity and oil viscosity p.675, tires and wheels p.679. One engine: 2.5L 4-cylinder (2AR-FE).",
+    "archived": {
+      "file": "manuals/toyota-2018-rav4-OM0R012U.pdf",
+      "fetchedAt": "2026-10-19"
+    }
+  },
+  "manual-2019-toyota-rav4": {
+    "name": "Toyota owner's manual OM0R009U (2019 RAV4)",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM0R009U/pdf/OM0R009U.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-10-19",
+    "note": "OM0R009U listed as the 2019 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2019/. Oil capacity p.660, oil viscosity p.661, tires and wheels pp.664-667. Gasoline 2.5L (A25A-FKS) only; the RAV4 Hybrid manual has not been checked.",
+    "archived": {
+      "file": "manuals/toyota-2019-rav4-OM0R009U.pdf",
+      "fetchedAt": "2026-10-19"
+    }
+  },
+  "manual-2022-toyota-rav4": {
+    "name": "Toyota owner's manual OM0R059U (2022 RAV4)",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM0R059U/pdf/OM0R059U.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-10-19",
+    "note": "OM0R059U listed as the 2022 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2022/. Oil capacity p.662, oil viscosity p.663, tires and wheels pp.667-670. Gasoline 2.5L (A25A-FKS) only. A second 2022 manual on the Toyota page, OM0R056S, is Spanish-language and was not used.",
+    "archived": {
+      "file": "manuals/toyota-2022-rav4-OM0R059U.pdf",
+      "fetchedAt": "2026-10-19"
+    }
+  },
+  "manual-2023-toyota-rav4": {
+    "name": "Toyota owner's manual OM0R100U (2023 RAV4)",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM0R100U/pdf/OM0R100U.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-10-19",
+    "note": "OM0R100U listed as the 2023 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2023/. Oil capacity p.486, oil viscosity p.487, tires and wheels pp.490-494. Gasoline 2.5L (A25A-FKS) only; RAV4 Hybrid / Prime manuals have not been checked.",
+    "archived": {
+      "file": "manuals/toyota-2023-rav4-OM0R100U.pdf",
+      "fetchedAt": "2026-10-19"
+    }
+  },
+  "manual-2012-toyota-rav4-alt": {
+    "name": "Toyota owner's manual OM42862U (2012 RAV4, second manual listed)",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM42862U/pdf/OM42862U.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-10-19",
+    "note": "OM42862U is the second 2012 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2012/. Oil capacity p.506 gives 4.6 qt (4.4 L) with filter for the 2.5 L engine, 0.1 qt less than OM42836U p.488; V6 figures and the tire table (p.512) match. Cited on the 2012 page as a production-period difference.",
+    "archived": {
+      "file": "manuals/toyota-2012-rav4-OM42862U.pdf",
+      "fetchedAt": "2026-10-19"
+    }
+  },
+  "om-2022-chevrolet-equinox": {
+    "name": "Chevrolet Equinox Owner's Manual 84654602B (2022)",
+    "url": "https://contentdelivery.ext.gm.com/content/dam/cope/en_us/public/pdf_assets/active/owners_manuals_browse/2022/22_CHEV_Equinox_OM_en_US_U_84654602B_2021AUG16_2P.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-10-20",
+    "note": "GM's current download for the 2022 Equinox. Tire Pressure section (p.294) states the recommended cold pressure is the figure on the Tire and Loading Information label, and prints no psi table.",
+    "archived": {
+      "file": "manuals/chevrolet-2022-equinox-OM.pdf",
+      "fetchedAt": "2026-10-20T16:52:00+08:00"
+    }
+  },
+  "spec-2022-chevrolet-equinox": {
+    "name": "2022 Chevrolet Equinox specifications (GM spec sheet, copy in NHTSA docket NHTSA-2023-0022-0035, attachment 4)",
+    "url": "https://downloads.regulations.gov/NHTSA-2023-0022-0035/attachment_4.pdf",
+    "type": "oem-spec-sheet",
+    "grade": "A",
+    "retrieved": "2026-10-20",
+    "note": "Wheel/tyre fitment and trailering: wheel sizes and tyre sizes on p.2 (P225/65R17, P225/60R18, P235/50R19), trailering capacity 1,500 lb on p.3, EPA city/highway on p.1."
+  },
+  "manual-2020-toyota-rav4-hybrid": {
+    "name": "Toyota RAV4 Hybrid owner's manual OM0R025U (2020 RAV4 Hybrid)",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM0R025U/pdf/OM0R025U.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-10-20",
+    "note": "OM0R025U, 744 pp, PDF created 2019-07-22 (same batch as the 2020 RAV4 gasoline manual OM0R024U). Oil capacity, lubrication system: with filter 4.8 qt (4.5 L), without filter 4.4 qt (4.2 L), p.678 printed."
+  },
+  "manual-2022-honda-cr-v": {
+    "name": "Honda CR-V Owner's Manual, 2022 (ATLA2222OM)",
+    "url": "https://techinfo.honda.com/rjanisis/pubs/OM/AH/ATLA2222OM/enu/ATLA2222OM.PDF",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-10-26",
+    "note": "PDF, 672 pp, publication 31TLA6510 (22 CR-V PET HCM ELP) - the petrol 1.5L turbo edition. Specifications, p. 649, gives oil capacity and viscosity and the 17/18/19-inch tire sizes with front and rear cold pressures. Saved to manuals/honda-2022-cr-v-OM.pdf."
+  },
+  "manual-2009-toyota-camry": {
+    "name": "Toyota Camry 2009 Owner's Manual (OEM PDF, 480 pp.)",
+    "url": "https://carmanual.org/OwnersManual/toyota/2009_toyota_camry.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-11-02",
+    "note": "OEM 2009 Camry manual (480-page manual + 17-page Quick Reference Guide, 6.44 MB). No publication ID is printed in extractable text. Oil p.431, viscosity pp.431-432, tires pp.436-437 (printed page = PDF page - 20)."
+  },
+  "manual-2010-toyota-camry": {
+    "name": "Toyota owner's manual OM33840U (2010 Camry)",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM33840U/pdf/OM33840U.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-11-02",
+    "note": "OM33840U, 538 pp; 2010 Camry gas confirmed by ownersman.com TOC listing. Oil p.485, viscosity pp.485-486, tires pp.491-493 (printed page = PDF page - 2)."
+  },
+  "manual-2011-toyota-camry": {
+    "name": "Toyota owner's manual OM33897U (2011 Camry)",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM33897U/pdf/OM33897U.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-11-02",
+    "note": "OM33897U, 554 pp; 2011 Camry gas confirmed by ownersman.com TOC listing. Oil p.491, viscosity pp.491-492, tires pp.497-499 (printed page = PDF page - 2)."
+  },
+  "manual-2012-toyota-camry": {
+    "name": "Toyota owner's manual OM33856U (2012 Camry)",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM33856U/pdf/OM33856U.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-11-02",
+    "note": "OM33856U, 532 pp; 2012 Camry gas confirmed by ownersman.com TOC listing. Oil p.469, viscosity pp.469-470, tires pp.474-476 (printed page = PDF page)."
+  },
+  "manual-2009-honda-cr-v": {
+    "name": "Honda 2009 CR-V Owner's Manual (P/N 31SWA630)",
+    "url": "http://techinfo.honda.com/rjanisis/pubs/OM/WA0909/WA0909OM.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-11-02",
+    "note": "Unlinked OEM PDF (373 pp). Oil p.336, viscosity p.281, tires p.303, battery p.337, towing p.261. Printed page = PDF page - 4.",
+    "archived": null
+  },
+  "manual-2010-honda-cr-v": {
+    "name": "Honda 2010 CR-V Owner's Manual (P/N 31SWA630)",
+    "url": "http://techinfo.honda.com/rjanisis/pubs/OM/WA1010/WA1010OM.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-11-02",
+    "note": "Unlinked OEM PDF (446 pp). Oil p.351, viscosity p.349, tires p.371, battery p.409, towing p.329. Printed page = PDF page - 6.",
+    "archived": null
+  },
+  "manual-2011-honda-cr-v": {
+    "name": "Honda 2011 CR-V Owner's Manual (P/N 31SWA640)",
+    "url": "http://techinfo.honda.com/rjanisis/pubs/OM/WA1111/WA1111OM.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-11-02",
+    "note": "Unlinked OEM PDF (446 pp), combined US/Canada edition. Oil p.351, viscosity p.349, US tire chart p.371, battery p.364, towing p.329. Printed page = PDF page - 6.",
+    "archived": null
+  },
+  "manual-2012-honda-cr-v": {
+    "name": "Honda 2012 CR-V Owner's Manual (P/N 31T0A600)",
+    "url": "http://techinfo.honda.com/rjanisis/pubs/OM/0A1212/0A1212OM.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-11-02",
+    "note": "Unlinked OEM PDF (384 pp). Oil p.303 and p.365, viscosity p.299, tires p.365, battery p.364, towing p.251. Printed page = PDF page - 2.",
+    "archived": null
+  },
+  "manual-2007-honda-cr-v": {
+    "name": "Honda 2007 CR-V Owner's Manual (P/N 31SWA600)",
+    "url": "http://techinfo.honda.com/rjanisis/pubs/OM/WA0707/WA0707OM.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-11-02",
+    "note": "Unlinked OEM PDF (354 pp; footer 31SWA600). Oil p.322 and p.348, viscosity p.267, tires p.289, battery p.323, towing p.245. Printed page = PDF page - 6.",
+    "archived": null
+  },
+  "manual-2008-honda-cr-v": {
+    "name": "Honda 2008 CR-V Owner's Manual (P/N 31SWA610)",
+    "url": "http://techinfo.honda.com/rjanisis/pubs/OM/WA0808/WA0808OM.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-11-02",
+    "note": "Unlinked OEM PDF (373 pp; footer 31SWA610). Oil p.336 and p.368, viscosity p.281, tires p.303, battery p.337, towing p.261. Printed page = PDF page - 4.",
+    "archived": null
+  },
+  "manual-2015-honda-cr-v": {
+    "name": "Honda 2015 CR-V Owner's Manual (P/N 31T0A6300)",
+    "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/AT0Z1515OM/enu/AT0Z1515OM.PDF",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-11-02",
+    "note": "Unlinked OEM PDF (PDF, 533 pp; footer 15 CR-V-31T0A6300). Oil and tires p.511, viscosity p.442, towing p.353, TPMS p.401-402. No battery capacity is printed. Printed page = PDF page - 2.",
+    "archived": null
+  },
+  "manual-2017-honda-cr-v": {
+    "name": "Honda 2017 CR-V Owner's Manual (P/N 31TLA6000)",
+    "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/ATLA1717OM/enu/ATLA1717OM.PDF",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-11-02",
+    "note": "Unlinked OEM PDF (PDF, 663 pp; footer 17 CR-V-31TLA6000). Oil and tires p.637, viscosity p.556, towing p.439, TPMS p.503-505. No battery capacity is printed. Printed page = PDF page - 2.",
+    "archived": null
+  },
+  "manual-2018-honda-cr-v": {
+    "name": "Honda 2018 CR-V Owner's Manual (P/N 31TLA6100)",
+    "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/ATLA1818OM/enu/ATLA1818OM.PDF",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-11-02",
+    "note": "Unlinked OEM PDF (PDF, 679 pp; footer 18 CR-V-31TLA6100). Oil and tires p.653, viscosity p.572, towing p.453, TPMS p.518. No battery capacity is printed. Printed page = PDF page - 2.",
+    "archived": null
+  },
+  "manual-2019-honda-cr-v": {
+    "name": "Honda 2019 CR-V Owner's Manual (P/N 31TLA6210)",
+    "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/ATLA1919OM/enu/ATLA1919OMEN.PDF",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-11-02",
+    "note": "Unlinked OEM PDF (PDF, 672 pp; footer 19 CR-V ELP HCM MAP HMIN-31TLA6210). Oil and tires p.649, viscosity p.570, towing p.451, TPMS p.516. No battery capacity is printed. Printed page = PDF page - 2.",
+    "archived": null
+  },
+  "manual-2020-honda-cr-v": {
+    "name": "Honda 2020 CR-V Owner's Manual (P/N 31TLA6310)",
+    "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/ATLA2020OM/enu/ATLA2020OM.PDF",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-11-02",
+    "note": "Unlinked OEM PDF (PDF, 671 pp; footer 20 CR-V PET ELP_MAP_HMIN_HCM_J-31TLA6310). Oil and tires p.645, viscosity p.571, towing p.457, TPMS p.523. No battery capacity is printed. Printed page = PDF page - 2.",
+    "archived": null
+  },
+  "manual-2021-honda-cr-v": {
+    "name": "Honda 2021 CR-V Owner's Manual (P/N 31TLA6400)",
+    "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/ATLA2121OM/enu/ATLA2121OM.PDF",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-11-02",
+    "note": "Unlinked OEM PDF (PDF, 675 pp; footer 21 CR-V PET ELP_MAP_HMIN_HCM-31TLA6400). Oil and tires p.651, viscosity p.577, towing p.463, TPMS p.529. No battery capacity is printed. Printed page = PDF page - 2.",
+    "archived": null
+  },
+  "manual-2013-honda-cr-v": {
+    "name": "Honda 2013 CR-V Owner's Manual (P/N 31T0A6100)",
+    "url": "http://techinfo.honda.com/rjanisis/pubs/OM/0A1313/0A1313OM.PDF",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-11-02",
+    "note": "Honda 2013 CR-V Owner's Manual (PDF, 361 pp; footer 13 CR-V-31T0A6100). Oil p.342, tires p.343, viscosity p.277, towing p.231, TPMS p.251. No battery capacity is printed. Printed page = PDF page - 1.",
+    "archived": null
+  },
+  "manual-2014-honda-cr-v": {
+    "name": "Honda 2014 CR-V Owner's Manual (P/N 31T0A6200)",
+    "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/A0A1414OM/enu/0A1414OM.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-11-02",
+    "note": "Honda 2014 CR-V Owner's Manual (PDF, 365 pp; footer 14 CR-V-31T0A6200). Oil p.344, tires p.345, viscosity p.279, towing p.231, TPMS p.252-253. No battery capacity is printed. Printed page = PDF page - 1.",
+    "archived": null
+  },
+  "manual-2016-honda-cr-v": {
+    "name": "Honda 2016 CR-V Owner's Manual (P/N 31T0A6400)",
+    "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/AT0A1616OM/enu/AT0A1616OM.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-11-02",
+    "note": "Honda 2016 CR-V Owner's Manual (PDF, 541 pp; footer 16 CR-V-31T0A6400). Oil p.520, tires p.521, viscosity p.452, towing p.357, TPMS p.408-409. No battery capacity is printed. Printed page = PDF page - 1.",
+    "archived": null
+  },
+  "manual-2023-honda-cr-v": {
+    "name": "Honda 2023 CR-V Owner's Manual (gas model)",
+    "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/A3A02323OMEN/enu/A3A02323OMEN.PDF",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-11-03",
+    "note": "Unlinked OEM PDF, 700 pp. Covers the 1.5L turbo gas model. Hybrid manual not read.",
+    "archived": null
   }
- },
- "manual-2024-toyota-rav4": {
-  "name": "Toyota owner's manual OM0R147U (2024 RAV4)",
-  "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM0R147U/pdf/OM0R147U.pdf",
-  "type": "oem",
-  "grade": "A",
-  "retrieved": "2026-10-15",
-  "note": "Three 2024 RAV4 owner manuals checked, oil + tire tables identical for shared configs: OM0R147U (Canada prod. through June 2024; https://assets.sipb.toyota.com/publications/en/om-s/OM0R147U/pdf/OM0R147U.pdf; oil p.486, tires p.491-494), OM0R069U (Canada prod. from July 2024; https://assets.sipb.toyota.com/publications/en/om-s/OM0R069U/pdf/OM0R069U.pdf; same pages), OM42L49U (Japan prod. from July 2024; https://assets.sipb.toyota.com/publications/en/om-s/OM42L49U/pdf/OM42L49U.pdf; oil p.494, tires p.499-503; adds 17in type F/G and 19in type C no-spare configs). MY2024 confirmed via Helm SKU pages for all three. OM0R100U (2023) not used.",
-  "archived": {
-   "file": "manuals/toyota-2024-rav4-OM0R147U.pdf",
-   "fetchedAt": "2026-10-15T20:25:25+08:00"
-  }
- },
- "doc-OM42L49U": {
-  "name": "Toyota owner's manual OM42L49U (2024 RAV4)",
-  "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM42L49U/pdf/OM42L49U.pdf",
-  "type": "oem",
-  "grade": "A",
-  "retrieved": "2026-10-15",
-  "archived": {
-   "file": "manuals/toyota-2024-rav4-OM42L49U.pdf",
-   "fetchedAt": "2026-10-15T20:25:25+08:00"
-  }
- },
- "manual-2022-toyota-camry": {
-  "name": "Toyota owner's manual OM06244U (2022 Camry)",
-  "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM06244U/pdf/OM06244U.pdf",
-  "type": "oem",
-  "grade": "A",
-  "retrieved": "2026-10-15",
-  "note": "OM06244U (gas Camry; MY2022 per Helm https://www.helminc.com/helm/product2.asp?Sku=OM06244U&class_2=TOY&itemtype=N). Oil p.578, viscosity p.578-579, tires 2WD pp.584-586, AWD pp.587-588 (printed page = PDF page -1). Hybrid: OM06246U added. Old OM06248U refs void.",
-  "archived": {
-   "file": "manuals/toyota-2022-camry-OM06244U.pdf",
-   "fetchedAt": "2026-10-15T12:17:33Z"
-  }
- },
- "doc-OM06246U": {
-  "name": "Toyota owner's manual OM06246U (2022 Camry)",
-  "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM06246U/pdf/OM06246U.pdf",
-  "type": "oem",
-  "grade": "A",
-  "retrieved": "2026-10-15",
-  "archived": {
-   "file": "manuals/toyota-2022-camry-hybrid-OM06246U.pdf",
-   "fetchedAt": "2026-10-15T20:40:45+08:00"
-  }
- },
- "manual-2024-toyota-camry": {
-  "name": "Toyota owner's manual OM06291U (2024 Camry)",
-  "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM06291U/pdf/OM06291U.pdf",
-  "type": "oem",
-  "grade": "A",
-  "retrieved": "2026-10-15",
-  "note": "OM06291U (gas Camry; MY2024 per Helm https://www.helminc.com/helm/product2.asp?Sku=OM06291U&class_2=TOY&itemtype=N). Oil p.578, viscosity pp.578-579, tires pp.584-588 (printed = PDF-1). Hybrid: OM06293U added.",
-  "archived": {
-   "file": "manuals/toyota-2024-camry-OM06291U.pdf",
-   "fetchedAt": "2026-10-15T12:17:33Z"
-  }
- },
- "doc-OM06293U": {
-  "name": "Toyota owner's manual OM06293U (2024 Camry)",
-  "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM06293U/pdf/OM06293U.pdf",
-  "type": "oem",
-  "grade": "A",
-  "retrieved": "2026-10-15",
-  "archived": {
-   "file": "manuals/toyota-2024-camry-hybrid-OM06293U.pdf",
-   "fetchedAt": "2026-10-15T20:40:45+08:00"
-  }
- },
- "manual-2024-honda-cr-v": {
-  "name": "Honda owner's manual A3A02424IOM (2024 CR-V)",
-  "url": "https://techinfo.honda.com/rjanisis/pubs/OM/AH/A3A02424IOM/enu/details/131240047-16992.html",
-  "type": "oem",
-  "grade": "A",
-  "retrieved": "2026-10-15",
-  "note": "Honda TechInfo official owner manual CR-V 2024 non-hybrid (A3A02424IOM) > Specifications. Hybrid manual A3D42424IOM not yet read | Signoff scope: non-hybrid only; hybrid fields display Not yet verified",
-  "archived": null
- },
- "manual-2021-ford-f-150": {
-  "name": "Ford F-150 Owner's Manual, 2021 (version 2, EN-US, October 2021)",
-  "url": "https://www.fordservicecontent.com/Ford_Content/Catalog/owner_information/2021-Ford-F-150-Owners-Manual-version-2_om_EN-US_10_2021.pdf",
-  "type": "oem",
-  "grade": "A",
-  "retrieved": "2026-10-26",
-  "note": "PDF, 796 pp. Read directly: Capacities and Specifications (pp. 591-601) gives engine oil capacity and viscosity per engine; Wheels and Tires directs the reader to the Tire Label on the driver door pillar for cold pressures. Ford's host refuses this network, so the copy actually read was the Internet Archive snapshot of the same official file: https://web.archive.org/web/20240125170754/https://www.fordservicecontent.com/Ford_Content/Catalog/owner_information/2021-Ford-F-150-Owners-Manual-version-2_om_EN-US_10_2021.pdf"
- },
- "manual-2023-ford-f-150": {
-  "name": "2023 Ford F-150 owner information",
-  "url": "https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?ProcUid=G2095740&Uid=G2095732&buildtype=web&countryCode=USA&div=f&languageCode=en&userMarket=USA&vFilteringEnabled=False&variantid=9043",
-  "type": "oem",
-  "grade": "A",
-  "retrieved": "2026-10-15",
-  "note": "Values from autoguidegalaxy mirror of 2023 owner manual (p.76 Capacities); verify in Ford official online manual | OIL A-grade: waiting on 队长 download: https://www.ford.com/support/owner-manuals-details/f150/2023/ (Owner's Manual PDF; fordservicecontent.com returns 403 from box)",
-  "archived": null
- },
- "manual-2022-honda-civic": {
-  "name": "Honda owner's manual AT202222IOM (2022 Civic)",
-  "url": "https://techinfo.honda.com/rjanisis/pubs/om/ah/at202222iom/enu/details/131229047-16992.html",
-  "type": "oem",
-  "grade": "A",
-  "retrieved": "2026-10-15",
-  "note": "Honda TechInfo official online owner manual, Civic Sedan 2022 (AT202222IOM), section Information > Specifications",
-  "archived": null
- },
- "manual-2022-chevrolet-silverado-1500": {
-  "name": "2022 Chevrolet Silverado 1500 owner information",
-  "url": "https://gm-techlink.com/wp-content/uploads/2024/11/TechLink-engine-oil-capacities-2022_C.pdf",
-  "type": "oem",
-  "grade": "A",
-  "retrieved": "2026-10-15",
-  "note": "GM TechLink 2022 Engine Oil Capacities (with filter) U.S./Canada, Chevrolet table, rows Silverado 1500 (also lists Silverado 1500 LTD). Tires: owner manual PDF on chevrolet.com returned 404 — TODO",
-  "archived": {
-   "file": "manuals/gm-2022-oil-capacities.pdf",
-   "fetchedAt": "2026-10-15T12:15:16Z"
-  }
- },
- "manual-2023-tesla-model-y": {
-  "name": "Tesla Model Y Owner's Manual (EN-US, 2023 edition)",
-  "url": "https://www.tesla.com/ownersmanual/modely/en_us/Owners_Manual.pdf",
-  "type": "oem",
-  "grade": "A",
-  "retrieved": "2026-10-26",
-  "note": "PDF, 298 pp. Tire Specifications (Factory), p. 216, lists the factory sizes for 19/20/21-inch wheels and states that pressures vary by tire and are printed on the Tire and Loading Information label on the centre door pillar. The only psi figure in the manual is the towing table, p. 84: 42 psi (290 kPa) for all three sizes, overriding the label while towing. Snapshot read: https://web.archive.org/web/20230312000949/https://www.tesla.com/ownersmanual/modely/en_us/Owners_Manual.pdf"
- },
- "fe-ev-2023-tesla-model-y": {
-  "name": "fueleconomy.gov (U.S. EPA / DOE), 2023 Tesla Model Y (vehicle ids 46211, 46212, 46213)",
-  "url": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2023&year2=2023&make=Tesla&baseModel=Model%20Y",
-  "type": "government",
-  "grade": "A",
-  "retrieved": "2026-10-15"
- },
- "manual-2022-chevrolet-equinox": {
-  "name": "GM TechLink 2022 engine oil capacities (with filter), U.S. and Canada",
-  "url": "https://gm-techlink.com/wp-content/uploads/2024/11/TechLink-engine-oil-capacities-2022_C.pdf",
-  "type": "oem",
-  "grade": "A",
-  "retrieved": "2026-10-20",
-  "note": "Chevrolet table, row Equinox: 1.5L L4 LYX, FWD 4.0 L / 4.2 qt, AWD 5.0 L / 5.3 qt, dexos1 0W-20. Oil capacity + viscosity on p.1.",
-  "archived": {
-   "file": "manuals/gm-2022-oil-capacities.pdf",
-   "fetchedAt": "2026-10-15T12:15:16Z"
-  }
- },
- "manual-2022-toyota-corolla": {
-  "name": "Toyota owner's manual OM02617U (2022 Corolla)",
-  "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM02617U/pdf/OM02617U.pdf",
-  "type": "oem",
-  "grade": "A",
-  "retrieved": "2026-10-15",
-  "note": "OM02617U (Corolla sedan gas; MY2022 per Helm https://www.helminc.com/helm/product2.asp?Sku=OM02617U&class_2=TOY&itemtype=N). Oil pp.552-554, tires pp.558-560 (printed = PDF page). Hybrid OM12R27U and hatchback OM12Q05U added.",
-  "archived": {
-   "file": "manuals/toyota-2022-corolla-OM02617U.pdf",
-   "fetchedAt": "2026-10-15T12:17:33Z"
-  }
- },
- "doc-OM12R27U": {
-  "name": "Toyota owner's manual OM12R27U (2022 Corolla)",
-  "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM12R27U/pdf/OM12R27U.pdf",
-  "type": "oem",
-  "grade": "A",
-  "retrieved": "2026-10-15",
-  "archived": {
-   "file": "manuals/toyota-2022-corolla-hybrid-OM12R27U.pdf",
-   "fetchedAt": "2026-10-15T20:40:45+08:00"
-  }
- },
- "doc-OM12Q05U": {
-  "name": "Toyota owner's manual OM12Q05U (2022 Corolla)",
-  "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM12Q05U/pdf/OM12Q05U.pdf",
-  "type": "oem",
-  "grade": "A",
-  "retrieved": "2026-10-15",
-  "archived": {
-   "file": "manuals/toyota-2022-corolla-hatchback-OM12Q05U.pdf",
-   "fetchedAt": "2026-10-15T20:40:45+08:00"
-  }
- },
- "manual-2022-toyota-tacoma": {
-  "name": "Toyota owner's manual OM04037U (2022 Tacoma)",
-  "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM04037U/pdf/OM04037U.pdf",
-  "type": "oem",
-  "grade": "A",
-  "retrieved": "2026-10-15",
-  "note": "OM04037U (MY2022 per Helm https://www.helminc.com/helm/product2.asp?Sku=OM04037U&class_2=TOY&itemtype=N). Oil p.545, tires pp.551-552 (printed = PDF page). Note Helm also lists OM04039U as 2022 Tacoma; that PDF returns 403.",
-  "archived": {
-   "file": "manuals/toyota-2022-tacoma-OM04037U.pdf",
-   "fetchedAt": "2026-10-15T20:38:31+08:00"
-  }
- },
- "manual-2022-honda-accord": {
-  "name": "Honda owner's manual ATVA2222OM (2022 Accord)",
-  "url": "http://techinfo.honda.com/rjanisis/pubs/OM/AH/ATVA2222OM/enu/ATVA2222OM.PDF",
-  "type": "oem",
-  "grade": "A",
-  "retrieved": "2026-10-15",
-  "note": "ATVA2222OM PDF downloaded 2026-10-15 to manuals/from-captain/; printed page = PDF page - 2",
-  "archived": null
- },
- "doc-2022-honda-accord-23": {
-  "name": "Honda owner's manual (2022 Accord)",
-  "url": "https://techinfo.honda.com/rjanisis/pubs/OM/AH/ATVA2222OM/enu/ATVA2222OM.PDF",
-  "type": "oem",
-  "grade": "A",
-  "retrieved": "2026-10-15",
-  "archived": {
-   "file": "manuals/from-captain/honda-2022-accord-ATVA2222OM.pdf",
-   "fetchedAt": "2026-10-15T20:52:00+08:00"
-  }
- },
- "manual-2009-toyota-rav4": {
-  "name": "Toyota owner's manual OM42759U (2009 RAV4)",
-  "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM42759U/pdf/OM42759U.pdf",
-  "type": "oem",
-  "grade": "A",
-  "retrieved": "2026-10-19",
-  "note": "OM42759U listed as the 2009 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2009/. Oil capacity p.470, oil viscosity p.471, tires and wheels p.475 (printed page = PDF page index + 1). Two engines listed: 2.5L 4-cylinder (2AR-FE) and 3.5L V6 (2GR-FE).",
-  "archived": {
-   "file": "manuals/toyota-2009-rav4-OM42759U.pdf",
-   "fetchedAt": "2026-10-19"
-  }
- },
- "manual-2011-toyota-rav4": {
-  "name": "Toyota owner's manual OM42785U (2011 RAV4)",
-  "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM42785U/pdf/OM42785U.pdf",
-  "type": "oem",
-  "grade": "A",
-  "retrieved": "2026-10-19",
-  "note": "OM42785U listed as the 2011 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2011/. Oil capacity p.478, oil viscosity p.479, tires and wheels p.484 (printed page = PDF page index + 1). Two engines: 2.5L 4-cylinder (2AR-FE) and 3.5L V6 (2GR-FE).",
-  "archived": {
-   "file": "manuals/toyota-2011-rav4-OM42785U.pdf",
-   "fetchedAt": "2026-10-19"
-  }
- },
- "manual-2014-toyota-rav4": {
-  "name": "Toyota owner's manual OM42869U (2014 RAV4)",
-  "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM42869U/pdf/OM42869U.pdf",
-  "type": "oem",
-  "grade": "A",
-  "retrieved": "2026-10-19",
-  "note": "OM42869U listed as the 2014 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2014/ (the second manual on that page, OM42A04U, is the RAV4 EV). Oil capacity p.659, oil viscosity p.660, tires and wheels p.665 (printed page = PDF page index + 1). One engine: 2.5L 4-cylinder (2AR-FE).",
-  "archived": {
-   "file": "manuals/toyota-2014-rav4-OM42869U.pdf",
-   "fetchedAt": "2026-10-19"
-  }
- },
- "manual-2021-toyota-rav4": {
-  "name": "Toyota owner's manual OM0R028U (2021 RAV4)",
-  "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM0R028U/pdf/OM0R028U.pdf",
-  "type": "oem",
-  "grade": "A",
-  "retrieved": "2026-10-19",
-  "note": "OM0R028U listed as the 2021 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2021/. Oil capacity p.678, oil viscosity p.679, tires and wheels pp.684-687 (printed page = PDF page index + 1). Gasoline 2.5L (A25A-FKS) only; RAV4 Hybrid / Prime are separate manuals not yet checked.",
-  "archived": {
-   "file": "manuals/toyota-2021-rav4-OM0R028U.pdf",
-   "fetchedAt": "2026-10-19"
-  }
- },
- "manual-2010-toyota-rav4": {
-  "name": "Toyota owner's manual OM42783U (2010 RAV4)",
-  "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM42783U/pdf/OM42783U.pdf",
-  "type": "oem",
-  "grade": "A",
-  "retrieved": "2026-10-19",
-  "note": "OM42783U listed as the 2010 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2010/. Oil capacity p.467, oil viscosity p.468, tires and wheels p.473 (printed page = PDF page index + 1). Two engines listed: 2.5L 4-cylinder (2AR-FE) and 3.5L V6 (2GR-FE).",
-  "archived": {
-   "file": "manuals/toyota-2010-rav4-OM42783U.pdf",
-   "fetchedAt": "2026-10-19"
-  }
- },
- "manual-2012-toyota-rav4": {
-  "name": "Toyota owner's manual OM42836U (2012 RAV4)",
-  "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM42836U/pdf/OM42836U.pdf",
-  "type": "oem",
-  "grade": "A",
-  "retrieved": "2026-10-19",
-  "note": "OM42836U listed as the 2012 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2012/. Oil capacity p.488, oil viscosity p.489-490, tires and wheels p.494. Two engines: 2.5L 4-cylinder (2AR-FE) and 3.5L V6 (2GR-FE).",
-  "archived": {
-   "file": "manuals/toyota-2012-rav4-OM42836U.pdf",
-   "fetchedAt": "2026-10-19"
-  }
- },
- "manual-2013-toyota-rav4": {
-  "name": "Toyota owner's manual OM42809U (2013 RAV4)",
-  "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM42809U/pdf/OM42809U.pdf",
-  "type": "oem",
-  "grade": "A",
-  "retrieved": "2026-10-19",
-  "note": "OM42809U listed as the 2013 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2013/. Oil capacity p.555, oil viscosity p.556, tires and wheels p.561. One engine: 2.5L 4-cylinder (2AR-FE).",
-  "archived": {
-   "file": "manuals/toyota-2013-rav4-OM42809U.pdf",
-   "fetchedAt": "2026-10-19"
-  }
- },
- "manual-2015-toyota-rav4": {
-  "name": "Toyota owner's manual OM42A78U (2015 RAV4)",
-  "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM42A78U/pdf/OM42A78U.pdf",
-  "type": "oem",
-  "grade": "A",
-  "retrieved": "2026-10-19",
-  "note": "OM42A78U listed as the 2015 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2015/. Oil capacity p.663, oil viscosity p.665, tires and wheels p.669. One engine: 2.5L 4-cylinder (2AR-FE).",
-  "archived": {
-   "file": "manuals/toyota-2015-rav4-OM42A78U.pdf",
-   "fetchedAt": "2026-10-19"
-  }
- },
- "manual-2016-toyota-rav4": {
-  "name": "Toyota owner's manual OM42A41U (2016 RAV4)",
-  "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM42A41U/pdf/OM42A41U.pdf",
-  "type": "oem",
-  "grade": "A",
-  "retrieved": "2026-10-19",
-  "note": "OM42A41U listed as the 2016 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2016/. Oil capacity and oil viscosity p.674, tires and wheels p.678. One engine: 2.5L 4-cylinder (2AR-FE).",
-  "archived": {
-   "file": "manuals/toyota-2016-rav4-OM42A41U.pdf",
-   "fetchedAt": "2026-10-19"
-  }
- },
- "manual-2017-toyota-rav4": {
-  "name": "Toyota owner's manual OM42752U (2017 RAV4)",
-  "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM42752U/pdf/OM42752U.pdf",
-  "type": "oem",
-  "grade": "A",
-  "retrieved": "2026-10-19",
-  "note": "OM42752U listed as the 2017 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2017/. Oil capacity and oil viscosity p.672, tires and wheels p.676. One engine: 2.5L 4-cylinder (2AR-FE).",
-  "archived": {
-   "file": "manuals/toyota-2017-rav4-OM42752U.pdf",
-   "fetchedAt": "2026-10-19"
-  }
- },
- "manual-2018-toyota-rav4": {
-  "name": "Toyota owner's manual OM0R012U (2018 RAV4)",
-  "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM0R012U/pdf/OM0R012U.pdf",
-  "type": "oem",
-  "grade": "A",
-  "retrieved": "2026-10-19",
-  "note": "OM0R012U listed as the 2018 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2018/. Oil capacity and oil viscosity p.675, tires and wheels p.679. One engine: 2.5L 4-cylinder (2AR-FE).",
-  "archived": {
-   "file": "manuals/toyota-2018-rav4-OM0R012U.pdf",
-   "fetchedAt": "2026-10-19"
-  }
- },
- "manual-2019-toyota-rav4": {
-  "name": "Toyota owner's manual OM0R009U (2019 RAV4)",
-  "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM0R009U/pdf/OM0R009U.pdf",
-  "type": "oem",
-  "grade": "A",
-  "retrieved": "2026-10-19",
-  "note": "OM0R009U listed as the 2019 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2019/. Oil capacity p.660, oil viscosity p.661, tires and wheels pp.664-667. Gasoline 2.5L (A25A-FKS) only; the RAV4 Hybrid manual has not been checked.",
-  "archived": {
-   "file": "manuals/toyota-2019-rav4-OM0R009U.pdf",
-   "fetchedAt": "2026-10-19"
-  }
- },
- "manual-2022-toyota-rav4": {
-  "name": "Toyota owner's manual OM0R059U (2022 RAV4)",
-  "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM0R059U/pdf/OM0R059U.pdf",
-  "type": "oem",
-  "grade": "A",
-  "retrieved": "2026-10-19",
-  "note": "OM0R059U listed as the 2022 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2022/. Oil capacity p.662, oil viscosity p.663, tires and wheels pp.667-670. Gasoline 2.5L (A25A-FKS) only. A second 2022 manual on the Toyota page, OM0R056S, is Spanish-language and was not used.",
-  "archived": {
-   "file": "manuals/toyota-2022-rav4-OM0R059U.pdf",
-   "fetchedAt": "2026-10-19"
-  }
- },
- "manual-2023-toyota-rav4": {
-  "name": "Toyota owner's manual OM0R100U (2023 RAV4)",
-  "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM0R100U/pdf/OM0R100U.pdf",
-  "type": "oem",
-  "grade": "A",
-  "retrieved": "2026-10-19",
-  "note": "OM0R100U listed as the 2023 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2023/. Oil capacity p.486, oil viscosity p.487, tires and wheels pp.490-494. Gasoline 2.5L (A25A-FKS) only; RAV4 Hybrid / Prime manuals have not been checked.",
-  "archived": {
-   "file": "manuals/toyota-2023-rav4-OM0R100U.pdf",
-   "fetchedAt": "2026-10-19"
-  }
- },
- "manual-2012-toyota-rav4-alt": {
-  "name": "Toyota owner's manual OM42862U (2012 RAV4, second manual listed)",
-  "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM42862U/pdf/OM42862U.pdf",
-  "type": "oem",
-  "grade": "A",
-  "retrieved": "2026-10-19",
-  "note": "OM42862U is the second 2012 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2012/. Oil capacity p.506 gives 4.6 qt (4.4 L) with filter for the 2.5 L engine, 0.1 qt less than OM42836U p.488; V6 figures and the tire table (p.512) match. Cited on the 2012 page as a production-period difference.",
-  "archived": {
-   "file": "manuals/toyota-2012-rav4-OM42862U.pdf",
-   "fetchedAt": "2026-10-19"
-  }
- },
- "om-2022-chevrolet-equinox": {
-  "name": "Chevrolet Equinox Owner's Manual 84654602B (2022)",
-  "url": "https://contentdelivery.ext.gm.com/content/dam/cope/en_us/public/pdf_assets/active/owners_manuals_browse/2022/22_CHEV_Equinox_OM_en_US_U_84654602B_2021AUG16_2P.pdf",
-  "type": "oem",
-  "grade": "A",
-  "retrieved": "2026-10-20",
-  "note": "GM's current download for the 2022 Equinox. Tire Pressure section (p.294) states the recommended cold pressure is the figure on the Tire and Loading Information label, and prints no psi table.",
-  "archived": {
-   "file": "manuals/chevrolet-2022-equinox-OM.pdf",
-   "fetchedAt": "2026-10-20T16:52:00+08:00"
-  }
- },
- "spec-2022-chevrolet-equinox": {
-  "name": "2022 Chevrolet Equinox specifications (GM spec sheet, copy in NHTSA docket NHTSA-2023-0022-0035, attachment 4)",
-  "url": "https://downloads.regulations.gov/NHTSA-2023-0022-0035/attachment_4.pdf",
-  "type": "oem-spec-sheet",
-  "grade": "A",
-  "retrieved": "2026-10-20",
-  "note": "Wheel/tyre fitment and trailering: wheel sizes and tyre sizes on p.2 (P225/65R17, P225/60R18, P235/50R19), trailering capacity 1,500 lb on p.3, EPA city/highway on p.1."
- },
- "manual-2020-toyota-rav4-hybrid": {
-  "name": "Toyota RAV4 Hybrid owner's manual OM0R025U (2020 RAV4 Hybrid)",
-  "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM0R025U/pdf/OM0R025U.pdf",
-  "type": "oem",
-  "grade": "A",
-  "retrieved": "2026-10-20",
-  "note": "OM0R025U, 744 pp, PDF created 2019-07-22 (same batch as the 2020 RAV4 gasoline manual OM0R024U). Oil capacity, lubrication system: with filter 4.8 qt (4.5 L), without filter 4.4 qt (4.2 L), p.678 printed."
- },
- "manual-2022-honda-cr-v": {
-  "name": "Honda CR-V Owner's Manual, 2022 (ATLA2222OM)",
-  "url": "https://techinfo.honda.com/rjanisis/pubs/OM/AH/ATLA2222OM/enu/ATLA2222OM.PDF",
-  "type": "oem",
-  "grade": "A",
-  "retrieved": "2026-10-26",
-  "note": "PDF, 672 pp, publication 31TLA6510 (22 CR-V PET HCM ELP) - the petrol 1.5L turbo edition. Specifications, p. 649, gives oil capacity and viscosity and the 17/18/19-inch tire sizes with front and rear cold pressures. Saved to manuals/honda-2022-cr-v-OM.pdf."
- }
 }
