@@ -14,14 +14,18 @@
   },
   "specs": {
     "oilCapacity": {
-      "value": "4.8 qt (4.5 L) with filter; 4.4 qt (4.2 L) without",
+      "value": "2.5L A25A-FKS gasoline: 4.8 qt (4.5 L) with filter, 4.4 qt (4.2 L) without | HYBRID 2.5L: 4.8 qt (4.5 L) with filter, 4.4 qt (4.2 L) without",
       "source": "manual-2021-toyota-rav4",
-      "page": "p.678",
+      "page": "p.678 gasoline, p.686 hybrid",
       "sourceGrade": "A",
       "verified": false,
-      "appliesTo": "2.5L gasoline (non-hybrid) engine",
-      "unverifiedNote": "RAV4 Hybrid / Prime figures: not yet verified (their manuals have not been checked yet)",
-      "note": null
+      "appliesTo": "2.5L gasoline and 2.5L hybrid engines",
+      "unverifiedNote": "Hybrid capacity read from the RAV4 Hybrid manual OM0R029U p.686; both figures are identical to the gasoline engine. The RAV4 Prime (plug-in) is a separate model and is not covered on this page.",
+      "note": null,
+      "labelPages": {
+        "2.5L": "p.678",
+        "Hybrid": "p.686"
+      }
     },
     "oilViscosity": {
       "value": "SAE 0W-16 (0W-20 acceptable)",

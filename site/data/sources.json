@@ -31,7 +31,7 @@
     "type": "oem",
     "grade": "A",
     "retrieved": "2026-10-15",
-    "note": "Three 2024 RAV4 owner manuals checked, oil + tire tables identical for shared configs: OM0R147U (Canada prod. through June 2024; https://assets.sipb.toyota.com/publications/en/om-s/OM0R147U/pdf/OM0R147U.pdf; oil p.486, tires p.491-494), OM0R069U (Canada prod. from July 2024; https://assets.sipb.toyota.com/publications/en/om-s/OM0R069U/pdf/OM0R069U.pdf; same pages), OM42L49U (Japan prod. from July 2024; https://assets.sipb.toyota.com/publications/en/om-s/OM42L49U/pdf/OM42L49U.pdf; oil p.494, tires p.499-503; adds 17in type F/G and 19in type C no-spare configs). MY2024 confirmed via Helm SKU pages for all three. OM0R100U (2023) not used.",
+    "note": "Three 2024 RAV4 owner manuals checked, oil + tire tables identical for shared configs: OM0R147U (Canada prod. through June 2024; https://assets.sipb.toyota.com/publications/en/om-s/OM0R147U/pdf/OM0R147U.pdf; oil p.486, tires p.491-494), OM0R069U (Canada prod. from July 2024; https://assets.sipb.toyota.com/publications/en/om-s/OM0R069U/pdf/OM0R069U.pdf; same pages), OM42L49U (Japan prod. from July 2024; https://assets.sipb.toyota.com/publications/en/om-s/OM42L49U/pdf/OM42L49U.pdf; oil p.494, tires p.499-503; adds 17in type F/G and 19in type C no-spare configs). MY2024 confirmed via Helm SKU pages for all three. OM0R100U (2023) not used. The separate RAV4 HEV manual OM0R149U p.498 gives the same capacity as the gasoline manual.",
     "archived": {
       "file": "manuals/toyota-2024-rav4-OM0R147U.pdf",
       "fetchedAt": "2026-10-15T20:25:25+08:00"
@@ -117,7 +117,7 @@
     "type": "oem",
     "grade": "A",
     "retrieved": "2026-10-15",
-    "note": "Values from autoguidegalaxy mirror of 2023 owner manual (p.76 Capacities); verify in Ford official online manual | OIL A-grade: waiting on 队长 download: https://www.ford.com/support/owner-manuals-details/f150/2023/ (Owner's Manual PDF; fordservicecontent.com returns 403 from box)",
+    "note": "Values from autoguidegalaxy mirror of 2023 owner manual (p.76 Capacities); verify in Ford official online manual | OIL A-grade: waiting on the official PDF download: https://www.ford.com/support/owner-manuals-details/f150/2023/ (Owner's Manual PDF; fordservicecontent.com returns 403 from box)",
     "archived": null
   },
   "manual-2022-honda-civic": {
@@ -276,7 +276,7 @@
     "type": "oem",
     "grade": "A",
     "retrieved": "2026-10-19",
-    "note": "OM0R028U listed as the 2021 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2021/. Oil capacity p.678, oil viscosity p.679, tires and wheels pp.684-687 (printed page = PDF page index + 1). Gasoline 2.5L (A25A-FKS) only; RAV4 Hybrid / Prime are separate manuals not yet checked.",
+    "note": "OM0R028U listed as the 2021 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2021/. Oil capacity p.678, oil viscosity p.679, tires and wheels pp.684-687 (printed page = PDF page index + 1). Gasoline 2.5L (A25A-FKS) in this manual; the separate RAV4 Hybrid manual OM0R029U p.686 gives the same capacity, and the RAV4 Prime is a separate manual not read.",
     "archived": {
       "file": "manuals/toyota-2021-rav4-OM0R028U.pdf",
       "fetchedAt": "2026-10-19"
@@ -384,7 +384,7 @@
     "type": "oem",
     "grade": "A",
     "retrieved": "2026-10-19",
-    "note": "OM0R059U listed as the 2022 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2022/. Oil capacity p.662, oil viscosity p.663, tires and wheels pp.667-670. Gasoline 2.5L (A25A-FKS) only. A second 2022 manual on the Toyota page, OM0R056S, is Spanish-language and was not used.",
+    "note": "OM0R059U listed as the 2022 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2022/. Oil capacity p.662, oil viscosity p.663, tires and wheels pp.667-670. Gasoline 2.5L (A25A-FKS) in this manual; the separate RAV4 Hybrid manual OM0R058U p.668 gives the same capacity, and the RAV4 Prime is a separate manual not read. A second 2022 manual on the Toyota page, OM0R056S, is Spanish-language and was not used.",
     "archived": {
       "file": "manuals/toyota-2022-rav4-OM0R059U.pdf",
       "fetchedAt": "2026-10-19"
@@ -396,7 +396,7 @@
     "type": "oem",
     "grade": "A",
     "retrieved": "2026-10-19",
-    "note": "OM0R100U listed as the 2023 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2023/. Oil capacity p.486, oil viscosity p.487, tires and wheels pp.490-494. Gasoline 2.5L (A25A-FKS) only; RAV4 Hybrid / Prime manuals have not been checked.",
+    "note": "OM0R100U listed as the 2023 RAV4 Owner's Manual on toyota.com/owners/warranty-owners-manuals/vehicle/rav4/2023/. Oil capacity p.486, oil viscosity p.487, tires and wheels pp.490-494. Gasoline 2.5L (A25A-FKS) in this manual; the separate RAV4 Hybrid manual OM0R102U p.498 gives the same capacity, and the RAV4 Prime is a separate manual not read.",
     "archived": {
       "file": "manuals/toyota-2023-rav4-OM0R100U.pdf",
       "fetchedAt": "2026-10-19"
@@ -625,5 +625,37 @@
     "retrieved": "2026-11-03",
     "note": "Unlinked OEM PDF, 700 pp. Covers the 1.5L turbo gas model. Hybrid manual not read.",
     "archived": null
+  },
+  "manual-2021-toyota-rav4-hybrid": {
+    "name": "Toyota RAV4 Hybrid owner's manual OM0R029U (2021 RAV4 Hybrid)",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM0R029U/pdf/OM0R029U.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-11-06",
+    "note": "OM0R029U, 752 pp; pictorial index opens on the hybrid system. Oil capacity, 9-1 Specifications, printed p.686: with filter 4.8 qt (4.5 L, 4.0 Imp. qt.), without filter 4.4 qt (4.2 L, 3.7 Imp. qt.) — identical to the 2021 gasoline manual OM0R028U p.678. Recommended viscosity SAE 0W-16 (SAE 0W-20 may be used if 0W-16 is unavailable), printed p.687. PDF page index = printed page - 1."
+  },
+  "manual-2024-toyota-rav4-hybrid": {
+    "name": "Toyota RAV4 HEV owner's manual OM0R149U (2024 RAV4 Hybrid)",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM0R149U/pdf/OM0R149U.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-11-06",
+    "note": "OM0R149U, 584 pp; running header reads RAV4_HEV_OM_OM0R149U_(U). Oil capacity, 8-1 Specifications, printed p.498: with filter 4.5 qt (4.3 L, 3.8 Imp. qt.), without filter 4.2 qt (4.0 L, 3.5 Imp. qt.) — identical to the 2024 gasoline manual OM0R147U p.486. Recommended viscosity SAE 0W-16 (SAE 0W-20 may be used if 0W-16 is unavailable), printed p.499. PDF page index = printed page - 1."
+  },
+  "manual-2022-toyota-rav4-hybrid": {
+    "name": "Toyota RAV4 Hybrid owner's manual OM0R058U (2022 RAV4 Hybrid)",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM0R058U/pdf/OM0R058U.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-11-06",
+    "note": "OM0R058U, 752 pp; running header reads RAV4 HEV_OM_OM0R058U_(U). Oil capacity, 9-1 Specifications, printed p.668: with filter 4.8 qt (4.5 L, 4.0 Imp. qt.), without filter 4.4 qt (4.2 L, 3.7 Imp. qt.) — identical to the 2022 gasoline manual OM0R059U p.662. Recommended viscosity SAE 0W-16 (SAE 0W-20 may be used if 0W-16 is unavailable), printed p.669. PDF page index = printed page - 1."
+  },
+  "manual-2023-toyota-rav4-hybrid": {
+    "name": "Toyota RAV4 Hybrid owner's manual OM0R102U (2023 RAV4 Hybrid)",
+    "url": "https://assets.sipb.toyota.com/publications/en/om-s/OM0R102U/pdf/OM0R102U.pdf",
+    "type": "oem",
+    "grade": "A",
+    "retrieved": "2026-11-06",
+    "note": "OM0R102U, 586 pp; running header reads RAV4 HEV_OM_OM0R102U_(U). Oil capacity, 8-1 Specifications, printed p.498: with filter 4.8 qt (4.5 L, 4.0 Imp. qt.), without filter 4.4 qt (4.2 L, 3.7 Imp. qt.) — identical to the 2023 gasoline manual OM0R100U p.486. Recommended viscosity SAE 0W-16 (SAE 0W-20 may be used if 0W-16 is unavailable), printed p.499. This PDF has two unnumbered front pages, so the printed page number is PDF index - 1."
   }
 }

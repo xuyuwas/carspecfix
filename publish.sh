@@ -44,10 +44,12 @@ echo "==> [1/5] 干净构建 (Astro @ site/)"
 cd "$SITE_DIR"
 rm -rf dist .astro
 # RELEASE_DAY 必须在这里透传：site/lib/gate.mjs 默认取 1，漏传就会把整站构建成
-# day1（4 台车），已签的 day2-7 页面全部被 gate 挡在 dist 之外 —— 线上长期停在
-# 4 台车就是这个原因。调用方式：RELEASE_DAY=7 ./publish.sh
-RELEASE_DAY="${RELEASE_DAY:-1}" npm run build
-echo "    RELEASE_DAY=${RELEASE_DAY:-1}"
+# day1（4 台车），已签的后续页面全部被 gate 挡在 dist 之外 —— 线上长期停在
+# 4 台车就是这个原因。2026-11-05 部署用 8，比 release-order.json 的 14 天少，
+# 直接把 20 个已索引的年份页变成了 404。默认值跟排期表最大 day 对齐（现为 14）；
+# 排期表新增 day 时必须同步这里。调用方式：RELEASE_DAY=14 ./publish.sh
+RELEASE_DAY="${RELEASE_DAY:-14}" npm run build
+echo "    RELEASE_DAY=${RELEASE_DAY:-14}"
 [ -f "$DIST_DIR/index.html" ] || { echo "构建失败：dist/index.html 未生成" >&2; exit 1; }
 echo "    构建完成：$(find "$DIST_DIR" -name '*.html' | wc -l | tr -d ' ') 个 HTML"
 
@@ -263,7 +265,7 @@ for p in /about /privacy /specs/toyota/rav4/2024; do
   hloc=$(printf '%s' "$hop" | awk '{print $2}')
   if [ "$hcode" = "301" ] || [ "$hcode" = "308" ]; then
     case "$hloc" in
-      https://*) echo "    ✅ $p -> $hcode $hloc（单跳，HTTPS）" ;;
+      https://*) echo "    ✅ $p -> ${hcode} ${hloc}（单跳，HTTPS）" ;;
       *)         echo "    ⚠️  $p -> $hcode 落到非 HTTPS：${hloc:-无 Location}" >&2 ;;
     esac
   else
