@@ -1,5 +1,11 @@
 {
   "slug": "2023-toyota-rav4",
+  "intro": [
+    "A 2023 Toyota RAV4 — gasoline or hybrid 2.5L — takes 4.8 qt of oil with a filter change and 4.4 qt without (OM0R100U p.486 gasoline; OM0R102U p.498 hybrid). Viscosity is SAE 0W-16, with 0W-20 acceptable (p.487).",
+    "Tire sizes and cold pressures are unchanged from 2022: 225/65R17, 225/60R18 and 235/55R19 at 33–36 psi by wheel type.",
+    "NHTSA lists 3 campaigns for the 2023 RAV4 (fetched 2026-10-19): a back-over display campaign (25V744000), an instrument-cluster electrical campaign (25V595000), and a tire-valve recall (23V485000, dated 2023-07-11).",
+    "What changed from 2022: the recall list grows from 1 to 3 campaigns. The valve recall 23V485000 appears on this year only — it is not on the 2024 page — while 25V744000 and 25V595000 carry over to 2024."
+  ],
   "year": 2023,
   "make": "Toyota",
   "model": "RAV4",

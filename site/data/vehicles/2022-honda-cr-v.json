@@ -1,5 +1,11 @@
 {
  "slug": "2022-honda-cr-v",
+  "intro": [
+    "A 2022 Honda CR-V with the non-hybrid 1.5L turbo takes 3.7 US qt of oil with a filter change, or 3.4 qt without (manual ATLA2222OM, Specifications p.649). Honda publishes a separate owner's manual for the 2022 CR-V Hybrid, so the hybrid is not covered by the oil or tyre figures on this page.",
+    "Tire sizes and cold pressures are unchanged from 2020 and 2021: 235/65R17 (32/30 psi), 235/60R18 (33/30 psi) and 235/55R19 (33/33 psi).",
+    "NHTSA lists 3 campaigns for the 2022 CR-V (fetched 2026-10-15): the occupant-classification sensor (26V332000), the fuel pump (23V858000) and a certification-label campaign (23V524000).",
+    "What changed from 2021: the recall count drops from 4 to 3 and 21V900000 is replaced by 23V524000. Oil and tyre specifications are unchanged. The following generation starts on the 2023 page and is not part of the figures here."
+  ],
  "year": 2022,
  "make": "Honda",
  "model": "CR-V",

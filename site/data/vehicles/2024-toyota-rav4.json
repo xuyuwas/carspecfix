@@ -1,5 +1,11 @@
 {
   "slug": "2024-toyota-rav4",
+  "intro": [
+    "A 2024 Toyota RAV4 — gasoline or hybrid — takes 4.5 qt of oil with a filter change and 4.2 qt without (OM0R147U p.486 for gasoline; OM0R149U p.498 for hybrid). That is 0.3 qt less than the 2019–2023 manuals, which listed 4.8 qt with filter and 4.4 qt without. Buy five one-quart bottles and keep what is left for top-ups. Viscosity is still SAE 0W-16, with 0W-20 acceptable (p.486).",
+    "Tire sizes remain 225/65R17, 225/60R18 and 235/55R19, with cold pressures from 33 to 36 psi by wheel type (pp.491–494, 501 and 503). The 2024 manual also lists extra 17-inch and 19-inch configurations (types F, G and C) that earlier years in this run did not show the same way.",
+    "NHTSA lists 3 campaigns for the 2024 RAV4 (fetched 2026-10-15). One of them is a hydraulic brake-caliper recall (24V911000, dated 2024-12-05) that does not appear on the 2023 page. The other two, a back-over display campaign (25V744000) and an instrument-cluster campaign (25V595000), are also listed for 2023.",
+    "What changed from 2023: oil capacity drops from 4.8/4.4 qt to 4.5/4.2 qt for both the gasoline and hybrid 2.5L engines, while viscosity stays SAE 0W-16. The tyre table expands from 8 to 11 wheel configurations, and the valve recall 23V485000 is replaced by the brake-caliper campaign 24V911000."
+  ],
   "year": 2024,
   "make": "Toyota",
   "model": "RAV4",

@@ -10,14 +10,9 @@
   "send_email": [
     {
       "name": "EMAIL",
-      // Two allowed recipients, both free on any plan:
-      //   hello@carspecfix.com  — the address the site publishes. Email Routing
-      //                           forwards it to the verified destination below.
-      //   xuyu8813@gmail.com    — verified destination; the worker falls back to it
-      //                           if a send to hello@ is ever refused, so a form
-      //                           submission is never dropped.
+      // Allowed recipient:
+      //   xuyu8813@gmail.com — verified destination, the owner's inbox.
       "allowed_destination_addresses": [
-        "hello@carspecfix.com",
         "xuyu8813@gmail.com"
       ]
     }

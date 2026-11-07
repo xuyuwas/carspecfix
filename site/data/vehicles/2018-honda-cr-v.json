@@ -1,5 +1,11 @@
 {
   "slug": "2018-honda-cr-v",
+  "intro": [
+    "A 2018 Honda CR-V was offered with two engines. The 1.5L turbo (L15B) takes 3.7 US qt of oil with a filter change, or 3.4 qt without; the 2.4L (K24W) takes 4.7 US qt with a filter, or 4.4 qt without (owner's manual P/N 31TLA6100, p.653). Both use Honda Genuine Motor Oil 0W-20 or API premium-grade 0W-20 (p.572).",
+    "Tire sizes and cold pressures are unchanged from 2017: 235/65R17 at 32/30 psi and 235/60R18 at 33/30 psi, with a T155/90D17 112M compact spare at 60 psi.",
+    "NHTSA lists 5 campaigns for the 2018 CR-V (fetched 2026-11-02), fewer than 2017, including a fuel-pump campaign (21V215000) alongside the electric power-steering (18V663000) and seat-belt buckle (23V158000) campaigns carried over from 2017.",
+    "What changed from 2017: oil and tyre specifications are identical; the recall count drops from 7 to 5, and 21V215000 appears for this year."
+  ],
   "year": 2018,
   "make": "Honda",
   "model": "CR-V",

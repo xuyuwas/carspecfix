@@ -1,5 +1,11 @@
 {
   "slug": "2019-honda-cr-v",
+  "intro": [
+    "A 2019 Honda CR-V keeps both engines: the 1.5L turbo (L15B) takes 3.7 US qt with a filter change and 3.4 qt without, while the 2.4L (K24W) takes 4.7 US qt with a filter and 4.4 qt without (owner's manual P/N 31TLA6210, p.649). Viscosity is Honda Genuine Motor Oil 0W-20 or API premium-grade 0W-20 (p.570).",
+    "Tire sizes and cold pressures are unchanged from 2017 and 2018: 235/65R17 at 32/30 psi and 235/60R18 at 33/30 psi.",
+    "NHTSA lists 8 campaigns for the 2019 CR-V (fetched 2026-11-02), the most of any year in this run. They include the rear subframe (19V865000), the fuel tank (19V569000), the driver's airbag clock spring (19V383000), and an owner's-manual-related campaign (19V694000).",
+    "What changed from 2018: the recall list grows from 5 to 8 campaigns, with the frame, fuel-tank, airbag and manual campaigns appearing this year. Oil and tyre figures are unchanged."
+  ],
   "year": 2019,
   "make": "Honda",
   "model": "CR-V",

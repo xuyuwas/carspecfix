@@ -1,5 +1,11 @@
 {
   "slug": "2021-toyota-rav4",
+  "intro": [
+    "A 2021 Toyota RAV4 — gasoline or hybrid 2.5L — takes 4.8 qt of oil with a filter change and 4.4 qt without (OM0R028U p.678 gasoline; OM0R029U p.686 hybrid). Viscosity is SAE 0W-16, with 0W-20 acceptable (p.679).",
+    "Tire sizes and cold pressures are unchanged from 2020: 225/65R17, 225/60R18 and 235/55R19 at 33–36 psi depending on wheel type.",
+    "NHTSA lists just 1 campaign for the 2021 RAV4 (fetched 2026-10-19): the occupant-classification sensor recall 23V865000. Check your VIN at nhtsa.gov/recalls — a short list does not mean the car is clear.",
+    "What changed from 2020: the recall list falls from 6 campaigns to 1, while oil capacity, viscosity and tyre fitments stay the same. The EPA table for this year also lists an AWD TRD OFFROAD rating of 25 / 32 / 28 mpg (city / highway / combined)."
+  ],
   "year": 2021,
   "make": "Toyota",
   "model": "RAV4",

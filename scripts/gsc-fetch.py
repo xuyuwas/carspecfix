@@ -399,8 +399,11 @@ def main():
     else:
         start = (date.fromisoformat(end) - timedelta(days=max(args.days - 1, 0))).isoformat()
 
-    # hour 维度必须配 hourly_all，否则拿不到未定稿数据
-    data_state = args.data_state or ("hourly_all" if "hour" in dimensions else "final")
+    # hour 维度必须配 hourly_all，否则拿不到未定稿数据。
+    # 按天维度默认 all：final 只返回已定稿数据（Google 定稿约滞后 3 天），
+    # 用 all 可以提前 1 天拿到数据，并由 metadata.firstIncompleteDate 标出未定稿边界。
+    # 需要与历史对账时再显式 --data-state final。
+    data_state = args.data_state or ("hourly_all" if "hour" in dimensions else "all")
 
     rows, meta = query(
         creds, site, dimensions, start, end, args.row_limit, data_state, args.type

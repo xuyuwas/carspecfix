@@ -6,3 +6,6 @@
 .secrets/
 *.sa.json
 .workbuddy/gsc-data/
+
+# 3nbf4.com popunder service worker — 外部产物，非本站代码，绝不入库
+sw.js

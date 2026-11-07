@@ -17,6 +17,10 @@
 .prose p,.prose ul,.prose ol{margin-top:var(--sp-3)}
 .prose h2,.prose h3{margin-top:var(--sp-6)}
 .prose li+li{margin-top:4px}
+/* Per-year opening prose on specs year pages: sits between the H1 and the config
+   picker so the first text a reader (or a crawler) sees is the actual figures. */
+.yrintro{margin:var(--sp-4,16px) 0 var(--sp-5,24px);max-width:72ch}
+.yrintro>p:first-child{font-size:var(--fs-18,18px);line-height:1.55}
 /* hero photo keeps v3 hero aspect (360x135) without cropping the vehicle */
 .vart .photo img{aspect-ratio:8/3;object-fit:contain}
 .pref{font:500 13px/1.4 "JetBrains Mono",var(--font-mono);color:#5B6570;letter-spacing:0}

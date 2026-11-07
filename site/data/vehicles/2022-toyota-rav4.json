@@ -1,5 +1,11 @@
 {
   "slug": "2022-toyota-rav4",
+  "intro": [
+    "A 2022 Toyota RAV4 — gasoline or hybrid 2.5L — takes 4.8 qt of oil with a filter change and 4.4 qt without (OM0R059U p.662 gasoline; OM0R058U p.668 hybrid). Viscosity is SAE 0W-16, with 0W-20 acceptable (p.663).",
+    "Tire sizes and cold pressures are unchanged from 2021: 225/65R17, 225/60R18 and 235/55R19 at 33–36 psi by wheel type.",
+    "NHTSA lists 1 campaign for the 2022 RAV4 (fetched 2026-10-19), but it is not the 2021 one: 22V519000, dated 2022-07-21, covers the front-passenger occupant-classification sensor.",
+    "What changed from 2021: oil and tyre specifications are identical; the single recall is a different campaign number (22V519000 replaces 23V865000)."
+  ],
   "year": 2022,
   "make": "Toyota",
   "model": "RAV4",

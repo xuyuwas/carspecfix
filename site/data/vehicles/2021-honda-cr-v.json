@@ -1,5 +1,11 @@
 {
   "slug": "2021-honda-cr-v",
+  "intro": [
+    "A 2021 Honda CR-V with the 1.5L turbo (L15B) takes 3.7 US qt of oil with a filter change, or 3.4 qt without (owner's manual P/N 31TLA6400, p.651). Viscosity is Honda Genuine Motor Oil 0W-20 or API premium-grade 0W-20 (p.577). As in 2020, this page covers the gasoline model only — the hybrid has a separate manual.",
+    "Tire sizes and cold pressures are unchanged from 2020: 235/65R17 (32/30 psi), 235/60R18 (33/30 psi) and 235/55R19 (33/33 psi).",
+    "NHTSA lists 4 campaigns for the 2021 CR-V (fetched 2026-11-02). One is specific to this year page: the rear seat-belt retractor recall 21V900000, dated 2021-11-18.",
+    "What changed from 2020: oil and tyre specifications are identical; the recall list falls from 7 to 4, and the EPA table again lists the CR-V Hybrid AWD at 40 / 35 / 38 mpg."
+  ],
   "year": 2021,
   "make": "Honda",
   "model": "CR-V",

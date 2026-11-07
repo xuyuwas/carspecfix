@@ -9,19 +9,15 @@
  * "was this page helpful" vote — and emails it to the site owner through the
  * Cloudflare `send_email` binding.
  *
- * Delivery is two-step on purpose. hello@carspecfix.com is the address the site
- * publishes; Cloudflare only lets a binding send to a verified destination or to an
- * address on the same zone that Email Routing forwards. If the primary address is
- * ever rejected the message is re-sent to the verified fallback instead of being
- * dropped — a form that silently loses submissions is worse than one that lands in
- * the second inbox, and the subject line says which path was taken.
+ * Delivery goes to the owner's verified Gmail destination. hello@carspecfix.com is
+ * the address the site publishes, but Cloudflare only lets a binding send to a
+ * verified destination address, so that forwarding alias is rejected.
  *
  * The client-side contract (payload shape) lives in site/public/feedback.js.
  * Nothing is stored: no database, no IP, no user agent, no cookies.
  */
 
-const TO = 'hello@carspecfix.com'; // address published on the site
-const TO_FALLBACK = 'xuyu8813@gmail.com'; // verified Email Routing destination
+const TO = 'xuyu8813@gmail.com'; // verified Email Routing destination
 const FROM = { email: 'noreply@carspecfix.com', name: 'CarSpecFix' };
 
 const ALLOWED_ORIGIN = 'https://carspecfix.com';
@@ -131,17 +127,10 @@ export default {
     try {
       await env.EMAIL.send({ ...message, to: TO });
       return reply({ ok: true }, 200);
-    } catch (primaryError) {
-      const code = (primaryError && primaryError.code) || 'E_UNKNOWN';
-      console.error('send_email primary failed', code, (primaryError && primaryError.message) || primaryError);
-      try {
-        await env.EMAIL.send({ ...message, to: TO_FALLBACK, subject: `${subject} [via fallback]` });
-        return reply({ ok: true, delivered: 'fallback' }, 200);
-      } catch (fallbackError) {
-        const fallbackCode = (fallbackError && fallbackError.code) || 'E_UNKNOWN';
-        console.error('send_email fallback failed', fallbackCode, (fallbackError && fallbackError.message) || fallbackError);
-        return reply({ ok: false, error: 'send_failed', code, fallback: fallbackCode }, 502);
-      }
+    } catch (sendError) {
+      const code = (sendError && sendError.code) || 'E_UNKNOWN';
+      console.error('send_email failed', code, (sendError && sendError.message) || sendError);
+      return reply({ ok: false, error: 'send_failed', code }, 502);
     }
   },
 };

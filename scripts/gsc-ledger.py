@@ -101,7 +101,9 @@ def main():
     ap.add_argument("--site", help="GSC 资源，如 sc-domain:example.com")
     ap.add_argument("--key", help="服务账号 JSON 路径")
     ap.add_argument("--data-dir", help="数据目录，默认 <root>/.workbuddy/gsc-data")
-    ap.add_argument("--days", type=int, default=3, help="增量窗口天数（默认 3，覆盖 GSC 回填延迟）")
+    ap.add_argument("--days", type=int, default=4, help="增量窗口天数（默认 4，覆盖 GSC 回填延迟）")
+    ap.add_argument("--data-state", default="all",
+                    help="all=含未定稿（默认，滞后约 2 天）；final=仅定稿（滞后约 3 天，对账用）")
     ap.add_argument("--audit", action="store_true", help="只做台账完整性检查，不联网")
     ap.add_argument("--trend", help="查单个对象的历史走势，如 --trend page:/pricing/ 或 --trend \"query:brand name\"")
     args = ap.parse_args()
@@ -123,16 +125,26 @@ def main():
     start = (today - timedelta(days=args.days - 1)).isoformat()
     now = datetime.now().isoformat(timespec="seconds")
 
-    print(f"[fetch] {site}　窗口 {start} ~ {end}（太平洋时间）")
+    print(f"[fetch] {site}　窗口 {start} ~ {end}（太平洋时间）　dataState={args.data_state}")
 
     # ---- 按天 ----
-    drows, _ = gsc.query(creds, site, ["date"], start, end, 25000, "final", "web")
+    drows, dmeta = gsc.query(creds, site, ["date"], start, end, 25000, args.data_state, "web")
 
     # ---- 按天 × 页面 ----
-    prow, _ = gsc.query(creds, site, ["date", "page"], start, end, 25000, "final", "web")
+    prow, _ = gsc.query(creds, site, ["date", "page"], start, end, 25000, args.data_state, "web")
 
     # ---- 按天 × 查询词 ----
-    qrow, _ = gsc.query(creds, site, ["date", "query"], start, end, 25000, "final", "web")
+    qrow, _ = gsc.query(creds, site, ["date", "query"], start, end, 25000, args.data_state, "web")
+
+    # dataState=all 会带出未定稿的日子，其数字后续还会回填；台账只记已定稿的，
+    # 否则「最后完整日」会锚到一个还会变的日子，所有环比都不可信。
+    cutoff = (dmeta or {}).get("firstIncompleteDate")
+    if cutoff:
+        before = len(drows)
+        drows = [r for r in drows if r["keys"][0] < cutoff]
+        prow = [r for r in prow if r["keys"][0] < cutoff]
+        qrow = [r for r in qrow if r["keys"][0] < cutoff]
+        print(f"[cutoff]  firstIncompleteDate={cutoff} → 丢弃未定稿，保留 {len(drows)}/{before} 天")
 
     pages_per_day = {}
     for r in prow:

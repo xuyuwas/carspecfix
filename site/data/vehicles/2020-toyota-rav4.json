@@ -1,5 +1,11 @@
 {
  "slug": "2020-toyota-rav4",
+  "intro": [
+    "A 2020 Toyota RAV4 takes 4.8 qt of oil with a filter change and 4.4 qt without, for both the 2.5L gasoline (A25A-FKS) and the 2.5L hybrid (OM0R024U p.666 for gasoline; OM0R025U p.678 for hybrid). The hybrid figure comes from its own manual, so both powertrains are covered here. Viscosity is SAE 0W-16, with 0W-20 acceptable (p.667).",
+    "Cold pressures run 33–36 psi across 225/65R17, 225/60R18 and 235/55R19 fitments. The 18-inch 225/60R18 size at 33 psi is new for 2020 — the 2019 table lists no 18-inch wheel.",
+    "NHTSA lists 6 campaigns for the 2020 RAV4 (fetched 2026-10-15), including the occupant-classification sensor (23V865000) and a frontal airbag campaign (20V734000). The fuel-pump (20V682000) and electric power-steering (20V373000) campaigns carry over from 2019.",
+    "What changed from 2019: an 18-inch tyre option returns, hybrid oil capacity is now verified from its own manual, and the recall list falls from 7 to 6 campaigns. Oil capacity and viscosity are unchanged."
+  ],
  "year": 2020,
  "make": "Toyota",
  "model": "RAV4",

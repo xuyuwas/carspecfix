@@ -197,6 +197,11 @@ const openLine = [psiOpen, oilOpen].filter(Boolean).join(' ');
 const oilDocName = sources[s.oilCapacity?.source]?.name;
 const tireDocName = tires.length ? sources[tires[0].source]?.name : null;
 const sourceDate = readDates.length ? (readDates.length === 1 ? readDates[0] : `${readDates[0]} – ${readDates.at(-1)}`) : null;
+// Per-year opening prose, written against the cited manual / NHTSA rows for that exact
+// model year. Optional: a page without `intro` keeps the original structure untouched.
+// Never generate this from a template - which year-to-year differences have a source is
+// a judgement call, and a generated sentence would just be a different kind of boilerplate.
+const arrayIntro = Array.isArray(v.intro) ? v.intro.filter(x => typeof x === 'string' && x.trim()) : [];
 ---
 <Base title={title} description={desc} path={path} jsonld={jsonld} crumbs={crumbs} nav="specs">
 <div class="vhead vhead--compact"><div class="container">
@@ -205,6 +210,9 @@ const sourceDate = readDates.length ? (readDates.length === 1 ? readDates[0] : `
   <div><div class="eyebrow">{v.make}{configs.length > 0 && ` · ${configs.join(' / ')}`}</div><h1 class="vtitle"><span class="yr">{v.year} {v.make}</span>{' '}{seo.h1Tail ?? `${v.model} specs`}</h1></div>
   <div class="vart"><Photo slug={v.slug} year={v.year} name={`${v.make} ${v.model}`} segment={segment} hero={true} powertrain={v.powertrain} /></div>
 </div>
+{arrayIntro.length > 0 && <section class="prose yrintro" aria-label={`${name} at a glance`}>
+  {arrayIntro.map(p => <p>{p}</p>)}
+</section>}
 <ConfigPicker v={v} />
 <section class="qa" id="quick" data-copy-scope aria-label="Quick answer">
   <div class="qa__head"><h2 class="qa__title">Quick answer</h2><Tools /></div>

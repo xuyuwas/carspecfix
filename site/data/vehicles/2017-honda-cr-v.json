@@ -1,5 +1,11 @@
 {
   "slug": "2017-honda-cr-v",
+  "intro": [
+    "A 2017 Honda CR-V takes different amounts of oil depending on the engine. The 1.5L turbo (L15B) takes 3.7 US qt with a filter change, or 3.4 qt without. The 2.4L (K24W) takes 4.7 US qt with a filter, or 4.4 qt without (owner's manual P/N 31TLA6000, p.637). Both engines specify Genuine Honda Motor Oil 0W-20, or API premium-grade 0W-20 (p.556).",
+    "Tire sizes this year are 235/65R17 (32 psi front, 30 psi rear) and 235/60R18 (33 psi front, 30 psi rear), p.637. Cold pressures differ front to rear. The compact spare is a T155/90D17 112M at 60 psi.",
+    "NHTSA lists 7 campaigns for the 2017 CR-V (database fetched 2026-11-02). They include an electric power-steering campaign (18V663000), a fuel-hose campaign (17V442000), and a later fuel-pump campaign (23V858000). Check your VIN at nhtsa.gov/recalls.",
+    "What changed from 2016: the previous year's page lists only the 2.4L, at 4.6 qt with filter and 4.4 qt without (manual P/N 31T0A6400, p.520). Its tire sizes were 215/70R16, 225/65R17 and P225/60R18, with equal front and rear pressures (32 or 33 psi). The 2016 spare is listed as a T155/90D17 101M at 60 psi, not the 112M spare used on the 2017 page."
+  ],
   "year": 2017,
   "make": "Honda",
   "model": "CR-V",

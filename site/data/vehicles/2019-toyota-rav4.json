@@ -1,5 +1,11 @@
 {
   "slug": "2019-toyota-rav4",
+  "intro": [
+    "A 2019 Toyota RAV4 with the 2.5L gasoline engine takes 4.8 qt of oil with a filter change, or 4.4 qt without (owner's manual OM0R009U, p.660). Toyota specifies SAE 0W-16, with 0W-20 acceptable (p.661). Hybrid oil figures are not on this page yet — the 2019 hybrid manual has not been checked.",
+    "Cold tire pressure for this year runs 33–36 psi, depending on wheel type: 225/65R17 on 17-inch wheels, or 235/55R19 on 19-inch wheels (pp.664–667). The door-jamb placard is the figure for your exact build. Unlike the 2018 RAV4, the 2019 tables we checked do not list an 18-inch size.",
+    "NHTSA lists 7 campaigns for the 2019 RAV4 (database fetched 2026-10-19), including a fuel-pump recall (20V682000) and an electric power-steering campaign (20V373000). Check your VIN at nhtsa.gov/recalls; a campaign can stay open until the repair is done.",
+    "What changed from 2018: the previous year's 2.5L (2AR-FE) was listed at 4.6 qt with filter and 4.2 qt without, with SAE 0W-20 (5W-20 acceptable). Tire sizes were 225/65R17 and 235/55R18, at 32–33 psi. Those 2018 figures are on the 2018 year page, from manual OM0R012U."
+  ],
   "year": 2019,
   "make": "Toyota",
   "model": "RAV4",

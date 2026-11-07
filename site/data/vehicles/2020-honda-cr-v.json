@@ -1,5 +1,11 @@
 {
   "slug": "2020-honda-cr-v",
+  "intro": [
+    "A 2020 Honda CR-V with the 1.5L turbo (L15B) takes 3.7 US qt of oil with a filter change, or 3.4 qt without (owner's manual P/N 31TLA6310, p.645). The viscosity is Honda Genuine Motor Oil 0W-20, or API premium-grade 0W-20 (p.571). This year page does not list a 2.4L capacity — unlike 2017–2019, which published both engines. Honda covers the hybrid separately; it is not part of the oil and tire figures on this page.",
+    "Tire sizes are 235/65R17 (32/30 psi), 235/60R18 (33/30 psi), and a 19-inch size that earlier years in this run did not list: 235/55R19 101H at 33 psi front and rear (p.645). The 19-inch fitment uses equal front and rear pressure. The compact spare remains a T155/90D17 112M at 60 psi.",
+    "NHTSA lists 7 campaigns for the 2020 CR-V (fetched 2026-11-02). They include a fuel-tank campaign (22V380000), two occupant-classification-sensor campaigns (26V332000 and 24V064000), and the fuel-pump campaign (23V858000). fueleconomy.gov also lists a CR-V Hybrid AWD at 40 / 35 / 38 mpg; that row is an EPA figure, not a substitute for the hybrid owner's manual.",
+    "What changed from 2019: the 2.4L engine disappears from the oil specification, a 19-inch 235/55R19 fitment is added, and the recall list falls from 8 campaigns to 7. Front and rear pressures on the 17- and 18-inch sizes stay at 32/30 and 33/30 psi."
+  ],
   "year": 2020,
   "make": "Honda",
   "model": "CR-V",
