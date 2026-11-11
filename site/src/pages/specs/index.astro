@@ -36,6 +36,20 @@ const inReview = vehicles.map(v => {
   // Closest to publishing first: the reader can see what is nearly finished rather
   // than an alphabetical list that hides which entry is one figure away.
   .sort((a, b) => a.n - b.n || a.label.localeCompare(b.label, 'en', { numeric: true }));
+// Four year pages that Search Console shows earning impressions at position 6-10 on
+// "<year> <model> oil capacity". /specs/ already links every live year further down;
+// this short list exists to give those four a descriptive anchor near the top of the
+// index instead of the bare year number used in the make/model list.
+const FEATURED = [
+  ['2010-toyota-rav4', '2010 Toyota RAV4 oil capacity (2.5L & 3.5L V6)'],
+  ['2022-toyota-tacoma', '2022 Toyota Tacoma oil capacity (2.7L & 3.5L)'],
+  ['2024-toyota-rav4', '2024 Toyota RAV4 oil capacity (2.5L gas & hybrid)'],
+  ['2024-honda-cr-v', '2024 Honda CR-V oil capacity (1.5L turbo)'],
+];
+const featured = FEATURED.map(([slug, label]) => {
+  const v = liveVehicles.find(x => x.slug === slug);
+  return v ? { label, url: vehicleUrl(v) } : null;
+}).filter(Boolean);
 const title = fitTitle('Car specs by make & model', ['Oil', 'Tires', 'Recalls']);
 const description = `Every vehicle we have checked, grouped by make: oil capacity, tire size and pressure, and NHTSA recalls, each figure cited from the owner's manual.`;
 const path = '/specs/';
@@ -57,6 +71,10 @@ const crumbs = [{ name: 'Home', url: '/' }, { name: 'Specs', url: path }];
   <ul class="links">{inReview.map(v => <li><span>{v.label}</span><span class="links__meta">{v.n === 1 ? 'almost ready — ' : 'waiting on '}{v.missing.length ? v.missing.join(', ') : 'final checks'}</span></li>)}</ul>
 </section>}
 <p class="ks__src">Want a specific year, make and model? <a href="/contact/">Tell us which one</a>.</p>
+{featured.length > 0 && <section id="popular-lookups">
+  <h2 class="section__title">Oil capacity by year — most looked up</h2>
+  <ul class="links">{featured.map(f => <li><a href={f.url}>{f.label}</a></li>)}</ul>
+</section>}
 {byMake.map(m => <section class="hsec">
   <h2 class="section__title"><a href={`/specs/${m.slug}/`}>{m.name}</a></h2>
   <ul class="links">{m.models.map(mo => <li><a href={mo.url}>{mo.name}</a><span class="links__meta">— {mo.years.map((y, i) => <>{i > 0 && ', '}<a href={vehicleUrl(y)}>{y.year}</a></>)}</span></li>)}</ul>

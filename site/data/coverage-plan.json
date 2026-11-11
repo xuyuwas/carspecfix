@@ -8,7 +8,7 @@
     "2009 rav4 oil capacity, 2021 rav4 oil capacity — hub catch (years pre-2022 had no page at crawl time)",
     "Generic 'X oil capacity' / 'X tire size' patterns across many makes — demand is broad, not RAV4-specific"
   ],
-  "currentSnapshot": { "modelYears": 29, "models": 11, "rav4Share": "16 of 29 (55%)" },
+  "currentSnapshot": { "modelYears": 49, "models": 11, "rav4Share": "16 of 49 (32.7%)" },
   "targets": [
     { "make": "honda", "model": "cr-v", "years": [2021, 2023], "why": "Hub is 404 (only 2024 published; 2022 file exists but is an empty shell with no signOff). Highest-value reader query. Needs 2021/2023 data; 2022 must be completed, not just added.", "status": "pending-sourcing" },
     { "make": "honda", "model": "civic", "years": [2021, 2023, 2026], "why": "Hub 404 (only 2022 published). Explicit 2026 request from a reader (@83). 2026 needs current-model-year manual.", "status": "pending-sourcing" },
